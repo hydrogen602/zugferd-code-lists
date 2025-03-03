@@ -1,0 +1,10 @@
+
+# Generated
+/target
+.venv/
+*.pyc
+__pycache__/
+
+# Config
+.env
+
