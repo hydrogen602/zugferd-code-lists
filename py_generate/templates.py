@@ -2,6 +2,7 @@ from dataclasses import dataclass
 import re
 import string
 from typing import cast
+import unicodedata
 
 from py_generate.common import VersionInfo
 
@@ -10,9 +11,16 @@ _words_re = re.compile(r"\b\w+\b", flags=re.UNICODE)
 TAB = "    "
 
 
+def normalize_nfkc(text: str) -> str:
+    """Normalizes a string to NFKC form."""
+    return unicodedata.normalize("NFKC", text)
+
+
 def convert_to_identifier(name: str) -> str:
     # only use a-z, A-Z, 0-9, _
     # UpperCamelCase
+
+    name = normalize_nfkc(name)
 
     name = name.strip().replace("'", "")
 
@@ -43,7 +51,7 @@ class EnumValue:
                 continue
 
             extra = re.sub(r"\s+", " ", extra)
-            extras += f"\n\n{TAB}/// {extra}"
+            extras += f"\n{TAB}///\n{TAB}/// {extra}"
 
         description = re.sub(r"\s+", " ", self.description)
         return f"{TAB}/// {description}{extras}\n{TAB}{self.rust_identifier},"

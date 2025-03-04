@@ -3,6 +3,7 @@
 #[derive(Debug, PartialEq, Eq, PartialOrd, Ord, Clone, Copy, Hash)]
 pub enum HybridVersion {
     /// The hybrid document is a Factur-X 1.0* compliant document
+    ///
     /// Default value for current specification
     TheHybridDocumentIsAFacturX10CompliantDocument,
     /// The hybrid document is a ZUGFeRD 1p0 compliant document
@@ -10,12 +11,15 @@ pub enum HybridVersion {
     /// Legacy use only. A warning is given if used for a document in the validity period of the current specification
     TheHybridDocumentIsAZugferd1p0CompliantDocument,
     /// The hybrid document is a ZUGFeRD 2p0 compliant document
+    ///
     /// Legacy use only. A warning is given if used for a document in the validity period of the current specification
     TheHybridDocumentIsAZugferd2p0CompliantDocument,
     /// The hybrid document is a ZUGFeRD 2p1 compliant document
+    ///
     /// Legacy use only. A warning is given if used for a document in the validity period of the current specification
     TheHybridDocumentIsAZugferd2p1CompliantDocument,
     /// The hybrid document is a ZUGFeRD 2p2 compliant document
+    ///
     /// Legacy use only. A warning is given if used for a document in the validity period of the current specification
     TheHybridDocumentIsAZugferd2p2CompliantDocument,
 }
