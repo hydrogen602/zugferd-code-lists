@@ -2,100 +2,195 @@
 
 #[derive(Debug, PartialEq, Eq, PartialOrd, Ord, Clone, Copy, Hash)]
 pub enum EAS {
+    /// System Information et Repertoire des Entreprise et des Etablissements: SIRENE
     SystemInformationEtRepertoireDesEntrepriseEtDesEtablissementsSirene,
+    /// Organisationsnummer
     Organisationsnummer,
+    /// SIRET-CODE
     SiretCode,
+    /// LY-tunnus
     LyTunnus,
+    /// Data Universal Numbering System (D-U-N-S Number)
     DataUniversalNumberingSystemDUNSNumber,
+    /// EAN Location Code
     EanLocationCode,
+    /// DANISH CHAMBER OF COMMERCE Scheme (EDIRA compliant)
     DanishChamberOfCommerceSchemeEdiraCompliant,
+    /// FTI - Ediforum Italia, (EDIRA compliant)
     FtiEdiforumItaliaEdiraCompliant,
+    /// Vereniging van Kamers van Koophandel en Fabrieken in Nederland (Association of Chambers of Commerce and Industry in the Netherlands), Scheme (EDIRA compliant)
     VerenigingVanKamersVanKoophandelEnFabriekenInNederlandAssociationChambersCommerceAndIndustryInNetherlandsSchemeEdiraCompliant,
+    /// Directorates of the European Commission
     DirectoratesEuropeanCommission,
+    /// SIA Object Identifiers
     SiaObjectIdentifiers,
+    /// SECETI Object Identifiers
     SecetiObjectIdentifiers,
+    /// Standard Company Code
     StandardCompanyCode,
+    /// Australian Business Number (ABN) Scheme
     AustralianBusinessNumberAbnScheme,
+    /// Teikoku Company Code
     TeikokuCompanyCode,
+    /// Odette International Limited
     OdetteInternationalLimited,
+    /// Numéro d'identification suisse des enterprises (IDE), Swiss Unique Business Identification Number (UIDB)
     NuméroDidentificationSuisseDesEnterprisesIdeSwissUniqueBusinessIdentificationNumberUidb,
+    /// DIGSTORG
     Digstorg,
+    /// Corporate Number of The Social Security and Tax Number System
     CorporateNumberTheSocialSecurityAndTaxNumberSystem,
+    /// Dutch Originator's Identification Number
     DutchOriginatorsIdentificationNumber,
+    /// Centre of Registers and Information Systems of the Ministry of Justice
     CentreRegistersAndInformationSystemsMinistryJustice,
+    /// Enhetsregisteret ved Bronnoysundregisterne
     EnhetsregisteretVedBronnoysundregisterne,
+    /// UBL.BE party identifier
     UblBePartyIdentifier,
+    /// KOIOS Open Technical Dictionary
     KoiosOpenTechnicalDictionary,
+    /// Singapore UEN identifier
     SingaporeUenIdentifier,
+    /// Kennitala - Iceland legal id for individuals and legal entities
     KennitalaIcelandLegalIdForIndividualsAndLegalEntities,
+    /// ERSTORG
     Erstorg,
+    /// Global legal entity identifier (GLEIF)
     GlobalLegalEntityIdentifierGleif,
+    /// Legal entity code (Lithuania)
     LegalEntityCodeLithuania,
+    /// Codice Univoco Unità Organizzativa iPA
     CodiceUnivocoUnitàOrganizzativaIpa,
+    /// Indirizzo di Posta Elettronica Certificata
     IndirizzoDiPostaElettronicaCertificata,
+    /// eDelivery Network Participant identifier
     EdeliveryNetworkParticipantIdentifier,
+    /// Leitweg-ID
     LeitwegId,
+    /// CODDEST
     Coddest,
+    /// Numero d'entreprise / ondernemingsnummer / Unternehmensnummer
     NumeroDentrepriseOndernemingsnummerUnternehmensnummer,
+    /// GS1 identification keys
     Gs1IdentificationKeys,
+    /// CODICE FISCALE
     CodiceFiscale,
+    /// PARTITA IVA
     PartitaIva,
+    /// Finnish Organization Identifier
     FinnishOrganizationIdentifier,
+    /// Finnish Organization Value Add Tax Identifier
     FinnishOrganizationValueAddTaxIdentifier,
+    /// Net service ID
     NetServiceId,
+    /// OVTcode
     Ovtcode,
+    /// The Netherlands Chamber of Commerce and Industry establishment number
     TheNetherlandsChamberCommerceAndIndustryEstablishmentNumber,
+    /// Unified registration number (Latvia)
     UnifiedRegistrationNumberLatvia,
+    ///  The registered number of the qualified invoice issuer
     TheRegisteredNumberQualifiedInvoiceIssuer,
+    ///  FRCTC ELECTRONIC ADDRESS
     FrctcElectronicAddress,
+    ///  National e-Invoicing Framework
     NationalEInvoicingFramework,
+    /// UAE Tax Identification Number (TIN)
     UaeTaxIdentificationNumberTin,
+    /// Danish Ministry of the Interior and Health
     DanishMinistryInteriorAndHealth,
+    /// Hungary VAT number
     HungaryVatNumber,
+    /// Business Registers Network
     BusinessRegistersNetwork,
+    /// Österreichische Umsatzsteuer-Identifikationsnummer
     ÖsterreichischeUmsatzsteuerIdentifikationsnummer,
+    /// Österreichisches Verwaltungs bzw. Organisationskennzeichen
     ÖsterreichischesVerwaltungsBzwOrganisationskennzeichen,
+    /// SOCIETY FOR WORLDWIDE INTERBANK FINANCIAL, TELECOMMUNICATION S.W.I.F.T
     SocietyForWorldwideInterbankFinancialTelecommunicationSWIFT,
+    /// Kennziffer des Unternehmensregisters
     KennzifferDesUnternehmensregisters,
+    /// Agencia Española de Administración Tributaria
     AgenciaEspañolaDeAdministraciónTributaria,
+    /// Andorra VAT number
     AndorraVatNumber,
+    /// Albania VAT number
     AlbaniaVatNumber,
+    /// Bosnia and Herzegovina VAT number
     BosniaAndHerzegovinaVatNumber,
+    /// Belgium VAT number
     BelgiumVatNumber,
+    /// Bulgaria VAT number
     BulgariaVatNumber,
+    /// Switzerland VAT number
     SwitzerlandVatNumber,
+    /// Cyprus VAT number
     CyprusVatNumber,
+    /// Czech Republic VAT number
     CzechRepublicVatNumber,
+    /// Germany VAT number
     GermanyVatNumber,
+    /// Estonia VAT number
     EstoniaVatNumber,
+    /// United Kingdom VAT number
     UnitedKingdomVatNumber,
+    /// Greece VAT number
     GreeceVatNumber,
+    /// Croatia VAT number
     CroatiaVatNumber,
+    /// Ireland VAT number
     IrelandVatNumber,
+    /// Liechtenstein VAT number
     LiechtensteinVatNumber,
+    /// Lithuania VAT number
     LithuaniaVatNumber,
+    /// Luxemburg VAT number
     LuxemburgVatNumber,
+    /// Latvia VAT number
     LatviaVatNumber,
+    /// Monaco VAT number
     MonacoVatNumber,
+    /// Montenegro VAT number
     MontenegroVatNumber,
+    /// Macedonia, the former Yugoslav Republic of VAT number
     MacedoniaFormerYugoslavRepublicVatNumber,
+    /// Malta VAT number
     MaltaVatNumber,
+    /// Netherlands VAT number
     NetherlandsVatNumber,
+    /// Poland VAT number
     PolandVatNumber,
+    /// Portugal VAT number
     PortugalVatNumber,
+    /// Romania VAT number
     RomaniaVatNumber,
+    /// Serbia VAT number
     SerbiaVatNumber,
+    /// Slovenia VAT number
     SloveniaVatNumber,
+    /// Slovakia VAT number
     SlovakiaVatNumber,
+    /// San Marino VAT number
     SanMarinoVatNumber,
+    /// Turkey VAT number
     TurkeyVatNumber,
+    /// Holy See (Vatican City State) VAT number
     HolySeeVaticanCityStateVatNumber,
+    /// French VAT number
     FrenchVatNumber,
+    /// Employer Identification Number (EIN, USA)
     EmployerIdentificationNumberEinUsa,
+    /// O.F.T.P. (ODETTE File Transfer Protocol)
     OFTPOdetteFileTransferProtocol,
+    /// X.400 address for mail text
     X400AddressForMailText,
+    /// AS2 exchange
     As2Exchange,
+    /// File Transfer Protocol
     FileTransferProtocol,
+    /// Electronic mail (SMPT)
     ElectronicMailSmpt,
 }
 

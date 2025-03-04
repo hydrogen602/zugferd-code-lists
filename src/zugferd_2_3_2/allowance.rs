@@ -2,24 +2,43 @@
 
 #[derive(Debug, PartialEq, Eq, PartialOrd, Ord, Clone, Copy, Hash)]
 pub enum Allowance {
+    /// Bonus for works ahead of schedule
     BonusForWorksAheadSchedule,
+    /// Other bonus
     OtherBonus,
+    /// Manufacturer’s consumer discount
     ManufacturerSConsumerDiscount,
+    /// Due to military status
     DueToMilitaryStatus,
+    /// Due to work accident
     DueToWorkAccident,
+    /// Special agreement
     SpecialAgreement,
+    /// Production error discount
     ProductionErrorDiscount,
+    /// New outlet discount
     NewOutletDiscount,
+    /// Sample discount
     SampleDiscount,
+    /// End-of-range discount
     EndRangeDiscount,
+    /// Incoterm discount
     IncotermDiscount,
+    /// Point of sales threshold allowance
     PointSalesThresholdAllowance,
+    /// Material surcharge/deduction
     MaterialSurchargeDeduction,
+    /// Discount
     Discount,
+    /// Special rebate
     SpecialRebate,
+    /// Fixed long term
     FixedLongTerm,
+    /// Temporary
     Temporary,
+    /// Standard
     Standard,
+    /// Yearly turnover
     YearlyTurnover,
 }
 

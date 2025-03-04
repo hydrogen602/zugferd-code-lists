@@ -2,406 +2,807 @@
 
 #[derive(Debug, PartialEq, Eq, PartialOrd, Ord, Clone, Copy, Hash)]
 pub enum Text {
+    /// Goods item description
     GoodsItemDescription,
+    /// Payment term
     PaymentTerm,
+    /// Dangerous goods additional information
     DangerousGoodsAdditionalInformation,
+    /// Dangerous goods technical name
     DangerousGoodsTechnicalName,
+    /// Acknowledgement description
     AcknowledgementDescription,
+    /// Rate additional information
     RateAdditionalInformation,
+    /// Party instructions
     PartyInstructions,
+    /// General information
     GeneralInformation,
+    /// Additional conditions of sale/purchase
     AdditionalConditionsSalePurchase,
+    /// Price conditions
     PriceConditions,
+    /// Goods dimensions in characters
     GoodsDimensionsInCharacters,
+    /// Equipment re-usage restrictions
     EquipmentReUsageRestrictions,
+    /// Handling restriction
     HandlingRestriction,
+    /// Error description (free text)
     ErrorDescriptionFreeText,
+    /// Response (free text)
     ResponseFreeText,
+    /// Package content's description
     PackageContentsDescription,
+    /// Terms of delivery
     TermsDelivery,
+    /// Bill of lading remarks
     BillLadingRemarks,
+    /// Mode of settlement information
     ModeSettlementInformation,
+    /// Consignment invoice information
     ConsignmentInvoiceInformation,
+    /// Clearance invoice information
     ClearanceInvoiceInformation,
+    /// Letter of credit information
     LetterCreditInformation,
+    /// License information
     LicenseInformation,
+    /// Certification statements
     CertificationStatements,
+    /// Additional export information
     AdditionalExportInformation,
+    /// Tariff statements
     TariffStatements,
+    /// Medical history
     MedicalHistory,
+    /// Conditions of sale or purchase
     ConditionsSaleOrPurchase,
+    /// Contract document type
     ContractDocumentType,
+    /// Additional terms and/or conditions (documentary credit)
     AdditionalTermsAndOrConditionsDocumentaryCredit,
+    /// Instructions or information about standby documentary
     InstructionsOrInformationAboutStandbyDocumentary,
+    /// Instructions or information about partial shipment(s)
     InstructionsOrInformationAboutPartialShipmentS,
+    /// Instructions or information about transhipment(s)
     InstructionsOrInformationAboutTranshipmentS,
+    /// Additional handling instructions documentary credit
     AdditionalHandlingInstructionsDocumentaryCredit,
+    /// Domestic routing information
     DomesticRoutingInformation,
+    /// Chargeable category of equipment
     ChargeableCategoryEquipment,
+    /// Government information
     GovernmentInformation,
+    /// Onward routing information
     OnwardRoutingInformation,
+    /// Accounting information
     AccountingInformation,
+    /// Discrepancy information
     DiscrepancyInformation,
+    /// Confirmation instructions
     ConfirmationInstructions,
+    /// Method of issuance
     MethodIssuance,
+    /// Documents delivery instructions
     DocumentsDeliveryInstructions,
+    /// Additional conditions
     AdditionalConditions,
+    /// Information/instructions about additional amounts covered
     InformationInstructionsAboutAdditionalAmountsCovered,
+    /// Deferred payment termed additional
     DeferredPaymentTermedAdditional,
+    /// Acceptance terms additional
     AcceptanceTermsAdditional,
+    /// Negotiation terms additional
     NegotiationTermsAdditional,
+    /// Document name and documentary requirements
     DocumentNameAndDocumentaryRequirements,
+    /// Instructions/information about revolving documentary credit
     InstructionsInformationAboutRevolvingDocumentaryCredit,
+    /// Documentary requirements
     DocumentaryRequirements,
+    /// Additional information
     AdditionalInformation,
+    /// Factor assignment clause
     FactorAssignmentClause,
+    /// Reason
     Reason,
+    /// Dispute
     Dispute,
+    /// Additional attribute information
     AdditionalAttributeInformation,
+    /// Absence declaration
     AbsenceDeclaration,
+    /// Aggregation statement
     AggregationStatement,
+    /// Compilation statement
     CompilationStatement,
+    /// Definitional exception
     DefinitionalException,
+    /// Privacy statement
     PrivacyStatement,
+    /// Quality statement
     QualityStatement,
+    /// Statistical description
     StatisticalDescription,
+    /// Statistical definition
     StatisticalDefinition,
+    /// Statistical name
     StatisticalName,
+    /// Statistical title
     StatisticalTitle,
+    /// Off-dimension information
     OffDimensionInformation,
+    /// Unexpected stops information
     UnexpectedStopsInformation,
+    /// Principles
     Principles,
+    /// Terms and definition
     TermsAndDefinition,
+    /// Segment name
     SegmentName,
+    /// Simple data element name
     SimpleDataElementName,
+    /// Scope
     Scope,
+    /// Message type name
     MessageTypeName,
+    /// Introduction
     Introduction,
+    /// Glossary
     Glossary,
+    /// Functional definition
     FunctionalDefinition,
+    /// Examples
     Examples,
+    /// Cover page
     CoverPage,
+    /// Dependency (syntax) notes
     DependencySyntaxNotes,
+    /// Code value name
     CodeValueName,
+    /// Code list name
     CodeListName,
+    /// Clarification of usage
     ClarificationUsage,
+    /// Composite data element name
     CompositeDataElementName,
+    /// Field of application
     FieldApplication,
+    /// Type of assets and liabilities
     TypeAssetsAndLiabilities,
+    /// Promotion information
     PromotionInformation,
+    /// Meter condition
     MeterCondition,
+    /// Meter reading information
     MeterReadingInformation,
+    /// Type of transaction reason
     TypeTransactionReason,
+    /// Type of survey question
     TypeSurveyQuestion,
+    /// Carrier's agent counter information
     CarriersAgentCounterInformation,
+    /// Description of work item on equipment
     DescriptionWorkItemOnEquipment,
+    /// Message definition
     MessageDefinition,
+    /// Booked item information
     BookedItemInformation,
+    /// Source of document
     SourceDocument,
+    /// Note
     Note,
+    /// Fixed part of segment clarification text
     FixedPartSegmentClarificationText,
+    /// Characteristics of goods
     CharacteristicsGoods,
+    /// Additional discharge instructions
     AdditionalDischargeInstructions,
+    /// Container stripping instructions
     ContainerStrippingInstructions,
+    /// CSC (Container Safety Convention) plate information
     CscContainerSafetyConventionPlateInformation,
+    /// Cargo remarks
     CargoRemarks,
+    /// Temperature control instructions
     TemperatureControlInstructions,
+    /// Text refers to expected data
     TextRefersToExpectedData,
+    /// Text refers to received data
     TextRefersToReceivedData,
+    /// Section clarification text
     SectionClarificationText,
+    /// Information to the beneficiary
     InformationToBeneficiary,
+    /// Information to the applicant
     InformationToApplicant,
+    /// Instructions to the beneficiary
     InstructionsToBeneficiary,
+    /// Instructions to the applicant
     InstructionsToApplicant,
+    /// Controlled atmosphere
     ControlledAtmosphere,
+    /// Take off annotation
     TakeOffAnnotation,
+    /// Price variation narrative
     PriceVariationNarrative,
+    /// Documentary credit amendment instructions
     DocumentaryCreditAmendmentInstructions,
+    /// Standard method narrative
     StandardMethodNarrative,
+    /// Project narrative
     ProjectNarrative,
+    /// Radioactive goods, additional information
     RadioactiveGoodsAdditionalInformation,
+    /// Bank-to-bank information
     BankToBankInformation,
+    /// Reimbursement instructions
     ReimbursementInstructions,
+    /// Reason for amending a message
     ReasonForAmendingAMessage,
+    /// Instructions to the paying and/or accepting and/or
     InstructionsToPayingAndOrAcceptingAndOr,
+    /// Interest instructions
     InterestInstructions,
+    /// Agent commission
     AgentCommission,
+    /// Remitting bank instructions
     RemittingBankInstructions,
+    /// Instructions to the collecting bank
     InstructionsToCollectingBank,
+    /// Collection amount instructions
     CollectionAmountInstructions,
+    /// Internal auditing information
     InternalAuditingInformation,
+    /// Constraint
     Constraint,
+    /// Comment
     Comment,
+    /// Semantic note
     SemanticNote,
+    /// Help text
     HelpText,
+    /// Legend
     Legend,
+    /// Batch code structure
     BatchCodeStructure,
+    /// Product application
     ProductApplication,
+    /// Customer complaint
     CustomerComplaint,
+    /// Probable cause of fault
     ProbableCauseFault,
+    /// Defect description
     DefectDescription,
+    /// Repair description
     RepairDescription,
+    /// Review comments
     ReviewComments,
+    /// Title
     Title,
+    /// Description of amount
     DescriptionAmount,
+    /// Responsibilities
     Responsibilities,
+    /// Supplier
     Supplier,
+    /// Purchase region
     PurchaseRegion,
+    /// Affiliation
     Affiliation,
+    /// Borrower
     Borrower,
+    /// Line of business
     LineBusiness,
+    /// Financial institution
     FinancialInstitution,
+    /// Business founder
     BusinessFounder,
+    /// Business history
     BusinessHistory,
+    /// Banking arrangements
     BankingArrangements,
+    /// Business origin
     BusinessOrigin,
+    /// Brand names' description
     BrandNamesDescription,
+    /// Business financing details
     BusinessFinancingDetails,
+    /// Competition
     Competition,
+    /// Construction process details
     ConstructionProcessDetails,
+    /// Construction specialty
     ConstructionSpecialty,
+    /// Contract information
     ContractInformation,
+    /// Corporate filing
     CorporateFiling,
+    /// Customer information
     CustomerInformation,
+    /// Copyright notice
     CopyrightNotice,
+    /// Contingent debt
     ContingentDebt,
+    /// Conviction details
     ConvictionDetails,
+    /// Equipment
     Equipment,
+    /// Workforce description
     WorkforceDescription,
+    /// Exemption
     Exemption,
+    /// Future plans
     FuturePlans,
+    /// Interviewee conversation information
     IntervieweeConversationInformation,
+    /// Intangible asset
     IntangibleAsset,
+    /// Inventory
     Inventory,
+    /// Investment
     Investment,
+    /// Intercompany relations information
     IntercompanyRelationsInformation,
+    /// Joint venture
     JointVenture,
+    /// Loan
     Loan,
+    /// Long term debt
     LongTermDebt,
+    /// Location
     Location,
+    /// Current legal structure
     CurrentLegalStructure,
+    /// Marital contract
     MaritalContract,
+    /// Marketing activities
     MarketingActivities,
+    /// Merger
     Merger,
+    /// Marketable securities
     MarketableSecurities,
+    /// Business debt
     BusinessDebt,
+    /// Original legal structure
     OriginalLegalStructure,
+    /// Employee sharing arrangements
     EmployeeSharingArrangements,
+    /// Organization details
     OrganizationDetails,
+    /// Public record details
     PublicRecordDetails,
+    /// Price range
     PriceRange,
+    /// Qualifications
     Qualifications,
+    /// Registered activity
     RegisteredActivity,
+    /// Criminal sentence
     CriminalSentence,
+    /// Sales method
     SalesMethod,
+    /// Educational institution information
     EducationalInstitutionInformation,
+    /// Status details
     StatusDetails,
+    /// Sales
     Sales,
+    /// Spouse information
     SpouseInformation,
+    /// Educational degree information
     EducationalDegreeInformation,
+    /// Shareholding information
     ShareholdingInformation,
+    /// Sales territory
     SalesTerritory,
+    /// Accountant's comments
     AccountantsComments,
+    /// Exemption law location
     ExemptionLawLocation,
+    /// Share classifications
     ShareClassifications,
+    /// Forecast
     Forecast,
+    /// Event location
     EventLocation,
+    /// Facility occupancy
     FacilityOccupancy,
+    /// Import and export details
     ImportAndExportDetails,
+    /// Additional facility information
     AdditionalFacilityInformation,
+    /// Inventory value
     InventoryValue,
+    /// Education
     Education,
+    /// Event
     Event,
+    /// Agent
     Agent,
+    /// Domestically agreed financial statement details
     DomesticallyAgreedFinancialStatementDetails,
+    /// Other current asset description
     OtherCurrentAssetDescription,
+    /// Other current liability description
     OtherCurrentLiabilityDescription,
+    /// Former business activity
     FormerBusinessActivity,
+    /// Trade name use
     TradeNameUse,
+    /// Signing authority
     SigningAuthority,
+    /// Guarantee
     Guarantee,
+    /// Holding company operation
     HoldingCompanyOperation,
+    /// Consignment routing
     ConsignmentRouting,
+    /// Letter of protest
     LetterProtest,
+    /// Question
     Question,
+    /// Party information
     PartyInformation,
+    /// Area boundaries description
     AreaBoundariesDescription,
+    /// Advertisement information
     AdvertisementInformation,
+    /// Financial statement details
     FinancialStatementDetails,
+    /// Access instructions
     AccessInstructions,
+    /// Liquidity
     Liquidity,
+    /// Credit line
     CreditLine,
+    /// Warranty terms
     WarrantyTerms,
+    /// Division description
     DivisionDescription,
+    /// Reporting instruction
     ReportingInstruction,
+    /// Examination result
     ExaminationResult,
+    /// Laboratory result
     LaboratoryResult,
+    /// Allowance/charge information
     AllowanceChargeInformation,
+    /// X-ray result
     XRayResult,
+    /// Pathology result
     PathologyResult,
+    /// Intervention description
     InterventionDescription,
+    /// Summary of admittance
     SummaryAdmittance,
+    /// Medical treatment course detail
     MedicalTreatmentCourseDetail,
+    /// Prognosis
     Prognosis,
+    /// Instruction to patient
     InstructionToPatient,
+    /// Instruction to physician
     InstructionToPhysician,
+    /// All documents
     AllDocuments,
+    /// Medicine treatment
     MedicineTreatment,
+    /// Medicine dosage and administration
     MedicineDosageAndAdministration,
+    /// Availability of patient
     AvailabilityPatient,
+    /// Reason for service request
     ReasonForServiceRequest,
+    /// Purpose of service
     PurposeService,
+    /// Arrival conditions
     ArrivalConditions,
+    /// Service requester's comment
     ServiceRequestersComment,
+    /// Authentication
     Authentication,
+    /// Requested location description
     RequestedLocationDescription,
+    /// Medicine administration condition
     MedicineAdministrationCondition,
+    /// Patient information
     PatientInformation,
+    /// Precautionary measure
     PrecautionaryMeasure,
+    /// Service characteristic
     ServiceCharacteristic,
+    /// Planned event comment
     PlannedEventComment,
+    /// Expected delay comment
     ExpectedDelayComment,
+    /// Transport requirements comment
     TransportRequirementsComment,
+    /// Temporary approval condition
     TemporaryApprovalCondition,
+    /// Customs Valuation Information
     CustomsValuationInformation,
+    /// Value Added Tax (VAT) margin scheme
     ValueAddedTaxVatMarginScheme,
+    /// Maritime Declaration of Health
     MaritimeDeclarationHealth,
+    /// Passenger baggage information
     PassengerBaggageInformation,
+    /// Maritime Declaration of Health
     MaritimeDeclarationHealth_Dup,
+    /// Additional product information address
     AdditionalProductInformationAddress,
+    /// Information to be printed on despatch advice
     InformationToBePrintedOnDespatchAdvice,
+    /// Missing goods remarks
     MissingGoodsRemarks,
+    /// Non-acceptance information
     NonAcceptanceInformation,
+    /// Returns information
     ReturnsInformation,
+    /// Sub-line item information
     SubLineItemInformation,
+    /// Test information
     TestInformation,
+    /// External link
     ExternalLink,
+    /// VAT exemption reason
     VatExemptionReason,
+    /// Processing Instructions
     ProcessingInstructions,
+    /// Relay Instructions
     RelayInstructions,
+    /// SIMA applicable
     SimaApplicable,
+    /// Appeals program code
     AppealsProgramCode,
+    /// SIMA subject
     SimaSubject,
+    /// Surtax applicable
     SurtaxApplicable,
+    /// SIMA security bond
     SimaSecurityBond,
+    /// Surtax subject
     SurtaxSubject,
+    /// Safeguard applicable
     SafeguardApplicable,
+    /// Safeguard applicable
     SafeguardApplicable_Dup,
+    /// Safeguard subject
     SafeguardSubject,
+    /// Transport contract document clause
     TransportContractDocumentClause,
+    /// Instruction to prepare the patient
     InstructionToPreparePatient,
+    /// Medicine treatment comment
     MedicineTreatmentComment,
+    /// Examination result comment
     ExaminationResultComment,
+    /// Service request comment
     ServiceRequestComment,
+    /// Prescription reason
     PrescriptionReason,
+    /// Prescription comment
     PrescriptionComment,
+    /// Clinical investigation comment
     ClinicalInvestigationComment,
+    /// Medicinal specification comment
     MedicinalSpecificationComment,
+    /// Economic contribution comment
     EconomicContributionComment,
+    /// Status of a plan
     StatusAPlan,
+    /// Random sample test information
     RandomSampleTestInformation,
+    /// Period of time
     PeriodTime,
+    /// Legislation
     Legislation,
+    /// Security measures requested
     SecurityMeasuresRequested,
+    /// Transport contract document remark
     TransportContractDocumentRemark,
+    /// Previous port of call security information
     PreviousPortCallSecurityInformation,
+    /// Security information
     SecurityInformation,
+    /// Waste information
     WasteInformation,
+    /// B2C marketing information, short description
     B2cMarketingInformationShortDescription,
+    /// B2B marketing information, long description
     B2bMarketingInformationLongDescription,
+    /// B2C marketing information, long description
     B2cMarketingInformationLongDescription,
+    /// Product ingredients
     ProductIngredients,
+    /// Location short name
     LocationShortName,
+    /// Packaging material information
     PackagingMaterialInformation,
+    /// Filler material information
     FillerMaterialInformation,
+    /// Ship-to-ship activity information
     ShipToShipActivityInformation,
+    /// Package material description
     PackageMaterialDescription,
+    /// Consumer level package marking
     ConsumerLevelPackageMarking,
+    /// SIMA measure in force
     SimaMeasureInForce,
+    /// Pre-CARM
     PreCarm,
+    /// SIMA measure type
     SimaMeasureType,
+    /// Customs clearance instructions
     CustomsClearanceInstructions,
+    /// Sub Type Code
     SubTypeCode,
+    /// SIMA information
     SimaInformation,
+    /// Time limit end
     TimeLimitEnd,
+    /// Time limit start
     TimeLimitStart,
+    /// Warehouse time limit
     WarehouseTimeLimit,
+    /// Value for duty information
     ValueForDutyInformation,
+    /// Customs clearance instructions export
     CustomsClearanceInstructionsExport,
+    /// Change information
     ChangeInformation,
+    /// Customs clearance instruction import
     CustomsClearanceInstructionImport,
+    /// Clearance place requested
     ClearancePlaceRequested,
+    /// Loading remarks
     LoadingRemarks,
+    /// Order information
     OrderInformation,
+    /// Customer remarks
     CustomerRemarks,
+    /// Customs declaration information
     CustomsDeclarationInformation,
+    /// Damage remarks
     DamageRemarks,
+    /// Document issuer declaration
     DocumentIssuerDeclaration,
+    /// Delivery information
     DeliveryInformation,
+    /// Delivery instructions
     DeliveryInstructions,
+    /// Documentation instructions
     DocumentationInstructions,
+    /// Duty declaration
     DutyDeclaration,
+    /// Effective used routing
     EffectiveUsedRouting,
+    /// First block to be printed on the transport contract
     FirstBlockToBePrintedOnTransportContract,
+    /// Government bill of lading information
     GovernmentBillLadingInformation,
+    /// Entire transaction set
     EntireTransactionSet,
+    /// Further information concerning GGVS par. 7
     FurtherInformationConcerningGgvsPar7,
+    /// Consignment handling instruction
     ConsignmentHandlingInstruction,
+    /// Hazard information
     HazardInformation,
+    /// Consignment information for consignee
     ConsignmentInformationForConsignee,
+    /// Insurance instructions
     InsuranceInstructions,
+    /// Invoice mailing instructions
     InvoiceMailingInstructions,
+    /// Commercial invoice item description
     CommercialInvoiceItemDescription,
+    /// Insurance information
     InsuranceInformation,
+    /// Invoice instruction
     InvoiceInstruction,
+    /// Information for railway purpose
     InformationForRailwayPurpose,
+    /// Inland transport details
     InlandTransportDetails,
+    /// Testing instructions
     TestingInstructions,
+    /// Location Alias
     LocationAlias,
+    /// Line item
     LineItem,
+    /// Loading instruction
     LoadingInstruction,
+    /// Miscellaneous charge order
     MiscellaneousChargeOrder,
+    /// Maritime Declaration of Health
     MaritimeDeclarationHealth_Dup_Dup,
+    /// Additional marks/numbers information
     AdditionalMarksNumbersInformation,
+    /// Order instruction
     OrderInstruction,
+    /// Other service information
     OtherServiceInformation,
+    /// Packing/marking information
     PackingMarkingInformation,
+    /// Payment instructions information
     PaymentInstructionsInformation,
+    /// Payables information
     PayablesInformation,
+    /// Packaging information
     PackagingInformation,
+    /// Packaging terms information
     PackagingTermsInformation,
+    /// Payment detail/remittance information
     PaymentDetailRemittanceInformation,
+    /// Payment information
     PaymentInformation,
+    /// Product information
     ProductInformation,
+    /// Price calculation formula
     PriceCalculationFormula,
+    /// Priority information
     PriorityInformation,
+    /// Purchasing information
     PurchasingInformation,
+    /// Quarantine instructions
     QuarantineInstructions,
+    /// Quality demands/requirements
     QualityDemandsRequirements,
+    /// Quotation instruction/information
     QuotationInstructionInformation,
+    /// Risk and handling information
     RiskAndHandlingInformation,
+    /// Regulatory information
     RegulatoryInformation,
+    /// Return to origin information
     ReturnToOriginInformation,
+    /// Receivables
     Receivables,
+    /// Consignment route
     ConsignmentRoute,
+    /// Safety information
     SafetyInformation,
+    /// Consignment documentary instruction
     ConsignmentDocumentaryInstruction,
+    /// Special instructions
     SpecialInstructions,
+    /// Ship line requested
     ShipLineRequested,
+    /// Special permission for transport, generally
     SpecialPermissionForTransportGenerally,
+    /// Special permission concerning the goods to be transported
     SpecialPermissionConcerningGoodsToBeTransported,
+    /// Special handling
     SpecialHandling,
+    /// Special permission concerning package
     SpecialPermissionConcerningPackage,
+    /// Special permission concerning transport means
     SpecialPermissionConcerningTransportMeans,
+    /// Subsidiary risk number (IATA/DGR)
     SubsidiaryRiskNumberIataDgr,
+    /// Special service request
     SpecialServiceRequest,
+    /// Supplier remarks
     SupplierRemarks,
+    /// Consignment tariff
     ConsignmentTariff,
+    /// Consignment transport
     ConsignmentTransport,
+    /// Transportation information
     TransportationInformation,
+    /// Requested tariff
     RequestedTariff,
+    /// Tax declaration
     TaxDeclaration,
+    /// Warehouse instruction/information
     WarehouseInstructionInformation,
+    /// Mutually defined
     MutuallyDefined,
 }
 

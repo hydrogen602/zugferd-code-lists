@@ -2,256 +2,507 @@
 
 #[derive(Debug, PartialEq, Eq, PartialOrd, Ord, Clone, Copy, Hash)]
 pub enum Country {
+    /// Andorra
     Andorra,
+    /// United Arab Emirates (the)
     UnitedArabEmirates,
+    /// Afghanistan
     Afghanistan,
+    /// Antigua and Barbuda
     AntiguaAndBarbuda,
+    /// Anguilla
     Anguilla,
+    /// Albania
     Albania,
+    /// Armenia
     Armenia,
+    /// Angola
     Angola,
+    /// Antarctica
     Antarctica,
+    /// Argentina
     Argentina,
+    /// American Samoa
     AmericanSamoa,
+    /// Austria
     Austria,
+    /// Australia
     Australia,
+    /// Aruba
     Aruba,
+    /// Åland Islands
     ÅlandIslands,
+    /// Azerbaijan
     Azerbaijan,
+    /// Bosnia and Herzegovina
     BosniaAndHerzegovina,
+    /// Barbados
     Barbados,
+    /// Bangladesh
     Bangladesh,
+    /// Belgium
     Belgium,
+    /// Burkina Faso
     BurkinaFaso,
+    /// Bulgaria
     Bulgaria,
+    /// Bahrain
     Bahrain,
+    /// Burundi
     Burundi,
+    /// Benin
     Benin,
+    /// Saint Barthélemy
     SaintBarthélemy,
+    /// Bermuda
     Bermuda,
+    /// Brunei Darussalam
     BruneiDarussalam,
+    /// Bolivia (Plurinational State of)
     BoliviaPlurinationalState,
+    /// Bonaire, Sint Eustatius and Saba
     BonaireSintEustatiusAndSaba,
+    /// Brazil
     Brazil,
+    /// Bahamas (the)
     Bahamas,
+    /// Bhutan
     Bhutan,
+    /// Bouvet Island
     BouvetIsland,
+    /// Botswana
     Botswana,
+    /// Belarus
     Belarus,
+    /// Belize
     Belize,
+    /// Canada
     Canada,
+    /// Cocos (Keeling) Islands (the)
     CocosKeelingIslands,
+    /// Congo (the Democratic Republic of the)
     CongoDemocraticRepublic,
+    /// Central African Republic (the)
     CentralAfricanRepublic,
+    /// Congo (the)
     Congo,
+    /// Switzerland
     Switzerland,
+    /// Côte d'Ivoire
     CôteDivoire,
+    /// Cook Islands (the)
     CookIslands,
+    /// Chile
     Chile,
+    /// Cameroon
     Cameroon,
+    /// China
     China,
+    /// Colombia
     Colombia,
+    /// Costa Rica
     CostaRica,
+    /// Cuba
     Cuba,
+    /// Cabo Verde
     CaboVerde,
+    /// Curaçao
     Curaçao,
+    /// Christmas Island
     ChristmasIsland,
+    /// Cyprus
     Cyprus,
+    /// Czechia
     Czechia,
+    /// Germany
     Germany,
+    /// Djibouti
     Djibouti,
+    /// Denmark
     Denmark,
+    /// Dominica
     Dominica,
+    /// Dominican Republic (the)
     DominicanRepublic,
+    /// Algeria
     Algeria,
+    /// Ecuador
     Ecuador,
+    /// Estonia
     Estonia,
+    /// Egypt
     Egypt,
+    /// Western Sahara*
     WesternSahara,
+    /// Eritrea
     Eritrea,
+    /// Spain
     Spain,
+    /// Ethiopia
     Ethiopia,
+    /// Finland
     Finland,
+    /// Fiji
     Fiji,
+    /// Falkland Islands (the) [Malvinas]
     FalklandIslandsMalvinas,
+    /// Micronesia (Federated States of)
     MicronesiaFederatedStates,
+    /// Faroe Islands (the)
     FaroeIslands,
+    /// France
     France,
+    /// Gabon
     Gabon,
+    /// United Kingdom of Great Britain and Northern Ireland (the)
     UnitedKingdomGreatBritainAndNorthernIreland,
+    /// Grenada
     Grenada,
+    /// Georgia
     Georgia,
+    /// French Guiana
     FrenchGuiana,
+    /// Guernsey
     Guernsey,
+    /// Ghana
     Ghana,
+    /// Gibraltar
     Gibraltar,
+    /// Greenland
     Greenland,
+    /// Gambia (the)
     Gambia,
+    /// Guinea
     Guinea,
+    /// Guadeloupe
     Guadeloupe,
+    /// Equatorial Guinea
     EquatorialGuinea,
+    /// Greece
     Greece,
+    /// South Georgia and the South Sandwich Islands
     SouthGeorgiaAndSouthSandwichIslands,
+    /// Guatemala
     Guatemala,
+    /// Guam
     Guam,
+    /// Guinea-Bissau
     GuineaBissau,
+    /// Guyana
     Guyana,
+    /// Hong Kong
     HongKong,
+    /// Heard Island and McDonald Islands
     HeardIslandAndMcdonaldIslands,
+    /// Honduras
     Honduras,
+    /// Croatia
     Croatia,
+    /// Haiti
     Haiti,
+    /// Hungary
     Hungary,
+    /// Indonesia
     Indonesia,
+    /// Ireland
     Ireland,
+    /// Israel
     Israel,
+    /// Isle of Man
     IsleMan,
+    /// India
     India,
+    /// British Indian Ocean Territory (the)
     BritishIndianOceanTerritory,
+    /// Iraq
     Iraq,
+    /// Iran (Islamic Republic of)
     IranIslamicRepublic,
+    /// Iceland
     Iceland,
+    /// Italy
     Italy,
+    /// Jersey
     Jersey,
+    /// Jamaica
     Jamaica,
+    /// Jordan
     Jordan,
+    /// Japan
     Japan,
+    /// Kenya
     Kenya,
+    /// Kyrgyzstan
     Kyrgyzstan,
+    /// Cambodia
     Cambodia,
+    /// Kiribati
     Kiribati,
+    /// Comoros (the)
     Comoros,
+    /// Saint Kitts and Nevis
     SaintKittsAndNevis,
+    /// Korea (the Democratic People's Republic of)
     KoreaDemocraticPeoplesRepublic,
+    /// Korea (the Republic of)
     KoreaRepublic,
+    /// Kuwait
     Kuwait,
+    /// Cayman Islands (the)
     CaymanIslands,
+    /// Kazakhstan
     Kazakhstan,
+    /// Lao People's Democratic Republic (the)
     LaoPeoplesDemocraticRepublic,
+    /// Lebanon
     Lebanon,
+    /// Saint Lucia
     SaintLucia,
+    /// Liechtenstein
     Liechtenstein,
+    /// Sri Lanka
     SriLanka,
+    /// Liberia
     Liberia,
+    /// Lesotho
     Lesotho,
+    /// Lithuania
     Lithuania,
+    /// Luxembourg
     Luxembourg,
+    /// Latvia
     Latvia,
+    /// Libya
     Libya,
+    /// Morocco
     Morocco,
+    /// Monaco
     Monaco,
+    /// Moldova (the Republic of)
     MoldovaRepublic,
+    /// Montenegro
     Montenegro,
+    /// Saint Martin (French part)
     SaintMartinFrenchPart,
+    /// Madagascar
     Madagascar,
+    /// Marshall Islands (the)
     MarshallIslands,
+    /// North Macedonia
     NorthMacedonia,
+    /// Mali
     Mali,
+    /// Myanmar
     Myanmar,
+    /// Mongolia
     Mongolia,
+    /// Macao
     Macao,
+    /// Northern Mariana Islands (the)
     NorthernMarianaIslands,
+    /// Martinique
     Martinique,
+    /// Mauritania
     Mauritania,
+    /// Montserrat
     Montserrat,
+    /// Malta
     Malta,
+    /// Mauritius
     Mauritius,
+    /// Maldives
     Maldives,
+    /// Malawi
     Malawi,
+    /// Mexico
     Mexico,
+    /// Malaysia
     Malaysia,
+    /// Mozambique
     Mozambique,
+    /// Namibia
     Namibia,
+    /// New Caledonia
     NewCaledonia,
+    /// Niger (the)
     Niger,
+    /// Norfolk Island
     NorfolkIsland,
+    /// Nigeria
     Nigeria,
+    /// Nicaragua
     Nicaragua,
+    /// Netherlands (the)
     Netherlands,
+    /// Norway
     Norway,
+    /// Nepal
     Nepal,
+    /// Nauru
     Nauru,
+    /// Niue
     Niue,
+    /// New Zealand
     NewZealand,
+    /// Oman
     Oman,
+    /// Panama
     Panama,
+    /// Peru
     Peru,
+    /// French Polynesia
     FrenchPolynesia,
+    /// Papua New Guinea
     PapuaNewGuinea,
+    /// Philippines (the)
     Philippines,
+    /// Pakistan
     Pakistan,
+    /// Poland
     Poland,
+    /// Saint Pierre and Miquelon
     SaintPierreAndMiquelon,
+    /// Pitcairn
     Pitcairn,
+    /// Puerto Rico
     PuertoRico,
+    /// Palestine, State of
     PalestineState,
+    /// Portugal
     Portugal,
+    /// Palau
     Palau,
+    /// Paraguay
     Paraguay,
+    /// Qatar
     Qatar,
+    /// Réunion
     Réunion,
+    /// Romania
     Romania,
+    /// Serbia
     Serbia,
+    /// Russian Federation (the)
     RussianFederation,
+    /// Rwanda
     Rwanda,
+    /// Saudi Arabia
     SaudiArabia,
+    /// Solomon Islands
     SolomonIslands,
+    /// Seychelles
     Seychelles,
+    /// Sudan (the)
     Sudan,
+    /// Sweden
     Sweden,
+    /// Singapore
     Singapore,
+    /// Saint Helena, Ascension and Tristan da Cunha
     SaintHelenaAscensionAndTristanDaCunha,
+    /// Slovenia
     Slovenia,
+    /// Svalbard and Jan Mayen
     SvalbardAndJanMayen,
+    /// Slovakia
     Slovakia,
+    /// Sierra Leone
     SierraLeone,
+    /// San Marino
     SanMarino,
+    /// Senegal
     Senegal,
+    /// Somalia
     Somalia,
+    /// Suriname
     Suriname,
+    /// South Sudan
     SouthSudan,
+    /// Sao Tome and Principe
     SaoTomeAndPrincipe,
+    /// El Salvador
     ElSalvador,
+    /// Sint Maarten (Dutch part)
     SintMaartenDutchPart,
+    /// Syrian Arab Republic (the)
     SyrianArabRepublic,
+    /// Eswatini
     Eswatini,
+    /// Turks and Caicos Islands (the)
     TurksAndCaicosIslands,
+    /// Chad
     Chad,
+    /// French Southern Territories (the)
     FrenchSouthernTerritories,
+    /// Togo
     Togo,
+    /// Thailand
     Thailand,
+    /// Tajikistan
     Tajikistan,
+    /// Tokelau
     Tokelau,
+    /// Timor-Leste
     TimorLeste,
+    /// Turkmenistan
     Turkmenistan,
+    /// Tunisia
     Tunisia,
+    /// Tonga
     Tonga,
+    /// Türkiye
     Türkiye,
+    /// Trinidad and Tobago
     TrinidadAndTobago,
+    /// Tuvalu
     Tuvalu,
+    /// Taiwan (Province of China)
     TaiwanProvinceChina,
+    /// Tanzania, the United Republic of
     TanzaniaUnitedRepublic,
+    /// Ukraine
     Ukraine,
+    /// Uganda
     Uganda,
+    /// United States Minor Outlying Islands (the)
     UnitedStatesMinorOutlyingIslands,
+    /// United States of America (the)
     UnitedStatesAmerica,
+    /// Uruguay
     Uruguay,
+    /// Uzbekistan
     Uzbekistan,
+    /// Holy See (the)
     HolySee,
+    /// Saint Vincent and the Grenadines
     SaintVincentAndGrenadines,
+    /// Venezuela (Bolivarian Republic of)
     VenezuelaBolivarianRepublic,
+    /// Virgin Islands (British)
     VirginIslandsBritish,
+    /// Virgin Islands (U.S.)
     VirginIslandsUS,
+    /// Viet Nam
     VietNam,
+    /// Vanuatu
     Vanuatu,
+    /// Wallis and Futuna
     WallisAndFutuna,
+    /// Samoa
     Samoa,
+    /// Yemen
     Yemen,
+    /// Mayotte
     Mayotte,
+    /// South Africa
     SouthAfrica,
+    /// Zambia
     Zambia,
+    /// Zimbabwe
     Zimbabwe,
+    /// Kosovo
     Kosovo,
+    /// United Kingdom (Northern Ireland)
     UnitedKingdomNorthernIreland,
 }
 

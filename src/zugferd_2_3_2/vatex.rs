@@ -2,67 +2,129 @@
 
 #[derive(Debug, PartialEq, Eq, PartialOrd, Ord, Clone, Copy, Hash)]
 pub enum VATEX {
+    /// Exempt based on article 79, point c of Council Directive 2006/112/EC
     ExemptBasedOnArticle79PointCCouncilDirective2006112Ec,
+    /// Exempt based on article 132 of Council Directive 2006/112/EC
     ExemptBasedOnArticle132CouncilDirective2006112Ec,
+    /// Exempt based on article 132, section 1 (a) of Council Directive 2006/112/EC
     ExemptBasedOnArticle132Section1ACouncilDirective2006112Ec,
+    /// Exempt based on article 132, section 1 (b) of Council Directive 2006/112/EC
     ExemptBasedOnArticle132Section1BCouncilDirective2006112Ec,
+    /// Exempt based on article 132, section 1 (c) of Council Directive 2006/112/EC
     ExemptBasedOnArticle132Section1CCouncilDirective2006112Ec,
+    /// Exempt based on article 132, section 1 (d) of Council Directive 2006/112/EC
     ExemptBasedOnArticle132Section1DCouncilDirective2006112Ec,
+    /// Exempt based on article 132, section 1 (e) of Council Directive 2006/112/EC
     ExemptBasedOnArticle132Section1ECouncilDirective2006112Ec,
+    /// Exempt based on article 132, section 1 (f) of Council Directive 2006/112/EC
     ExemptBasedOnArticle132Section1FCouncilDirective2006112Ec,
+    /// Exempt based on article 132, section 1 (g) of Council Directive 2006/112/EC
     ExemptBasedOnArticle132Section1GCouncilDirective2006112Ec,
+    /// Exempt based on article 132, section 1 (h) of Council Directive 2006/112/EC
     ExemptBasedOnArticle132Section1HCouncilDirective2006112Ec,
+    /// Exempt based on article 132, section 1 (i) of Council Directive 2006/112/EC
     ExemptBasedOnArticle132Section1ICouncilDirective2006112Ec,
+    /// Exempt based on article 132, section 1 (j) of Council Directive 2006/112/EC
     ExemptBasedOnArticle132Section1JCouncilDirective2006112Ec,
+    /// Exempt based on article 132, section 1 (k) of Council Directive 2006/112/EC
     ExemptBasedOnArticle132Section1KCouncilDirective2006112Ec,
+    /// Exempt based on article 132, section 1 (l) of Council Directive 2006/112/EC
     ExemptBasedOnArticle132Section1LCouncilDirective2006112Ec,
+    /// Exempt based on article 132, section 1 (m) of Council Directive 2006/112/EC
     ExemptBasedOnArticle132Section1MCouncilDirective2006112Ec,
+    /// Exempt based on article 132, section 1 (n) of Council Directive 2006/112/EC
     ExemptBasedOnArticle132Section1NCouncilDirective2006112Ec,
+    /// Exempt based on article 132, section 1 (o) of Council Directive 2006/112/EC
     ExemptBasedOnArticle132Section1OCouncilDirective2006112Ec,
+    /// Exempt based on article 132, section 1 (p) of Council Directive 2006/112/EC
     ExemptBasedOnArticle132Section1PCouncilDirective2006112Ec,
+    /// Exempt based on article 132, section 1 (q) of Council Directive 2006/112/EC
     ExemptBasedOnArticle132Section1QCouncilDirective2006112Ec,
+    /// Exempt based on article 143 of Council Directive 2006/112/EC
     ExemptBasedOnArticle143CouncilDirective2006112Ec,
+    /// Exempt based on article 143, section 1 (a) of Council Directive 2006/112/EC
     ExemptBasedOnArticle143Section1ACouncilDirective2006112Ec,
+    /// Exempt based on article 143, section 1 (b) of Council Directive 2006/112/EC
     ExemptBasedOnArticle143Section1BCouncilDirective2006112Ec,
+    /// Exempt based on article 143, section 1 (c) of Council Directive 2006/112/EC
     ExemptBasedOnArticle143Section1CCouncilDirective2006112Ec,
+    /// Exempt based on article 143, section 1 (d) of Council Directive 2006/112/EC
     ExemptBasedOnArticle143Section1DCouncilDirective2006112Ec,
+    /// Exempt based on article 143, section 1 (e) of Council Directive 2006/112/EC
     ExemptBasedOnArticle143Section1ECouncilDirective2006112Ec,
+    /// Exempt based on article 143, section 1 (f) of Council Directive 2006/112/EC
     ExemptBasedOnArticle143Section1FCouncilDirective2006112Ec,
+    /// Exempt based on article 143, section 1 (fa) of Council Directive 2006/112/EC
     ExemptBasedOnArticle143Section1FaCouncilDirective2006112Ec,
+    /// Exempt based on article 143, section 1 (g) of Council Directive 2006/112/EC
     ExemptBasedOnArticle143Section1GCouncilDirective2006112Ec,
+    /// Exempt based on article 143, section 1 (h) of Council Directive 2006/112/EC
     ExemptBasedOnArticle143Section1HCouncilDirective2006112Ec,
+    /// Exempt based on article 143, section 1 (i) of Council Directive 2006/112/EC
     ExemptBasedOnArticle143Section1ICouncilDirective2006112Ec,
+    /// Exempt based on article 143, section 1 (j) of Council Directive 2006/112/EC
     ExemptBasedOnArticle143Section1JCouncilDirective2006112Ec,
+    /// Exempt based on article 143, section 1 (k) of Council Directive 2006/112/EC
     ExemptBasedOnArticle143Section1KCouncilDirective2006112Ec,
+    /// Exempt based on article 143, section 1 (l) of Council Directive 2006/112/EC
     ExemptBasedOnArticle143Section1LCouncilDirective2006112Ec,
+    /// Exempt based on article 144 of Council Directive 2006/112/EC
     ExemptBasedOnArticle144CouncilDirective2006112Ec,
+    /// Exempt based on article 146 section 1 (e) of Council Directive 2006/112/EC
     ExemptBasedOnArticle146Section1ECouncilDirective2006112Ec,
+    /// Exempt based on article 148 of Council Directive 2006/112/EC
     ExemptBasedOnArticle148CouncilDirective2006112Ec,
+    /// Exempt based on article 148, section (a) of Council Directive 2006/112/EC
     ExemptBasedOnArticle148SectionACouncilDirective2006112Ec,
+    /// Exempt based on article 148, section (b) of Council Directive 2006/112/EC
     ExemptBasedOnArticle148SectionBCouncilDirective2006112Ec,
+    /// Exempt based on article 148, section (c) of Council Directive 2006/112/EC
     ExemptBasedOnArticle148SectionCCouncilDirective2006112Ec,
+    /// Exempt based on article 148, section (d) of Council Directive 2006/112/EC
     ExemptBasedOnArticle148SectionDCouncilDirective2006112Ec,
+    /// Exempt based on article 148, section (e) of Council Directive 2006/112/EC
     ExemptBasedOnArticle148SectionECouncilDirective2006112Ec,
+    /// Exempt based on article 148, section (f) of Council Directive 2006/112/EC
     ExemptBasedOnArticle148SectionFCouncilDirective2006112Ec,
+    /// Exempt based on article 148, section (g) of Council Directive 2006/112/EC
     ExemptBasedOnArticle148SectionGCouncilDirective2006112Ec,
+    /// Exempt based on article 151 of Council Directive 2006/112/EC
     ExemptBasedOnArticle151CouncilDirective2006112Ec,
+    /// Exempt based on article 151, section 1 (a) of Council Directive 2006/112/EC
     ExemptBasedOnArticle151Section1ACouncilDirective2006112Ec,
+    /// Exempt based on article 151, section 1 (aa) of Council Directive 2006/112/EC
     ExemptBasedOnArticle151Section1AaCouncilDirective2006112Ec,
+    /// Exempt based on article 151, section 1 (b) of Council Directive 2006/112/EC
     ExemptBasedOnArticle151Section1BCouncilDirective2006112Ec,
+    /// Exempt based on article 151, section 1 (c) of Council Directive 2006/112/EC
     ExemptBasedOnArticle151Section1CCouncilDirective2006112Ec,
+    /// Exempt based on article 151, section 1 (d) of Council Directive 2006/112/EC
     ExemptBasedOnArticle151Section1DCouncilDirective2006112Ec,
+    /// Exempt based on article 151, section 1 (e) of Council Directive 2006/112/EC
     ExemptBasedOnArticle151Section1ECouncilDirective2006112Ec,
+    /// Exempt based on article 159 of Council Directive 2006/112/EC
     ExemptBasedOnArticle159CouncilDirective2006112Ec,
+    /// Exempt based on article 309 of Council Directive 2006/112/EC
     ExemptBasedOnArticle309CouncilDirective2006112Ec,
+    /// Reverse charge
     ReverseCharge,
+    /// Travel agents VAT scheme.
     TravelAgentsVatScheme,
+    /// Second hand goods VAT scheme.
     SecondHandGoodsVatScheme,
+    /// Export outside the EU
     ExportOutsideEu,
+    /// Works of art VAT scheme.
     WorksArtVatScheme,
+    /// Intra-community supply
     IntraCommunitySupply,
+    /// Collectors items and antiques VAT scheme.
     CollectorsItemsAndAntiquesVatScheme,
+    /// Not subject to VAT
     NotSubjectToVat,
+    /// France domestic VAT franchise in base
     FranceDomesticVatFranchiseInBase,
+    /// France domestic Credit Notes without VAT, due to supplier forfeit of VAT for discount
     FranceDomesticCreditNotesWithoutVatDueToSupplierForfeitVatForDiscount,
 }
 

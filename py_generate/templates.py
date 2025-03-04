@@ -34,9 +34,19 @@ class EnumValue:
     rust_identifier: str
     description: str
     code: string
+    extras: list[str] | None = None
 
     def gen_enum_value_definition(self) -> str:
-        return f"{TAB}{self.rust_identifier},"
+        extras = ""
+        for extra in self.extras or []:
+            if not extra:
+                continue
+
+            extra = re.sub(r"\s+", " ", extra)
+            extras += f"\n\n{TAB}/// {extra}"
+
+        description = re.sub(r"\s+", " ", self.description)
+        return f"{TAB}/// {description}{extras}\n{TAB}{self.rust_identifier},"
 
 
 def enum_generate(enum_name: str, enum_values: list[EnumValue]) -> str:

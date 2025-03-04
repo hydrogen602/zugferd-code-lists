@@ -2,89 +2,173 @@
 
 #[derive(Debug, PartialEq, Eq, PartialOrd, Ord, Clone, Copy, Hash)]
 pub enum Payment {
+    /// Instrument not defined
     InstrumentNotDefined,
+    /// Automated clearing house credit
     AutomatedClearingHouseCredit,
+    /// Automated clearing house debit
     AutomatedClearingHouseDebit,
+    /// ACH demand debit reversal
     AchDemandDebitReversal,
+    /// ACH demand credit reversal
     AchDemandCreditReversal,
+    /// ACH demand credit
     AchDemandCredit,
+    /// ACH demand debit
     AchDemandDebit,
+    /// Hold
     Hold,
+    /// National or regional clearing
     NationalOrRegionalClearing,
+    /// In cash
     InCash,
+    /// ACH savings credit reversal
     AchSavingsCreditReversal,
+    /// ACH savings debit reversal
     AchSavingsDebitReversal,
+    /// ACH savings credit
     AchSavingsCredit,
+    /// ACH savings debit
     AchSavingsDebit,
+    /// Bookentry credit
     BookentryCredit,
+    /// Bookentry debit
     BookentryDebit,
+    /// ACH demand cash concentration/disbursement (CCD) credit
     AchDemandCashConcentrationDisbursementCcdCredit,
+    /// ACH demand cash concentration/disbursement (CCD) debit
     AchDemandCashConcentrationDisbursementCcdDebit,
+    /// ACH demand corporate trade payment (CTP) credit
     AchDemandCorporateTradePaymentCtpCredit,
+    /// Cheque
     Cheque,
+    /// Banker's draft
     BankersDraft,
+    /// Certified banker's draft
     CertifiedBankersDraft,
+    /// Bank cheque (issued by a banking or similar establishment)
     BankChequeIssuedByABankingOrSimilarEstablishment,
+    /// Bill of exchange awaiting acceptance
     BillExchangeAwaitingAcceptance,
+    /// Certified cheque
     CertifiedCheque,
+    /// Local cheque
     LocalCheque,
+    /// ACH demand corporate trade payment (CTP) debit
     AchDemandCorporateTradePaymentCtpDebit,
+    /// ACH demand corporate trade exchange (CTX) credit
     AchDemandCorporateTradeExchangeCtxCredit,
+    /// ACH demand corporate trade exchange (CTX) debit
     AchDemandCorporateTradeExchangeCtxDebit,
+    /// Credit transfer
     CreditTransfer,
+    /// Debit transfer
     DebitTransfer,
+    /// ACH demand cash concentration/disbursement plus (CCD+)
     AchDemandCashConcentrationDisbursementPlusCcd,
+    /// ACH demand cash concentration/disbursement plus (CCD+)
     AchDemandCashConcentrationDisbursementPlusCcd_Dup,
+    /// ACH prearranged payment and deposit (PPD)
     AchPrearrangedPaymentAndDepositPpd,
+    /// ACH savings cash concentration/disbursement (CCD) credit
     AchSavingsCashConcentrationDisbursementCcdCredit,
+    /// ACH savings cash concentration/disbursement (CCD) debit
     AchSavingsCashConcentrationDisbursementCcdDebit,
+    /// ACH savings corporate trade payment (CTP) credit
     AchSavingsCorporateTradePaymentCtpCredit,
+    /// ACH savings corporate trade payment (CTP) debit
     AchSavingsCorporateTradePaymentCtpDebit,
+    /// ACH savings corporate trade exchange (CTX) credit
     AchSavingsCorporateTradeExchangeCtxCredit,
+    /// ACH savings corporate trade exchange (CTX) debit
     AchSavingsCorporateTradeExchangeCtxDebit,
+    /// ACH savings cash concentration/disbursement plus (CCD+)
     AchSavingsCashConcentrationDisbursementPlusCcd,
+    /// Payment to bank account
     PaymentToBankAccount,
+    /// ACH savings cash concentration/disbursement plus (CCD+)
     AchSavingsCashConcentrationDisbursementPlusCcd_Dup,
+    /// Accepted bill of exchange
     AcceptedBillExchange,
+    /// Referenced home-banking credit transfer
     ReferencedHomeBankingCreditTransfer,
+    /// Interbank debit transfer
     InterbankDebitTransfer,
+    /// Home-banking debit transfer
     HomeBankingDebitTransfer,
+    /// Bank card
     BankCard,
+    /// Direct debit
     DirectDebit,
+    /// Payment by postgiro
     PaymentByPostgiro,
+    /// FR, norme 6 97-Telereglement CFONB (French Organisation for
     FrNorme697TelereglementCfonbFrenchOrganisationFor,
+    /// Urgent commercial payment
     UrgentCommercialPayment,
+    /// Urgent Treasury Payment
     UrgentTreasuryPayment,
+    /// Credit card
     CreditCard,
+    /// Debit card
     DebitCard,
+    /// Bankgiro
     Bankgiro,
+    /// Standing agreement
     StandingAgreement,
+    /// SEPA credit transfer
     SepaCreditTransfer,
+    /// SEPA direct debit
     SepaDirectDebit,
+    /// Promissory note
     PromissoryNote,
+    /// Promissory note signed by the debtor
     PromissoryNoteSignedByDebtor,
+    /// Promissory note signed by the debtor and endorsed by a bank
     PromissoryNoteSignedByDebtorAndEndorsedByABank,
+    /// Promissory note signed by the debtor and endorsed by a
     PromissoryNoteSignedByDebtorAndEndorsedByA,
+    /// Promissory note signed by a bank
     PromissoryNoteSignedByABank,
+    /// Promissory note signed by a bank and endorsed by another
     PromissoryNoteSignedByABankAndEndorsedByAnother,
+    /// Promissory note signed by a third party
     PromissoryNoteSignedByAThirdParty,
+    /// Promissory note signed by a third party and endorsed by a
     PromissoryNoteSignedByAThirdPartyAndEndorsedByA,
+    /// Online payment service
     OnlinePaymentService,
+    /// Transfer Advice
     TransferAdvice,
+    /// Bill drawn by the creditor on the debtor
     BillDrawnByCreditorOnDebtor,
+    /// Bill drawn by the creditor on a bank
     BillDrawnByCreditorOnABank,
+    /// Bill drawn by the creditor, endorsed by another bank
     BillDrawnByCreditorEndorsedByAnotherBank,
+    /// Bill drawn by the creditor on a bank and endorsed by a
     BillDrawnByCreditorOnABankAndEndorsedByA,
+    /// Bill drawn by the creditor on a third party
     BillDrawnByCreditorOnAThirdParty,
+    /// Bill drawn by creditor on third party, accepted and
     BillDrawnByCreditorOnThirdPartyAcceptedAnd,
+    /// Not transferable banker's draft
     NotTransferableBankersDraft,
+    /// Not transferable local cheque
     NotTransferableLocalCheque,
+    /// Reference giro
     ReferenceGiro,
+    /// Urgent giro
     UrgentGiro,
+    /// Free format giro
     FreeFormatGiro,
+    /// Requested method for payment was not used
     RequestedMethodForPaymentWasNotUsed,
+    /// Clearing between partners
     ClearingBetweenPartners,
+    /// JP, Electronically Recorded Monetary Claims
     JpElectronicallyRecordedMonetaryClaims,
+    /// Mutually defined
     MutuallyDefined,
 }
 

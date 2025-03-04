@@ -2,185 +2,365 @@
 
 #[derive(Debug, PartialEq, Eq, PartialOrd, Ord, Clone, Copy, Hash)]
 pub enum Currency {
+    /// UAE Dirham
     UaeDirham,
+    /// Afghani
     Afghani,
+    /// Lek
     Lek,
+    /// Armenian Dram
     ArmenianDram,
+    /// Netherlands Antillean Guilder
     NetherlandsAntilleanGuilder,
+    /// Kwanza
     Kwanza,
+    /// Argentine Peso
     ArgentinePeso,
+    /// Australian Dollar
     AustralianDollar,
+    /// Aruban Florin
     ArubanFlorin,
+    /// Azerbaijan Manat
     AzerbaijanManat,
+    /// Convertible Mark
     ConvertibleMark,
+    /// Barbados Dollar
     BarbadosDollar,
+    /// Taka
     Taka,
+    /// Bulgarian Lev
     BulgarianLev,
+    /// Bahraini Dinar
     BahrainiDinar,
+    /// Burundi Franc
     BurundiFranc,
+    /// Bermudian Dollar
     BermudianDollar,
+    /// Brunei Dollar
     BruneiDollar,
+    /// Boliviano
     Boliviano,
+    /// Mvdol
     Mvdol,
+    /// Brazilian Real
     BrazilianReal,
+    /// Bahamian Dollar
     BahamianDollar,
+    /// Ngultrum
     Ngultrum,
+    /// Pula
     Pula,
+    /// Belarusian Ruble
     BelarusianRuble,
+    /// Belize Dollar
     BelizeDollar,
+    /// Canadian Dollar
     CanadianDollar,
+    /// Congolese Franc
     CongoleseFranc,
+    /// WIR Euro
     WirEuro,
+    /// Swiss Franc
     SwissFranc,
+    /// WIR Franc
     WirFranc,
+    /// Unidad de Fomento
     UnidadDeFomento,
+    /// Chilean Peso
     ChileanPeso,
+    /// Yuan Renminbi
     YuanRenminbi,
+    /// Colombian Peso
     ColombianPeso,
+    /// Unidad de Valor Real
     UnidadDeValorReal,
+    /// Costa Rican Colon
     CostaRicanColon,
+    /// Peso Convertible
     PesoConvertible,
+    /// Cuban Peso
     CubanPeso,
+    /// Cabo Verde Escudo
     CaboVerdeEscudo,
+    /// Czech Koruna
     CzechKoruna,
+    /// Djibouti Franc
     DjiboutiFranc,
+    /// Danish Krone
     DanishKrone,
+    /// Dominican Peso
     DominicanPeso,
+    /// Algerian Dinar
     AlgerianDinar,
+    /// Egyptian Pound
     EgyptianPound,
+    /// Nakfa
     Nakfa,
+    /// Ethiopian Birr
     EthiopianBirr,
+    /// Euro
     Euro,
+    /// Fiji Dollar
     FijiDollar,
+    /// Falkland Islands Pound
     FalklandIslandsPound,
+    /// Pound Sterling
     PoundSterling,
+    /// Lari
     Lari,
+    /// Ghana Cedi
     GhanaCedi,
+    /// Gibraltar Pound
     GibraltarPound,
+    /// Dalasi
     Dalasi,
+    /// Guinean Franc
     GuineanFranc,
+    /// Quetzal
     Quetzal,
+    /// Guyana Dollar
     GuyanaDollar,
+    /// Hong Kong Dollar
     HongKongDollar,
+    /// Lempira
     Lempira,
+    /// Gourde
     Gourde,
+    /// Forint
     Forint,
+    /// Rupiah
     Rupiah,
+    /// New Israeli Sheqel
     NewIsraeliSheqel,
+    /// Indian Rupee
     IndianRupee,
+    /// Iraqi Dinar
     IraqiDinar,
+    /// Iranian Rial
     IranianRial,
+    /// Iceland Krona
     IcelandKrona,
+    /// Jamaican Dollar
     JamaicanDollar,
+    /// Jordanian Dinar
     JordanianDinar,
+    /// Yen
     Yen,
+    /// Kenyan Shilling
     KenyanShilling,
+    /// Som
     Som,
+    /// Riel
     Riel,
+    /// Comorian Franc
     ComorianFranc,
+    /// North Korean Won
     NorthKoreanWon,
+    /// Won
     Won,
+    /// Kuwaiti Dinar
     KuwaitiDinar,
+    /// Cayman Islands Dollar
     CaymanIslandsDollar,
+    /// Tenge
     Tenge,
+    /// Lao Kip
     LaoKip,
+    /// Lebanese Pound
     LebanesePound,
+    /// Sri Lanka Rupee
     SriLankaRupee,
+    /// Liberian Dollar
     LiberianDollar,
+    /// Loti
     Loti,
+    /// Libyan Dinar
     LibyanDinar,
+    /// Moroccan Dirham
     MoroccanDirham,
+    /// Moldovan Leu
     MoldovanLeu,
+    /// Malagasy Ariary
     MalagasyAriary,
+    /// Denar
     Denar,
+    /// Kyat
     Kyat,
+    /// Tugrik
     Tugrik,
+    /// Pataca
     Pataca,
+    /// Ouguiya
     Ouguiya,
+    /// Mauritius Rupee
     MauritiusRupee,
+    /// Rufiyaa
     Rufiyaa,
+    /// Malawi Kwacha
     MalawiKwacha,
+    /// Mexican Peso
     MexicanPeso,
+    /// Mexican Unidad de Inversion (UDI)
     MexicanUnidadDeInversionUdi,
+    /// Malaysian Ringgit
     MalaysianRinggit,
+    /// Mozambique Metical
     MozambiqueMetical,
+    /// Namibia Dollar
     NamibiaDollar,
+    /// Naira
     Naira,
+    /// Cordoba Oro
     CordobaOro,
+    /// Norwegian Krone
     NorwegianKrone,
+    /// Nepalese Rupee
     NepaleseRupee,
+    /// New Zealand Dollar
     NewZealandDollar,
+    /// Rial Omani
     RialOmani,
+    /// Balboa
     Balboa,
+    /// Sol
     Sol,
+    /// Kina
     Kina,
+    /// Philippine Peso
     PhilippinePeso,
+    /// Pakistan Rupee
     PakistanRupee,
+    /// Zloty
     Zloty,
+    /// Guarani
     Guarani,
+    /// Qatari Rial
     QatariRial,
+    /// Romanian Leu
     RomanianLeu,
+    /// Serbian Dinar
     SerbianDinar,
+    /// Russian Ruble
     RussianRuble,
+    /// Rwanda Franc
     RwandaFranc,
+    /// Saudi Riyal
     SaudiRiyal,
+    /// Solomon Islands Dollar
     SolomonIslandsDollar,
+    /// Seychelles Rupee
     SeychellesRupee,
+    /// Sudanese Pound
     SudanesePound,
+    /// Swedish Krona
     SwedishKrona,
+    /// Singapore Dollar
     SingaporeDollar,
+    /// Saint Helena Pound
     SaintHelenaPound,
+    /// Sierra Leone (new valuation 2022)
     SierraLeoneNewValuation2022,
+    /// Somali Shilling
     SomaliShilling,
+    /// Surinam Dollar
     SurinamDollar,
+    /// South Sudanese Pound
     SouthSudanesePound,
+    /// Dobra
     Dobra,
+    /// El Salvador Colon
     ElSalvadorColon,
+    /// Syrian Pound
     SyrianPound,
+    /// Lilangeni
     Lilangeni,
+    /// Baht
     Baht,
+    /// Somoni
     Somoni,
+    /// Turkmenistan New Manat
     TurkmenistanNewManat,
+    /// Tunisian Dinar
     TunisianDinar,
+    /// Pa’anga
     PaAnga,
+    /// Turkish Lira
     TurkishLira,
+    /// Trinidad and Tobago Dollar
     TrinidadAndTobagoDollar,
+    /// New Taiwan Dollar
     NewTaiwanDollar,
+    /// Tanzanian Shilling
     TanzanianShilling,
+    /// Hryvnia
     Hryvnia,
+    /// Uganda Shilling
     UgandaShilling,
+    /// US Dollar
     UsDollar,
+    /// US Dollar (Next day)
     UsDollarNextDay,
+    /// Uruguay Peso en Unidades Indexadas (UI)
     UruguayPesoEnUnidadesIndexadasUi,
+    /// Peso Uruguayo
     PesoUruguayo,
+    /// Unidad Previsional
     UnidadPrevisional,
+    /// Uzbekistan Sum
     UzbekistanSum,
+    /// Bolívar Soberano, new valuation
     BolívarSoberanoNewValuation,
+    /// Bolívar Soberano
     BolívarSoberano,
+    /// Dong
     Dong,
+    /// Vatu
     Vatu,
+    /// Tala
     Tala,
+    /// CFA Franc BEAC
     CfaFrancBeac,
+    /// Silver
     Silver,
+    /// Gold
     Gold,
+    /// Bond Markets Unit European Composite Unit (EURCO)
     BondMarketsUnitEuropeanCompositeUnitEurco,
+    /// Bond Markets Unit European Monetary Unit (E.M.U.-6)
     BondMarketsUnitEuropeanMonetaryUnitEMU6,
+    /// Bond Markets Unit European Unit of Account 9 (E.U.A.-9)
     BondMarketsUnitEuropeanUnitAccount9EUA9,
+    /// Bond Markets Unit European Unit of Account 17 (E.U.A.-17)
     BondMarketsUnitEuropeanUnitAccount17EUA17,
+    /// East Caribbean Dollar
     EastCaribbeanDollar,
+    /// SDR (Special Drawing Right)
     SdrSpecialDrawingRight,
+    /// CFA Franc BCEAO
     CfaFrancBceao,
+    /// Palladium
     Palladium,
+    /// CFP Franc
     CfpFranc,
+    /// Platinum
     Platinum,
+    /// Sucre
     Sucre,
+    /// Codes specifically reserved for testing purposes
     CodesSpecificallyReservedForTestingPurposes,
+    /// ADB Unit of Account
     AdbUnitAccount,
+    /// The codes assigned for transactions where no currency is involved
     TheCodesAssignedForTransactionsWhereNoCurrencyIsInvolved,
+    /// Yemeni Rial
     YemeniRial,
+    /// Rand
     Rand,
+    /// Zambian Kwacha
     ZambianKwacha,
+    /// Zimbabwe Gold
     ZimbabweGold,
+    /// Zimbabwe Dollar
     ZimbabweDollar,
 }
 

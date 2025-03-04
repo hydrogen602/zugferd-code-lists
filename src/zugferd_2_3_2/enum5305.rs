@@ -2,14 +2,23 @@
 
 #[derive(Debug, PartialEq, Eq, PartialOrd, Ord, Clone, Copy, Hash)]
 pub enum Enum5305 {
+    /// Standard rate
     StandardRate,
+    /// Zero rated goods
     ZeroRatedGoods,
+    /// Exempt from tax
     ExemptFromTax,
+    /// VAT Reverse charge
     VatReverseCharge,
+    /// VAT exempt for EEA intra-community supply of goods and services
     VatExemptForEeaIntraCommunitySupplyGoodsAndServices,
+    /// Free export item, tax not charged
     FreeExportItemTaxNotCharged,
+    /// Service outside scope of tax
     ServiceOutsideScopeTax,
+    /// Canary Islands general indirect tax
     CanaryIslandsGeneralIndirectTax,
+    /// Tax for production, services and importation in Ceuta and Melilla
     TaxForProductionServicesAndImportationInCeutaAndMelilla,
 }
 

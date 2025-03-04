@@ -2,238 +2,471 @@
 
 #[derive(Debug, PartialEq, Eq, PartialOrd, Ord, Clone, Copy, Hash)]
 pub enum ICD {
+    /// System Information et Repertoire des Entreprise et des Etablissements: SIRENE
     SystemInformationEtRepertoireDesEntrepriseEtDesEtablissementsSirene,
+    /// Codification Numerique des Etablissments Financiers En Belgique
     CodificationNumeriqueDesEtablissmentsFinanciersEnBelgique,
+    /// NBS/OSI NETWORK
     NbsOsiNetwork,
+    /// USA FED GOV OSI NETWORK
     UsaFedGovOsiNetwork,
+    /// USA DOD OSI NETWORK
     UsaDodOsiNetwork,
+    /// Organisationsnummer
     Organisationsnummer,
+    /// LE NUMERO NATIONAL
     LeNumeroNational,
+    /// SIRET-CODE
     SiretCode,
+    /// Organizational Identifiers for Structured Names under ISO 9541 Part 2
     OrganizationalIdentifiersForStructuredNamesUnderIso9541Part2,
+    /// International Code Designator for the Identification of OSI-based, Amateur Radio Organizations, Network Objects and Application Services.
     InternationalCodeDesignatorForIdentificationOsiBasedAmateurRadioOrganizationsNetworkObjectsAndApplicationServices,
+    /// European Computer Manufacturers Association: ECMA
     EuropeanComputerManufacturersAssociationEcma,
+    /// VSA FTP CODE (FTP = File Transfer Protocol)
     VsaFtpCodeFtpFileTransferProtocol,
+    /// NIST/OSI Implememts' Workshop
     NistOsiImplememtsWorkshop,
+    /// Electronic Data Interchange: EDI
     ElectronicDataInterchangeEdi,
+    /// EWOS Object Identifiers
     EwosObjectIdentifiers,
+    /// COMMON LANGUAGE
     CommonLanguage,
+    /// SNA/OSI Network
     SnaOsiNetwork,
+    /// Air Transport Industry Services Communications Network
     AirTransportIndustryServicesCommunicationsNetwork,
+    /// European Laboratory for Particle Physics: CERN
     EuropeanLaboratoryForParticlePhysicsCern,
+    /// SOCIETY FOR WORLDWIDE INTERBANK FINANCIAL, TELECOMMUNICATION S.W.I.F.T.
     SocietyForWorldwideInterbankFinancialTelecommunicationSWIFT,
+    /// OSF Distributed Computing Object Identification
     OsfDistributedComputingObjectIdentification,
+    /// Nordic University and Research Network: NORDUnet
     NordicUniversityAndResearchNetworkNordunet,
+    /// Digital Equipment Corporation: DEC
     DigitalEquipmentCorporationDec,
+    /// OSI ASIA-OCEANIA WORKSHOP
     OsiAsiaOceaniaWorkshop,
+    /// NATO ISO 6523 ICDE coding scheme
     NatoIso6523IcdeCodingScheme,
+    /// Aeronautical Telecommunications Network (ATN)
     AeronauticalTelecommunicationsNetworkAtn,
+    /// International Standard ISO 6523
     InternationalStandardIso6523,
+    /// The All-Union Classifier of Enterprises and Organisations
     TheAllUnionClassifierEnterprisesAndOrganisations,
+    /// AT&T/OSI Network
     AtTOsiNetwork,
+    /// EDI Partner Identification Code
     EdiPartnerIdentificationCode,
+    /// Telecom Australia
     TelecomAustralia,
+    /// S G W OSI Internetwork
     SGWOsiInternetwork,
+    /// Reuter Open Address Standard
     ReuterOpenAddressStandard,
+    /// ISO 6523 - ICD
     Iso6523Icd,
+    /// TeleTrust Object Identifiers
     TeletrustObjectIdentifiers,
+    /// LY-tunnus
     LyTunnus,
+    /// The Australian GOSIP Network
     TheAustralianGosipNetwork,
+    /// The OZ DOD OSI Network
     TheOzDodOsiNetwork,
+    /// Unilever Group Companies
     UnileverGroupCompanies,
+    /// Citicorp Global Information Network
     CiticorpGlobalInformationNetwork,
+    /// DBP Telekom Object Identifiers
     DbpTelekomObjectIdentifiers,
+    /// HydroNETT
     Hydronett,
+    /// Thai Industrial Standards Institute (TISI)
     ThaiIndustrialStandardsInstituteTisi,
+    /// ICI Company Identification System
     IciCompanyIdentificationSystem,
+    /// FUNLOC
     Funloc,
+    /// BULL ODI/DSA/UNIX Network
     BullOdiDsaUnixNetwork,
+    /// OSINZ
     Osinz,
+    /// Auckland Area Health
     AucklandAreaHealth,
+    /// Firmenich
     Firmenich,
+    /// AGFA-DIS
     AgfaDis,
+    /// Society of Motion Picture and Television Engineers (SMPTE)
     SocietyMotionPictureAndTelevisionEngineersSmpte,
+    /// Migros_Network M_NETOPZ
     Migros_networkM_netopz,
+    /// ISO6523 - ICDPCR
     Iso6523Icdpcr,
+    /// Energy Net
     EnergyNet,
+    /// Nokia Object Identifiers (NOI)
     NokiaObjectIdentifiersNoi,
+    /// Saint Gobain
     SaintGobain,
+    /// Siemens Corporate Network
     SiemensCorporateNetwork,
+    /// DANZNET
     Danznet,
+    /// Data Universal Numbering System (D-U-N-S Number)
     DataUniversalNumberingSystemDUNSNumber,
+    /// SOFFEX OSI
     SoffexOsi,
+    /// KPN OVN
     KpnOvn,
+    /// ascomOSINet
     Ascomosinet,
+    /// UTC: Uniforme Transport Code
     UtcUniformeTransportCode,
+    /// SOLVAY OSI CODING
     SolvayOsiCoding,
+    /// Roche Corporate Network
     RocheCorporateNetwork,
+    /// ZellwegerOSINet
     Zellwegerosinet,
+    /// Intel Corporation OSI
     IntelCorporationOsi,
+    /// SITA Object Identifier Tree
     SitaObjectIdentifierTree,
+    /// DaimlerChrysler Corporate Network
     DaimlerchryslerCorporateNetwork,
+    /// LEGO /OSI NETWORK
     LegoOsiNetwork,
+    /// NAVISTAR/OSI Network
     NavistarOsiNetwork,
+    /// ICD Formatted ATM address
     IcdFormattedAtmAddress,
+    /// ARINC
     Arinc,
+    /// Alcanet/Alcatel-Alsthom Corporate Network
     AlcanetAlcatelAlsthomCorporateNetwork,
+    /// Sistema Italiano di Identificazione di ogetti gestito da UNINFO
     SistemaItalianoDiIdentificazioneDiOgettiGestitoDaUninfo,
+    /// Sistema Italiano di Indirizzamento di Reti OSI Gestito da UNINFO
     SistemaItalianoDiIndirizzamentoDiRetiOsiGestitoDaUninfo,
+    /// Mitel terminal or switching equipment
     MitelTerminalOrSwitchingEquipment,
+    /// ATM Forum
     AtmForum,
+    /// UK National Health Service Scheme, (EDIRA compliant)
     UkNationalHealthServiceSchemeEdiraCompliant,
+    /// International NSAP
     InternationalNsap,
+    /// Norwegian Telecommunications Authority's, NTA'S, EDI, identifier scheme (EDIRA compliant)
     NorwegianTelecommunicationsAuthoritysNtasEdiIdentifierSchemeEdiraCompliant,
+    /// Advanced Telecommunications Modules Limited, Corporate Network
     AdvancedTelecommunicationsModulesLimitedCorporateNetwork,
+    /// Athens Chamber of Commerce & Industry Scheme (EDIRA compliant)
     AthensChamberCommerceIndustrySchemeEdiraCompliant,
+    /// Swiss Chambers of Commerce Scheme (EDIRA) compliant
     SwissChambersCommerceSchemeEdiraCompliant,
+    /// United States Council for International Business (USCIB) Scheme, (EDIRA compliant)
     UnitedStatesCouncilForInternationalBusinessUscibSchemeEdiraCompliant,
+    /// National Federation of Chambers of Commerce & Industry of Belgium, Scheme (EDIRA compliant)
     NationalFederationChambersCommerceIndustryBelgiumSchemeEdiraCompliant,
+    /// EAN Location Code
     EanLocationCode,
+    /// The Association of British Chambers of Commerce Ltd. Scheme, (EDIRA compliant)
     TheAssociationBritishChambersCommerceLtdSchemeEdiraCompliant,
+    /// Internet IP addressing - ISO 6523 ICD encoding
     InternetIpAddressingIso6523IcdEncoding,
+    /// Cisco Sysytems / OSI Network
     CiscoSysytemsOsiNetwork,
+    /// Revenue Canada Business Number Registration (EDIRA compliant)
     RevenueCanadaBusinessNumberRegistrationEdiraCompliant,
+    /// DEUTSCHER INDUSTRIE- UND HANDELSTAG (DIHT) Scheme (EDIRA compliant)
     DeutscherIndustrieUndHandelstagDihtSchemeEdiraCompliant,
+    /// Hewlett - Packard Company Internal AM Network
     HewlettPackardCompanyInternalAmNetwork,
+    /// DANISH CHAMBER OF COMMERCE Scheme (EDIRA compliant)
     DanishChamberOfCommerceSchemeEdiraCompliant,
+    /// FTI - Ediforum Italia, (EDIRA compliant)
     FtiEdiforumItaliaEdiraCompliant,
+    /// CHAMBER OF COMMERCE TEL AVIV-JAFFA Scheme (EDIRA compliant)
     ChamberOfCommerceTelAvivJaffaSchemeEdiraCompliant,
+    /// Siemens Supervisory Systems Network
     SiemensSupervisorySystemsNetwork,
+    /// PNG_ICD Scheme
     Png_icdScheme,
+    /// South African Code Allocation
     SouthAfricanCodeAllocation,
+    /// HEAG
     Heag,
+    /// BT - ICD Coding System
     BtIcdCodingSystem,
+    /// Portuguese Chamber of Commerce and Industry Scheme (EDIRA compliant)
     PortugueseChamberCommerceAndIndustrySchemeEdiraCompliant,
+    /// Vereniging van Kamers van Koophandel en Fabrieken in Nederland (Association of Chambers of Commerce and Industry in the Netherlands), Scheme (EDIRA compliant)
     VerenigingVanKamersVanKoophandelEnFabriekenInNederlandAssociationChambersCommerceAndIndustryInNetherlandsSchemeEdiraCompliant,
+    /// Association of Swedish Chambers of Commerce and Industry Scheme (EDIRA compliant)
     AssociationSwedishChambersCommerceAndIndustrySchemeEdiraCompliant,
+    /// Australian Chambers of Commerce and Industry Scheme (EDIRA compliant)
     AustralianChambersCommerceAndIndustrySchemeEdiraCompliant,
+    /// BellSouth ICD AESA (ATM End System Address)
     BellsouthIcdAesaAtmEndSystemAddress,
+    /// Bell Atlantic
     BellAtlantic,
+    /// Object Identifiers
     ObjectIdentifiers,
+    /// ISO register for Standards producing Organizations
     IsoRegisterForStandardsProducingOrganizations,
+    /// OriginNet
     Originnet,
+    /// Check Point Software Technologies
     CheckPointSoftwareTechnologies,
+    /// Pacific Bell Data Communications Network
     PacificBellDataCommunicationsNetwork,
+    /// PSS Object Identifiers
     PssObjectIdentifiers,
+    /// STENTOR-ICD CODING SYSTEM
     StentorIcdCodingSystem,
+    /// ATM-Network ZN'96
     AtmNetworkZn96,
+    /// MCI / OSI Network
     MciOsiNetwork,
+    /// Advantis
     Advantis,
+    /// Affable Software Data Interchange Codes
     AffableSoftwareDataInterchangeCodes,
+    /// BB-DATA GmbH
     BbDataGmbh,
+    /// BASF Company ATM-Network
     BasfCompanyAtmNetwork,
+    /// IOTA Identifiers for Organizations for Telecommunications Addressing using the ICD system format defined in ISO/IEC 8348
     IotaIdentifiersForOrganizationsForTelecommunicationsAddressingUsingIcdSystemFormatDefinedInIsoIec8348,
+    /// Henkel Corporate Network (H-Net)
     HenkelCorporateNetworkHNet,
+    /// GTE/OSI Network
     GteOsiNetwork,
+    /// Dresdner Bank Corporate Network
     DresdnerBankCorporateNetwork,
+    /// BCNR (Swiss Clearing Bank Number)
     BcnrSwissClearingBankNumber,
+    /// BPI (Swiss Business Partner Identification) code
     BpiSwissBusinessPartnerIdentificationCode,
+    /// Directorates of the European Commission
     DirectoratesEuropeanCommission,
+    /// Code for the Identification of National Organizations
     CodeForIdentificationNationalOrganizations,
+    /// Certicom Object Identifiers
     CerticomObjectIdentifiers,
+    /// TC68 OID
     Tc68Oid,
+    /// Infonet Services Corporation
     InfonetServicesCorporation,
+    /// SIA Object Identifiers
     SiaObjectIdentifiers,
+    /// Cable & Wireless Global ATM End-System Address Plan
     CableWirelessGlobalAtmEndSystemAddressPlan,
+    /// Global AESA scheme
     GlobalAesaScheme,
+    /// France Telecom ATM End System Address Plan
     FranceTelecomAtmEndSystemAddressPlan,
+    /// Savvis Communications AESA:.
     SavvisCommunicationsAesa,
+    /// Toshiba Organizations, Partners, And Suppliers' (TOPAS) Code
     ToshibaOrganizationsPartnersAndSuppliersTopasCode,
+    /// NATO Commercial and Government Entity system
     NatoCommercialAndGovernmentEntitySystem,
+    /// SECETI Object Identifiers
     SecetiObjectIdentifiers,
+    /// EINESTEINet AG
     EinesteinetAg,
+    /// DoDAAC (Department of Defense Activity Address Code)
     DodaacDepartmentDefenseActivityAddressCode,
+    /// DGCP (Direction Générale de la Comptabilité Publique)administrative accounting identification scheme
     DgcpDirectionGénéraleDeLaComptabilitéPubliqueAdministrativeAccountingIdentificationScheme,
+    /// DGI (Direction Générale des Impots) code
     DgiDirectionGénéraleDesImpotsCode,
+    /// Standard Company Code
     StandardCompanyCode,
+    /// ITU (International Telecommunications Union)Data Network Identification Codes (DNIC)
     ItuInternationalTelecommunicationsUnionDataNetworkIdentificationCodesDnic,
+    /// Global Business Identifier
     GlobalBusinessIdentifier,
+    /// Madge Networks Ltd- ICD ATM Addressing Scheme
     MadgeNetworksLtdIcdAtmAddressingScheme,
+    /// Australian Business Number (ABN) Scheme
     AustralianBusinessNumberAbnScheme,
+    /// Edira Scheme Identifier Code
     EdiraSchemeIdentifierCode,
+    /// Concert Global Network Services ICD AESA
     ConcertGlobalNetworkServicesIcdAesa,
+    /// Identification number of economic subjects: (ICO)
     IdentificationNumberEconomicSubjectsIco,
+    /// Global Crossing AESA (ATM End System Address)
     GlobalCrossingAesaAtmEndSystemAddress,
+    /// AUNA
     Auna,
+    /// ATM interconnection with the Dutch KPN Telecom
     AtmInterconnectionWithDutchKpnTelecom,
+    /// Identification number of economic subject (ICO) Act on State Statistics of 29 November 2'001, § 27
     IdentificationNumberEconomicSubjectIcoActOnStateStatistics29November200127,
+    /// ACTALIS Object Identifiers
     ActalisObjectIdentifiers,
+    /// GTIN - Global Trade Item Number
     GtinGlobalTradeItemNumber,
+    /// ECCMA Open Technical Directory
     EccmaOpenTechnicalDirectory,
+    /// CEN/ISSS Object Identifier Scheme
     CenIsssObjectIdentifierScheme,
+    /// US-EPA Facility Identifier
     UsEpaFacilityIdentifier,
+    /// TELUS Corporation
     TelusCorporation,
+    /// FIEIE Object identifiers
     FieieObjectIdentifiers,
+    /// Swissguide Identifier Scheme
     SwissguideIdentifierScheme,
+    /// Priority Telecom ATM End System Address Plan
     PriorityTelecomAtmEndSystemAddressPlan,
+    /// Vodafone Ireland OSI Addressing
     VodafoneIrelandOsiAddressing,
+    /// Swiss Federal Business Identification Number. Central Business names Index (zefix) Identification Number
     SwissFederalBusinessIdentificationNumberCentralBusinessNamesIndexZefixIdentificationNumber,
+    /// Teikoku Company Code
     TeikokuCompanyCode,
+    /// Luxembourg CP & CPS (Certification Policy and Certification Practice Statement) Index
     LuxembourgCpCpsCertificationPolicyAndCertificationPracticeStatementIndex,
+    /// Project Group “Lists of Properties” (PROLIST®)
     ProjectGroupListsPropertiesProlist,
+    /// eCI@ss
     EciSs,
+    /// StepNexus
     Stepnexus,
+    /// Siemens AG
     SiemensAg,
+    /// Paradine GmbH
     ParadineGmbh,
+    /// Odette International Limited
     OdetteInternationalLimited,
+    /// Route1 MobiNET
     Route1Mobinet,
+    /// Penango Object Identifiers
     PenangoObjectIdentifiers,
+    /// Lithuanian military PKI
     LithuanianMilitaryPki,
+    /// Numéro d'identification suisse des enterprises (IDE), Swiss Unique Business Identification Number (UIDB)
     NuméroDidentificationSuisseDesEnterprisesIdeSwissUniqueBusinessIdentificationNumberUidb,
+    /// DIGSTORG
     Digstorg,
+    /// Perceval Object Code
     PercevalObjectCode,
+    /// TrustPoint Object Identifiers
     TrustpointObjectIdentifiers,
+    /// Amazon Unique Identification Scheme
     AmazonUniqueIdentificationScheme,
+    /// Corporate Number of The Social Security and Tax Number System
     CorporateNumberTheSocialSecurityAndTaxNumberSystem,
+    /// European Business Identifier (EBID)
     EuropeanBusinessIdentifierEbid,
+    /// Organisatie Indentificatie Nummer (OIN)
     OrganisatieIndentificatieNummerOin,
+    /// Company Code (Estonia)
     CompanyCodeEstonia,
+    /// Organisasjonsnummer
     Organisasjonsnummer,
+    /// UBL.BE Party Identifier
     UblBePartyIdentifier,
+    /// KOIOS Open Technical Dictionary
     KoiosOpenTechnicalDictionary,
+    /// Singapore Nationwide E-lnvoice Framework
     SingaporeNationwideELnvoiceFramework,
+    /// Icelandic identifier - Íslensk kennitala
     IcelandicIdentifierÍslenskKennitala,
+    /// APPLiA Pl Standard
     AppliaPlStandard,
+    /// ERSTORG
     Erstorg,
+    /// Legal Entity Identifier (LEI)
     LegalEntityIdentifierLei,
+    /// Legal entity code (Lithuania)
     LegalEntityCodeLithuania,
+    /// Codice Univoco Unità Organizzativa iPA
     CodiceUnivocoUnitàOrganizzativaIpa,
+    /// Indirizzo di Posta Elettronica Certificata
     IndirizzoDiPostaElettronicaCertificata,
+    /// eDelivery Network Participant identifier
     EdeliveryNetworkParticipantIdentifier,
+    /// Leitweg-ID
     LeitwegId,
+    /// CODDEST
     Coddest,
+    /// Registre du Commerce et de l’Industrie : RCI
     RegistreDuCommerceEtDeLIndustrieRci,
+    /// PiLog Ontology Codification Identifier (POCI)
     PilogOntologyCodificationIdentifierPoci,
+    /// Numero d'entreprise / ondernemingsnummer / Unternehmensnummer
     NumeroDentrepriseOndernemingsnummerUnternehmensnummer,
+    /// GS1 identification keys
     Gs1IdentificationKeys,
+    /// CODICE FISCALE
     CodiceFiscale,
+    /// PARTITA IVA
     PartitaIva,
+    /// Finnish Organization Identifier
     FinnishOrganizationIdentifier,
+    /// Finnish Organization Value Add Tax Identifier
     FinnishOrganizationValueAddTaxIdentifier,
+    /// Tradeplace TradePI Standard
     TradeplaceTradepiStandard,
+    /// Net service ID
     NetServiceId,
+    /// OVTcode
     Ovtcode,
+    /// The Netherlands Chamber of Commerce and Industry establishment number
     TheNetherlandsChamberCommerceAndIndustryEstablishmentNumber,
+    /// Unified registration number (Latvia)
     UnifiedRegistrationNumberLatvia,
+    /// Taxpayer registration code (Latvia)
     TaxpayerRegistrationCodeLatvia,
+    /// The Register of Natural Persons (Latvia)
     TheRegisterNaturalPersonsLatvia,
+    /// The registered number of the qualified invoice issuer
     TheRegisteredNumberQualifiedInvoiceIssuer,
+    /// Metadata Registry Support
     MetadataRegistrySupport,
+    /// EU based company
     EuBasedCompany,
+    /// FTCTC CODE ROUTAGE
     FtctcCodeRoutage,
+    /// FRCTC ELECTRONIC ADDRESS
     FrctcElectronicAddress,
+    /// FRCTC Particulier
     FrctcParticulier,
+    /// NON - EU based company
     NonEuBasedCompany,
+    /// Répertoire des Entreprises et des Etablissements (RIDET)
     RépertoireDesEntreprisesEtDesEtablissementsRidet,
+    /// T.A.H.I.T.I (traitement automatique hiérarchisé des institutions de Tahiti et des îles)
     TAHITITraitementAutomatiqueHiérarchiséDesInstitutionsDeTahitiEtDesÎles,
+    /// National e-Invoicing Framework
     NationalEInvoicingFramework,
+    /// Single taxable company (France)
     SingleTaxableCompanyFrance,
+    /// NOBB product number
     NobbProductNumber,
+    /// Description not known
     DescriptionNotKnown,
+    /// Toimitusosoite ID
     ToimitusosoiteId,
+    /// UAE Tax Identification Number (TIN)
     UaeTaxIdentificationNumberTin,
+    /// Description not known
     DescriptionNotKnown_Dup,
+    /// CPR (Danish person civil registration number)
     CprDanishPersonCivilRegistrationNumber,
+    /// Plateforme.s agréée.s à la facturation électronique (PPF/PDP)
     PlateformeSAgrééeSÀLaFacturationÉlectroniquePpfPdp,
 }
 

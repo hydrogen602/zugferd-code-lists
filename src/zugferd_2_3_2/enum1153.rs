@@ -2,822 +2,1639 @@
 
 #[derive(Debug, PartialEq, Eq, PartialOrd, Ord, Clone, Copy, Hash)]
 pub enum Enum1153 {
+    /// Order acknowledgement document identifier
     OrderAcknowledgementDocumentIdentifier,
+    /// Proforma invoice document identifier
     ProformaInvoiceDocumentIdentifier,
+    /// Documentary credit identifier
     DocumentaryCreditIdentifier,
+    /// Contract document addendum identifier
     ContractDocumentAddendumIdentifier,
+    /// Goods declaration number
     GoodsDeclarationNumber,
+    /// Debit card number
     DebitCardNumber,
+    /// Offer number
     OfferNumber,
+    /// Bank's batch interbank transaction reference number
     BanksBatchInterbankTransactionReferenceNumber,
+    /// Bank's individual interbank transaction reference number
     BanksIndividualInterbankTransactionReferenceNumber,
+    /// Delivery order number
     DeliveryOrderNumber,
+    /// Despatch advice number
     DespatchAdviceNumber,
+    /// Drawing number
     DrawingNumber,
+    /// Waybill number
     WaybillNumber,
+    /// Delivery schedule number
     DeliveryScheduleNumber,
+    /// Consignment identifier, consignee assigned
     ConsignmentIdentifierConsigneeAssigned,
+    /// Partial shipment identifier
     PartialShipmentIdentifier,
+    /// Transport equipment identifier
     TransportEquipmentIdentifier,
+    /// Municipality assigned business registry number
     MunicipalityAssignedBusinessRegistryNumber,
+    /// Transport contract document identifier
     TransportContractDocumentIdentifier,
+    /// Master label number
     MasterLabelNumber,
+    /// Despatch note document identifier
     DespatchNoteDocumentIdentifier,
+    /// Enquiry number
     EnquiryNumber,
+    /// Docket number
     DocketNumber,
+    /// Civil action number
     CivilActionNumber,
+    /// Carrier's agent reference number
     CarriersAgentReferenceNumber,
+    /// Standard Carrier Alpha Code (SCAC) number
     StandardCarrierAlphaCodeScacNumber,
+    /// Customs valuation decision number
     CustomsValuationDecisionNumber,
+    /// End use authorization number
     EndUseAuthorizationNumber,
+    /// Anti-dumping case number
     AntiDumpingCaseNumber,
+    /// Customs tariff number
     CustomsTariffNumber,
+    /// Declarant's reference number
     DeclarantsReferenceNumber,
+    /// Repair estimate number
     RepairEstimateNumber,
+    /// Customs decision request number
     CustomsDecisionRequestNumber,
+    /// Sub-house bill of lading number
     SubHouseBillLadingNumber,
+    /// Tax payment identifier
     TaxPaymentIdentifier,
+    /// Quota number
     QuotaNumber,
+    /// Transit (onward carriage) guarantee (bond) number
     TransitOnwardCarriageGuaranteeBondNumber,
+    /// Customs guarantee number
     CustomsGuaranteeNumber,
+    /// Replacing part number
     ReplacingPartNumber,
+    /// Seller's catalogue number
     SellersCatalogueNumber,
+    /// Originator's reference
     OriginatorsReference,
+    /// Declarant's Customs identity number
     DeclarantsCustomsIdentityNumber,
+    /// Importer reference number
     ImporterReferenceNumber,
+    /// Export clearance instruction reference number
     ExportClearanceInstructionReferenceNumber,
+    /// Import clearance instruction reference number
     ImportClearanceInstructionReferenceNumber,
+    /// Goods declaration document identifier, Customs
     GoodsDeclarationDocumentIdentifierCustoms,
+    /// Article number
     ArticleNumber,
+    /// Intra-plant routing
     IntraPlantRouting,
+    /// Stock keeping unit number
     StockKeepingUnitNumber,
+    /// Text Element Identifier deletion reference
     TextElementIdentifierDeletionReference,
+    /// Allotment identification (Air)
     AllotmentIdentificationAir,
+    /// Vehicle licence number
     VehicleLicenceNumber,
+    ///  Air cargo transfer manifest
     AirCargoTransferManifest,
+    /// Cargo acceptance order reference number
     CargoAcceptanceOrderReferenceNumber,
+    /// US government agency number
     UsGovernmentAgencyNumber,
+    /// Shipping unit identification
     ShippingUnitIdentification,
+    /// Additional reference number
     AdditionalReferenceNumber,
+    /// Related document number
     RelatedDocumentNumber,
+    /// Addressee reference
     AddresseeReference,
+    /// ATA carnet number
     AtaCarnetNumber,
+    /// Packaging unit identification
     PackagingUnitIdentification,
+    /// Outerpackaging unit identification
     OuterpackagingUnitIdentification,
+    /// Customer material specification number
     CustomerMaterialSpecificationNumber,
+    /// Bank reference
     BankReference,
+    /// Principal reference number
     PrincipalReferenceNumber,
+    /// Collection advice document identifier
     CollectionAdviceDocumentIdentifier,
+    /// Iron charge number
     IronChargeNumber,
+    /// Hot roll number
     HotRollNumber,
+    /// Cold roll number
     ColdRollNumber,
+    /// Railway wagon number
     RailwayWagonNumber,
+    /// Unique claims reference number of the sender
     UniqueClaimsReferenceNumberSender,
+    /// Loss/event number
     LossEventNumber,
+    /// Estimate order reference number
     EstimateOrderReferenceNumber,
+    /// Reference number to previous message
     ReferenceNumberToPreviousMessage,
+    /// Banker's acceptance
     BankersAcceptance,
+    /// Duty memo number
     DutyMemoNumber,
+    /// Equipment transport charge number
     EquipmentTransportChargeNumber,
+    /// Buyer's item number
     BuyersItemNumber,
+    /// Matured certificate of deposit
     MaturedCertificateDeposit,
+    /// Loan
     Loan,
+    /// Analysis number/test number
     AnalysisNumberTestNumber,
+    /// Account number
     AccountNumber,
+    /// Treaty number
     TreatyNumber,
+    /// Catastrophe number
     CatastropheNumber,
+    /// Bureau signing (statement reference)
     BureauSigningStatementReference,
+    /// Company / syndicate reference 1
     CompanySyndicateReference1,
+    /// Company / syndicate reference 2
     CompanySyndicateReference2,
+    /// Ordering customer consignment reference number
     OrderingCustomerConsignmentReferenceNumber,
+    /// Shipowner's authorization number
     ShipownersAuthorizationNumber,
+    /// Inland transport order number
     InlandTransportOrderNumber,
+    /// Container work order reference number
     ContainerWorkOrderReferenceNumber,
+    /// Statement number
     StatementNumber,
+    /// Unique market reference
     UniqueMarketReference,
+    /// Group accounting
     GroupAccounting,
+    /// Broker reference 1
     BrokerReference1,
+    /// Broker reference 2
     BrokerReference2,
+    /// Lloyd's claims office reference
     LloydsClaimsOfficeReference,
+    /// Secure delivery terms and conditions agreement reference
     SecureDeliveryTermsAndConditionsAgreementReference,
+    /// Report number
     ReportNumber,
+    /// Trader account number
     TraderAccountNumber,
+    ///  Authorization for expense (AFE) number
     AuthorizationForExpenseAfeNumber,
+    /// Government agency reference number
     GovernmentAgencyReferenceNumber,
+    /// Assembly number
     AssemblyNumber,
+    /// Symbol number
     SymbolNumber,
+    /// Commodity number
     CommodityNumber,
+    /// Eur 1 certificate number
     Eur1CertificateNumber,
+    /// Customer process specification number
     CustomerProcessSpecificationNumber,
+    /// Customer specification number
     CustomerSpecificationNumber,
+    /// Applicable instructions or standards
     ApplicableInstructionsOrStandards,
+    /// Registration number of previous Customs declaration
     RegistrationNumberPreviousCustomsDeclaration,
+    /// Post-entry reference
     PostEntryReference,
+    /// Payment order number
     PaymentOrderNumber,
+    /// Delivery number (transport)
     DeliveryNumberTransport,
+    /// Transport route
     TransportRoute,
+    /// Customer's unit inventory number
     CustomersUnitInventoryNumber,
+    /// Product reservation number
     ProductReservationNumber,
+    /// Project number
     ProjectNumber,
+    /// Drawing list number
     DrawingListNumber,
+    /// Project specification number
     ProjectSpecificationNumber,
+    /// Primary reference
     PrimaryReference,
+    /// Request for cancellation number
     RequestForCancellationNumber,
+    /// Supplier's control number
     SuppliersControlNumber,
+    /// Shipping note number
     ShippingNoteNumber,
+    /// Empty container bill number
     EmptyContainerBillNumber,
+    /// Non-negotiable maritime transport document number
     NonNegotiableMaritimeTransportDocumentNumber,
+    /// Substitute air waybill number
     SubstituteAirWaybillNumber,
+    /// Despatch note (post parcels) number
     DespatchNotePostParcelsNumber,
+    ///  Airlines flight identification number
     AirlinesFlightIdentificationNumber,
+    /// Through bill of lading number
     ThroughBillLadingNumber,
+    /// Cargo manifest number
     CargoManifestNumber,
+    /// Bordereau number
     BordereauNumber,
+    /// Customs item number
     CustomsItemNumber,
+    /// Export Control Commodity number (ECCN)
     ExportControlCommodityNumberEccn,
+    /// Marking/label reference
     MarkingLabelReference,
+    /// Tariff number
     TariffNumber,
+    /// Replenishment purchase order number
     ReplenishmentPurchaseOrderNumber,
+    /// Immediate transportation no. for in bond movement
     ImmediateTransportationNoForInBondMovement,
+    /// Transportation exportation no. for in bond movement
     TransportationExportationNoForInBondMovement,
+    /// Immediate exportation no. for in bond movement
     ImmediateExportationNoForInBondMovement,
+    /// Associated invoices
     AssociatedInvoices,
+    /// Secondary Customs reference
     SecondaryCustomsReference,
+    /// Account party's reference
     AccountPartysReference,
+    /// Beneficiary's reference
     BeneficiarysReference,
+    /// Second beneficiary's reference
     SecondBeneficiarysReference,
+    /// Applicant's bank reference
     ApplicantsBankReference,
+    /// Issuing bank's reference
     IssuingBanksReference,
+    /// Beneficiary's bank reference
     BeneficiarysBankReference,
+    /// Direct payment valuation number
     DirectPaymentValuationNumber,
+    /// Direct payment valuation request number
     DirectPaymentValuationRequestNumber,
+    /// Quantity valuation number
     QuantityValuationNumber,
+    /// Quantity valuation request number
     QuantityValuationRequestNumber,
+    /// Bill of quantities number
     BillQuantitiesNumber,
+    /// Payment valuation number
     PaymentValuationNumber,
+    /// Situation number
     SituationNumber,
+    /// Agreement to pay number
     AgreementToPayNumber,
+    /// Contract party reference number
     ContractPartyReferenceNumber,
+    /// Account party's bank reference
     AccountPartysBankReference,
+    /// Agent's bank reference
     AgentsBankReference,
+    /// Agent's reference
     AgentsReference,
+    /// Applicant's reference
     ApplicantsReference,
+    /// Dispute number
     DisputeNumber,
+    /// Credit rating agency's reference number
     CreditRatingAgencysReferenceNumber,
+    /// Request number
     RequestNumber,
+    /// Single transaction sequence number
     SingleTransactionSequenceNumber,
+    /// Application reference number
     ApplicationReferenceNumber,
+    /// Delivery verification certificate
     DeliveryVerificationCertificate,
+    /// Number of temporary importation document
     NumberTemporaryImportationDocument,
+    /// Reference number quoted on statement
     ReferenceNumberQuotedOnStatement,
+    /// Sender's reference to the original message
     SendersReferenceToOriginalMessage,
+    /// Company issued equipment ID
     CompanyIssuedEquipmentId,
+    /// Domestic flight number
     DomesticFlightNumber,
+    /// International flight number
     InternationalFlightNumber,
+    /// Employer identification number of service bureau
     EmployerIdentificationNumberServiceBureau,
+    /// Service group identification number
     ServiceGroupIdentificationNumber,
+    /// Member number
     MemberNumber,
+    /// Previous member number
     PreviousMemberNumber,
+    /// Scheme/plan number
     SchemePlanNumber,
+    /// Previous scheme/plan number
     PreviousSchemePlanNumber,
+    /// Receiving party's member identification
     ReceivingPartysMemberIdentification,
+    /// Payroll number
     PayrollNumber,
+    /// Packaging specification number
     PackagingSpecificationNumber,
+    /// Authority issued equipment identification
     AuthorityIssuedEquipmentIdentification,
+    /// Training flight number
     TrainingFlightNumber,
+    /// Fund code number
     FundCodeNumber,
+    /// Signal code number
     SignalCodeNumber,
+    /// Major force program number
     MajorForceProgramNumber,
+    /// Nomination number
     NominationNumber,
+    /// Laboratory registration number
     LaboratoryRegistrationNumber,
+    /// Transport contract reference number
     TransportContractReferenceNumber,
+    /// Payee's reference number
     PayeesReferenceNumber,
+    /// Payer's reference number
     PayersReferenceNumber,
+    /// Creditor's reference number
     CreditorsReferenceNumber,
+    /// Debtor's reference number
     DebtorsReferenceNumber,
+    /// Joint venture reference number
     JointVentureReferenceNumber,
+    /// Chamber of Commerce registration number
     ChamberCommerceRegistrationNumber,
+    /// Tax registration number
     TaxRegistrationNumber,
+    /// Wool identification number
     WoolIdentificationNumber,
+    /// Wool tax reference number
     WoolTaxReferenceNumber,
+    /// Meat processing establishment registration number
     MeatProcessingEstablishmentRegistrationNumber,
+    /// Quarantine/treatment status reference number
     QuarantineTreatmentStatusReferenceNumber,
+    /// Request for quote number
     RequestForQuoteNumber,
+    /// Manual processing authority number
     ManualProcessingAuthorityNumber,
+    /// Rate note number
     RateNoteNumber,
+    /// Freight Forwarder number
     FreightForwarderNumber,
+    /// Customs release code
     CustomsReleaseCode,
+    /// Compliance code number
     ComplianceCodeNumber,
+    /// Department of transportation bond number
     DepartmentTransportationBondNumber,
+    /// Export establishment number
     ExportEstablishmentNumber,
+    /// Certificate of conformity
     CertificateConformity,
+    /// Ministerial certificate of homologation
     MinisterialCertificateHomologation,
+    /// Previous delivery instruction number
     PreviousDeliveryInstructionNumber,
+    /// Passport number
     PassportNumber,
+    /// Common transaction reference number
     CommonTransactionReferenceNumber,
+    /// Bank's common transaction reference number
     BanksCommonTransactionReferenceNumber,
+    /// Customer's individual transaction reference number
     CustomersIndividualTransactionReferenceNumber,
+    /// Bank's individual transaction reference number
     BanksIndividualTransactionReferenceNumber,
+    /// Customer's common transaction reference number
     CustomersCommonTransactionReferenceNumber,
+    /// Individual transaction reference number
     IndividualTransactionReferenceNumber,
+    /// Product sourcing agreement number
     ProductSourcingAgreementNumber,
+    /// Customs transhipment number
     CustomsTranshipmentNumber,
+    /// Customs preference inquiry number
     CustomsPreferenceInquiryNumber,
+    /// Packing plant number
     PackingPlantNumber,
+    /// Original certificate number
     OriginalCertificateNumber,
+    /// Processing plant number
     ProcessingPlantNumber,
+    /// Slaughter plant number
     SlaughterPlantNumber,
+    /// Charge card account number
     ChargeCardAccountNumber,
+    /// Event reference number
     EventReferenceNumber,
+    /// Transport section reference number
     TransportSectionReferenceNumber,
+    /// Referred product for mechanical analysis
     ReferredProductForMechanicalAnalysis,
+    /// Referred product for chemical analysis
     ReferredProductForChemicalAnalysis,
+    /// Consolidated invoice number
     ConsolidatedInvoiceNumber,
+    /// Part reference indicator in a drawing
     PartReferenceIndicatorInADrawing,
+    /// U.S. Code of Federal Regulations (CFR)
     USCodeFederalRegulationsCfr,
+    /// Purchasing activity clause number
     PurchasingActivityClauseNumber,
+    /// U.S. Defense Federal Acquisition Regulation Supplement
     USDefenseFederalAcquisitionRegulationSupplement,
+    /// Agency clause number
     AgencyClauseNumber,
+    /// Circular publication number
     CircularPublicationNumber,
+    /// U.S. Federal Acquisition Regulation
     USFederalAcquisitionRegulation,
+    /// U.S. General Services Administration Regulation
     USGeneralServicesAdministrationRegulation,
+    /// U.S. Federal Information Resources Management Regulation
     USFederalInformationResourcesManagementRegulation,
+    /// Paragraph
     Paragraph,
+    /// Special instructions number
     SpecialInstructionsNumber,
+    /// Site specific procedures, terms, and conditions number
     SiteSpecificProceduresTermsAndConditionsNumber,
+    /// Master solicitation procedures, terms, and conditions
     MasterSolicitationProceduresTermsAndConditions,
+    /// U.S. Department of Veterans Affairs Acquisition Regulation
     USDepartmentVeteransAffairsAcquisitionRegulation,
+    /// Military Interdepartmental Purchase Request (MIPR) number
     MilitaryInterdepartmentalPurchaseRequestMiprNumber,
+    /// Foreign military sales number
     ForeignMilitarySalesNumber,
+    /// Defense priorities allocation system priority rating
     DefensePrioritiesAllocationSystemPriorityRating,
+    /// Wage determination number
     WageDeterminationNumber,
+    /// Agreement number
     AgreementNumber,
+    /// Standard Industry Classification (SIC) number
     StandardIndustryClassificationSicNumber,
+    /// End item number
     EndItemNumber,
+    /// Federal supply schedule item number
     FederalSupplyScheduleItemNumber,
+    /// Technical document number
     TechnicalDocumentNumber,
+    /// Technical order number
     TechnicalOrderNumber,
+    /// Suffix
     Suffix,
+    /// Transportation account number
     TransportationAccountNumber,
+    /// Container disposition order reference number
     ContainerDispositionOrderReferenceNumber,
+    /// Container prefix
     ContainerPrefix,
+    /// Transport equipment return reference
     TransportEquipmentReturnReference,
+    /// Transport equipment survey reference
     TransportEquipmentSurveyReference,
+    /// Transport equipment survey report number
     TransportEquipmentSurveyReportNumber,
+    /// Transport equipment stuffing order
     TransportEquipmentStuffingOrder,
+    /// Vehicle Identification Number (VIN)
     VehicleIdentificationNumberVin,
+    /// Government bill of lading
     GovernmentBillLading,
+    /// Ordering customer's second reference number
     OrderingCustomersSecondReferenceNumber,
+    /// Direct debit reference
     DirectDebitReference,
+    /// Meter reading at the beginning of the delivery
     MeterReadingAtBeginningDelivery,
+    /// Meter reading at the end of delivery
     MeterReadingAtEndDelivery,
+    /// Replenishment purchase order range start number
     ReplenishmentPurchaseOrderRangeStartNumber,
+    /// Third bank's reference
     ThirdBanksReference,
+    /// Action authorization number
     ActionAuthorizationNumber,
+    /// Appropriation number
     AppropriationNumber,
+    /// Product change authority number
     ProductChangeAuthorityNumber,
+    /// General cargo consignment reference number
     GeneralCargoConsignmentReferenceNumber,
+    /// Catalogue sequence number
     CatalogueSequenceNumber,
+    /// Forwarding order number
     ForwardingOrderNumber,
+    /// Transport equipment survey reference number
     TransportEquipmentSurveyReferenceNumber,
+    /// Lease contract reference
     LeaseContractReference,
+    /// Transport costs reference number
     TransportCostsReferenceNumber,
+    /// Transport equipment stripping order
     TransportEquipmentStrippingOrder,
+    /// Prior policy number
     PriorPolicyNumber,
+    /// Policy number
     PolicyNumber,
+    /// Procurement budget number
     ProcurementBudgetNumber,
+    /// Domestic inventory management code
     DomesticInventoryManagementCode,
+    /// Customer reference number assigned to previous balance of
     CustomerReferenceNumberAssignedToPreviousBalance,
+    /// Previous credit advice reference number
     PreviousCreditAdviceReferenceNumber,
+    /// Reporting form number
     ReportingFormNumber,
+    /// Authorization number for exception to dangerous goods
     AuthorizationNumberForExceptionToDangerousGoods,
+    /// Dangerous goods security number
     DangerousGoodsSecurityNumber,
+    /// Dangerous goods transport licence number
     DangerousGoodsTransportLicenceNumber,
+    /// Previous rental agreement number
     PreviousRentalAgreementNumber,
+    /// Next rental agreement reason number
     NextRentalAgreementReasonNumber,
+    /// Consignee's invoice number
     ConsigneesInvoiceNumber,
+    /// Message batch number
     MessageBatchNumber,
+    /// Previous delivery schedule number
     PreviousDeliveryScheduleNumber,
+    /// Physical inventory recount reference number
     PhysicalInventoryRecountReferenceNumber,
+    /// Receiving advice number
     ReceivingAdviceNumber,
+    /// Returnable container reference number
     ReturnableContainerReferenceNumber,
+    /// Returns notice number
     ReturnsNoticeNumber,
+    /// Sales forecast number
     SalesForecastNumber,
+    /// Sales report number
     SalesReportNumber,
+    /// Previous tax control number
     PreviousTaxControlNumber,
+    /// AGERD (Aerospace Ground Equipment Requirement Data) number
     AgerdAerospaceGroundEquipmentRequirementDataNumber,
+    /// Registered capital reference
     RegisteredCapitalReference,
+    /// Standard number of inspection document
     StandardNumberInspectionDocument,
+    /// Model
     Model,
+    /// Financial management reference
     FinancialManagementReference,
+    /// NOTIfication for COLlection number (NOTICOL)
     NotificationForCollectionNumberNoticol,
+    /// Previous request for metered reading reference number
     PreviousRequestForMeteredReadingReferenceNumber,
+    /// Next rental agreement number
     NextRentalAgreementNumber,
+    /// Reference number of a request for metered reading
     ReferenceNumberARequestForMeteredReading,
+    /// Hastening number
     HasteningNumber,
+    /// Repair data request number
     RepairDataRequestNumber,
+    /// Consumption data request number
     ConsumptionDataRequestNumber,
+    /// Profile number
     ProfileNumber,
+    /// Case number
     CaseNumber,
+    /// Government quality assurance and control level Number
     GovernmentQualityAssuranceAndControlLevelNumber,
+    /// Payment plan reference
     PaymentPlanReference,
+    /// Replaced meter unit number
     ReplacedMeterUnitNumber,
+    /// Replenishment purchase order range end number
     ReplenishmentPurchaseOrderRangeEndNumber,
+    /// Insurer assigned reference number
     InsurerAssignedReferenceNumber,
+    /// Canadian excise entry number
     CanadianExciseEntryNumber,
+    /// Premium rate table
     PremiumRateTable,
+    /// Advise through bank's reference
     AdviseThroughBanksReference,
+    /// US, Department of Transportation bond surety code
     UsDepartmentTransportationBondSuretyCode,
+    /// US, Food and Drug Administration establishment indicator
     UsFoodAndDrugAdministrationEstablishmentIndicator,
+    /// US, Federal Communications Commission (FCC) import
     UsFederalCommunicationsCommissionFccImport,
+    /// Goods and Services Tax identification number
     GoodsAndServicesTaxIdentificationNumber,
+    /// Integrated logistic support cross reference number
     IntegratedLogisticSupportCrossReferenceNumber,
+    /// Department number
     DepartmentNumber,
+    /// Buyer's catalogue number
     BuyersCatalogueNumber,
+    /// Financial settlement party's reference number
     FinancialSettlementPartysReferenceNumber,
+    /// Standard's version number
     StandardsVersionNumber,
+    /// Pipeline number
     PipelineNumber,
+    /// Account servicing bank's reference number
     AccountServicingBanksReferenceNumber,
+    /// Completed units payment request reference
     CompletedUnitsPaymentRequestReference,
+    /// Payment in advance request reference
     PaymentInAdvanceRequestReference,
+    /// Parent file
     ParentFile,
+    /// Sub file
     SubFile,
+    /// CAD file layer convention
     CadFileLayerConvention,
+    /// Technical regulation
     TechnicalRegulation,
+    /// Plot file
     PlotFile,
+    /// File conversion journal
     FileConversionJournal,
+    /// Authorization number
     AuthorizationNumber,
+    /// Reference number assigned by third party
     ReferenceNumberAssignedByThirdParty,
+    /// Deposit reference number
     DepositReferenceNumber,
+    /// Named bank's reference
     NamedBanksReference,
+    /// Drawee's reference
     DraweesReference,
+    /// Case of need party's reference
     CaseNeedPartysReference,
+    /// Collecting bank's reference
     CollectingBanksReference,
+    /// Remitting bank's reference
     RemittingBanksReference,
+    /// Principal's bank reference
     PrincipalsBankReference,
+    /// Presenting bank's reference
     PresentingBanksReference,
+    /// Consignee's reference
     ConsigneesReference,
+    /// Financial transaction reference number
     FinancialTransactionReferenceNumber,
+    /// Credit reference number
     CreditReferenceNumber,
+    /// Receiving bank's authorization number
     ReceivingBanksAuthorizationNumber,
+    /// Clearing reference
     ClearingReference,
+    /// Sending bank's reference number
     SendingBanksReferenceNumber,
+    /// Documentary payment reference
     DocumentaryPaymentReference,
+    /// Accounting file reference
     AccountingFileReference,
+    /// Sender's file reference number
     SendersFileReferenceNumber,
+    /// Receiver's file reference number
     ReceiversFileReferenceNumber,
+    /// Source document internal reference
     SourceDocumentInternalReference,
+    /// Principal's reference
     PrincipalsReference,
+    /// Debit reference number
     DebitReferenceNumber,
+    /// Calendar
     Calendar,
+    /// Work shift
     WorkShift,
+    /// Work breakdown structure
     WorkBreakdownStructure,
+    /// Organisation breakdown structure
     OrganisationBreakdownStructure,
+    /// Work task charge number
     WorkTaskChargeNumber,
+    /// Functional work group
     FunctionalWorkGroup,
+    /// Work team
     WorkTeam,
+    /// Department
     Department,
+    /// Statement of work
     StatementWork,
+    /// Work package
     WorkPackage,
+    /// Planning package
     PlanningPackage,
+    /// Cost account
     CostAccount,
+    /// Work order
     WorkOrder,
+    /// Transportation Control Number (TCN)
     TransportationControlNumberTcn,
+    /// Constraint notation
     ConstraintNotation,
+    /// ETERMS reference
     EtermsReference,
+    /// Implementation version number
     ImplementationVersionNumber,
+    ///  Accounts receivable number
     AccountsReceivableNumber,
+    /// Incorporated legal reference
     IncorporatedLegalReference,
+    /// Payment instalment reference number
     PaymentInstalmentReferenceNumber,
+    /// Equipment owner reference number
     EquipmentOwnerReferenceNumber,
+    /// Cedent's claim number
     CedentsClaimNumber,
+    /// Reinsurer's claim number
     ReinsurersClaimNumber,
+    /// Price/sales catalogue response reference number
     PriceSalesCatalogueResponseReferenceNumber,
+    /// General purpose message reference number
     GeneralPurposeMessageReferenceNumber,
+    /// Invoicing data sheet reference number
     InvoicingDataSheetReferenceNumber,
+    /// Inventory report reference number
     InventoryReportReferenceNumber,
+    /// Ceiling formula reference number
     CeilingFormulaReferenceNumber,
+    /// Price variation formula reference number
     PriceVariationFormulaReferenceNumber,
+    /// Reference to account servicing bank's message
     ReferenceToAccountServicingBanksMessage,
+    /// Party sequence number
     PartySequenceNumber,
+    /// Purchaser's request reference
     PurchasersRequestReference,
+    /// Contractor request reference
     ContractorRequestReference,
+    /// Accident reference number
     AccidentReferenceNumber,
+    /// Commercial account summary reference number
     CommercialAccountSummaryReferenceNumber,
+    /// Contract breakdown reference
     ContractBreakdownReference,
+    /// Contractor registration number
     ContractorRegistrationNumber,
+    /// Applicable coefficient identification number
     ApplicableCoefficientIdentificationNumber,
+    /// Special budget account number
     SpecialBudgetAccountNumber,
+    /// Authorisation for repair reference
     AuthorisationForRepairReference,
+    /// Manufacturer defined repair rates reference
     ManufacturerDefinedRepairRatesReference,
+    /// Original submitter log number
     OriginalSubmitterLogNumber,
+    /// Original submitter, parent Data Maintenance Request (DMR)
     OriginalSubmitterParentDataMaintenanceRequestDmr,
+    /// Original submitter, child Data Maintenance Request (DMR)
     OriginalSubmitterChildDataMaintenanceRequestDmr,
+    /// Entry point assessment log number
     EntryPointAssessmentLogNumber,
+    /// Entry point assessment log number, parent DMR
     EntryPointAssessmentLogNumberParentDmr,
+    /// Entry point assessment log number, child DMR
     EntryPointAssessmentLogNumberChildDmr,
+    /// Data structure tag
     DataStructureTag,
+    /// Central secretariat log number
     CentralSecretariatLogNumber,
+    /// Central secretariat log number, parent Data Maintenance
     CentralSecretariatLogNumberParentDataMaintenance,
+    /// Central secretariat log number, child Data Maintenance
     CentralSecretariatLogNumberChildDataMaintenance,
+    /// International assessment log number
     InternationalAssessmentLogNumber,
+    /// International assessment log number, parent Data
     InternationalAssessmentLogNumberParentData,
+    /// International assessment log number, child Data Maintenance
     InternationalAssessmentLogNumberChildDataMaintenance,
+    /// Status report number
     StatusReportNumber,
+    /// Message design group number
     MessageDesignGroupNumber,
+    /// US Customs Service (USCS) entry code
     UsCustomsServiceUscsEntryCode,
+    /// Beginning job sequence number
     BeginningJobSequenceNumber,
+    /// Sender's clause number
     SendersClauseNumber,
+    /// Dun and Bradstreet Canada's 8 digit Standard Industrial
     DunAndBradstreetCanadas8DigitStandardIndustrial,
+    /// Activite Principale Exercee (APE) identifier
     ActivitePrincipaleExerceeApeIdentifier,
+    /// Dun and Bradstreet US 8 digit Standard Industrial
     DunAndBradstreetUs8DigitStandardIndustrial,
+    /// Nomenclature Activity Classification Economy (NACE)
     NomenclatureActivityClassificationEconomyNace,
+    /// Norme Activite Francaise (NAF) identifier
     NormeActiviteFrancaiseNafIdentifier,
+    /// Registered contractor activity type
     RegisteredContractorActivityType,
+    /// Statistic Bundes Amt (SBA) identifier
     StatisticBundesAmtSbaIdentifier,
+    /// State or province assigned entity identification
     StateOrProvinceAssignedEntityIdentification,
+    /// Institute of Security and Future Market Development (ISFMD)
     InstituteSecurityAndFutureMarketDevelopmentIsfmd,
+    /// File identification number
     FileIdentificationNumber,
+    /// Bankruptcy procedure number
     BankruptcyProcedureNumber,
+    /// National government business identification number
     NationalGovernmentBusinessIdentificationNumber,
+    /// Prior Data Universal Number System (DUNS) number
     PriorDataUniversalNumberSystemDunsNumber,
+    /// Companies Registry Office (CRO) number
     CompaniesRegistryOfficeCroNumber,
+    /// Costa Rican judicial number
     CostaRicanJudicialNumber,
+    /// Numero de Identificacion Tributaria (NIT)
     NumeroDeIdentificacionTributariaNit,
+    /// Patron number
     PatronNumber,
+    /// Registro Informacion Fiscal (RIF) number
     RegistroInformacionFiscalRifNumber,
+    /// Registro Unico de Contribuyente (RUC) number
     RegistroUnicoDeContribuyenteRucNumber,
+    /// Tokyo SHOKO Research (TSR) business identifier
     TokyoShokoResearchTsrBusinessIdentifier,
+    /// Personal identity card number
     PersonalIdentityCardNumber,
+    /// Systeme Informatique pour le Repertoire des ENtreprises
     SystemeInformatiquePourLeRepertoireDesEntreprises,
+    /// Systeme Informatique pour le Repertoire des ETablissements
     SystemeInformatiquePourLeRepertoireDesEtablissements,
+    /// Publication issue number
     PublicationIssueNumber,
+    /// Original filing number
     OriginalFilingNumber,
+    /// Document page identifier
     DocumentPageIdentifier,
+    /// Public filing registration number
     PublicFilingRegistrationNumber,
+    /// Regiristo Federal de Contribuyentes
     RegiristoFederalDeContribuyentes,
+    /// Social security number
     SocialSecurityNumber,
+    /// Document volume number
     DocumentVolumeNumber,
+    /// Book number
     BookNumber,
+    /// Stock exchange company identifier
     StockExchangeCompanyIdentifier,
+    /// Imputation account
     ImputationAccount,
+    /// Financial phase reference
     FinancialPhaseReference,
+    /// Technical phase reference
     TechnicalPhaseReference,
+    /// Prior contractor registration number
     PriorContractorRegistrationNumber,
+    /// Stock adjustment number
     StockAdjustmentNumber,
+    /// Dispensation reference
     DispensationReference,
+    /// Investment reference number
     InvestmentReferenceNumber,
+    /// Assuming company
     AssumingCompany,
+    /// Budget chapter
     BudgetChapter,
+    /// Duty free products security number
     DutyFreeProductsSecurityNumber,
+    /// Duty free products receipt authorisation number
     DutyFreeProductsReceiptAuthorisationNumber,
+    /// Party information message reference
     PartyInformationMessageReference,
+    /// Formal statement reference
     FormalStatementReference,
+    /// Proof of delivery reference number
     ProofDeliveryReferenceNumber,
+    /// Supplier's credit claim reference number
     SuppliersCreditClaimReferenceNumber,
+    /// Picture of actual product
     PictureActualProduct,
+    /// Picture of a generic product
     PictureAGenericProduct,
+    /// Trading partner identification number
     TradingPartnerIdentificationNumber,
+    /// Prior trading partner identification number
     PriorTradingPartnerIdentificationNumber,
+    /// Password
     Password,
+    /// Formal report number
     FormalReportNumber,
+    /// Fund account number
     FundAccountNumber,
+    /// Safe custody number
     SafeCustodyNumber,
+    /// Master account number
     MasterAccountNumber,
+    /// Group reference number
     GroupReferenceNumber,
+    /// Accounting transmission number
     AccountingTransmissionNumber,
+    /// Product data file number
     ProductDataFileNumber,
+    /// Cadastro Geral do Contribuinte (CGC)
     CadastroGeralDoContribuinteCgc,
+    /// Foreign resident identification number
     ForeignResidentIdentificationNumber,
+    /// CD-ROM
     CdRom,
+    /// Physical medium
     PhysicalMedium,
+    /// Financial cancellation reference number
     FinancialCancellationReferenceNumber,
+    /// Purchase for export Customs agreement number
     PurchaseForExportCustomsAgreementNumber,
+    /// Judgment number
     JudgmentNumber,
+    /// Secretariat number
     SecretariatNumber,
+    /// Previous banking status message reference
     PreviousBankingStatusMessageReference,
+    /// Last received banking status message reference
     LastReceivedBankingStatusMessageReference,
+    /// Bank's documentary procedure reference
     BanksDocumentaryProcedureReference,
+    /// Customer's documentary procedure reference
     CustomersDocumentaryProcedureReference,
+    /// Safe deposit box number
     SafeDepositBoxNumber,
+    /// Receiving Bankgiro number
     ReceivingBankgiroNumber,
+    /// Sending Bankgiro number
     SendingBankgiroNumber,
+    /// Bankgiro reference
     BankgiroReference,
+    /// Guarantee number
     GuaranteeNumber,
+    /// Collection instrument number
     CollectionInstrumentNumber,
+    /// Converted Postgiro number
     ConvertedPostgiroNumber,
+    /// Cost centre alignment number
     CostCentreAlignmentNumber,
+    /// Kamer Van Koophandel (KVK) number
     KamerVanKoophandelKvkNumber,
+    /// Institut Belgo-Luxembourgeois de Codification (IBLC) number
     InstitutBelgoLuxembourgeoisDeCodificationIblcNumber,
+    /// External object reference
     ExternalObjectReference,
+    /// Exceptional transport authorisation number
     ExceptionalTransportAuthorisationNumber,
+    /// Clave Unica de Identificacion Tributaria (CUIT)
     ClaveUnicaDeIdentificacionTributariaCuit,
+    /// Registro Unico Tributario (RUT)
     RegistroUnicoTributarioRut,
+    /// Flat rack container bundle identification number
     FlatRackContainerBundleIdentificationNumber,
+    /// Transport equipment acceptance order reference
     TransportEquipmentAcceptanceOrderReference,
+    /// Transport equipment release order reference
     TransportEquipmentReleaseOrderReference,
+    /// Ship's stay reference number
     ShipsStayReferenceNumber,
+    ///  Authorization to meet competition number
     AuthorizationToMeetCompetitionNumber,
+    /// Place of positioning reference
     PlacePositioningReference,
+    /// Party reference
     PartyReference,
+    /// Issued prescription identification
     IssuedPrescriptionIdentification,
+    /// Collection reference
     CollectionReference,
+    /// Travel service
     TravelService,
+    /// Consignment stock contract
     ConsignmentStockContract,
+    /// Importer's letter of credit reference
     ImportersLetterCreditReference,
+    /// Performed prescription identification
     PerformedPrescriptionIdentification,
+    /// Image reference
     ImageReference,
+    /// Proposed purchase order reference number
     ProposedPurchaseOrderReferenceNumber,
+    /// Application for financial support reference number
     ApplicationForFinancialSupportReferenceNumber,
+    /// Manufacturing quality agreement number
     ManufacturingQualityAgreementNumber,
+    /// Software editor reference
     SoftwareEditorReference,
+    /// Software reference
     SoftwareReference,
+    /// Software quality reference
     SoftwareQualityReference,
+    /// Consolidated orders' reference
     ConsolidatedOrdersReference,
+    /// Customs binding ruling number
     CustomsBindingRulingNumber,
+    /// Customs non-binding ruling number
     CustomsNonBindingRulingNumber,
+    /// Delivery route reference
     DeliveryRouteReference,
+    /// Net area supplier reference
     NetAreaSupplierReference,
+    /// Time series reference
     TimeSeriesReference,
+    /// Connecting point to central grid
     ConnectingPointToCentralGrid,
+    /// Marketing plan identification number (MPIN)
     MarketingPlanIdentificationNumberMpin,
+    /// Entity reference number, previous
     EntityReferenceNumberPrevious,
+    /// International Standard Industrial Classification (ISIC)
     InternationalStandardIndustrialClassificationIsic,
+    /// Customs pre-approval ruling number
     CustomsPreApprovalRulingNumber,
+    ///  Account payable number
     AccountPayableNumber,
+    /// First financial institution's transaction reference
     FirstFinancialInstitutionsTransactionReference,
+    /// Product characteristics directory
     ProductCharacteristicsDirectory,
+    /// Supplier's customer reference number
     SuppliersCustomerReferenceNumber,
+    /// Inventory report request number
     InventoryReportRequestNumber,
+    /// Metering point
     MeteringPoint,
+    /// Passenger reservation number
     PassengerReservationNumber,
+    /// Slaughterhouse approval number
     SlaughterhouseApprovalNumber,
+    /// Meat cutting plant approval number
     MeatCuttingPlantApprovalNumber,
+    /// Customer travel service identifier
     CustomerTravelServiceIdentifier,
+    /// Export control classification number
     ExportControlClassificationNumber,
+    /// Broker reference 3
     BrokerReference3,
+    /// Consignment information
     ConsignmentInformation,
+    /// Goods item information
     GoodsItemInformation,
+    /// Dangerous Goods information
     DangerousGoodsInformation,
+    /// Pilotage services exemption number
     PilotageServicesExemptionNumber,
+    /// Person registration number
     PersonRegistrationNumber,
+    /// Place of packing approval number
     PlacePackingApprovalNumber,
+    /// Original Mandate Reference
     OriginalMandateReference,
+    /// Mandate Reference
     MandateReference,
+    /// Reservation station indentifier
     ReservationStationIndentifier,
+    /// Unique goods shipment identifier
     UniqueGoodsShipmentIdentifier,
+    /// Framework Agreement Number
     FrameworkAgreementNumber,
+    /// Hash value
     HashValue,
+    /// Movement reference number
     MovementReferenceNumber,
+    /// Economic Operators Registration and Identification Number
     EconomicOperatorsRegistrationAndIdentificationNumber,
+    /// Local Reference Number
     LocalReferenceNumber,
+    /// Rate code number
     RateCodeNumber,
+    /// Air waybill number
     AirWaybillNumber,
+    /// Documentary credit amendment number
     DocumentaryCreditAmendmentNumber,
+    /// Advising bank's reference
     AdvisingBanksReference,
+    /// Cost centre
     CostCentre,
+    /// Work item quantity determination
     WorkItemQuantityDetermination,
+    /// Internal data process number
     InternalDataProcessNumber,
+    /// Category of work reference
     CategoryWorkReference,
+    /// Policy form number
     PolicyFormNumber,
+    /// Net area
     NetArea,
+    /// Service provider
     ServiceProvider,
+    /// Error position
     ErrorPosition,
+    /// Service category reference
     ServiceCategoryReference,
+    /// Connected location
     ConnectedLocation,
+    /// Related party
     RelatedParty,
+    /// Latest accounting entry record reference
     LatestAccountingEntryRecordReference,
+    /// Accounting entry
     AccountingEntry,
+    /// Document reference, original
     DocumentReferenceOriginal,
+    /// Hygienic Certificate number, national
     HygienicCertificateNumberNational,
+    /// Administrative Reference Code
     AdministrativeReferenceCode,
+    /// Pick-up sheet number
     PickUpSheetNumber,
+    /// Phone number
     PhoneNumber,
+    /// Buyer's fund number
     BuyersFundNumber,
+    /// Company trading account number
     CompanyTradingAccountNumber,
+    /// Reserved goods identifier
     ReservedGoodsIdentifier,
+    /// Handling and movement reference number
     HandlingAndMovementReferenceNumber,
+    /// Instruction to despatch reference number
     InstructionToDespatchReferenceNumber,
+    /// Instruction for returns number
     InstructionForReturnsNumber,
+    /// Metered services consumption report number
     MeteredServicesConsumptionReportNumber,
+    /// Order status enquiry number
     OrderStatusEnquiryNumber,
+    /// Firm booking reference number
     FirmBookingReferenceNumber,
+    /// Product inquiry number
     ProductInquiryNumber,
+    /// Split delivery number
     SplitDeliveryNumber,
+    /// Service relation number
     ServiceRelationNumber,
+    /// Serial shipping container code
     SerialShippingContainerCode,
+    /// Test specification number
     TestSpecificationNumber,
+    /// Transport status report number
     TransportStatusReportNumber,
+    /// Tooling contract number
     ToolingContractNumber,
+    /// Formula reference number
     FormulaReferenceNumber,
+    /// Pre-agreement number
     PreAgreementNumber,
+    /// Product certification number
     ProductCertificationNumber,
+    /// Consignment contract number
     ConsignmentContractNumber,
+    /// Product specification reference number
     ProductSpecificationReferenceNumber,
+    /// Payroll deduction advice reference
     PayrollDeductionAdviceReference,
+    /// TRACES party identification
     TracesPartyIdentification,
+    ///  Beginning meter reading actual
     BeginningMeterReadingActual,
+    ///  Buyer's contract number
     BuyersContractNumber,
+    ///  Bid number
     BidNumber,
+    ///  Beginning meter reading estimated
     BeginningMeterReadingEstimated,
+    ///  House bill of lading number
     HouseBillLadingNumber,
+    ///  Bill of lading number
     BillLadingNumber,
+    ///  Consignment identifier, carrier assigned
     ConsignmentIdentifierCarrierAssigned,
+    ///  Blanket order number
     BlanketOrderNumber,
+    ///  Broker or sales office number
     BrokerOrSalesOfficeNumber,
+    ///  Batch number/lot number
     BatchNumberLotNumber,
+    /// Battery and accumulator producer registration number
     BatteryAndAccumulatorProducerRegistrationNumber,
+    ///  Blended with number
     BlendedWithNumber,
+    /// IATA Cargo Agent CASS Address number
     IataCargoAgentCassAddressNumber,
+    /// Matching of entries, balanced
     MatchingEntriesBalanced,
+    /// Entry flagging
     EntryFlagging,
+    /// Matching of entries, unbalanced
     MatchingEntriesUnbalanced,
+    /// Document reference, internal
     DocumentReferenceInternal,
+    /// European Value Added Tax identification
     EuropeanValueAddedTaxIdentification,
+    /// Cost accounting document
     CostAccountingDocument,
+    /// Grid operator's customer reference number
     GridOperatorsCustomerReferenceNumber,
+    /// Ticket control number
     TicketControlNumber,
+    /// Order shipment grouping reference
     OrderShipmentGroupingReference,
+    ///  Credit note number
     CreditNoteNumber,
+    /// Ceding company
     CedingCompany,
+    /// Debit letter number
     DebitLetterNumber,
+    /// Consignee's further order
     ConsigneesFurtherOrder,
+    /// Animal farm licence number
     AnimalFarmLicenceNumber,
+    /// Consignor's further order
     ConsignorsFurtherOrder,
+    ///  Consignee's order number
     ConsigneesOrderNumber,
+    ///  Customer catalogue number
     CustomerCatalogueNumber,
+    ///  Cheque number
     ChequeNumber,
+    /// Checking number
     CheckingNumber,
+    ///  Credit memo number
     CreditMemoNumber,
+    /// Road consignment note number
     RoadConsignmentNoteNumber,
+    ///  Carrier's reference number
     CarriersReferenceNumber,
+    /// Charges note document attachment indicator
     ChargesNoteDocumentAttachmentIndicator,
+    /// Call off order number
     CallOffOrderNumber,
+    ///  Condition of purchase document number
     ConditionPurchaseDocumentNumber,
+    ///  Customer reference number
     CustomerReferenceNumber,
+    /// Transport means journey identifier
     TransportMeansJourneyIdentifier,
+    ///  Condition of sale document number
     ConditionSaleDocumentNumber,
+    /// Team assignment number
     TeamAssignmentNumber,
+    ///  Contract number
     ContractNumber,
+    ///  Consignment identifier, consignor assigned
     ConsignmentIdentifierConsignorAssigned,
+    ///  Container operators reference number
     ContainerOperatorsReferenceNumber,
+    ///  Package number
     PackageNumber,
+    ///  Cooperation contract number
     CooperationContractNumber,
+    ///  Deferment approval number
     DefermentApprovalNumber,
+    /// Debit account number
     DebitAccountNumber,
+    ///  Buyer's debtor number
     BuyersDebtorNumber,
+    ///  Distributor invoice number
     DistributorInvoiceNumber,
+    ///  Debit note number
     DebitNoteNumber,
+    ///  Document identifier
     DocumentIdentifier,
+    ///  Delivery note number
     DeliveryNoteNumber,
+    ///  Dock receipt number
     DockReceiptNumber,
+    ///  Ending meter reading actual
     EndingMeterReadingActual,
+    ///  Embargo permit number
     EmbargoPermitNumber,
+    ///  Export declaration
     ExportDeclaration,
+    ///  Ending meter reading estimated
     EndingMeterReadingEstimated,
+    /// Electrical and electronic equipment producer registration
     ElectricalAndElectronicEquipmentProducerRegistration,
+    ///  Employer's identification number
     EmployersIdentificationNumber,
+    ///  Embargo number
     EmbargoNumber,
+    ///  Equipment number
     EquipmentNumber,
+    ///  Container/equipment receipt number
     ContainerEquipmentReceiptNumber,
+    /// Exporter's reference number
     ExportersReferenceNumber,
+    ///  Excess transportation number
     ExcessTransportationNumber,
+    ///  Export permit identifier
     ExportPermitIdentifier,
+    ///  Fiscal number
     FiscalNumber,
+    ///  Consignment identifier, freight forwarder assigned
     ConsignmentIdentifierFreightForwarderAssigned,
+    ///  File line identifier
     FileLineIdentifier,
+    /// Flow reference number
     FlowReferenceNumber,
+    ///  Freight bill number
     FreightBillNumber,
+    ///  Foreign exchange
     ForeignExchange,
+    ///  Final sequence number
     FinalSequenceNumber,
+    ///  Free zone identifier
     FreeZoneIdentifier,
+    ///  File version number
     FileVersionNumber,
+    ///  Foreign exchange contract number
     ForeignExchangeContractNumber,
+    ///  Standard's number
     StandardsNumber,
+    ///  Government contract number
     GovernmentContractNumber,
+    ///  Standard's code number
     StandardsCodeNumber,
+    /// General declaration number
     GeneralDeclarationNumber,
+    ///  Government reference number
     GovernmentReferenceNumber,
+    ///  Harmonised system number
     HarmonisedSystemNumber,
+    /// House waybill number
     HouseWaybillNumber,
+    ///  Internal vendor number
     InternalVendorNumber,
+    ///  In bond number
     InBondNumber,
+    /// IATA cargo agent code number
     IataCargoAgentCodeNumber,
+    /// Insurance certificate reference number
     InsuranceCertificateReferenceNumber,
+    /// Insurance contract reference number
     InsuranceContractReferenceNumber,
+    ///  Initial sample inspection report number
     InitialSampleInspectionReportNumber,
+    ///  Internal order number
     InternalOrderNumber,
+    /// Intermediary broker
     IntermediaryBroker,
+    /// Interchange number new
     InterchangeNumberNew,
+    /// Interchange number old
     InterchangeNumberOld,
+    ///  Import permit identifier
     ImportPermitIdentifier,
+    ///  Invoice number suffix
     InvoiceNumberSuffix,
+    ///  Internal customer number
     InternalCustomerNumber,
+    ///  Invoice document identifier
     InvoiceDocumentIdentifier,
+    ///  Job number
     JobNumber,
+    ///  Ending job sequence number
     EndingJobSequenceNumber,
+    ///  Shipping label serial number
     ShippingLabelSerialNumber,
+    /// Loading authorisation identifier
     LoadingAuthorisationIdentifier,
+    /// Lower number in range
     LowerNumberInRange,
+    ///  Lockbox
     Lockbox,
+    ///  Letter of credit number
     LetterCreditNumber,
+    ///  Document line identifier
     DocumentLineIdentifier,
+    ///  Load planning number
     LoadPlanningNumber,
+    /// Reservation office identifier
     ReservationOfficeIdentifier,
+    ///  Bar coded label serial number
     BarCodedLabelSerialNumber,
+    ///  Ship notice/manifest number
     ShipNoticeManifestNumber,
+    ///  Master bill of lading number
     MasterBillLadingNumber,
+    ///  Manufacturer's part number
     ManufacturersPartNumber,
+    ///  Meter unit number
     MeterUnitNumber,
+    ///  Manufacturing order number
     ManufacturingOrderNumber,
+    ///  Message recipient
     MessageRecipient,
+    /// Mailing reference number
     MailingReferenceNumber,
+    ///  Message sender
     MessageSender,
+    /// Manufacturer's material safety data sheet number
     ManufacturersMaterialSafetyDataSheetNumber,
+    /// Master air waybill number
     MasterAirWaybillNumber,
+    ///  North American hazardous goods classification number
     NorthAmericanHazardousGoodsClassificationNumber,
+    ///  Nota Fiscal
     NotaFiscal,
+    ///  Current invoice number
     CurrentInvoiceNumber,
+    ///  Previous invoice number
     PreviousInvoiceNumber,
+    ///  Order document identifier, buyer assigned
     OrderDocumentIdentifierBuyerAssigned,
+    ///  Original purchase order
     OriginalPurchaseOrder,
+    ///  General order number
     GeneralOrderNumber,
+    ///  Payer's financial institution account number
     PayersFinancialInstitutionAccountNumber,
+    ///  Production code
     ProductionCode,
+    ///  Promotion deal number
     PromotionDealNumber,
+    ///  Plant number
     PlantNumber,
+    ///  Prime contractor contract number
     PrimeContractorContractNumber,
+    ///  Price list version number
     PriceListVersionNumber,
+    ///  Packing list number
     PackingListNumber,
+    ///  Price list number
     PriceListNumber,
+    /// Purchase order response number
     PurchaseOrderResponseNumber,
+    ///  Purchase order change number
     PurchaseOrderChangeNumber,
+    ///  Payment reference
     PaymentReference,
+    ///  Price quote number
     PriceQuoteNumber,
+    ///  Purchase order number suffix
     PurchaseOrderNumberSuffix,
+    ///  Prior purchase order number
     PriorPurchaseOrderNumber,
+    ///  Payee's financial institution account number
     PayeesFinancialInstitutionAccountNumber,
+    ///  Remittance advice number
     RemittanceAdviceNumber,
+    ///  Rail/road routing code
     RailRoadRoutingCode,
+    /// Railway consignment note number
     RailwayConsignmentNoteNumber,
+    ///  Release number
     ReleaseNumber,
+    /// Consignment receipt identifier
     ConsignmentReceiptIdentifier,
+    ///  Export reference number
     ExportReferenceNumber,
+    ///  Payer's financial institution transit routing No.(ACH
     PayersFinancialInstitutionTransitRoutingNoAch,
+    ///  Payee's financial institution transit routing No.
     PayeesFinancialInstitutionTransitRoutingNo,
+    ///  Sales person number
     SalesPersonNumber,
+    ///  Sales region number
     SalesRegionNumber,
+    ///  Sales department number
     SalesDepartmentNumber,
+    ///  Serial number
     SerialNumber,
+    /// Allocated seat
     AllocatedSeat,
+    ///  Ship from
     ShipFrom,
+    ///  Previous highest schedule number
     PreviousHighestScheduleNumber,
+    ///  SID (Shipper's identifying number for shipment)
     SidShippersIdentifyingNumberForShipment,
+    ///  Sales office number
     SalesOfficeNumber,
+    ///  Transport equipment seal identifier
     TransportEquipmentSealIdentifier,
+    ///  Scan line
     ScanLine,
+    ///  Equipment sequence number
     EquipmentSequenceNumber,
+    /// Shipment reference number
     ShipmentReferenceNumber,
+    ///  Sellers reference number
     SellersReferenceNumber,
+    /// Station reference number
     StationReferenceNumber,
+    ///  Swap order number
     SwapOrderNumber,
+    ///  Specification number
     SpecificationNumber,
+    ///  Trucker's bill of lading
     TruckersBillLading,
+    /// Terminal operator's consignment reference
     TerminalOperatorsConsignmentReference,
+    ///  Telex message number
     TelexMessageNumber,
+    ///  Transfer number
     TransferNumber,
+    ///  TIR carnet number
     TirCarnetNumber,
+    /// Transport instruction number
     TransportInstructionNumber,
+    ///  Tax exemption licence number
     TaxExemptionLicenceNumber,
+    ///  Transaction reference number
     TransactionReferenceNumber,
+    ///  Test report number
     TestReportNumber,
+    /// Upper number of range
     UpperNumberRange,
+    ///  Ultimate customer's reference number
     UltimateCustomersReferenceNumber,
+    /// Unique consignment reference number
     UniqueConsignmentReferenceNumber,
+    ///  United Nations Dangerous Goods identifier
     UnitedNationsDangerousGoodsIdentifier,
+    ///  Ultimate customer's order number
     UltimateCustomersOrderNumber,
+    /// Uniform Resource Identifier
     UniformResourceIdentifier,
+    ///  VAT registration number
     VatRegistrationNumber,
+    ///  Vendor contract number
     VendorContractNumber,
+    /// Transport equipment gross mass verification reference
     TransportEquipmentGrossMassVerificationReference,
+    ///  Vessel identifier
     VesselIdentifier,
+    ///  Order number (vendor)
     OrderNumberVendor,
+    /// Voyage number
     VoyageNumber,
+    /// Transport equipment gross mass verification order reference
     TransportEquipmentGrossMassVerificationOrderReference,
+    ///  Vendor product number
     VendorProductNumber,
+    ///  Vendor ID number
     VendorIdNumber,
+    ///  Vendor order number suffix
     VendorOrderNumberSuffix,
+    ///  Motor vehicle identification number
     MotorVehicleIdentificationNumber,
+    ///  Voucher number
     VoucherNumber,
+    ///  Warehouse entry number
     WarehouseEntryNumber,
+    ///  Weight agreement number
     WeightAgreementNumber,
+    ///  Well number
     WellNumber,
+    ///  Warehouse receipt number
     WarehouseReceiptNumber,
+    ///  Warehouse storage location number
     WarehouseStorageLocationNumber,
+    ///  Rail waybill number
     RailWaybillNumber,
+    ///  Company/place registration number
     CompanyPlaceRegistrationNumber,
+    ///  Cargo control number
     CargoControlNumber,
+    ///  Previous cargo control number
     PreviousCargoControlNumber,
+    /// Mutually defined reference number
     MutuallyDefinedReferenceNumber,
 }
 

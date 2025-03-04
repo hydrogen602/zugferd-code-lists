@@ -2,183 +2,361 @@
 
 #[derive(Debug, PartialEq, Eq, PartialOrd, Ord, Clone, Copy, Hash)]
 pub enum Charge {
+    /// Advertising
     Advertising,
+    /// Telecommunication
     Telecommunication,
+    /// Technical modification
     TechnicalModification,
+    /// Job-order production
     JobOrderProduction,
+    /// Outlays
     Outlays,
+    /// Off-premises
     OffPremises,
+    /// Additional processing
     AdditionalProcessing,
+    /// Attesting
     Attesting,
+    /// Acceptance
     Acceptance,
+    /// Rush delivery
     RushDelivery,
+    /// Special construction
     SpecialConstruction,
+    /// Airport facilities
     AirportFacilities,
+    /// Concession
     Concession,
+    /// Compulsory storage
     CompulsoryStorage,
+    /// Fuel removal
     FuelRemoval,
+    /// Into plane
     IntoPlane,
+    /// Overtime
     Overtime,
+    /// Tooling
     Tooling,
+    /// Miscellaneous
     Miscellaneous,
+    /// Additional packaging
     AdditionalPackaging,
+    /// Dunnage
     Dunnage,
+    /// Containerisation
     Containerisation,
+    /// Carton packing
     CartonPacking,
+    /// Hessian wrapped
     HessianWrapped,
+    /// Polyethylene wrap packing
     PolyethyleneWrapPacking,
+    /// Miscellaneous treatment
     MiscellaneousTreatment,
+    /// Enamelling treatment
     EnamellingTreatment,
+    /// Heat treatment
     HeatTreatment,
+    /// Plating treatment
     PlatingTreatment,
+    /// Painting
     Painting,
+    /// Polishing
     Polishing,
+    /// Priming
     Priming,
+    /// Preservation treatment
     PreservationTreatment,
+    /// Fitting
     Fitting,
+    /// Consolidation
     Consolidation,
+    /// Bill of lading
     BillLading,
+    /// Airbag
     Airbag,
+    /// Transfer
     Transfer,
+    /// Slipsheet
     Slipsheet,
+    /// Binding
     Binding,
+    /// Repair or replacement of broken returnable package
     RepairOrReplacementBrokenReturnablePackage,
+    /// Efficient logistics
     EfficientLogistics,
+    /// Merchandising
     Merchandising,
+    /// Product mix
     ProductMix,
+    /// Other services
     OtherServices,
+    /// Pick-up
     PickUp,
+    /// Chronic illness
     ChronicIllness,
+    /// New product introduction
     NewProductIntroduction,
+    /// Direct delivery
     DirectDelivery,
+    /// Diversion
     Diversion,
+    /// Disconnect
     Disconnect,
+    /// Distribution
     Distribution,
+    /// Handling of hazardous cargo
     HandlingHazardousCargo,
+    /// Rents and leases
     RentsAndLeases,
+    /// Location differential
     LocationDifferential,
+    /// Aircraft refueling
     AircraftRefueling,
+    /// Fuel shipped into storage
     FuelShippedIntoStorage,
+    /// Cash on delivery
     CashOnDelivery,
+    /// Small order processing service
     SmallOrderProcessingService,
+    /// Clerical or administrative services
     ClericalOrAdministrativeServices,
+    /// Guarantee
     Guarantee,
+    /// Collection and recycling
     CollectionAndRecycling,
+    /// Copyright fee collection
     CopyrightFeeCollection,
+    /// Veterinary inspection service
     VeterinaryInspectionService,
+    /// Pensioner service
     PensionerService,
+    /// Medicine free pass holder
     MedicineFreePassHolder,
+    /// Environmental protection service
     EnvironmentalProtectionService,
+    /// Environmental clean-up service
     EnvironmentalCleanUpService,
+    /// National cheque processing service outside account area
     NationalChequeProcessingServiceOutsideAccountArea,
+    /// National payment service outside account area
     NationalPaymentServiceOutsideAccountArea,
+    /// National payment service within account area
     NationalPaymentServiceWithinAccountArea,
+    /// Adjustments
     Adjustments,
+    /// Authentication
     Authentication,
+    /// Cataloguing
     Cataloguing,
+    /// Cartage
     Cartage,
+    /// Certification
     Certification,
+    /// Certificate of conformance
     CertificateConformance,
+    /// Certificate of origin
     CertificateOrigin,
+    /// Cutting
     Cutting,
+    /// Consular service
     ConsularService,
+    /// Customer collection
     CustomerCollection,
+    /// Payroll payment service
     PayrollPaymentService,
+    /// Cash transportation
     CashTransportation,
+    /// Home banking service
     HomeBankingService,
+    /// Bilateral agreement service
     BilateralAgreementService,
+    /// Insurance brokerage service
     InsuranceBrokerageService,
+    /// Cheque generation
     ChequeGeneration,
+    /// Preferential merchandising location
     PreferentialMerchandisingLocation,
+    /// Crane
     Crane,
+    /// Special colour service
     SpecialColourService,
+    /// Sorting
     Sorting,
+    /// Battery collection and recycling
     BatteryCollectionAndRecycling,
+    /// Product take back fee
     ProductTakeBackFee,
+    /// Quality control released
     QualityControlReleased,
+    /// Quality control held
     QualityControlHeld,
+    /// Quality control embargo
     QualityControlEmbargo,
+    /// Car loading
     CarLoading,
+    /// Cleaning
     Cleaning,
+    /// Cigarette stamping
     CigaretteStamping,
+    /// Count and recount
     CountAndRecount,
+    /// Layout/design
     LayoutDesign,
+    /// Assortment allowance
     AssortmentAllowance,
+    /// Driver assigned unloading
     DriverAssignedUnloading,
+    /// Debtor bound
     DebtorBound,
+    /// Dealer allowance
     DealerAllowance,
+    /// Allowance transferable to the consumer
     AllowanceTransferableToConsumer,
+    /// Growth of business
     GrowthBusiness,
+    /// Introduction allowance
     IntroductionAllowance,
+    /// Multi-buy promotion
     MultiBuyPromotion,
+    /// Partnership
     Partnership,
+    /// Return handling
     ReturnHandling,
+    /// Minimum order not fulfilled charge
     MinimumOrderNotFulfilledCharge,
+    /// Point of sales threshold allowance
     PointSalesThresholdAllowance,
+    /// Wholesaling discount
     WholesalingDiscount,
+    /// Documentary credits transfer commission
     DocumentaryCreditsTransferCommission,
+    /// Delivery
     Delivery,
+    /// Engraving
     Engraving,
+    /// Expediting
     Expediting,
+    /// Exchange rate guarantee
     ExchangeRateGuarantee,
+    /// Fabrication
     Fabrication,
+    /// Freight equalization
     FreightEqualization,
+    /// Freight extraordinary handling
     FreightExtraordinaryHandling,
+    /// Freight service
     FreightService,
+    /// Filling/handling
     FillingHandling,
+    /// Financing
     Financing,
+    /// Grinding
     Grinding,
+    /// Hose
     Hose,
+    /// Handling
     Handling,
+    /// Hoisting and hauling
     HoistingAndHauling,
+    /// Installation
     Installation,
+    /// Installation and warranty
     InstallationAndWarranty,
+    /// Inside delivery
     InsideDelivery,
+    /// Inspection
     Inspection,
+    /// Installation and training
     InstallationAndTraining,
+    /// Invoicing
     Invoicing,
+    /// Koshering
     Koshering,
+    /// Carrier count
     CarrierCount,
+    /// Labelling
     Labelling,
+    /// Labour
     Labour,
+    /// Repair and return
     RepairAndReturn,
+    /// Legalisation
     Legalisation,
+    /// Mounting
     Mounting,
+    /// Mail invoice
     MailInvoice,
+    /// Mail invoice to each location
     MailInvoiceToEachLocation,
+    /// Non-returnable containers
     NonReturnableContainers,
+    /// Outside cable connectors
     OutsideCableConnectors,
+    /// Invoice with shipment
     InvoiceWithShipment,
+    /// Phosphatizing (steel treatment)
     PhosphatizingSteelTreatment,
+    /// Packing
     Packing,
+    /// Palletizing
     Palletizing,
+    /// Price variation
     PriceVariation,
+    /// Repacking
     Repacking,
+    /// Repair
     Repair,
+    /// Returnable container
     ReturnableContainer,
+    /// Restocking
     Restocking,
+    /// Re-delivery
     ReDelivery,
+    /// Refurbishing
     Refurbishing,
+    /// Rail wagon hire
     RailWagonHire,
+    /// Loading
     Loading,
+    /// Salvaging
     Salvaging,
+    /// Shipping and handling
     ShippingAndHandling,
+    /// Special packaging
     SpecialPackaging,
+    /// Stamping
     Stamping,
+    /// Consignee unload
     ConsigneeUnload,
+    /// Shrink-wrap
     ShrinkWrap,
+    /// Special handling
     SpecialHandling,
+    /// Special finish
     SpecialFinish,
+    /// Set-up
     SetUp,
+    /// Tank renting
     TankRenting,
+    /// Testing
     Testing,
+    /// Transportation - third party billing
     TransportationThirdPartyBilling,
+    /// Transportation by vendor
     TransportationByVendor,
+    /// Drop yard
     DropYard,
+    /// Drop dock
     DropDock,
+    /// Warehousing
     Warehousing,
+    /// Combine all same day shipment
     CombineAllSameDayShipment,
+    /// Split pick-up
     SplitPickUp,
+    /// Mutually defined
     MutuallyDefined,
 }
 

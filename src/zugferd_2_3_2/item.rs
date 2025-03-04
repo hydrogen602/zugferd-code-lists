@@ -2,189 +2,373 @@
 
 #[derive(Debug, PartialEq, Eq, PartialOrd, Ord, Clone, Copy, Hash)]
 pub enum Item {
+    /// Product version number
     ProductVersionNumber,
+    /// Assembly
     Assembly,
+    /// HIBC (Health Industry Bar Code)
     HibcHealthIndustryBarCode,
+    /// Cold roll number
     ColdRollNumber,
+    /// Hot roll number
     HotRollNumber,
+    /// Slab number
     SlabNumber,
+    /// Software revision number
     SoftwareRevisionNumber,
+    /// UPC (Universal Product Code) Consumer package code (1-5-5)
     UpcUniversalProductCodeConsumerPackageCode155,
+    /// UPC (Universal Product Code) Consumer package code (1-5-5-
     UpcUniversalProductCodeConsumerPackageCode155_Dup,
+    /// Sample number
     SampleNumber,
+    /// Pack number
     PackNumber,
+    /// UPC (Universal Product Code) Shipping container code (1-2-
     UpcUniversalProductCodeShippingContainerCode12,
+    /// UPC (Universal Product Code)/EAN (European article number)
     UpcUniversalProductCodeEanEuropeanArticleNumber,
+    /// UPC (Universal Product Code) suffix
     UpcUniversalProductCodeSuffix,
+    /// State label code
     StateLabelCode,
+    /// Heat number
     HeatNumber,
+    /// Coupon number
     CouponNumber,
+    /// Resource number
     ResourceNumber,
+    /// Work task number
     WorkTaskNumber,
+    /// Price look up number
     PriceLookUpNumber,
+    /// NSN (North Atlantic Treaty Organization Stock Number)
     NsnNorthAtlanticTreatyOrganizationStockNumber,
+    /// Refined product code
     RefinedProductCode,
+    /// Exhibit
     Exhibit,
+    /// End item
     EndItem,
+    /// Federal supply classification
     FederalSupplyClassification,
+    /// Engineering data list
     EngineeringDataList,
+    /// Milestone event number
     MilestoneEventNumber,
+    /// Lot number
     LotNumber,
+    /// National drug code 4-4-2 format
     NationalDrugCode442Format,
+    /// National drug code 5-3-2 format
     NationalDrugCode532Format,
+    /// National drug code 5-4-1 format
     NationalDrugCode541Format,
+    /// National drug code 5-4-2 format
     NationalDrugCode542Format,
+    /// National drug code
     NationalDrugCode,
+    /// Part number
     PartNumber,
+    /// Local Stock Number (LSN)
     LocalStockNumberLsn,
+    /// Next higher assembly number
     NextHigherAssemblyNumber,
+    /// Data category
     DataCategory,
+    /// Control number
     ControlNumber,
+    /// Special material identification code
     SpecialMaterialIdentificationCode,
+    /// Locally assigned control number
     LocallyAssignedControlNumber,
+    /// Buyer's colour
     BuyersColour,
+    /// Buyer's part number
     BuyersPartNumber,
+    /// Variable measure product code
     VariableMeasureProductCode,
+    /// Financial phase
     FinancialPhase,
+    /// Contract breakdown
     ContractBreakdown,
+    /// Technical phase
     TechnicalPhase,
+    /// Dye lot number
     DyeLotNumber,
+    /// Daily statement of activities
     DailyStatementActivities,
+    /// Periodical statement of activities within a bilaterally
     PeriodicalStatementActivitiesWithinABilaterally,
+    /// Calendar week statement of activities
     CalendarWeekStatementActivities,
+    /// Calendar month statement of activities
     CalendarMonthStatementActivities,
+    /// Original equipment number
     OriginalEquipmentNumber,
+    /// Industry commodity code
     IndustryCommodityCode,
+    /// Commodity grouping
     CommodityGrouping,
+    /// Colour number
     ColourNumber,
+    /// Contract number
     ContractNumber,
+    /// Customs article number
     CustomsArticleNumber,
+    /// Drawing revision number
     DrawingRevisionNumber,
+    /// Drawing
     Drawing,
+    /// Engineering change level
     EngineeringChangeLevel,
+    /// Material code
     MaterialCode,
+    /// EMDN (European Medical Device Nomenclature)
     EmdnEuropeanMedicalDeviceNomenclature,
+    /// International Article Numbering Association (EAN)
     InternationalArticleNumberingAssociationEan,
+    /// Fish species
     FishSpecies,
+    /// Buyer's internal product group code
     BuyersInternalProductGroupCode,
+    /// Global model number
     GlobalModelNumber,
+    /// National product group code
     NationalProductGroupCode,
+    /// General specification number
     GeneralSpecificationNumber,
+    /// Harmonised system
     HarmonisedSystem,
+    /// ISBN (International Standard Book Number)
     IsbnInternationalStandardBookNumber,
+    /// Buyer's item number
     BuyersItemNumber,
+    /// ISSN (International Standard Serial Number)
     IssnInternationalStandardSerialNumber,
+    /// Buyer's style number
     BuyersStyleNumber,
+    /// Buyer's size code
     BuyersSizeCode,
+    /// Machine number
     MachineNumber,
+    /// Manufacturer's (producer's) article number
     ManufacturersProducersArticleNumber,
+    /// Model number
     ModelNumber,
+    /// Product/service identification number
     ProductServiceIdentificationNumber,
+    /// Batch number
     BatchNumber,
+    /// Customer order number
     CustomerOrderNumber,
+    /// Part number description
     PartNumberDescription,
+    /// Purchaser's order line number
     PurchasersOrderLineNumber,
+    /// Purchase order number
     PurchaseOrderNumber,
+    /// Promotional variant number
     PromotionalVariantNumber,
+    /// Buyer's qualifier for size
     BuyersQualifierForSize,
+    /// Returnable container number
     ReturnableContainerNumber,
+    /// Release number
     ReleaseNumber,
+    /// Run number
     RunNumber,
+    /// Record keeping of model year
     RecordKeepingModelYear,
+    /// Supplier's article number
     SuppliersArticleNumber,
+    /// Standard group of products (mixed assortment)
     StandardGroupProductsMixedAssortment,
+    /// SKU (Stock keeping unit)
     SkuStockKeepingUnit,
+    /// Serial number
     SerialNumber,
+    /// RSK number
     RskNumber,
+    /// IFLS (Institut Francais du Libre Service) 5 digit product
     IflsInstitutFrancaisDuLibreService5DigitProduct,
+    /// IFLS (Institut Francais du Libre Service) 9 digit product
     IflsInstitutFrancaisDuLibreService9DigitProduct,
+    /// GS1 Global Trade Item Number
     Gs1GlobalTradeItemNumber,
+    /// EDIS (Energy Data Identification System)
     EdisEnergyDataIdentificationSystem,
+    /// Slaughter number
     SlaughterNumber,
+    /// Official animal number
     OfficialAnimalNumber,
+    /// Harmonized tariff schedule
     HarmonizedTariffSchedule,
+    /// Supplier's supplier article number
     SuppliersSupplierArticleNumber,
+    /// 46 Level DOT Code
     _46LevelDotCode,
+    /// Airline Tariff 6D
     AirlineTariff6d,
+    /// Title 49 Code of Federal Regulations
     Title49CodeFederalRegulations,
+    /// International Civil Aviation Administration code
     InternationalCivilAviationAdministrationCode,
+    /// Hazardous Materials ID DOT
     HazardousMaterialsIdDot,
+    /// Endorsement
     Endorsement,
+    /// Air Force Regulation 71-4
     AirForceRegulation714,
+    /// Breed
     Breed,
+    /// Chemical Abstract Service (CAS) registry number
     ChemicalAbstractServiceCasRegistryNumber,
+    /// Engine model designation
     EngineModelDesignation,
+    /// Institutional Meat Purchase Specifications (IMPS) Number
     InstitutionalMeatPurchaseSpecificationsImpsNumber,
+    /// Price Look-Up code (PLU)
     PriceLookUpCodePlu,
+    /// International Maritime Organization (IMO) Code
     InternationalMaritimeOrganizationImoCode,
+    /// Bureau of Explosives 600-A (rail)
     BureauExplosives600ARail,
+    /// United Nations Dangerous Goods List
     UnitedNationsDangerousGoodsList,
+    /// International Code of Botanical Nomenclature (ICBN)
     InternationalCodeBotanicalNomenclatureIcbn,
+    /// International Code of Zoological Nomenclature (ICZN)
     InternationalCodeZoologicalNomenclatureIczn,
+    /// International Code of Nomenclature for Cultivated Plants
     InternationalCodeNomenclatureForCultivatedPlants,
+    /// Distributor’s article identifier
     DistributorSArticleIdentifier,
+    /// Norwegian Classification system ENVA
     NorwegianClassificationSystemEnva,
+    /// Supplier assigned classification
     SupplierAssignedClassification,
+    /// Mexican classification system AMECE
     MexicanClassificationSystemAmece,
+    /// German classification system CCG
     GermanClassificationSystemCcg,
+    /// Finnish classification system EANFIN
     FinnishClassificationSystemEanfin,
+    /// Canadian classification system ICC
     CanadianClassificationSystemIcc,
+    /// French classification system IFLS5
     FrenchClassificationSystemIfls5,
+    /// Style number
     StyleNumber,
+    /// Dutch classification system CBL
     DutchClassificationSystemCbl,
+    /// Japanese classification system JICFS
     JapaneseClassificationSystemJicfs,
+    /// European Union dairy subsidy eligibility classification
     EuropeanUnionDairySubsidyEligibilityClassification,
+    /// GS1 Spain classification system
     Gs1SpainClassificationSystem,
+    /// GS1 Poland classification system
     Gs1PolandClassificationSystem,
+    /// Federal Agency on Technical Regulating and Metrology of the
     FederalAgencyOnTechnicalRegulatingAndMetrology,
+    /// Efficient Consumer Response (ECR) Austria classification
     EfficientConsumerResponseEcrAustriaClassification,
+    /// GS1 Italy classification system
     Gs1ItalyClassificationSystem,
+    /// CPV (Common Procurement Vocabulary)
     CpvCommonProcurementVocabulary,
+    /// IFDA (International Foodservice Distributors Association)
     IfdaInternationalFoodserviceDistributorsAssociation,
+    /// AHFS (American Hospital Formulary Service) pharmacologic -
     AhfsAmericanHospitalFormularyServicePharmacologic,
+    /// ATC (Anatomical Therapeutic Chemical) classification system
     AtcAnatomicalTherapeuticChemicalClassificationSystem,
+    /// CLADIMED (Classification des Dispositifs Médicaux)
     CladimedClassificationDesDispositifsMédicaux,
+    /// CMDR (Canadian Medical Device Regulations) classification
     CmdrCanadianMedicalDeviceRegulationsClassification,
+    /// CNDM (Classificazione Nazionale dei Dispositivi Medici)
     CndmClassificazioneNazionaleDeiDispositiviMedici,
+    /// UK DM&D (Dictionary of Medicines & Devices) standard coding
     UkDmDDictionaryMedicinesDevicesStandardCoding,
+    /// eCl@ss
     EclSs,
+    /// EDMA (European Diagnostic Manufacturers Association)
     EdmaEuropeanDiagnosticManufacturersAssociation,
+    /// EGAR (European Generic Article Register)
     EgarEuropeanGenericArticleRegister,
+    /// GMDN (Global Medical Devices Nomenclature)
     GmdnGlobalMedicalDevicesNomenclature,
+    /// GPI (Generic Product Identifier)
     GpiGenericProductIdentifier,
+    /// HCPCS (Healthcare Common Procedure Coding System)
     HcpcsHealthcareCommonProcedureCodingSystem,
+    /// ICPS (International Classification for Patient Safety)
     IcpsInternationalClassificationForPatientSafety,
+    /// MedDRA (Medical Dictionary for Regulatory Activities)
     MeddraMedicalDictionaryForRegulatoryActivities,
+    /// Medical Columbus
     MedicalColumbus,
+    /// NAPCS (North American Product Classification System)
     NapcsNorthAmericanProductClassificationSystem,
+    /// NHS (National Health Services) eClass
     NhsNationalHealthServicesEclass,
+    /// US FDA (Food and Drug Administration) Product Code
     UsFdaFoodAndDrugAdministrationProductCode,
+    /// SNOMED CT (Systematized Nomenclature of Medicine-Clinical
     SnomedCtSystematizedNomenclatureMedicineClinical,
+    /// UMDNS (Universal Medical Device Nomenclature System)
     UmdnsUniversalMedicalDeviceNomenclatureSystem,
+    /// GS1 Global Returnable Asset Identifier, non-serialised
     Gs1GlobalReturnableAssetIdentifierNonSerialised,
+    /// IMEI
     Imei,
+    /// Waste Type (EMSA)
     WasteTypeEmsa,
+    /// Ship's store classification type
     ShipsStoreClassificationType,
+    /// Emergency fire code
     EmergencyFireCode,
+    /// Emergency spillage code
     EmergencySpillageCode,
+    /// IMDG packing group
     ImdgPackingGroup,
+    /// MARPOL Code IBC
     MarpolCodeIbc,
+    /// IMDG subsidiary risk class
     ImdgSubsidiaryRiskClass,
+    /// Transport group number
     TransportGroupNumber,
+    /// Taxonomic Serial Number
     TaxonomicSerialNumber,
+    /// IMDG main hazard class
     ImdgMainHazardClass,
+    /// EU Combined Nomenclature
     EuCombinedNomenclature,
+    /// Therapeutic classification number
     TherapeuticClassificationNumber,
+    /// European Waste Catalogue
     EuropeanWasteCatalogue,
+    /// Price grouping code
     PriceGroupingCode,
+    /// UNSPSC
     Unspsc,
+    /// EU RoHS Directive
     EuRohsDirective,
+    /// Ultimate customer's article number
     UltimateCustomersArticleNumber,
+    /// UPC (Universal product code)
     UpcUniversalProductCode,
+    /// Vendor item number
     VendorItemNumber,
+    /// Vendor's (seller's) part number
     VendorsSellersPartNumber,
+    /// Vendor's supplemental item number
     VendorsSupplementalItemNumber,
+    /// Vendor specification number
     VendorSpecificationNumber,
+    /// Mutually defined
     MutuallyDefined,
 }
 
