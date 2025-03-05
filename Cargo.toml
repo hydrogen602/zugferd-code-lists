@@ -2,3 +2,9 @@
 name = "zugferd-code-lists"
 version = "0.1.0"
 edition = "2021"
+homepage = "https://github.com/hydrogen602/zugferd-code-lists"
+description = "ZUGFeRD code lists, e.g. languages enum, currencies enum, countries enum, etc."
+license = "MIT"
+repository = "https://github.com/hydrogen602/zugferd-code-lists"
+keywords = ["ZUGFeRD", "code-lists", "Factur-X"]
+readme = "readme.md"
