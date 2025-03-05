@@ -8,3 +8,5 @@ license = "MIT"
 repository = "https://github.com/hydrogen602/zugferd-code-lists"
 keywords = ["ZUGFeRD", "code-lists", "Factur-X"]
 readme = "readme.md"
+
+exclude = ["requirements.txt", "py_generate/*", "generating.md"]
