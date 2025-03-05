@@ -13,3 +13,10 @@ pub trait FromCode {
     where
         Self: Sized;
 }
+
+#[cfg(test)]
+mod test {
+    // check that pub rules are correctly applied
+    #[allow(unused_imports)]
+    use crate::zugferd_2_3_2::Country::Germany;
+}
