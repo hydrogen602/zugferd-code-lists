@@ -3,4328 +3,8652 @@
 #[derive(Debug, PartialEq, Eq, PartialOrd, Ord, Clone, Copy, Hash)]
 pub enum Unit {
     /// group
+    ///
+    /// rec20
     Group,
     /// outfit
+    ///
+    /// rec20
     Outfit,
     /// ration
+    ///
+    /// rec20
     Ration,
     /// shot
+    ///
+    /// rec20
     Shot,
     /// stick, military
+    ///
+    /// rec20
     StickMilitary,
     /// twenty foot container
+    ///
+    /// rec20
     TwentyFootContainer,
     /// forty foot container
+    ///
+    /// rec20
     FortyFootContainer,
     /// decilitre per gram
+    ///
+    /// rec20
     DecilitrePerGram,
     /// gram per cubic centimetre
+    ///
+    /// rec20
     GramPerCubicCentimetre,
     /// theoretical pound
+    ///
+    /// rec20
     TheoreticalPound,
     /// gram per square centimetre
+    ///
+    /// rec20
     GramPerSquareCentimetre,
     /// theoretical ton
+    ///
+    /// rec20
     TheoreticalTon,
     /// kilogram per square metre
+    ///
+    /// rec20
     KilogramPerSquareMetre,
     /// kilopascal square metre per gram
+    ///
+    /// rec20
     KilopascalSquareMetrePerGram,
     /// kilopascal per millimetre
+    ///
+    /// rec20
     KilopascalPerMillimetre,
     /// millilitre per square centimetre second
+    ///
+    /// rec20
     MillilitrePerSquareCentimetreSecond,
     /// ounce per square foot
+    ///
+    /// rec20
     OuncePerSquareFoot,
     /// ounce per square foot per 0,01inch
+    ///
+    /// rec20
     OuncePerSquareFootPer001inch,
     /// millilitre per second
+    ///
+    /// rec20
     MillilitrePerSecond,
     /// millilitre per minute
+    ///
+    /// rec20
     MillilitrePerMinute,
     /// sitas
+    ///
+    /// rec20
     Sitas,
     /// mesh
+    ///
+    /// rec20
     Mesh,
     /// net kilogram
+    ///
+    /// rec20
     NetKilogram,
     /// part per million
+    ///
+    /// rec20
     PartPerMillion,
     /// percent weight
+    ///
+    /// rec20
     PercentWeight,
     /// part per billion (US)
+    ///
+    /// rec20
     PartPerBillionUs,
     /// millipascal
+    ///
+    /// rec20
     Millipascal,
     /// milli-inch
+    ///
+    /// rec20
     MilliInch,
     /// pound per square inch absolute
+    ///
+    /// rec20
     PoundPerSquareInchAbsolute,
     /// henry
+    ///
+    /// rec20
     Henry,
     /// foot pound-force
+    ///
+    /// rec20
     FootPoundForce,
     /// pound per cubic foot
+    ///
+    /// rec20
     PoundPerCubicFoot,
     /// poise
+    ///
+    /// rec20
     Poise,
     /// stokes
+    ///
+    /// rec20
     Stokes,
     /// fixed rate
+    ///
+    /// rec20
     FixedRate,
     /// radian per second
+    ///
+    /// rec20
     RadianPerSecond,
     /// radian per second squared
+    ///
+    /// rec20
     RadianPerSecondSquared,
     /// roentgen
+    ///
+    /// rec20
     Roentgen,
     /// volt AC
+    ///
+    /// rec20
     VoltAc,
     /// volt DC
+    ///
+    /// rec20
     VoltDc,
     /// British thermal unit (international table) per hour
+    ///
+    /// rec20
     BritishThermalUnitInternationalTablePerHour,
     /// cubic centimetre per second
+    ///
+    /// rec20
     CubicCentimetrePerSecond,
     /// cubic foot per hour
+    ///
+    /// rec20
     CubicFootPerHour,
     /// cubic foot per minute
+    ///
+    /// rec20
     CubicFootPerMinute,
     /// centimetre per second
+    ///
+    /// rec20
     CentimetrePerSecond,
     /// decibel
+    ///
+    /// rec20
     Decibel,
     /// kilobyte
+    ///
+    /// rec20
     Kilobyte,
     /// kilobecquerel
+    ///
+    /// rec20
     Kilobecquerel,
     /// kilocurie
+    ///
+    /// rec20
     Kilocurie,
     /// megagram
+    ///
+    /// rec20
     Megagram,
     /// metre per minute
+    ///
+    /// rec20
     MetrePerMinute,
     /// milliroentgen
+    ///
+    /// rec20
     Milliroentgen,
     /// millivolt
+    ///
+    /// rec20
     Millivolt,
     /// megajoule
+    ///
+    /// rec20
     Megajoule,
     /// manmonth
+    ///
+    /// rec20
     Manmonth,
     /// centistokes
+    ///
+    /// rec20
     Centistokes,
     /// microlitre
+    ///
+    /// rec20
     Microlitre,
     /// micrometre (micron)
+    ///
+    /// rec20
     MicrometreMicron,
     /// milliampere
+    ///
+    /// rec20
     Milliampere,
     /// megabyte
+    ///
+    /// rec20
     Megabyte,
     /// milligram per hour
+    ///
+    /// rec20
     MilligramPerHour,
     /// megabecquerel
+    ///
+    /// rec20
     Megabecquerel,
     /// microfarad
+    ///
+    /// rec20
     Microfarad,
     /// newton per metre
+    ///
+    /// rec20
     NewtonPerMetre,
     /// ounce inch
+    ///
+    /// rec20
     OunceInch,
     /// ounce foot
+    ///
+    /// rec20
     OunceFoot,
     /// picofarad
+    ///
+    /// rec20
     Picofarad,
     /// pound per hour
+    ///
+    /// rec20
     PoundPerHour,
     /// ton (US) per hour
+    ///
+    /// rec20
     TonUsPerHour,
     /// kilolitre per hour
+    ///
+    /// rec20
     KilolitrePerHour,
     /// barrel (US) per minute
+    ///
+    /// rec20
     BarrelUsPerMinute,
     /// batch
+    ///
+    /// rec20
     Batch,
     /// MMSCF/day
+    ///
+    /// rec20
     MmscfDay,
     /// hydraulic horse power
+    ///
+    /// rec20
     HydraulicHorsePower,
     /// ampere square metre per joule second
+    ///
+    /// rec20
     AmpereSquareMetrePerJouleSecond,
     /// angstrom
+    ///
+    /// rec20
     Angstrom,
     /// astronomical unit
+    ///
+    /// rec20
     AstronomicalUnit,
     /// attojoule
+    ///
+    /// rec20
     Attojoule,
     /// barn
+    ///
+    /// rec20
     Barn,
     /// barn per electronvolt
+    ///
+    /// rec20
     BarnPerElectronvolt,
     /// barn per steradian electronvolt
+    ///
+    /// rec20
     BarnPerSteradianElectronvolt,
     /// barn per steradian
+    ///
+    /// rec20
     BarnPerSteradian,
     /// becquerel per kilogram
+    ///
+    /// rec20
     BecquerelPerKilogram,
     /// becquerel per cubic metre
+    ///
+    /// rec20
     BecquerelPerCubicMetre,
     /// ampere per centimetre
+    ///
+    /// rec20
     AmperePerCentimetre,
     /// British thermal unit (international table) per second square foot degree Rankine
+    ///
+    /// rec20
     BritishThermalUnitInternationalTablePerSecondSquareFootDegreeRankine,
     /// British thermal unit (international table) per pound degree Rankine
+    ///
+    /// rec20
     BritishThermalUnitInternationalTablePerPoundDegreeRankine,
     /// British thermal unit (international table) per second foot degree Rankine
+    ///
+    /// rec20
     BritishThermalUnitInternationalTablePerSecondFootDegreeRankine,
     /// British thermal unit (international table) per hour square foot degree Rankine
+    ///
+    /// rec20
     BritishThermalUnitInternationalTablePerHourSquareFootDegreeRankine,
     /// candela per square metre
+    ///
+    /// rec20
     CandelaPerSquareMetre,
     /// coulomb metre
+    ///
+    /// rec20
     CoulombMetre,
     /// coulomb metre squared per volt
+    ///
+    /// rec20
     CoulombMetreSquaredPerVolt,
     /// coulomb per cubic centimetre
+    ///
+    /// rec20
     CoulombPerCubicCentimetre,
     /// coulomb per cubic metre
+    ///
+    /// rec20
     CoulombPerCubicMetre,
     /// ampere per millimetre
+    ///
+    /// rec20
     AmperePerMillimetre,
     /// coulomb per cubic millimetre
+    ///
+    /// rec20
     CoulombPerCubicMillimetre,
     /// coulomb per kilogram second
+    ///
+    /// rec20
     CoulombPerKilogramSecond,
     /// coulomb per mole
+    ///
+    /// rec20
     CoulombPerMole,
     /// coulomb per square centimetre
+    ///
+    /// rec20
     CoulombPerSquareCentimetre,
     /// coulomb per square metre
+    ///
+    /// rec20
     CoulombPerSquareMetre,
     /// coulomb per square millimetre
+    ///
+    /// rec20
     CoulombPerSquareMillimetre,
     /// cubic centimetre per mole
+    ///
+    /// rec20
     CubicCentimetrePerMole,
     /// cubic decimetre per mole
+    ///
+    /// rec20
     CubicDecimetrePerMole,
     /// cubic metre per coulomb
+    ///
+    /// rec20
     CubicMetrePerCoulomb,
     /// cubic metre per kilogram
+    ///
+    /// rec20
     CubicMetrePerKilogram,
     /// ampere per square centimetre
+    ///
+    /// rec20
     AmperePerSquareCentimetre,
     /// cubic metre per mole
+    ///
+    /// rec20
     CubicMetrePerMole,
     /// ampere per square metre
+    ///
+    /// rec20
     AmperePerSquareMetre,
     /// curie per kilogram
+    ///
+    /// rec20
     CuriePerKilogram,
     /// deadweight tonnage
+    ///
+    /// rec20
     DeadweightTonnage,
     /// decalitre
+    ///
+    /// rec20
     Decalitre,
     /// decametre
+    ///
+    /// rec20
     Decametre,
     /// decitex
+    ///
+    /// rec20
     Decitex,
     /// degree Rankine
+    ///
+    /// rec20
     DegreeRankine,
     /// denier
+    ///
+    /// rec20
     Denier,
     /// ampere square metre
+    ///
+    /// rec20
     AmpereSquareMetre,
     /// electronvolt
+    ///
+    /// rec20
     Electronvolt,
     /// electronvolt per metre
+    ///
+    /// rec20
     ElectronvoltPerMetre,
     /// electronvolt square metre
+    ///
+    /// rec20
     ElectronvoltSquareMetre,
     /// electronvolt square metre per kilogram
+    ///
+    /// rec20
     ElectronvoltSquareMetrePerKilogram,
     /// 8-part cloud cover
+    ///
+    /// rec20
     _8PartCloudCover,
     /// ampere per square metre kelvin squared
+    ///
+    /// rec20
     AmperePerSquareMetreKelvinSquared,
     /// exajoule
+    ///
+    /// rec20
     Exajoule,
     /// farad per metre
+    ///
+    /// rec20
     FaradPerMetre,
     /// ampere per square millimetre
+    ///
+    /// rec20
     AmperePerSquareMillimetre,
     /// femtojoule
+    ///
+    /// rec20
     Femtojoule,
     /// femtometre
+    ///
+    /// rec20
     Femtometre,
     /// foot per second squared
+    ///
+    /// rec20
     FootPerSecondSquared,
     /// foot pound-force per second
+    ///
+    /// rec20
     FootPoundForcePerSecond,
     /// freight ton
+    ///
+    /// rec20
     FreightTon,
     /// gal
+    ///
+    /// rec20
     Gal,
     /// ampere second
+    ///
+    /// rec20
     AmpereSecond,
     /// gigacoulomb per cubic metre
+    ///
+    /// rec20
     GigacoulombPerCubicMetre,
     /// gigaelectronvolt
+    ///
+    /// rec20
     Gigaelectronvolt,
     /// gigahertz
+    ///
+    /// rec20
     Gigahertz,
     /// gigaohm
+    ///
+    /// rec20
     Gigaohm,
     /// gigaohm metre
+    ///
+    /// rec20
     GigaohmMetre,
     /// gigapascal
+    ///
+    /// rec20
     Gigapascal,
     /// rate
+    ///
+    /// rec20
     Rate,
     /// gigawatt
+    ///
+    /// rec20
     Gigawatt,
     /// gon
+    ///
+    /// rec20
     Gon,
     /// gram per cubic metre
+    ///
+    /// rec20
     GramPerCubicMetre,
     /// gram per mole
+    ///
+    /// rec20
     GramPerMole,
     /// gray
+    ///
+    /// rec20
     Gray,
     /// gray per second
+    ///
+    /// rec20
     GrayPerSecond,
     /// hectopascal
+    ///
+    /// rec20
     Hectopascal,
     /// henry per metre
+    ///
+    /// rec20
     HenryPerMetre,
     /// bit
+    ///
+    /// rec20
     Bit,
     /// ball
+    ///
+    /// rec20
     Ball,
     /// bulk pack
+    ///
+    /// rec20
     BulkPack,
     /// acre
+    ///
+    /// rec20
     Acre,
     /// activity
+    ///
+    /// rec20
     Activity,
     /// byte
+    ///
+    /// rec20
     Byte,
     /// ampere per metre
+    ///
+    /// rec20
     AmperePerMetre,
     /// additional minute
+    ///
+    /// rec20
     AdditionalMinute,
     /// average minute per call
+    ///
+    /// rec20
     AverageMinutePerCall,
     /// fathom
+    ///
+    /// rec20
     Fathom,
     /// access line
+    ///
+    /// rec20
     AccessLine,
     /// ampere hour
+    ///
+    /// rec20
     AmpereHour,
     /// ampere
+    ///
+    /// rec20
     Ampere,
     /// year
+    ///
+    /// rec20
     Year,
     /// troy ounce or apothecary ounce
+    ///
+    /// rec20
     TroyOunceOrApothecaryOunce,
     /// anti-hemophilic factor (AHF) unit
+    ///
+    /// rec20
     AntiHemophilicFactorAhfUnit,
     /// assortment
+    ///
+    /// rec20
     Assortment,
     /// alcoholic strength by mass
+    ///
+    /// rec20
     AlcoholicStrengthByMass,
     /// alcoholic strength by volume
+    ///
+    /// rec20
     AlcoholicStrengthByVolume,
     /// standard atmosphere
+    ///
+    /// rec20
     StandardAtmosphere,
     /// american wire gauge
+    ///
+    /// rec20
     AmericanWireGauge,
     /// assembly
+    ///
+    /// rec20
     Assembly,
     /// British thermal unit (international table) per pound
+    ///
+    /// rec20
     BritishThermalUnitInternationalTablePerPound,
     /// barrel (US) per day
+    ///
+    /// rec20
     BarrelUsPerDay,
     /// bit per second
+    ///
+    /// rec20
     BitPerSecond,
     /// joule per kilogram kelvin
+    ///
+    /// rec20
     JoulePerKilogramKelvin,
     /// joule per metre
+    ///
+    /// rec20
     JoulePerMetre,
     /// joule per square metre
+    ///
+    /// rec20
     JoulePerSquareMetre,
     /// joule per metre to the fourth power
+    ///
+    /// rec20
     JoulePerMetreToFourthPower,
     /// joule per mole
+    ///
+    /// rec20
     JoulePerMole,
     /// joule per mole kelvin
+    ///
+    /// rec20
     JoulePerMoleKelvin,
     /// credit
+    ///
+    /// rec20
     Credit,
     /// joule second
+    ///
+    /// rec20
     JouleSecond,
     /// digit
+    ///
+    /// rec20
     Digit,
     /// joule square metre per kilogram
+    ///
+    /// rec20
     JouleSquareMetrePerKilogram,
     /// kelvin per watt
+    ///
+    /// rec20
     KelvinPerWatt,
     /// kiloampere
+    ///
+    /// rec20
     Kiloampere,
     /// kiloampere per square metre
+    ///
+    /// rec20
     KiloamperePerSquareMetre,
     /// kiloampere per metre
+    ///
+    /// rec20
     KiloamperePerMetre,
     /// kilobecquerel per kilogram
+    ///
+    /// rec20
     KilobecquerelPerKilogram,
     /// kilocoulomb
+    ///
+    /// rec20
     Kilocoulomb,
     /// kilocoulomb per cubic metre
+    ///
+    /// rec20
     KilocoulombPerCubicMetre,
     /// kilocoulomb per square metre
+    ///
+    /// rec20
     KilocoulombPerSquareMetre,
     /// kiloelectronvolt
+    ///
+    /// rec20
     Kiloelectronvolt,
     /// batting pound
+    ///
+    /// rec20
     BattingPound,
     /// gibibit
+    ///
+    /// rec20
     Gibibit,
     /// kilogram metre per second
+    ///
+    /// rec20
     KilogramMetrePerSecond,
     /// kilogram metre squared
+    ///
+    /// rec20
     KilogramMetreSquared,
     /// kilogram metre squared per second
+    ///
+    /// rec20
     KilogramMetreSquaredPerSecond,
     /// kilogram per cubic decimetre
+    ///
+    /// rec20
     KilogramPerCubicDecimetre,
     /// kilogram per litre
+    ///
+    /// rec20
     KilogramPerLitre,
     /// barrel, imperial
+    ///
+    /// rec20
     BarrelImperial,
     /// kilojoule per kelvin
+    ///
+    /// rec20
     KilojoulePerKelvin,
     /// kilojoule per kilogram
+    ///
+    /// rec20
     KilojoulePerKilogram,
     /// kilojoule per kilogram kelvin
+    ///
+    /// rec20
     KilojoulePerKilogramKelvin,
     /// kilojoule per mole
+    ///
+    /// rec20
     KilojoulePerMole,
     /// kilomole
+    ///
+    /// rec20
     Kilomole,
     /// kilomole per cubic metre
+    ///
+    /// rec20
     KilomolePerCubicMetre,
     /// kilonewton
+    ///
+    /// rec20
     Kilonewton,
     /// kilonewton metre
+    ///
+    /// rec20
     KilonewtonMetre,
     /// kiloohm
+    ///
+    /// rec20
     Kiloohm,
     /// kiloohm metre
+    ///
+    /// rec20
     KiloohmMetre,
     /// kilosecond
+    ///
+    /// rec20
     Kilosecond,
     /// kilosiemens
+    ///
+    /// rec20
     Kilosiemens,
     /// kilosiemens per metre
+    ///
+    /// rec20
     KilosiemensPerMetre,
     /// kilovolt per metre
+    ///
+    /// rec20
     KilovoltPerMetre,
     /// kiloweber per metre
+    ///
+    /// rec20
     KiloweberPerMetre,
     /// light year
+    ///
+    /// rec20
     LightYear,
     /// litre per mole
+    ///
+    /// rec20
     LitrePerMole,
     /// lumen hour
+    ///
+    /// rec20
     LumenHour,
     /// lumen per square metre
+    ///
+    /// rec20
     LumenPerSquareMetre,
     /// lumen per watt
+    ///
+    /// rec20
     LumenPerWatt,
     /// lumen second
+    ///
+    /// rec20
     LumenSecond,
     /// lux hour
+    ///
+    /// rec20
     LuxHour,
     /// lux second
+    ///
+    /// rec20
     LuxSecond,
     /// megaampere per square metre
+    ///
+    /// rec20
     MegaamperePerSquareMetre,
     /// megabecquerel per kilogram
+    ///
+    /// rec20
     MegabecquerelPerKilogram,
     /// gigabit
+    ///
+    /// rec20
     Gigabit,
     /// megacoulomb per cubic metre
+    ///
+    /// rec20
     MegacoulombPerCubicMetre,
     /// cycle
+    ///
+    /// rec20
     Cycle,
     /// megacoulomb per square metre
+    ///
+    /// rec20
     MegacoulombPerSquareMetre,
     /// megaelectronvolt
+    ///
+    /// rec20
     Megaelectronvolt,
     /// megagram per cubic metre
+    ///
+    /// rec20
     MegagramPerCubicMetre,
     /// meganewton
+    ///
+    /// rec20
     Meganewton,
     /// meganewton metre
+    ///
+    /// rec20
     MeganewtonMetre,
     /// megaohm
+    ///
+    /// rec20
     Megaohm,
     /// megaohm metre
+    ///
+    /// rec20
     MegaohmMetre,
     /// megasiemens per metre
+    ///
+    /// rec20
     MegasiemensPerMetre,
     /// megavolt
+    ///
+    /// rec20
     Megavolt,
     /// megavolt per metre
+    ///
+    /// rec20
     MegavoltPerMetre,
     /// joule per cubic metre
+    ///
+    /// rec20
     JoulePerCubicMetre,
     /// gigabit per second
+    ///
+    /// rec20
     GigabitPerSecond,
     /// reciprocal metre squared reciprocal second
+    ///
+    /// rec20
     ReciprocalMetreSquaredReciprocalSecond,
     /// inch per linear foot
+    ///
+    /// rec20
     InchPerLinearFoot,
     /// metre to the fourth power
+    ///
+    /// rec20
     MetreToFourthPower,
     /// microampere
+    ///
+    /// rec20
     Microampere,
     /// microbar
+    ///
+    /// rec20
     Microbar,
     /// microcoulomb
+    ///
+    /// rec20
     Microcoulomb,
     /// microcoulomb per cubic metre
+    ///
+    /// rec20
     MicrocoulombPerCubicMetre,
     /// microcoulomb per square metre
+    ///
+    /// rec20
     MicrocoulombPerSquareMetre,
     /// microfarad per metre
+    ///
+    /// rec20
     MicrofaradPerMetre,
     /// microhenry
+    ///
+    /// rec20
     Microhenry,
     /// microhenry per metre
+    ///
+    /// rec20
     MicrohenryPerMetre,
     /// micronewton
+    ///
+    /// rec20
     Micronewton,
     /// micronewton metre
+    ///
+    /// rec20
     MicronewtonMetre,
     /// microohm
+    ///
+    /// rec20
     Microohm,
     /// microohm metre
+    ///
+    /// rec20
     MicroohmMetre,
     /// micropascal
+    ///
+    /// rec20
     Micropascal,
     /// microradian
+    ///
+    /// rec20
     Microradian,
     /// microsecond
+    ///
+    /// rec20
     Microsecond,
     /// microsiemens
+    ///
+    /// rec20
     Microsiemens,
     /// bar [unit of pressure]
+    ///
+    /// rec20
     BarUnitPressure,
     /// base box
+    ///
+    /// rec20
     BaseBox,
     /// board foot
+    ///
+    /// rec20
     BoardFoot,
     /// brake horse power
+    ///
+    /// rec20
     BrakeHorsePower,
     /// billion (EUR)
+    ///
+    /// rec20
     BillionEur,
     /// dry barrel (US)
+    ///
+    /// rec20
     DryBarrelUs,
     /// barrel (US)
+    ///
+    /// rec20
     BarrelUs,
     /// hundred board foot
+    ///
+    /// rec20
     HundredBoardFoot,
     /// beats per minute
+    ///
+    /// rec20
     BeatsPerMinute,
     /// becquerel
+    ///
+    /// rec20
     Becquerel,
     /// British thermal unit (international table)
+    ///
+    /// rec20
     BritishThermalUnitInternationalTable,
     /// bushel (US)
+    ///
+    /// rec20
     BushelUs,
     /// bushel (UK)
+    ///
+    /// rec20
     BushelUk,
     /// call
+    ///
+    /// rec20
     Call,
     /// millifarad
+    ///
+    /// rec20
     Millifarad,
     /// milligal
+    ///
+    /// rec20
     Milligal,
     /// milligram per metre
+    ///
+    /// rec20
     MilligramPerMetre,
     /// milligray
+    ///
+    /// rec20
     Milligray,
     /// millihenry
+    ///
+    /// rec20
     Millihenry,
     /// millijoule
+    ///
+    /// rec20
     Millijoule,
     /// millimetre per second
+    ///
+    /// rec20
     MillimetrePerSecond,
     /// millimetre squared per second
+    ///
+    /// rec20
     MillimetreSquaredPerSecond,
     /// millimole
+    ///
+    /// rec20
     Millimole,
     /// mole per kilogram
+    ///
+    /// rec20
     MolePerKilogram,
     /// millinewton
+    ///
+    /// rec20
     Millinewton,
     /// kibibit
+    ///
+    /// rec20
     Kibibit,
     /// millinewton per metre
+    ///
+    /// rec20
     MillinewtonPerMetre,
     /// milliohm metre
+    ///
+    /// rec20
     MilliohmMetre,
     /// millipascal second
+    ///
+    /// rec20
     MillipascalSecond,
     /// milliradian
+    ///
+    /// rec20
     Milliradian,
     /// millisecond
+    ///
+    /// rec20
     Millisecond,
     /// millisiemens
+    ///
+    /// rec20
     Millisiemens,
     /// millisievert
+    ///
+    /// rec20
     Millisievert,
     /// millitesla
+    ///
+    /// rec20
     Millitesla,
     /// microvolt per metre
+    ///
+    /// rec20
     MicrovoltPerMetre,
     /// millivolt per metre
+    ///
+    /// rec20
     MillivoltPerMetre,
     /// milliwatt
+    ///
+    /// rec20
     Milliwatt,
     /// milliwatt per square metre
+    ///
+    /// rec20
     MilliwattPerSquareMetre,
     /// milliweber
+    ///
+    /// rec20
     Milliweber,
     /// mole
+    ///
+    /// rec20
     Mole,
     /// mole per cubic decimetre
+    ///
+    /// rec20
     MolePerCubicDecimetre,
     /// mole per cubic metre
+    ///
+    /// rec20
     MolePerCubicMetre,
     /// kilobit
+    ///
+    /// rec20
     Kilobit,
     /// mole per litre
+    ///
+    /// rec20
     MolePerLitre,
     /// nanoampere
+    ///
+    /// rec20
     Nanoampere,
     /// nanocoulomb
+    ///
+    /// rec20
     Nanocoulomb,
     /// nanofarad
+    ///
+    /// rec20
     Nanofarad,
     /// nanofarad per metre
+    ///
+    /// rec20
     NanofaradPerMetre,
     /// nanohenry
+    ///
+    /// rec20
     Nanohenry,
     /// nanohenry per metre
+    ///
+    /// rec20
     NanohenryPerMetre,
     /// nanometre
+    ///
+    /// rec20
     Nanometre,
     /// nanoohm metre
+    ///
+    /// rec20
     NanoohmMetre,
     /// nanosecond
+    ///
+    /// rec20
     Nanosecond,
     /// nanotesla
+    ///
+    /// rec20
     Nanotesla,
     /// nanowatt
+    ///
+    /// rec20
     Nanowatt,
     /// neper
+    ///
+    /// rec20
     Neper,
     /// neper per second
+    ///
+    /// rec20
     NeperPerSecond,
     /// picometre
+    ///
+    /// rec20
     Picometre,
     /// newton metre second
+    ///
+    /// rec20
     NewtonMetreSecond,
     /// newton metre squared per kilogram squared
+    ///
+    /// rec20
     NewtonMetreSquaredPerKilogramSquared,
     /// newton per square metre
+    ///
+    /// rec20
     NewtonPerSquareMetre,
     /// newton per square millimetre
+    ///
+    /// rec20
     NewtonPerSquareMillimetre,
     /// newton second
+    ///
+    /// rec20
     NewtonSecond,
     /// newton second per metre
+    ///
+    /// rec20
     NewtonSecondPerMetre,
     /// octave
+    ///
+    /// rec20
     Octave,
     /// ohm centimetre
+    ///
+    /// rec20
     OhmCentimetre,
     /// ohm metre
+    ///
+    /// rec20
     OhmMetre,
     /// one
+    ///
+    /// rec20
     One,
     /// parsec
+    ///
+    /// rec20
     Parsec,
     /// pascal per kelvin
+    ///
+    /// rec20
     PascalPerKelvin,
     /// pascal second
+    ///
+    /// rec20
     PascalSecond,
     /// pascal second per cubic metre
+    ///
+    /// rec20
     PascalSecondPerCubicMetre,
     /// pascal second per metre
+    ///
+    /// rec20
     PascalSecondPerMetre,
     /// petajoule
+    ///
+    /// rec20
     Petajoule,
     /// phon
+    ///
+    /// rec20
     Phon,
     /// centipoise
+    ///
+    /// rec20
     Centipoise,
     /// picoampere
+    ///
+    /// rec20
     Picoampere,
     /// picocoulomb
+    ///
+    /// rec20
     Picocoulomb,
     /// picofarad per metre
+    ///
+    /// rec20
     PicofaradPerMetre,
     /// picohenry
+    ///
+    /// rec20
     Picohenry,
     /// kilobit per second
+    ///
+    /// rec20
     KilobitPerSecond,
     /// picowatt
+    ///
+    /// rec20
     Picowatt,
     /// picowatt per square metre
+    ///
+    /// rec20
     PicowattPerSquareMetre,
     /// pound-force
+    ///
+    /// rec20
     PoundForce,
     /// kilovolt ampere hour
+    ///
+    /// rec20
     KilovoltAmpereHour,
     /// millicoulomb per kilogram
+    ///
+    /// rec20
     MillicoulombPerKilogram,
     /// rad
+    ///
+    /// rec20
     Rad,
     /// radian
+    ///
+    /// rec20
     Radian,
     /// radian square metre per mole
+    ///
+    /// rec20
     RadianSquareMetrePerMole,
     /// radian square metre per kilogram
+    ///
+    /// rec20
     RadianSquareMetrePerKilogram,
     /// radian per metre
+    ///
+    /// rec20
     RadianPerMetre,
     /// reciprocal angstrom
+    ///
+    /// rec20
     ReciprocalAngstrom,
     /// reciprocal cubic metre
+    ///
+    /// rec20
     ReciprocalCubicMetre,
     /// reciprocal cubic metre per second
+    ///
+    /// rec20
     ReciprocalCubicMetrePerSecond,
     /// reciprocal electron volt per cubic metre
+    ///
+    /// rec20
     ReciprocalElectronVoltPerCubicMetre,
     /// reciprocal henry
+    ///
+    /// rec20
     ReciprocalHenry,
     /// coil group
+    ///
+    /// rec20
     CoilGroup,
     /// reciprocal joule per cubic metre
+    ///
+    /// rec20
     ReciprocalJoulePerCubicMetre,
     /// reciprocal kelvin or kelvin to the power minus one
+    ///
+    /// rec20
     ReciprocalKelvinOrKelvinToPowerMinusOne,
     /// reciprocal metre
+    ///
+    /// rec20
     ReciprocalMetre,
     /// reciprocal square metre
+    ///
+    /// rec20
     ReciprocalSquareMetre,
     /// reciprocal minute
+    ///
+    /// rec20
     ReciprocalMinute,
     /// reciprocal mole
+    ///
+    /// rec20
     ReciprocalMole,
     /// reciprocal pascal or pascal to the power minus one
+    ///
+    /// rec20
     ReciprocalPascalOrPascalToPowerMinusOne,
     /// reciprocal second
+    ///
+    /// rec20
     ReciprocalSecond,
     /// reciprocal second per metre squared
+    ///
+    /// rec20
     ReciprocalSecondPerMetreSquared,
     /// carrying capacity in metric ton
+    ///
+    /// rec20
     CarryingCapacityInMetricTon,
     /// candela
+    ///
+    /// rec20
     Candela,
     /// degree Celsius
+    ///
+    /// rec20
     DegreeCelsius,
     /// hundred
+    ///
+    /// rec20
     Hundred,
     /// card
+    ///
+    /// rec20
     Card,
     /// centigram
+    ///
+    /// rec20
     Centigram,
     /// coulomb per kilogram
+    ///
+    /// rec20
     CoulombPerKilogram,
     /// hundred leave
+    ///
+    /// rec20
     HundredLeave,
     /// centilitre
+    ///
+    /// rec20
     Centilitre,
     /// square centimetre
+    ///
+    /// rec20
     SquareCentimetre,
     /// cubic centimetre
+    ///
+    /// rec20
     CubicCentimetre,
     /// centimetre
+    ///
+    /// rec20
     Centimetre,
     /// hundred pack
+    ///
+    /// rec20
     HundredPack,
     /// cental (UK)
+    ///
+    /// rec20
     CentalUk,
     /// coulomb
+    ///
+    /// rec20
     Coulomb,
     /// content gram
+    ///
+    /// rec20
     ContentGram,
     /// metric carat
+    ///
+    /// rec20
     MetricCarat,
     /// content ton (metric)
+    ///
+    /// rec20
     ContentTonMetric,
     /// curie
+    ///
+    /// rec20
     Curie,
     /// hundred pound (cwt) / hundred weight (US)
+    ///
+    /// rec20
     HundredPoundCwtHundredWeightUs,
     /// hundred weight (UK)
+    ///
+    /// rec20
     HundredWeightUk,
     /// kilowatt hour per hour
+    ///
+    /// rec20
     KilowattHourPerHour,
     /// lot [unit of weight]
+    ///
+    /// rec20
     LotUnitWeight,
     /// reciprocal second per steradian
+    ///
+    /// rec20
     ReciprocalSecondPerSteradian,
     /// siemens per metre
+    ///
+    /// rec20
     SiemensPerMetre,
     /// mebibit
+    ///
+    /// rec20
     Mebibit,
     /// siemens square metre per mole
+    ///
+    /// rec20
     SiemensSquareMetrePerMole,
     /// sievert
+    ///
+    /// rec20
     Sievert,
     /// sone
+    ///
+    /// rec20
     Sone,
     /// square centimetre per erg
+    ///
+    /// rec20
     SquareCentimetrePerErg,
     /// square centimetre per steradian erg
+    ///
+    /// rec20
     SquareCentimetrePerSteradianErg,
     /// metre kelvin
+    ///
+    /// rec20
     MetreKelvin,
     /// square metre kelvin per watt
+    ///
+    /// rec20
     SquareMetreKelvinPerWatt,
     /// reciprocal second per steradian metre squared
+    ///
+    /// rec20
     ReciprocalSecondPerSteradianMetreSquared,
     /// square metre per joule
+    ///
+    /// rec20
     SquareMetrePerJoule,
     /// square metre per kilogram
+    ///
+    /// rec20
     SquareMetrePerKilogram,
     /// square metre per mole
+    ///
+    /// rec20
     SquareMetrePerMole,
     /// pen gram (protein)
+    ///
+    /// rec20
     PenGramProtein,
     /// square metre per steradian
+    ///
+    /// rec20
     SquareMetrePerSteradian,
     /// square metre per steradian joule
+    ///
+    /// rec20
     SquareMetrePerSteradianJoule,
     /// square metre per volt second
+    ///
+    /// rec20
     SquareMetrePerVoltSecond,
     /// steradian
+    ///
+    /// rec20
     Steradian,
     /// terahertz
+    ///
+    /// rec20
     Terahertz,
     /// terajoule
+    ///
+    /// rec20
     Terajoule,
     /// terawatt
+    ///
+    /// rec20
     Terawatt,
     /// terawatt hour
+    ///
+    /// rec20
     TerawattHour,
     /// tesla
+    ///
+    /// rec20
     Tesla,
     /// tex
+    ///
+    /// rec20
     Tex,
     /// megabit
+    ///
+    /// rec20
     Megabit,
     /// tonne per cubic metre
+    ///
+    /// rec20
     TonnePerCubicMetre,
     /// tropical year
+    ///
+    /// rec20
     TropicalYear,
     /// unified atomic mass unit
+    ///
+    /// rec20
     UnifiedAtomicMassUnit,
     /// var
+    ///
+    /// rec20
     Var,
     /// volt squared per kelvin squared
+    ///
+    /// rec20
     VoltSquaredPerKelvinSquared,
     /// volt - ampere
+    ///
+    /// rec20
     VoltAmpere,
     /// volt per centimetre
+    ///
+    /// rec20
     VoltPerCentimetre,
     /// volt per kelvin
+    ///
+    /// rec20
     VoltPerKelvin,
     /// millivolt per kelvin
+    ///
+    /// rec20
     MillivoltPerKelvin,
     /// kilogram per square centimetre
+    ///
+    /// rec20
     KilogramPerSquareCentimetre,
     /// volt per metre
+    ///
+    /// rec20
     VoltPerMetre,
     /// volt per millimetre
+    ///
+    /// rec20
     VoltPerMillimetre,
     /// watt per kelvin
+    ///
+    /// rec20
     WattPerKelvin,
     /// watt per metre kelvin
+    ///
+    /// rec20
     WattPerMetreKelvin,
     /// watt per square metre
+    ///
+    /// rec20
     WattPerSquareMetre,
     /// watt per square metre kelvin
+    ///
+    /// rec20
     WattPerSquareMetreKelvin,
     /// watt per square metre kelvin to the fourth power
+    ///
+    /// rec20
     WattPerSquareMetreKelvinToFourthPower,
     /// watt per steradian
+    ///
+    /// rec20
     WattPerSteradian,
     /// watt per steradian square metre
+    ///
+    /// rec20
     WattPerSteradianSquareMetre,
     /// weber per metre
+    ///
+    /// rec20
     WeberPerMetre,
     /// roentgen per second
+    ///
+    /// rec20
     RoentgenPerSecond,
     /// weber per millimetre
+    ///
+    /// rec20
     WeberPerMillimetre,
     /// minute [unit of angle]
+    ///
+    /// rec20
     MinuteUnitAngle,
     /// second [unit of angle]
+    ///
+    /// rec20
     SecondUnitAngle,
     /// book
+    ///
+    /// rec20
     Book,
     /// round
+    ///
+    /// rec20
     Round,
     /// number of words
+    ///
+    /// rec20
     NumberWords,
     /// inch to the fourth power
+    ///
+    /// rec20
     InchToFourthPower,
     /// joule square metre
+    ///
+    /// rec20
     JouleSquareMetre,
     /// kilogram per mole
+    ///
+    /// rec20
     KilogramPerMole,
     /// megacoulomb
+    ///
+    /// rec20
     Megacoulomb,
     /// megajoule per second
+    ///
+    /// rec20
     MegajoulePerSecond,
     /// microwatt
+    ///
+    /// rec20
     Microwatt,
     /// microtesla
+    ///
+    /// rec20
     Microtesla,
     /// microvolt
+    ///
+    /// rec20
     Microvolt,
     /// millinewton metre
+    ///
+    /// rec20
     MillinewtonMetre,
     /// microwatt per square metre
+    ///
+    /// rec20
     MicrowattPerSquareMetre,
     /// millicoulomb
+    ///
+    /// rec20
     Millicoulomb,
     /// millimole per kilogram
+    ///
+    /// rec20
     MillimolePerKilogram,
     /// millicoulomb per cubic metre
+    ///
+    /// rec20
     MillicoulombPerCubicMetre,
     /// millicoulomb per square metre
+    ///
+    /// rec20
     MillicoulombPerSquareMetre,
     /// rem
+    ///
+    /// rec20
     Rem,
     /// second per cubic metre
+    ///
+    /// rec20
     SecondPerCubicMetre,
     /// second per cubic metre radian
+    ///
+    /// rec20
     SecondPerCubicMetreRadian,
     /// joule per gram
+    ///
+    /// rec20
     JoulePerGram,
     /// decare
+    ///
+    /// rec20
     Decare,
     /// ten day
+    ///
+    /// rec20
     TenDay,
     /// day
+    ///
+    /// rec20
     Day,
     /// dry pound
+    ///
+    /// rec20
     DryPound,
     /// Decibel-milliwatts
+    ///
+    /// Rec20
     DecibelMilliwatts,
     /// Decibel watt
+    ///
+    /// Rec20
     DecibelWatt,
     /// degree [unit of angle]
+    ///
+    /// rec20
     DegreeUnitAngle,
     /// decade
+    ///
+    /// rec20
     Decade,
     /// decigram
+    ///
+    /// rec20
     Decigram,
     /// decagram
+    ///
+    /// rec20
     Decagram,
     /// decilitre
+    ///
+    /// rec20
     Decilitre,
     /// cubic decametre
+    ///
+    /// rec20
     CubicDecametre,
     /// square decimetre
+    ///
+    /// rec20
     SquareDecimetre,
     /// standard kilolitre
+    ///
+    /// rec20
     StandardKilolitre,
     /// cubic decimetre
+    ///
+    /// rec20
     CubicDecimetre,
     /// decimetre
+    ///
+    /// rec20
     Decimetre,
     /// decinewton metre
+    ///
+    /// rec20
     DecinewtonMetre,
     /// dozen piece
+    ///
+    /// rec20
     DozenPiece,
     /// dozen pair
+    ///
+    /// rec20
     DozenPair,
     /// displacement tonnage
+    ///
+    /// rec20
     DisplacementTonnage,
     /// dram (US)
+    ///
+    /// rec20
     DramUs,
     /// dram (UK)
+    ///
+    /// rec20
     DramUk,
     /// dozen roll
+    ///
+    /// rec20
     DozenRoll,
     /// dry ton
+    ///
+    /// rec20
     DryTon,
     /// decitonne
+    ///
+    /// rec20
     Decitonne,
     /// pennyweight
+    ///
+    /// rec20
     Pennyweight,
     /// dozen
+    ///
+    /// rec20
     Dozen,
     /// dozen pack
+    ///
+    /// rec20
     DozenPack,
     /// newton per square centimetre
+    ///
+    /// rec20
     NewtonPerSquareCentimetre,
     /// megawatt hour per hour
+    ///
+    /// rec20
     MegawattHourPerHour,
     /// megawatt per hertz
+    ///
+    /// rec20
     MegawattPerHertz,
     /// milliampere hour
+    ///
+    /// rec20
     MilliampereHour,
     /// degree day
+    ///
+    /// rec20
     DegreeDay,
     /// mille
+    ///
+    /// rec20
     Mille,
     /// kilocalorie (international table)
+    ///
+    /// rec20
     KilocalorieInternationalTable,
     /// kilocalorie (thermochemical) per hour
+    ///
+    /// rec20
     KilocalorieThermochemicalPerHour,
     /// million Btu(IT) per hour
+    ///
+    /// rec20
     MillionBtuItPerHour,
     /// cubic foot per second
+    ///
+    /// rec20
     CubicFootPerSecond,
     /// tonne per hour
+    ///
+    /// rec20
     TonnePerHour,
     /// ping
+    ///
+    /// rec20
     Ping,
     /// megabit per second
+    ///
+    /// rec20
     MegabitPerSecond,
     /// shares
+    ///
+    /// rec20
     Shares,
     /// TEU
+    ///
+    /// rec20
     Teu,
     /// tyre
+    ///
+    /// rec20
     Tyre,
     /// active unit
+    ///
+    /// rec20
     ActiveUnit,
     /// dose
+    ///
+    /// rec20
     Dose,
     /// air dry ton
+    ///
+    /// rec20
     AirDryTon,
     /// strand
+    ///
+    /// rec20
     Strand,
     /// square metre per litre
+    ///
+    /// rec20
     SquareMetrePerLitre,
     /// litre per hour
+    ///
+    /// rec20
     LitrePerHour,
     /// foot per thousand
+    ///
+    /// rec20
     FootPerThousand,
     /// gigabyte
+    ///
+    /// rec20
     Gigabyte,
     /// terabyte
+    ///
+    /// rec20
     Terabyte,
     /// petabyte
+    ///
+    /// rec20
     Petabyte,
     /// pixel
+    ///
+    /// rec20
     Pixel,
     /// megapixel
+    ///
+    /// rec20
     Megapixel,
     /// dots per inch
+    ///
+    /// rec20
     DotsPerInch,
     /// gross kilogram
+    ///
+    /// rec20
     GrossKilogram,
     /// part per hundred thousand
+    ///
+    /// rec20
     PartPerHundredThousand,
     /// kilogram-force per square millimetre
+    ///
+    /// rec20
     KilogramForcePerSquareMillimetre,
     /// kilogram-force per square centimetre
+    ///
+    /// rec20
     KilogramForcePerSquareCentimetre,
     /// joule per square centimetre
+    ///
+    /// rec20
     JoulePerSquareCentimetre,
     /// kilogram-force metre per square centimetre
+    ///
+    /// rec20
     KilogramForceMetrePerSquareCentimetre,
     /// milliohm
+    ///
+    /// rec20
     Milliohm,
     /// kilowatt hour per cubic metre
+    ///
+    /// rec20
     KilowattHourPerCubicMetre,
     /// kilowatt hour per kelvin
+    ///
+    /// rec20
     KilowattHourPerKelvin,
     /// service unit
+    ///
+    /// rec20
     ServiceUnit,
     /// working day
+    ///
+    /// rec20
     WorkingDay,
     /// accounting unit
+    ///
+    /// rec20
     AccountingUnit,
     /// job
+    ///
+    /// rec20
     Job,
     /// run foot
+    ///
+    /// rec20
     RunFoot,
     /// test
+    ///
+    /// rec20
     Test,
     /// trip
+    ///
+    /// rec20
     Trip,
     /// use
+    ///
+    /// rec20
     Use,
     /// well
+    ///
+    /// rec20
     Well,
     /// zone
+    ///
+    /// rec20
     Zone,
     /// exabit per second
+    ///
+    /// rec20
     ExabitPerSecond,
     /// exbibyte
+    ///
+    /// rec20
     Exbibyte,
     /// pebibyte
+    ///
+    /// rec20
     Pebibyte,
     /// tebibyte
+    ///
+    /// rec20
     Tebibyte,
     /// gibibyte
+    ///
+    /// rec20
     Gibibyte,
     /// mebibyte
+    ///
+    /// rec20
     Mebibyte,
     /// kibibyte
+    ///
+    /// rec20
     Kibibyte,
     /// exbibit per metre
+    ///
+    /// rec20
     ExbibitPerMetre,
     /// exbibit per square metre
+    ///
+    /// rec20
     ExbibitPerSquareMetre,
     /// exbibit per cubic metre
+    ///
+    /// rec20
     ExbibitPerCubicMetre,
     /// gigabyte per second
+    ///
+    /// rec20
     GigabytePerSecond,
     /// gibibit per metre
+    ///
+    /// rec20
     GibibitPerMetre,
     /// gibibit per square metre
+    ///
+    /// rec20
     GibibitPerSquareMetre,
     /// gibibit per cubic metre
+    ///
+    /// rec20
     GibibitPerCubicMetre,
     /// kibibit per metre
+    ///
+    /// rec20
     KibibitPerMetre,
     /// kibibit per square metre
+    ///
+    /// rec20
     KibibitPerSquareMetre,
     /// kibibit per cubic metre
+    ///
+    /// rec20
     KibibitPerCubicMetre,
     /// mebibit per metre
+    ///
+    /// rec20
     MebibitPerMetre,
     /// mebibit per square metre
+    ///
+    /// rec20
     MebibitPerSquareMetre,
     /// mebibit per cubic metre
+    ///
+    /// rec20
     MebibitPerCubicMetre,
     /// petabit
+    ///
+    /// rec20
     Petabit,
     /// petabit per second
+    ///
+    /// rec20
     PetabitPerSecond,
     /// pebibit per metre
+    ///
+    /// rec20
     PebibitPerMetre,
     /// pebibit per square metre
+    ///
+    /// rec20
     PebibitPerSquareMetre,
     /// pebibit per cubic metre
+    ///
+    /// rec20
     PebibitPerCubicMetre,
     /// terabit
+    ///
+    /// rec20
     Terabit,
     /// terabit per second
+    ///
+    /// rec20
     TerabitPerSecond,
     /// tebibit per metre
+    ///
+    /// rec20
     TebibitPerMetre,
     /// tebibit per cubic metre
+    ///
+    /// rec20
     TebibitPerCubicMetre,
     /// tebibit per square metre
+    ///
+    /// rec20
     TebibitPerSquareMetre,
     /// bit per metre
+    ///
+    /// rec20
     BitPerMetre,
     /// bit per square metre
+    ///
+    /// rec20
     BitPerSquareMetre,
     /// reciprocal centimetre
+    ///
+    /// rec20
     ReciprocalCentimetre,
     /// reciprocal day
+    ///
+    /// rec20
     ReciprocalDay,
     /// cubic decimetre per hour
+    ///
+    /// rec20
     CubicDecimetrePerHour,
     /// kilogram per hour
+    ///
+    /// rec20
     KilogramPerHour,
     /// kilomole per second
+    ///
+    /// rec20
     KilomolePerSecond,
     /// mole per second
+    ///
+    /// rec20
     MolePerSecond,
     /// degree per second
+    ///
+    /// rec20
     DegreePerSecond,
     /// millimetre per degree Celcius metre
+    ///
+    /// rec20
     MillimetrePerDegreeCelciusMetre,
     /// degree Celsius per kelvin
+    ///
+    /// rec20
     DegreeCelsiusPerKelvin,
     /// hectopascal per bar
+    ///
+    /// rec20
     HectopascalPerBar,
     /// each
+    ///
+    /// rec20
     Each,
     /// electronic mail box
+    ///
+    /// rec20
     ElectronicMailBox,
     /// equivalent gallon
+    ///
+    /// rec20
     EquivalentGallon,
     /// bit per cubic metre
+    ///
+    /// rec20
     BitPerCubicMetre,
     /// kelvin per kelvin
+    ///
+    /// rec20
     KelvinPerKelvin,
     /// kilopascal per bar
+    ///
+    /// rec20
     KilopascalPerBar,
     /// millibar per bar
+    ///
+    /// rec20
     MillibarPerBar,
     /// megapascal per bar
+    ///
+    /// rec20
     MegapascalPerBar,
     /// poise per bar
+    ///
+    /// rec20
     PoisePerBar,
     /// pascal per bar
+    ///
+    /// rec20
     PascalPerBar,
     /// milliampere per inch
+    ///
+    /// rec20
     MilliamperePerInch,
     /// kelvin per hour
+    ///
+    /// rec20
     KelvinPerHour,
     /// kelvin per minute
+    ///
+    /// rec20
     KelvinPerMinute,
     /// kelvin per second
+    ///
+    /// rec20
     KelvinPerSecond,
     /// slug
+    ///
+    /// rec20
     Slug,
     /// gram per kelvin
+    ///
+    /// rec20
     GramPerKelvin,
     /// kilogram per kelvin
+    ///
+    /// rec20
     KilogramPerKelvin,
     /// milligram per kelvin
+    ///
+    /// rec20
     MilligramPerKelvin,
     /// pound-force per foot
+    ///
+    /// rec20
     PoundForcePerFoot,
     /// kilogram square centimetre
+    ///
+    /// rec20
     KilogramSquareCentimetre,
     /// kilogram square millimetre
+    ///
+    /// rec20
     KilogramSquareMillimetre,
     /// pound inch squared
+    ///
+    /// rec20
     PoundInchSquared,
     /// pound-force inch
+    ///
+    /// rec20
     PoundForceInch,
     /// pound-force foot per ampere
+    ///
+    /// rec20
     PoundForceFootPerAmpere,
     /// gram per cubic decimetre
+    ///
+    /// rec20
     GramPerCubicDecimetre,
     /// kilogram per kilomol
+    ///
+    /// rec20
     KilogramPerKilomol,
     /// gram per hertz
+    ///
+    /// rec20
     GramPerHertz,
     /// gram per day
+    ///
+    /// rec20
     GramPerDay,
     /// gram per hour
+    ///
+    /// rec20
     GramPerHour,
     /// gram per minute
+    ///
+    /// rec20
     GramPerMinute,
     /// gram per second
+    ///
+    /// rec20
     GramPerSecond,
     /// kilogram per day
+    ///
+    /// rec20
     KilogramPerDay,
     /// kilogram per minute
+    ///
+    /// rec20
     KilogramPerMinute,
     /// milligram per day
+    ///
+    /// rec20
     MilligramPerDay,
     /// milligram per minute
+    ///
+    /// rec20
     MilligramPerMinute,
     /// milligram per second
+    ///
+    /// rec20
     MilligramPerSecond,
     /// gram per day kelvin
+    ///
+    /// rec20
     GramPerDayKelvin,
     /// gram per hour kelvin
+    ///
+    /// rec20
     GramPerHourKelvin,
     /// gram per minute kelvin
+    ///
+    /// rec20
     GramPerMinuteKelvin,
     /// gram per second kelvin
+    ///
+    /// rec20
     GramPerSecondKelvin,
     /// kilogram per day kelvin
+    ///
+    /// rec20
     KilogramPerDayKelvin,
     /// kilogram per hour kelvin
+    ///
+    /// rec20
     KilogramPerHourKelvin,
     /// kilogram per minute kelvin
+    ///
+    /// rec20
     KilogramPerMinuteKelvin,
     /// kilogram per second kelvin
+    ///
+    /// rec20
     KilogramPerSecondKelvin,
     /// milligram per day kelvin
+    ///
+    /// rec20
     MilligramPerDayKelvin,
     /// milligram per hour kelvin
+    ///
+    /// rec20
     MilligramPerHourKelvin,
     /// milligram per minute kelvin
+    ///
+    /// rec20
     MilligramPerMinuteKelvin,
     /// milligram per second kelvin
+    ///
+    /// rec20
     MilligramPerSecondKelvin,
     /// newton per millimetre
+    ///
+    /// rec20
     NewtonPerMillimetre,
     /// pound-force per inch
+    ///
+    /// rec20
     PoundForcePerInch,
     /// rod [unit of distance]
+    ///
+    /// rec20
     RodUnitDistance,
     /// micrometre per kelvin
+    ///
+    /// rec20
     MicrometrePerKelvin,
     /// centimetre per kelvin
+    ///
+    /// rec20
     CentimetrePerKelvin,
     /// metre per kelvin
+    ///
+    /// rec20
     MetrePerKelvin,
     /// millimetre per kelvin
+    ///
+    /// rec20
     MillimetrePerKelvin,
     /// milliohm per metre
+    ///
+    /// rec20
     MilliohmPerMetre,
     /// ohm per mile (statute mile)
+    ///
+    /// rec20
     OhmPerMileStatuteMile,
     /// ohm per kilometre
+    ///
+    /// rec20
     OhmPerKilometre,
     /// milliampere per pound-force per square inch
+    ///
+    /// rec20
     MilliamperePerPoundForcePerSquareInch,
     /// reciprocal bar
+    ///
+    /// rec20
     ReciprocalBar,
     /// milliampere per bar
+    ///
+    /// rec20
     MilliamperePerBar,
     /// degree Celsius per bar
+    ///
+    /// rec20
     DegreeCelsiusPerBar,
     /// kelvin per bar
+    ///
+    /// rec20
     KelvinPerBar,
     /// gram per day bar
+    ///
+    /// rec20
     GramPerDayBar,
     /// gram per hour bar
+    ///
+    /// rec20
     GramPerHourBar,
     /// gram per minute bar
+    ///
+    /// rec20
     GramPerMinuteBar,
     /// gram per second bar
+    ///
+    /// rec20
     GramPerSecondBar,
     /// kilogram per day bar
+    ///
+    /// rec20
     KilogramPerDayBar,
     /// kilogram per hour bar
+    ///
+    /// rec20
     KilogramPerHourBar,
     /// kilogram per minute bar
+    ///
+    /// rec20
     KilogramPerMinuteBar,
     /// kilogram per second bar
+    ///
+    /// rec20
     KilogramPerSecondBar,
     /// milligram per day bar
+    ///
+    /// rec20
     MilligramPerDayBar,
     /// milligram per hour bar
+    ///
+    /// rec20
     MilligramPerHourBar,
     /// milligram per minute bar
+    ///
+    /// rec20
     MilligramPerMinuteBar,
     /// milligram per second bar
+    ///
+    /// rec20
     MilligramPerSecondBar,
     /// gram per bar
+    ///
+    /// rec20
     GramPerBar,
     /// milligram per bar
+    ///
+    /// rec20
     MilligramPerBar,
     /// milliampere per millimetre
+    ///
+    /// rec20
     MilliamperePerMillimetre,
     /// pascal second per kelvin
+    ///
+    /// rec20
     PascalSecondPerKelvin,
     /// inch of water
+    ///
+    /// rec20
     InchWater,
     /// inch of mercury
+    ///
+    /// rec20
     InchMercury,
     /// water horse power
+    ///
+    /// rec20
     WaterHorsePower,
     /// bar per kelvin
+    ///
+    /// rec20
     BarPerKelvin,
     /// hectopascal per kelvin
+    ///
+    /// rec20
     HectopascalPerKelvin,
     /// kilopascal per kelvin
+    ///
+    /// rec20
     KilopascalPerKelvin,
     /// millibar per kelvin
+    ///
+    /// rec20
     MillibarPerKelvin,
     /// megapascal per kelvin
+    ///
+    /// rec20
     MegapascalPerKelvin,
     /// poise per kelvin
+    ///
+    /// rec20
     PoisePerKelvin,
     /// volt per litre minute
+    ///
+    /// rec20
     VoltPerLitreMinute,
     /// newton centimetre
+    ///
+    /// rec20
     NewtonCentimetre,
     /// newton metre per degree
+    ///
+    /// rec20
     NewtonMetrePerDegree,
     /// newton metre per ampere
+    ///
+    /// rec20
     NewtonMetrePerAmpere,
     /// bar litre per second
+    ///
+    /// rec20
     BarLitrePerSecond,
     /// bar cubic metre per second
+    ///
+    /// rec20
     BarCubicMetrePerSecond,
     /// hectopascal litre per second
+    ///
+    /// rec20
     HectopascalLitrePerSecond,
     /// hectopascal cubic metre per second
+    ///
+    /// rec20
     HectopascalCubicMetrePerSecond,
     /// millibar litre per second
+    ///
+    /// rec20
     MillibarLitrePerSecond,
     /// millibar cubic metre per second
+    ///
+    /// rec20
     MillibarCubicMetrePerSecond,
     /// megapascal litre per second
+    ///
+    /// rec20
     MegapascalLitrePerSecond,
     /// megapascal cubic metre per second
+    ///
+    /// rec20
     MegapascalCubicMetrePerSecond,
     /// pascal litre per second
+    ///
+    /// rec20
     PascalLitrePerSecond,
     /// degree Fahrenheit
+    ///
+    /// rec20
     DegreeFahrenheit,
     /// farad
+    ///
+    /// rec20
     Farad,
     /// fibre metre
+    ///
+    /// rec20
     FibreMetre,
     /// thousand cubic foot
+    ///
+    /// rec20
     ThousandCubicFoot,
     /// hundred cubic metre
+    ///
+    /// rec20
     HundredCubicMetre,
     /// micromole
+    ///
+    /// rec20
     Micromole,
     /// failures in time
+    ///
+    /// rec20
     FailuresInTime,
     /// flake ton
+    ///
+    /// rec20
     FlakeTon,
     /// Formazin nephelometric unit
+    ///
+    /// Rec20
     FormazinNephelometricUnit,
     /// foot
+    ///
+    /// rec20
     Foot,
     /// pound per square foot
+    ///
+    /// rec20
     PoundPerSquareFoot,
     /// foot per minute
+    ///
+    /// rec20
     FootPerMinute,
     /// foot per second
+    ///
+    /// rec20
     FootPerSecond,
     /// square foot
+    ///
+    /// rec20
     SquareFoot,
     /// cubic foot
+    ///
+    /// rec20
     CubicFoot,
     /// pascal cubic metre per second
+    ///
+    /// rec20
     PascalCubicMetrePerSecond,
     /// centimetre per bar
+    ///
+    /// rec20
     CentimetrePerBar,
     /// metre per bar
+    ///
+    /// rec20
     MetrePerBar,
     /// millimetre per bar
+    ///
+    /// rec20
     MillimetrePerBar,
     /// square inch per second
+    ///
+    /// rec20
     SquareInchPerSecond,
     /// square metre per second kelvin
+    ///
+    /// rec20
     SquareMetrePerSecondKelvin,
     /// stokes per kelvin
+    ///
+    /// rec20
     StokesPerKelvin,
     /// gram per cubic centimetre bar
+    ///
+    /// rec20
     GramPerCubicCentimetreBar,
     /// gram per cubic decimetre bar
+    ///
+    /// rec20
     GramPerCubicDecimetreBar,
     /// gram per litre bar
+    ///
+    /// rec20
     GramPerLitreBar,
     /// gram per cubic metre bar
+    ///
+    /// rec20
     GramPerCubicMetreBar,
     /// gram per millilitre bar
+    ///
+    /// rec20
     GramPerMillilitreBar,
     /// kilogram per cubic centimetre bar
+    ///
+    /// rec20
     KilogramPerCubicCentimetreBar,
     /// kilogram per litre bar
+    ///
+    /// rec20
     KilogramPerLitreBar,
     /// kilogram per cubic metre bar
+    ///
+    /// rec20
     KilogramPerCubicMetreBar,
     /// newton metre per kilogram
+    ///
+    /// rec20
     NewtonMetrePerKilogram,
     /// US gallon per minute
+    ///
+    /// rec20
     UsGallonPerMinute,
     /// pound-force foot per pound
+    ///
+    /// rec20
     PoundForceFootPerPound,
     /// cup [unit of volume]
+    ///
+    /// rec20
     CupUnitVolume,
     /// peck
+    ///
+    /// rec20
     Peck,
     /// tablespoon (US)
+    ///
+    /// rec20
     TablespoonUs,
     /// teaspoon (US)
+    ///
+    /// rec20
     TeaspoonUs,
     /// stere
+    ///
+    /// rec20
     Stere,
     /// cubic centimetre per kelvin
+    ///
+    /// rec20
     CubicCentimetrePerKelvin,
     /// litre per kelvin
+    ///
+    /// rec20
     LitrePerKelvin,
     /// cubic metre per kelvin
+    ///
+    /// rec20
     CubicMetrePerKelvin,
     /// Imperial gallon per minute
+    ///
+    /// rec20
     ImperialGallonPerMinute,
     /// millilitre per kelvin
+    ///
+    /// rec20
     MillilitrePerKelvin,
     /// kilogram per cubic centimetre
+    ///
+    /// rec20
     KilogramPerCubicCentimetre,
     /// ounce (avoirdupois) per cubic yard
+    ///
+    /// rec20
     OunceAvoirdupoisPerCubicYard,
     /// gram per cubic centimetre kelvin
+    ///
+    /// rec20
     GramPerCubicCentimetreKelvin,
     /// gram per cubic decimetre kelvin
+    ///
+    /// rec20
     GramPerCubicDecimetreKelvin,
     /// gram per litre kelvin
+    ///
+    /// rec20
     GramPerLitreKelvin,
     /// gram per cubic metre kelvin
+    ///
+    /// rec20
     GramPerCubicMetreKelvin,
     /// gram per millilitre kelvin
+    ///
+    /// rec20
     GramPerMillilitreKelvin,
     /// kilogram per cubic centimetre kelvin
+    ///
+    /// rec20
     KilogramPerCubicCentimetreKelvin,
     /// kilogram per litre kelvin
+    ///
+    /// rec20
     KilogramPerLitreKelvin,
     /// kilogram per cubic metre kelvin
+    ///
+    /// rec20
     KilogramPerCubicMetreKelvin,
     /// square metre per second bar
+    ///
+    /// rec20
     SquareMetrePerSecondBar,
     /// microsiemens per centimetre
+    ///
+    /// rec20
     MicrosiemensPerCentimetre,
     /// microsiemens per metre
+    ///
+    /// rec20
     MicrosiemensPerMetre,
     /// nanosiemens per centimetre
+    ///
+    /// rec20
     NanosiemensPerCentimetre,
     /// nanosiemens per metre
+    ///
+    /// rec20
     NanosiemensPerMetre,
     /// stokes per bar
+    ///
+    /// rec20
     StokesPerBar,
     /// cubic centimetre per day
+    ///
+    /// rec20
     CubicCentimetrePerDay,
     /// cubic centimetre per hour
+    ///
+    /// rec20
     CubicCentimetrePerHour,
     /// cubic centimetre per minute
+    ///
+    /// rec20
     CubicCentimetrePerMinute,
     /// gallon (US) per hour
+    ///
+    /// rec20
     GallonUsPerHour,
     /// litre per second
+    ///
+    /// rec20
     LitrePerSecond,
     /// cubic metre per day
+    ///
+    /// rec20
     CubicMetrePerDay,
     /// cubic metre per minute
+    ///
+    /// rec20
     CubicMetrePerMinute,
     /// millilitre per day
+    ///
+    /// rec20
     MillilitrePerDay,
     /// millilitre per hour
+    ///
+    /// rec20
     MillilitrePerHour,
     /// cubic inch per hour
+    ///
+    /// rec20
     CubicInchPerHour,
     /// cubic inch per minute
+    ///
+    /// rec20
     CubicInchPerMinute,
     /// cubic inch per second
+    ///
+    /// rec20
     CubicInchPerSecond,
     /// milliampere per litre minute
+    ///
+    /// rec20
     MilliamperePerLitreMinute,
     /// volt per bar
+    ///
+    /// rec20
     VoltPerBar,
     /// cubic centimetre per day kelvin
+    ///
+    /// rec20
     CubicCentimetrePerDayKelvin,
     /// cubic centimetre per hour kelvin
+    ///
+    /// rec20
     CubicCentimetrePerHourKelvin,
     /// cubic centimetre per minute kelvin
+    ///
+    /// rec20
     CubicCentimetrePerMinuteKelvin,
     /// cubic centimetre per second kelvin
+    ///
+    /// rec20
     CubicCentimetrePerSecondKelvin,
     /// litre per day kelvin
+    ///
+    /// rec20
     LitrePerDayKelvin,
     /// litre per hour kelvin
+    ///
+    /// rec20
     LitrePerHourKelvin,
     /// litre per minute kelvin
+    ///
+    /// rec20
     LitrePerMinuteKelvin,
     /// litre per second kelvin
+    ///
+    /// rec20
     LitrePerSecondKelvin,
     /// cubic metre per day kelvin
+    ///
+    /// rec20
     CubicMetrePerDayKelvin,
     /// cubic metre per hour kelvin
+    ///
+    /// rec20
     CubicMetrePerHourKelvin,
     /// cubic metre per minute kelvin
+    ///
+    /// rec20
     CubicMetrePerMinuteKelvin,
     /// cubic metre per second kelvin
+    ///
+    /// rec20
     CubicMetrePerSecondKelvin,
     /// millilitre per day kelvin
+    ///
+    /// rec20
     MillilitrePerDayKelvin,
     /// millilitre per hour kelvin
+    ///
+    /// rec20
     MillilitrePerHourKelvin,
     /// millilitre per minute kelvin
+    ///
+    /// rec20
     MillilitrePerMinuteKelvin,
     /// millilitre per second kelvin
+    ///
+    /// rec20
     MillilitrePerSecondKelvin,
     /// millimetre to the fourth power
+    ///
+    /// rec20
     MillimetreToFourthPower,
     /// cubic centimetre per day bar
+    ///
+    /// rec20
     CubicCentimetrePerDayBar,
     /// cubic centimetre per hour bar
+    ///
+    /// rec20
     CubicCentimetrePerHourBar,
     /// cubic centimetre per minute bar
+    ///
+    /// rec20
     CubicCentimetrePerMinuteBar,
     /// cubic centimetre per second bar
+    ///
+    /// rec20
     CubicCentimetrePerSecondBar,
     /// litre per day bar
+    ///
+    /// rec20
     LitrePerDayBar,
     /// litre per hour bar
+    ///
+    /// rec20
     LitrePerHourBar,
     /// litre per minute bar
+    ///
+    /// rec20
     LitrePerMinuteBar,
     /// litre per second bar
+    ///
+    /// rec20
     LitrePerSecondBar,
     /// cubic metre per day bar
+    ///
+    /// rec20
     CubicMetrePerDayBar,
     /// cubic metre per hour bar
+    ///
+    /// rec20
     CubicMetrePerHourBar,
     /// cubic metre per minute bar
+    ///
+    /// rec20
     CubicMetrePerMinuteBar,
     /// cubic metre per second bar
+    ///
+    /// rec20
     CubicMetrePerSecondBar,
     /// millilitre per day bar
+    ///
+    /// rec20
     MillilitrePerDayBar,
     /// millilitre per hour bar
+    ///
+    /// rec20
     MillilitrePerHourBar,
     /// millilitre per minute bar
+    ///
+    /// rec20
     MillilitrePerMinuteBar,
     /// millilitre per second bar
+    ///
+    /// rec20
     MillilitrePerSecondBar,
     /// cubic centimetre per bar
+    ///
+    /// rec20
     CubicCentimetrePerBar,
     /// litre per bar
+    ///
+    /// rec20
     LitrePerBar,
     /// cubic metre per bar
+    ///
+    /// rec20
     CubicMetrePerBar,
     /// millilitre per bar
+    ///
+    /// rec20
     MillilitrePerBar,
     /// microhenry per kiloohm
+    ///
+    /// rec20
     MicrohenryPerKiloohm,
     /// microhenry per ohm
+    ///
+    /// rec20
     MicrohenryPerOhm,
     /// gallon (US) per day
+    ///
+    /// rec20
     GallonUsPerDay,
     /// gigabecquerel
+    ///
+    /// rec20
     Gigabecquerel,
     /// gram, dry weight
+    ///
+    /// rec20
     GramDryWeight,
     /// pound per gallon (US)
+    ///
+    /// rec20
     PoundPerGallonUs,
     /// gram per metre (gram per 100 centimetres)
+    ///
+    /// rec20
     GramPerMetreGramPer100Centimetres,
     /// gram of fissile isotope
+    ///
+    /// rec20
     GramFissileIsotope,
     /// great gross
+    ///
+    /// rec20
     GreatGross,
     /// gill (US)
+    ///
+    /// rec20
     GillUs,
     /// gram, including container
+    ///
+    /// rec20
     GramIncludingContainer,
     /// gill (UK)
+    ///
+    /// rec20
     GillUk,
     /// gram, including inner packaging
+    ///
+    /// rec20
     GramIncludingInnerPackaging,
     /// gram per millilitre
+    ///
+    /// rec20
     GramPerMillilitre,
     /// gram per litre
+    ///
+    /// rec20
     GramPerLitre,
     /// dry gallon (US)
+    ///
+    /// rec20
     DryGallonUs,
     /// gallon (UK)
+    ///
+    /// rec20
     GallonUk,
     /// gallon (US)
+    ///
+    /// rec20
     GallonUs,
     /// gram per square metre
+    ///
+    /// rec20
     GramPerSquareMetre,
     /// milligram per square metre
+    ///
+    /// rec20
     MilligramPerSquareMetre,
     /// milligram per cubic metre
+    ///
+    /// rec20
     MilligramPerCubicMetre,
     /// microgram per cubic metre
+    ///
+    /// rec20
     MicrogramPerCubicMetre,
     /// gram
+    ///
+    /// rec20
     Gram,
     /// grain
+    ///
+    /// rec20
     Grain,
     /// gross
+    ///
+    /// rec20
     Gross,
     /// gigajoule
+    ///
+    /// rec20
     Gigajoule,
     /// gigawatt hour
+    ///
+    /// rec20
     GigawattHour,
     /// henry per kiloohm
+    ///
+    /// rec20
     HenryPerKiloohm,
     /// henry per ohm
+    ///
+    /// rec20
     HenryPerOhm,
     /// millihenry per kiloohm
+    ///
+    /// rec20
     MillihenryPerKiloohm,
     /// millihenry per ohm
+    ///
+    /// rec20
     MillihenryPerOhm,
     /// pascal second per bar
+    ///
+    /// rec20
     PascalSecondPerBar,
     /// microbecquerel
+    ///
+    /// rec20
     Microbecquerel,
     /// reciprocal year
+    ///
+    /// rec20
     ReciprocalYear,
     /// reciprocal hour
+    ///
+    /// rec20
     ReciprocalHour,
     /// reciprocal month
+    ///
+    /// rec20
     ReciprocalMonth,
     /// degree Celsius per hour
+    ///
+    /// rec20
     DegreeCelsiusPerHour,
     /// degree Celsius per minute
+    ///
+    /// rec20
     DegreeCelsiusPerMinute,
     /// degree Celsius per second
+    ///
+    /// rec20
     DegreeCelsiusPerSecond,
     /// square centimetre per gram
+    ///
+    /// rec20
     SquareCentimetrePerGram,
     /// square decametre
+    ///
+    /// rec20
     SquareDecametre,
     /// square hectometre
+    ///
+    /// rec20
     SquareHectometre,
     /// cubic hectometre
+    ///
+    /// rec20
     CubicHectometre,
     /// cubic kilometre
+    ///
+    /// rec20
     CubicKilometre,
     /// blank
+    ///
+    /// rec20
     Blank,
     /// volt square inch per pound-force
+    ///
+    /// rec20
     VoltSquareInchPerPoundForce,
     /// volt per inch
+    ///
+    /// rec20
     VoltPerInch,
     /// volt per microsecond
+    ///
+    /// rec20
     VoltPerMicrosecond,
     /// percent per kelvin
+    ///
+    /// rec20
     PercentPerKelvin,
     /// ohm per metre
+    ///
+    /// rec20
     OhmPerMetre,
     /// degree per metre
+    ///
+    /// rec20
     DegreePerMetre,
     /// microfarad per kilometre
+    ///
+    /// rec20
     MicrofaradPerKilometre,
     /// microgram per litre
+    ///
+    /// rec20
     MicrogramPerLitre,
     /// square micrometre (square micron)
+    ///
+    /// rec20
     SquareMicrometreSquareMicron,
     /// ampere per kilogram
+    ///
+    /// rec20
     AmperePerKilogram,
     /// ampere squared second
+    ///
+    /// rec20
     AmpereSquaredSecond,
     /// farad per kilometre
+    ///
+    /// rec20
     FaradPerKilometre,
     /// hertz metre
+    ///
+    /// rec20
     HertzMetre,
     /// kelvin metre per watt
+    ///
+    /// rec20
     KelvinMetrePerWatt,
     /// megaohm per kilometre
+    ///
+    /// rec20
     MegaohmPerKilometre,
     /// megaohm per metre
+    ///
+    /// rec20
     MegaohmPerMetre,
     /// megaampere
+    ///
+    /// rec20
     Megaampere,
     /// megahertz kilometre
+    ///
+    /// rec20
     MegahertzKilometre,
     /// newton per ampere
+    ///
+    /// rec20
     NewtonPerAmpere,
     /// newton metre watt to the power minus 0,5
+    ///
+    /// rec20
     NewtonMetreWattToPowerMinus05,
     /// pascal per metre
+    ///
+    /// rec20
     PascalPerMetre,
     /// siemens per centimetre
+    ///
+    /// rec20
     SiemensPerCentimetre,
     /// teraohm
+    ///
+    /// rec20
     Teraohm,
     /// volt second per metre
+    ///
+    /// rec20
     VoltSecondPerMetre,
     /// volt per second
+    ///
+    /// rec20
     VoltPerSecond,
     /// watt per cubic metre
+    ///
+    /// rec20
     WattPerCubicMetre,
     /// attofarad
+    ///
+    /// rec20
     Attofarad,
     /// centimetre per hour
+    ///
+    /// rec20
     CentimetrePerHour,
     /// reciprocal cubic centimetre
+    ///
+    /// rec20
     ReciprocalCubicCentimetre,
     /// decibel per kilometre
+    ///
+    /// rec20
     DecibelPerKilometre,
     /// decibel per metre
+    ///
+    /// rec20
     DecibelPerMetre,
     /// kilogram per bar
+    ///
+    /// rec20
     KilogramPerBar,
     /// kilogram per cubic decimetre kelvin
+    ///
+    /// rec20
     KilogramPerCubicDecimetreKelvin,
     /// kilogram per cubic decimetre bar
+    ///
+    /// rec20
     KilogramPerCubicDecimetreBar,
     /// kilogram per square metre second
+    ///
+    /// rec20
     KilogramPerSquareMetreSecond,
     /// inch per two pi radiant
+    ///
+    /// rec20
     InchPerTwoPiRadiant,
     /// metre per volt second
+    ///
+    /// rec20
     MetrePerVoltSecond,
     /// square metre per newton
+    ///
+    /// rec20
     SquareMetrePerNewton,
     /// cubic metre per cubic metre
+    ///
+    /// rec20
     CubicMetrePerCubicMetre,
     /// millisiemens per centimetre
+    ///
+    /// rec20
     MillisiemensPerCentimetre,
     /// millivolt per minute
+    ///
+    /// rec20
     MillivoltPerMinute,
     /// milligram per square centimetre
+    ///
+    /// rec20
     MilligramPerSquareCentimetre,
     /// milligram per gram
+    ///
+    /// rec20
     MilligramPerGram,
     /// millilitre per cubic metre
+    ///
+    /// rec20
     MillilitrePerCubicMetre,
     /// millimetre per year
+    ///
+    /// rec20
     MillimetrePerYear,
     /// millimetre per hour
+    ///
+    /// rec20
     MillimetrePerHour,
     /// millimole per gram
+    ///
+    /// rec20
     MillimolePerGram,
     /// picopascal per kilometre
+    ///
+    /// rec20
     PicopascalPerKilometre,
     /// picosecond
+    ///
+    /// rec20
     Picosecond,
     /// percent per month
+    ///
+    /// rec20
     PercentPerMonth,
     /// percent per hectobar
+    ///
+    /// rec20
     PercentPerHectobar,
     /// percent per decakelvin
+    ///
+    /// rec20
     PercentPerDecakelvin,
     /// watt per metre
+    ///
+    /// rec20
     WattPerMetre,
     /// decapascal
+    ///
+    /// rec20
     Decapascal,
     /// gram per millimetre
+    ///
+    /// rec20
     GramPerMillimetre,
     /// module width
+    ///
+    /// rec20
     ModuleWidth,
     /// French gauge
+    ///
+    /// rec20
     FrenchGauge,
     /// rack unit
+    ///
+    /// rec20
     RackUnit,
     /// millimetre per minute
+    ///
+    /// rec20
     MillimetrePerMinute,
     /// big point
+    ///
+    /// rec20
     BigPoint,
     /// litre per kilogram
+    ///
+    /// rec20
     LitrePerKilogram,
     /// gram millimetre
+    ///
+    /// rec20
     GramMillimetre,
     /// reciprocal week
+    ///
+    /// rec20
     ReciprocalWeek,
     /// piece
+    ///
+    /// rec20
     Piece,
     /// megaohm kilometre
+    ///
+    /// rec20
     MegaohmKilometre,
     /// percent per ohm
+    ///
+    /// rec20
     PercentPerOhm,
     /// percent per degree
+    ///
+    /// rec20
     PercentPerDegree,
     /// percent per ten thousand
+    ///
+    /// rec20
     PercentPerTenThousand,
     /// percent per one hundred thousand
+    ///
+    /// rec20
     PercentPerOneHundredThousand,
     /// percent per hundred
+    ///
+    /// rec20
     PercentPerHundred,
     /// percent per thousand
+    ///
+    /// rec20
     PercentPerThousand,
     /// percent per volt
+    ///
+    /// rec20
     PercentPerVolt,
     /// percent per bar
+    ///
+    /// rec20
     PercentPerBar,
     /// percent per inch
+    ///
+    /// rec20
     PercentPerInch,
     /// percent per metre
+    ///
+    /// rec20
     PercentPerMetre,
     /// hank
+    ///
+    /// rec20
     Hank,
     /// Piece Day
+    ///
+    /// Rec20
     PieceDay,
     /// hectobar
+    ///
+    /// rec20
     Hectobar,
     /// hundred boxes
+    ///
+    /// rec20
     HundredBoxes,
     /// hundred count
+    ///
+    /// rec20
     HundredCount,
     /// hundred kilogram, dry weight
+    ///
+    /// rec20
     HundredKilogramDryWeight,
     /// head
+    ///
+    /// rec20
     Head,
     /// hectogram
+    ///
+    /// rec20
     Hectogram,
     /// hundred cubic foot
+    ///
+    /// rec20
     HundredCubicFoot,
     /// hundred international unit
+    ///
+    /// rec20
     HundredInternationalUnit,
     /// hundred kilogram, net mass
+    ///
+    /// rec20
     HundredKilogramNetMass,
     /// hectolitre
+    ///
+    /// rec20
     Hectolitre,
     /// mile per hour (statute mile)
+    ///
+    /// rec20
     MilePerHourStatuteMile,
     /// Piece Month
+    ///
+    /// Rec20
     PieceMonth,
     /// million cubic metre
+    ///
+    /// rec20
     MillionCubicMetre,
     /// hectometre
+    ///
+    /// rec20
     Hectometre,
     /// hectolitre of pure alcohol
+    ///
+    /// rec20
     HectolitrePureAlcohol,
     /// hertz
+    ///
+    /// rec20
     Hertz,
     /// hour
+    ///
+    /// rec20
     Hour,
     /// Piece Week
+    ///
+    /// Rec20
     PieceWeek,
     /// inch pound (pound inch)
+    ///
+    /// rec20
     InchPoundPoundInch,
     /// person
+    ///
+    /// rec20
     Person,
     /// inch
+    ///
+    /// rec20
     Inch,
     /// square inch
+    ///
+    /// rec20
     SquareInch,
     /// cubic inch
+    ///
+    /// rec20
     CubicInch,
     /// international sugar degree
+    ///
+    /// rec20
     InternationalSugarDegree,
     /// inch per second
+    ///
+    /// rec20
     InchPerSecond,
     /// international unit per gram
+    ///
+    /// rec20
     InternationalUnitPerGram,
     /// inch per second squared
+    ///
+    /// rec20
     InchPerSecondSquared,
     /// percent per millimetre
+    ///
+    /// rec20
     PercentPerMillimetre,
     /// per mille per psi
+    ///
+    /// rec20
     PerMillePerPsi,
     /// degree API
+    ///
+    /// rec20
     DegreeApi,
     /// degree Baume (origin scale)
+    ///
+    /// rec20
     DegreeBaumeOriginScale,
     /// degree Baume (US heavy)
+    ///
+    /// rec20
     DegreeBaumeUsHeavy,
     /// degree Baume (US light)
+    ///
+    /// rec20
     DegreeBaumeUsLight,
     /// degree Balling
+    ///
+    /// rec20
     DegreeBalling,
     /// degree Brix
+    ///
+    /// rec20
     DegreeBrix,
     /// degree Fahrenheit hour square foot per British thermal unit (thermochemical)
+    ///
+    /// rec20
     DegreeFahrenheitHourSquareFootPerBritishThermalUnitThermochemical,
     /// joule per kilogram
+    ///
+    /// rec20
     JoulePerKilogram,
     /// degree Fahrenheit per kelvin
+    ///
+    /// rec20
     DegreeFahrenheitPerKelvin,
     /// degree Fahrenheit per bar
+    ///
+    /// rec20
     DegreeFahrenheitPerBar,
     /// degree Fahrenheit hour square foot per British thermal unit (international table)
+    ///
+    /// rec20
     DegreeFahrenheitHourSquareFootPerBritishThermalUnitInternationalTable,
     /// degree Fahrenheit per hour
+    ///
+    /// rec20
     DegreeFahrenheitPerHour,
     /// degree Fahrenheit per minute
+    ///
+    /// rec20
     DegreeFahrenheitPerMinute,
     /// degree Fahrenheit per second
+    ///
+    /// rec20
     DegreeFahrenheitPerSecond,
     /// reciprocal degree Fahrenheit
+    ///
+    /// rec20
     ReciprocalDegreeFahrenheit,
     /// degree Oechsle
+    ///
+    /// rec20
     DegreeOechsle,
     /// degree Rankine per hour
+    ///
+    /// rec20
     DegreeRankinePerHour,
     /// degree Rankine per minute
+    ///
+    /// rec20
     DegreeRankinePerMinute,
     /// degree Rankine per second
+    ///
+    /// rec20
     DegreeRankinePerSecond,
     /// degree Twaddell
+    ///
+    /// rec20
     DegreeTwaddell,
     /// micropoise
+    ///
+    /// rec20
     Micropoise,
     /// microgram per kilogram
+    ///
+    /// rec20
     MicrogramPerKilogram,
     /// microgram per cubic metre kelvin
+    ///
+    /// rec20
     MicrogramPerCubicMetreKelvin,
     /// microgram per cubic metre bar
+    ///
+    /// rec20
     MicrogramPerCubicMetreBar,
     /// microlitre per litre
+    ///
+    /// rec20
     MicrolitrePerLitre,
     /// baud
+    ///
+    /// rec20
     Baud,
     /// British thermal unit (mean)
+    ///
+    /// rec20
     BritishThermalUnitMean,
     /// British thermal unit (international table) foot per hour square foot degree Fahrenheit
+    ///
+    /// rec20
     BritishThermalUnitInternationalTableFootPerHourSquareFootDegreeFahrenheit,
     /// British thermal unit (international table) inch per hour square foot degree Fahrenheit
+    ///
+    /// rec20
     BritishThermalUnitInternationalTableInchPerHourSquareFootDegreeFahrenheit,
     /// British thermal unit (international table) inch per second square foot degree Fahrenheit
+    ///
+    /// rec20
     BritishThermalUnitInternationalTableInchPerSecondSquareFootDegreeFahrenheit,
     /// British thermal unit (international table) per pound degree Fahrenheit
+    ///
+    /// rec20
     BritishThermalUnitInternationalTablePerPoundDegreeFahrenheit,
     /// British thermal unit (international table) per minute
+    ///
+    /// rec20
     BritishThermalUnitInternationalTablePerMinute,
     /// British thermal unit (international table) per second
+    ///
+    /// rec20
     BritishThermalUnitInternationalTablePerSecond,
     /// British thermal unit (thermochemical) foot per hour square foot degree Fahrenheit
+    ///
+    /// rec20
     BritishThermalUnitThermochemicalFootPerHourSquareFootDegreeFahrenheit,
     /// British thermal unit (thermochemical) per hour
+    ///
+    /// rec20
     BritishThermalUnitThermochemicalPerHour,
     /// British thermal unit (thermochemical) inch per hour square foot degree Fahrenheit
+    ///
+    /// rec20
     BritishThermalUnitThermochemicalInchPerHourSquareFootDegreeFahrenheit,
     /// British thermal unit (thermochemical) inch per second square foot degree Fahrenheit
+    ///
+    /// rec20
     BritishThermalUnitThermochemicalInchPerSecondSquareFootDegreeFahrenheit,
     /// British thermal unit (thermochemical) per pound degree Fahrenheit
+    ///
+    /// rec20
     BritishThermalUnitThermochemicalPerPoundDegreeFahrenheit,
     /// British thermal unit (thermochemical) per minute
+    ///
+    /// rec20
     BritishThermalUnitThermochemicalPerMinute,
     /// British thermal unit (thermochemical) per second
+    ///
+    /// rec20
     BritishThermalUnitThermochemicalPerSecond,
     /// coulomb square metre per kilogram
+    ///
+    /// rec20
     CoulombSquareMetrePerKilogram,
     /// megabaud
+    ///
+    /// rec20
     Megabaud,
     /// watt second
+    ///
+    /// rec20
     WattSecond,
     /// bar per bar
+    ///
+    /// rec20
     BarPerBar,
     /// barrel (UK petroleum)
+    ///
+    /// rec20
     BarrelUkPetroleum,
     /// barrel (UK petroleum) per minute
+    ///
+    /// rec20
     BarrelUkPetroleumPerMinute,
     /// barrel (UK petroleum) per day
+    ///
+    /// rec20
     BarrelUkPetroleumPerDay,
     /// barrel (UK petroleum) per hour
+    ///
+    /// rec20
     BarrelUkPetroleumPerHour,
     /// barrel (UK petroleum) per second
+    ///
+    /// rec20
     BarrelUkPetroleumPerSecond,
     /// barrel (US petroleum) per hour
+    ///
+    /// rec20
     BarrelUsPetroleumPerHour,
     /// barrel (US petroleum) per second
+    ///
+    /// rec20
     BarrelUsPetroleumPerSecond,
     /// bushel (UK) per day
+    ///
+    /// rec20
     BushelUkPerDay,
     /// bushel (UK) per hour
+    ///
+    /// rec20
     BushelUkPerHour,
     /// bushel (UK) per minute
+    ///
+    /// rec20
     BushelUkPerMinute,
     /// bushel (UK) per second
+    ///
+    /// rec20
     BushelUkPerSecond,
     /// bushel (US dry) per day
+    ///
+    /// rec20
     BushelUsDryPerDay,
     /// bushel (US dry) per hour
+    ///
+    /// rec20
     BushelUsDryPerHour,
     /// bushel (US dry) per minute
+    ///
+    /// rec20
     BushelUsDryPerMinute,
     /// bushel (US dry) per second
+    ///
+    /// rec20
     BushelUsDryPerSecond,
     /// centinewton metre
+    ///
+    /// rec20
     CentinewtonMetre,
     /// centipoise per kelvin
+    ///
+    /// rec20
     CentipoisePerKelvin,
     /// centipoise per bar
+    ///
+    /// rec20
     CentipoisePerBar,
     /// calorie (mean)
+    ///
+    /// rec20
     CalorieMean,
     /// calorie (international table) per gram degree Celsius
+    ///
+    /// rec20
     CalorieInternationalTablePerGramDegreeCelsius,
     /// calorie (thermochemical) per centimetre second degree Celsius
+    ///
+    /// rec20
     CalorieThermochemicalPerCentimetreSecondDegreeCelsius,
     /// calorie (thermochemical) per gram degree Celsius
+    ///
+    /// rec20
     CalorieThermochemicalPerGramDegreeCelsius,
     /// calorie (thermochemical) per minute
+    ///
+    /// rec20
     CalorieThermochemicalPerMinute,
     /// calorie (thermochemical) per second
+    ///
+    /// rec20
     CalorieThermochemicalPerSecond,
     /// clo
+    ///
+    /// rec20
     Clo,
     /// centimetre per second kelvin
+    ///
+    /// rec20
     CentimetrePerSecondKelvin,
     /// centimetre per second bar
+    ///
+    /// rec20
     CentimetrePerSecondBar,
     /// cubic centimetre per cubic metre
+    ///
+    /// rec20
     CubicCentimetrePerCubicMetre,
     /// cubic decimetre per day
+    ///
+    /// rec20
     CubicDecimetrePerDay,
     /// cubic decimetre per cubic metre
+    ///
+    /// rec20
     CubicDecimetrePerCubicMetre,
     /// cubic decimetre per minute
+    ///
+    /// rec20
     CubicDecimetrePerMinute,
     /// cubic decimetre per second
+    ///
+    /// rec20
     CubicDecimetrePerSecond,
     /// ounce (UK fluid) per day
+    ///
+    /// rec20
     OunceUkFluidPerDay,
     /// ounce (UK fluid) per hour
+    ///
+    /// rec20
     OunceUkFluidPerHour,
     /// ounce (UK fluid) per minute
+    ///
+    /// rec20
     OunceUkFluidPerMinute,
     /// ounce (UK fluid) per second
+    ///
+    /// rec20
     OunceUkFluidPerSecond,
     /// ounce (US fluid) per day
+    ///
+    /// rec20
     OunceUsFluidPerDay,
     /// joule per kelvin
+    ///
+    /// rec20
     JoulePerKelvin,
     /// megajoule per kilogram
+    ///
+    /// rec20
     MegajoulePerKilogram,
     /// megajoule per cubic metre
+    ///
+    /// rec20
     MegajoulePerCubicMetre,
     /// pipeline joint
+    ///
+    /// rec20
     PipelineJoint,
     /// joule
+    ///
+    /// rec20
     Joule,
     /// hundred metre
+    ///
+    /// rec20
     HundredMetre,
     /// number of jewels
+    ///
+    /// rec20
     NumberJewels,
     /// kilowatt demand
+    ///
+    /// rec20
     KilowattDemand,
     /// ounce (US fluid) per hour
+    ///
+    /// rec20
     OunceUsFluidPerHour,
     /// ounce (US fluid) per minute
+    ///
+    /// rec20
     OunceUsFluidPerMinute,
     /// ounce (US fluid) per second
+    ///
+    /// rec20
     OunceUsFluidPerSecond,
     /// foot per degree Fahrenheit
+    ///
+    /// rec20
     FootPerDegreeFahrenheit,
     /// foot per hour
+    ///
+    /// rec20
     FootPerHour,
     /// foot pound-force per hour
+    ///
+    /// rec20
     FootPoundForcePerHour,
     /// foot pound-force per minute
+    ///
+    /// rec20
     FootPoundForcePerMinute,
     /// foot per psi
+    ///
+    /// rec20
     FootPerPsi,
     /// foot per second degree Fahrenheit
+    ///
+    /// rec20
     FootPerSecondDegreeFahrenheit,
     /// foot per second psi
+    ///
+    /// rec20
     FootPerSecondPsi,
     /// kilovolt ampere reactive demand
+    ///
+    /// rec20
     KilovoltAmpereReactiveDemand,
     /// reciprocal cubic foot
+    ///
+    /// rec20
     ReciprocalCubicFoot,
     /// cubic foot per degree Fahrenheit
+    ///
+    /// rec20
     CubicFootPerDegreeFahrenheit,
     /// cubic foot per day
+    ///
+    /// rec20
     CubicFootPerDay,
     /// cubic foot per psi
+    ///
+    /// rec20
     CubicFootPerPsi,
     /// gallon (UK) per day
+    ///
+    /// rec20
     GallonUkPerDay,
     /// gallon (UK) per hour
+    ///
+    /// rec20
     GallonUkPerHour,
     /// gallon (UK) per second
+    ///
+    /// rec20
     GallonUkPerSecond,
     /// kilovolt ampere reactive hour
+    ///
+    /// rec20
     KilovoltAmpereReactiveHour,
     /// gallon (US liquid) per second
+    ///
+    /// rec20
     GallonUsLiquidPerSecond,
     /// gram-force per square centimetre
+    ///
+    /// rec20
     GramForcePerSquareCentimetre,
     /// gill (UK) per day
+    ///
+    /// rec20
     GillUkPerDay,
     /// gill (UK) per hour
+    ///
+    /// rec20
     GillUkPerHour,
     /// gill (UK) per minute
+    ///
+    /// rec20
     GillUkPerMinute,
     /// gill (UK) per second
+    ///
+    /// rec20
     GillUkPerSecond,
     /// gill (US) per day
+    ///
+    /// rec20
     GillUsPerDay,
     /// gill (US) per hour
+    ///
+    /// rec20
     GillUsPerHour,
     /// gill (US) per minute
+    ///
+    /// rec20
     GillUsPerMinute,
     /// gill (US) per second
+    ///
+    /// rec20
     GillUsPerSecond,
     /// standard acceleration of free fall
+    ///
+    /// rec20
     StandardAccelerationFreeFall,
     /// grain per gallon (US)
+    ///
+    /// rec20
     GrainPerGallonUs,
     /// horsepower (boiler)
+    ///
+    /// rec20
     HorsepowerBoiler,
     /// horsepower (electric)
+    ///
+    /// rec20
     HorsepowerElectric,
     /// inch per degree Fahrenheit
+    ///
+    /// rec20
     InchPerDegreeFahrenheit,
     /// inch per psi
+    ///
+    /// rec20
     InchPerPsi,
     /// inch per second degree Fahrenheit
+    ///
+    /// rec20
     InchPerSecondDegreeFahrenheit,
     /// inch per second psi
+    ///
+    /// rec20
     InchPerSecondPsi,
     /// reciprocal cubic inch
+    ///
+    /// rec20
     ReciprocalCubicInch,
     /// kilobaud
+    ///
+    /// rec20
     Kilobaud,
     /// kilocalorie (mean)
+    ///
+    /// rec20
     KilocalorieMean,
     /// kilocalorie (international table) per hour metre degree Celsius
+    ///
+    /// rec20
     KilocalorieInternationalTablePerHourMetreDegreeCelsius,
     /// kilocalorie (thermochemical)
+    ///
+    /// rec20
     KilocalorieThermochemical,
     /// kilocalorie (thermochemical) per minute
+    ///
+    /// rec20
     KilocalorieThermochemicalPerMinute,
     /// kilocalorie (thermochemical) per second
+    ///
+    /// rec20
     KilocalorieThermochemicalPerSecond,
     /// kilomole per hour
+    ///
+    /// rec20
     KilomolePerHour,
     /// kilomole per cubic metre kelvin
+    ///
+    /// rec20
     KilomolePerCubicMetreKelvin,
     /// kilolitre
+    ///
+    /// rec20
     Kilolitre,
     /// kilomole per cubic metre bar
+    ///
+    /// rec20
     KilomolePerCubicMetreBar,
     /// kilomole per minute
+    ///
+    /// rec20
     KilomolePerMinute,
     /// litre per litre
+    ///
+    /// rec20
     LitrePerLitre,
     /// reciprocal litre
+    ///
+    /// rec20
     ReciprocalLitre,
     /// pound (avoirdupois) per degree Fahrenheit
+    ///
+    /// rec20
     PoundAvoirdupoisPerDegreeFahrenheit,
     /// pound (avoirdupois) square foot
+    ///
+    /// rec20
     PoundAvoirdupoisSquareFoot,
     /// pound (avoirdupois) per day
+    ///
+    /// rec20
     PoundAvoirdupoisPerDay,
     /// pound per foot hour
+    ///
+    /// rec20
     PoundPerFootHour,
     /// pound per foot second
+    ///
+    /// rec20
     PoundPerFootSecond,
     /// pound (avoirdupois) per cubic foot degree Fahrenheit
+    ///
+    /// rec20
     PoundAvoirdupoisPerCubicFootDegreeFahrenheit,
     /// pound (avoirdupois) per cubic foot psi
+    ///
+    /// rec20
     PoundAvoirdupoisPerCubicFootPsi,
     /// pound (avoirdupois) per gallon (UK)
+    ///
+    /// rec20
     PoundAvoirdupoisPerGallonUk,
     /// pound (avoirdupois) per hour degree Fahrenheit
+    ///
+    /// rec20
     PoundAvoirdupoisPerHourDegreeFahrenheit,
     /// pound (avoirdupois) per hour psi
+    ///
+    /// rec20
     PoundAvoirdupoisPerHourPsi,
     /// pound (avoirdupois) per cubic inch degree Fahrenheit
+    ///
+    /// rec20
     PoundAvoirdupoisPerCubicInchDegreeFahrenheit,
     /// pound (avoirdupois) per cubic inch psi
+    ///
+    /// rec20
     PoundAvoirdupoisPerCubicInchPsi,
     /// pound (avoirdupois) per psi
+    ///
+    /// rec20
     PoundAvoirdupoisPerPsi,
     /// pound (avoirdupois) per minute
+    ///
+    /// rec20
     PoundAvoirdupoisPerMinute,
     /// pound (avoirdupois) per minute degree Fahrenheit
+    ///
+    /// rec20
     PoundAvoirdupoisPerMinuteDegreeFahrenheit,
     /// pound (avoirdupois) per minute psi
+    ///
+    /// rec20
     PoundAvoirdupoisPerMinutePsi,
     /// pound (avoirdupois) per second
+    ///
+    /// rec20
     PoundAvoirdupoisPerSecond,
     /// pound (avoirdupois) per second degree Fahrenheit
+    ///
+    /// rec20
     PoundAvoirdupoisPerSecondDegreeFahrenheit,
     /// pound (avoirdupois) per second psi
+    ///
+    /// rec20
     PoundAvoirdupoisPerSecondPsi,
     /// pound per cubic yard
+    ///
+    /// rec20
     PoundPerCubicYard,
     /// pound-force per square foot
+    ///
+    /// rec20
     PoundForcePerSquareFoot,
     /// pound-force per square inch degree Fahrenheit
+    ///
+    /// rec20
     PoundForcePerSquareInchDegreeFahrenheit,
     /// psi cubic inch per second
+    ///
+    /// rec20
     PsiCubicInchPerSecond,
     /// psi litre per second
+    ///
+    /// rec20
     PsiLitrePerSecond,
     /// psi cubic metre per second
+    ///
+    /// rec20
     PsiCubicMetrePerSecond,
     /// psi cubic yard per second
+    ///
+    /// rec20
     PsiCubicYardPerSecond,
     /// pound-force second per square foot
+    ///
+    /// rec20
     PoundForceSecondPerSquareFoot,
     /// pound-force second per square inch
+    ///
+    /// rec20
     PoundForceSecondPerSquareInch,
     /// reciprocal psi
+    ///
+    /// rec20
     ReciprocalPsi,
     /// quart (UK liquid) per day
+    ///
+    /// rec20
     QuartUkLiquidPerDay,
     /// quart (UK liquid) per hour
+    ///
+    /// rec20
     QuartUkLiquidPerHour,
     /// quart (UK liquid) per minute
+    ///
+    /// rec20
     QuartUkLiquidPerMinute,
     /// quart (UK liquid) per second
+    ///
+    /// rec20
     QuartUkLiquidPerSecond,
     /// quart (US liquid) per day
+    ///
+    /// rec20
     QuartUsLiquidPerDay,
     /// quart (US liquid) per hour
+    ///
+    /// rec20
     QuartUsLiquidPerHour,
     /// cake
+    ///
+    /// rec20
     Cake,
     /// katal
+    ///
+    /// rec20
     Katal,
     /// kilocharacter
+    ///
+    /// rec20
     Kilocharacter,
     /// kilobar
+    ///
+    /// rec20
     Kilobar,
     /// kilogram of choline chloride
+    ///
+    /// rec20
     KilogramCholineChloride,
     /// kilogram drained net weight
+    ///
+    /// rec20
     KilogramDrainedNetWeight,
     /// kelvin
+    ///
+    /// rec20
     Kelvin,
     /// kilogram
+    ///
+    /// rec20
     Kilogram,
     /// kilogram per second
+    ///
+    /// rec20
     KilogramPerSecond,
     /// kilogram of hydrogen peroxide
+    ///
+    /// rec20
     KilogramHydrogenPeroxide,
     /// kilohertz
+    ///
+    /// rec20
     Kilohertz,
     /// kilogram per millimetre width
+    ///
+    /// rec20
     KilogramPerMillimetreWidth,
     /// kilogram, including container
+    ///
+    /// rec20
     KilogramIncludingContainer,
     /// kilogram, including inner packaging
+    ///
+    /// rec20
     KilogramIncludingInnerPackaging,
     /// kilosegment
+    ///
+    /// rec20
     Kilosegment,
     /// kilojoule
+    ///
+    /// rec20
     Kilojoule,
     /// kilogram per metre
+    ///
+    /// rec20
     KilogramPerMetre,
     /// lactic dry material percentage
+    ///
+    /// rec20
     LacticDryMaterialPercentage,
     /// kilolux
+    ///
+    /// rec20
     Kilolux,
     /// kilogram of methylamine
+    ///
+    /// rec20
     KilogramMethylamine,
     /// kilometre per hour
+    ///
+    /// rec20
     KilometrePerHour,
     /// square kilometre
+    ///
+    /// rec20
     SquareKilometre,
     /// kilogram per cubic metre
+    ///
+    /// rec20
     KilogramPerCubicMetre,
     /// kilometre
+    ///
+    /// rec20
     Kilometre,
     /// kilogram of nitrogen
+    ///
+    /// rec20
     KilogramNitrogen,
     /// kilonewton per square metre
+    ///
+    /// rec20
     KilonewtonPerSquareMetre,
     /// kilogram named substance
+    ///
+    /// rec20
     KilogramNamedSubstance,
     /// knot
+    ///
+    /// rec20
     Knot,
     /// milliequivalence caustic potash per gram of product
+    ///
+    /// rec20
     MilliequivalenceCausticPotashPerGramProduct,
     /// kilopascal
+    ///
+    /// rec20
     Kilopascal,
     /// kilogram of potassium hydroxide (caustic potash)
+    ///
+    /// rec20
     KilogramPotassiumHydroxideCausticPotash,
     /// kilogram of potassium oxide
+    ///
+    /// rec20
     KilogramPotassiumOxide,
     /// kilogram of phosphorus pentoxide (phosphoric anhydride)
+    ///
+    /// rec20
     KilogramPhosphorusPentoxidePhosphoricAnhydride,
     /// kiloroentgen
+    ///
+    /// rec20
     Kiloroentgen,
     /// kilogram of substance 90 % dry
+    ///
+    /// rec20
     KilogramSubstance90Dry,
     /// kilogram of sodium hydroxide (caustic soda)
+    ///
+    /// rec20
     KilogramSodiumHydroxideCausticSoda,
     /// kit
+    ///
+    /// rec20
     Kit,
     /// kilotonne
+    ///
+    /// rec20
     Kilotonne,
     /// kilogram of uranium
+    ///
+    /// rec20
     KilogramUranium,
     /// kilovolt - ampere
+    ///
+    /// rec20
     KilovoltAmpere,
     /// kilovar
+    ///
+    /// rec20
     Kilovar,
     /// kilovolt
+    ///
+    /// rec20
     Kilovolt,
     /// kilogram per millimetre
+    ///
+    /// rec20
     KilogramPerMillimetre,
     /// kilowatt hour
+    ///
+    /// rec20
     KilowattHour,
     /// Kilowatt hour per normalized cubic metre
+    ///
+    /// rec20
     KilowattHourPerNormalizedCubicMetre,
     /// kilogram of tungsten trioxide
+    ///
+    /// rec20
     KilogramTungstenTrioxide,
     /// Kilowatt hour per standard cubic metre
+    ///
+    /// rec20
     KilowattHourPerStandardCubicMetre,
     /// kilowatt
+    ///
+    /// rec20
     Kilowatt,
     /// kilowatt year
+    ///
+    /// Rec20
     KilowattYear,
     /// millilitre per kilogram
+    ///
+    /// rec20
     MillilitrePerKilogram,
     /// quart (US liquid) per minute
+    ///
+    /// rec20
     QuartUsLiquidPerMinute,
     /// quart (US liquid) per second
+    ///
+    /// rec20
     QuartUsLiquidPerSecond,
     /// metre per second kelvin
+    ///
+    /// rec20
     MetrePerSecondKelvin,
     /// metre per second bar
+    ///
+    /// rec20
     MetrePerSecondBar,
     /// square metre hour degree Celsius per kilocalorie (international table)
+    ///
+    /// rec20
     SquareMetreHourDegreeCelsiusPerKilocalorieInternationalTable,
     /// millipascal second per kelvin
+    ///
+    /// rec20
     MillipascalSecondPerKelvin,
     /// millipascal second per bar
+    ///
+    /// rec20
     MillipascalSecondPerBar,
     /// milligram per cubic metre kelvin
+    ///
+    /// rec20
     MilligramPerCubicMetreKelvin,
     /// milligram per cubic metre bar
+    ///
+    /// rec20
     MilligramPerCubicMetreBar,
     /// millilitre per litre
+    ///
+    /// rec20
     MillilitrePerLitre,
     /// litre per minute
+    ///
+    /// rec20
     LitrePerMinute,
     /// reciprocal cubic millimetre
+    ///
+    /// rec20
     ReciprocalCubicMillimetre,
     /// cubic millimetre per cubic metre
+    ///
+    /// rec20
     CubicMillimetrePerCubicMetre,
     /// mole per hour
+    ///
+    /// rec20
     MolePerHour,
     /// mole per kilogram kelvin
+    ///
+    /// rec20
     MolePerKilogramKelvin,
     /// mole per kilogram bar
+    ///
+    /// rec20
     MolePerKilogramBar,
     /// mole per litre kelvin
+    ///
+    /// rec20
     MolePerLitreKelvin,
     /// mole per litre bar
+    ///
+    /// rec20
     MolePerLitreBar,
     /// mole per cubic metre kelvin
+    ///
+    /// rec20
     MolePerCubicMetreKelvin,
     /// mole per cubic metre bar
+    ///
+    /// rec20
     MolePerCubicMetreBar,
     /// mole per minute
+    ///
+    /// rec20
     MolePerMinute,
     /// milliroentgen aequivalent men
+    ///
+    /// rec20
     MilliroentgenAequivalentMen,
     /// nanogram per kilogram
+    ///
+    /// rec20
     NanogramPerKilogram,
     /// ounce (avoirdupois) per day
+    ///
+    /// rec20
     OunceAvoirdupoisPerDay,
     /// ounce (avoirdupois) per hour
+    ///
+    /// rec20
     OunceAvoirdupoisPerHour,
     /// ounce (avoirdupois) per minute
+    ///
+    /// rec20
     OunceAvoirdupoisPerMinute,
     /// ounce (avoirdupois) per second
+    ///
+    /// rec20
     OunceAvoirdupoisPerSecond,
     /// ounce (avoirdupois) per gallon (UK)
+    ///
+    /// rec20
     OunceAvoirdupoisPerGallonUk,
     /// ounce (avoirdupois) per gallon (US)
+    ///
+    /// rec20
     OunceAvoirdupoisPerGallonUs,
     /// ounce (avoirdupois) per cubic inch
+    ///
+    /// rec20
     OunceAvoirdupoisPerCubicInch,
     /// ounce (avoirdupois)-force
+    ///
+    /// rec20
     OunceAvoirdupoisForce,
     /// ounce (avoirdupois)-force inch
+    ///
+    /// rec20
     OunceAvoirdupoisForceInch,
     /// picosiemens per metre
+    ///
+    /// rec20
     PicosiemensPerMetre,
     /// peck (UK)
+    ///
+    /// rec20
     PeckUk,
     /// peck (UK) per day
+    ///
+    /// rec20
     PeckUkPerDay,
     /// peck (UK) per hour
+    ///
+    /// rec20
     PeckUkPerHour,
     /// peck (UK) per minute
+    ///
+    /// rec20
     PeckUkPerMinute,
     /// peck (UK) per second
+    ///
+    /// rec20
     PeckUkPerSecond,
     /// peck (US dry) per day
+    ///
+    /// rec20
     PeckUsDryPerDay,
     /// peck (US dry) per hour
+    ///
+    /// rec20
     PeckUsDryPerHour,
     /// peck (US dry) per minute
+    ///
+    /// rec20
     PeckUsDryPerMinute,
     /// peck (US dry) per second
+    ///
+    /// rec20
     PeckUsDryPerSecond,
     /// psi per psi
+    ///
+    /// rec20
     PsiPerPsi,
     /// pint (UK) per day
+    ///
+    /// rec20
     PintUkPerDay,
     /// pint (UK) per hour
+    ///
+    /// rec20
     PintUkPerHour,
     /// pint (UK) per minute
+    ///
+    /// rec20
     PintUkPerMinute,
     /// pint (UK) per second
+    ///
+    /// rec20
     PintUkPerSecond,
     /// pint (US liquid) per day
+    ///
+    /// rec20
     PintUsLiquidPerDay,
     /// pint (US liquid) per hour
+    ///
+    /// rec20
     PintUsLiquidPerHour,
     /// pint (US liquid) per minute
+    ///
+    /// rec20
     PintUsLiquidPerMinute,
     /// pint (US liquid) per second
+    ///
+    /// rec20
     PintUsLiquidPerSecond,
     /// slug per day
+    ///
+    /// rec20
     SlugPerDay,
     /// slug per foot second
+    ///
+    /// rec20
     SlugPerFootSecond,
     /// slug per cubic foot
+    ///
+    /// rec20
     SlugPerCubicFoot,
     /// slug per hour
+    ///
+    /// rec20
     SlugPerHour,
     /// slug per minute
+    ///
+    /// rec20
     SlugPerMinute,
     /// slug per second
+    ///
+    /// rec20
     SlugPerSecond,
     /// tonne per kelvin
+    ///
+    /// rec20
     TonnePerKelvin,
     /// tonne per bar
+    ///
+    /// rec20
     TonnePerBar,
     /// tonne per day
+    ///
+    /// rec20
     TonnePerDay,
     /// tonne per day kelvin
+    ///
+    /// rec20
     TonnePerDayKelvin,
     /// tonne per day bar
+    ///
+    /// rec20
     TonnePerDayBar,
     /// tonne per hour kelvin
+    ///
+    /// rec20
     TonnePerHourKelvin,
     /// tonne per hour bar
+    ///
+    /// rec20
     TonnePerHourBar,
     /// tonne per cubic metre kelvin
+    ///
+    /// rec20
     TonnePerCubicMetreKelvin,
     /// tonne per cubic metre bar
+    ///
+    /// rec20
     TonnePerCubicMetreBar,
     /// tonne per minute
+    ///
+    /// rec20
     TonnePerMinute,
     /// tonne per minute kelvin
+    ///
+    /// rec20
     TonnePerMinuteKelvin,
     /// tonne per minute bar
+    ///
+    /// rec20
     TonnePerMinuteBar,
     /// tonne per second
+    ///
+    /// rec20
     TonnePerSecond,
     /// tonne per second kelvin
+    ///
+    /// rec20
     TonnePerSecondKelvin,
     /// tonne per second bar
+    ///
+    /// rec20
     TonnePerSecondBar,
     /// ton (UK shipping)
+    ///
+    /// rec20
     TonUkShipping,
     /// ton long per day
+    ///
+    /// rec20
     TonLongPerDay,
     /// ton (US shipping)
+    ///
+    /// rec20
     TonUsShipping,
     /// ton short per degree Fahrenheit
+    ///
+    /// rec20
     TonShortPerDegreeFahrenheit,
     /// ton short per day
+    ///
+    /// rec20
     TonShortPerDay,
     /// ton short per hour degree Fahrenheit
+    ///
+    /// rec20
     TonShortPerHourDegreeFahrenheit,
     /// ton short per hour psi
+    ///
+    /// rec20
     TonShortPerHourPsi,
     /// ton short per psi
+    ///
+    /// rec20
     TonShortPerPsi,
     /// ton (UK long) per cubic yard
+    ///
+    /// rec20
     TonUkLongPerCubicYard,
     /// ton (US short) per cubic yard
+    ///
+    /// rec20
     TonUsShortPerCubicYard,
     /// ton-force (US short)
+    ///
+    /// rec20
     TonForceUsShort,
     /// common year
+    ///
+    /// rec20
     CommonYear,
     /// sidereal year
+    ///
+    /// rec20
     SiderealYear,
     /// yard per degree Fahrenheit
+    ///
+    /// rec20
     YardPerDegreeFahrenheit,
     /// yard per psi
+    ///
+    /// rec20
     YardPerPsi,
     /// pound per cubic inch
+    ///
+    /// rec20
     PoundPerCubicInch,
     /// lactose excess percentage
+    ///
+    /// rec20
     LactoseExcessPercentage,
     /// pound
+    ///
+    /// rec20
     Pound,
     /// troy pound (US)
+    ///
+    /// rec20
     TroyPoundUs,
     /// litre per day
+    ///
+    /// rec20
     LitrePerDay,
     /// leaf
+    ///
+    /// rec20
     Leaf,
     /// linear foot
+    ///
+    /// rec20
     LinearFoot,
     /// labour hour
+    ///
+    /// rec20
     LabourHour,
     /// link
+    ///
+    /// rec20
     Link,
     /// linear metre
+    ///
+    /// rec20
     LinearMetre,
     /// length
+    ///
+    /// rec20
     Length,
     /// lot [unit of procurement]
+    ///
+    /// rec20
     LotUnitProcurement,
     /// liquid pound
+    ///
+    /// rec20
     LiquidPound,
     /// litre of pure alcohol
+    ///
+    /// rec20
     LitrePureAlcohol,
     /// layer
+    ///
+    /// rec20
     Layer,
     /// lump sum
+    ///
+    /// rec20
     LumpSum,
     /// ton (UK) or long ton (US)
+    ///
+    /// rec20
     TonUkOrLongTonUs,
     /// litre
+    ///
+    /// rec20
     Litre,
     /// metric ton, lubricating oil
+    ///
+    /// rec20
     MetricTonLubricatingOil,
     /// lumen
+    ///
+    /// rec20
     Lumen,
     /// lux
+    ///
+    /// rec20
     Lux,
     /// linear yard
+    ///
+    /// rec20
     LinearYard,
     /// milligram per litre
+    ///
+    /// rec20
     MilligramPerLitre,
     /// reciprocal cubic yard
+    ///
+    /// rec20
     ReciprocalCubicYard,
     /// cubic yard per degree Fahrenheit
+    ///
+    /// rec20
     CubicYardPerDegreeFahrenheit,
     /// cubic yard per day
+    ///
+    /// rec20
     CubicYardPerDay,
     /// cubic yard per hour
+    ///
+    /// rec20
     CubicYardPerHour,
     /// cubic yard per psi
+    ///
+    /// rec20
     CubicYardPerPsi,
     /// cubic yard per minute
+    ///
+    /// rec20
     CubicYardPerMinute,
     /// cubic yard per second
+    ///
+    /// rec20
     CubicYardPerSecond,
     /// kilohertz metre
+    ///
+    /// rec20
     KilohertzMetre,
     /// gigahertz metre
+    ///
+    /// rec20
     GigahertzMetre,
     /// Beaufort
+    ///
+    /// rec20
     Beaufort,
     /// reciprocal megakelvin or megakelvin to the power minus one
+    ///
+    /// rec20
     ReciprocalMegakelvinOrMegakelvinToPowerMinusOne,
     /// reciprocal kilovolt - ampere reciprocal hour
+    ///
+    /// rec20
     ReciprocalKilovoltAmpereReciprocalHour,
     /// millilitre per square centimetre minute
+    ///
+    /// rec20
     MillilitrePerSquareCentimetreMinute,
     /// newton per centimetre
+    ///
+    /// rec20
     NewtonPerCentimetre,
     /// ohm kilometre
+    ///
+    /// rec20
     OhmKilometre,
     /// percent per degree Celsius
+    ///
+    /// rec20
     PercentPerDegreeCelsius,
     /// gigaohm per metre
+    ///
+    /// rec20
     GigaohmPerMetre,
     /// megahertz metre
+    ///
+    /// rec20
     MegahertzMetre,
     /// kilogram per kilogram
+    ///
+    /// rec20
     KilogramPerKilogram,
     /// reciprocal volt - ampere reciprocal second
+    ///
+    /// rec20
     ReciprocalVoltAmpereReciprocalSecond,
     /// kilogram per kilometre
+    ///
+    /// rec20
     KilogramPerKilometre,
     /// pascal second per litre
+    ///
+    /// rec20
     PascalSecondPerLitre,
     /// millimole per litre
+    ///
+    /// rec20
     MillimolePerLitre,
     /// newton metre per square metre
+    ///
+    /// rec20
     NewtonMetrePerSquareMetre,
     /// millivolt - ampere
+    ///
+    /// rec20
     MillivoltAmpere,
     /// 30-day month
+    ///
+    /// rec20
     _30DayMonth,
     /// actual/360
+    ///
+    /// rec20
     Actual360,
     /// kilometre per second squared
+    ///
+    /// rec20
     KilometrePerSecondSquared,
     /// centimetre per second squared
+    ///
+    /// rec20
     CentimetrePerSecondSquared,
     /// monetary value
+    ///
+    /// rec20
     MonetaryValue,
     /// yard per second squared
+    ///
+    /// rec20
     YardPerSecondSquared,
     /// millimetre per second squared
+    ///
+    /// rec20
     MillimetrePerSecondSquared,
     /// mile (statute mile) per second squared
+    ///
+    /// rec20
     MileStatuteMilePerSecondSquared,
     /// mil
+    ///
+    /// rec20
     Mil,
     /// revolution
+    ///
+    /// rec20
     Revolution,
     /// degree [unit of angle] per second squared
+    ///
+    /// rec20
     DegreeUnitAnglePerSecondSquared,
     /// revolution per minute
+    ///
+    /// rec20
     RevolutionPerMinute,
     /// circular mil
+    ///
+    /// rec20
     CircularMil,
     /// square mile (based on U.S. survey foot)
+    ///
+    /// rec20
     SquareMileBasedOnUSSurveyFoot,
     /// chain (based on U.S. survey foot)
+    ///
+    /// rec20
     ChainBasedOnUSSurveyFoot,
     /// microcurie
+    ///
+    /// rec20
     Microcurie,
     /// furlong
+    ///
+    /// rec20
     Furlong,
     /// foot (U.S. survey)
+    ///
+    /// rec20
     FootUSSurvey,
     /// mile (based on U.S. survey foot)
+    ///
+    /// rec20
     MileBasedOnUSSurveyFoot,
     /// metre per pascal
+    ///
+    /// rec20
     MetrePerPascal,
     /// metre per radiant
+    ///
+    /// rec20
     MetrePerRadiant,
     /// shake
+    ///
+    /// rec20
     Shake,
     /// mile per minute
+    ///
+    /// rec20
     MilePerMinute,
     /// mile per second
+    ///
+    /// rec20
     MilePerSecond,
     /// metre per second pascal
+    ///
+    /// rec20
     MetrePerSecondPascal,
     /// metre per hour
+    ///
+    /// rec20
     MetrePerHour,
     /// inch per year
+    ///
+    /// rec20
     InchPerYear,
     /// kilometre per second
+    ///
+    /// rec20
     KilometrePerSecond,
     /// inch per minute
+    ///
+    /// rec20
     InchPerMinute,
     /// yard per second
+    ///
+    /// rec20
     YardPerSecond,
     /// yard per minute
+    ///
+    /// rec20
     YardPerMinute,
     /// yard per hour
+    ///
+    /// rec20
     YardPerHour,
     /// acre-foot (based on U.S. survey foot)
+    ///
+    /// rec20
     AcreFootBasedOnUSSurveyFoot,
     /// cord (128 ft3)
+    ///
+    /// rec20
     Cord128Ft3,
     /// cubic mile (UK statute)
+    ///
+    /// rec20
     CubicMileUkStatute,
     /// micro-inch
+    ///
+    /// rec20
     MicroInch,
     /// ton, register
+    ///
+    /// rec20
     TonRegister,
     /// cubic metre per pascal
+    ///
+    /// rec20
     CubicMetrePerPascal,
     /// bel
+    ///
+    /// rec20
     Bel,
     /// kilogram per cubic metre pascal
+    ///
+    /// rec20
     KilogramPerCubicMetrePascal,
     /// kilogram per pascal
+    ///
+    /// rec20
     KilogramPerPascal,
     /// kilopound-force
+    ///
+    /// rec20
     KilopoundForce,
     /// poundal
+    ///
+    /// rec20
     Poundal,
     /// kilogram metre per second squared
+    ///
+    /// rec20
     KilogramMetrePerSecondSquared,
     /// pond
+    ///
+    /// rec20
     Pond,
     /// square foot per hour
+    ///
+    /// rec20
     SquareFootPerHour,
     /// stokes per pascal
+    ///
+    /// rec20
     StokesPerPascal,
     /// square centimetre per second
+    ///
+    /// rec20
     SquareCentimetrePerSecond,
     /// square metre per second pascal
+    ///
+    /// rec20
     SquareMetrePerSecondPascal,
     /// denier
+    ///
+    /// rec20
     Denier_Dup,
     /// pound per yard
+    ///
+    /// rec20
     PoundPerYard,
     /// ton, assay
+    ///
+    /// rec20
     TonAssay,
     /// pfund
+    ///
+    /// rec20
     Pfund,
     /// kilogram per second pascal
+    ///
+    /// rec20
     KilogramPerSecondPascal,
     /// tonne per month
+    ///
+    /// rec20
     TonnePerMonth,
     /// tonne per year
+    ///
+    /// rec20
     TonnePerYear,
     /// million Btu per 1000 cubic foot
+    ///
+    /// rec20
     MillionBtuPer1000CubicFoot,
     /// kilopound per hour
+    ///
+    /// rec20
     KilopoundPerHour,
     /// pound per pound
+    ///
+    /// rec20
     PoundPerPound,
     /// pound-force foot
+    ///
+    /// rec20
     PoundForceFoot,
     /// newton metre per radian
+    ///
+    /// rec20
     NewtonMetrePerRadian,
     /// kilogram metre
+    ///
+    /// rec20
     KilogramMetre,
     /// poundal foot
+    ///
+    /// rec20
     PoundalFoot,
     /// poundal inch
+    ///
+    /// rec20
     PoundalInch,
     /// dyne metre
+    ///
+    /// rec20
     DyneMetre,
     /// kilogram centimetre per second
+    ///
+    /// rec20
     KilogramCentimetrePerSecond,
     /// gram centimetre per second
+    ///
+    /// rec20
     GramCentimetrePerSecond,
     /// megavolt ampere reactive hour
+    ///
+    /// rec20
     MegavoltAmpereReactiveHour,
     /// megalitre
+    ///
+    /// rec20
     Megalitre,
     /// megametre
+    ///
+    /// rec20
     Megametre,
     /// megavar
+    ///
+    /// rec20
     Megavar,
     /// megawatt
+    ///
+    /// rec20
     Megawatt,
     /// thousand standard brick equivalent
+    ///
+    /// rec20
     ThousandStandardBrickEquivalent,
     /// thousand board foot
+    ///
+    /// rec20
     ThousandBoardFoot,
     /// millibar
+    ///
+    /// rec20
     Millibar,
     /// microgram
+    ///
+    /// rec20
     Microgram,
     /// millicurie
+    ///
+    /// rec20
     Millicurie,
     /// air dry metric ton
+    ///
+    /// rec20
     AirDryMetricTon,
     /// milligram
+    ///
+    /// rec20
     Milligram,
     /// megahertz
+    ///
+    /// rec20
     Megahertz,
     /// square mile (statute mile)
+    ///
+    /// rec20
     SquareMileStatuteMile,
     /// thousand
+    ///
+    /// rec20
     Thousand,
     /// minute [unit of time]
+    ///
+    /// rec20
     MinuteUnitTime,
     /// million
+    ///
+    /// rec20
     Million,
     /// million international unit
+    ///
+    /// rec20
     MillionInternationalUnit,
     /// Square Metre Day
+    ///
+    /// Rec20
     SquareMetreDay,
     /// Square Metre Month
+    ///
+    /// Rec20
     SquareMetreMonth,
     /// Square Metre Week
+    ///
+    /// Rec20
     SquareMetreWeek,
     /// milliard
+    ///
+    /// rec20
     Milliard,
     /// millilitre
+    ///
+    /// rec20
     Millilitre,
     /// square millimetre
+    ///
+    /// rec20
     SquareMillimetre,
     /// cubic millimetre
+    ///
+    /// rec20
     CubicMillimetre,
     /// millimetre
+    ///
+    /// rec20
     Millimetre,
     /// kilogram, dry weight
+    ///
+    /// rec20
     KilogramDryWeight,
     /// Mega Joule per Normalised cubic Metre
+    ///
+    /// Rec20
     MegaJoulePerNormalisedCubicMetre,
     /// month
+    ///
+    /// rec20
     Month,
     /// megapascal
+    ///
+    /// rec20
     Megapascal,
     /// Cubic Metre Day
+    ///
+    /// Rec20
     CubicMetreDay,
     /// cubic metre per hour
+    ///
+    /// rec20
     CubicMetrePerHour,
     /// Cubic Metre Month
+    ///
+    /// Rec20
     CubicMetreMonth,
     /// cubic metre per second
+    ///
+    /// rec20
     CubicMetrePerSecond,
     /// Cubic Metre Week
+    ///
+    /// Rec20
     CubicMetreWeek,
     /// Metre Day
+    ///
+    /// Rec20
     MetreDay,
     /// Metre Month
+    ///
+    /// Rec20
     MetreMonth,
     /// Metre Week
+    ///
+    /// Rec20
     MetreWeek,
     /// metre per second squared
+    ///
+    /// rec20
     MetrePerSecondSquared,
     /// square metre
+    ///
+    /// rec20
     SquareMetre,
     /// cubic metre
+    ///
+    /// rec20
     CubicMetre,
     /// metre
+    ///
+    /// rec20
     Metre,
     /// metre per second
+    ///
+    /// rec20
     MetrePerSecond,
     /// milihertz
+    ///
+    /// Rec20
     Milihertz,
     /// megavolt - ampere
+    ///
+    /// rec20
     MegavoltAmpere,
     /// megawatt hour (1000 kW.h)
+    ///
+    /// rec20
     MegawattHour1000KwH,
     /// pen calorie
+    ///
+    /// rec20
     PenCalorie,
     /// pound foot per second
+    ///
+    /// rec20
     PoundFootPerSecond,
     /// pound inch per second
+    ///
+    /// rec20
     PoundInchPerSecond,
     /// Pferdestaerke
+    ///
+    /// rec20
     Pferdestaerke,
     /// centimetre of mercury (0 ºC)
+    ///
+    /// rec20
     CentimetreMercury0Oc,
     /// centimetre of water (4 ºC)
+    ///
+    /// rec20
     CentimetreWater4Oc,
     /// foot of water (39.2 ºF)
+    ///
+    /// rec20
     FootWater392Of,
     /// inch of mercury (32 ºF)
+    ///
+    /// rec20
     InchMercury32Of,
     /// inch of mercury (60 ºF)
+    ///
+    /// rec20
     InchMercury60Of,
     /// inch of water (39.2 ºF)
+    ///
+    /// rec20
     InchWater392Of,
     /// inch of water (60 ºF)
+    ///
+    /// rec20
     InchWater60Of,
     /// kip per square inch
+    ///
+    /// rec20
     KipPerSquareInch,
     /// poundal per square foot
+    ///
+    /// rec20
     PoundalPerSquareFoot,
     /// ounce (avoirdupois) per square inch
+    ///
+    /// rec20
     OunceAvoirdupoisPerSquareInch,
     /// conventional metre of water
+    ///
+    /// rec20
     ConventionalMetreWater,
     /// gram per square millimetre
+    ///
+    /// rec20
     GramPerSquareMillimetre,
     /// pound per square yard
+    ///
+    /// rec20
     PoundPerSquareYard,
     /// poundal per square inch
+    ///
+    /// rec20
     PoundalPerSquareInch,
     /// foot to the fourth power
+    ///
+    /// rec20
     FootToFourthPower,
     /// cubic decimetre per kilogram
+    ///
+    /// rec20
     CubicDecimetrePerKilogram,
     /// cubic foot per pound
+    ///
+    /// rec20
     CubicFootPerPound,
     /// print point
+    ///
+    /// rec20
     PrintPoint,
     /// cubic inch per pound
+    ///
+    /// rec20
     CubicInchPerPound,
     /// kilonewton per metre
+    ///
+    /// rec20
     KilonewtonPerMetre,
     /// poundal per inch
+    ///
+    /// rec20
     PoundalPerInch,
     /// pound-force per yard
+    ///
+    /// rec20
     PoundForcePerYard,
     /// poundal second per square foot
+    ///
+    /// rec20
     PoundalSecondPerSquareFoot,
     /// poise per pascal
+    ///
+    /// rec20
     PoisePerPascal,
     /// newton second per square metre
+    ///
+    /// rec20
     NewtonSecondPerSquareMetre,
     /// kilogram per metre second
+    ///
+    /// rec20
     KilogramPerMetreSecond,
     /// kilogram per metre minute
+    ///
+    /// rec20
     KilogramPerMetreMinute,
     /// kilogram per metre day
+    ///
+    /// rec20
     KilogramPerMetreDay,
     /// kilogram per metre hour
+    ///
+    /// rec20
     KilogramPerMetreHour,
     /// gram per centimetre second
+    ///
+    /// rec20
     GramPerCentimetreSecond,
     /// poundal second per square inch
+    ///
+    /// rec20
     PoundalSecondPerSquareInch,
     /// pound per foot minute
+    ///
+    /// rec20
     PoundPerFootMinute,
     /// pound per foot day
+    ///
+    /// rec20
     PoundPerFootDay,
     /// cubic metre per second pascal
+    ///
+    /// rec20
     CubicMetrePerSecondPascal,
     /// foot poundal
+    ///
+    /// rec20
     FootPoundal,
     /// inch poundal
+    ///
+    /// rec20
     InchPoundal,
     /// watt per square centimetre
+    ///
+    /// rec20
     WattPerSquareCentimetre,
     /// watt per square inch
+    ///
+    /// rec20
     WattPerSquareInch,
     /// British thermal unit (international table) per square foot hour
+    ///
+    /// rec20
     BritishThermalUnitInternationalTablePerSquareFootHour,
     /// British thermal unit (thermochemical) per square foot hour
+    ///
+    /// rec20
     BritishThermalUnitThermochemicalPerSquareFootHour,
     /// British thermal unit (thermochemical) per square foot minute
+    ///
+    /// rec20
     BritishThermalUnitThermochemicalPerSquareFootMinute,
     /// British thermal unit (international table) per square foot second
+    ///
+    /// rec20
     BritishThermalUnitInternationalTablePerSquareFootSecond,
     /// British thermal unit (thermochemical) per square foot second
+    ///
+    /// rec20
     BritishThermalUnitThermochemicalPerSquareFootSecond,
     /// British thermal unit (international table) per square inch second
+    ///
+    /// rec20
     BritishThermalUnitInternationalTablePerSquareInchSecond,
     /// calorie (thermochemical) per square centimetre minute
+    ///
+    /// rec20
     CalorieThermochemicalPerSquareCentimetreMinute,
     /// calorie (thermochemical) per square centimetre second
+    ///
+    /// rec20
     CalorieThermochemicalPerSquareCentimetreSecond,
     /// British thermal unit (international table) per cubic foot
+    ///
+    /// rec20
     BritishThermalUnitInternationalTablePerCubicFoot,
     /// British thermal unit (thermochemical) per cubic foot
+    ///
+    /// rec20
     BritishThermalUnitThermochemicalPerCubicFoot,
     /// British thermal unit (international table) per degree Fahrenheit
+    ///
+    /// rec20
     BritishThermalUnitInternationalTablePerDegreeFahrenheit,
     /// British thermal unit (thermochemical) per degree Fahrenheit
+    ///
+    /// rec20
     BritishThermalUnitThermochemicalPerDegreeFahrenheit,
     /// British thermal unit (international table) per degree Rankine
+    ///
+    /// rec20
     BritishThermalUnitInternationalTablePerDegreeRankine,
     /// British thermal unit (thermochemical) per degree Rankine
+    ///
+    /// rec20
     BritishThermalUnitThermochemicalPerDegreeRankine,
     /// British thermal unit (thermochemical) per pound degree Rankine
+    ///
+    /// rec20
     BritishThermalUnitThermochemicalPerPoundDegreeRankine,
     /// kilocalorie (international table) per gram kelvin
+    ///
+    /// rec20
     KilocalorieInternationalTablePerGramKelvin,
     /// British thermal unit (39 ºF)
+    ///
+    /// rec20
     BritishThermalUnit39Of,
     /// British thermal unit (59 ºF)
+    ///
+    /// rec20
     BritishThermalUnit59Of,
     /// British thermal unit (60 ºF)
+    ///
+    /// rec20
     BritishThermalUnit60Of,
     /// calorie (20 ºC)
+    ///
+    /// rec20
     Calorie20Oc,
     /// quad (1015 BtuIT)
+    ///
+    /// rec20
     Quad1015Btuit,
     /// therm (EC)
+    ///
+    /// rec20
     ThermEc,
     /// therm (U.S.)
+    ///
+    /// rec20
     ThermUS,
     /// British thermal unit (thermochemical) per pound
+    ///
+    /// rec20
     BritishThermalUnitThermochemicalPerPound,
     /// British thermal unit (international table) per hour square foot degree Fahrenheit
+    ///
+    /// rec20
     BritishThermalUnitInternationalTablePerHourSquareFootDegreeFahrenheit,
     /// British thermal unit (thermochemical) per hour square foot degree Fahrenheit
+    ///
+    /// rec20
     BritishThermalUnitThermochemicalPerHourSquareFootDegreeFahrenheit,
     /// British thermal unit (international table) per second square foot degree Fahrenheit
+    ///
+    /// rec20
     BritishThermalUnitInternationalTablePerSecondSquareFootDegreeFahrenheit,
     /// British thermal unit (thermochemical) per second square foot degree Fahrenheit
+    ///
+    /// rec20
     BritishThermalUnitThermochemicalPerSecondSquareFootDegreeFahrenheit,
     /// kilowatt per square metre kelvin
+    ///
+    /// rec20
     KilowattPerSquareMetreKelvin,
     /// kelvin per pascal
+    ///
+    /// rec20
     KelvinPerPascal,
     /// watt per metre degree Celsius
+    ///
+    /// rec20
     WattPerMetreDegreeCelsius,
     /// kilowatt per metre kelvin
+    ///
+    /// rec20
     KilowattPerMetreKelvin,
     /// kilowatt per metre degree Celsius
+    ///
+    /// rec20
     KilowattPerMetreDegreeCelsius,
     /// metre per degree Celcius metre
+    ///
+    /// rec20
     MetrePerDegreeCelciusMetre,
     /// degree Fahrenheit hour per British thermal unit (international table)
+    ///
+    /// rec20
     DegreeFahrenheitHourPerBritishThermalUnitInternationalTable,
     /// degree Fahrenheit hour per British thermal unit (thermochemical)
+    ///
+    /// rec20
     DegreeFahrenheitHourPerBritishThermalUnitThermochemical,
     /// degree Fahrenheit second per British thermal unit (international table)
+    ///
+    /// rec20
     DegreeFahrenheitSecondPerBritishThermalUnitInternationalTable,
     /// degree Fahrenheit second per British thermal unit (thermochemical)
+    ///
+    /// rec20
     DegreeFahrenheitSecondPerBritishThermalUnitThermochemical,
     /// degree Fahrenheit hour square foot per British thermal unit (international table) inch
+    ///
+    /// rec20
     DegreeFahrenheitHourSquareFootPerBritishThermalUnitInternationalTableInch,
     /// degree Fahrenheit hour square foot per British thermal unit (thermochemical) inch
+    ///
+    /// rec20
     DegreeFahrenheitHourSquareFootPerBritishThermalUnitThermochemicalInch,
     /// kilofarad
+    ///
+    /// rec20
     Kilofarad,
     /// reciprocal joule
+    ///
+    /// rec20
     ReciprocalJoule,
     /// picosiemens
+    ///
+    /// rec20
     Picosiemens,
     /// ampere per pascal
+    ///
+    /// rec20
     AmperePerPascal,
     /// franklin
+    ///
+    /// rec20
     Franklin,
     /// ampere minute
+    ///
+    /// rec20
     AmpereMinute,
     /// biot
+    ///
+    /// rec20
     Biot,
     /// gilbert
+    ///
+    /// rec20
     Gilbert,
     /// volt per pascal
+    ///
+    /// rec20
     VoltPerPascal,
     /// picovolt
+    ///
+    /// rec20
     Picovolt,
     /// milligram per kilogram
+    ///
+    /// rec20
     MilligramPerKilogram,
     /// number of articles
+    ///
+    /// rec20
     NumberArticles,
     /// number of cells
+    ///
+    /// rec20
     NumberCells,
     /// newton
+    ///
+    /// rec20
     Newton,
     /// message
+    ///
+    /// rec20
     Message,
     /// nil
+    ///
+    /// rec20
     Nil,
     /// number of international units
+    ///
+    /// rec20
     NumberInternationalUnits,
     /// load
+    ///
+    /// rec20
     Load,
     /// Normalised cubic metre
+    ///
+    /// rec20
     NormalisedCubicMetre,
     /// nautical mile
+    ///
+    /// rec20
     NauticalMile,
     /// number of packs
+    ///
+    /// rec20
     NumberPacks,
     /// number of parts
+    ///
+    /// rec20
     NumberParts,
     /// net ton
+    ///
+    /// rec20
     NetTon,
     /// Nephelometric turbidity unit
+    ///
+    /// Rec20
     NephelometricTurbidityUnit,
     /// newton metre
+    ///
+    /// rec20
     NewtonMetre,
     /// part per thousand
+    ///
+    /// rec20
     PartPerThousand,
     /// panel
+    ///
+    /// rec20
     Panel,
     /// ozone depletion equivalent
+    ///
+    /// rec20
     OzoneDepletionEquivalent,
     /// ODS Grams
+    ///
+    /// rec20
     OdsGrams,
     /// ODS Kilograms
+    ///
+    /// rec20
     OdsKilograms,
     /// ODS Milligrams
+    ///
+    /// rec20
     OdsMilligrams,
     /// ohm
+    ///
+    /// rec20
     Ohm,
     /// ounce per square yard
+    ///
+    /// rec20
     OuncePerSquareYard,
     /// ounce (avoirdupois)
+    ///
+    /// rec20
     OunceAvoirdupois,
     /// oscillations per minute
+    ///
+    /// rec20
     OscillationsPerMinute,
     /// overtime hour
+    ///
+    /// rec20
     OvertimeHour,
     /// fluid ounce (US)
+    ///
+    /// rec20
     FluidOunceUs,
     /// fluid ounce (UK)
+    ///
+    /// rec20
     FluidOunceUk,
     /// percent
+    ///
+    /// rec20
     Percent,
     /// coulomb per metre
+    ///
+    /// rec20
     CoulombPerMetre,
     /// kiloweber
+    ///
+    /// rec20
     Kiloweber,
     /// gamma
+    ///
+    /// rec20
     Gamma,
     /// kilotesla
+    ///
+    /// rec20
     Kilotesla,
     /// joule per second
+    ///
+    /// rec20
     JoulePerSecond,
     /// joule per minute
+    ///
+    /// rec20
     JoulePerMinute,
     /// joule per hour
+    ///
+    /// rec20
     JoulePerHour,
     /// joule per day
+    ///
+    /// rec20
     JoulePerDay,
     /// kilojoule per second
+    ///
+    /// rec20
     KilojoulePerSecond,
     /// kilojoule per minute
+    ///
+    /// rec20
     KilojoulePerMinute,
     /// pound per foot
+    ///
+    /// rec20
     PoundPerFoot,
     /// kilojoule per hour
+    ///
+    /// rec20
     KilojoulePerHour,
     /// kilojoule per day
+    ///
+    /// rec20
     KilojoulePerDay,
     /// nanoohm
+    ///
+    /// rec20
     Nanoohm,
     /// ohm circular-mil per foot
+    ///
+    /// rec20
     OhmCircularMilPerFoot,
     /// kilohenry
+    ///
+    /// rec20
     Kilohenry,
     /// lumen per square foot
+    ///
+    /// rec20
     LumenPerSquareFoot,
     /// phot
+    ///
+    /// rec20
     Phot,
     /// footcandle
+    ///
+    /// rec20
     Footcandle,
     /// candela per square inch
+    ///
+    /// rec20
     CandelaPerSquareInch,
     /// footlambert
+    ///
+    /// rec20
     Footlambert,
     /// lambert
+    ///
+    /// rec20
     Lambert,
     /// stilb
+    ///
+    /// rec20
     Stilb,
     /// candela per square foot
+    ///
+    /// rec20
     CandelaPerSquareFoot,
     /// kilocandela
+    ///
+    /// rec20
     Kilocandela,
     /// millicandela
+    ///
+    /// rec20
     Millicandela,
     /// Hefner-Kerze
+    ///
+    /// rec20
     HefnerKerze,
     /// international candle
+    ///
+    /// rec20
     InternationalCandle,
     /// British thermal unit (international table) per square foot
+    ///
+    /// rec20
     BritishThermalUnitInternationalTablePerSquareFoot,
     /// British thermal unit (thermochemical) per square foot
+    ///
+    /// rec20
     BritishThermalUnitThermochemicalPerSquareFoot,
     /// calorie (thermochemical) per square centimetre
+    ///
+    /// rec20
     CalorieThermochemicalPerSquareCentimetre,
     /// langley
+    ///
+    /// rec20
     Langley,
     /// decade (logarithmic)
+    ///
+    /// rec20
     DecadeLogarithmic,
     /// pascal squared second
+    ///
+    /// rec20
     PascalSquaredSecond,
     /// bel per metre
+    ///
+    /// rec20
     BelPerMetre,
     /// pound mole
+    ///
+    /// rec20
     PoundMole,
     /// pound mole per second
+    ///
+    /// rec20
     PoundMolePerSecond,
     /// pound mole per minute
+    ///
+    /// rec20
     PoundMolePerMinute,
     /// kilomole per kilogram
+    ///
+    /// rec20
     KilomolePerKilogram,
     /// pound mole per pound
+    ///
+    /// rec20
     PoundMolePerPound,
     /// newton square metre per ampere
+    ///
+    /// rec20
     NewtonSquareMetrePerAmpere,
     /// five pack
+    ///
+    /// rec20
     FivePack,
     /// weber metre
+    ///
+    /// rec20
     WeberMetre,
     /// mol per kilogram pascal
+    ///
+    /// rec20
     MolPerKilogramPascal,
     /// mol per cubic metre pascal
+    ///
+    /// rec20
     MolPerCubicMetrePascal,
     /// unit pole
+    ///
+    /// rec20
     UnitPole,
     /// milligray per second
+    ///
+    /// rec20
     MilligrayPerSecond,
     /// microgray per second
+    ///
+    /// rec20
     MicrograyPerSecond,
     /// nanogray per second
+    ///
+    /// rec20
     NanograyPerSecond,
     /// gray per minute
+    ///
+    /// rec20
     GrayPerMinute,
     /// milligray per minute
+    ///
+    /// rec20
     MilligrayPerMinute,
     /// microgray per minute
+    ///
+    /// rec20
     MicrograyPerMinute,
     /// nanogray per minute
+    ///
+    /// rec20
     NanograyPerMinute,
     /// gray per hour
+    ///
+    /// rec20
     GrayPerHour,
     /// milligray per hour
+    ///
+    /// rec20
     MilligrayPerHour,
     /// microgray per hour
+    ///
+    /// rec20
     MicrograyPerHour,
     /// nanogray per hour
+    ///
+    /// rec20
     NanograyPerHour,
     /// sievert per second
+    ///
+    /// rec20
     SievertPerSecond,
     /// millisievert per second
+    ///
+    /// rec20
     MillisievertPerSecond,
     /// microsievert per second
+    ///
+    /// rec20
     MicrosievertPerSecond,
     /// nanosievert per second
+    ///
+    /// rec20
     NanosievertPerSecond,
     /// rem per second
+    ///
+    /// rec20
     RemPerSecond,
     /// sievert per hour
+    ///
+    /// rec20
     SievertPerHour,
     /// millisievert per hour
+    ///
+    /// rec20
     MillisievertPerHour,
     /// microsievert per hour
+    ///
+    /// rec20
     MicrosievertPerHour,
     /// nanosievert per hour
+    ///
+    /// rec20
     NanosievertPerHour,
     /// sievert per minute
+    ///
+    /// rec20
     SievertPerMinute,
     /// millisievert per minute
+    ///
+    /// rec20
     MillisievertPerMinute,
     /// microsievert per minute
+    ///
+    /// rec20
     MicrosievertPerMinute,
     /// nanosievert per minute
+    ///
+    /// rec20
     NanosievertPerMinute,
     /// reciprocal square inch
+    ///
+    /// rec20
     ReciprocalSquareInch,
     /// pascal square metre per kilogram
+    ///
+    /// rec20
     PascalSquareMetrePerKilogram,
     /// millipascal per metre
+    ///
+    /// rec20
     MillipascalPerMetre,
     /// kilopascal per metre
+    ///
+    /// rec20
     KilopascalPerMetre,
     /// hectopascal per metre
+    ///
+    /// rec20
     HectopascalPerMetre,
     /// standard atmosphere per metre
+    ///
+    /// rec20
     StandardAtmospherePerMetre,
     /// technical atmosphere per metre
+    ///
+    /// rec20
     TechnicalAtmospherePerMetre,
     /// torr per metre
+    ///
+    /// rec20
     TorrPerMetre,
     /// psi per inch
+    ///
+    /// rec20
     PsiPerInch,
     /// cubic metre per second square metre
+    ///
+    /// rec20
     CubicMetrePerSecondSquareMetre,
     /// rhe
+    ///
+    /// rec20
     Rhe,
     /// pound-force foot per inch
+    ///
+    /// rec20
     PoundForceFootPerInch,
     /// pound-force inch per inch
+    ///
+    /// rec20
     PoundForceInchPerInch,
     /// perm (0 ºC)
+    ///
+    /// rec20
     Perm0Oc,
     /// perm (23 ºC)
+    ///
+    /// rec20
     Perm23Oc,
     /// byte per second
+    ///
+    /// rec20
     BytePerSecond,
     /// kilobyte per second
+    ///
+    /// rec20
     KilobytePerSecond,
     /// megabyte per second
+    ///
+    /// rec20
     MegabytePerSecond,
     /// reciprocal volt
+    ///
+    /// rec20
     ReciprocalVolt,
     /// reciprocal radian
+    ///
+    /// rec20
     ReciprocalRadian,
     /// pascal to the power sum of stoichiometric numbers
+    ///
+    /// rec20
     PascalToPowerSumStoichiometricNumbers,
     /// mole per cubiv metre to the power sum of stoichiometric numbers
+    ///
+    /// rec20
     MolePerCubivMetreToPowerSumStoichiometricNumbers,
     /// pascal
+    ///
+    /// rec20
     Pascal,
     /// pad
+    ///
+    /// rec20
     Pad,
     /// proof litre
+    ///
+    /// rec20
     ProofLitre,
     /// proof gallon
+    ///
+    /// rec20
     ProofGallon,
     /// pitch
+    ///
+    /// rec20
     Pitch,
     /// degree Plato
+    ///
+    /// rec20
     DegreePlato,
     /// pound per inch of length
+    ///
+    /// rec20
     PoundPerInchLength,
     /// page per inch
+    ///
+    /// rec20
     PagePerInch,
     /// pair
+    ///
+    /// rec20
     Pair,
     /// pound-force per square inch
+    ///
+    /// rec20
     PoundForcePerSquareInch,
     /// dry pint (US)
+    ///
+    /// rec20
     DryPintUs,
     /// pint (UK)
+    ///
+    /// rec20
     PintUk,
     /// liquid pint (US)
+    ///
+    /// rec20
     LiquidPintUs,
     /// portion
+    ///
+    /// rec20
     Portion,
     /// joule per tesla
+    ///
+    /// rec20
     JoulePerTesla,
     /// erlang
+    ///
+    /// rec20
     Erlang,
     /// octet
+    ///
+    /// rec20
     Octet,
     /// octet per second
+    ///
+    /// rec20
     OctetPerSecond,
     /// shannon
+    ///
+    /// rec20
     Shannon,
     /// hartley
+    ///
+    /// rec20
     Hartley,
     /// natural unit of information
+    ///
+    /// rec20
     NaturalUnitInformation,
     /// shannon per second
+    ///
+    /// rec20
     ShannonPerSecond,
     /// hartley per second
+    ///
+    /// rec20
     HartleyPerSecond,
     /// natural unit of information per second
+    ///
+    /// rec20
     NaturalUnitInformationPerSecond,
     /// second per kilogramm
+    ///
+    /// rec20
     SecondPerKilogramm,
     /// watt square metre
+    ///
+    /// rec20
     WattSquareMetre,
     /// second per radian cubic metre
+    ///
+    /// rec20
     SecondPerRadianCubicMetre,
     /// weber to the power minus one
+    ///
+    /// rec20
     WeberToPowerMinusOne,
     /// reciprocal inch
+    ///
+    /// rec20
     ReciprocalInch,
     /// dioptre
+    ///
+    /// rec20
     Dioptre,
     /// one per one
+    ///
+    /// rec20
     OnePerOne,
     /// newton metre per metre
+    ///
+    /// rec20
     NewtonMetrePerMetre,
     /// kilogram per square metre pascal second
+    ///
+    /// rec20
     KilogramPerSquareMetrePascalSecond,
     /// microgram per hectogram
+    ///
+    /// rec20
     MicrogramPerHectogram,
     /// meal
+    ///
+    /// rec20
     Meal,
     /// pH (potential of Hydrogen)
+    ///
+    /// rec20
     PhPotentialHydrogen,
     /// kilojoule per gram
+    ///
+    /// rec20
     KilojoulePerGram,
     /// femtolitre
+    ///
+    /// rec20
     Femtolitre,
     /// picolitre
+    ///
+    /// rec20
     Picolitre,
     /// nanolitre
+    ///
+    /// rec20
     Nanolitre,
     /// megawatts per minute
+    ///
+    /// rec20
     MegawattsPerMinute,
     /// square metre per cubic metre
+    ///
+    /// rec20
     SquareMetrePerCubicMetre,
     /// Standard cubic metre per day
+    ///
+    /// rec20
     StandardCubicMetrePerDay,
     /// Standard cubic metre per hour
+    ///
+    /// rec20
     StandardCubicMetrePerHour,
     /// Normalized cubic metre per day
+    ///
+    /// rec20
     NormalizedCubicMetrePerDay,
     /// Normalized cubic metre per hour
+    ///
+    /// rec20
     NormalizedCubicMetrePerHour,
     /// Joule per normalised cubic metre
+    ///
+    /// rec20
     JoulePerNormalisedCubicMetre,
     /// Joule per standard cubic metre
+    ///
+    /// rec20
     JoulePerStandardCubicMetre,
     /// page - facsimile
+    ///
+    /// rec20
     PageFacsimile,
     /// quarter (of a year)
+    ///
+    /// rec20
     QuarterAYear,
     /// page - hardcopy
+    ///
+    /// rec20
     PageHardcopy,
     /// quire
+    ///
+    /// rec20
     Quire,
     /// dry quart (US)
+    ///
+    /// rec20
     DryQuartUs,
     /// quart (UK)
+    ///
+    /// rec20
     QuartUk,
     /// liquid quart (US)
+    ///
+    /// rec20
     LiquidQuartUs,
     /// quarter (UK)
+    ///
+    /// rec20
     QuarterUk,
     /// pica
+    ///
+    /// rec20
     Pica,
     /// thousand cubic metre
+    ///
+    /// rec20
     ThousandCubicMetre,
     /// running or operating hour
+    ///
+    /// rec20
     RunningOrOperatingHour,
     /// ream
+    ///
+    /// rec20
     Ream,
     /// room
+    ///
+    /// rec20
     Room,
     /// pound per ream
+    ///
+    /// rec20
     PoundPerReam,
     /// revolutions per minute
+    ///
+    /// rec20
     RevolutionsPerMinute,
     /// revolutions per second
+    ///
+    /// rec20
     RevolutionsPerSecond,
     /// revenue ton mile
+    ///
+    /// rec20
     RevenueTonMile,
     /// square foot per second
+    ///
+    /// rec20
     SquareFootPerSecond,
     /// square metre per second
+    ///
+    /// rec20
     SquareMetrePerSecond,
     /// half year (6 months)
+    ///
+    /// rec20
     HalfYear6Months,
     /// score
+    ///
+    /// rec20
     Score,
     /// scruple
+    ///
+    /// rec20
     Scruple,
     /// second [unit of time]
+    ///
+    /// rec20
     SecondUnitTime,
     /// set
+    ///
+    /// rec20
     Set,
     /// segment
+    ///
+    /// rec20
     Segment,
     /// siemens
+    ///
+    /// rec20
     Siemens,
     /// Standard cubic metre
+    ///
+    /// rec20
     StandardCubicMetre,
     /// mile (statute mile)
+    ///
+    /// rec20
     MileStatuteMile,
     /// square
+    ///
+    /// rec20
     Square,
     /// square, roofing
+    ///
+    /// rec20
     SquareRoofing,
     /// strip
+    ///
+    /// rec20
     Strip,
     /// stick
+    ///
+    /// rec20
     Stick,
     /// stone (UK)
+    ///
+    /// rec20
     StoneUk,
     /// stick, cigarette
+    ///
+    /// rec20
     StickCigarette,
     /// standard litre
+    ///
+    /// rec20
     StandardLitre,
     /// ton (US) or short ton (UK/US)
+    ///
+    /// rec20
     TonUsOrShortTonUkUs,
     /// straw
+    ///
+    /// rec20
     Straw,
     /// skein
+    ///
+    /// rec20
     Skein,
     /// shipment
+    ///
+    /// rec20
     Shipment,
     /// syringe
+    ///
+    /// rec20
     Syringe,
     /// telecommunication line in service
+    ///
+    /// rec20
     TelecommunicationLineInService,
     /// thousand piece
+    ///
+    /// rec20
     ThousandPiece,
     /// kiloampere hour (thousand ampere hour)
+    ///
+    /// rec20
     KiloampereHourThousandAmpereHour,
     /// total acid number
+    ///
+    /// rec20
     TotalAcidNumber,
     /// thousand square inch
+    ///
+    /// rec20
     ThousandSquareInch,
     /// metric ton, including container
+    ///
+    /// rec20
     MetricTonIncludingContainer,
     /// metric ton, including inner packaging
+    ///
+    /// rec20
     MetricTonIncludingInnerPackaging,
     /// tonne kilometre
+    ///
+    /// rec20
     TonneKilometre,
     /// kilogram of imported meat, less offal
+    ///
+    /// rec20
     KilogramImportedMeatLessOffal,
     /// tonne (metric ton)
+    ///
+    /// rec20
     TonneMetricTon,
     /// ten pack
+    ///
+    /// rec20
     TenPack,
     /// teeth per inch
+    ///
+    /// rec20
     TeethPerInch,
     /// ten pair
+    ///
+    /// rec20
     TenPair,
     /// thousand cubic metre per day
+    ///
+    /// rec20
     ThousandCubicMetrePerDay,
     /// trillion (EUR)
+    ///
+    /// rec20
     TrillionEur,
     /// ten set
+    ///
+    /// rec20
     TenSet,
     /// ten thousand sticks
+    ///
+    /// rec20
     TenThousandSticks,
     /// treatment
+    ///
+    /// rec20
     Treatment,
     /// tablet
+    ///
+    /// rec20
     Tablet,
     /// telecommunication line in service average
+    ///
+    /// rec20
     TelecommunicationLineInServiceAverage,
     /// telecommunication port
+    ///
+    /// rec20
     TelecommunicationPort,
     /// volt - ampere per kilogram
+    ///
+    /// rec20
     VoltAmperePerKilogram,
     /// volt
+    ///
+    /// rec20
     Volt,
     /// percent volume
+    ///
+    /// rec20
     PercentVolume,
     /// wet kilo
+    ///
+    /// rec20
     WetKilo,
     /// watt per kilogram
+    ///
+    /// rec20
     WattPerKilogram,
     /// wet pound
+    ///
+    /// rec20
     WetPound,
     /// cord
+    ///
+    /// rec20
     Cord,
     /// wet ton
+    ///
+    /// rec20
     WetTon,
     /// weber
+    ///
+    /// rec20
     Weber,
     /// week
+    ///
+    /// rec20
     Week,
     /// wine gallon
+    ///
+    /// rec20
     WineGallon,
     /// watt hour
+    ///
+    /// rec20
     WattHour,
     /// working month
+    ///
+    /// rec20
     WorkingMonth,
     /// standard
+    ///
+    /// rec20
     Standard,
     /// watt
+    ///
+    /// rec20
     Watt,
     /// Gunter's chain
+    ///
+    /// rec20
     GuntersChain,
     /// square yard
+    ///
+    /// rec20
     SquareYard,
     /// cubic yard
+    ///
+    /// rec20
     CubicYard,
     /// yard
+    ///
+    /// rec20
     Yard,
     /// hanging container
+    ///
+    /// rec20
     HangingContainer,
     /// nanomole
+    ///
+    /// Rec20
     Nanomole,
     /// page
+    ///
+    /// rec20
     Page,
     /// mutually defined
+    ///
+    /// rec20
     MutuallyDefined,
     /// Drum, steel
+    ///
+    /// rec21
     DrumSteel,
     /// Drum, aluminium
+    ///
+    /// rec21
     DrumAluminium,
     /// Drum, plywood
+    ///
+    /// rec21
     DrumPlywood,
     /// Container, flexible
+    ///
+    /// rec21
     ContainerFlexible,
     /// Drum, fibre
+    ///
+    /// rec21
     DrumFibre,
     /// Drum, wooden
+    ///
+    /// rec21
     DrumWooden,
     /// Barrel, wooden
+    ///
+    /// rec21
     BarrelWooden,
     /// Jerrican, steel
+    ///
+    /// rec21
     JerricanSteel,
     /// Jerrican, plastic
+    ///
+    /// rec21
     JerricanPlastic,
     /// Bag, super bulk
+    ///
+    /// rec21
     BagSuperBulk,
     /// Bag, polybag
+    ///
+    /// rec21
     BagPolybag,
     /// Box, steel
+    ///
+    /// rec21
     BoxSteel,
     /// Box, aluminium
+    ///
+    /// rec21
     BoxAluminium,
     /// Box, natural wood
+    ///
+    /// rec21
     BoxNaturalWood,
     /// Box, plywood
+    ///
+    /// rec21
     BoxPlywood,
     /// Box, reconstituted wood
+    ///
+    /// rec21
     BoxReconstitutedWood,
     /// Box, fibreboard
+    ///
+    /// rec21
     BoxFibreboard,
     /// Box, plastic
+    ///
+    /// rec21
     BoxPlastic,
     /// Bag, woven plastic
+    ///
+    /// rec21
     BagWovenPlastic,
     /// Bag, textile
+    ///
+    /// rec21
     BagTextile,
     /// Bag, paper
+    ///
+    /// rec21
     BagPaper,
     /// Composite packaging, plastic receptacle
+    ///
+    /// rec21
     CompositePackagingPlasticReceptacle,
     /// Composite packaging, glass receptacle
+    ///
+    /// rec21
     CompositePackagingGlassReceptacle,
     /// Case, car
+    ///
+    /// rec21
     CaseCar,
     /// Case, wooden
+    ///
+    /// rec21
     CaseWooden,
     /// Pallet, wooden
+    ///
+    /// rec21
     PalletWooden,
     /// Crate, wooden
+    ///
+    /// rec21
     CrateWooden,
     /// Bundle, wooden
+    ///
+    /// rec21
     BundleWooden,
     /// Intermediate bulk container, rigid plastic
+    ///
+    /// rec21
     IntermediateBulkContainerRigidPlastic,
     /// Receptacle, fibre
+    ///
+    /// rec21
     ReceptacleFibre,
     /// Receptacle, paper
+    ///
+    /// rec21
     ReceptaclePaper,
     /// Receptacle, wooden
+    ///
+    /// rec21
     ReceptacleWooden,
     /// Aerosol
+    ///
+    /// rec21
     Aerosol,
     /// Pallet, modular, collars 80cms * 60cms
+    ///
+    /// rec21
     PalletModularCollars80cms60cms,
     /// Pallet, shrinkwrapped
+    ///
+    /// rec21
     PalletShrinkwrapped,
     /// Pallet, 100cms * 110cms
+    ///
+    /// rec21
     Pallet100cms110cms,
     /// Clamshell
+    ///
+    /// rec21
     Clamshell,
     /// Cone
+    ///
+    /// rec21
     Cone,
     /// Ball
+    ///
+    /// rec21
     Ball_Dup,
     /// Ampoule, non-protected
+    ///
+    /// rec21
     AmpouleNonProtected,
     /// Ampoule, protected
+    ///
+    /// rec21
     AmpouleProtected,
     /// Atomizer
+    ///
+    /// rec21
     Atomizer,
     /// Capsule
+    ///
+    /// rec21
     Capsule,
     /// Belt
+    ///
+    /// rec21
     Belt,
     /// Barrel
+    ///
+    /// rec21
     Barrel,
     /// Bobbin
+    ///
+    /// rec21
     Bobbin,
     /// Bottlecrate / bottlerack
+    ///
+    /// rec21
     BottlecrateBottlerack,
     /// Board
+    ///
+    /// rec21
     Board,
     /// Bundle
+    ///
+    /// rec21
     Bundle,
     /// Balloon, non-protected
+    ///
+    /// rec21
     BalloonNonProtected,
     /// Bag
+    ///
+    /// rec21
     Bag,
     /// Bunch
+    ///
+    /// rec21
     Bunch,
     /// Bin
+    ///
+    /// rec21
     Bin,
     /// Bucket
+    ///
+    /// rec21
     Bucket,
     /// Basket
+    ///
+    /// rec21
     Basket,
     /// Bale, compressed
+    ///
+    /// rec21
     BaleCompressed,
     /// Basin
+    ///
+    /// rec21
     Basin,
     /// Bale, non-compressed
+    ///
+    /// rec21
     BaleNonCompressed,
     /// Bottle, non-protected, cylindrical
+    ///
+    /// rec21
     BottleNonProtectedCylindrical,
     /// Balloon, protected
+    ///
+    /// rec21
     BalloonProtected,
     /// Bottle, protected cylindrical
+    ///
+    /// rec21
     BottleProtectedCylindrical,
     /// Bar
+    ///
+    /// rec21
     Bar,
     /// Bottle, non-protected, bulbous
+    ///
+    /// rec21
     BottleNonProtectedBulbous,
     /// Bolt
+    ///
+    /// rec21
     Bolt,
     /// Butt
+    ///
+    /// rec21
     Butt,
     /// Bottle, protected bulbous
+    ///
+    /// rec21
     BottleProtectedBulbous,
     /// Box, for liquids
+    ///
+    /// rec21
     BoxForLiquids,
     /// Box
+    ///
+    /// rec21
     Box,
     /// Board, in bundle/bunch/truss
+    ///
+    /// rec21
     BoardInBundleBunchTruss,
     /// Bars, in bundle/bunch/truss
+    ///
+    /// rec21
     BarsInBundleBunchTruss,
     /// Can, rectangular
+    ///
+    /// rec21
     CanRectangular,
     /// Crate, beer
+    ///
+    /// rec21
     CrateBeer,
     /// Churn
+    ///
+    /// rec21
     Churn,
     /// Can, with handle and spout
+    ///
+    /// rec21
     CanWithHandleAndSpout,
     /// Creel
+    ///
+    /// rec21
     Creel,
     /// Coffer
+    ///
+    /// rec21
     Coffer,
     /// Cage
+    ///
+    /// rec21
     Cage,
     /// Chest
+    ///
+    /// rec21
     Chest,
     /// Canister
+    ///
+    /// rec21
     Canister,
     /// Coffin
+    ///
+    /// rec21
     Coffin,
     /// Cask
+    ///
+    /// rec21
     Cask,
     /// Coil
+    ///
+    /// rec21
     Coil,
     /// Card
+    ///
+    /// rec21
     Card_Dup,
     /// Container, not otherwise specified as transport equipment
+    ///
+    /// rec21
     ContainerNotOtherwiseSpecifiedAsTransportEquipment,
     /// Carboy, non-protected
+    ///
+    /// rec21
     CarboyNonProtected,
     /// Carboy, protected
+    ///
+    /// rec21
     CarboyProtected,
     /// Cartridge
+    ///
+    /// rec21
     Cartridge,
     /// Crate
+    ///
+    /// rec21
     Crate,
     /// Case
+    ///
+    /// rec21
     Case,
     /// Carton
+    ///
+    /// rec21
     Carton,
     /// Cup
+    ///
+    /// rec21
     Cup,
     /// Cover
+    ///
+    /// rec21
     Cover,
     /// Cage, roll
+    ///
+    /// rec21
     CageRoll,
     /// Can, cylindrical
+    ///
+    /// rec21
     CanCylindrical,
     /// Cylinder
+    ///
+    /// rec21
     Cylinder,
     /// Canvas
+    ///
+    /// rec21
     Canvas,
     /// Crate, multiple layer, plastic
+    ///
+    /// rec21
     CrateMultipleLayerPlastic,
     /// Crate, multiple layer, wooden
+    ///
+    /// rec21
     CrateMultipleLayerWooden,
     /// Crate, multiple layer, cardboard
+    ///
+    /// rec21
     CrateMultipleLayerCardboard,
     /// Cage, Commonwealth Handling Equipment Pool (CHEP)
+    ///
+    /// rec21
     CageCommonwealthHandlingEquipmentPoolChep,
     /// Box, Commonwealth Handling Equipment Pool (CHEP), Eurobox
+    ///
+    /// rec21
     BoxCommonwealthHandlingEquipmentPoolChepEurobox,
     /// Drum, iron
+    ///
+    /// rec21
     DrumIron,
     /// Demijohn, non-protected
+    ///
+    /// rec21
     DemijohnNonProtected,
     /// Crate, bulk, cardboard
+    ///
+    /// rec21
     CrateBulkCardboard,
     /// Crate, bulk, plastic
+    ///
+    /// rec21
     CrateBulkPlastic,
     /// Crate, bulk, wooden
+    ///
+    /// rec21
     CrateBulkWooden,
     /// Dispenser
+    ///
+    /// rec21
     Dispenser,
     /// Demijohn, protected
+    ///
+    /// rec21
     DemijohnProtected,
     /// Drum
+    ///
+    /// rec21
     Drum,
     /// Tray, one layer no cover, plastic
+    ///
+    /// rec21
     TrayOneLayerNoCoverPlastic,
     /// Tray, one layer no cover, wooden
+    ///
+    /// rec21
     TrayOneLayerNoCoverWooden,
     /// Tray, one layer no cover, polystyrene
+    ///
+    /// rec21
     TrayOneLayerNoCoverPolystyrene,
     /// Tray, one layer no cover, cardboard
+    ///
+    /// rec21
     TrayOneLayerNoCoverCardboard,
     /// Tray, two layers no cover, plastic tray
+    ///
+    /// rec21
     TrayTwoLayersNoCoverPlasticTray,
     /// Tray, two layers no cover, wooden
+    ///
+    /// rec21
     TrayTwoLayersNoCoverWooden,
     /// Tray, two layers no cover, cardboard
+    ///
+    /// rec21
     TrayTwoLayersNoCoverCardboard,
     /// Bag, plastic
+    ///
+    /// rec21
     BagPlastic,
     /// Case, with pallet base
+    ///
+    /// rec21
     CaseWithPalletBase,
     /// Case, with pallet base, wooden
+    ///
+    /// rec21
     CaseWithPalletBaseWooden,
     /// Case, with pallet base, cardboard
+    ///
+    /// rec21
     CaseWithPalletBaseCardboard,
     /// Case, with pallet base, plastic
+    ///
+    /// rec21
     CaseWithPalletBasePlastic,
     /// Case, with pallet base, metal
+    ///
+    /// rec21
     CaseWithPalletBaseMetal,
     /// Case, isothermic
+    ///
+    /// rec21
     CaseIsothermic,
     /// Envelope
+    ///
+    /// rec21
     Envelope,
     /// Flexibag
+    ///
+    /// rec21
     Flexibag,
     /// Crate, fruit
+    ///
+    /// rec21
     CrateFruit,
     /// Crate, framed
+    ///
+    /// rec21
     CrateFramed,
     /// Flexitank
+    ///
+    /// rec21
     Flexitank,
     /// Firkin
+    ///
+    /// rec21
     Firkin,
     /// Flask
+    ///
+    /// rec21
     Flask,
     /// Footlocker
+    ///
+    /// rec21
     Footlocker,
     /// Filmpack
+    ///
+    /// rec21
     Filmpack,
     /// Frame
+    ///
+    /// rec21
     Frame,
     /// Foodtainer
+    ///
+    /// rec21
     Foodtainer,
     /// Cart, flatbed
+    ///
+    /// rec21
     CartFlatbed,
     /// Bag, flexible container
+    ///
+    /// rec21
     BagFlexibleContainer,
     /// Bottle, gas
+    ///
+    /// rec21
     BottleGas,
     /// Girder
+    ///
+    /// rec21
     Girder,
     /// Container, gallon
+    ///
+    /// rec21
     ContainerGallon,
     /// Receptacle, glass
+    ///
+    /// rec21
     ReceptacleGlass,
     /// Tray, containing horizontally stacked flat items
+    ///
+    /// rec21
     TrayContainingHorizontallyStackedFlatItems,
     /// Bag, gunny
+    ///
+    /// rec21
     BagGunny,
     /// Girders, in bundle/bunch/truss
+    ///
+    /// rec21
     GirdersInBundleBunchTruss,
     /// Basket, with handle, plastic
+    ///
+    /// rec21
     BasketWithHandlePlastic,
     /// Basket, with handle, wooden
+    ///
+    /// rec21
     BasketWithHandleWooden,
     /// Basket, with handle, cardboard
+    ///
+    /// rec21
     BasketWithHandleCardboard,
     /// Hogshead
+    ///
+    /// rec21
     Hogshead,
     /// Hanger
+    ///
+    /// rec21
     Hanger,
     /// Hamper
+    ///
+    /// rec21
     Hamper,
     /// Package, display, wooden
+    ///
+    /// rec21
     PackageDisplayWooden,
     /// Package, display, cardboard
+    ///
+    /// rec21
     PackageDisplayCardboard,
     /// Package, display, plastic
+    ///
+    /// rec21
     PackageDisplayPlastic,
     /// Package, display, metal
+    ///
+    /// rec21
     PackageDisplayMetal,
     /// Package, show
+    ///
+    /// rec21
     PackageShow,
     /// Package, flow
+    ///
+    /// rec21
     PackageFlow,
     /// Package, paper wrapped
+    ///
+    /// rec21
     PackagePaperWrapped,
     /// Drum, plastic
+    ///
+    /// rec21
     DrumPlastic,
     /// Package, cardboard, with bottle grip-holes
+    ///
+    /// rec21
     PackageCardboardWithBottleGripHoles,
     /// Tray, rigid, lidded stackable (CEN TS 14482:2002)
+    ///
+    /// rec21
     TrayRigidLiddedStackableCenTs144822002,
     /// Ingot
+    ///
+    /// rec21
     Ingot,
     /// Ingots, in bundle/bunch/truss
+    ///
+    /// rec21
     IngotsInBundleBunchTruss,
     /// Bag, jumbo
+    ///
+    /// rec21
     BagJumbo,
     /// Jerrican, rectangular
+    ///
+    /// rec21
     JerricanRectangular,
     /// Jug
+    ///
+    /// rec21
     Jug,
     /// Jar
+    ///
+    /// rec21
     Jar,
     /// Jutebag
+    ///
+    /// rec21
     Jutebag,
     /// Jerrican, cylindrical
+    ///
+    /// rec21
     JerricanCylindrical,
     /// Keg
+    ///
+    /// rec21
     Keg,
     /// Kit
+    ///
+    /// rec21
     Kit_Dup,
     /// Luggage
+    ///
+    /// rec21
     Luggage,
     /// Log
+    ///
+    /// rec21
     Log,
     /// Lot
+    ///
+    /// rec21
     Lot,
     /// Lug
+    ///
+    /// rec21
     Lug,
     /// Liftvan
+    ///
+    /// rec21
     Liftvan,
     /// Logs, in bundle/bunch/truss
+    ///
+    /// rec21
     LogsInBundleBunchTruss,
     /// Crate, metal
+    ///
+    /// rec21
     CrateMetal,
     /// Bag, multiply
+    ///
+    /// rec21
     BagMultiply,
     /// Crate, milk
+    ///
+    /// rec21
     CrateMilk,
     /// Container, metal
+    ///
+    /// rec21
     ContainerMetal,
     /// Receptacle, metal
+    ///
+    /// rec21
     ReceptacleMetal,
     /// Sack, multi-wall
+    ///
+    /// rec21
     SackMultiWall,
     /// Mat
+    ///
+    /// rec21
     Mat,
     /// Receptacle, plastic wrapped
+    ///
+    /// rec21
     ReceptaclePlasticWrapped,
     /// Matchbox
+    ///
+    /// rec21
     Matchbox,
     /// Not available
+    ///
+    /// rec21
     NotAvailable,
     /// Unpacked or unpackaged
+    ///
+    /// rec21
     UnpackedOrUnpackaged,
     /// Unpacked or unpackaged, single unit
+    ///
+    /// rec21
     UnpackedOrUnpackagedSingleUnit,
     /// Unpacked or unpackaged, multiple units
+    ///
+    /// rec21
     UnpackedOrUnpackagedMultipleUnits,
     /// Nest
+    ///
+    /// rec21
     Nest,
     /// Net
+    ///
+    /// rec21
     Net,
     /// Net, tube, plastic
+    ///
+    /// rec21
     NetTubePlastic,
     /// Net, tube, textile
+    ///
+    /// rec21
     NetTubeTextile,
     /// Two sided cage on wheels with fixing strap
+    ///
+    /// Rec21
     TwoSidedCageOnWheelsWithFixingStrap,
     /// Trolley
+    ///
+    /// Rec21
     Trolley,
     /// Oneway pallet ISO 0 - 1/2 EURO Pallet
+    ///
+    /// Rec21
     OnewayPalletIso012EuroPallet,
     /// Oneway pallet ISO 1 - 1/1 EURO Pallet
+    ///
+    /// Rec21
     OnewayPalletIso111EuroPallet,
     /// Oneway pallet ISO 2 - 2/1 EURO Pallet
+    ///
+    /// Rec21
     OnewayPalletIso221EuroPallet,
     /// Pallet with exceptional dimensions
+    ///
+    /// Rec21
     PalletWithExceptionalDimensions,
     /// Wooden pallet 40 cm x 80 cm
+    ///
+    /// Rec21
     WoodenPallet40CmX80Cm,
     /// Plastic pallet SRS 60 cm x 80 cm
+    ///
+    /// Rec21
     PlasticPalletSrs60CmX80Cm,
     /// Plastic pallet SRS 80 cm x 120 cm
+    ///
+    /// Rec21
     PlasticPalletSrs80CmX120Cm,
     /// Pallet, CHEP 40 cm x 60 cm
+    ///
+    /// rec21
     PalletChep40CmX60Cm,
     /// Pallet, CHEP 80 cm x 120 cm
+    ///
+    /// rec21
     PalletChep80CmX120Cm,
     /// Pallet, CHEP 100 cm x 120 cm
+    ///
+    /// rec21
     PalletChep100CmX120Cm,
     /// Pallet, AS 4068-1993
+    ///
+    /// rec21
     PalletAs40681993,
     /// Pallet, ISO T11
+    ///
+    /// rec21
     PalletIsoT11,
     /// Platform, unspecified weight or dimension
+    ///
+    /// rec21
     PlatformUnspecifiedWeightOrDimension,
     /// Pallet ISO 0 - 1/2 EURO Pallet
+    ///
+    /// Rec21
     PalletIso012EuroPallet,
     /// Pallet ISO 1 - 1/1 EURO Pallet
+    ///
+    /// Rec21
     PalletIso111EuroPallet,
     /// Pallet ISO 2 – 2/1 EURO Pallet
+    ///
+    /// Rec21
     PalletIso221EuroPallet,
     /// 1/4 EURO Pallet
+    ///
+    /// Rec21
     _14EuroPallet,
     /// Block
+    ///
+    /// rec21
     Block,
     /// 1/8 EURO Pallet
+    ///
+    /// Rec21
     _18EuroPallet,
     /// Synthetic pallet ISO 1
+    ///
+    /// Rec21
     SyntheticPalletIso1,
     /// Synthetic pallet ISO 2
+    ///
+    /// Rec21
     SyntheticPalletIso2,
     /// Wholesaler pallet
+    ///
+    /// Rec21
     WholesalerPallet,
     /// Pallet 80 X 100 cm
+    ///
+    /// Rec21
     Pallet80X100Cm,
     /// Pallet 60 X 100 cm
+    ///
+    /// Rec21
     Pallet60X100Cm,
     /// Oneway pallet
+    ///
+    /// Rec21
     OnewayPallet,
     /// Octabin
+    ///
+    /// rec21
     Octabin,
     /// Container, outer
+    ///
+    /// rec21
     ContainerOuter,
     /// Returnable pallet
+    ///
+    /// Rec21
     ReturnablePallet,
     /// Large bag, pallet sized
+    ///
+    /// Rec21
     LargeBagPalletSized,
     /// A wheeled pallet with raised rim (81 x 67 x 135)
+    ///
+    /// Rec21
     AWheeledPalletWithRaisedRim81X67X135,
     /// A Wheeled pallet with raised rim (81 x 72 x 135)
+    ///
+    /// Rec21
     AWheeledPalletWithRaisedRim81X72X135,
     /// Wheeled pallet with raised rim ( 81 x 60 x 16)
+    ///
+    /// Rec21
     WheeledPalletWithRaisedRim81X60X16,
     /// CHEP pallet 60 cm x 80 cm
+    ///
+    /// Rec21
     ChepPallet60CmX80Cm,
     /// Pan
+    ///
+    /// rec21
     Pan,
     /// LPR pallet 60 cm x 80 cm
+    ///
+    /// Rec21
     LprPallet60CmX80Cm,
     /// LPR pallet 80 cm x 120 cm
+    ///
+    /// Rec21
     LprPallet80CmX120Cm,
     /// Packet
+    ///
+    /// rec21
     Packet,
     /// Pallet, box Combined open-ended box and pallet
+    ///
+    /// rec21
     PalletBoxCombinedOpenEndedBoxAndPallet,
     /// Parcel
+    ///
+    /// rec21
     Parcel,
     /// Pallet, modular, collars 80cms * 100cms
+    ///
+    /// rec21
     PalletModularCollars80cms100cms,
     /// Pallet, modular, collars 80cms * 120cms
+    ///
+    /// rec21
     PalletModularCollars80cms120cms,
     /// Pen
+    ///
+    /// rec21
     Pen,
     /// Plate
+    ///
+    /// rec21
     Plate,
     /// Pitcher
+    ///
+    /// rec21
     Pitcher,
     /// Pipe
+    ///
+    /// rec21
     Pipe,
     /// Punnet
+    ///
+    /// rec21
     Punnet,
     /// Package
+    ///
+    /// rec21
     Package,
     /// Pail
+    ///
+    /// rec21
     Pail,
     /// Plank
+    ///
+    /// rec21
     Plank,
     /// Pouch
+    ///
+    /// rec21
     Pouch,
     /// Piece
+    ///
+    /// rec21
     Piece_Dup,
     /// Receptacle, plastic
+    ///
+    /// rec21
     ReceptaclePlastic,
     /// Pot
+    ///
+    /// rec21
     Pot,
     /// Tray
+    ///
+    /// rec21
     Tray,
     /// Pipes, in bundle/bunch/truss
+    ///
+    /// rec21
     PipesInBundleBunchTruss,
     /// Pallet
+    ///
+    /// rec21
     Pallet,
     /// Plates, in bundle/bunch/truss
+    ///
+    /// rec21
     PlatesInBundleBunchTruss,
     /// Planks, in bundle/bunch/truss
+    ///
+    /// rec21
     PlanksInBundleBunchTruss,
     /// Drum, steel, non-removable head
+    ///
+    /// rec21
     DrumSteelNonRemovableHead,
     /// Drum, steel, removable head
+    ///
+    /// rec21
     DrumSteelRemovableHead,
     /// Drum, aluminium, non-removable head
+    ///
+    /// rec21
     DrumAluminiumNonRemovableHead,
     /// Drum, aluminium, removable head
+    ///
+    /// rec21
     DrumAluminiumRemovableHead,
     /// Drum, plastic, non-removable head
+    ///
+    /// rec21
     DrumPlasticNonRemovableHead,
     /// Drum, plastic, removable head
+    ///
+    /// rec21
     DrumPlasticRemovableHead,
     /// Barrel, wooden, bung type
+    ///
+    /// rec21
     BarrelWoodenBungType,
     /// Barrel, wooden, removable head
+    ///
+    /// rec21
     BarrelWoodenRemovableHead,
     /// Jerrican, steel, non-removable head
+    ///
+    /// rec21
     JerricanSteelNonRemovableHead,
     /// Jerrican, steel, removable head
+    ///
+    /// rec21
     JerricanSteelRemovableHead,
     /// Jerrican, plastic, non-removable head
+    ///
+    /// rec21
     JerricanPlasticNonRemovableHead,
     /// Jerrican, plastic, removable head
+    ///
+    /// rec21
     JerricanPlasticRemovableHead,
     /// Box, wooden, natural wood, ordinary
+    ///
+    /// rec21
     BoxWoodenNaturalWoodOrdinary,
     /// Box, wooden, natural wood, with sift proof walls
+    ///
+    /// rec21
     BoxWoodenNaturalWoodWithSiftProofWalls,
     /// Box, plastic, expanded
+    ///
+    /// rec21
     BoxPlasticExpanded,
     /// Box, plastic, solid
+    ///
+    /// rec21
     BoxPlasticSolid,
     /// Rod
+    ///
+    /// rec21
     Rod,
     /// Ring
+    ///
+    /// rec21
     Ring,
     /// Rack, clothing hanger
+    ///
+    /// rec21
     RackClothingHanger,
     /// Rack
+    ///
+    /// rec21
     Rack,
     /// Reel
+    ///
+    /// rec21
     Reel,
     /// Roll
+    ///
+    /// rec21
     Roll,
     /// Rednet
+    ///
+    /// rec21
     Rednet,
     /// Rods, in bundle/bunch/truss
+    ///
+    /// rec21
     RodsInBundleBunchTruss,
     /// Sack
+    ///
+    /// rec21
     Sack,
     /// Slab
+    ///
+    /// rec21
     Slab,
     /// Crate, shallow
+    ///
+    /// rec21
     CrateShallow,
     /// Spindle
+    ///
+    /// rec21
     Spindle,
     /// Sea-chest
+    ///
+    /// rec21
     SeaChest,
     /// Sachet
+    ///
+    /// rec21
     Sachet,
     /// Skid
+    ///
+    /// rec21
     Skid,
     /// Case, skeleton
+    ///
+    /// rec21
     CaseSkeleton,
     /// Slipsheet
+    ///
+    /// rec21
     Slipsheet,
     /// Sheetmetal
+    ///
+    /// rec21
     Sheetmetal,
     /// Spool
+    ///
+    /// rec21
     Spool,
     /// Sheet, plastic wrapping
+    ///
+    /// rec21
     SheetPlasticWrapping,
     /// Case, steel
+    ///
+    /// rec21
     CaseSteel,
     /// Sheet
+    ///
+    /// rec21
     Sheet,
     /// Suitcase
+    ///
+    /// rec21
     Suitcase,
     /// Envelope, steel
+    ///
+    /// rec21
     EnvelopeSteel,
     /// Shrinkwrapped
+    ///
+    /// rec21
     Shrinkwrapped,
     /// Set
+    ///
+    /// Rec21
     Set_Dup,
     /// Sleeve
+    ///
+    /// rec21
     Sleeve,
     /// Sheets, in bundle/bunch/truss
+    ///
+    /// rec21
     SheetsInBundleBunchTruss,
     /// Tablet
+    ///
+    /// rec21
     Tablet_Dup,
     /// Tub
+    ///
+    /// rec21
     Tub,
     /// Tea-chest
+    ///
+    /// rec21
     TeaChest,
     /// Tube, collapsible
+    ///
+    /// rec21
     TubeCollapsible,
     /// Tyre
+    ///
+    /// rec21
     Tyre_Dup,
     /// Tank container, generic
+    ///
+    /// rec21
     TankContainerGeneric,
     /// Tierce
+    ///
+    /// rec21
     Tierce,
     /// Tank, rectangular
+    ///
+    /// rec21
     TankRectangular,
     /// Tub, with lid
+    ///
+    /// rec21
     TubWithLid,
     /// Tin
+    ///
+    /// rec21
     Tin,
     /// Tun
+    ///
+    /// rec21
     Tun,
     /// Trunk
+    ///
+    /// rec21
     Trunk,
     /// Truss
+    ///
+    /// rec21
     Truss,
     /// Bag, tote
+    ///
+    /// rec21
     BagTote,
     /// Tube
+    ///
+    /// rec21
     Tube,
     /// Tube, with nozzle
+    ///
+    /// rec21
     TubeWithNozzle,
     /// Pallet, triwall
+    ///
+    /// rec21
     PalletTriwall,
     /// Tank, cylindrical
+    ///
+    /// rec21
     TankCylindrical,
     /// Tubes, in bundle/bunch/truss
+    ///
+    /// rec21
     TubesInBundleBunchTruss,
     /// Uncaged
+    ///
+    /// rec21
     Uncaged,
     /// Unit
+    ///
+    /// rec21
     Unit,
     /// Vat
+    ///
+    /// rec21
     Vat,
     /// Bulk, gas (at 1031 mbar and 15°C)
+    ///
+    /// rec21
     BulkGasAt1031MbarAnd15C,
     /// Vial
+    ///
+    /// rec21
     Vial,
     /// Vanpack
+    ///
+    /// rec21
     Vanpack,
     /// Bulk, liquid
+    ///
+    /// rec21
     BulkLiquid,
     /// Vehicle
+    ///
+    /// rec21
     Vehicle,
     /// Bulk, solid, large particles (“nodules”)
+    ///
+    /// rec21
     BulkSolidLargeParticlesNodules,
     /// Vacuum-packed
+    ///
+    /// rec21
     VacuumPacked,
     /// Bulk, liquefied gas (at abnormal temperature/pressure)
+    ///
+    /// rec21
     BulkLiquefiedGasAtAbnormalTemperaturePressure,
     /// Bulk, solid, granular particles (“grains”)
+    ///
+    /// rec21
     BulkSolidGranularParticlesGrains,
     /// Bulk, scrap metal
+    ///
+    /// rec21
     BulkScrapMetal,
     /// Bulk, solid, fine particles (“powders”)
+    ///
+    /// rec21
     BulkSolidFineParticlesPowders,
     /// Intermediate bulk container
+    ///
+    /// rec21
     IntermediateBulkContainer,
     /// Wickerbottle
+    ///
+    /// rec21
     Wickerbottle,
     /// Intermediate bulk container, steel
+    ///
+    /// rec21
     IntermediateBulkContainerSteel,
     /// Intermediate bulk container, aluminium
+    ///
+    /// rec21
     IntermediateBulkContainerAluminium,
     /// Intermediate bulk container, metal
+    ///
+    /// rec21
     IntermediateBulkContainerMetal,
     /// Intermediate bulk container, steel, pressurised > 10 kpa
+    ///
+    /// rec21
     IntermediateBulkContainerSteelPressurised10Kpa,
     /// Intermediate bulk container, aluminium, pressurised > 10 kpa
+    ///
+    /// rec21
     IntermediateBulkContainerAluminiumPressurised10Kpa,
     /// Intermediate bulk container, metal, pressure 10 kpa
+    ///
+    /// rec21
     IntermediateBulkContainerMetalPressure10Kpa,
     /// Intermediate bulk container, steel, liquid
+    ///
+    /// rec21
     IntermediateBulkContainerSteelLiquid,
     /// Intermediate bulk container, aluminium, liquid
+    ///
+    /// rec21
     IntermediateBulkContainerAluminiumLiquid,
     /// Intermediate bulk container, metal, liquid
+    ///
+    /// rec21
     IntermediateBulkContainerMetalLiquid,
     /// Intermediate bulk container, woven plastic, without coat/liner
+    ///
+    /// rec21
     IntermediateBulkContainerWovenPlasticWithoutCoatLiner,
     /// Intermediate bulk container, woven plastic, coated
+    ///
+    /// rec21
     IntermediateBulkContainerWovenPlasticCoated,
     /// Intermediate bulk container, woven plastic, with liner
+    ///
+    /// rec21
     IntermediateBulkContainerWovenPlasticWithLiner,
     /// Intermediate bulk container, woven plastic, coated and liner
+    ///
+    /// rec21
     IntermediateBulkContainerWovenPlasticCoatedAndLiner,
     /// Intermediate bulk container, plastic film
+    ///
+    /// rec21
     IntermediateBulkContainerPlasticFilm,
     /// Intermediate bulk container, textile with out coat/liner
+    ///
+    /// rec21
     IntermediateBulkContainerTextileWithOutCoatLiner,
     /// Intermediate bulk container, natural wood, with inner liner
+    ///
+    /// rec21
     IntermediateBulkContainerNaturalWoodWithInnerLiner,
     /// Intermediate bulk container, textile, coated
+    ///
+    /// rec21
     IntermediateBulkContainerTextileCoated,
     /// Intermediate bulk container, textile, with liner
+    ///
+    /// rec21
     IntermediateBulkContainerTextileWithLiner,
     /// Intermediate bulk container, textile, coated and liner
+    ///
+    /// rec21
     IntermediateBulkContainerTextileCoatedAndLiner,
     /// Intermediate bulk container, plywood, with inner liner
+    ///
+    /// rec21
     IntermediateBulkContainerPlywoodWithInnerLiner,
     /// Intermediate bulk container, reconstituted wood, with inner liner
+    ///
+    /// rec21
     IntermediateBulkContainerReconstitutedWoodWithInnerLiner,
     /// Bag, woven plastic, without inner coat/liner
+    ///
+    /// rec21
     BagWovenPlasticWithoutInnerCoatLiner,
     /// Bag, woven plastic, sift proof
+    ///
+    /// rec21
     BagWovenPlasticSiftProof,
     /// Bag, woven plastic, water resistant
+    ///
+    /// rec21
     BagWovenPlasticWaterResistant,
     /// Bag, plastics film
+    ///
+    /// rec21
     BagPlasticsFilm,
     /// Bag, textile, without inner coat/liner
+    ///
+    /// rec21
     BagTextileWithoutInnerCoatLiner,
     /// Bag, textile, sift proof
+    ///
+    /// rec21
     BagTextileSiftProof,
     /// Bag, textile, water resistant
+    ///
+    /// rec21
     BagTextileWaterResistant,
     /// Bag, paper, multi-wall
+    ///
+    /// rec21
     BagPaperMultiWall,
     /// Bag, paper, multi-wall, water resistant
+    ///
+    /// rec21
     BagPaperMultiWallWaterResistant,
     /// Composite packaging, plastic receptacle in steel drum
+    ///
+    /// rec21
     CompositePackagingPlasticReceptacleInSteelDrum,
     /// Composite packaging, plastic receptacle in steel crate box
+    ///
+    /// rec21
     CompositePackagingPlasticReceptacleInSteelCrateBox,
     /// Composite packaging, plastic receptacle in aluminium drum
+    ///
+    /// rec21
     CompositePackagingPlasticReceptacleInAluminiumDrum,
     /// Composite packaging, plastic receptacle in aluminium crate
+    ///
+    /// rec21
     CompositePackagingPlasticReceptacleInAluminiumCrate,
     /// Composite packaging, plastic receptacle in wooden box
+    ///
+    /// rec21
     CompositePackagingPlasticReceptacleInWoodenBox,
     /// Composite packaging, plastic receptacle in plywood drum
+    ///
+    /// rec21
     CompositePackagingPlasticReceptacleInPlywoodDrum,
     /// Composite packaging, plastic receptacle in plywood box
+    ///
+    /// rec21
     CompositePackagingPlasticReceptacleInPlywoodBox,
     /// Composite packaging, plastic receptacle in fibre drum
+    ///
+    /// rec21
     CompositePackagingPlasticReceptacleInFibreDrum,
     /// Composite packaging, plastic receptacle in fibreboard box
+    ///
+    /// rec21
     CompositePackagingPlasticReceptacleInFibreboardBox,
     /// Composite packaging, plastic receptacle in plastic drum
+    ///
+    /// rec21
     CompositePackagingPlasticReceptacleInPlasticDrum,
     /// Composite packaging, plastic receptacle in solid plastic box
+    ///
+    /// rec21
     CompositePackagingPlasticReceptacleInSolidPlasticBox,
     /// Composite packaging, glass receptacle in steel drum
+    ///
+    /// rec21
     CompositePackagingGlassReceptacleInSteelDrum,
     /// Composite packaging, glass receptacle in steel crate box
+    ///
+    /// rec21
     CompositePackagingGlassReceptacleInSteelCrateBox,
     /// Composite packaging, glass receptacle in aluminium drum
+    ///
+    /// rec21
     CompositePackagingGlassReceptacleInAluminiumDrum,
     /// Composite packaging, glass receptacle in aluminium crate
+    ///
+    /// rec21
     CompositePackagingGlassReceptacleInAluminiumCrate,
     /// Composite packaging, glass receptacle in wooden box
+    ///
+    /// rec21
     CompositePackagingGlassReceptacleInWoodenBox,
     /// Composite packaging, glass receptacle in plywood drum
+    ///
+    /// rec21
     CompositePackagingGlassReceptacleInPlywoodDrum,
     /// Composite packaging, glass receptacle in wickerwork hamper
+    ///
+    /// rec21
     CompositePackagingGlassReceptacleInWickerworkHamper,
     /// Composite packaging, glass receptacle in fibre drum
+    ///
+    /// rec21
     CompositePackagingGlassReceptacleInFibreDrum,
     /// Composite packaging, glass receptacle in fibreboard box
+    ///
+    /// rec21
     CompositePackagingGlassReceptacleInFibreboardBox,
     /// Composite packaging, glass receptacle in expandable plastic pack
+    ///
+    /// rec21
     CompositePackagingGlassReceptacleInExpandablePlasticPack,
     /// Composite packaging, glass receptacle in solid plastic pack
+    ///
+    /// rec21
     CompositePackagingGlassReceptacleInSolidPlasticPack,
     /// Intermediate bulk container, paper, multi-wall
+    ///
+    /// rec21
     IntermediateBulkContainerPaperMultiWall,
     /// Bag, large
+    ///
+    /// rec21
     BagLarge,
     /// Intermediate bulk container, paper, multi-wall, water resistant
+    ///
+    /// rec21
     IntermediateBulkContainerPaperMultiWallWaterResistant,
     /// Intermediate bulk container, rigid plastic, with structural equipment, solids
+    ///
+    /// rec21
     IntermediateBulkContainerRigidPlasticWithStructuralEquipmentSolids,
     /// Intermediate bulk container, rigid plastic, freestanding, solids
+    ///
+    /// rec21
     IntermediateBulkContainerRigidPlasticFreestandingSolids,
     /// Intermediate bulk container, rigid plastic, with structural equipment, pressurised
+    ///
+    /// rec21
     IntermediateBulkContainerRigidPlasticWithStructuralEquipmentPressurised,
     /// Intermediate bulk container, rigid plastic, freestanding, pressurised
+    ///
+    /// rec21
     IntermediateBulkContainerRigidPlasticFreestandingPressurised,
     /// Intermediate bulk container, rigid plastic, with structural equipment, liquids
+    ///
+    /// rec21
     IntermediateBulkContainerRigidPlasticWithStructuralEquipmentLiquids,
     /// Intermediate bulk container, rigid plastic, freestanding, liquids
+    ///
+    /// rec21
     IntermediateBulkContainerRigidPlasticFreestandingLiquids,
     /// Intermediate bulk container, composite, rigid plastic, solids
+    ///
+    /// rec21
     IntermediateBulkContainerCompositeRigidPlasticSolids,
     /// Intermediate bulk container, composite, flexible plastic, solids
+    ///
+    /// rec21
     IntermediateBulkContainerCompositeFlexiblePlasticSolids,
     /// Intermediate bulk container, composite, rigid plastic, pressurised
+    ///
+    /// rec21
     IntermediateBulkContainerCompositeRigidPlasticPressurised,
     /// Intermediate bulk container, composite, flexible plastic, pressurised
+    ///
+    /// rec21
     IntermediateBulkContainerCompositeFlexiblePlasticPressurised,
     /// Intermediate bulk container, composite, rigid plastic, liquids
+    ///
+    /// rec21
     IntermediateBulkContainerCompositeRigidPlasticLiquids,
     /// Intermediate bulk container, composite, flexible plastic, liquids
+    ///
+    /// rec21
     IntermediateBulkContainerCompositeFlexiblePlasticLiquids,
     /// Intermediate bulk container, composite
+    ///
+    /// rec21
     IntermediateBulkContainerComposite,
     /// Intermediate bulk container, fibreboard
+    ///
+    /// rec21
     IntermediateBulkContainerFibreboard,
     /// Intermediate bulk container, flexible
+    ///
+    /// rec21
     IntermediateBulkContainerFlexible,
     /// Intermediate bulk container, metal, other than steel
+    ///
+    /// rec21
     IntermediateBulkContainerMetalOtherThanSteel,
     /// Intermediate bulk container, natural wood
+    ///
+    /// rec21
     IntermediateBulkContainerNaturalWood,
     /// Intermediate bulk container, plywood
+    ///
+    /// rec21
     IntermediateBulkContainerPlywood,
     /// Intermediate bulk container, reconstituted wood
+    ///
+    /// rec21
     IntermediateBulkContainerReconstitutedWood,
     /// Mutually defined
+    ///
+    /// rec21
     MutuallyDefined_Dup,
 }
 

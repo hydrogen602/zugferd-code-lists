@@ -9,16 +9,26 @@ pub enum Enum5305 {
     /// Exempt from tax
     ExemptFromTax,
     /// VAT Reverse charge
+    ///
+    /// VAT reverse charge
     VatReverseCharge,
     /// VAT exempt for EEA intra-community supply of goods and services
+    ///
+    /// VAT exempt for intra community supply of goods
     VatExemptForEeaIntraCommunitySupplyGoodsAndServices,
     /// Free export item, tax not charged
     FreeExportItemTaxNotCharged,
     /// Service outside scope of tax
+    ///
+    /// Services outside scope of tax
     ServiceOutsideScopeTax,
     /// Canary Islands general indirect tax
+    ///
+    /// Canary Islands General Indirect Tax
     CanaryIslandsGeneralIndirectTax,
     /// Tax for production, services and importation in Ceuta and Melilla
+    ///
+    /// Liable for IPSI
     TaxForProductionServicesAndImportationInCeutaAndMelilla,
 }
 

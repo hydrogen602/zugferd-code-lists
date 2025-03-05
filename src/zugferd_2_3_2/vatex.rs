@@ -3,6 +3,8 @@
 #[derive(Debug, PartialEq, Eq, PartialOrd, Ord, Clone, Copy, Hash)]
 pub enum VATEX {
     /// Exempt based on article 79, point c of Council Directive 2006/112/EC
+    ///
+    /// Repayment of expenditure is not an exemption in the sense of the VAT Directive but may be handled as such in the context of the EN16931.
     ExemptBasedOnArticle79PointCCouncilDirective2006112Ec,
     /// Exempt based on article 132 of Council Directive 2006/112/EC
     ExemptBasedOnArticle132CouncilDirective2006112Ec,
@@ -107,24 +109,44 @@ pub enum VATEX {
     /// Exempt based on article 309 of Council Directive 2006/112/EC
     ExemptBasedOnArticle309CouncilDirective2006112Ec,
     /// Reverse charge
+    ///
+    /// Only use with VAT category code AE
     ReverseCharge,
     /// Travel agents VAT scheme.
+    ///
+    /// Only use with VAT category code E
     TravelAgentsVatScheme,
     /// Second hand goods VAT scheme.
+    ///
+    /// Only use with VAT category code E
     SecondHandGoodsVatScheme,
     /// Export outside the EU
+    ///
+    /// Only use with VAT category code G
     ExportOutsideEu,
     /// Works of art VAT scheme.
+    ///
+    /// Only use with VAT category code E
     WorksArtVatScheme,
     /// Intra-community supply
+    ///
+    /// Only use with VAT category code K
     IntraCommunitySupply,
     /// Collectors items and antiques VAT scheme.
+    ///
+    /// Only use with VAT category code E
     CollectorsItemsAndAntiquesVatScheme,
     /// Not subject to VAT
+    ///
+    /// Only use with VAT category code O
     NotSubjectToVat,
     /// France domestic VAT franchise in base
+    ///
+    /// For domestic invoicing in France
     FranceDomesticVatFranchiseInBase,
     /// France domestic Credit Notes without VAT, due to supplier forfeit of VAT for discount
+    ///
+    /// For domestic Credit Notes only in France
     FranceDomesticCreditNotesWithoutVatDueToSupplierForfeitVatForDiscount,
 }
 

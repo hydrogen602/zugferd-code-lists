@@ -3,12 +3,20 @@
 #[derive(Debug, PartialEq, Eq, PartialOrd, Ord, Clone, Copy, Hash)]
 pub enum HybridDocument {
     /// The hybrid document contains an invoice or credit note
+    ///
+    /// Only applicable in Factur-X / ZUGFeRD
     TheHybridDocumentContainsAnInvoiceOrCreditNote,
     /// The hybrid document contains an order
+    ///
+    /// Only applicable in Order-X
     TheHybridDocumentContainsAnOrder,
     /// The hybrid document contains an order response
+    ///
+    /// Only applicable in Order-X
     TheHybridDocumentContainsAnOrderResponse,
     /// Thy hybrid document contains an order change
+    ///
+    /// Only applicable in Order-X
     ThyHybridDocumentContainsAnOrderChange,
 }
 

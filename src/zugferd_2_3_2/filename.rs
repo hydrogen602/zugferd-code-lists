@@ -3,8 +3,12 @@
 #[derive(Debug, PartialEq, Eq, PartialOrd, Ord, Clone, Copy, Hash)]
 pub enum Filename {
     /// The hybrid document contains a Factur-X / ZUGFeRD XML-file
+    ///
+    /// The ConformanceLevel MUST not be XRECHNUNG
     TheHybridDocumentContainsAFacturXZugferdXmlFile,
     /// The hybrid document contains a XRechnung XML file
+    ///
+    /// The ConformanceLevel MUST be XRECHNUNG
     TheHybridDocumentContainsAXrechnungXmlFile,
     /// The hybrid document contains an Order-X XML file
     TheHybridDocumentContainsAnOrderXXmlFile,

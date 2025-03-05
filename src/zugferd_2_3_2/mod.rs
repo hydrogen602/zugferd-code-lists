@@ -20,6 +20,8 @@ pub mod item;
 pub use item::Item;
 pub mod charge;
 pub use charge::Charge;
+pub mod mime;
+pub use mime::MIME;
 pub mod eas;
 pub use eas::EAS;
 pub mod vatex;

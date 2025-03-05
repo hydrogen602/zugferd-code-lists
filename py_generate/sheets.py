@@ -92,11 +92,12 @@ ALL_BASIC = [
         code_column=1,
         name_column=2,
     ),
-    BasicInfo(  # TODO: EN16931 Interpretation column
+    BasicInfo(  # TODO: EN16931 Interpretation column - enum?
         sheet_name="1001",
         rust_type="Enum1001",
         code_column=1,
         name_column=2,
+        extra_columns=[3],
     ),
     BasicInfo(
         sheet_name="1153",
@@ -111,16 +112,18 @@ ALL_BASIC = [
         code_column=1,
         name_column=2,
     ),
-    BasicInfo(  # TODO: Usage in EN16931 column
+    BasicInfo(
         sheet_name="Payment",
         code_column=1,
         name_column=2,
+        extra_columns=[3],
     ),
-    BasicInfo(  # TODO: Semantic model column
+    BasicInfo(
         sheet_name="5305",
         rust_type="Enum5305",
         code_column=1,
         name_column=2,
+        extra_columns=[3],
     ),
     BasicInfo(
         sheet_name="Allowance",
@@ -137,37 +140,45 @@ ALL_BASIC = [
         code_column=1,
         name_column=2,
     ),
-    # TODO: MIME is just a list, not a mapping
+    BasicInfo(
+        sheet_name="MIME",
+        code_column=1,
+        name_column=1,
+    ),
     BasicInfo(
         sheet_name="EAS",
         code_column=1,
         name_column=2,
     ),
-    BasicInfo(  # TODO: Remark column
+    BasicInfo(
         sheet_name="VATEX",
         code_column=1,
         name_column=2,
+        extra_columns=[3],
     ),
-    BasicInfo(  # TODO: source column
+    BasicInfo(
         sheet_name="Unit",
         code_column=2,
         name_column=3,
+        extra_columns=[1, 4],
     ),
     BasicInfo(  # TODO: description column
         sheet_name="Line Status",
         rust_type="LineStatus",
         code_column=1,
         name_column=2,
+        extra_columns=[3],
     ),
     BasicInfo(
         sheet_name="Language",
         code_column=1,
         name_column=2,
     ),
-    BasicInfo(  # TODO: code list column, description column
+    BasicInfo(  # TODO: code list column - enum?
         sheet_name="Characteristic",
         code_column=2,
         name_column=3,
+        extra_columns=[1, 4],
     ),
     BasicInfo(
         sheet_name="Line Reason",
@@ -180,28 +191,35 @@ ALL_BASIC = [
         code_column=1,
         name_column=2,
     ),
-    BasicInfo(  # TODO: description column
+    BasicInfo(
         sheet_name="TRANSPORT",
         code_column=1,
         name_column=2,
+        extra_columns=[3],
     ),
-    BasicInfo(  # TODO: description column
+    BasicInfo(
         sheet_name="Date",
         code_column=1,
         name_column=2,
+        extra_columns=[3],
     ),
-    BasicInfo(  # TODO: Usage rule column
+    BasicInfo(  # TODO: Usage rule column - enum?
         sheet_name="HybridDocument",
         code_column=1,
         name_column=2,
+        extra_columns=[3],
     ),
-    BasicInfo(  # TODO: Usage rule column, comment column
-        sheet_name="HybridConformance", code_column=1, name_column=2
+    BasicInfo(  # TODO: Usage rule column - enum?
+        sheet_name="HybridConformance",
+        code_column=1,
+        name_column=2,
+        extra_columns=[3, 4],
     ),
-    BasicInfo(  # TODO: Usage rule column
+    BasicInfo(  # TODO: Usage rule column - enum?
         sheet_name="Filename",
         code_column=1,
         name_column=2,
+        extra_columns=[3],
     ),
     BasicInfo(
         sheet_name="HybridVersion",

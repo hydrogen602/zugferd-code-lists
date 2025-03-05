@@ -61,8 +61,12 @@ pub enum Payment {
     /// ACH demand corporate trade exchange (CTX) debit
     AchDemandCorporateTradeExchangeCtxDebit,
     /// Credit transfer
+    ///
+    /// non-SEPA
     CreditTransfer,
     /// Debit transfer
+    ///
+    /// non-SEPA
     DebitTransfer,
     /// ACH demand cash concentration/disbursement plus (CCD+)
     AchDemandCashConcentrationDisbursementPlusCcd,
@@ -97,6 +101,8 @@ pub enum Payment {
     /// Home-banking debit transfer
     HomeBankingDebitTransfer,
     /// Bank card
+    ///
+    /// Use for all payment cards
     BankCard,
     /// Direct debit
     DirectDebit,
@@ -115,10 +121,16 @@ pub enum Payment {
     /// Bankgiro
     Bankgiro,
     /// Standing agreement
+    ///
+    /// Contractual payment means
     StandingAgreement,
     /// SEPA credit transfer
+    ///
+    /// SEPA
     SepaCreditTransfer,
     /// SEPA direct debit
+    ///
+    /// SEPA
     SepaDirectDebit,
     /// Promissory note
     PromissoryNote,

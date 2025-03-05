@@ -45,15 +45,19 @@ class EnumValue:
     extras: list[str] | None = None
 
     def gen_enum_value_definition(self) -> str:
+        description = re.sub(r"\s+", " ", self.description)
+
         extras = ""
         for extra in self.extras or []:
             if not extra:
                 continue
 
             extra = re.sub(r"\s+", " ", extra)
+            if extra == description or extra == "nan":
+                continue
+
             extras += f"\n{TAB}///\n{TAB}/// {extra}"
 
-        description = re.sub(r"\s+", " ", self.description)
         return f"{TAB}/// {description}{extras}\n{TAB}{self.rust_identifier},"
 
 

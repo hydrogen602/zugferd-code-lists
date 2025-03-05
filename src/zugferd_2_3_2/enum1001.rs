@@ -3,114 +3,224 @@
 #[derive(Debug, PartialEq, Eq, PartialOrd, Ord, Clone, Copy, Hash)]
 pub enum Enum1001 {
     /// Request for payment
+    ///
+    /// Invoice
     RequestForPayment,
     /// Debit note related to goods or services
+    ///
+    /// Invoice
     DebitNoteRelatedToGoodsOrServices,
     /// Credit note related to goods or services
+    ///
+    /// Credit Note
     CreditNoteRelatedToGoodsOrServices,
     /// Metered services invoice
+    ///
+    /// Invoice
     MeteredServicesInvoice,
     /// Credit note related to financial adjustments
+    ///
+    /// Credit Note
     CreditNoteRelatedToFinancialAdjustments,
     /// Debit note related to financial adjustments
+    ///
+    /// Invoice
     DebitNoteRelatedToFinancialAdjustments,
     /// Tax notification
+    ///
+    /// Invoice
     TaxNotification,
     /// Invoicing data sheet
+    ///
+    /// Invoice
     InvoicingDataSheet,
     /// Direct payment valuation
+    ///
+    /// Invoice
     DirectPaymentValuation,
     /// Provisional payment valuation
+    ///
+    /// Invoice
     ProvisionalPaymentValuation,
     /// Payment valuation
+    ///
+    /// Invoice
     PaymentValuation,
     /// Interim application for payment
+    ///
+    /// Invoice
     InterimApplicationForPayment,
     /// Final payment request based on completion of work
+    ///
+    /// Invoice
     FinalPaymentRequestBasedOnCompletionWork,
     /// Payment request for completed units
+    ///
+    /// Invoice
     PaymentRequestForCompletedUnits,
     /// Self billed credit note
+    ///
+    /// Credit Note
     SelfBilledCreditNote,
     /// Consolidated credit note - goods and services
+    ///
+    /// Credit Note
     ConsolidatedCreditNoteGoodsAndServices,
     /// Price variation invoice
+    ///
+    /// Invoice
     PriceVariationInvoice,
     /// Credit note for price variation
+    ///
+    /// Credit Note
     CreditNoteForPriceVariation,
     /// Delcredere credit note
+    ///
+    /// Credit Note
     DelcredereCreditNote,
     /// Proforma invoice
+    ///
+    /// Invoice
     ProformaInvoice,
     /// Partial invoice
+    ///
+    /// Invoice
     PartialInvoice,
     /// Commercial invoice which includes a packing list
+    ///
+    /// Invoice
     CommercialInvoiceWhichIncludesAPackingList,
     /// Commercial invoice
+    ///
+    /// Invoice
     CommercialInvoice,
     /// Credit note
+    ///
+    /// Credit Note
     CreditNote,
     /// Commission note
+    ///
+    /// Invoice
     CommissionNote,
     /// Debit note
+    ///
+    /// Invoice
     DebitNote,
     /// Corrected invoice
+    ///
+    /// Invoice
     CorrectedInvoice,
     /// Consolidated invoice
+    ///
+    /// Invoice
     ConsolidatedInvoice,
     /// Prepayment invoice
+    ///
+    /// Invoice
     PrepaymentInvoice,
     /// Hire invoice
+    ///
+    /// Invoice
     HireInvoice,
     /// Tax invoice
+    ///
+    /// Invoice
     TaxInvoice,
     /// Self-billed invoice
+    ///
+    /// Invoice
     SelfBilledInvoice,
     /// Delcredere invoice
+    ///
+    /// Invoice
     DelcredereInvoice,
     /// Factored invoice
+    ///
+    /// Invoice
     FactoredInvoice,
     /// Lease invoice
+    ///
+    /// Invoice
     LeaseInvoice,
     /// Consignment invoice
+    ///
+    /// Invoice
     ConsignmentInvoice,
     /// Factored credit note
+    ///
+    /// Credit Note
     FactoredCreditNote,
     /// Optical Character Reading (OCR) payment credit note
+    ///
+    /// Credit Note
     OpticalCharacterReadingOcrPaymentCreditNote,
     /// Debit advice
+    ///
+    /// Invoice
     DebitAdvice,
     /// Reversal of debit
+    ///
+    /// Invoice
     ReversalDebit,
     /// Reversal of credit
+    ///
+    /// Credit Note
     ReversalCredit,
     /// Self billed debit note
+    ///
+    /// Invoice
     SelfBilledDebitNote,
     /// Forwarder's credit note
+    ///
+    /// Credit Note
     ForwardersCreditNote,
     /// Forwarder's invoice discrepancy report
+    ///
+    /// Invoice
     ForwardersInvoiceDiscrepancyReport,
     /// Insurer's invoice
+    ///
+    /// Invoice
     InsurersInvoice,
     /// Forwarder's invoice
+    ///
+    /// Invoice
     ForwardersInvoice,
     /// Port charges documents
+    ///
+    /// Invoice
     PortChargesDocuments,
     /// Invoice information for accounting purposes
+    ///
+    /// Invoice
     InvoiceInformationForAccountingPurposes,
     /// Freight invoice
+    ///
+    /// Invoice
     FreightInvoice,
     /// Claim notification
+    ///
+    /// Invoice
     ClaimNotification,
     /// Consular invoice
+    ///
+    /// Invoice
     ConsularInvoice,
     /// Partial construction invoice
+    ///
+    /// Invoice
     PartialConstructionInvoice,
     /// Partial final construction invoice
+    ///
+    /// Invoice
     PartialFinalConstructionInvoice,
     /// Final construction invoice
+    ///
+    /// Invoice
     FinalConstructionInvoice,
     /// Customs invoice
+    ///
+    /// Invoice
     CustomsInvoice,
 }
 
