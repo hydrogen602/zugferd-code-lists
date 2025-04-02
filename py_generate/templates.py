@@ -1,10 +1,10 @@
 from dataclasses import dataclass
 import re
 import string
-from typing import cast
+from typing import Literal, cast
 import unicodedata
 
-from py_generate.common import VersionInfo
+from py_generate.common import RS_TS, TS_DIR, VersionInfo
 
 _words_re = re.compile(r"\b\w+\b", flags=re.UNICODE)
 
@@ -44,7 +44,7 @@ class EnumValue:
     code: string
     extras: list[str] | None = None
 
-    def gen_enum_value_definition(self) -> str:
+    def gen_enum_value_definition(self, ts_rs: Literal["ts", "rs"] = "rs") -> str:
         description = re.sub(r"\s+", " ", self.description)
 
         extras = ""
@@ -56,18 +56,31 @@ class EnumValue:
             if extra == description or extra == "nan":
                 continue
 
-            extras += f"\n{TAB}///\n{TAB}/// {extra}"
+            if ts_rs == "rs":
+                extras += f"\n{TAB}///\n{TAB}/// {extra}"
+            else:
+                extras += f"\n{TAB}*\n{TAB}* {extra}"
 
-        return f"{TAB}/// {description}{extras}\n{TAB}{self.rust_identifier},"
+        if ts_rs == "rs":
+            return f"{TAB}/// {description}{extras}\n{TAB}{self.rust_identifier},"
+        else:
+            return f'{TAB}/**\n{TAB}* {description}{extras}\n{TAB}*/\n{TAB}{self.rust_identifier} = "{self.code}",'
 
 
-def enum_generate(enum_name: str, enum_values: list[EnumValue]) -> str:
-    return f"""
+def enum_generate(enum_name: str, enum_values: list[EnumValue]) -> RS_TS[str]:
+    return RS_TS(
+        rs=f"""
 #[derive(Debug, PartialEq, Eq, PartialOrd, Ord, Clone, Copy, Hash)]
 pub enum {enum_name} {{
 {'\n'.join(enum_value.gen_enum_value_definition() for enum_value in enum_values)}
 }}
-"""
+""",
+        ts=f"""
+export enum {enum_name} {{
+{'\n'.join(enum_value.gen_enum_value_definition('ts') for enum_value in enum_values)}
+}}
+""",
+    )
 
 
 def code_trait_generate(enum_name: str, enum_values: list[EnumValue]) -> str:
@@ -82,16 +95,29 @@ impl crate::Code for {enum_name} {{
 """
 
 
-def description_trait_generate(enum_name: str, enum_values: list[EnumValue]) -> str:
-    return f"""
+def description_trait_generate(
+    enum_name: str, enum_values: list[EnumValue]
+) -> RS_TS[str]:
+    pattern = re.compile(r"\s+", flags=re.UNICODE)
+
+    return RS_TS(
+        rs=f"""
 impl crate::Description for {enum_name} {{
 {TAB}fn description(&self) -> &str {{
 {TAB}{TAB}match self {{
-{'\n'.join(f"{TAB}{TAB}{TAB}{enum_name}::{enum_value.rust_identifier} => \"{enum_value.description}\"," for enum_value in enum_values)}
+{'\n'.join(f"{TAB}{TAB}{TAB}{enum_name}::{enum_value.rust_identifier} => \"{pattern.sub(" ", enum_value.description)}\"," for enum_value in enum_values)}
 {TAB}{TAB}}}
 {TAB}}}
 }}
-"""
+""",
+        ts=f"""
+export function description(value: {enum_name}): string {{
+{TAB}switch (value) {{
+{'\n'.join(f"{TAB}{TAB}case {enum_name}.{enum_value.rust_identifier}: return \"{pattern.sub(" ", enum_value.description)}\";" for enum_value in enum_values)}
+{TAB}}}
+}}
+""",
+    )
 
 
 """
@@ -124,6 +150,10 @@ def reset_mod_rs(version: VersionInfo):
     mod_file = version.src_dir / "mod.rs"
     with open(mod_file, "w") as f:
         f.write("")
+    index_ts_file = TS_DIR / version.src_dir / "index.ts"
+    index_ts_file.parent.mkdir(parents=True, exist_ok=True)
+    with open(index_ts_file, "w") as f:
+        f.write("")
 
 
 def generate(
@@ -146,13 +176,23 @@ def generate(
     out_file = version.src_dir / rs_file
     with open(out_file, "w") as f:
         f.write("#![allow(non_camel_case_types)]\n")
-        f.write(code_definition)
+        f.write(code_definition.rs)
         f.write(code_trait_impl_code)
-        f.write(code_trait_impl_description)
+        f.write(code_trait_impl_description.rs)
         f.write(code_trait_impl_from_code)
+
+    out_file_ts = TS_DIR / version.src_dir / rs_file
+    out_file_ts = out_file_ts.with_suffix(".ts")
+    out_file_ts.parent.mkdir(parents=True, exist_ok=True)
+    with open(out_file_ts, "w") as f:
+        f.write(code_definition.ts)
+        f.write(code_trait_impl_description.ts)
 
     if write_mod:
         mod_file = version.src_dir / "mod.rs"
         with open(mod_file, "a") as f:
             f.write(f"pub mod {rs_file[:-3]};\n")
             f.write(f"pub use {rs_file[:-3]}::{enum_name};\n")
+        index_ts_file = TS_DIR / version.src_dir / "index.ts"
+        with open(index_ts_file, "a") as f:
+            f.write(f"export {{ {enum_name} }} from './{rs_file[:-3]}';\n")

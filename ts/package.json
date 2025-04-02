@@ -1,0 +1,30 @@
+{
+  "name": "zugferd-code-lists",
+  "version": "0.1.4",
+  "description": "ZUGFeRD code lists, e.g. languages enum, currencies enum, countries enum, etc.",
+  "main": "index.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hydrogen602/zugferd-code-lists.git"
+  },
+  "author": "hydrogen602",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/hydrogen602/zugferd-code-lists/issues"
+  },
+  "homepage": "https://github.com/hydrogen602/zugferd-code-lists#readme",
+  "devDependencies": {
+    "typescript": "^5.8.2"
+  },
+  "keywords": [
+    "ZUGFeRD",
+    "code-lists",
+    "Factur-X"
+  ],
+  "types": "./target/index.d.ts",
+  "readme": "README"
+}

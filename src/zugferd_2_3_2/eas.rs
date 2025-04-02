@@ -307,8 +307,7 @@ impl crate::Description for EAS {
             EAS::EanLocationCode => "EAN Location Code",
             EAS::DanishChamberOfCommerceSchemeEdiraCompliant => "DANISH CHAMBER OF COMMERCE Scheme (EDIRA compliant)",
             EAS::FtiEdiforumItaliaEdiraCompliant => "FTI - Ediforum Italia, (EDIRA compliant)",
-            EAS::VerenigingVanKamersVanKoophandelEnFabriekenInNederlandAssociationChambersCommerceAndIndustryInNetherlandsSchemeEdiraCompliant => "Vereniging van Kamers van Koophandel en Fabrieken in Nederland (Association of
-Chambers of Commerce and Industry in the Netherlands), Scheme (EDIRA compliant)",
+            EAS::VerenigingVanKamersVanKoophandelEnFabriekenInNederlandAssociationChambersCommerceAndIndustryInNetherlandsSchemeEdiraCompliant => "Vereniging van Kamers van Koophandel en Fabrieken in Nederland (Association of Chambers of Commerce and Industry in the Netherlands), Scheme (EDIRA compliant)",
             EAS::DirectoratesEuropeanCommission => "Directorates of the European Commission",
             EAS::SiaObjectIdentifiers => "SIA Object Identifiers",
             EAS::SecetiObjectIdentifiers => "SECETI Object Identifiers",
@@ -352,8 +351,7 @@ Chambers of Commerce and Industry in the Netherlands), Scheme (EDIRA compliant)"
             EAS::HungaryVatNumber => "Hungary VAT number",
             EAS::BusinessRegistersNetwork => "Business Registers Network ",
             EAS::ÖsterreichischeUmsatzsteuerIdentifikationsnummer => "Österreichische Umsatzsteuer-Identifikationsnummer ",
-            EAS::ÖsterreichischesVerwaltungsBzwOrganisationskennzeichen => "Österreichisches Verwaltungs bzw.
-Organisationskennzeichen",
+            EAS::ÖsterreichischesVerwaltungsBzwOrganisationskennzeichen => "Österreichisches Verwaltungs bzw. Organisationskennzeichen",
             EAS::SocietyForWorldwideInterbankFinancialTelecommunicationSWIFT => "SOCIETY FOR WORLDWIDE INTERBANK FINANCIAL, TELECOMMUNICATION S.W.I.F.T",
             EAS::KennzifferDesUnternehmensregisters => "Kennziffer des Unternehmensregisters ",
             EAS::AgenciaEspañolaDeAdministraciónTributaria => "Agencia Española de Administración Tributaria ",

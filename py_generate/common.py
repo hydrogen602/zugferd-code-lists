@@ -25,9 +25,11 @@ class VersionInfo:
 
 ZF_232 = VersionInfo(
     version="2.3.2",
-    spec_dir=_get_path("ZF_232_DIR"),
+    spec_dir=Path("spec/zugferd_2_3_2"),
     src_dir=Path("src/zugferd_2_3_2"),
 )
+
+TS_DIR = Path("ts")
 
 EXCEL_FILE = "4. EN16931+FacturX code lists values v14 - used from 2024-11-15.xlsx"
 
@@ -46,3 +48,9 @@ def load_sheet(sheet: str, version: VersionInfo) -> pd.DataFrame:
     if not file_path.exists():
         raise FileNotFoundError(f"File {file_path} not found")
     return pd.read_excel(file_path, sheet_name=sheet, dtype=str)
+
+
+@dataclass
+class RS_TS[T]:
+    rs: T
+    ts: T
