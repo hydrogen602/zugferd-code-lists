@@ -6,8 +6,8 @@ gen:
 	cp readme.md ts/README.md
 	cp LICENSE ts/LICENSE
 
-npm-publish:
+npm-publish: gen
 	cd ts && npm publish
 
-cargo-publish:
+cargo-publish: gen
 	cargo publish

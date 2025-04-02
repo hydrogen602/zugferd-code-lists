@@ -1,11 +1,10 @@
 {
   "name": "zugferd-code-lists",
-  "version": "0.1.4",
+  "version": "0.1.6",
   "description": "ZUGFeRD code lists, e.g. languages enum, currencies enum, countries enum, etc.",
-  "main": "index.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "tsc"
+    "build": "tsup"
   },
   "repository": {
     "type": "git",
@@ -18,6 +17,7 @@
   },
   "homepage": "https://github.com/hydrogen602/zugferd-code-lists#readme",
   "devDependencies": {
+    "tsup": "^8.4.0",
     "typescript": "^5.8.2"
   },
   "keywords": [
@@ -25,6 +25,23 @@
     "code-lists",
     "Factur-X"
   ],
-  "types": "./target/index.d.ts",
-  "readme": "README"
+  "readme": "README",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "exports": {
+    ".": {
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    },
+    "./zugferd_2_3_2": {
+      "import": "./dist/zugferd_2_3_2/index.mjs",
+      "require": "./dist/zugferd_2_3_2/index.js",
+      "types": "./dist/zugferd_2_3_2/index.d.ts"
+    }
+  }
 }
