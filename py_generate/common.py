@@ -43,11 +43,11 @@ def load_all_sheets(version: VersionInfo) -> dict[str, pd.DataFrame]:
     return all_sheets
 
 
-def load_sheet(sheet: str, version: VersionInfo) -> pd.DataFrame:
+def load_sheet(sheet: str, version: VersionInfo, header_idx: int) -> pd.DataFrame:
     file_path = version.spec_dir / EXCEL_FILE
     if not file_path.exists():
         raise FileNotFoundError(f"File {file_path} not found")
-    return pd.read_excel(file_path, sheet_name=sheet, dtype=str)
+    return pd.read_excel(file_path, sheet_name=sheet, dtype=str, header=header_idx)
 
 
 @dataclass

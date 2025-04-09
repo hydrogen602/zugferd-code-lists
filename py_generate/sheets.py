@@ -21,6 +21,7 @@ def run_all(version: VersionInfo = ZF_232):
             file_name=basic_info.file_name,
             rust_type=basic_info.rust_type,
             write_mod=True,
+            header_idx=basic_info.header_index,
         )
 
 
@@ -33,13 +34,14 @@ def run_basic(
     file_name: str | None = None,
     rust_type: str | None = None,
     write_mod: bool = False,
+    header_idx: int = 0,
 ):
     if rust_type is None:
         rust_type = sheet_name
     if file_name is None:
         file_name = f"{rust_type.lower()}.rs"
 
-    sheet = load_sheet(sheet_name, version)
+    sheet = load_sheet(sheet_name, version, header_idx)
 
     all_ids = set()
 
@@ -74,6 +76,7 @@ class BasicInfo:
     extra_columns: list[int] = field(default_factory=list)
     file_name: str | None = None
     rust_type: str | None = None
+    header_index: int = 0
 
 
 ALL_BASIC = [
@@ -226,5 +229,12 @@ ALL_BASIC = [
         code_column=1,
         name_column=2,
         extra_columns=[3],
+    ),
+    BasicInfo(
+        sheet_name="Time",
+        rust_type="TimeCII",
+        code_column=3,
+        name_column=4,
+        header_index=1,
     ),
 ]

@@ -50,3 +50,5 @@ pub mod filename;
 pub use filename::Filename;
 pub mod hybridversion;
 pub use hybridversion::HybridVersion;
+pub mod timecii;
+pub use timecii::TimeCII;

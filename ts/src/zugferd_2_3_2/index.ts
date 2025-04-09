@@ -24,3 +24,4 @@ export { HybridDocument } from './hybriddocument';
 export { HybridConformance } from './hybridconformance';
 export { Filename } from './filename';
 export { HybridVersion } from './hybridversion';
+export { TimeCII } from './timecii';
