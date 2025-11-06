@@ -109,7 +109,15 @@ ALL_BASIC = [
         name_column=2,
     ),
     # TODO: VAT ID - do by hand, its 3 things
-    # TODO: VAT CAT - more complex table
+    # TODO: FISCAL ID
+    BasicInfo(
+        sheet_name="VAT CAT",
+        code_column=3,
+        name_column=4,
+        extra_columns=[5],
+        header_index=5,
+        rust_type="VATCAT",
+    ),
     BasicInfo(
         sheet_name="Text",
         code_column=1,

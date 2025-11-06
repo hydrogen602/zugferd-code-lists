@@ -58,7 +58,7 @@ def load_all_sheets(version: VersionInfo) -> dict[str, pd.DataFrame]:
     return pd.read_excel(file_path, sheet_name=None)
 
 
-def load_sheet(sheet: str, version: VersionInfo, header_idx: int) -> pd.DataFrame:
+def load_sheet(sheet: str, version: VersionInfo, header_idx: int = 0) -> pd.DataFrame:
     file_path = _find_excel_file(version)
     return pd.read_excel(file_path, sheet_name=sheet, dtype=str, header=header_idx)
 
