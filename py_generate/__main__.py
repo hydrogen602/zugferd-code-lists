@@ -1,7 +1,7 @@
 from typing import Annotated
 import typer
 from py_generate.sheets import run_all
-from py_generate.common import load_all_sheets, Version
+from py_generate.common import load_all_sheets, Version, load_sheet
 
 app = typer.Typer()
 
@@ -31,6 +31,17 @@ def list_sheets():
         sheets = load_all_sheets(version).keys()
         for sheet in sheets:
             typer.echo(sheet)
+
+
+@app.command()
+def get_sheet(version: Version, sheet: str, header_idx: int = 0):
+    v = version.version_info()
+    sheets = load_all_sheets(v).keys()
+    if sheet not in sheets:
+        typer.echo(f"Sheet {sheet} not found")
+        return
+    sheet_df = load_sheet(sheet, v, header_idx)
+    typer.echo(sheet_df)
 
 
 if __name__ == "__main__":

@@ -8,6 +8,8 @@ pub mod enum1001;
 pub use enum1001::Enum1001;
 pub mod enum1153;
 pub use enum1153::Enum1153;
+pub mod vatcat;
+pub use vatcat::VATCAT;
 pub mod text;
 pub use text::Text;
 pub mod payment;

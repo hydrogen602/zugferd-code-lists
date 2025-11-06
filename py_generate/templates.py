@@ -163,6 +163,7 @@ def generate(
     rs_file: str,
     write_mod: bool = False,
 ):
+    assert " " not in enum_name, f"Enum name {enum_name} contains spaces"
     code_definition = enum_generate(enum_name, enum_values)
 
     code_trait_impl_code = code_trait_generate(enum_name, enum_values)
