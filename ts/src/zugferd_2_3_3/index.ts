@@ -3,6 +3,7 @@ export { Currency } from './currency';
 export { ICD } from './icd';
 export { Enum1001 } from './enum1001';
 export { Enum1153 } from './enum1153';
+export { FiscalID } from './fiscalid';
 export { VATCAT } from './vatcat';
 export { Text } from './text';
 export { Payment } from './payment';

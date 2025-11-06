@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from py_generate.common import VersionInfo, load_sheet
+from py_generate.common import Version, VersionInfo, load_sheet
 from py_generate.templates import (
     EnumValue,
     convert_to_identifier,
@@ -12,6 +12,12 @@ def run_all(version: VersionInfo):
     reset_mod_rs(version)
 
     for basic_info in ALL_BASIC:
+        if (
+            basic_info.version_filter is not None
+            and version.version not in basic_info.version_filter
+        ):
+            continue
+
         run_basic(
             version,
             sheet_name=basic_info.sheet_name,
@@ -77,6 +83,7 @@ class BasicInfo:
     file_name: str | None = None
     rust_type: str | None = None
     header_index: int = 0
+    version_filter: list[Version] | None = None
 
 
 ALL_BASIC = [
@@ -108,8 +115,14 @@ ALL_BASIC = [
         code_column=1,
         name_column=2,
     ),
-    # TODO: VAT ID - do by hand, its 3 things
-    # TODO: FISCAL ID
+    # TODO: VAT ID - seems like a mapping between UBL and CII?
+    BasicInfo(
+        sheet_name="FISCAL ID",
+        code_column=1,
+        name_column=2,
+        version_filter=[Version.ZF_233],  # This sheet doesn't exist in 2.3.2
+        rust_type="FiscalID",
+    ),
     BasicInfo(
         sheet_name="VAT CAT",
         code_column=3,
