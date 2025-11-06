@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/hydrogen602/zugferd-code-lists#readme",
   "devDependencies": {
+    "prettier": "3.6.2",
     "tsup": "^8.4.0",
     "typescript": "^5.8.2"
   },
