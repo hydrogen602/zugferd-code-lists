@@ -1,4 +1,6 @@
 # zugferd code lists
+![NPM Version](https://img.shields.io/npm/v/zugferd-code-lists)
+![Crates.io Version](https://img.shields.io/crates/v/zugferd-code-lists)
 
 This project attempts to take the many code lists that are part of the ZUGFeRD specification and convert them into rust enums for use in other projects.
 
