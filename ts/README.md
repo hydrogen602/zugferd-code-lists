@@ -6,4 +6,4 @@ This project attempts to take the many code lists that are part of the ZUGFeRD s
 
 # Status
 
-Currently ZUGFeRD 2.3.2 code lists are partially supported. See `py_generate/sheets.py` for what exactly is supported.
+Currently ZUGFeRD 2.3.2 and 2.3.3 code lists are partially supported. See `py_generate/sheets.py` for what exactly is supported.

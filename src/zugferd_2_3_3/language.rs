@@ -1548,16 +1548,24 @@ impl crate::Description for Language {
             Language::Choctaw => "Choctaw",
             Language::Chipewyan => "Chipewyan",
             Language::Cherokee => "Cherokee",
-            Language::ChurchSlavicOldSlavonicChurchSlavonicOldBulgarianOldChurchSlavonic => "Church Slavic; Old Slavonic; Church Slavonic; Old Bulgarian; Old Church Slavonic",
+            Language::ChurchSlavicOldSlavonicChurchSlavonicOldBulgarianOldChurchSlavonic => {
+                "Church Slavic; Old Slavonic; Church Slavonic; Old Bulgarian; Old Church Slavonic"
+            }
             Language::Chuvash => "Chuvash",
             Language::Cheyenne => "Cheyenne",
             Language::ChamicLanguages => "Chamic languages",
             Language::Coptic => "Coptic",
             Language::Cornish => "Cornish",
             Language::Corsican => "Corsican",
-            Language::CreolesAndPidginsEnglishBasedOther => "Creoles and pidgins, English based (Other)",
-            Language::CreolesAndPidginsFrenchBasedOther => "Creoles and pidgins, French-based (Other)",
-            Language::CreolesAndPidginsPortugueseBasedOther => "Creoles and pidgins, Portuguese-based (Other)",
+            Language::CreolesAndPidginsEnglishBasedOther => {
+                "Creoles and pidgins, English based (Other)"
+            }
+            Language::CreolesAndPidginsFrenchBasedOther => {
+                "Creoles and pidgins, French-based (Other)"
+            }
+            Language::CreolesAndPidginsPortugueseBasedOther => {
+                "Creoles and pidgins, Portuguese-based (Other)"
+            }
             Language::Cree => "Cree",
             Language::CrimeanTatarCrimeanTurkish => "Crimean Tatar; Crimean Turkish",
             Language::CreolesAndPidginsOther => "Creoles and pidgins (Other)",
@@ -1655,7 +1663,9 @@ impl crate::Description for Language {
             Language::Inuktitut => "Inuktitut",
             Language::Interlingue => "Interlingue",
             Language::Iloko => "Iloko",
-            Language::InterlinguaInternationalAuxiliaryLanguageAssociation => "Interlingua (International Auxiliary Language Association)",
+            Language::InterlinguaInternationalAuxiliaryLanguageAssociation => {
+                "Interlingua (International Auxiliary Language Association)"
+            }
             Language::IndicOther => "Indic (Other)",
             Language::Indonesian => "Indonesian",
             Language::IndoEuropeanOther => "Indo-European (Other)",
@@ -1768,7 +1778,9 @@ impl crate::Description for Language {
             Language::NdebeleSouthSouthNdebele => "Ndebele, South; South Ndebele",
             Language::NdebeleNorthNorthNdebele => "Ndebele, North; North Ndebele",
             Language::Ndonga => "Ndonga",
-            Language::LowGermanLowSaxonGermanLowSaxonLow => "Low German; Low Saxon; German, Low; Saxon, Low",
+            Language::LowGermanLowSaxonGermanLowSaxonLow => {
+                "Low German; Low Saxon; German, Low; Saxon, Low"
+            }
             Language::Nepali => "Nepali",
             Language::NepalBhasaNewari => "Nepal Bhasa; Newari",
             Language::Nias => "Nias",
@@ -1782,7 +1794,9 @@ impl crate::Description for Language {
             Language::Nko => "N'Ko",
             Language::PediSepediNorthernSotho => "Pedi; Sepedi; Northern Sotho",
             Language::NubianLanguages => "Nubian languages",
-            Language::ClassicalNewariOldNewariClassicalNepalBhasa => "Classical Newari; Old Newari; Classical Nepal Bhasa",
+            Language::ClassicalNewariOldNewariClassicalNepalBhasa => {
+                "Classical Newari; Old Newari; Classical Nepal Bhasa"
+            }
             Language::ChichewaChewaNyanja => "Chichewa; Chewa; Nyanja",
             Language::Nyamwezi => "Nyamwezi",
             Language::Nyankole => "Nyankole",
@@ -1945,7 +1959,9 @@ impl crate::Description for Language {
             Language::Zulu => "Zulu",
             Language::Zuni => "Zuni",
             Language::NoLinguisticContent => "No linguistic content",
-            Language::ZazaDimiliDimliKirdkiKirmanjkiZazaki => "Zaza; Dimili; Dimli; Kirdki; Kirmanjki; Zazaki.",
+            Language::ZazaDimiliDimliKirdkiKirmanjkiZazaki => {
+                "Zaza; Dimili; Dimli; Kirdki; Kirmanjki; Zazaki."
+            }
         }
     }
 }
@@ -1953,7 +1969,7 @@ impl crate::Description for Language {
 impl crate::FromCode for Language {
     fn from_code(code: &str) -> Option<Self>
     where
-        Self: Sized
+        Self: Sized,
     {
         match code {
             "aar" => Some(Language::Afar),
@@ -2041,7 +2057,9 @@ impl crate::FromCode for Language {
             "cho" => Some(Language::Choctaw),
             "chp" => Some(Language::Chipewyan),
             "chr" => Some(Language::Cherokee),
-            "chu" => Some(Language::ChurchSlavicOldSlavonicChurchSlavonicOldBulgarianOldChurchSlavonic),
+            "chu" => {
+                Some(Language::ChurchSlavicOldSlavonicChurchSlavonicOldBulgarianOldChurchSlavonic)
+            }
             "chv" => Some(Language::Chuvash),
             "chy" => Some(Language::Cheyenne),
             "cmc" => Some(Language::ChamicLanguages),

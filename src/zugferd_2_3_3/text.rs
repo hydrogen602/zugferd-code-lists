@@ -1246,11 +1246,21 @@ impl crate::Description for Text {
             Text::MedicalHistory => "Medical history",
             Text::ConditionsSaleOrPurchase => "Conditions of sale or purchase",
             Text::ContractDocumentType => "Contract document type",
-            Text::AdditionalTermsAndOrConditionsDocumentaryCredit => "Additional terms and/or conditions (documentary credit)",
-            Text::InstructionsOrInformationAboutStandbyDocumentary => "Instructions or information about standby documentary",
-            Text::InstructionsOrInformationAboutPartialShipmentS => "Instructions or information about partial shipment(s)",
-            Text::InstructionsOrInformationAboutTranshipmentS => "Instructions or information about transhipment(s)",
-            Text::AdditionalHandlingInstructionsDocumentaryCredit => "Additional handling instructions documentary credit",
+            Text::AdditionalTermsAndOrConditionsDocumentaryCredit => {
+                "Additional terms and/or conditions (documentary credit)"
+            }
+            Text::InstructionsOrInformationAboutStandbyDocumentary => {
+                "Instructions or information about standby documentary"
+            }
+            Text::InstructionsOrInformationAboutPartialShipmentS => {
+                "Instructions or information about partial shipment(s)"
+            }
+            Text::InstructionsOrInformationAboutTranshipmentS => {
+                "Instructions or information about transhipment(s)"
+            }
+            Text::AdditionalHandlingInstructionsDocumentaryCredit => {
+                "Additional handling instructions documentary credit"
+            }
             Text::DomesticRoutingInformation => "Domestic routing information",
             Text::ChargeableCategoryEquipment => "Chargeable category of equipment",
             Text::GovernmentInformation => "Government information",
@@ -1261,12 +1271,18 @@ impl crate::Description for Text {
             Text::MethodIssuance => "Method of issuance",
             Text::DocumentsDeliveryInstructions => "Documents delivery instructions",
             Text::AdditionalConditions => "Additional conditions",
-            Text::InformationInstructionsAboutAdditionalAmountsCovered => "Information/instructions about additional amounts covered",
+            Text::InformationInstructionsAboutAdditionalAmountsCovered => {
+                "Information/instructions about additional amounts covered"
+            }
             Text::DeferredPaymentTermedAdditional => "Deferred payment termed additional",
             Text::AcceptanceTermsAdditional => "Acceptance terms additional",
             Text::NegotiationTermsAdditional => "Negotiation terms additional",
-            Text::DocumentNameAndDocumentaryRequirements => "Document name and documentary requirements",
-            Text::InstructionsInformationAboutRevolvingDocumentaryCredit => "Instructions/information about revolving documentary credit",
+            Text::DocumentNameAndDocumentaryRequirements => {
+                "Document name and documentary requirements"
+            }
+            Text::InstructionsInformationAboutRevolvingDocumentaryCredit => {
+                "Instructions/information about revolving documentary credit"
+            }
             Text::DocumentaryRequirements => "Documentary requirements",
             Text::AdditionalInformation => "Additional information",
             Text::FactorAssignmentClause => "Factor assignment clause",
@@ -1318,7 +1334,9 @@ impl crate::Description for Text {
             Text::CharacteristicsGoods => "Characteristics of goods",
             Text::AdditionalDischargeInstructions => "Additional discharge instructions",
             Text::ContainerStrippingInstructions => "Container stripping instructions",
-            Text::CscContainerSafetyConventionPlateInformation => "CSC (Container Safety Convention) plate information",
+            Text::CscContainerSafetyConventionPlateInformation => {
+                "CSC (Container Safety Convention) plate information"
+            }
             Text::CargoRemarks => "Cargo remarks",
             Text::TemperatureControlInstructions => "Temperature control instructions",
             Text::TextRefersToExpectedData => "Text refers to expected data",
@@ -1331,14 +1349,20 @@ impl crate::Description for Text {
             Text::ControlledAtmosphere => "Controlled atmosphere",
             Text::TakeOffAnnotation => "Take off annotation",
             Text::PriceVariationNarrative => "Price variation narrative",
-            Text::DocumentaryCreditAmendmentInstructions => "Documentary credit amendment instructions",
+            Text::DocumentaryCreditAmendmentInstructions => {
+                "Documentary credit amendment instructions"
+            }
             Text::StandardMethodNarrative => "Standard method narrative",
             Text::ProjectNarrative => "Project narrative",
-            Text::RadioactiveGoodsAdditionalInformation => "Radioactive goods, additional information",
+            Text::RadioactiveGoodsAdditionalInformation => {
+                "Radioactive goods, additional information"
+            }
             Text::BankToBankInformation => "Bank-to-bank information",
             Text::ReimbursementInstructions => "Reimbursement instructions",
             Text::ReasonForAmendingAMessage => "Reason for amending a message",
-            Text::InstructionsToPayingAndOrAcceptingAndOr => "Instructions to the paying and/or accepting and/or",
+            Text::InstructionsToPayingAndOrAcceptingAndOr => {
+                "Instructions to the paying and/or accepting and/or"
+            }
             Text::InterestInstructions => "Interest instructions",
             Text::AgentCommission => "Agent commission",
             Text::RemittingBankInstructions => "Remitting bank instructions",
@@ -1428,7 +1452,9 @@ impl crate::Description for Text {
             Text::Education => "Education",
             Text::Event => "Event",
             Text::Agent => "Agent",
-            Text::DomesticallyAgreedFinancialStatementDetails => "Domestically agreed financial statement details",
+            Text::DomesticallyAgreedFinancialStatementDetails => {
+                "Domestically agreed financial statement details"
+            }
             Text::OtherCurrentAssetDescription => "Other current asset description",
             Text::OtherCurrentLiabilityDescription => "Other current liability description",
             Text::FormerBusinessActivity => "Former business activity",
@@ -1484,7 +1510,9 @@ impl crate::Description for Text {
             Text::PassengerBaggageInformation => "Passenger baggage information",
             Text::MaritimeDeclarationHealth_Dup => "Maritime Declaration of Health",
             Text::AdditionalProductInformationAddress => "Additional product information address",
-            Text::InformationToBePrintedOnDespatchAdvice => "Information to be printed on despatch advice",
+            Text::InformationToBePrintedOnDespatchAdvice => {
+                "Information to be printed on despatch advice"
+            }
             Text::MissingGoodsRemarks => "Missing goods remarks",
             Text::NonAcceptanceInformation => "Non-acceptance information",
             Text::ReturnsInformation => "Returns information",
@@ -1519,12 +1547,20 @@ impl crate::Description for Text {
             Text::Legislation => "Legislation",
             Text::SecurityMeasuresRequested => "Security measures requested",
             Text::TransportContractDocumentRemark => "Transport contract document remark",
-            Text::PreviousPortCallSecurityInformation => "Previous port of call security information",
+            Text::PreviousPortCallSecurityInformation => {
+                "Previous port of call security information"
+            }
             Text::SecurityInformation => "Security information",
             Text::WasteInformation => "Waste information",
-            Text::B2cMarketingInformationShortDescription => "B2C marketing information, short description",
-            Text::B2bMarketingInformationLongDescription => "B2B marketing information, long description",
-            Text::B2cMarketingInformationLongDescription => "B2C marketing information, long description",
+            Text::B2cMarketingInformationShortDescription => {
+                "B2C marketing information, short description"
+            }
+            Text::B2bMarketingInformationLongDescription => {
+                "B2B marketing information, long description"
+            }
+            Text::B2cMarketingInformationLongDescription => {
+                "B2C marketing information, long description"
+            }
             Text::ProductIngredients => "Product ingredients",
             Text::LocationShortName => "Location short name",
             Text::PackagingMaterialInformation => "Packaging material information",
@@ -1557,10 +1593,14 @@ impl crate::Description for Text {
             Text::DocumentationInstructions => "Documentation instructions",
             Text::DutyDeclaration => "Duty declaration",
             Text::EffectiveUsedRouting => "Effective used routing",
-            Text::FirstBlockToBePrintedOnTransportContract => "First block to be printed on the transport contract",
+            Text::FirstBlockToBePrintedOnTransportContract => {
+                "First block to be printed on the transport contract"
+            }
             Text::GovernmentBillLadingInformation => "Government bill of lading information",
             Text::EntireTransactionSet => "Entire transaction set",
-            Text::FurtherInformationConcerningGgvsPar7 => "Further information concerning GGVS par. 7",
+            Text::FurtherInformationConcerningGgvsPar7 => {
+                "Further information concerning GGVS par. 7"
+            }
             Text::ConsignmentHandlingInstruction => "Consignment handling instruction",
             Text::HazardInformation => "Hazard information",
             Text::ConsignmentInformationForConsignee => "Consignment information for consignee",
@@ -1603,11 +1643,17 @@ impl crate::Description for Text {
             Text::ConsignmentDocumentaryInstruction => "Consignment documentary instruction",
             Text::SpecialInstructions => "Special instructions",
             Text::ShipLineRequested => "Ship line requested",
-            Text::SpecialPermissionForTransportGenerally => "Special permission for transport, generally",
-            Text::SpecialPermissionConcerningGoodsToBeTransported => "Special permission concerning the goods to be transported",
+            Text::SpecialPermissionForTransportGenerally => {
+                "Special permission for transport, generally"
+            }
+            Text::SpecialPermissionConcerningGoodsToBeTransported => {
+                "Special permission concerning the goods to be transported"
+            }
             Text::SpecialHandling => "Special handling",
             Text::SpecialPermissionConcerningPackage => "Special permission concerning package",
-            Text::SpecialPermissionConcerningTransportMeans => "Special permission concerning transport means",
+            Text::SpecialPermissionConcerningTransportMeans => {
+                "Special permission concerning transport means"
+            }
             Text::SubsidiaryRiskNumberIataDgr => "Subsidiary risk number (IATA/DGR)",
             Text::SpecialServiceRequest => "Special service request",
             Text::SupplierRemarks => "Supplier remarks",
@@ -1625,7 +1671,7 @@ impl crate::Description for Text {
 impl crate::FromCode for Text {
     fn from_code(code: &str) -> Option<Self>
     where
-        Self: Sized
+        Self: Sized,
     {
         match code {
             "AAA" => Some(Text::GoodsItemDescription),

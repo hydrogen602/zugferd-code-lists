@@ -27,8 +27,12 @@ impl crate::Code for MIME {
             MIME::ImagePng => "image/png",
             MIME::ImageJpeg => "image/jpeg",
             MIME::TextCsv => "text/csv",
-            MIME::ApplicationVndOpenxmlformatsOfficedocumentSpreadsheetmlSheet => "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
-            MIME::ApplicationVndOasisOpendocumentSpreadsheet => "application/vnd.oasis.opendocument.spreadsheet",
+            MIME::ApplicationVndOpenxmlformatsOfficedocumentSpreadsheetmlSheet => {
+                "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+            }
+            MIME::ApplicationVndOasisOpendocumentSpreadsheet => {
+                "application/vnd.oasis.opendocument.spreadsheet"
+            }
             MIME::ApplicationXml => "application/xml",
             MIME::TextXml => "text/xml",
         }
@@ -42,8 +46,12 @@ impl crate::Description for MIME {
             MIME::ImagePng => "image/png",
             MIME::ImageJpeg => "image/jpeg",
             MIME::TextCsv => "text/csv",
-            MIME::ApplicationVndOpenxmlformatsOfficedocumentSpreadsheetmlSheet => "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
-            MIME::ApplicationVndOasisOpendocumentSpreadsheet => "application/vnd.oasis.opendocument.spreadsheet",
+            MIME::ApplicationVndOpenxmlformatsOfficedocumentSpreadsheetmlSheet => {
+                "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+            }
+            MIME::ApplicationVndOasisOpendocumentSpreadsheet => {
+                "application/vnd.oasis.opendocument.spreadsheet"
+            }
             MIME::ApplicationXml => "application/xml",
             MIME::TextXml => "text/xml",
         }
@@ -53,15 +61,19 @@ impl crate::Description for MIME {
 impl crate::FromCode for MIME {
     fn from_code(code: &str) -> Option<Self>
     where
-        Self: Sized
+        Self: Sized,
     {
         match code {
             "application/pdf" => Some(MIME::ApplicationPdf),
             "image/png" => Some(MIME::ImagePng),
             "image/jpeg" => Some(MIME::ImageJpeg),
             "text/csv" => Some(MIME::TextCsv),
-            "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet" => Some(MIME::ApplicationVndOpenxmlformatsOfficedocumentSpreadsheetmlSheet),
-            "application/vnd.oasis.opendocument.spreadsheet" => Some(MIME::ApplicationVndOasisOpendocumentSpreadsheet),
+            "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet" => {
+                Some(MIME::ApplicationVndOpenxmlformatsOfficedocumentSpreadsheetmlSheet)
+            }
+            "application/vnd.oasis.opendocument.spreadsheet" => {
+                Some(MIME::ApplicationVndOasisOpendocumentSpreadsheet)
+            }
             "application/xml" => Some(MIME::ApplicationXml),
             "text/xml" => Some(MIME::TextXml),
             _ => None,

@@ -325,27 +325,41 @@ impl crate::Description for Enum1001 {
     fn description(&self) -> &str {
         match self {
             Enum1001::RequestForPayment => "Request for payment",
-            Enum1001::DebitNoteRelatedToGoodsOrServices => "Debit note related to goods or services",
-            Enum1001::CreditNoteRelatedToGoodsOrServices => "Credit note related to goods or services",
+            Enum1001::DebitNoteRelatedToGoodsOrServices => {
+                "Debit note related to goods or services"
+            }
+            Enum1001::CreditNoteRelatedToGoodsOrServices => {
+                "Credit note related to goods or services"
+            }
             Enum1001::MeteredServicesInvoice => "Metered services invoice",
-            Enum1001::CreditNoteRelatedToFinancialAdjustments => "Credit note related to financial adjustments",
-            Enum1001::DebitNoteRelatedToFinancialAdjustments => "Debit note related to financial adjustments",
+            Enum1001::CreditNoteRelatedToFinancialAdjustments => {
+                "Credit note related to financial adjustments"
+            }
+            Enum1001::DebitNoteRelatedToFinancialAdjustments => {
+                "Debit note related to financial adjustments"
+            }
             Enum1001::TaxNotification => "Tax notification",
             Enum1001::InvoicingDataSheet => "Invoicing data sheet",
             Enum1001::DirectPaymentValuation => "Direct payment valuation",
             Enum1001::ProvisionalPaymentValuation => "Provisional payment valuation",
             Enum1001::PaymentValuation => "Payment valuation",
             Enum1001::InterimApplicationForPayment => "Interim application for payment",
-            Enum1001::FinalPaymentRequestBasedOnCompletionWork => "Final payment request based on completion of work",
+            Enum1001::FinalPaymentRequestBasedOnCompletionWork => {
+                "Final payment request based on completion of work"
+            }
             Enum1001::PaymentRequestForCompletedUnits => "Payment request for completed units",
             Enum1001::SelfBilledCreditNote => "Self billed credit note",
-            Enum1001::ConsolidatedCreditNoteGoodsAndServices => "Consolidated credit note - goods and services",
+            Enum1001::ConsolidatedCreditNoteGoodsAndServices => {
+                "Consolidated credit note - goods and services"
+            }
             Enum1001::PriceVariationInvoice => "Price variation invoice",
             Enum1001::CreditNoteForPriceVariation => "Credit note for price variation",
             Enum1001::DelcredereCreditNote => "Delcredere credit note",
             Enum1001::ProformaInvoice => "Proforma invoice",
             Enum1001::PartialInvoice => "Partial invoice",
-            Enum1001::CommercialInvoiceWhichIncludesAPackingList => "Commercial invoice which includes a packing list",
+            Enum1001::CommercialInvoiceWhichIncludesAPackingList => {
+                "Commercial invoice which includes a packing list"
+            }
             Enum1001::CommercialInvoice => "Commercial invoice",
             Enum1001::CreditNote => "Credit note",
             Enum1001::CommissionNote => "Commission note",
@@ -361,24 +375,44 @@ impl crate::Description for Enum1001 {
             Enum1001::LeaseInvoice => "Lease invoice",
             Enum1001::ConsignmentInvoice => "Consignment invoice",
             Enum1001::FactoredCreditNote => "Factored credit note",
-            Enum1001::OpticalCharacterReadingOcrPaymentCreditNote => "Optical Character Reading (OCR) payment credit note",
+            Enum1001::OpticalCharacterReadingOcrPaymentCreditNote => {
+                "Optical Character Reading (OCR) payment credit note"
+            }
             Enum1001::DebitAdvice => "Debit advice",
             Enum1001::ReversalDebit => "Reversal of debit",
             Enum1001::ReversalCredit => "Reversal of credit",
-            Enum1001::SelfBilledCorrectiveInvoiceInvoiceTypeCorrected => " Self-billed corrective invoice, invoice type, Corrected",
-            Enum1001::FactoredCorrectiveInvoiceInvoiceTypeCorrected => " Factored Corrective Invoice, invoice type, Corrected",
-            Enum1001::SelfBilledFactoredCorrectiveInvoiceInvoiceTypeCorrected => " Self billed Factored corrective invoice, invoice type, Corrected",
-            Enum1001::SelfPrepaymentInvoiceInvoiceTypeOriginal => " Self Prepayment invoice, invoice type, Original",
-            Enum1001::SelfBilledFactoredInvoiceInvoiceTypeOriginal => " Self billed factored invoice, invoice type, Original",
-            Enum1001::SelfBilletFactoredCreditNoteCreditNoteTypeCorrected => " Self billet factored Credit Note, Credit note type, Corrected",
-            Enum1001::PrepaymentCreditNoteCreditNoteTypeCorrected => " Prepayment credit note, credit note type, Corrected",
+            Enum1001::SelfBilledCorrectiveInvoiceInvoiceTypeCorrected => {
+                " Self-billed corrective invoice, invoice type, Corrected"
+            }
+            Enum1001::FactoredCorrectiveInvoiceInvoiceTypeCorrected => {
+                " Factored Corrective Invoice, invoice type, Corrected"
+            }
+            Enum1001::SelfBilledFactoredCorrectiveInvoiceInvoiceTypeCorrected => {
+                " Self billed Factored corrective invoice, invoice type, Corrected"
+            }
+            Enum1001::SelfPrepaymentInvoiceInvoiceTypeOriginal => {
+                " Self Prepayment invoice, invoice type, Original"
+            }
+            Enum1001::SelfBilledFactoredInvoiceInvoiceTypeOriginal => {
+                " Self billed factored invoice, invoice type, Original"
+            }
+            Enum1001::SelfBilletFactoredCreditNoteCreditNoteTypeCorrected => {
+                " Self billet factored Credit Note, Credit note type, Corrected"
+            }
+            Enum1001::PrepaymentCreditNoteCreditNoteTypeCorrected => {
+                " Prepayment credit note, credit note type, Corrected"
+            }
             Enum1001::SelfBilledDebitNote => "Self billed debit note",
             Enum1001::ForwardersCreditNote => "Forwarder's credit note",
-            Enum1001::ForwardersInvoiceDiscrepancyReport => "Forwarder's invoice discrepancy report",
+            Enum1001::ForwardersInvoiceDiscrepancyReport => {
+                "Forwarder's invoice discrepancy report"
+            }
             Enum1001::InsurersInvoice => "Insurer's invoice",
             Enum1001::ForwardersInvoice => "Forwarder's invoice",
             Enum1001::PortChargesDocuments => "Port charges documents",
-            Enum1001::InvoiceInformationForAccountingPurposes => "Invoice information for accounting purposes",
+            Enum1001::InvoiceInformationForAccountingPurposes => {
+                "Invoice information for accounting purposes"
+            }
             Enum1001::FreightInvoice => "Freight invoice",
             Enum1001::ClaimNotification => "Claim notification",
             Enum1001::ConsularInvoice => "Consular invoice",
@@ -393,7 +427,7 @@ impl crate::Description for Enum1001 {
 impl crate::FromCode for Enum1001 {
     fn from_code(code: &str) -> Option<Self>
     where
-        Self: Sized
+        Self: Sized,
     {
         match code {
             "71" => Some(Enum1001::RequestForPayment),

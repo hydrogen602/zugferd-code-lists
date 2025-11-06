@@ -24,7 +24,9 @@ impl crate::Description for TimeCII {
     fn description(&self) -> &str {
         match self {
             TimeCII::DateInvoice => "Date of invoice",
-            TimeCII::DateDeliveryGoodsToEstablishmentsDomicileSite => "Date of delivery of goods to establishments/domicile/site",
+            TimeCII::DateDeliveryGoodsToEstablishmentsDomicileSite => {
+                "Date of delivery of goods to establishments/domicile/site"
+            }
             TimeCII::PaymentDate => "Payment date",
         }
     }
@@ -33,7 +35,7 @@ impl crate::Description for TimeCII {
 impl crate::FromCode for TimeCII {
     fn from_code(code: &str) -> Option<Self>
     where
-        Self: Sized
+        Self: Sized,
     {
         match code {
             "5" => Some(TimeCII::DateInvoice),

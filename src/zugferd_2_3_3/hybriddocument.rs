@@ -34,10 +34,18 @@ impl crate::Code for HybridDocument {
 impl crate::Description for HybridDocument {
     fn description(&self) -> &str {
         match self {
-            HybridDocument::TheHybridDocumentContainsAnInvoiceOrCreditNote => "The hybrid document contains an invoice or credit note",
-            HybridDocument::TheHybridDocumentContainsAnOrder => "The hybrid document contains an order",
-            HybridDocument::TheHybridDocumentContainsAnOrderResponse => "The hybrid document contains an order response",
-            HybridDocument::ThyHybridDocumentContainsAnOrderChange => "Thy hybrid document contains an order change",
+            HybridDocument::TheHybridDocumentContainsAnInvoiceOrCreditNote => {
+                "The hybrid document contains an invoice or credit note"
+            }
+            HybridDocument::TheHybridDocumentContainsAnOrder => {
+                "The hybrid document contains an order"
+            }
+            HybridDocument::TheHybridDocumentContainsAnOrderResponse => {
+                "The hybrid document contains an order response"
+            }
+            HybridDocument::ThyHybridDocumentContainsAnOrderChange => {
+                "Thy hybrid document contains an order change"
+            }
         }
     }
 }
@@ -45,7 +53,7 @@ impl crate::Description for HybridDocument {
 impl crate::FromCode for HybridDocument {
     fn from_code(code: &str) -> Option<Self>
     where
-        Self: Sized
+        Self: Sized,
     {
         match code {
             "INVOICE" => Some(HybridDocument::TheHybridDocumentContainsAnInvoiceOrCreditNote),

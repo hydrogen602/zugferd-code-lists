@@ -2468,32 +2468,46 @@ impl crate::Code for Enum1153 {
 impl crate::Description for Enum1153 {
     fn description(&self) -> &str {
         match self {
-            Enum1153::OrderAcknowledgementDocumentIdentifier => "Order acknowledgement document identifier",
+            Enum1153::OrderAcknowledgementDocumentIdentifier => {
+                "Order acknowledgement document identifier"
+            }
             Enum1153::ProformaInvoiceDocumentIdentifier => "Proforma invoice document identifier",
             Enum1153::DocumentaryCreditIdentifier => "Documentary credit identifier",
             Enum1153::ContractDocumentAddendumIdentifier => "Contract document addendum identifier",
             Enum1153::GoodsDeclarationNumber => "Goods declaration number",
             Enum1153::DebitCardNumber => "Debit card number",
             Enum1153::OfferNumber => "Offer number",
-            Enum1153::BanksBatchInterbankTransactionReferenceNumber => "Bank's batch interbank transaction reference number",
-            Enum1153::BanksIndividualInterbankTransactionReferenceNumber => "Bank's individual interbank transaction reference number",
+            Enum1153::BanksBatchInterbankTransactionReferenceNumber => {
+                "Bank's batch interbank transaction reference number"
+            }
+            Enum1153::BanksIndividualInterbankTransactionReferenceNumber => {
+                "Bank's individual interbank transaction reference number"
+            }
             Enum1153::DeliveryOrderNumber => "Delivery order number",
             Enum1153::DespatchAdviceNumber => "Despatch advice number",
             Enum1153::DrawingNumber => "Drawing number",
             Enum1153::WaybillNumber => "Waybill number",
             Enum1153::DeliveryScheduleNumber => "Delivery schedule number",
-            Enum1153::ConsignmentIdentifierConsigneeAssigned => "Consignment identifier, consignee assigned",
+            Enum1153::ConsignmentIdentifierConsigneeAssigned => {
+                "Consignment identifier, consignee assigned"
+            }
             Enum1153::PartialShipmentIdentifier => "Partial shipment identifier",
             Enum1153::TransportEquipmentIdentifier => "Transport equipment identifier",
-            Enum1153::MunicipalityAssignedBusinessRegistryNumber => "Municipality assigned business registry number",
-            Enum1153::TransportContractDocumentIdentifier => "Transport contract document identifier",
+            Enum1153::MunicipalityAssignedBusinessRegistryNumber => {
+                "Municipality assigned business registry number"
+            }
+            Enum1153::TransportContractDocumentIdentifier => {
+                "Transport contract document identifier"
+            }
             Enum1153::MasterLabelNumber => "Master label number",
             Enum1153::DespatchNoteDocumentIdentifier => "Despatch note document identifier",
             Enum1153::EnquiryNumber => "Enquiry number",
             Enum1153::DocketNumber => "Docket number",
             Enum1153::CivilActionNumber => "Civil action number",
             Enum1153::CarriersAgentReferenceNumber => "Carrier's agent reference number",
-            Enum1153::StandardCarrierAlphaCodeScacNumber => "Standard Carrier Alpha Code (SCAC) number",
+            Enum1153::StandardCarrierAlphaCodeScacNumber => {
+                "Standard Carrier Alpha Code (SCAC) number"
+            }
             Enum1153::CustomsValuationDecisionNumber => "Customs valuation decision number",
             Enum1153::EndUseAuthorizationNumber => "End use authorization number",
             Enum1153::AntiDumpingCaseNumber => "Anti-dumping case number",
@@ -2504,24 +2518,36 @@ impl crate::Description for Enum1153 {
             Enum1153::SubHouseBillLadingNumber => "Sub-house bill of lading number",
             Enum1153::TaxPaymentIdentifier => "Tax payment identifier",
             Enum1153::QuotaNumber => "Quota number",
-            Enum1153::TransitOnwardCarriageGuaranteeBondNumber => "Transit (onward carriage) guarantee (bond) number",
+            Enum1153::TransitOnwardCarriageGuaranteeBondNumber => {
+                "Transit (onward carriage) guarantee (bond) number"
+            }
             Enum1153::CustomsGuaranteeNumber => "Customs guarantee number",
             Enum1153::ReplacingPartNumber => "Replacing part number",
             Enum1153::SellersCatalogueNumber => "Seller's catalogue number",
             Enum1153::OriginatorsReference => "Originator's reference",
             Enum1153::DeclarantsCustomsIdentityNumber => "Declarant's Customs identity number",
             Enum1153::ImporterReferenceNumber => "Importer reference number",
-            Enum1153::ExportClearanceInstructionReferenceNumber => "Export clearance instruction reference number",
-            Enum1153::ImportClearanceInstructionReferenceNumber => "Import clearance instruction reference number",
-            Enum1153::GoodsDeclarationDocumentIdentifierCustoms => "Goods declaration document identifier, Customs",
+            Enum1153::ExportClearanceInstructionReferenceNumber => {
+                "Export clearance instruction reference number"
+            }
+            Enum1153::ImportClearanceInstructionReferenceNumber => {
+                "Import clearance instruction reference number"
+            }
+            Enum1153::GoodsDeclarationDocumentIdentifierCustoms => {
+                "Goods declaration document identifier, Customs"
+            }
             Enum1153::ArticleNumber => "Article number",
             Enum1153::IntraPlantRouting => "Intra-plant routing",
             Enum1153::StockKeepingUnitNumber => "Stock keeping unit number",
-            Enum1153::TextElementIdentifierDeletionReference => "Text Element Identifier deletion reference",
+            Enum1153::TextElementIdentifierDeletionReference => {
+                "Text Element Identifier deletion reference"
+            }
             Enum1153::AllotmentIdentificationAir => "Allotment identification (Air)",
             Enum1153::VehicleLicenceNumber => "Vehicle licence number",
             Enum1153::AirCargoTransferManifest => " Air cargo transfer manifest",
-            Enum1153::CargoAcceptanceOrderReferenceNumber => "Cargo acceptance order reference number",
+            Enum1153::CargoAcceptanceOrderReferenceNumber => {
+                "Cargo acceptance order reference number"
+            }
             Enum1153::UsGovernmentAgencyNumber => "US government agency number",
             Enum1153::ShippingUnitIdentification => "Shipping unit identification",
             Enum1153::AdditionalReferenceNumber => "Additional reference number",
@@ -2530,7 +2556,9 @@ impl crate::Description for Enum1153 {
             Enum1153::AtaCarnetNumber => "ATA carnet number",
             Enum1153::PackagingUnitIdentification => "Packaging unit identification",
             Enum1153::OuterpackagingUnitIdentification => "Outerpackaging unit identification",
-            Enum1153::CustomerMaterialSpecificationNumber => "Customer material specification number",
+            Enum1153::CustomerMaterialSpecificationNumber => {
+                "Customer material specification number"
+            }
             Enum1153::BankReference => "Bank reference",
             Enum1153::PrincipalReferenceNumber => "Principal reference number",
             Enum1153::CollectionAdviceDocumentIdentifier => "Collection advice document identifier",
@@ -2538,7 +2566,9 @@ impl crate::Description for Enum1153 {
             Enum1153::HotRollNumber => "Hot roll number",
             Enum1153::ColdRollNumber => "Cold roll number",
             Enum1153::RailwayWagonNumber => "Railway wagon number",
-            Enum1153::UniqueClaimsReferenceNumberSender => "Unique claims reference number of the sender",
+            Enum1153::UniqueClaimsReferenceNumberSender => {
+                "Unique claims reference number of the sender"
+            }
             Enum1153::LossEventNumber => "Loss/event number",
             Enum1153::EstimateOrderReferenceNumber => "Estimate order reference number",
             Enum1153::ReferenceNumberToPreviousMessage => "Reference number to previous message",
@@ -2555,7 +2585,9 @@ impl crate::Description for Enum1153 {
             Enum1153::BureauSigningStatementReference => "Bureau signing (statement reference)",
             Enum1153::CompanySyndicateReference1 => "Company / syndicate reference 1",
             Enum1153::CompanySyndicateReference2 => "Company / syndicate reference 2",
-            Enum1153::OrderingCustomerConsignmentReferenceNumber => "Ordering customer consignment reference number",
+            Enum1153::OrderingCustomerConsignmentReferenceNumber => {
+                "Ordering customer consignment reference number"
+            }
             Enum1153::ShipownersAuthorizationNumber => "Shipowner's authorization number",
             Enum1153::InlandTransportOrderNumber => "Inland transport order number",
             Enum1153::ContainerWorkOrderReferenceNumber => "Container work order reference number",
@@ -2565,7 +2597,9 @@ impl crate::Description for Enum1153 {
             Enum1153::BrokerReference1 => "Broker reference 1",
             Enum1153::BrokerReference2 => "Broker reference 2",
             Enum1153::LloydsClaimsOfficeReference => "Lloyd's claims office reference",
-            Enum1153::SecureDeliveryTermsAndConditionsAgreementReference => "Secure delivery terms and conditions agreement reference",
+            Enum1153::SecureDeliveryTermsAndConditionsAgreementReference => {
+                "Secure delivery terms and conditions agreement reference"
+            }
             Enum1153::ReportNumber => "Report number",
             Enum1153::TraderAccountNumber => "Trader account number",
             Enum1153::AuthorizationForExpenseAfeNumber => " Authorization for expense (AFE) number",
@@ -2577,7 +2611,9 @@ impl crate::Description for Enum1153 {
             Enum1153::CustomerProcessSpecificationNumber => "Customer process specification number",
             Enum1153::CustomerSpecificationNumber => "Customer specification number",
             Enum1153::ApplicableInstructionsOrStandards => "Applicable instructions or standards",
-            Enum1153::RegistrationNumberPreviousCustomsDeclaration => "Registration number of previous Customs declaration",
+            Enum1153::RegistrationNumberPreviousCustomsDeclaration => {
+                "Registration number of previous Customs declaration"
+            }
             Enum1153::PostEntryReference => "Post-entry reference",
             Enum1153::PaymentOrderNumber => "Payment order number",
             Enum1153::DeliveryNumberTransport => "Delivery number (transport)",
@@ -2592,10 +2628,14 @@ impl crate::Description for Enum1153 {
             Enum1153::SuppliersControlNumber => "Supplier's control number",
             Enum1153::ShippingNoteNumber => "Shipping note number",
             Enum1153::EmptyContainerBillNumber => "Empty container bill number",
-            Enum1153::NonNegotiableMaritimeTransportDocumentNumber => "Non-negotiable maritime transport document number",
+            Enum1153::NonNegotiableMaritimeTransportDocumentNumber => {
+                "Non-negotiable maritime transport document number"
+            }
             Enum1153::SubstituteAirWaybillNumber => "Substitute air waybill number",
             Enum1153::DespatchNotePostParcelsNumber => "Despatch note (post parcels) number",
-            Enum1153::AirlinesFlightIdentificationNumber => " Airlines flight identification number",
+            Enum1153::AirlinesFlightIdentificationNumber => {
+                " Airlines flight identification number"
+            }
             Enum1153::ThroughBillLadingNumber => "Through bill of lading number",
             Enum1153::CargoManifestNumber => "Cargo manifest number",
             Enum1153::BordereauNumber => "Bordereau number",
@@ -2604,9 +2644,15 @@ impl crate::Description for Enum1153 {
             Enum1153::MarkingLabelReference => "Marking/label reference",
             Enum1153::TariffNumber => "Tariff number",
             Enum1153::ReplenishmentPurchaseOrderNumber => "Replenishment purchase order number",
-            Enum1153::ImmediateTransportationNoForInBondMovement => "Immediate transportation no. for in bond movement",
-            Enum1153::TransportationExportationNoForInBondMovement => "Transportation exportation no. for in bond movement",
-            Enum1153::ImmediateExportationNoForInBondMovement => "Immediate exportation no. for in bond movement",
+            Enum1153::ImmediateTransportationNoForInBondMovement => {
+                "Immediate transportation no. for in bond movement"
+            }
+            Enum1153::TransportationExportationNoForInBondMovement => {
+                "Transportation exportation no. for in bond movement"
+            }
+            Enum1153::ImmediateExportationNoForInBondMovement => {
+                "Immediate exportation no. for in bond movement"
+            }
             Enum1153::AssociatedInvoices => "Associated invoices",
             Enum1153::SecondaryCustomsReference => "Secondary Customs reference",
             Enum1153::AccountPartysReference => "Account party's reference",
@@ -2616,7 +2662,9 @@ impl crate::Description for Enum1153 {
             Enum1153::IssuingBanksReference => "Issuing bank's reference",
             Enum1153::BeneficiarysBankReference => "Beneficiary's bank reference",
             Enum1153::DirectPaymentValuationNumber => "Direct payment valuation number",
-            Enum1153::DirectPaymentValuationRequestNumber => "Direct payment valuation request number",
+            Enum1153::DirectPaymentValuationRequestNumber => {
+                "Direct payment valuation request number"
+            }
             Enum1153::QuantityValuationNumber => "Quantity valuation number",
             Enum1153::QuantityValuationRequestNumber => "Quantity valuation request number",
             Enum1153::BillQuantitiesNumber => "Bill of quantities number",
@@ -2629,27 +2677,39 @@ impl crate::Description for Enum1153 {
             Enum1153::AgentsReference => "Agent's reference",
             Enum1153::ApplicantsReference => "Applicant's reference",
             Enum1153::DisputeNumber => "Dispute number",
-            Enum1153::CreditRatingAgencysReferenceNumber => "Credit rating agency's reference number",
+            Enum1153::CreditRatingAgencysReferenceNumber => {
+                "Credit rating agency's reference number"
+            }
             Enum1153::RequestNumber => "Request number",
             Enum1153::SingleTransactionSequenceNumber => "Single transaction sequence number",
             Enum1153::ApplicationReferenceNumber => "Application reference number",
             Enum1153::DeliveryVerificationCertificate => "Delivery verification certificate",
-            Enum1153::NumberTemporaryImportationDocument => "Number of temporary importation document",
+            Enum1153::NumberTemporaryImportationDocument => {
+                "Number of temporary importation document"
+            }
             Enum1153::ReferenceNumberQuotedOnStatement => "Reference number quoted on statement",
-            Enum1153::SendersReferenceToOriginalMessage => "Sender's reference to the original message",
+            Enum1153::SendersReferenceToOriginalMessage => {
+                "Sender's reference to the original message"
+            }
             Enum1153::CompanyIssuedEquipmentId => "Company issued equipment ID",
             Enum1153::DomesticFlightNumber => "Domestic flight number",
             Enum1153::InternationalFlightNumber => "International flight number",
-            Enum1153::EmployerIdentificationNumberServiceBureau => "Employer identification number of service bureau",
+            Enum1153::EmployerIdentificationNumberServiceBureau => {
+                "Employer identification number of service bureau"
+            }
             Enum1153::ServiceGroupIdentificationNumber => "Service group identification number",
             Enum1153::MemberNumber => "Member number",
             Enum1153::PreviousMemberNumber => "Previous member number",
             Enum1153::SchemePlanNumber => "Scheme/plan number",
             Enum1153::PreviousSchemePlanNumber => "Previous scheme/plan number",
-            Enum1153::ReceivingPartysMemberIdentification => "Receiving party's member identification",
+            Enum1153::ReceivingPartysMemberIdentification => {
+                "Receiving party's member identification"
+            }
             Enum1153::PayrollNumber => "Payroll number",
             Enum1153::PackagingSpecificationNumber => "Packaging specification number",
-            Enum1153::AuthorityIssuedEquipmentIdentification => "Authority issued equipment identification",
+            Enum1153::AuthorityIssuedEquipmentIdentification => {
+                "Authority issued equipment identification"
+            }
             Enum1153::TrainingFlightNumber => "Training flight number",
             Enum1153::FundCodeNumber => "Fund code number",
             Enum1153::SignalCodeNumber => "Signal code number",
@@ -2662,30 +2722,50 @@ impl crate::Description for Enum1153 {
             Enum1153::CreditorsReferenceNumber => "Creditor's reference number",
             Enum1153::DebtorsReferenceNumber => "Debtor's reference number",
             Enum1153::JointVentureReferenceNumber => "Joint venture reference number",
-            Enum1153::ChamberCommerceRegistrationNumber => "Chamber of Commerce registration number",
+            Enum1153::ChamberCommerceRegistrationNumber => {
+                "Chamber of Commerce registration number"
+            }
             Enum1153::TaxRegistrationNumber => "Tax registration number",
             Enum1153::WoolIdentificationNumber => "Wool identification number",
             Enum1153::WoolTaxReferenceNumber => "Wool tax reference number",
-            Enum1153::MeatProcessingEstablishmentRegistrationNumber => "Meat processing establishment registration number",
-            Enum1153::QuarantineTreatmentStatusReferenceNumber => "Quarantine/treatment status reference number",
+            Enum1153::MeatProcessingEstablishmentRegistrationNumber => {
+                "Meat processing establishment registration number"
+            }
+            Enum1153::QuarantineTreatmentStatusReferenceNumber => {
+                "Quarantine/treatment status reference number"
+            }
             Enum1153::RequestForQuoteNumber => "Request for quote number",
             Enum1153::ManualProcessingAuthorityNumber => "Manual processing authority number",
             Enum1153::RateNoteNumber => "Rate note number",
             Enum1153::FreightForwarderNumber => "Freight Forwarder number",
             Enum1153::CustomsReleaseCode => "Customs release code",
             Enum1153::ComplianceCodeNumber => "Compliance code number",
-            Enum1153::DepartmentTransportationBondNumber => "Department of transportation bond number",
+            Enum1153::DepartmentTransportationBondNumber => {
+                "Department of transportation bond number"
+            }
             Enum1153::ExportEstablishmentNumber => "Export establishment number",
             Enum1153::CertificateConformity => "Certificate of conformity",
-            Enum1153::MinisterialCertificateHomologation => "Ministerial certificate of homologation",
+            Enum1153::MinisterialCertificateHomologation => {
+                "Ministerial certificate of homologation"
+            }
             Enum1153::PreviousDeliveryInstructionNumber => "Previous delivery instruction number",
             Enum1153::PassportNumber => "Passport number",
             Enum1153::CommonTransactionReferenceNumber => "Common transaction reference number",
-            Enum1153::BanksCommonTransactionReferenceNumber => "Bank's common transaction reference number",
-            Enum1153::CustomersIndividualTransactionReferenceNumber => "Customer's individual transaction reference number",
-            Enum1153::BanksIndividualTransactionReferenceNumber => "Bank's individual transaction reference number",
-            Enum1153::CustomersCommonTransactionReferenceNumber => "Customer's common transaction reference number",
-            Enum1153::IndividualTransactionReferenceNumber => "Individual transaction reference number",
+            Enum1153::BanksCommonTransactionReferenceNumber => {
+                "Bank's common transaction reference number"
+            }
+            Enum1153::CustomersIndividualTransactionReferenceNumber => {
+                "Customer's individual transaction reference number"
+            }
+            Enum1153::BanksIndividualTransactionReferenceNumber => {
+                "Bank's individual transaction reference number"
+            }
+            Enum1153::CustomersCommonTransactionReferenceNumber => {
+                "Customer's common transaction reference number"
+            }
+            Enum1153::IndividualTransactionReferenceNumber => {
+                "Individual transaction reference number"
+            }
             Enum1153::ProductSourcingAgreementNumber => "Product sourcing agreement number",
             Enum1153::CustomsTranshipmentNumber => "Customs transhipment number",
             Enum1153::CustomsPreferenceInquiryNumber => "Customs preference inquiry number",
@@ -2696,56 +2776,92 @@ impl crate::Description for Enum1153 {
             Enum1153::ChargeCardAccountNumber => "Charge card account number",
             Enum1153::EventReferenceNumber => "Event reference number",
             Enum1153::TransportSectionReferenceNumber => "Transport section reference number",
-            Enum1153::ReferredProductForMechanicalAnalysis => "Referred product for mechanical analysis",
-            Enum1153::ReferredProductForChemicalAnalysis => "Referred product for chemical analysis",
+            Enum1153::ReferredProductForMechanicalAnalysis => {
+                "Referred product for mechanical analysis"
+            }
+            Enum1153::ReferredProductForChemicalAnalysis => {
+                "Referred product for chemical analysis"
+            }
             Enum1153::ConsolidatedInvoiceNumber => "Consolidated invoice number",
             Enum1153::PartReferenceIndicatorInADrawing => "Part reference indicator in a drawing",
             Enum1153::USCodeFederalRegulationsCfr => "U.S. Code of Federal Regulations (CFR)",
             Enum1153::PurchasingActivityClauseNumber => "Purchasing activity clause number",
-            Enum1153::USDefenseFederalAcquisitionRegulationSupplement => "U.S. Defense Federal Acquisition Regulation Supplement",
+            Enum1153::USDefenseFederalAcquisitionRegulationSupplement => {
+                "U.S. Defense Federal Acquisition Regulation Supplement"
+            }
             Enum1153::AgencyClauseNumber => "Agency clause number",
             Enum1153::CircularPublicationNumber => "Circular publication number",
             Enum1153::USFederalAcquisitionRegulation => "U.S. Federal Acquisition Regulation",
-            Enum1153::USGeneralServicesAdministrationRegulation => "U.S. General Services Administration Regulation",
-            Enum1153::USFederalInformationResourcesManagementRegulation => "U.S. Federal Information Resources Management Regulation",
+            Enum1153::USGeneralServicesAdministrationRegulation => {
+                "U.S. General Services Administration Regulation"
+            }
+            Enum1153::USFederalInformationResourcesManagementRegulation => {
+                "U.S. Federal Information Resources Management Regulation"
+            }
             Enum1153::Paragraph => "Paragraph",
             Enum1153::SpecialInstructionsNumber => "Special instructions number",
-            Enum1153::SiteSpecificProceduresTermsAndConditionsNumber => "Site specific procedures, terms, and conditions number",
-            Enum1153::MasterSolicitationProceduresTermsAndConditions => "Master solicitation procedures, terms, and conditions",
-            Enum1153::USDepartmentVeteransAffairsAcquisitionRegulation => "U.S. Department of Veterans Affairs Acquisition Regulation",
-            Enum1153::MilitaryInterdepartmentalPurchaseRequestMiprNumber => "Military Interdepartmental Purchase Request (MIPR) number",
+            Enum1153::SiteSpecificProceduresTermsAndConditionsNumber => {
+                "Site specific procedures, terms, and conditions number"
+            }
+            Enum1153::MasterSolicitationProceduresTermsAndConditions => {
+                "Master solicitation procedures, terms, and conditions"
+            }
+            Enum1153::USDepartmentVeteransAffairsAcquisitionRegulation => {
+                "U.S. Department of Veterans Affairs Acquisition Regulation"
+            }
+            Enum1153::MilitaryInterdepartmentalPurchaseRequestMiprNumber => {
+                "Military Interdepartmental Purchase Request (MIPR) number"
+            }
             Enum1153::ForeignMilitarySalesNumber => "Foreign military sales number",
-            Enum1153::DefensePrioritiesAllocationSystemPriorityRating => "Defense priorities allocation system priority rating",
+            Enum1153::DefensePrioritiesAllocationSystemPriorityRating => {
+                "Defense priorities allocation system priority rating"
+            }
             Enum1153::WageDeterminationNumber => "Wage determination number",
             Enum1153::AgreementNumber => "Agreement number",
-            Enum1153::StandardIndustryClassificationSicNumber => "Standard Industry Classification (SIC) number",
+            Enum1153::StandardIndustryClassificationSicNumber => {
+                "Standard Industry Classification (SIC) number"
+            }
             Enum1153::EndItemNumber => "End item number",
             Enum1153::FederalSupplyScheduleItemNumber => "Federal supply schedule item number",
             Enum1153::TechnicalDocumentNumber => "Technical document number",
             Enum1153::TechnicalOrderNumber => "Technical order number",
             Enum1153::Suffix => "Suffix",
             Enum1153::TransportationAccountNumber => "Transportation account number",
-            Enum1153::ContainerDispositionOrderReferenceNumber => "Container disposition order reference number",
+            Enum1153::ContainerDispositionOrderReferenceNumber => {
+                "Container disposition order reference number"
+            }
             Enum1153::ContainerPrefix => "Container prefix",
             Enum1153::TransportEquipmentReturnReference => "Transport equipment return reference",
             Enum1153::TransportEquipmentSurveyReference => "Transport equipment survey reference",
-            Enum1153::TransportEquipmentSurveyReportNumber => "Transport equipment survey report number",
+            Enum1153::TransportEquipmentSurveyReportNumber => {
+                "Transport equipment survey report number"
+            }
             Enum1153::TransportEquipmentStuffingOrder => "Transport equipment stuffing order",
             Enum1153::VehicleIdentificationNumberVin => "Vehicle Identification Number (VIN)",
             Enum1153::GovernmentBillLading => "Government bill of lading",
-            Enum1153::OrderingCustomersSecondReferenceNumber => "Ordering customer's second reference number",
+            Enum1153::OrderingCustomersSecondReferenceNumber => {
+                "Ordering customer's second reference number"
+            }
             Enum1153::DirectDebitReference => "Direct debit reference",
-            Enum1153::MeterReadingAtBeginningDelivery => "Meter reading at the beginning of the delivery",
+            Enum1153::MeterReadingAtBeginningDelivery => {
+                "Meter reading at the beginning of the delivery"
+            }
             Enum1153::MeterReadingAtEndDelivery => "Meter reading at the end of delivery",
-            Enum1153::ReplenishmentPurchaseOrderRangeStartNumber => "Replenishment purchase order range start number",
+            Enum1153::ReplenishmentPurchaseOrderRangeStartNumber => {
+                "Replenishment purchase order range start number"
+            }
             Enum1153::ThirdBanksReference => "Third bank's reference",
             Enum1153::ActionAuthorizationNumber => "Action authorization number",
             Enum1153::AppropriationNumber => "Appropriation number",
             Enum1153::ProductChangeAuthorityNumber => "Product change authority number",
-            Enum1153::GeneralCargoConsignmentReferenceNumber => "General cargo consignment reference number",
+            Enum1153::GeneralCargoConsignmentReferenceNumber => {
+                "General cargo consignment reference number"
+            }
             Enum1153::CatalogueSequenceNumber => "Catalogue sequence number",
             Enum1153::ForwardingOrderNumber => "Forwarding order number",
-            Enum1153::TransportEquipmentSurveyReferenceNumber => "Transport equipment survey reference number",
+            Enum1153::TransportEquipmentSurveyReferenceNumber => {
+                "Transport equipment survey reference number"
+            }
             Enum1153::LeaseContractReference => "Lease contract reference",
             Enum1153::TransportCostsReferenceNumber => "Transport costs reference number",
             Enum1153::TransportEquipmentStrippingOrder => "Transport equipment stripping order",
@@ -2753,58 +2869,96 @@ impl crate::Description for Enum1153 {
             Enum1153::PolicyNumber => "Policy number",
             Enum1153::ProcurementBudgetNumber => "Procurement budget number",
             Enum1153::DomesticInventoryManagementCode => "Domestic inventory management code",
-            Enum1153::CustomerReferenceNumberAssignedToPreviousBalance => "Customer reference number assigned to previous balance of",
-            Enum1153::PreviousCreditAdviceReferenceNumber => "Previous credit advice reference number",
+            Enum1153::CustomerReferenceNumberAssignedToPreviousBalance => {
+                "Customer reference number assigned to previous balance of"
+            }
+            Enum1153::PreviousCreditAdviceReferenceNumber => {
+                "Previous credit advice reference number"
+            }
             Enum1153::ReportingFormNumber => "Reporting form number",
-            Enum1153::AuthorizationNumberForExceptionToDangerousGoods => "Authorization number for exception to dangerous goods",
+            Enum1153::AuthorizationNumberForExceptionToDangerousGoods => {
+                "Authorization number for exception to dangerous goods"
+            }
             Enum1153::DangerousGoodsSecurityNumber => "Dangerous goods security number",
-            Enum1153::DangerousGoodsTransportLicenceNumber => "Dangerous goods transport licence number",
+            Enum1153::DangerousGoodsTransportLicenceNumber => {
+                "Dangerous goods transport licence number"
+            }
             Enum1153::PreviousRentalAgreementNumber => "Previous rental agreement number",
             Enum1153::NextRentalAgreementReasonNumber => "Next rental agreement reason number",
             Enum1153::ConsigneesInvoiceNumber => "Consignee's invoice number",
             Enum1153::MessageBatchNumber => "Message batch number",
             Enum1153::PreviousDeliveryScheduleNumber => "Previous delivery schedule number",
-            Enum1153::PhysicalInventoryRecountReferenceNumber => "Physical inventory recount reference number",
+            Enum1153::PhysicalInventoryRecountReferenceNumber => {
+                "Physical inventory recount reference number"
+            }
             Enum1153::ReceivingAdviceNumber => "Receiving advice number",
             Enum1153::ReturnableContainerReferenceNumber => "Returnable container reference number",
             Enum1153::ReturnsNoticeNumber => "Returns notice number",
             Enum1153::SalesForecastNumber => "Sales forecast number",
             Enum1153::SalesReportNumber => "Sales report number",
             Enum1153::PreviousTaxControlNumber => "Previous tax control number",
-            Enum1153::AgerdAerospaceGroundEquipmentRequirementDataNumber => "AGERD (Aerospace Ground Equipment Requirement Data) number",
+            Enum1153::AgerdAerospaceGroundEquipmentRequirementDataNumber => {
+                "AGERD (Aerospace Ground Equipment Requirement Data) number"
+            }
             Enum1153::RegisteredCapitalReference => "Registered capital reference",
             Enum1153::StandardNumberInspectionDocument => "Standard number of inspection document",
             Enum1153::Model => "Model",
             Enum1153::FinancialManagementReference => "Financial management reference",
-            Enum1153::NotificationForCollectionNumberNoticol => "NOTIfication for COLlection number (NOTICOL)",
-            Enum1153::PreviousRequestForMeteredReadingReferenceNumber => "Previous request for metered reading reference number",
+            Enum1153::NotificationForCollectionNumberNoticol => {
+                "NOTIfication for COLlection number (NOTICOL)"
+            }
+            Enum1153::PreviousRequestForMeteredReadingReferenceNumber => {
+                "Previous request for metered reading reference number"
+            }
             Enum1153::NextRentalAgreementNumber => "Next rental agreement number",
-            Enum1153::ReferenceNumberARequestForMeteredReading => "Reference number of a request for metered reading",
+            Enum1153::ReferenceNumberARequestForMeteredReading => {
+                "Reference number of a request for metered reading"
+            }
             Enum1153::HasteningNumber => "Hastening number",
             Enum1153::RepairDataRequestNumber => "Repair data request number",
             Enum1153::ConsumptionDataRequestNumber => "Consumption data request number",
             Enum1153::ProfileNumber => "Profile number",
             Enum1153::CaseNumber => "Case number",
-            Enum1153::GovernmentQualityAssuranceAndControlLevelNumber => "Government quality assurance and control level Number",
+            Enum1153::GovernmentQualityAssuranceAndControlLevelNumber => {
+                "Government quality assurance and control level Number"
+            }
             Enum1153::PaymentPlanReference => "Payment plan reference",
             Enum1153::ReplacedMeterUnitNumber => "Replaced meter unit number",
-            Enum1153::ReplenishmentPurchaseOrderRangeEndNumber => "Replenishment purchase order range end number",
+            Enum1153::ReplenishmentPurchaseOrderRangeEndNumber => {
+                "Replenishment purchase order range end number"
+            }
             Enum1153::InsurerAssignedReferenceNumber => "Insurer assigned reference number",
             Enum1153::CanadianExciseEntryNumber => "Canadian excise entry number",
             Enum1153::PremiumRateTable => "Premium rate table",
             Enum1153::AdviseThroughBanksReference => "Advise through bank's reference",
-            Enum1153::UsDepartmentTransportationBondSuretyCode => "US, Department of Transportation bond surety code",
-            Enum1153::UsFoodAndDrugAdministrationEstablishmentIndicator => "US, Food and Drug Administration establishment indicator",
-            Enum1153::UsFederalCommunicationsCommissionFccImport => "US, Federal Communications Commission (FCC) import",
-            Enum1153::GoodsAndServicesTaxIdentificationNumber => "Goods and Services Tax identification number",
-            Enum1153::IntegratedLogisticSupportCrossReferenceNumber => "Integrated logistic support cross reference number",
+            Enum1153::UsDepartmentTransportationBondSuretyCode => {
+                "US, Department of Transportation bond surety code"
+            }
+            Enum1153::UsFoodAndDrugAdministrationEstablishmentIndicator => {
+                "US, Food and Drug Administration establishment indicator"
+            }
+            Enum1153::UsFederalCommunicationsCommissionFccImport => {
+                "US, Federal Communications Commission (FCC) import"
+            }
+            Enum1153::GoodsAndServicesTaxIdentificationNumber => {
+                "Goods and Services Tax identification number"
+            }
+            Enum1153::IntegratedLogisticSupportCrossReferenceNumber => {
+                "Integrated logistic support cross reference number"
+            }
             Enum1153::DepartmentNumber => "Department number",
             Enum1153::BuyersCatalogueNumber => "Buyer's catalogue number",
-            Enum1153::FinancialSettlementPartysReferenceNumber => "Financial settlement party's reference number",
+            Enum1153::FinancialSettlementPartysReferenceNumber => {
+                "Financial settlement party's reference number"
+            }
             Enum1153::StandardsVersionNumber => "Standard's version number",
             Enum1153::PipelineNumber => "Pipeline number",
-            Enum1153::AccountServicingBanksReferenceNumber => "Account servicing bank's reference number",
-            Enum1153::CompletedUnitsPaymentRequestReference => "Completed units payment request reference",
+            Enum1153::AccountServicingBanksReferenceNumber => {
+                "Account servicing bank's reference number"
+            }
+            Enum1153::CompletedUnitsPaymentRequestReference => {
+                "Completed units payment request reference"
+            }
             Enum1153::PaymentInAdvanceRequestReference => "Payment in advance request reference",
             Enum1153::ParentFile => "Parent file",
             Enum1153::SubFile => "Sub file",
@@ -2813,7 +2967,9 @@ impl crate::Description for Enum1153 {
             Enum1153::PlotFile => "Plot file",
             Enum1153::FileConversionJournal => "File conversion journal",
             Enum1153::AuthorizationNumber => "Authorization number",
-            Enum1153::ReferenceNumberAssignedByThirdParty => "Reference number assigned by third party",
+            Enum1153::ReferenceNumberAssignedByThirdParty => {
+                "Reference number assigned by third party"
+            }
             Enum1153::DepositReferenceNumber => "Deposit reference number",
             Enum1153::NamedBanksReference => "Named bank's reference",
             Enum1153::DraweesReference => "Drawee's reference",
@@ -2823,7 +2979,9 @@ impl crate::Description for Enum1153 {
             Enum1153::PrincipalsBankReference => "Principal's bank reference",
             Enum1153::PresentingBanksReference => "Presenting bank's reference",
             Enum1153::ConsigneesReference => "Consignee's reference",
-            Enum1153::FinancialTransactionReferenceNumber => "Financial transaction reference number",
+            Enum1153::FinancialTransactionReferenceNumber => {
+                "Financial transaction reference number"
+            }
             Enum1153::CreditReferenceNumber => "Credit reference number",
             Enum1153::ReceivingBanksAuthorizationNumber => "Receiving bank's authorization number",
             Enum1153::ClearingReference => "Clearing reference",
@@ -2858,65 +3016,125 @@ impl crate::Description for Enum1153 {
             Enum1153::EquipmentOwnerReferenceNumber => "Equipment owner reference number",
             Enum1153::CedentsClaimNumber => "Cedent's claim number",
             Enum1153::ReinsurersClaimNumber => "Reinsurer's claim number",
-            Enum1153::PriceSalesCatalogueResponseReferenceNumber => "Price/sales catalogue response reference number",
-            Enum1153::GeneralPurposeMessageReferenceNumber => "General purpose message reference number",
+            Enum1153::PriceSalesCatalogueResponseReferenceNumber => {
+                "Price/sales catalogue response reference number"
+            }
+            Enum1153::GeneralPurposeMessageReferenceNumber => {
+                "General purpose message reference number"
+            }
             Enum1153::InvoicingDataSheetReferenceNumber => "Invoicing data sheet reference number",
             Enum1153::InventoryReportReferenceNumber => "Inventory report reference number",
             Enum1153::CeilingFormulaReferenceNumber => "Ceiling formula reference number",
-            Enum1153::PriceVariationFormulaReferenceNumber => "Price variation formula reference number",
-            Enum1153::ReferenceToAccountServicingBanksMessage => "Reference to account servicing bank's message",
+            Enum1153::PriceVariationFormulaReferenceNumber => {
+                "Price variation formula reference number"
+            }
+            Enum1153::ReferenceToAccountServicingBanksMessage => {
+                "Reference to account servicing bank's message"
+            }
             Enum1153::PartySequenceNumber => "Party sequence number",
             Enum1153::PurchasersRequestReference => "Purchaser's request reference",
             Enum1153::ContractorRequestReference => "Contractor request reference",
             Enum1153::AccidentReferenceNumber => "Accident reference number",
-            Enum1153::CommercialAccountSummaryReferenceNumber => "Commercial account summary reference number",
+            Enum1153::CommercialAccountSummaryReferenceNumber => {
+                "Commercial account summary reference number"
+            }
             Enum1153::ContractBreakdownReference => "Contract breakdown reference",
             Enum1153::ContractorRegistrationNumber => "Contractor registration number",
-            Enum1153::ApplicableCoefficientIdentificationNumber => "Applicable coefficient identification number",
+            Enum1153::ApplicableCoefficientIdentificationNumber => {
+                "Applicable coefficient identification number"
+            }
             Enum1153::SpecialBudgetAccountNumber => "Special budget account number",
             Enum1153::AuthorisationForRepairReference => "Authorisation for repair reference",
-            Enum1153::ManufacturerDefinedRepairRatesReference => "Manufacturer defined repair rates reference",
+            Enum1153::ManufacturerDefinedRepairRatesReference => {
+                "Manufacturer defined repair rates reference"
+            }
             Enum1153::OriginalSubmitterLogNumber => "Original submitter log number",
-            Enum1153::OriginalSubmitterParentDataMaintenanceRequestDmr => "Original submitter, parent Data Maintenance Request (DMR)",
-            Enum1153::OriginalSubmitterChildDataMaintenanceRequestDmr => "Original submitter, child Data Maintenance Request (DMR)",
+            Enum1153::OriginalSubmitterParentDataMaintenanceRequestDmr => {
+                "Original submitter, parent Data Maintenance Request (DMR)"
+            }
+            Enum1153::OriginalSubmitterChildDataMaintenanceRequestDmr => {
+                "Original submitter, child Data Maintenance Request (DMR)"
+            }
             Enum1153::EntryPointAssessmentLogNumber => "Entry point assessment log number",
-            Enum1153::EntryPointAssessmentLogNumberParentDmr => "Entry point assessment log number, parent DMR",
-            Enum1153::EntryPointAssessmentLogNumberChildDmr => "Entry point assessment log number, child DMR",
+            Enum1153::EntryPointAssessmentLogNumberParentDmr => {
+                "Entry point assessment log number, parent DMR"
+            }
+            Enum1153::EntryPointAssessmentLogNumberChildDmr => {
+                "Entry point assessment log number, child DMR"
+            }
             Enum1153::DataStructureTag => "Data structure tag",
             Enum1153::CentralSecretariatLogNumber => "Central secretariat log number",
-            Enum1153::CentralSecretariatLogNumberParentDataMaintenance => "Central secretariat log number, parent Data Maintenance",
-            Enum1153::CentralSecretariatLogNumberChildDataMaintenance => "Central secretariat log number, child Data Maintenance",
+            Enum1153::CentralSecretariatLogNumberParentDataMaintenance => {
+                "Central secretariat log number, parent Data Maintenance"
+            }
+            Enum1153::CentralSecretariatLogNumberChildDataMaintenance => {
+                "Central secretariat log number, child Data Maintenance"
+            }
             Enum1153::InternationalAssessmentLogNumber => "International assessment log number",
-            Enum1153::InternationalAssessmentLogNumberParentData => "International assessment log number, parent Data",
-            Enum1153::InternationalAssessmentLogNumberChildDataMaintenance => "International assessment log number, child Data Maintenance",
+            Enum1153::InternationalAssessmentLogNumberParentData => {
+                "International assessment log number, parent Data"
+            }
+            Enum1153::InternationalAssessmentLogNumberChildDataMaintenance => {
+                "International assessment log number, child Data Maintenance"
+            }
             Enum1153::StatusReportNumber => "Status report number",
             Enum1153::MessageDesignGroupNumber => "Message design group number",
             Enum1153::UsCustomsServiceUscsEntryCode => "US Customs Service (USCS) entry code",
             Enum1153::BeginningJobSequenceNumber => "Beginning job sequence number",
             Enum1153::SendersClauseNumber => "Sender's clause number",
-            Enum1153::DunAndBradstreetCanadas8DigitStandardIndustrial => "Dun and Bradstreet Canada's 8 digit Standard Industrial",
-            Enum1153::ActivitePrincipaleExerceeApeIdentifier => "Activite Principale Exercee (APE) identifier",
-            Enum1153::DunAndBradstreetUs8DigitStandardIndustrial => "Dun and Bradstreet US 8 digit Standard Industrial",
-            Enum1153::NomenclatureActivityClassificationEconomyNace => "Nomenclature Activity Classification Economy (NACE)",
-            Enum1153::NormeActiviteFrancaiseNafIdentifier => "Norme Activite Francaise (NAF) identifier",
+            Enum1153::DunAndBradstreetCanadas8DigitStandardIndustrial => {
+                "Dun and Bradstreet Canada's 8 digit Standard Industrial"
+            }
+            Enum1153::ActivitePrincipaleExerceeApeIdentifier => {
+                "Activite Principale Exercee (APE) identifier"
+            }
+            Enum1153::DunAndBradstreetUs8DigitStandardIndustrial => {
+                "Dun and Bradstreet US 8 digit Standard Industrial"
+            }
+            Enum1153::NomenclatureActivityClassificationEconomyNace => {
+                "Nomenclature Activity Classification Economy (NACE)"
+            }
+            Enum1153::NormeActiviteFrancaiseNafIdentifier => {
+                "Norme Activite Francaise (NAF) identifier"
+            }
             Enum1153::RegisteredContractorActivityType => "Registered contractor activity type",
             Enum1153::StatisticBundesAmtSbaIdentifier => "Statistic Bundes Amt (SBA) identifier",
-            Enum1153::StateOrProvinceAssignedEntityIdentification => "State or province assigned entity identification",
-            Enum1153::InstituteSecurityAndFutureMarketDevelopmentIsfmd => "Institute of Security and Future Market Development (ISFMD)",
+            Enum1153::StateOrProvinceAssignedEntityIdentification => {
+                "State or province assigned entity identification"
+            }
+            Enum1153::InstituteSecurityAndFutureMarketDevelopmentIsfmd => {
+                "Institute of Security and Future Market Development (ISFMD)"
+            }
             Enum1153::FileIdentificationNumber => "File identification number",
             Enum1153::BankruptcyProcedureNumber => "Bankruptcy procedure number",
-            Enum1153::NationalGovernmentBusinessIdentificationNumber => "National government business identification number",
-            Enum1153::PriorDataUniversalNumberSystemDunsNumber => "Prior Data Universal Number System (DUNS) number",
+            Enum1153::NationalGovernmentBusinessIdentificationNumber => {
+                "National government business identification number"
+            }
+            Enum1153::PriorDataUniversalNumberSystemDunsNumber => {
+                "Prior Data Universal Number System (DUNS) number"
+            }
             Enum1153::CompaniesRegistryOfficeCroNumber => "Companies Registry Office (CRO) number",
             Enum1153::CostaRicanJudicialNumber => "Costa Rican judicial number",
-            Enum1153::NumeroDeIdentificacionTributariaNit => "Numero de Identificacion Tributaria (NIT)",
+            Enum1153::NumeroDeIdentificacionTributariaNit => {
+                "Numero de Identificacion Tributaria (NIT)"
+            }
             Enum1153::PatronNumber => "Patron number",
-            Enum1153::RegistroInformacionFiscalRifNumber => "Registro Informacion Fiscal (RIF) number",
-            Enum1153::RegistroUnicoDeContribuyenteRucNumber => "Registro Unico de Contribuyente (RUC) number",
-            Enum1153::TokyoShokoResearchTsrBusinessIdentifier => "Tokyo SHOKO Research (TSR) business identifier",
+            Enum1153::RegistroInformacionFiscalRifNumber => {
+                "Registro Informacion Fiscal (RIF) number"
+            }
+            Enum1153::RegistroUnicoDeContribuyenteRucNumber => {
+                "Registro Unico de Contribuyente (RUC) number"
+            }
+            Enum1153::TokyoShokoResearchTsrBusinessIdentifier => {
+                "Tokyo SHOKO Research (TSR) business identifier"
+            }
             Enum1153::PersonalIdentityCardNumber => "Personal identity card number",
-            Enum1153::SystemeInformatiquePourLeRepertoireDesEntreprises => "Systeme Informatique pour le Repertoire des ENtreprises",
-            Enum1153::SystemeInformatiquePourLeRepertoireDesEtablissements => "Systeme Informatique pour le Repertoire des ETablissements",
+            Enum1153::SystemeInformatiquePourLeRepertoireDesEntreprises => {
+                "Systeme Informatique pour le Repertoire des ENtreprises"
+            }
+            Enum1153::SystemeInformatiquePourLeRepertoireDesEtablissements => {
+                "Systeme Informatique pour le Repertoire des ETablissements"
+            }
             Enum1153::PublicationIssueNumber => "Publication issue number",
             Enum1153::OriginalFilingNumber => "Original filing number",
             Enum1153::DocumentPageIdentifier => "Document page identifier",
@@ -2936,15 +3154,21 @@ impl crate::Description for Enum1153 {
             Enum1153::AssumingCompany => "Assuming company",
             Enum1153::BudgetChapter => "Budget chapter",
             Enum1153::DutyFreeProductsSecurityNumber => "Duty free products security number",
-            Enum1153::DutyFreeProductsReceiptAuthorisationNumber => "Duty free products receipt authorisation number",
+            Enum1153::DutyFreeProductsReceiptAuthorisationNumber => {
+                "Duty free products receipt authorisation number"
+            }
             Enum1153::PartyInformationMessageReference => "Party information message reference",
             Enum1153::FormalStatementReference => "Formal statement reference",
             Enum1153::ProofDeliveryReferenceNumber => "Proof of delivery reference number",
-            Enum1153::SuppliersCreditClaimReferenceNumber => "Supplier's credit claim reference number",
+            Enum1153::SuppliersCreditClaimReferenceNumber => {
+                "Supplier's credit claim reference number"
+            }
             Enum1153::PictureActualProduct => "Picture of actual product",
             Enum1153::PictureAGenericProduct => "Picture of a generic product",
             Enum1153::TradingPartnerIdentificationNumber => "Trading partner identification number",
-            Enum1153::PriorTradingPartnerIdentificationNumber => "Prior trading partner identification number",
+            Enum1153::PriorTradingPartnerIdentificationNumber => {
+                "Prior trading partner identification number"
+            }
             Enum1153::Password => "Password",
             Enum1153::FormalReportNumber => "Formal report number",
             Enum1153::FundAccountNumber => "Fund account number",
@@ -2954,17 +3178,31 @@ impl crate::Description for Enum1153 {
             Enum1153::AccountingTransmissionNumber => "Accounting transmission number",
             Enum1153::ProductDataFileNumber => "Product data file number",
             Enum1153::CadastroGeralDoContribuinteCgc => "Cadastro Geral do Contribuinte (CGC)",
-            Enum1153::ForeignResidentIdentificationNumber => "Foreign resident identification number",
+            Enum1153::ForeignResidentIdentificationNumber => {
+                "Foreign resident identification number"
+            }
             Enum1153::CdRom => "CD-ROM",
             Enum1153::PhysicalMedium => "Physical medium",
-            Enum1153::FinancialCancellationReferenceNumber => "Financial cancellation reference number",
-            Enum1153::PurchaseForExportCustomsAgreementNumber => "Purchase for export Customs agreement number",
+            Enum1153::FinancialCancellationReferenceNumber => {
+                "Financial cancellation reference number"
+            }
+            Enum1153::PurchaseForExportCustomsAgreementNumber => {
+                "Purchase for export Customs agreement number"
+            }
             Enum1153::JudgmentNumber => "Judgment number",
             Enum1153::SecretariatNumber => "Secretariat number",
-            Enum1153::PreviousBankingStatusMessageReference => "Previous banking status message reference",
-            Enum1153::LastReceivedBankingStatusMessageReference => "Last received banking status message reference",
-            Enum1153::BanksDocumentaryProcedureReference => "Bank's documentary procedure reference",
-            Enum1153::CustomersDocumentaryProcedureReference => "Customer's documentary procedure reference",
+            Enum1153::PreviousBankingStatusMessageReference => {
+                "Previous banking status message reference"
+            }
+            Enum1153::LastReceivedBankingStatusMessageReference => {
+                "Last received banking status message reference"
+            }
+            Enum1153::BanksDocumentaryProcedureReference => {
+                "Bank's documentary procedure reference"
+            }
+            Enum1153::CustomersDocumentaryProcedureReference => {
+                "Customer's documentary procedure reference"
+            }
             Enum1153::SafeDepositBoxNumber => "Safe deposit box number",
             Enum1153::ReceivingBankgiroNumber => "Receiving Bankgiro number",
             Enum1153::SendingBankgiroNumber => "Sending Bankgiro number",
@@ -2974,16 +3212,30 @@ impl crate::Description for Enum1153 {
             Enum1153::ConvertedPostgiroNumber => "Converted Postgiro number",
             Enum1153::CostCentreAlignmentNumber => "Cost centre alignment number",
             Enum1153::KamerVanKoophandelKvkNumber => "Kamer Van Koophandel (KVK) number",
-            Enum1153::InstitutBelgoLuxembourgeoisDeCodificationIblcNumber => "Institut Belgo-Luxembourgeois de Codification (IBLC) number",
+            Enum1153::InstitutBelgoLuxembourgeoisDeCodificationIblcNumber => {
+                "Institut Belgo-Luxembourgeois de Codification (IBLC) number"
+            }
             Enum1153::ExternalObjectReference => "External object reference",
-            Enum1153::ExceptionalTransportAuthorisationNumber => "Exceptional transport authorisation number",
-            Enum1153::ClaveUnicaDeIdentificacionTributariaCuit => "Clave Unica de Identificacion Tributaria (CUIT)",
+            Enum1153::ExceptionalTransportAuthorisationNumber => {
+                "Exceptional transport authorisation number"
+            }
+            Enum1153::ClaveUnicaDeIdentificacionTributariaCuit => {
+                "Clave Unica de Identificacion Tributaria (CUIT)"
+            }
             Enum1153::RegistroUnicoTributarioRut => "Registro Unico Tributario (RUT)",
-            Enum1153::FlatRackContainerBundleIdentificationNumber => "Flat rack container bundle identification number",
-            Enum1153::TransportEquipmentAcceptanceOrderReference => "Transport equipment acceptance order reference",
-            Enum1153::TransportEquipmentReleaseOrderReference => "Transport equipment release order reference",
+            Enum1153::FlatRackContainerBundleIdentificationNumber => {
+                "Flat rack container bundle identification number"
+            }
+            Enum1153::TransportEquipmentAcceptanceOrderReference => {
+                "Transport equipment acceptance order reference"
+            }
+            Enum1153::TransportEquipmentReleaseOrderReference => {
+                "Transport equipment release order reference"
+            }
             Enum1153::ShipsStayReferenceNumber => "Ship's stay reference number",
-            Enum1153::AuthorizationToMeetCompetitionNumber => " Authorization to meet competition number",
+            Enum1153::AuthorizationToMeetCompetitionNumber => {
+                " Authorization to meet competition number"
+            }
             Enum1153::PlacePositioningReference => "Place of positioning reference",
             Enum1153::PartyReference => "Party reference",
             Enum1153::IssuedPrescriptionIdentification => "Issued prescription identification",
@@ -2991,11 +3243,19 @@ impl crate::Description for Enum1153 {
             Enum1153::TravelService => "Travel service",
             Enum1153::ConsignmentStockContract => "Consignment stock contract",
             Enum1153::ImportersLetterCreditReference => "Importer's letter of credit reference",
-            Enum1153::PerformedPrescriptionIdentification => "Performed prescription identification",
+            Enum1153::PerformedPrescriptionIdentification => {
+                "Performed prescription identification"
+            }
             Enum1153::ImageReference => "Image reference",
-            Enum1153::ProposedPurchaseOrderReferenceNumber => "Proposed purchase order reference number",
-            Enum1153::ApplicationForFinancialSupportReferenceNumber => "Application for financial support reference number",
-            Enum1153::ManufacturingQualityAgreementNumber => "Manufacturing quality agreement number",
+            Enum1153::ProposedPurchaseOrderReferenceNumber => {
+                "Proposed purchase order reference number"
+            }
+            Enum1153::ApplicationForFinancialSupportReferenceNumber => {
+                "Application for financial support reference number"
+            }
+            Enum1153::ManufacturingQualityAgreementNumber => {
+                "Manufacturing quality agreement number"
+            }
             Enum1153::SoftwareEditorReference => "Software editor reference",
             Enum1153::SoftwareReference => "Software reference",
             Enum1153::SoftwareQualityReference => "Software quality reference",
@@ -3006,12 +3266,18 @@ impl crate::Description for Enum1153 {
             Enum1153::NetAreaSupplierReference => "Net area supplier reference",
             Enum1153::TimeSeriesReference => "Time series reference",
             Enum1153::ConnectingPointToCentralGrid => "Connecting point to central grid",
-            Enum1153::MarketingPlanIdentificationNumberMpin => "Marketing plan identification number (MPIN)",
+            Enum1153::MarketingPlanIdentificationNumberMpin => {
+                "Marketing plan identification number (MPIN)"
+            }
             Enum1153::EntityReferenceNumberPrevious => "Entity reference number, previous",
-            Enum1153::InternationalStandardIndustrialClassificationIsic => "International Standard Industrial Classification (ISIC)",
+            Enum1153::InternationalStandardIndustrialClassificationIsic => {
+                "International Standard Industrial Classification (ISIC)"
+            }
             Enum1153::CustomsPreApprovalRulingNumber => "Customs pre-approval ruling number",
             Enum1153::AccountPayableNumber => " Account payable number",
-            Enum1153::FirstFinancialInstitutionsTransactionReference => "First financial institution's transaction reference",
+            Enum1153::FirstFinancialInstitutionsTransactionReference => {
+                "First financial institution's transaction reference"
+            }
             Enum1153::ProductCharacteristicsDirectory => "Product characteristics directory",
             Enum1153::SuppliersCustomerReferenceNumber => "Supplier's customer reference number",
             Enum1153::InventoryReportRequestNumber => "Inventory report request number",
@@ -3035,7 +3301,9 @@ impl crate::Description for Enum1153 {
             Enum1153::FrameworkAgreementNumber => "Framework Agreement Number",
             Enum1153::HashValue => "Hash value",
             Enum1153::MovementReferenceNumber => "Movement reference number",
-            Enum1153::EconomicOperatorsRegistrationAndIdentificationNumber => "Economic Operators Registration and Identification Number",
+            Enum1153::EconomicOperatorsRegistrationAndIdentificationNumber => {
+                "Economic Operators Registration and Identification Number"
+            }
             Enum1153::LocalReferenceNumber => "Local Reference Number",
             Enum1153::RateCodeNumber => "Rate code number",
             Enum1153::AirWaybillNumber => "Air waybill number",
@@ -3052,7 +3320,9 @@ impl crate::Description for Enum1153 {
             Enum1153::ServiceCategoryReference => "Service category reference",
             Enum1153::ConnectedLocation => "Connected location",
             Enum1153::RelatedParty => "Related party",
-            Enum1153::LatestAccountingEntryRecordReference => "Latest accounting entry record reference",
+            Enum1153::LatestAccountingEntryRecordReference => {
+                "Latest accounting entry record reference"
+            }
             Enum1153::AccountingEntry => "Accounting entry",
             Enum1153::DocumentReferenceOriginal => "Document reference, original",
             Enum1153::HygienicCertificateNumberNational => "Hygienic Certificate number, national",
@@ -3062,10 +3332,16 @@ impl crate::Description for Enum1153 {
             Enum1153::BuyersFundNumber => "Buyer's fund number",
             Enum1153::CompanyTradingAccountNumber => "Company trading account number",
             Enum1153::ReservedGoodsIdentifier => "Reserved goods identifier",
-            Enum1153::HandlingAndMovementReferenceNumber => "Handling and movement reference number",
-            Enum1153::InstructionToDespatchReferenceNumber => "Instruction to despatch reference number",
+            Enum1153::HandlingAndMovementReferenceNumber => {
+                "Handling and movement reference number"
+            }
+            Enum1153::InstructionToDespatchReferenceNumber => {
+                "Instruction to despatch reference number"
+            }
             Enum1153::InstructionForReturnsNumber => "Instruction for returns number",
-            Enum1153::MeteredServicesConsumptionReportNumber => "Metered services consumption report number",
+            Enum1153::MeteredServicesConsumptionReportNumber => {
+                "Metered services consumption report number"
+            }
             Enum1153::OrderStatusEnquiryNumber => "Order status enquiry number",
             Enum1153::FirmBookingReferenceNumber => "Firm booking reference number",
             Enum1153::ProductInquiryNumber => "Product inquiry number",
@@ -3079,7 +3355,9 @@ impl crate::Description for Enum1153 {
             Enum1153::PreAgreementNumber => "Pre-agreement number",
             Enum1153::ProductCertificationNumber => "Product certification number",
             Enum1153::ConsignmentContractNumber => "Consignment contract number",
-            Enum1153::ProductSpecificationReferenceNumber => "Product specification reference number",
+            Enum1153::ProductSpecificationReferenceNumber => {
+                "Product specification reference number"
+            }
             Enum1153::PayrollDeductionAdviceReference => "Payroll deduction advice reference",
             Enum1153::TracesPartyIdentification => "TRACES party identification",
             Enum1153::BlockStowageReference => "Block Stowage Reference",
@@ -3089,20 +3367,28 @@ impl crate::Description for Enum1153 {
             Enum1153::BeginningMeterReadingEstimated => " Beginning meter reading estimated",
             Enum1153::HouseBillLadingNumber => " House bill of lading number",
             Enum1153::BillLadingNumber => " Bill of lading number",
-            Enum1153::ConsignmentIdentifierCarrierAssigned => " Consignment identifier, carrier assigned",
+            Enum1153::ConsignmentIdentifierCarrierAssigned => {
+                " Consignment identifier, carrier assigned"
+            }
             Enum1153::BlanketOrderNumber => " Blanket order number",
             Enum1153::BrokerOrSalesOfficeNumber => " Broker or sales office number",
             Enum1153::BatchNumberLotNumber => " Batch number/lot number",
-            Enum1153::BatteryAndAccumulatorProducerRegistrationNumber => "Battery and accumulator producer registration number",
+            Enum1153::BatteryAndAccumulatorProducerRegistrationNumber => {
+                "Battery and accumulator producer registration number"
+            }
             Enum1153::BlendedWithNumber => " Blended with number",
             Enum1153::IataCargoAgentCassAddressNumber => "IATA Cargo Agent CASS Address number",
             Enum1153::MatchingEntriesBalanced => "Matching of entries, balanced",
             Enum1153::EntryFlagging => "Entry flagging",
             Enum1153::MatchingEntriesUnbalanced => "Matching of entries, unbalanced",
             Enum1153::DocumentReferenceInternal => "Document reference, internal",
-            Enum1153::EuropeanValueAddedTaxIdentification => "European Value Added Tax identification",
+            Enum1153::EuropeanValueAddedTaxIdentification => {
+                "European Value Added Tax identification"
+            }
             Enum1153::CostAccountingDocument => "Cost accounting document",
-            Enum1153::GridOperatorsCustomerReferenceNumber => "Grid operator's customer reference number",
+            Enum1153::GridOperatorsCustomerReferenceNumber => {
+                "Grid operator's customer reference number"
+            }
             Enum1153::TicketControlNumber => "Ticket control number",
             Enum1153::OrderShipmentGroupingReference => "Order shipment grouping reference",
             Enum1153::CreditNoteNumber => " Credit note number",
@@ -3118,7 +3404,9 @@ impl crate::Description for Enum1153 {
             Enum1153::CreditMemoNumber => " Credit memo number",
             Enum1153::RoadConsignmentNoteNumber => "Road consignment note number",
             Enum1153::CarriersReferenceNumber => " Carrier's reference number",
-            Enum1153::ChargesNoteDocumentAttachmentIndicator => "Charges note document attachment indicator",
+            Enum1153::ChargesNoteDocumentAttachmentIndicator => {
+                "Charges note document attachment indicator"
+            }
             Enum1153::CallOffOrderNumber => "Call off order number",
             Enum1153::ConditionPurchaseDocumentNumber => " Condition of purchase document number",
             Enum1153::CustomerReferenceNumber => " Customer reference number",
@@ -3126,7 +3414,9 @@ impl crate::Description for Enum1153 {
             Enum1153::ConditionSaleDocumentNumber => " Condition of sale document number",
             Enum1153::TeamAssignmentNumber => "Team assignment number",
             Enum1153::ContractNumber => " Contract number",
-            Enum1153::ConsignmentIdentifierConsignorAssigned => " Consignment identifier, consignor assigned",
+            Enum1153::ConsignmentIdentifierConsignorAssigned => {
+                " Consignment identifier, consignor assigned"
+            }
             Enum1153::ContainerOperatorsReferenceNumber => " Container operators reference number",
             Enum1153::PackageNumber => " Package number",
             Enum1153::CooperationContractNumber => " Cooperation contract number",
@@ -3142,7 +3432,9 @@ impl crate::Description for Enum1153 {
             Enum1153::EmbargoPermitNumber => " Embargo permit number",
             Enum1153::ExportDeclaration => " Export declaration",
             Enum1153::EndingMeterReadingEstimated => " Ending meter reading estimated",
-            Enum1153::ElectricalAndElectronicEquipmentProducerRegistration => "Electrical and electronic equipment producer registration",
+            Enum1153::ElectricalAndElectronicEquipmentProducerRegistration => {
+                "Electrical and electronic equipment producer registration"
+            }
             Enum1153::EmployersIdentificationNumber => " Employer's identification number",
             Enum1153::EmbargoNumber => " Embargo number",
             Enum1153::EquipmentNumber => " Equipment number",
@@ -3151,7 +3443,9 @@ impl crate::Description for Enum1153 {
             Enum1153::ExcessTransportationNumber => " Excess transportation number",
             Enum1153::ExportPermitIdentifier => " Export permit identifier",
             Enum1153::FiscalNumber => " Fiscal number",
-            Enum1153::ConsignmentIdentifierFreightForwarderAssigned => " Consignment identifier, freight forwarder assigned",
+            Enum1153::ConsignmentIdentifierFreightForwarderAssigned => {
+                " Consignment identifier, freight forwarder assigned"
+            }
             Enum1153::FileLineIdentifier => " File line identifier",
             Enum1153::FlowReferenceNumber => "Flow reference number",
             Enum1153::FreightBillNumber => " Freight bill number",
@@ -3170,9 +3464,13 @@ impl crate::Description for Enum1153 {
             Enum1153::InternalVendorNumber => " Internal vendor number",
             Enum1153::InBondNumber => " In bond number",
             Enum1153::IataCargoAgentCodeNumber => "IATA cargo agent code number",
-            Enum1153::InsuranceCertificateReferenceNumber => "Insurance certificate reference number",
+            Enum1153::InsuranceCertificateReferenceNumber => {
+                "Insurance certificate reference number"
+            }
             Enum1153::InsuranceContractReferenceNumber => "Insurance contract reference number",
-            Enum1153::InitialSampleInspectionReportNumber => " Initial sample inspection report number",
+            Enum1153::InitialSampleInspectionReportNumber => {
+                " Initial sample inspection report number"
+            }
             Enum1153::InternalOrderNumber => " Internal order number",
             Enum1153::IntermediaryBroker => "Intermediary broker",
             Enum1153::InterchangeNumberNew => "Interchange number new",
@@ -3200,16 +3498,24 @@ impl crate::Description for Enum1153 {
             Enum1153::MessageRecipient => " Message recipient",
             Enum1153::MailingReferenceNumber => "Mailing reference number",
             Enum1153::MessageSender => " Message sender",
-            Enum1153::ManufacturersMaterialSafetyDataSheetNumber => "Manufacturer's material safety data sheet number",
+            Enum1153::ManufacturersMaterialSafetyDataSheetNumber => {
+                "Manufacturer's material safety data sheet number"
+            }
             Enum1153::MasterAirWaybillNumber => "Master air waybill number",
-            Enum1153::NorthAmericanHazardousGoodsClassificationNumber => " North American hazardous goods classification number",
+            Enum1153::NorthAmericanHazardousGoodsClassificationNumber => {
+                " North American hazardous goods classification number"
+            }
             Enum1153::NotaFiscal => " Nota Fiscal",
             Enum1153::CurrentInvoiceNumber => " Current invoice number",
             Enum1153::PreviousInvoiceNumber => " Previous invoice number",
-            Enum1153::OrderDocumentIdentifierBuyerAssigned => " Order document identifier, buyer assigned",
+            Enum1153::OrderDocumentIdentifierBuyerAssigned => {
+                " Order document identifier, buyer assigned"
+            }
             Enum1153::OriginalPurchaseOrder => " Original purchase order",
             Enum1153::GeneralOrderNumber => " General order number",
-            Enum1153::PayersFinancialInstitutionAccountNumber => " Payer's financial institution account number",
+            Enum1153::PayersFinancialInstitutionAccountNumber => {
+                " Payer's financial institution account number"
+            }
             Enum1153::ProductionCode => " Production code",
             Enum1153::PromotionDealNumber => " Promotion deal number",
             Enum1153::PlantNumber => " Plant number",
@@ -3223,15 +3529,21 @@ impl crate::Description for Enum1153 {
             Enum1153::PriceQuoteNumber => " Price quote number",
             Enum1153::PurchaseOrderNumberSuffix => " Purchase order number suffix",
             Enum1153::PriorPurchaseOrderNumber => " Prior purchase order number",
-            Enum1153::PayeesFinancialInstitutionAccountNumber => " Payee's financial institution account number",
+            Enum1153::PayeesFinancialInstitutionAccountNumber => {
+                " Payee's financial institution account number"
+            }
             Enum1153::RemittanceAdviceNumber => " Remittance advice number",
             Enum1153::RailRoadRoutingCode => " Rail/road routing code",
             Enum1153::RailwayConsignmentNoteNumber => "Railway consignment note number",
             Enum1153::ReleaseNumber => " Release number",
             Enum1153::ConsignmentReceiptIdentifier => "Consignment receipt identifier",
             Enum1153::ExportReferenceNumber => " Export reference number",
-            Enum1153::PayersFinancialInstitutionTransitRoutingNoAch => " Payer's financial institution transit routing No.(ACH",
-            Enum1153::PayeesFinancialInstitutionTransitRoutingNo => " Payee's financial institution transit routing No.",
+            Enum1153::PayersFinancialInstitutionTransitRoutingNoAch => {
+                " Payer's financial institution transit routing No.(ACH"
+            }
+            Enum1153::PayeesFinancialInstitutionTransitRoutingNo => {
+                " Payee's financial institution transit routing No."
+            }
             Enum1153::SalesPersonNumber => " Sales person number",
             Enum1153::SalesRegionNumber => " Sales region number",
             Enum1153::SalesDepartmentNumber => " Sales department number",
@@ -3239,7 +3551,9 @@ impl crate::Description for Enum1153 {
             Enum1153::AllocatedSeat => "Allocated seat",
             Enum1153::ShipFrom => " Ship from",
             Enum1153::PreviousHighestScheduleNumber => " Previous highest schedule number",
-            Enum1153::SidShippersIdentifyingNumberForShipment => " SID (Shipper's identifying number for shipment)",
+            Enum1153::SidShippersIdentifyingNumberForShipment => {
+                " SID (Shipper's identifying number for shipment)"
+            }
             Enum1153::SalesOfficeNumber => " Sales office number",
             Enum1153::TransportEquipmentSealIdentifier => " Transport equipment seal identifier",
             Enum1153::ScanLine => " Scan line",
@@ -3250,7 +3564,9 @@ impl crate::Description for Enum1153 {
             Enum1153::SwapOrderNumber => " Swap order number",
             Enum1153::SpecificationNumber => " Specification number",
             Enum1153::TruckersBillLading => " Trucker's bill of lading",
-            Enum1153::TerminalOperatorsConsignmentReference => "Terminal operator's consignment reference",
+            Enum1153::TerminalOperatorsConsignmentReference => {
+                "Terminal operator's consignment reference"
+            }
             Enum1153::TelexMessageNumber => " Telex message number",
             Enum1153::TransferNumber => " Transfer number",
             Enum1153::TirCarnetNumber => " TIR carnet number",
@@ -3261,16 +3577,22 @@ impl crate::Description for Enum1153 {
             Enum1153::UpperNumberRange => "Upper number of range",
             Enum1153::UltimateCustomersReferenceNumber => " Ultimate customer's reference number",
             Enum1153::UniqueConsignmentReferenceNumber => "Unique consignment reference number",
-            Enum1153::UnitedNationsDangerousGoodsIdentifier => " United Nations Dangerous Goods identifier",
+            Enum1153::UnitedNationsDangerousGoodsIdentifier => {
+                " United Nations Dangerous Goods identifier"
+            }
             Enum1153::UltimateCustomersOrderNumber => " Ultimate customer's order number",
             Enum1153::UniformResourceIdentifier => "Uniform Resource Identifier",
             Enum1153::VatRegistrationNumber => " VAT registration number",
             Enum1153::VendorContractNumber => " Vendor contract number",
-            Enum1153::TransportEquipmentGrossMassVerificationReference => "Transport equipment gross mass verification reference",
+            Enum1153::TransportEquipmentGrossMassVerificationReference => {
+                "Transport equipment gross mass verification reference"
+            }
             Enum1153::VesselIdentifier => " Vessel identifier",
             Enum1153::OrderNumberVendor => " Order number (vendor)",
             Enum1153::VoyageNumber => "Voyage number",
-            Enum1153::TransportEquipmentGrossMassVerificationOrderReference => "Transport equipment gross mass verification order reference",
+            Enum1153::TransportEquipmentGrossMassVerificationOrderReference => {
+                "Transport equipment gross mass verification order reference"
+            }
             Enum1153::VendorProductNumber => " Vendor product number",
             Enum1153::VendorIdNumber => " Vendor ID number",
             Enum1153::VendorOrderNumberSuffix => " Vendor order number suffix",
@@ -3293,7 +3615,7 @@ impl crate::Description for Enum1153 {
 impl crate::FromCode for Enum1153 {
     fn from_code(code: &str) -> Option<Self>
     where
-        Self: Sized
+        Self: Sized,
     {
         match code {
             "AAA" => Some(Enum1153::OrderAcknowledgementDocumentIdentifier),

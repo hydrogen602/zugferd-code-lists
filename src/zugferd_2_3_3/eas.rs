@@ -36,9 +36,9 @@ pub enum EAS {
     IdentificationNumberEconomicSubjectIcoActOnStateStatistics29November200127,
     /// Teikoku Company Code
     TeikokuCompanyCode,
-    /// Odette International Limited 
+    /// Odette International Limited
     OdetteInternationalLimited,
-    /// Numéro d'identification suisse des enterprises (IDE), Swiss Unique Business Identification Number (UIDB) 
+    /// Numéro d'identification suisse des enterprises (IDE), Swiss Unique Business Identification Number (UIDB)
     NuméroDidentificationSuisseDesEnterprisesIdeSwissUniqueBusinessIdentificationNumberUidb,
     /// DIGSTORG
     Digstorg,
@@ -48,7 +48,7 @@ pub enum EAS {
     DutchOriginatorsIdentificationNumber,
     /// Centre of Registers and Information Systems of the Ministry of Justice
     CentreRegistersAndInformationSystemsMinistryJustice,
-    /// Enhetsregisteret ved Bronnoysundregisterne 
+    /// Enhetsregisteret ved Bronnoysundregisterne
     EnhetsregisteretVedBronnoysundregisterne,
     /// UBL.BE party identifier
     UblBePartyIdentifier,
@@ -106,17 +106,17 @@ pub enum EAS {
     RegisterLegalPersonsInFrenchRépertoireDesPersonnesMorales,
     /// Hungary VAT number
     HungaryVatNumber,
-    /// Business Registers Network 
+    /// Business Registers Network
     BusinessRegistersNetwork,
-    /// Österreichische Umsatzsteuer-Identifikationsnummer 
+    /// Österreichische Umsatzsteuer-Identifikationsnummer
     ÖsterreichischeUmsatzsteuerIdentifikationsnummer,
     /// Österreichisches Verwaltungs bzw. Organisationskennzeichen
     ÖsterreichischesVerwaltungsBzwOrganisationskennzeichen,
     /// SOCIETY FOR WORLDWIDE INTERBANK FINANCIAL, TELECOMMUNICATION S.W.I.F.T
     SocietyForWorldwideInterbankFinancialTelecommunicationSWIFT,
-    /// Kennziffer des Unternehmensregisters 
+    /// Kennziffer des Unternehmensregisters
     KennzifferDesUnternehmensregisters,
-    /// Agencia Española de Administración Tributaria 
+    /// Agencia Española de Administración Tributaria
     AgenciaEspañolaDeAdministraciónTributaria,
     /// Andorra VAT number
     AndorraVatNumber,
@@ -190,7 +190,7 @@ pub enum EAS {
     OFTPOdetteFileTransferProtocol,
     /// X.400 address for mail text
     X400AddressForMailText,
-    /// AS2 exchange 
+    /// AS2 exchange
     As2Exchange,
     /// File Transfer Protocol
     FileTransferProtocol,
@@ -409,7 +409,7 @@ impl crate::Description for EAS {
 impl crate::FromCode for EAS {
     fn from_code(code: &str) -> Option<Self>
     where
-        Self: Sized
+        Self: Sized,
     {
         match code {
             "0002" => Some(EAS::SystemInformationEtRepertoireDesEntrepriseEtDesEtablissementsSirene),

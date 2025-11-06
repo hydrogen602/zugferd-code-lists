@@ -5238,15 +5238,15 @@ pub enum Unit {
     ///
     /// rec20
     DegreeUnitAnglePerSecondSquared,
-    /// revolution per minute 
+    /// revolution per minute
     ///
     /// rec20
     RevolutionPerMinute,
-    /// circular mil 
+    /// circular mil
     ///
     /// rec20
     CircularMil,
-    /// square mile (based on U.S. survey foot) 
+    /// square mile (based on U.S. survey foot)
     ///
     /// rec20
     SquareMileBasedOnUSSurveyFoot,
@@ -5262,11 +5262,11 @@ pub enum Unit {
     ///
     /// rec20
     Furlong,
-    /// foot (U.S. survey) 
+    /// foot (U.S. survey)
     ///
     /// rec20
     FootUSSurvey,
-    /// mile (based on U.S. survey foot) 
+    /// mile (based on U.S. survey foot)
     ///
     /// rec20
     MileBasedOnUSSurveyFoot,
@@ -5282,11 +5282,11 @@ pub enum Unit {
     ///
     /// rec20
     Shake,
-    /// mile per minute 
+    /// mile per minute
     ///
     /// rec20
     MilePerMinute,
-    /// mile per second 
+    /// mile per second
     ///
     /// rec20
     MilePerSecond,
@@ -5302,7 +5302,7 @@ pub enum Unit {
     ///
     /// rec20
     InchPerYear,
-    /// kilometre per second 
+    /// kilometre per second
     ///
     /// rec20
     KilometrePerSecond,
@@ -5338,7 +5338,7 @@ pub enum Unit {
     ///
     /// rec20
     MicroInch,
-    /// ton, register 
+    /// ton, register
     ///
     /// rec20
     TonRegister,
@@ -5374,7 +5374,7 @@ pub enum Unit {
     ///
     /// rec20
     Pond,
-    /// square foot per hour 
+    /// square foot per hour
     ///
     /// rec20
     SquareFootPerHour,
@@ -5390,11 +5390,11 @@ pub enum Unit {
     ///
     /// rec20
     SquareMetrePerSecondPascal,
-    /// denier 
+    /// denier
     ///
     /// rec20
     Denier_Dup,
-    /// pound per yard 
+    /// pound per yard
     ///
     /// rec20
     PoundPerYard,
@@ -5694,11 +5694,11 @@ pub enum Unit {
     ///
     /// rec20
     KipPerSquareInch,
-    /// poundal per square foot 
+    /// poundal per square foot
     ///
     /// rec20
     PoundalPerSquareFoot,
-    /// ounce (avoirdupois) per square inch 
+    /// ounce (avoirdupois) per square inch
     ///
     /// rec20
     OunceAvoirdupoisPerSquareInch,
@@ -5718,7 +5718,7 @@ pub enum Unit {
     ///
     /// rec20
     PoundalPerSquareInch,
-    /// foot to the fourth power 
+    /// foot to the fourth power
     ///
     /// rec20
     FootToFourthPower,
@@ -5750,7 +5750,7 @@ pub enum Unit {
     ///
     /// rec20
     PoundForcePerYard,
-    /// poundal second per square foot 
+    /// poundal second per square foot
     ///
     /// rec20
     PoundalSecondPerSquareFoot,
@@ -5806,11 +5806,11 @@ pub enum Unit {
     ///
     /// rec20
     InchPoundal,
-    /// watt per square centimetre 
+    /// watt per square centimetre
     ///
     /// rec20
     WattPerSquareCentimetre,
-    /// watt per square inch 
+    /// watt per square inch
     ///
     /// rec20
     WattPerSquareInch,
@@ -5846,7 +5846,7 @@ pub enum Unit {
     ///
     /// rec20
     CalorieThermochemicalPerSquareCentimetreSecond,
-    /// British thermal unit (international table) per cubic foot 
+    /// British thermal unit (international table) per cubic foot
     ///
     /// rec20
     BritishThermalUnitInternationalTablePerCubicFoot,
@@ -5878,7 +5878,7 @@ pub enum Unit {
     ///
     /// rec20
     KilocalorieInternationalTablePerGramKelvin,
-    /// British thermal unit (39 ºF) 
+    /// British thermal unit (39 ºF)
     ///
     /// rec20
     BritishThermalUnit39Of,
@@ -5886,11 +5886,11 @@ pub enum Unit {
     ///
     /// rec20
     BritishThermalUnit59Of,
-    /// British thermal unit (60 ºF) 
+    /// British thermal unit (60 ºF)
     ///
     /// rec20
     BritishThermalUnit60Of,
-    /// calorie (20 ºC) 
+    /// calorie (20 ºC)
     ///
     /// rec20
     Calorie20Oc,
@@ -6186,7 +6186,7 @@ pub enum Unit {
     ///
     /// rec20
     Nanoohm,
-    /// ohm circular-mil per foot 
+    /// ohm circular-mil per foot
     ///
     /// rec20
     OhmCircularMilPerFoot,
@@ -6194,7 +6194,7 @@ pub enum Unit {
     ///
     /// rec20
     Kilohenry,
-    /// lumen per square foot 
+    /// lumen per square foot
     ///
     /// rec20
     LumenPerSquareFoot,
@@ -6206,7 +6206,7 @@ pub enum Unit {
     ///
     /// rec20
     Footcandle,
-    /// candela per square inch 
+    /// candela per square inch
     ///
     /// rec20
     CandelaPerSquareInch,
@@ -6238,7 +6238,7 @@ pub enum Unit {
     ///
     /// rec20
     HefnerKerze,
-    /// international candle 
+    /// international candle
     ///
     /// rec20
     InternationalCandle,
@@ -6250,7 +6250,7 @@ pub enum Unit {
     ///
     /// rec20
     BritishThermalUnitThermochemicalPerSquareFoot,
-    /// calorie (thermochemical) per square centimetre 
+    /// calorie (thermochemical) per square centimetre
     ///
     /// rec20
     CalorieThermochemicalPerSquareCentimetre,
@@ -6310,7 +6310,7 @@ pub enum Unit {
     ///
     /// rec20
     MolPerCubicMetrePascal,
-    /// unit pole 
+    /// unit pole
     ///
     /// rec20
     UnitPole,
@@ -6458,15 +6458,15 @@ pub enum Unit {
     ///
     /// rec20
     PoundForceFootPerInch,
-    /// pound-force inch per inch 
+    /// pound-force inch per inch
     ///
     /// rec20
     PoundForceInchPerInch,
-    /// perm (0 ºC) 
+    /// perm (0 ºC)
     ///
     /// rec20
     Perm0Oc,
-    /// perm (23 ºC) 
+    /// perm (23 ºC)
     ///
     /// rec20
     Perm23Oc,
@@ -7102,11 +7102,11 @@ pub enum Unit {
     ///
     /// rec21
     BagWovenPlastic,
-    /// Bag, textile 
+    /// Bag, textile
     ///
     /// rec21
     BagTextile,
-    /// Bag, paper 
+    /// Bag, paper
     ///
     /// rec21
     BagPaper,
@@ -7142,15 +7142,15 @@ pub enum Unit {
     ///
     /// rec21
     IntermediateBulkContainerRigidPlastic,
-    /// Receptacle, fibre 
+    /// Receptacle, fibre
     ///
     /// rec21
     ReceptacleFibre,
-    /// Receptacle, paper 
+    /// Receptacle, paper
     ///
     /// rec21
     ReceptaclePaper,
-    /// Receptacle, wooden 
+    /// Receptacle, wooden
     ///
     /// rec21
     ReceptacleWooden,
@@ -7158,15 +7158,15 @@ pub enum Unit {
     ///
     /// rec21
     Aerosol,
-    /// Pallet, modular, collars 80cms * 60cms 
+    /// Pallet, modular, collars 80cms * 60cms
     ///
     /// rec21
     PalletModularCollars80cms60cms,
-    /// Pallet, shrinkwrapped 
+    /// Pallet, shrinkwrapped
     ///
     /// rec21
     PalletShrinkwrapped,
-    /// Pallet, 100cms * 110cms 
+    /// Pallet, 100cms * 110cms
     ///
     /// rec21
     Pallet100cms110cms,
@@ -7182,15 +7182,15 @@ pub enum Unit {
     ///
     /// rec21
     Ball_Dup,
-    /// Ampoule, non-protected 
+    /// Ampoule, non-protected
     ///
     /// rec21
     AmpouleNonProtected,
-    /// Ampoule, protected 
+    /// Ampoule, protected
     ///
     /// rec21
     AmpouleProtected,
-    /// Atomizer 
+    /// Atomizer
     ///
     /// rec21
     Atomizer,
@@ -7202,15 +7202,15 @@ pub enum Unit {
     ///
     /// rec21
     Belt,
-    /// Barrel 
+    /// Barrel
     ///
     /// rec21
     Barrel,
-    /// Bobbin 
+    /// Bobbin
     ///
     /// rec21
     Bobbin,
-    /// Bottlecrate / bottlerack 
+    /// Bottlecrate / bottlerack
     ///
     /// rec21
     BottlecrateBottlerack,
@@ -7218,11 +7218,11 @@ pub enum Unit {
     ///
     /// rec21
     Board,
-    /// Bundle 
+    /// Bundle
     ///
     /// rec21
     Bundle,
-    /// Balloon, non-protected 
+    /// Balloon, non-protected
     ///
     /// rec21
     BalloonNonProtected,
@@ -7238,15 +7238,15 @@ pub enum Unit {
     ///
     /// rec21
     Bin,
-    /// Bucket 
+    /// Bucket
     ///
     /// rec21
     Bucket,
-    /// Basket 
+    /// Basket
     ///
     /// rec21
     Basket,
-    /// Bale, compressed 
+    /// Bale, compressed
     ///
     /// rec21
     BaleCompressed,
@@ -7254,15 +7254,15 @@ pub enum Unit {
     ///
     /// rec21
     Basin,
-    /// Bale, non-compressed 
+    /// Bale, non-compressed
     ///
     /// rec21
     BaleNonCompressed,
-    /// Bottle, non-protected, cylindrical 
+    /// Bottle, non-protected, cylindrical
     ///
     /// rec21
     BottleNonProtectedCylindrical,
-    /// Balloon, protected 
+    /// Balloon, protected
     ///
     /// rec21
     BalloonProtected,
@@ -7274,15 +7274,15 @@ pub enum Unit {
     ///
     /// rec21
     Bar,
-    /// Bottle, non-protected, bulbous 
+    /// Bottle, non-protected, bulbous
     ///
     /// rec21
     BottleNonProtectedBulbous,
-    /// Bolt 
+    /// Bolt
     ///
     /// rec21
     Bolt,
-    /// Butt 
+    /// Butt
     ///
     /// rec21
     Butt,
@@ -7298,7 +7298,7 @@ pub enum Unit {
     ///
     /// rec21
     Box,
-    /// Board, in bundle/bunch/truss 
+    /// Board, in bundle/bunch/truss
     ///
     /// rec21
     BoardInBundleBunchTruss,
@@ -7306,7 +7306,7 @@ pub enum Unit {
     ///
     /// rec21
     BarsInBundleBunchTruss,
-    /// Can, rectangular 
+    /// Can, rectangular
     ///
     /// rec21
     CanRectangular,
@@ -7318,7 +7318,7 @@ pub enum Unit {
     ///
     /// rec21
     Churn,
-    /// Can, with handle and spout 
+    /// Can, with handle and spout
     ///
     /// rec21
     CanWithHandleAndSpout,
@@ -7326,11 +7326,11 @@ pub enum Unit {
     ///
     /// rec21
     Creel,
-    /// Coffer 
+    /// Coffer
     ///
     /// rec21
     Coffer,
-    /// Cage 
+    /// Cage
     ///
     /// rec21
     Cage,
@@ -7338,19 +7338,19 @@ pub enum Unit {
     ///
     /// rec21
     Chest,
-    /// Canister 
+    /// Canister
     ///
     /// rec21
     Canister,
-    /// Coffin 
+    /// Coffin
     ///
     /// rec21
     Coffin,
-    /// Cask 
+    /// Cask
     ///
     /// rec21
     Cask,
-    /// Coil 
+    /// Coil
     ///
     /// rec21
     Coil,
@@ -7378,11 +7378,11 @@ pub enum Unit {
     ///
     /// rec21
     Crate,
-    /// Case 
+    /// Case
     ///
     /// rec21
     Case,
-    /// Carton 
+    /// Carton
     ///
     /// rec21
     Carton,
@@ -7394,23 +7394,23 @@ pub enum Unit {
     ///
     /// rec21
     Cover,
-    /// Cage, roll 
+    /// Cage, roll
     ///
     /// rec21
     CageRoll,
-    /// Can, cylindrical 
+    /// Can, cylindrical
     ///
     /// rec21
     CanCylindrical,
-    /// Cylinder 
+    /// Cylinder
     ///
     /// rec21
     Cylinder,
-    /// Canvas 
+    /// Canvas
     ///
     /// rec21
     Canvas,
-    /// Crate, multiple layer, plastic 
+    /// Crate, multiple layer, plastic
     ///
     /// rec21
     CrateMultipleLayerPlastic,
@@ -7418,7 +7418,7 @@ pub enum Unit {
     ///
     /// rec21
     CrateMultipleLayerWooden,
-    /// Crate, multiple layer, cardboard 
+    /// Crate, multiple layer, cardboard
     ///
     /// rec21
     CrateMultipleLayerCardboard,
@@ -7430,7 +7430,7 @@ pub enum Unit {
     ///
     /// rec21
     BoxCommonwealthHandlingEquipmentPoolChepEurobox,
-    /// Drum, iron 
+    /// Drum, iron
     ///
     /// rec21
     DrumIron,
@@ -7438,11 +7438,11 @@ pub enum Unit {
     ///
     /// rec21
     DemijohnNonProtected,
-    /// Crate, bulk, cardboard 
+    /// Crate, bulk, cardboard
     ///
     /// rec21
     CrateBulkCardboard,
-    /// Crate, bulk, plastic 
+    /// Crate, bulk, plastic
     ///
     /// rec21
     CrateBulkPlastic,
@@ -7458,7 +7458,7 @@ pub enum Unit {
     ///
     /// rec21
     DemijohnProtected,
-    /// Drum 
+    /// Drum
     ///
     /// rec21
     Drum,
@@ -7466,7 +7466,7 @@ pub enum Unit {
     ///
     /// rec21
     TrayOneLayerNoCoverPlastic,
-    /// Tray, one layer no cover, wooden 
+    /// Tray, one layer no cover, wooden
     ///
     /// rec21
     TrayOneLayerNoCoverWooden,
@@ -7486,19 +7486,19 @@ pub enum Unit {
     ///
     /// rec21
     TrayTwoLayersNoCoverWooden,
-    /// Tray, two layers no cover, cardboard 
+    /// Tray, two layers no cover, cardboard
     ///
     /// rec21
     TrayTwoLayersNoCoverCardboard,
-    /// Bag, plastic 
+    /// Bag, plastic
     ///
     /// rec21
     BagPlastic,
-    /// Case, with pallet base 
+    /// Case, with pallet base
     ///
     /// rec21
     CaseWithPalletBase,
-    /// Case, with pallet base, wooden 
+    /// Case, with pallet base, wooden
     ///
     /// rec21
     CaseWithPalletBaseWooden,
@@ -7514,11 +7514,11 @@ pub enum Unit {
     ///
     /// rec21
     CaseWithPalletBaseMetal,
-    /// Case, isothermic 
+    /// Case, isothermic
     ///
     /// rec21
     CaseIsothermic,
-    /// Envelope 
+    /// Envelope
     ///
     /// rec21
     Envelope,
@@ -7526,7 +7526,7 @@ pub enum Unit {
     ///
     /// rec21
     Flexibag,
-    /// Crate, fruit 
+    /// Crate, fruit
     ///
     /// rec21
     CrateFruit,
@@ -7538,7 +7538,7 @@ pub enum Unit {
     ///
     /// rec21
     Flexitank,
-    /// Firkin 
+    /// Firkin
     ///
     /// rec21
     Firkin,
@@ -7546,11 +7546,11 @@ pub enum Unit {
     ///
     /// rec21
     Flask,
-    /// Footlocker 
+    /// Footlocker
     ///
     /// rec21
     Footlocker,
-    /// Filmpack 
+    /// Filmpack
     ///
     /// rec21
     Filmpack,
@@ -7574,7 +7574,7 @@ pub enum Unit {
     ///
     /// rec21
     BottleGas,
-    /// Girder 
+    /// Girder
     ///
     /// rec21
     Girder,
@@ -7582,7 +7582,7 @@ pub enum Unit {
     ///
     /// rec21
     ContainerGallon,
-    /// Receptacle, glass 
+    /// Receptacle, glass
     ///
     /// rec21
     ReceptacleGlass,
@@ -7594,11 +7594,11 @@ pub enum Unit {
     ///
     /// rec21
     BagGunny,
-    /// Girders, in bundle/bunch/truss 
+    /// Girders, in bundle/bunch/truss
     ///
     /// rec21
     GirdersInBundleBunchTruss,
-    /// Basket, with handle, plastic 
+    /// Basket, with handle, plastic
     ///
     /// rec21
     BasketWithHandlePlastic,
@@ -7606,11 +7606,11 @@ pub enum Unit {
     ///
     /// rec21
     BasketWithHandleWooden,
-    /// Basket, with handle, cardboard 
+    /// Basket, with handle, cardboard
     ///
     /// rec21
     BasketWithHandleCardboard,
-    /// Hogshead 
+    /// Hogshead
     ///
     /// rec21
     Hogshead,
@@ -7618,11 +7618,11 @@ pub enum Unit {
     ///
     /// rec21
     Hanger,
-    /// Hamper 
+    /// Hamper
     ///
     /// rec21
     Hamper,
-    /// Package, display, wooden 
+    /// Package, display, wooden
     ///
     /// rec21
     PackageDisplayWooden,
@@ -7642,7 +7642,7 @@ pub enum Unit {
     ///
     /// rec21
     PackageShow,
-    /// Package, flow 
+    /// Package, flow
     ///
     /// rec21
     PackageFlow,
@@ -7654,7 +7654,7 @@ pub enum Unit {
     ///
     /// rec21
     DrumPlastic,
-    /// Package, cardboard, with bottle grip-holes 
+    /// Package, cardboard, with bottle grip-holes
     ///
     /// rec21
     PackageCardboardWithBottleGripHoles,
@@ -7742,11 +7742,11 @@ pub enum Unit {
     ///
     /// rec21
     ContainerMetal,
-    /// Receptacle, metal 
+    /// Receptacle, metal
     ///
     /// rec21
     ReceptacleMetal,
-    /// Sack, multi-wall 
+    /// Sack, multi-wall
     ///
     /// rec21
     SackMultiWall,
@@ -7754,11 +7754,11 @@ pub enum Unit {
     ///
     /// rec21
     Mat,
-    /// Receptacle, plastic wrapped 
+    /// Receptacle, plastic wrapped
     ///
     /// rec21
     ReceptaclePlasticWrapped,
-    /// Matchbox 
+    /// Matchbox
     ///
     /// rec21
     Matchbox,
@@ -7766,7 +7766,7 @@ pub enum Unit {
     ///
     /// rec21
     NotAvailable,
-    /// Unpacked or unpackaged 
+    /// Unpacked or unpackaged
     ///
     /// rec21
     UnpackedOrUnpackaged,
@@ -7778,7 +7778,7 @@ pub enum Unit {
     ///
     /// rec21
     UnpackedOrUnpackagedMultipleUnits,
-    /// Nest 
+    /// Nest
     ///
     /// rec21
     Nest,
@@ -7786,11 +7786,11 @@ pub enum Unit {
     ///
     /// rec21
     Net,
-    /// Net, tube, plastic 
+    /// Net, tube, plastic
     ///
     /// rec21
     NetTubePlastic,
-    /// Net, tube, textile 
+    /// Net, tube, textile
     ///
     /// rec21
     NetTubeTextile,
@@ -7930,7 +7930,7 @@ pub enum Unit {
     ///
     /// Rec21
     WheeledPalletWithRaisedRim81X60X16,
-    /// CHEP pallet 60 cm x 80 cm 
+    /// CHEP pallet 60 cm x 80 cm
     ///
     /// Rec21
     ChepPallet60CmX80Cm,
@@ -7946,7 +7946,7 @@ pub enum Unit {
     ///
     /// Rec21
     LprPallet80CmX120Cm,
-    /// Packet 
+    /// Packet
     ///
     /// rec21
     Packet,
@@ -7954,19 +7954,19 @@ pub enum Unit {
     ///
     /// rec21
     PalletBoxCombinedOpenEndedBoxAndPallet,
-    /// Parcel 
+    /// Parcel
     ///
     /// rec21
     Parcel,
-    /// Pallet, modular, collars 80cms * 100cms 
+    /// Pallet, modular, collars 80cms * 100cms
     ///
     /// rec21
     PalletModularCollars80cms100cms,
-    /// Pallet, modular, collars 80cms * 120cms 
+    /// Pallet, modular, collars 80cms * 120cms
     ///
     /// rec21
     PalletModularCollars80cms120cms,
-    /// Pen 
+    /// Pen
     ///
     /// rec21
     Pen,
@@ -7978,7 +7978,7 @@ pub enum Unit {
     ///
     /// rec21
     Pitcher,
-    /// Pipe 
+    /// Pipe
     ///
     /// rec21
     Pipe,
@@ -7990,7 +7990,7 @@ pub enum Unit {
     ///
     /// rec21
     Package,
-    /// Pail 
+    /// Pail
     ///
     /// rec21
     Pail,
@@ -8006,7 +8006,7 @@ pub enum Unit {
     ///
     /// rec21
     Piece_Dup,
-    /// Receptacle, plastic 
+    /// Receptacle, plastic
     ///
     /// rec21
     ReceptaclePlastic,
@@ -8014,15 +8014,15 @@ pub enum Unit {
     ///
     /// rec21
     Pot,
-    /// Tray 
+    /// Tray
     ///
     /// rec21
     Tray,
-    /// Pipes, in bundle/bunch/truss 
+    /// Pipes, in bundle/bunch/truss
     ///
     /// rec21
     PipesInBundleBunchTruss,
-    /// Pallet 
+    /// Pallet
     ///
     /// rec21
     Pallet,
@@ -8062,7 +8062,7 @@ pub enum Unit {
     ///
     /// rec21
     BarrelWoodenBungType,
-    /// Barrel, wooden, removable head 
+    /// Barrel, wooden, removable head
     ///
     /// rec21
     BarrelWoodenRemovableHead,
@@ -8090,7 +8090,7 @@ pub enum Unit {
     ///
     /// rec21
     BoxWoodenNaturalWoodWithSiftProofWalls,
-    /// Box, plastic, expanded 
+    /// Box, plastic, expanded
     ///
     /// rec21
     BoxPlasticExpanded,
@@ -8102,7 +8102,7 @@ pub enum Unit {
     ///
     /// rec21
     Rod,
-    /// Ring 
+    /// Ring
     ///
     /// rec21
     Ring,
@@ -8110,19 +8110,19 @@ pub enum Unit {
     ///
     /// rec21
     RackClothingHanger,
-    /// Rack 
+    /// Rack
     ///
     /// rec21
     Rack,
-    /// Reel 
+    /// Reel
     ///
     /// rec21
     Reel,
-    /// Roll 
+    /// Roll
     ///
     /// rec21
     Roll,
-    /// Rednet 
+    /// Rednet
     ///
     /// rec21
     Rednet,
@@ -8130,7 +8130,7 @@ pub enum Unit {
     ///
     /// rec21
     RodsInBundleBunchTruss,
-    /// Sack 
+    /// Sack
     ///
     /// rec21
     Sack,
@@ -8138,7 +8138,7 @@ pub enum Unit {
     ///
     /// rec21
     Slab,
-    /// Crate, shallow 
+    /// Crate, shallow
     ///
     /// rec21
     CrateShallow,
@@ -8150,27 +8150,27 @@ pub enum Unit {
     ///
     /// rec21
     SeaChest,
-    /// Sachet 
+    /// Sachet
     ///
     /// rec21
     Sachet,
-    /// Skid 
+    /// Skid
     ///
     /// rec21
     Skid,
-    /// Case, skeleton 
+    /// Case, skeleton
     ///
     /// rec21
     CaseSkeleton,
-    /// Slipsheet 
+    /// Slipsheet
     ///
     /// rec21
     Slipsheet,
-    /// Sheetmetal 
+    /// Sheetmetal
     ///
     /// rec21
     Sheetmetal,
-    /// Spool 
+    /// Spool
     ///
     /// rec21
     Spool,
@@ -8186,7 +8186,7 @@ pub enum Unit {
     ///
     /// rec21
     Sheet,
-    /// Suitcase 
+    /// Suitcase
     ///
     /// rec21
     Suitcase,
@@ -8194,7 +8194,7 @@ pub enum Unit {
     ///
     /// rec21
     EnvelopeSteel,
-    /// Shrinkwrapped 
+    /// Shrinkwrapped
     ///
     /// rec21
     Shrinkwrapped,
@@ -8266,11 +8266,11 @@ pub enum Unit {
     ///
     /// rec21
     BagTote,
-    /// Tube 
+    /// Tube
     ///
     /// rec21
     Tube,
-    /// Tube, with nozzle 
+    /// Tube, with nozzle
     ///
     /// rec21
     TubeWithNozzle,
@@ -8282,11 +8282,11 @@ pub enum Unit {
     ///
     /// rec21
     TankCylindrical,
-    /// Tubes, in bundle/bunch/truss 
+    /// Tubes, in bundle/bunch/truss
     ///
     /// rec21
     TubesInBundleBunchTruss,
-    /// Uncaged 
+    /// Uncaged
     ///
     /// rec21
     Uncaged,
@@ -8302,15 +8302,15 @@ pub enum Unit {
     ///
     /// rec21
     BulkGasAt1031MbarAnd15C,
-    /// Vial 
+    /// Vial
     ///
     /// rec21
     Vial,
-    /// Vanpack 
+    /// Vanpack
     ///
     /// rec21
     Vanpack,
-    /// Bulk, liquid 
+    /// Bulk, liquid
     ///
     /// rec21
     BulkLiquid,
@@ -8318,7 +8318,7 @@ pub enum Unit {
     ///
     /// rec21
     Vehicle,
-    /// Bulk, solid, large particles (“nodules”) 
+    /// Bulk, solid, large particles (“nodules”)
     ///
     /// rec21
     BulkSolidLargeParticlesNodules,
@@ -8326,11 +8326,11 @@ pub enum Unit {
     ///
     /// rec21
     VacuumPacked,
-    /// Bulk, liquefied gas (at abnormal temperature/pressure) 
+    /// Bulk, liquefied gas (at abnormal temperature/pressure)
     ///
     /// rec21
     BulkLiquefiedGasAtAbnormalTemperaturePressure,
-    /// Bulk, solid, granular particles (“grains”) 
+    /// Bulk, solid, granular particles (“grains”)
     ///
     /// rec21
     BulkSolidGranularParticlesGrains,
@@ -8346,19 +8346,19 @@ pub enum Unit {
     ///
     /// rec21
     IntermediateBulkContainer,
-    /// Wickerbottle 
+    /// Wickerbottle
     ///
     /// rec21
     Wickerbottle,
-    /// Intermediate bulk container, steel 
+    /// Intermediate bulk container, steel
     ///
     /// rec21
     IntermediateBulkContainerSteel,
-    /// Intermediate bulk container, aluminium 
+    /// Intermediate bulk container, aluminium
     ///
     /// rec21
     IntermediateBulkContainerAluminium,
-    /// Intermediate bulk container, metal 
+    /// Intermediate bulk container, metal
     ///
     /// rec21
     IntermediateBulkContainerMetal,
@@ -8370,35 +8370,35 @@ pub enum Unit {
     ///
     /// rec21
     IntermediateBulkContainerAluminiumPressurised10Kpa,
-    /// Intermediate bulk container, metal, pressure 10 kpa 
+    /// Intermediate bulk container, metal, pressure 10 kpa
     ///
     /// rec21
     IntermediateBulkContainerMetalPressure10Kpa,
-    /// Intermediate bulk container, steel, liquid 
+    /// Intermediate bulk container, steel, liquid
     ///
     /// rec21
     IntermediateBulkContainerSteelLiquid,
-    /// Intermediate bulk container, aluminium, liquid 
+    /// Intermediate bulk container, aluminium, liquid
     ///
     /// rec21
     IntermediateBulkContainerAluminiumLiquid,
-    /// Intermediate bulk container, metal, liquid 
+    /// Intermediate bulk container, metal, liquid
     ///
     /// rec21
     IntermediateBulkContainerMetalLiquid,
-    /// Intermediate bulk container, woven plastic, without coat/liner 
+    /// Intermediate bulk container, woven plastic, without coat/liner
     ///
     /// rec21
     IntermediateBulkContainerWovenPlasticWithoutCoatLiner,
-    /// Intermediate bulk container, woven plastic, coated 
+    /// Intermediate bulk container, woven plastic, coated
     ///
     /// rec21
     IntermediateBulkContainerWovenPlasticCoated,
-    /// Intermediate bulk container, woven plastic, with liner 
+    /// Intermediate bulk container, woven plastic, with liner
     ///
     /// rec21
     IntermediateBulkContainerWovenPlasticWithLiner,
-    /// Intermediate bulk container, woven plastic, coated and liner 
+    /// Intermediate bulk container, woven plastic, coated and liner
     ///
     /// rec21
     IntermediateBulkContainerWovenPlasticCoatedAndLiner,
@@ -8406,7 +8406,7 @@ pub enum Unit {
     ///
     /// rec21
     IntermediateBulkContainerPlasticFilm,
-    /// Intermediate bulk container, textile with out coat/liner 
+    /// Intermediate bulk container, textile with out coat/liner
     ///
     /// rec21
     IntermediateBulkContainerTextileWithOutCoatLiner,
@@ -8414,19 +8414,19 @@ pub enum Unit {
     ///
     /// rec21
     IntermediateBulkContainerNaturalWoodWithInnerLiner,
-    /// Intermediate bulk container, textile, coated 
+    /// Intermediate bulk container, textile, coated
     ///
     /// rec21
     IntermediateBulkContainerTextileCoated,
-    /// Intermediate bulk container, textile, with liner 
+    /// Intermediate bulk container, textile, with liner
     ///
     /// rec21
     IntermediateBulkContainerTextileWithLiner,
-    /// Intermediate bulk container, textile, coated and liner 
+    /// Intermediate bulk container, textile, coated and liner
     ///
     /// rec21
     IntermediateBulkContainerTextileCoatedAndLiner,
-    /// Intermediate bulk container, plywood, with inner liner 
+    /// Intermediate bulk container, plywood, with inner liner
     ///
     /// rec21
     IntermediateBulkContainerPlywoodWithInnerLiner,
@@ -8434,11 +8434,11 @@ pub enum Unit {
     ///
     /// rec21
     IntermediateBulkContainerReconstitutedWoodWithInnerLiner,
-    /// Bag, woven plastic, without inner coat/liner 
+    /// Bag, woven plastic, without inner coat/liner
     ///
     /// rec21
     BagWovenPlasticWithoutInnerCoatLiner,
-    /// Bag, woven plastic, sift proof 
+    /// Bag, woven plastic, sift proof
     ///
     /// rec21
     BagWovenPlasticSiftProof,
@@ -8446,15 +8446,15 @@ pub enum Unit {
     ///
     /// rec21
     BagWovenPlasticWaterResistant,
-    /// Bag, plastics film 
+    /// Bag, plastics film
     ///
     /// rec21
     BagPlasticsFilm,
-    /// Bag, textile, without inner coat/liner 
+    /// Bag, textile, without inner coat/liner
     ///
     /// rec21
     BagTextileWithoutInnerCoatLiner,
-    /// Bag, textile, sift proof 
+    /// Bag, textile, sift proof
     ///
     /// rec21
     BagTextileSiftProof,
@@ -8462,7 +8462,7 @@ pub enum Unit {
     ///
     /// rec21
     BagTextileWaterResistant,
-    /// Bag, paper, multi-wall 
+    /// Bag, paper, multi-wall
     ///
     /// rec21
     BagPaperMultiWall,
@@ -8494,7 +8494,7 @@ pub enum Unit {
     ///
     /// rec21
     CompositePackagingPlasticReceptacleInPlywoodDrum,
-    /// Composite packaging, plastic receptacle in plywood box 
+    /// Composite packaging, plastic receptacle in plywood box
     ///
     /// rec21
     CompositePackagingPlasticReceptacleInPlywoodBox,
@@ -8546,7 +8546,7 @@ pub enum Unit {
     ///
     /// rec21
     CompositePackagingGlassReceptacleInFibreDrum,
-    /// Composite packaging, glass receptacle in fibreboard box 
+    /// Composite packaging, glass receptacle in fibreboard box
     ///
     /// rec21
     CompositePackagingGlassReceptacleInFibreboardBox,
@@ -8558,11 +8558,11 @@ pub enum Unit {
     ///
     /// rec21
     CompositePackagingGlassReceptacleInSolidPlasticPack,
-    /// Intermediate bulk container, paper, multi-wall 
+    /// Intermediate bulk container, paper, multi-wall
     ///
     /// rec21
     IntermediateBulkContainerPaperMultiWall,
-    /// Bag, large 
+    /// Bag, large
     ///
     /// rec21
     BagLarge,
@@ -8586,7 +8586,7 @@ pub enum Unit {
     ///
     /// rec21
     IntermediateBulkContainerRigidPlasticFreestandingPressurised,
-    /// Intermediate bulk container, rigid plastic, with structural equipment, liquids 
+    /// Intermediate bulk container, rigid plastic, with structural equipment, liquids
     ///
     /// rec21
     IntermediateBulkContainerRigidPlasticWithStructuralEquipmentLiquids,
@@ -8602,7 +8602,7 @@ pub enum Unit {
     ///
     /// rec21
     IntermediateBulkContainerCompositeFlexiblePlasticSolids,
-    /// Intermediate bulk container, composite, rigid plastic, pressurised 
+    /// Intermediate bulk container, composite, rigid plastic, pressurised
     ///
     /// rec21
     IntermediateBulkContainerCompositeRigidPlasticPressurised,
@@ -8614,7 +8614,7 @@ pub enum Unit {
     ///
     /// rec21
     IntermediateBulkContainerCompositeRigidPlasticLiquids,
-    /// Intermediate bulk container, composite, flexible plastic, liquids 
+    /// Intermediate bulk container, composite, flexible plastic, liquids
     ///
     /// rec21
     IntermediateBulkContainerCompositeFlexiblePlasticLiquids,
@@ -8646,7 +8646,7 @@ pub enum Unit {
     ///
     /// rec21
     IntermediateBulkContainerReconstitutedWood,
-    /// Mutually defined 
+    /// Mutually defined
     ///
     /// rec21
     MutuallyDefined_Dup,
@@ -9620,9 +9620,15 @@ impl crate::Code for Unit {
             Unit::MicrolitrePerLitre => "J36",
             Unit::Baud => "J38",
             Unit::BritishThermalUnitMean => "J39",
-            Unit::BritishThermalUnitInternationalTableFootPerHourSquareFootDegreeFahrenheit => "J40",
-            Unit::BritishThermalUnitInternationalTableInchPerHourSquareFootDegreeFahrenheit => "J41",
-            Unit::BritishThermalUnitInternationalTableInchPerSecondSquareFootDegreeFahrenheit => "J42",
+            Unit::BritishThermalUnitInternationalTableFootPerHourSquareFootDegreeFahrenheit => {
+                "J40"
+            }
+            Unit::BritishThermalUnitInternationalTableInchPerHourSquareFootDegreeFahrenheit => {
+                "J41"
+            }
+            Unit::BritishThermalUnitInternationalTableInchPerSecondSquareFootDegreeFahrenheit => {
+                "J42"
+            }
             Unit::BritishThermalUnitInternationalTablePerPoundDegreeFahrenheit => "J43",
             Unit::BritishThermalUnitInternationalTablePerMinute => "J44",
             Unit::BritishThermalUnitInternationalTablePerSecond => "J45",
@@ -10146,7 +10152,9 @@ impl crate::Code for Unit {
             Unit::DegreeFahrenheitHourPerBritishThermalUnitThermochemical => "N85",
             Unit::DegreeFahrenheitSecondPerBritishThermalUnitInternationalTable => "N86",
             Unit::DegreeFahrenheitSecondPerBritishThermalUnitThermochemical => "N87",
-            Unit::DegreeFahrenheitHourSquareFootPerBritishThermalUnitInternationalTableInch => "N88",
+            Unit::DegreeFahrenheitHourSquareFootPerBritishThermalUnitInternationalTableInch => {
+                "N88"
+            }
             Unit::DegreeFahrenheitHourSquareFootPerBritishThermalUnitThermochemicalInch => "N89",
             Unit::Kilofarad => "N90",
             Unit::ReciprocalJoule => "N91",
@@ -12993,7 +13001,7 @@ impl crate::Description for Unit {
 impl crate::FromCode for Unit {
     fn from_code(code: &str) -> Option<Self>
     where
-        Self: Sized
+        Self: Sized,
     {
         match code {
             "10" => Some(Unit::Group),
@@ -13081,7 +13089,9 @@ impl crate::FromCode for Unit {
             "A18" => Some(Unit::BecquerelPerKilogram),
             "A19" => Some(Unit::BecquerelPerCubicMetre),
             "A2" => Some(Unit::AmperePerCentimetre),
-            "A20" => Some(Unit::BritishThermalUnitInternationalTablePerSecondSquareFootDegreeRankine),
+            "A20" => {
+                Some(Unit::BritishThermalUnitInternationalTablePerSecondSquareFootDegreeRankine)
+            }
             "A21" => Some(Unit::BritishThermalUnitInternationalTablePerPoundDegreeRankine),
             "A22" => Some(Unit::BritishThermalUnitInternationalTablePerSecondFootDegreeRankine),
             "A23" => Some(Unit::BritishThermalUnitInternationalTablePerHourSquareFootDegreeRankine),
@@ -13944,7 +13954,9 @@ impl crate::FromCode for Unit {
             "J2" => Some(Unit::JoulePerKilogram),
             "J20" => Some(Unit::DegreeFahrenheitPerKelvin),
             "J21" => Some(Unit::DegreeFahrenheitPerBar),
-            "J22" => Some(Unit::DegreeFahrenheitHourSquareFootPerBritishThermalUnitInternationalTable),
+            "J22" => {
+                Some(Unit::DegreeFahrenheitHourSquareFootPerBritishThermalUnitInternationalTable)
+            }
             "J23" => Some(Unit::DegreeFahrenheitPerHour),
             "J24" => Some(Unit::DegreeFahrenheitPerMinute),
             "J25" => Some(Unit::DegreeFahrenheitPerSecond),
@@ -13961,16 +13973,28 @@ impl crate::FromCode for Unit {
             "J36" => Some(Unit::MicrolitrePerLitre),
             "J38" => Some(Unit::Baud),
             "J39" => Some(Unit::BritishThermalUnitMean),
-            "J40" => Some(Unit::BritishThermalUnitInternationalTableFootPerHourSquareFootDegreeFahrenheit),
-            "J41" => Some(Unit::BritishThermalUnitInternationalTableInchPerHourSquareFootDegreeFahrenheit),
-            "J42" => Some(Unit::BritishThermalUnitInternationalTableInchPerSecondSquareFootDegreeFahrenheit),
+            "J40" => Some(
+                Unit::BritishThermalUnitInternationalTableFootPerHourSquareFootDegreeFahrenheit,
+            ),
+            "J41" => Some(
+                Unit::BritishThermalUnitInternationalTableInchPerHourSquareFootDegreeFahrenheit,
+            ),
+            "J42" => Some(
+                Unit::BritishThermalUnitInternationalTableInchPerSecondSquareFootDegreeFahrenheit,
+            ),
             "J43" => Some(Unit::BritishThermalUnitInternationalTablePerPoundDegreeFahrenheit),
             "J44" => Some(Unit::BritishThermalUnitInternationalTablePerMinute),
             "J45" => Some(Unit::BritishThermalUnitInternationalTablePerSecond),
-            "J46" => Some(Unit::BritishThermalUnitThermochemicalFootPerHourSquareFootDegreeFahrenheit),
+            "J46" => {
+                Some(Unit::BritishThermalUnitThermochemicalFootPerHourSquareFootDegreeFahrenheit)
+            }
             "J47" => Some(Unit::BritishThermalUnitThermochemicalPerHour),
-            "J48" => Some(Unit::BritishThermalUnitThermochemicalInchPerHourSquareFootDegreeFahrenheit),
-            "J49" => Some(Unit::BritishThermalUnitThermochemicalInchPerSecondSquareFootDegreeFahrenheit),
+            "J48" => {
+                Some(Unit::BritishThermalUnitThermochemicalInchPerHourSquareFootDegreeFahrenheit)
+            }
+            "J49" => {
+                Some(Unit::BritishThermalUnitThermochemicalInchPerSecondSquareFootDegreeFahrenheit)
+            }
             "J50" => Some(Unit::BritishThermalUnitThermochemicalPerPoundDegreeFahrenheit),
             "J51" => Some(Unit::BritishThermalUnitThermochemicalPerMinute),
             "J52" => Some(Unit::BritishThermalUnitThermochemicalPerSecond),
@@ -14473,10 +14497,16 @@ impl crate::FromCode for Unit {
             "N71" => Some(Unit::ThermEc),
             "N72" => Some(Unit::ThermUS),
             "N73" => Some(Unit::BritishThermalUnitThermochemicalPerPound),
-            "N74" => Some(Unit::BritishThermalUnitInternationalTablePerHourSquareFootDegreeFahrenheit),
+            "N74" => {
+                Some(Unit::BritishThermalUnitInternationalTablePerHourSquareFootDegreeFahrenheit)
+            }
             "N75" => Some(Unit::BritishThermalUnitThermochemicalPerHourSquareFootDegreeFahrenheit),
-            "N76" => Some(Unit::BritishThermalUnitInternationalTablePerSecondSquareFootDegreeFahrenheit),
-            "N77" => Some(Unit::BritishThermalUnitThermochemicalPerSecondSquareFootDegreeFahrenheit),
+            "N76" => {
+                Some(Unit::BritishThermalUnitInternationalTablePerSecondSquareFootDegreeFahrenheit)
+            }
+            "N77" => {
+                Some(Unit::BritishThermalUnitThermochemicalPerSecondSquareFootDegreeFahrenheit)
+            }
             "N78" => Some(Unit::KilowattPerSquareMetreKelvin),
             "N79" => Some(Unit::KelvinPerPascal),
             "N80" => Some(Unit::WattPerMetreDegreeCelsius),
@@ -14487,8 +14517,12 @@ impl crate::FromCode for Unit {
             "N85" => Some(Unit::DegreeFahrenheitHourPerBritishThermalUnitThermochemical),
             "N86" => Some(Unit::DegreeFahrenheitSecondPerBritishThermalUnitInternationalTable),
             "N87" => Some(Unit::DegreeFahrenheitSecondPerBritishThermalUnitThermochemical),
-            "N88" => Some(Unit::DegreeFahrenheitHourSquareFootPerBritishThermalUnitInternationalTableInch),
-            "N89" => Some(Unit::DegreeFahrenheitHourSquareFootPerBritishThermalUnitThermochemicalInch),
+            "N88" => Some(
+                Unit::DegreeFahrenheitHourSquareFootPerBritishThermalUnitInternationalTableInch,
+            ),
+            "N89" => {
+                Some(Unit::DegreeFahrenheitHourSquareFootPerBritishThermalUnitThermochemicalInch)
+            }
             "N90" => Some(Unit::Kilofarad),
             "N91" => Some(Unit::ReciprocalJoule),
             "N92" => Some(Unit::Picosiemens),
@@ -15140,9 +15174,13 @@ impl crate::FromCode for Unit {
             "XZC" => Some(Unit::IntermediateBulkContainerPaperMultiWallWaterResistant),
             "XZD" => Some(Unit::IntermediateBulkContainerRigidPlasticWithStructuralEquipmentSolids),
             "XZF" => Some(Unit::IntermediateBulkContainerRigidPlasticFreestandingSolids),
-            "XZG" => Some(Unit::IntermediateBulkContainerRigidPlasticWithStructuralEquipmentPressurised),
+            "XZG" => {
+                Some(Unit::IntermediateBulkContainerRigidPlasticWithStructuralEquipmentPressurised)
+            }
             "XZH" => Some(Unit::IntermediateBulkContainerRigidPlasticFreestandingPressurised),
-            "XZJ" => Some(Unit::IntermediateBulkContainerRigidPlasticWithStructuralEquipmentLiquids),
+            "XZJ" => {
+                Some(Unit::IntermediateBulkContainerRigidPlasticWithStructuralEquipmentLiquids)
+            }
             "XZK" => Some(Unit::IntermediateBulkContainerRigidPlasticFreestandingLiquids),
             "XZL" => Some(Unit::IntermediateBulkContainerCompositeRigidPlasticSolids),
             "XZM" => Some(Unit::IntermediateBulkContainerCompositeFlexiblePlasticSolids),

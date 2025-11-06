@@ -294,41 +294,81 @@ impl crate::Description for Payment {
             Payment::AchSavingsDebit => "ACH savings debit",
             Payment::BookentryCredit => "Bookentry credit",
             Payment::BookentryDebit => "Bookentry debit",
-            Payment::AchDemandCashConcentrationDisbursementCcdCredit => "ACH demand cash concentration/disbursement (CCD) credit",
-            Payment::AchDemandCashConcentrationDisbursementCcdDebit => "ACH demand cash concentration/disbursement (CCD) debit",
-            Payment::AchDemandCorporateTradePaymentCtpCredit => "ACH demand corporate trade payment (CTP) credit",
+            Payment::AchDemandCashConcentrationDisbursementCcdCredit => {
+                "ACH demand cash concentration/disbursement (CCD) credit"
+            }
+            Payment::AchDemandCashConcentrationDisbursementCcdDebit => {
+                "ACH demand cash concentration/disbursement (CCD) debit"
+            }
+            Payment::AchDemandCorporateTradePaymentCtpCredit => {
+                "ACH demand corporate trade payment (CTP) credit"
+            }
             Payment::Cheque => "Cheque",
             Payment::BankersDraft => "Banker's draft",
             Payment::CertifiedBankersDraft => "Certified banker's draft",
-            Payment::BankChequeIssuedByABankingOrSimilarEstablishment => "Bank cheque (issued by a banking or similar establishment)",
+            Payment::BankChequeIssuedByABankingOrSimilarEstablishment => {
+                "Bank cheque (issued by a banking or similar establishment)"
+            }
             Payment::BillExchangeAwaitingAcceptance => "Bill of exchange awaiting acceptance",
             Payment::CertifiedCheque => "Certified cheque",
             Payment::LocalCheque => "Local cheque",
-            Payment::AchDemandCorporateTradePaymentCtpDebit => "ACH demand corporate trade payment (CTP) debit",
-            Payment::AchDemandCorporateTradeExchangeCtxCredit => "ACH demand corporate trade exchange (CTX) credit",
-            Payment::AchDemandCorporateTradeExchangeCtxDebit => "ACH demand corporate trade exchange (CTX) debit",
+            Payment::AchDemandCorporateTradePaymentCtpDebit => {
+                "ACH demand corporate trade payment (CTP) debit"
+            }
+            Payment::AchDemandCorporateTradeExchangeCtxCredit => {
+                "ACH demand corporate trade exchange (CTX) credit"
+            }
+            Payment::AchDemandCorporateTradeExchangeCtxDebit => {
+                "ACH demand corporate trade exchange (CTX) debit"
+            }
             Payment::CreditTransfer => "Credit transfer",
             Payment::DebitTransfer => "Debit transfer",
-            Payment::AchDemandCashConcentrationDisbursementPlusCcd => "ACH demand cash concentration/disbursement plus (CCD+)",
-            Payment::AchDemandCashConcentrationDisbursementPlusCcd_Dup => "ACH demand cash concentration/disbursement plus (CCD+)",
-            Payment::AchPrearrangedPaymentAndDepositPpd => "ACH prearranged payment and deposit (PPD)",
-            Payment::AchSavingsCashConcentrationDisbursementCcdCredit => "ACH savings cash concentration/disbursement (CCD) credit",
-            Payment::AchSavingsCashConcentrationDisbursementCcdDebit => "ACH savings cash concentration/disbursement (CCD) debit",
-            Payment::AchSavingsCorporateTradePaymentCtpCredit => "ACH savings corporate trade payment (CTP) credit",
-            Payment::AchSavingsCorporateTradePaymentCtpDebit => "ACH savings corporate trade payment (CTP) debit",
-            Payment::AchSavingsCorporateTradeExchangeCtxCredit => "ACH savings corporate trade exchange (CTX) credit",
-            Payment::AchSavingsCorporateTradeExchangeCtxDebit => "ACH savings corporate trade exchange (CTX) debit",
-            Payment::AchSavingsCashConcentrationDisbursementPlusCcd => "ACH savings cash concentration/disbursement plus (CCD+)",
+            Payment::AchDemandCashConcentrationDisbursementPlusCcd => {
+                "ACH demand cash concentration/disbursement plus (CCD+)"
+            }
+            Payment::AchDemandCashConcentrationDisbursementPlusCcd_Dup => {
+                "ACH demand cash concentration/disbursement plus (CCD+)"
+            }
+            Payment::AchPrearrangedPaymentAndDepositPpd => {
+                "ACH prearranged payment and deposit (PPD)"
+            }
+            Payment::AchSavingsCashConcentrationDisbursementCcdCredit => {
+                "ACH savings cash concentration/disbursement (CCD) credit"
+            }
+            Payment::AchSavingsCashConcentrationDisbursementCcdDebit => {
+                "ACH savings cash concentration/disbursement (CCD) debit"
+            }
+            Payment::AchSavingsCorporateTradePaymentCtpCredit => {
+                "ACH savings corporate trade payment (CTP) credit"
+            }
+            Payment::AchSavingsCorporateTradePaymentCtpDebit => {
+                "ACH savings corporate trade payment (CTP) debit"
+            }
+            Payment::AchSavingsCorporateTradeExchangeCtxCredit => {
+                "ACH savings corporate trade exchange (CTX) credit"
+            }
+            Payment::AchSavingsCorporateTradeExchangeCtxDebit => {
+                "ACH savings corporate trade exchange (CTX) debit"
+            }
+            Payment::AchSavingsCashConcentrationDisbursementPlusCcd => {
+                "ACH savings cash concentration/disbursement plus (CCD+)"
+            }
             Payment::PaymentToBankAccount => "Payment to bank account",
-            Payment::AchSavingsCashConcentrationDisbursementPlusCcd_Dup => "ACH savings cash concentration/disbursement plus (CCD+)",
+            Payment::AchSavingsCashConcentrationDisbursementPlusCcd_Dup => {
+                "ACH savings cash concentration/disbursement plus (CCD+)"
+            }
             Payment::AcceptedBillExchange => "Accepted bill of exchange",
-            Payment::ReferencedHomeBankingCreditTransfer => "Referenced home-banking credit transfer",
+            Payment::ReferencedHomeBankingCreditTransfer => {
+                "Referenced home-banking credit transfer"
+            }
             Payment::InterbankDebitTransfer => "Interbank debit transfer",
             Payment::HomeBankingDebitTransfer => "Home-banking debit transfer",
             Payment::BankCard => "Bank card",
             Payment::DirectDebit => "Direct debit",
             Payment::PaymentByPostgiro => "Payment by postgiro",
-            Payment::FrNorme697TelereglementCfonbFrenchOrganisationFor => "FR, norme 6 97-Telereglement CFONB (French Organisation for",
+            Payment::FrNorme697TelereglementCfonbFrenchOrganisationFor => {
+                "FR, norme 6 97-Telereglement CFONB (French Organisation for"
+            }
             Payment::UrgentCommercialPayment => "Urgent commercial payment",
             Payment::UrgentTreasuryPayment => "Urgent Treasury Payment",
             Payment::CreditCard => "Credit card",
@@ -339,28 +379,48 @@ impl crate::Description for Payment {
             Payment::SepaDirectDebit => "SEPA direct debit",
             Payment::PromissoryNote => "Promissory note",
             Payment::PromissoryNoteSignedByDebtor => "Promissory note signed by the debtor",
-            Payment::PromissoryNoteSignedByDebtorAndEndorsedByABank => "Promissory note signed by the debtor and endorsed by a bank",
-            Payment::PromissoryNoteSignedByDebtorAndEndorsedByA => "Promissory note signed by the debtor and endorsed by a",
+            Payment::PromissoryNoteSignedByDebtorAndEndorsedByABank => {
+                "Promissory note signed by the debtor and endorsed by a bank"
+            }
+            Payment::PromissoryNoteSignedByDebtorAndEndorsedByA => {
+                "Promissory note signed by the debtor and endorsed by a"
+            }
             Payment::PromissoryNoteSignedByABank => "Promissory note signed by a bank",
-            Payment::PromissoryNoteSignedByABankAndEndorsedByAnother => "Promissory note signed by a bank and endorsed by another",
+            Payment::PromissoryNoteSignedByABankAndEndorsedByAnother => {
+                "Promissory note signed by a bank and endorsed by another"
+            }
             Payment::PromissoryNoteSignedByAThirdParty => "Promissory note signed by a third party",
-            Payment::PromissoryNoteSignedByAThirdPartyAndEndorsedByA => "Promissory note signed by a third party and endorsed by a",
+            Payment::PromissoryNoteSignedByAThirdPartyAndEndorsedByA => {
+                "Promissory note signed by a third party and endorsed by a"
+            }
             Payment::OnlinePaymentService => "Online payment service",
             Payment::TransferAdvice => "Transfer Advice",
             Payment::BillDrawnByCreditorOnDebtor => "Bill drawn by the creditor on the debtor",
             Payment::BillDrawnByCreditorOnABank => "Bill drawn by the creditor on a bank",
-            Payment::BillDrawnByCreditorEndorsedByAnotherBank => "Bill drawn by the creditor, endorsed by another bank",
-            Payment::BillDrawnByCreditorOnABankAndEndorsedByA => "Bill drawn by the creditor on a bank and endorsed by a",
-            Payment::BillDrawnByCreditorOnAThirdParty => "Bill drawn by the creditor on a third party",
-            Payment::BillDrawnByCreditorOnThirdPartyAcceptedAnd => "Bill drawn by creditor on third party, accepted and",
+            Payment::BillDrawnByCreditorEndorsedByAnotherBank => {
+                "Bill drawn by the creditor, endorsed by another bank"
+            }
+            Payment::BillDrawnByCreditorOnABankAndEndorsedByA => {
+                "Bill drawn by the creditor on a bank and endorsed by a"
+            }
+            Payment::BillDrawnByCreditorOnAThirdParty => {
+                "Bill drawn by the creditor on a third party"
+            }
+            Payment::BillDrawnByCreditorOnThirdPartyAcceptedAnd => {
+                "Bill drawn by creditor on third party, accepted and"
+            }
             Payment::NotTransferableBankersDraft => "Not transferable banker's draft",
             Payment::NotTransferableLocalCheque => "Not transferable local cheque",
             Payment::ReferenceGiro => "Reference giro",
             Payment::UrgentGiro => "Urgent giro",
             Payment::FreeFormatGiro => "Free format giro",
-            Payment::RequestedMethodForPaymentWasNotUsed => "Requested method for payment was not used",
+            Payment::RequestedMethodForPaymentWasNotUsed => {
+                "Requested method for payment was not used"
+            }
             Payment::ClearingBetweenPartners => "Clearing between partners",
-            Payment::JpElectronicallyRecordedMonetaryClaims => "JP, Electronically Recorded Monetary Claims",
+            Payment::JpElectronicallyRecordedMonetaryClaims => {
+                "JP, Electronically Recorded Monetary Claims"
+            }
             Payment::MutuallyDefined => "Mutually defined",
         }
     }
@@ -369,7 +429,7 @@ impl crate::Description for Payment {
 impl crate::FromCode for Payment {
     fn from_code(code: &str) -> Option<Self>
     where
-        Self: Sized
+        Self: Sized,
     {
         match code {
             "1" => Some(Payment::InstrumentNotDefined),

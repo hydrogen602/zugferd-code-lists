@@ -576,12 +576,20 @@ impl crate::Description for Item {
             Item::HotRollNumber => "Hot roll number",
             Item::SlabNumber => "Slab number",
             Item::SoftwareRevisionNumber => "Software revision number",
-            Item::UpcUniversalProductCodeConsumerPackageCode155 => "UPC (Universal Product Code) Consumer package code (1-5-5)",
-            Item::UpcUniversalProductCodeConsumerPackageCode155_Dup => "UPC (Universal Product Code) Consumer package code (1-5-5-",
+            Item::UpcUniversalProductCodeConsumerPackageCode155 => {
+                "UPC (Universal Product Code) Consumer package code (1-5-5)"
+            }
+            Item::UpcUniversalProductCodeConsumerPackageCode155_Dup => {
+                "UPC (Universal Product Code) Consumer package code (1-5-5-"
+            }
             Item::SampleNumber => "Sample number",
             Item::PackNumber => "Pack number",
-            Item::UpcUniversalProductCodeShippingContainerCode12 => "UPC (Universal Product Code) Shipping container code (1-2-",
-            Item::UpcUniversalProductCodeEanEuropeanArticleNumber => "UPC (Universal Product Code)/EAN (European article number)",
+            Item::UpcUniversalProductCodeShippingContainerCode12 => {
+                "UPC (Universal Product Code) Shipping container code (1-2-"
+            }
+            Item::UpcUniversalProductCodeEanEuropeanArticleNumber => {
+                "UPC (Universal Product Code)/EAN (European article number)"
+            }
             Item::UpcUniversalProductCodeSuffix => "UPC (Universal Product Code) suffix",
             Item::StateLabelCode => "State label code",
             Item::HeatNumber => "Heat number",
@@ -589,7 +597,9 @@ impl crate::Description for Item {
             Item::ResourceNumber => "Resource number",
             Item::WorkTaskNumber => "Work task number",
             Item::PriceLookUpNumber => "Price look up number",
-            Item::NsnNorthAtlanticTreatyOrganizationStockNumber => "NSN (North Atlantic Treaty Organization Stock Number)",
+            Item::NsnNorthAtlanticTreatyOrganizationStockNumber => {
+                "NSN (North Atlantic Treaty Organization Stock Number)"
+            }
             Item::RefinedProductCode => "Refined product code",
             Item::Exhibit => "Exhibit",
             Item::EndItem => "End item",
@@ -617,7 +627,9 @@ impl crate::Description for Item {
             Item::TechnicalPhase => "Technical phase",
             Item::DyeLotNumber => "Dye lot number",
             Item::DailyStatementActivities => "Daily statement of activities",
-            Item::PeriodicalStatementActivitiesWithinABilaterally => "Periodical statement of activities within a bilaterally",
+            Item::PeriodicalStatementActivitiesWithinABilaterally => {
+                "Periodical statement of activities within a bilaterally"
+            }
             Item::CalendarWeekStatementActivities => "Calendar week statement of activities",
             Item::CalendarMonthStatementActivities => "Calendar month statement of activities",
             Item::OriginalEquipmentNumber => "Original equipment number",
@@ -630,21 +642,31 @@ impl crate::Description for Item {
             Item::Drawing => "Drawing",
             Item::EngineeringChangeLevel => "Engineering change level",
             Item::MaterialCode => "Material code",
-            Item::EmdnEuropeanMedicalDeviceNomenclature => "EMDN (European Medical Device Nomenclature)",
-            Item::InternationalArticleNumberingAssociationEan => "International Article Numbering Association (EAN)",
+            Item::EmdnEuropeanMedicalDeviceNomenclature => {
+                "EMDN (European Medical Device Nomenclature)"
+            }
+            Item::InternationalArticleNumberingAssociationEan => {
+                "International Article Numbering Association (EAN)"
+            }
             Item::FishSpecies => "Fish species",
             Item::BuyersInternalProductGroupCode => "Buyer's internal product group code",
             Item::GlobalModelNumber => "Global model number",
             Item::NationalProductGroupCode => "National product group code",
             Item::GeneralSpecificationNumber => "General specification number",
             Item::HarmonisedSystem => "Harmonised system",
-            Item::IsbnInternationalStandardBookNumber => "ISBN (International Standard Book Number)",
+            Item::IsbnInternationalStandardBookNumber => {
+                "ISBN (International Standard Book Number)"
+            }
             Item::BuyersItemNumber => "Buyer's item number",
-            Item::IssnInternationalStandardSerialNumber => "ISSN (International Standard Serial Number)",
+            Item::IssnInternationalStandardSerialNumber => {
+                "ISSN (International Standard Serial Number)"
+            }
             Item::BuyersStyleNumber => "Buyer's style number",
             Item::BuyersSizeCode => "Buyer's size code",
             Item::MachineNumber => "Machine number",
-            Item::ManufacturersProducersArticleNumber => "Manufacturer's (producer's) article number",
+            Item::ManufacturersProducersArticleNumber => {
+                "Manufacturer's (producer's) article number"
+            }
             Item::ModelNumber => "Model number",
             Item::ProductServiceIdentificationNumber => "Product/service identification number",
             Item::BatchNumber => "Batch number",
@@ -660,12 +682,18 @@ impl crate::Description for Item {
             Item::RunNumber => "Run number",
             Item::RecordKeepingModelYear => "Record keeping of model year",
             Item::SuppliersArticleNumber => "Supplier's article number",
-            Item::StandardGroupProductsMixedAssortment => "Standard group of products (mixed assortment)",
+            Item::StandardGroupProductsMixedAssortment => {
+                "Standard group of products (mixed assortment)"
+            }
             Item::SkuStockKeepingUnit => "SKU (Stock keeping unit)",
             Item::SerialNumber => "Serial number",
             Item::RskNumber => "RSK number",
-            Item::IflsInstitutFrancaisDuLibreService5DigitProduct => "IFLS (Institut Francais du Libre Service) 5 digit product",
-            Item::IflsInstitutFrancaisDuLibreService9DigitProduct => "IFLS (Institut Francais du Libre Service) 9 digit product",
+            Item::IflsInstitutFrancaisDuLibreService5DigitProduct => {
+                "IFLS (Institut Francais du Libre Service) 5 digit product"
+            }
+            Item::IflsInstitutFrancaisDuLibreService9DigitProduct => {
+                "IFLS (Institut Francais du Libre Service) 9 digit product"
+            }
             Item::Gs1GlobalTradeItemNumber => "GS1 Global Trade Item Number",
             Item::EdisEnergyDataIdentificationSystem => "EDIS (Energy Data Identification System)",
             Item::SlaughterNumber => "Slaughter number",
@@ -675,21 +703,35 @@ impl crate::Description for Item {
             Item::_46LevelDotCode => "46 Level DOT Code",
             Item::AirlineTariff6d => "Airline Tariff 6D",
             Item::Title49CodeFederalRegulations => "Title 49 Code of Federal Regulations",
-            Item::InternationalCivilAviationAdministrationCode => "International Civil Aviation Administration code",
+            Item::InternationalCivilAviationAdministrationCode => {
+                "International Civil Aviation Administration code"
+            }
             Item::HazardousMaterialsIdDot => "Hazardous Materials ID DOT",
             Item::Endorsement => "Endorsement",
             Item::AirForceRegulation714 => "Air Force Regulation 71-4",
             Item::Breed => "Breed",
-            Item::ChemicalAbstractServiceCasRegistryNumber => "Chemical Abstract Service (CAS) registry number",
+            Item::ChemicalAbstractServiceCasRegistryNumber => {
+                "Chemical Abstract Service (CAS) registry number"
+            }
             Item::EngineModelDesignation => "Engine model designation",
-            Item::InstitutionalMeatPurchaseSpecificationsImpsNumber => "Institutional Meat Purchase Specifications (IMPS) Number",
+            Item::InstitutionalMeatPurchaseSpecificationsImpsNumber => {
+                "Institutional Meat Purchase Specifications (IMPS) Number"
+            }
             Item::PriceLookUpCodePlu => "Price Look-Up code (PLU)",
-            Item::InternationalMaritimeOrganizationImoCode => "International Maritime Organization (IMO) Code",
+            Item::InternationalMaritimeOrganizationImoCode => {
+                "International Maritime Organization (IMO) Code"
+            }
             Item::BureauExplosives600ARail => "Bureau of Explosives 600-A (rail)",
             Item::UnitedNationsDangerousGoodsList => "United Nations Dangerous Goods List",
-            Item::InternationalCodeBotanicalNomenclatureIcbn => "International Code of Botanical Nomenclature (ICBN)",
-            Item::InternationalCodeZoologicalNomenclatureIczn => "International Code of Zoological Nomenclature (ICZN)",
-            Item::InternationalCodeNomenclatureForCultivatedPlants => "International Code of Nomenclature for Cultivated Plants",
+            Item::InternationalCodeBotanicalNomenclatureIcbn => {
+                "International Code of Botanical Nomenclature (ICBN)"
+            }
+            Item::InternationalCodeZoologicalNomenclatureIczn => {
+                "International Code of Zoological Nomenclature (ICZN)"
+            }
+            Item::InternationalCodeNomenclatureForCultivatedPlants => {
+                "International Code of Nomenclature for Cultivated Plants"
+            }
             Item::DistributorSArticleIdentifier => "Distributor’s article identifier",
             Item::NorwegianClassificationSystemEnva => "Norwegian Classification system ENVA",
             Item::SupplierAssignedClassification => "Supplier assigned classification",
@@ -701,35 +743,75 @@ impl crate::Description for Item {
             Item::StyleNumber => "Style number",
             Item::DutchClassificationSystemCbl => "Dutch classification system CBL",
             Item::JapaneseClassificationSystemJicfs => "Japanese classification system JICFS",
-            Item::EuropeanUnionDairySubsidyEligibilityClassification => "European Union dairy subsidy eligibility classification",
+            Item::EuropeanUnionDairySubsidyEligibilityClassification => {
+                "European Union dairy subsidy eligibility classification"
+            }
             Item::Gs1SpainClassificationSystem => "GS1 Spain classification system",
             Item::Gs1PolandClassificationSystem => "GS1 Poland classification system",
-            Item::FederalAgencyOnTechnicalRegulatingAndMetrology => "Federal Agency on Technical Regulating and Metrology of the",
-            Item::EfficientConsumerResponseEcrAustriaClassification => "Efficient Consumer Response (ECR) Austria classification",
+            Item::FederalAgencyOnTechnicalRegulatingAndMetrology => {
+                "Federal Agency on Technical Regulating and Metrology of the"
+            }
+            Item::EfficientConsumerResponseEcrAustriaClassification => {
+                "Efficient Consumer Response (ECR) Austria classification"
+            }
             Item::Gs1ItalyClassificationSystem => "GS1 Italy classification system",
             Item::CpvCommonProcurementVocabulary => "CPV (Common Procurement Vocabulary)",
-            Item::IfdaInternationalFoodserviceDistributorsAssociation => "IFDA (International Foodservice Distributors Association)",
-            Item::AhfsAmericanHospitalFormularyServicePharmacologic => "AHFS (American Hospital Formulary Service) pharmacologic -",
-            Item::AtcAnatomicalTherapeuticChemicalClassificationSystem => "ATC (Anatomical Therapeutic Chemical) classification system",
-            Item::CladimedClassificationDesDispositifsMédicaux => "CLADIMED (Classification des Dispositifs Médicaux)",
-            Item::CmdrCanadianMedicalDeviceRegulationsClassification => "CMDR (Canadian Medical Device Regulations) classification",
-            Item::CndmClassificazioneNazionaleDeiDispositiviMedici => "CNDM (Classificazione Nazionale dei Dispositivi Medici)",
-            Item::UkDmDDictionaryMedicinesDevicesStandardCoding => "UK DM&D (Dictionary of Medicines & Devices) standard coding",
+            Item::IfdaInternationalFoodserviceDistributorsAssociation => {
+                "IFDA (International Foodservice Distributors Association)"
+            }
+            Item::AhfsAmericanHospitalFormularyServicePharmacologic => {
+                "AHFS (American Hospital Formulary Service) pharmacologic -"
+            }
+            Item::AtcAnatomicalTherapeuticChemicalClassificationSystem => {
+                "ATC (Anatomical Therapeutic Chemical) classification system"
+            }
+            Item::CladimedClassificationDesDispositifsMédicaux => {
+                "CLADIMED (Classification des Dispositifs Médicaux)"
+            }
+            Item::CmdrCanadianMedicalDeviceRegulationsClassification => {
+                "CMDR (Canadian Medical Device Regulations) classification"
+            }
+            Item::CndmClassificazioneNazionaleDeiDispositiviMedici => {
+                "CNDM (Classificazione Nazionale dei Dispositivi Medici)"
+            }
+            Item::UkDmDDictionaryMedicinesDevicesStandardCoding => {
+                "UK DM&D (Dictionary of Medicines & Devices) standard coding"
+            }
             Item::EclSs => "eCl@ss",
-            Item::EdmaEuropeanDiagnosticManufacturersAssociation => "EDMA (European Diagnostic Manufacturers Association)",
+            Item::EdmaEuropeanDiagnosticManufacturersAssociation => {
+                "EDMA (European Diagnostic Manufacturers Association)"
+            }
             Item::EgarEuropeanGenericArticleRegister => "EGAR (European Generic Article Register)",
-            Item::GmdnGlobalMedicalDevicesNomenclature => "GMDN (Global Medical Devices Nomenclature)",
+            Item::GmdnGlobalMedicalDevicesNomenclature => {
+                "GMDN (Global Medical Devices Nomenclature)"
+            }
             Item::GpiGenericProductIdentifier => "GPI (Generic Product Identifier)",
-            Item::HcpcsHealthcareCommonProcedureCodingSystem => "HCPCS (Healthcare Common Procedure Coding System)",
-            Item::IcpsInternationalClassificationForPatientSafety => "ICPS (International Classification for Patient Safety)",
-            Item::MeddraMedicalDictionaryForRegulatoryActivities => "MedDRA (Medical Dictionary for Regulatory Activities)",
+            Item::HcpcsHealthcareCommonProcedureCodingSystem => {
+                "HCPCS (Healthcare Common Procedure Coding System)"
+            }
+            Item::IcpsInternationalClassificationForPatientSafety => {
+                "ICPS (International Classification for Patient Safety)"
+            }
+            Item::MeddraMedicalDictionaryForRegulatoryActivities => {
+                "MedDRA (Medical Dictionary for Regulatory Activities)"
+            }
             Item::MedicalColumbus => "Medical Columbus",
-            Item::NapcsNorthAmericanProductClassificationSystem => "NAPCS (North American Product Classification System)",
+            Item::NapcsNorthAmericanProductClassificationSystem => {
+                "NAPCS (North American Product Classification System)"
+            }
             Item::NhsNationalHealthServicesEclass => "NHS (National Health Services) eClass",
-            Item::UsFdaFoodAndDrugAdministrationProductCode => "US FDA (Food and Drug Administration) Product Code",
-            Item::SnomedCtSystematizedNomenclatureMedicineClinical => "SNOMED CT (Systematized Nomenclature of Medicine-Clinical",
-            Item::UmdnsUniversalMedicalDeviceNomenclatureSystem => "UMDNS (Universal Medical Device Nomenclature System)",
-            Item::Gs1GlobalReturnableAssetIdentifierNonSerialised => "GS1 Global Returnable Asset Identifier, non-serialised",
+            Item::UsFdaFoodAndDrugAdministrationProductCode => {
+                "US FDA (Food and Drug Administration) Product Code"
+            }
+            Item::SnomedCtSystematizedNomenclatureMedicineClinical => {
+                "SNOMED CT (Systematized Nomenclature of Medicine-Clinical"
+            }
+            Item::UmdnsUniversalMedicalDeviceNomenclatureSystem => {
+                "UMDNS (Universal Medical Device Nomenclature System)"
+            }
+            Item::Gs1GlobalReturnableAssetIdentifierNonSerialised => {
+                "GS1 Global Returnable Asset Identifier, non-serialised"
+            }
             Item::Imei => "IMEI",
             Item::WasteTypeEmsa => "Waste Type (EMSA)",
             Item::ShipsStoreClassificationType => "Ship's store classification type",
@@ -761,7 +843,7 @@ impl crate::Description for Item {
 impl crate::FromCode for Item {
     fn from_code(code: &str) -> Option<Self>
     where
-        Self: Sized
+        Self: Sized,
     {
         match code {
             "AA" => Some(Item::ProductVersionNumber),

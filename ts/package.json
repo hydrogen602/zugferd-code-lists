@@ -1,6 +1,6 @@
 {
   "name": "zugferd-code-lists",
-  "version": "0.1.8",
+  "version": "0.1.9",
   "description": "ZUGFeRD code lists, e.g. languages enum, currencies enum, countries enum, etc.",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -26,22 +26,27 @@
     "Factur-X"
   ],
   "readme": "README",
+  "types": "./dist/index.d.ts",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
-  "types": "./dist/index.d.ts",
   "files": [
     "dist"
   ],
   "exports": {
     ".": {
+      "types": "./dist/index.d.ts",
       "import": "./dist/index.mjs",
-      "require": "./dist/index.js",
-      "types": "./dist/index.d.ts"
+      "require": "./dist/index.js"
     },
     "./zugferd_2_3_2": {
+      "types": "./dist/zugferd_2_3_2/index.d.ts",
       "import": "./dist/zugferd_2_3_2/index.mjs",
-      "require": "./dist/zugferd_2_3_2/index.js",
-      "types": "./dist/zugferd_2_3_2/index.d.ts"
+      "require": "./dist/zugferd_2_3_2/index.js"
+    },
+    "./zugferd_2_3_3": {
+      "types": "./dist/zugferd_2_3_3/index.d.ts",
+      "import": "./dist/zugferd_2_3_3/index.mjs",
+      "require": "./dist/zugferd_2_3_3/index.js"
     }
   }
 }

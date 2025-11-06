@@ -735,7 +735,7 @@ impl crate::Description for LineStatus {
 impl crate::FromCode for LineStatus {
     fn from_code(code: &str) -> Option<Self>
     where
-        Self: Sized
+        Self: Sized,
     {
         match code {
             "1" => Some(LineStatus::Added),

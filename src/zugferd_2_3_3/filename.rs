@@ -27,9 +27,15 @@ impl crate::Code for Filename {
 impl crate::Description for Filename {
     fn description(&self) -> &str {
         match self {
-            Filename::TheHybridDocumentContainsAFacturXZugferdXmlFile => "The hybrid document contains a Factur-X / ZUGFeRD XML-file",
-            Filename::TheHybridDocumentContainsAXrechnungXmlFile => "The hybrid document contains a XRechnung XML file",
-            Filename::TheHybridDocumentContainsAnOrderXXmlFile => "The hybrid document contains an Order-X XML file",
+            Filename::TheHybridDocumentContainsAFacturXZugferdXmlFile => {
+                "The hybrid document contains a Factur-X / ZUGFeRD XML-file"
+            }
+            Filename::TheHybridDocumentContainsAXrechnungXmlFile => {
+                "The hybrid document contains a XRechnung XML file"
+            }
+            Filename::TheHybridDocumentContainsAnOrderXXmlFile => {
+                "The hybrid document contains an Order-X XML file"
+            }
         }
     }
 }
@@ -37,7 +43,7 @@ impl crate::Description for Filename {
 impl crate::FromCode for Filename {
     fn from_code(code: &str) -> Option<Self>
     where
-        Self: Sized
+        Self: Sized,
     {
         match code {
             "factur-x.xml" => Some(Filename::TheHybridDocumentContainsAFacturXZugferdXmlFile),

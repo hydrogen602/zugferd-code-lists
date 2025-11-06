@@ -2203,7 +2203,9 @@ impl crate::Description for Characteristic {
             Characteristic::NetNetWeight => "Net net weight",
             Characteristic::SternThrust => "Stern thrust",
             Characteristic::BowThrust => "Bow thrust",
-            Characteristic::HydrateContentAnAlcoholicProductAtBottling => "Hydrate content of an alcoholic product at bottling",
+            Characteristic::HydrateContentAnAlcoholicProductAtBottling => {
+                "Hydrate content of an alcoholic product at bottling"
+            }
             Characteristic::NumberUnitsPerPallet => "Number of units per pallet",
             Characteristic::FatContent => "Fat content",
             Characteristic::TransportMeansGrossWeight => "Transport means gross weight",
@@ -2231,8 +2233,12 @@ impl crate::Description for Characteristic {
             Characteristic::OriginalWort => "Original wort",
             Characteristic::Volume => "Volume",
             Characteristic::Angle => "Angle",
-            Characteristic::PegHoleHorizontalDistanceFromPackageLeftmostEdge => "Peg hole horizontal distance from package leftmost edge",
-            Characteristic::PegHoleVerticalDistanceFromPackageTop => "Peg hole vertical distance from package top",
+            Characteristic::PegHoleHorizontalDistanceFromPackageLeftmostEdge => {
+                "Peg hole horizontal distance from package leftmost edge"
+            }
+            Characteristic::PegHoleVerticalDistanceFromPackageTop => {
+                "Peg hole vertical distance from package top"
+            }
             Characteristic::NumberLayersPerPallet => "Number of layers per pallet",
             Characteristic::ProductStrenghChemical => "Product strengh, chemical",
             Characteristic::ProductStrengthBasisChemical => "Product strength basis, chemical",
@@ -2240,8 +2246,12 @@ impl crate::Description for Characteristic {
             Characteristic::PayloadWeightMaximum => "Payload weight, maximum",
             Characteristic::WeightConveyance => "Weight of conveyance",
             Characteristic::ConveyanceSummerDeadWeight => "Conveyance summer dead weight",
-            Characteristic::ContainerizedCargoOnVesselsWeight => "Containerized cargo on vessel's weight",
-            Characteristic::NonContainerizedCargoOnVesselsWeight => "Non-containerized cargo on vessel's weight",
+            Characteristic::ContainerizedCargoOnVesselsWeight => {
+                "Containerized cargo on vessel's weight"
+            }
+            Characteristic::NonContainerizedCargoOnVesselsWeight => {
+                "Non-containerized cargo on vessel's weight"
+            }
             Characteristic::AscertainedWeight => "Ascertained weight",
             Characteristic::ChargeableWeight => "Chargeable weight",
             Characteristic::EstimatedGrossWeight => "Estimated gross weight",
@@ -2256,8 +2266,12 @@ impl crate::Description for Characteristic {
             Characteristic::EndPositionInWidth => "End position in the width",
             Characteristic::StartPositionInThickness => "Start position in the thickness",
             Characteristic::EndPositionInThickness => "End position in the thickness",
-            Characteristic::TransportContainerActualFillingWeight => "Transport container actual filling weight",
-            Characteristic::TransportContainerMaximumCapacity => "Transport container maximum capacity",
+            Characteristic::TransportContainerActualFillingWeight => {
+                "Transport container actual filling weight"
+            }
+            Characteristic::TransportContainerMaximumCapacity => {
+                "Transport container maximum capacity"
+            }
             Characteristic::DeclaredNetWeight => "Declared net weight",
             Characteristic::LoadingHeight => "Loading height",
             Characteristic::StackingHeight => "Stacking height",
@@ -2279,7 +2293,9 @@ impl crate::Description for Characteristic {
             Characteristic::AfterDraft => "After draft",
             Characteristic::Acidity => "Acidity",
             Characteristic::TransportEquipmentGrossWeight => "Transport equipment gross weight",
-            Characteristic::TotalTransportEquipmentGrossWeight => "Total transport equipment gross weight",
+            Characteristic::TotalTransportEquipmentGrossWeight => {
+                "Total transport equipment gross weight"
+            }
             Characteristic::AcidityJuice => "Acidity of juice",
             Characteristic::Penetrometry => "Penetrometry",
             Characteristic::Durofel => "Durofel",
@@ -2292,19 +2308,31 @@ impl crate::Description for Characteristic {
             Characteristic::DurofelD50 => "Durofel D50",
             Characteristic::MaximumStackingWeight => "Maximum stacking weight",
             Characteristic::GrossMeasureCube => "Gross measure cube",
-            Characteristic::PercentageFatContentInDryMatter => "Percentage fat content in dry matter",
+            Characteristic::PercentageFatContentInDryMatter => {
+                "Percentage fat content in dry matter"
+            }
             Characteristic::SaccharometricContent => "Saccharometric content",
-            Characteristic::HydrateContentAnAlcoholicProductAfterBottling => "Hydrate content of an alcoholic product after bottling",
+            Characteristic::HydrateContentAnAlcoholicProductAfterBottling => {
+                "Hydrate content of an alcoholic product after bottling"
+            }
             Characteristic::AnhydrousContent => "Anhydrous content",
             Characteristic::CertifiedWeight => "Certified weight",
             Characteristic::Freeboard => "Freeboard",
             Characteristic::MaximumVesselDraught => "Maximum vessel draught",
             Characteristic::NetExplosiveWeight => "Net explosive weight",
-            Characteristic::RadioactiveCriticalitySafetyIndex => "Radioactive criticality safety index",
+            Characteristic::RadioactiveCriticalitySafetyIndex => {
+                "Radioactive criticality safety index"
+            }
             Characteristic::WasteCurrentlyOnBoard => "Waste currently on board",
-            Characteristic::WasteToBeDeliveredAtWasteReceptionFacility => "Waste to be delivered at waste reception facility",
-            Characteristic::WasteToBeGeneratedUntilNextPortCallEstimated => "Waste to be generated until next port of call, estimated",
-            Characteristic::WasteRemainingOnBoardAtDeparture => "Waste remaining on board at departure",
+            Characteristic::WasteToBeDeliveredAtWasteReceptionFacility => {
+                "Waste to be delivered at waste reception facility"
+            }
+            Characteristic::WasteToBeGeneratedUntilNextPortCallEstimated => {
+                "Waste to be generated until next port of call, estimated"
+            }
+            Characteristic::WasteRemainingOnBoardAtDeparture => {
+                "Waste remaining on board at departure"
+            }
             Characteristic::ColourDepth => "Colour depth",
             Characteristic::ColourDepthMaximum => "Colour depth, maximum",
             Characteristic::ImageResolution => "Image resolution",
@@ -2318,12 +2346,16 @@ impl crate::Description for Characteristic {
             Characteristic::Trim => "Trim",
             Characteristic::FreeWater => "Free water",
             Characteristic::Bands => "Bands",
-            Characteristic::ApiAmericanPetroleumInstituteGravity => "API (American Petroleum Institute) gravity",
+            Characteristic::ApiAmericanPetroleumInstituteGravity => {
+                "API (American Petroleum Institute) gravity"
+            }
             Characteristic::PetroleumGrossObservedVolume => "Petroleum gross observed volume",
             Characteristic::PetroleumGrossStandardVolume => "Petroleum gross standard volume",
             Characteristic::VolumeVariance => "Volume variance",
             Characteristic::PetroleumNetStandardVolume => "Petroleum net standard volume",
-            Characteristic::MaterialOnBoardQuantityAfterDischarge => "Material on-board quantity, after discharge",
+            Characteristic::MaterialOnBoardQuantityAfterDischarge => {
+                "Material on-board quantity, after discharge"
+            }
             Characteristic::PetroleumTotalCalculatedVolume => "Petroleum total calculated volume",
             Characteristic::PetroleumTotalObservedVolume => "Petroleum total observed volume",
             Characteristic::InnageGaugeDistance => "Innage gauge distance",
@@ -2336,14 +2368,24 @@ impl crate::Description for Characteristic {
             Characteristic::BowToBridgeDistance => "Bow to bridge distance",
             Characteristic::PegHoleNumber => "Peg hole number",
             Characteristic::NumberInnerPacks => "Number of inner packs",
-            Characteristic::NumberNextLevelTradeItemsWithinInnerPack => "Number of next level trade items within inner pack",
-            Characteristic::NumberTradeItemsPerPalletLayer => "Number of trade items per pallet layer",
+            Characteristic::NumberNextLevelTradeItemsWithinInnerPack => {
+                "Number of next level trade items within inner pack"
+            }
+            Characteristic::NumberTradeItemsPerPalletLayer => {
+                "Number of trade items per pallet layer"
+            }
             Characteristic::PackedItemsLayerHeight => "Packed items layer height",
-            Characteristic::PackingMaterialWeightSkinTightCovering => "Packing material weight, skin tight covering",
+            Characteristic::PackingMaterialWeightSkinTightCovering => {
+                "Packing material weight, skin tight covering"
+            }
             Characteristic::Brightness => "Brightness",
             Characteristic::Brakes => "Brakes",
-            Characteristic::ComponentsLabelledForRecyclingPercentage => "Components labelled for recycling percentage",
-            Characteristic::RenewablePlasticComponentsPercentageByNetWeight => "Renewable plastic components percentage, by net weight",
+            Characteristic::ComponentsLabelledForRecyclingPercentage => {
+                "Components labelled for recycling percentage"
+            }
+            Characteristic::RenewablePlasticComponentsPercentageByNetWeight => {
+                "Renewable plastic components percentage, by net weight"
+            }
             Characteristic::ClampPressureRequired => "Clamp pressure, required",
             Characteristic::Break => "Break",
             Characteristic::AscertainedVolume => "Ascertained volume",
@@ -2351,7 +2393,9 @@ impl crate::Description for Characteristic {
             Characteristic::TotalVolume => "Total volume",
             Characteristic::UnitVolume => "Unit volume",
             Characteristic::VerticalCenterGravity => "Vertical center of gravity",
-            Characteristic::MaximumAllowableTransportStackingWeight => "Maximum allowable transport stacking weight",
+            Characteristic::MaximumAllowableTransportStackingWeight => {
+                "Maximum allowable transport stacking weight"
+            }
             Characteristic::CarbonDioxide => "Carbon Dioxide",
             Characteristic::NumberBaseUnitsPerPallet => "Number of base units per pallet",
             Characteristic::ColonyFormingUnit => "Colony forming unit",
@@ -2362,7 +2406,9 @@ impl crate::Description for Characteristic {
             Characteristic::NumberPalletPlaces => "Number of pallet places",
             Characteristic::PackageNetMeasurementCubed => "Package net measurement, cubed",
             Characteristic::PowerFactor => "Power factor",
-            Characteristic::StackingFactorExcludingBottomItem => "Stacking factor excluding bottom item",
+            Characteristic::StackingFactorExcludingBottomItem => {
+                "Stacking factor excluding bottom item"
+            }
             Characteristic::BreakingStrength => "Breaking strength",
             Characteristic::BreakingStrengthWet => "Breaking strength wet",
             Characteristic::StepSize => "Step size",
@@ -2372,14 +2418,22 @@ impl crate::Description for Characteristic {
             Characteristic::WeightPerSquareMetre => "Weight per square metre",
             Characteristic::AcidityMeat => "Acidity of meat",
             Characteristic::SlaughteringWeight => "Slaughtering weight",
-            Characteristic::StackingFactorIncludingBottomItem => "Stacking factor including bottom item",
+            Characteristic::StackingFactorIncludingBottomItem => {
+                "Stacking factor including bottom item"
+            }
             Characteristic::NumberUnitsInWidthALayer => "Number of units in the width of a layer",
             Characteristic::NumberUnitsInDepthALayer => "Number of units in the depth of a layer",
             Characteristic::NestablePercentage => "Nestable percentage",
-            Characteristic::GrossWeightIncludingCarriersEquipment => "Gross weight including carrier's equipment",
+            Characteristic::GrossWeightIncludingCarriersEquipment => {
+                "Gross weight including carrier's equipment"
+            }
             Characteristic::SugarContent => "Sugar content",
-            Characteristic::SelfAcceleratingPolymerizationTemperatureSapt => "Self-accelerating polymerization temperature (SAPT)",
-            Characteristic::SelfAcceleratingDecompositionTemperatureSadt => "Self-accelerating decomposition temperature (SADT)",
+            Characteristic::SelfAcceleratingPolymerizationTemperatureSapt => {
+                "Self-accelerating polymerization temperature (SAPT)"
+            }
+            Characteristic::SelfAcceleratingDecompositionTemperatureSadt => {
+                "Self-accelerating decomposition temperature (SADT)"
+            }
             Characteristic::ControlTemperature => "Control temperature",
             Characteristic::BasisWeight => "Basis weight",
             Characteristic::Change => "Change",
@@ -2434,14 +2488,18 @@ impl crate::Description for Characteristic {
             Characteristic::Thickness => "Thickness",
             Characteristic::TimePeriod => "Time period",
             Characteristic::Time => "Time",
-            Characteristic::TransportEquipmentVerifiedGrossMassWeight => "Transport equipment verified gross mass (weight)",
+            Characteristic::TransportEquipmentVerifiedGrossMassWeight => {
+                "Transport equipment verified gross mass (weight)"
+            }
             Characteristic::HeightVanDoor => "Height, van door",
             Characteristic::WidthVanDoor => "Width, van door",
             Characteristic::WeightPerUnitArea => "Weight per unit of area",
             Characteristic::WidthDimension => "Width dimension",
             Characteristic::WidthMaximum => "Width, maximum",
             Characteristic::WeightPerUnitLength => "Weight per unit of length",
-            Characteristic::SideHeightFlatBedWithRemovableSides => "Side height, flat bed with removable sides",
+            Characteristic::SideHeightFlatBedWithRemovableSides => {
+                "Side height, flat bed with removable sides"
+            }
             Characteristic::Squareness => "Squareness",
             Characteristic::SpoolSize => "Spool size",
             Characteristic::YieldStress => "Yield stress",
@@ -2497,8 +2555,12 @@ impl crate::Description for Characteristic {
             Characteristic::FeeIndicator => "Fee indicator",
             Characteristic::TypeArticle => "Type of article",
             Characteristic::MaterialProduct => "Material of the product",
-            Characteristic::MeteringPointDesignationEGForElectricityOrGas => "Metering point designation, e.g. for electricity or gas",
-            Characteristic::MeterNumberEGForElectricityOrGas => "Meter number, e.g. for electricity or gas",
+            Characteristic::MeteringPointDesignationEGForElectricityOrGas => {
+                "Metering point designation, e.g. for electricity or gas"
+            }
+            Characteristic::MeterNumberEGForElectricityOrGas => {
+                "Meter number, e.g. for electricity or gas"
+            }
             Characteristic::OrganicControlBodyNumber => "Organic control body number",
             Characteristic::PackagingMaterial => "Packaging material",
             Characteristic::TypePackagingCode => "Type of packaging (code)",
@@ -2517,7 +2579,7 @@ impl crate::Description for Characteristic {
 impl crate::FromCode for Characteristic {
     fn from_code(code: &str) -> Option<Self>
     where
-        Self: Sized
+        Self: Sized,
     {
         match code {
             "A" => Some(Characteristic::ConsolidatedWeight),

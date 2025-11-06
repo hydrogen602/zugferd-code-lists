@@ -54,18 +54,38 @@ impl crate::Description for INCOTERMS {
     fn description(&self) -> &str {
         match self {
             INCOTERMS::DeliveryArrangedBySupplier => "Delivery arranged by supplier",
-            INCOTERMS::DeliveryArrangedByLogisticServiceProvider => "Delivery arranged by logistic service provider",
+            INCOTERMS::DeliveryArrangedByLogisticServiceProvider => {
+                "Delivery arranged by logistic service provider"
+            }
             INCOTERMS::CostAndFreight => "Cost and Freight",
             INCOTERMS::CostInsuranceAndFreight => "Cost, Insurance and Freight",
-            INCOTERMS::CarriageAndInsurancePaidToInsertNamedPlaceDestination => "Carriage and Insurance Paid to (insert named place of destination)",
-            INCOTERMS::CarriagePaidToInsertNamedPlaceDestination => "Carriage Paid To (insert named place of destination)",
-            INCOTERMS::DeliveredAtPlaceInsertNamedPlaceDestination => "Delivered At Place (insert named place of destination)",
-            INCOTERMS::DeliveredDutyPaidInsertNamedPlaceDestination => "Delivered Duty Paid (insert named place of destination)",
-            INCOTERMS::DeliveredAtPlaceUnloadedInsertNamedPlaceUnloading => "Delivered At Place Unloaded (insert named place of unloading)",
-            INCOTERMS::ExWorksInsertNamedPlaceDelivery => "Ex Works (insert named place of delivery)",
-            INCOTERMS::FreeAlongsideShipInsertNamedPortShipment => "Free Alongside Ship (insert named port of shipment)",
-            INCOTERMS::FreeCarrierInsertNamedPlaceDelivery => "Free Carrier (insert named place of delivery)",
-            INCOTERMS::FreeOnBoardInsertNamedPortShipment => " Free On Board (insert named port of shipment)",
+            INCOTERMS::CarriageAndInsurancePaidToInsertNamedPlaceDestination => {
+                "Carriage and Insurance Paid to (insert named place of destination)"
+            }
+            INCOTERMS::CarriagePaidToInsertNamedPlaceDestination => {
+                "Carriage Paid To (insert named place of destination)"
+            }
+            INCOTERMS::DeliveredAtPlaceInsertNamedPlaceDestination => {
+                "Delivered At Place (insert named place of destination)"
+            }
+            INCOTERMS::DeliveredDutyPaidInsertNamedPlaceDestination => {
+                "Delivered Duty Paid (insert named place of destination)"
+            }
+            INCOTERMS::DeliveredAtPlaceUnloadedInsertNamedPlaceUnloading => {
+                "Delivered At Place Unloaded (insert named place of unloading)"
+            }
+            INCOTERMS::ExWorksInsertNamedPlaceDelivery => {
+                "Ex Works (insert named place of delivery)"
+            }
+            INCOTERMS::FreeAlongsideShipInsertNamedPortShipment => {
+                "Free Alongside Ship (insert named port of shipment)"
+            }
+            INCOTERMS::FreeCarrierInsertNamedPlaceDelivery => {
+                "Free Carrier (insert named place of delivery)"
+            }
+            INCOTERMS::FreeOnBoardInsertNamedPortShipment => {
+                " Free On Board (insert named port of shipment)"
+            }
         }
     }
 }
@@ -73,7 +93,7 @@ impl crate::Description for INCOTERMS {
 impl crate::FromCode for INCOTERMS {
     fn from_code(code: &str) -> Option<Self>
     where
-        Self: Sized
+        Self: Sized,
     {
         match code {
             "1" => Some(INCOTERMS::DeliveryArrangedBySupplier),

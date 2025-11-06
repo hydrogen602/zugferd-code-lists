@@ -92,23 +92,23 @@ pub enum VATEX {
     ExemptBasedOnArticle148SectionGCouncilDirective2006112Ec,
     /// Exempt based on article 151 of Council Directive 2006/112/EC
     ExemptBasedOnArticle151CouncilDirective2006112Ec,
-    /// Exempt based on article 151, section 1 (a) of Council Directive 2006/112/EC 
+    /// Exempt based on article 151, section 1 (a) of Council Directive 2006/112/EC
     ExemptBasedOnArticle151Section1ACouncilDirective2006112Ec,
-    /// Exempt based on article 151, section 1 (aa) of Council Directive 2006/112/EC 
+    /// Exempt based on article 151, section 1 (aa) of Council Directive 2006/112/EC
     ExemptBasedOnArticle151Section1AaCouncilDirective2006112Ec,
-    /// Exempt based on article 151, section 1 (b) of Council Directive 2006/112/EC 
+    /// Exempt based on article 151, section 1 (b) of Council Directive 2006/112/EC
     ExemptBasedOnArticle151Section1BCouncilDirective2006112Ec,
-    /// Exempt based on article 151, section 1 (c) of Council Directive 2006/112/EC 
+    /// Exempt based on article 151, section 1 (c) of Council Directive 2006/112/EC
     ExemptBasedOnArticle151Section1CCouncilDirective2006112Ec,
-    /// Exempt based on article 151, section 1 (d) of Council Directive 2006/112/EC 
+    /// Exempt based on article 151, section 1 (d) of Council Directive 2006/112/EC
     ExemptBasedOnArticle151Section1DCouncilDirective2006112Ec,
-    /// Exempt based on article 151, section 1 (e) of Council Directive 2006/112/EC 
+    /// Exempt based on article 151, section 1 (e) of Council Directive 2006/112/EC
     ExemptBasedOnArticle151Section1ECouncilDirective2006112Ec,
     /// Exempt based on article 153 of Council Directive 2006/112/EC
     ExemptBasedOnArticle153CouncilDirective2006112Ec,
     /// Exempt based on article 159 of Council Directive 2006/112/EC
     ExemptBasedOnArticle159CouncilDirective2006112Ec,
-    /// Exempt based on article 309 of Council Directive 2006/112/EC 
+    /// Exempt based on article 309 of Council Directive 2006/112/EC
     ExemptBasedOnArticle309CouncilDirective2006112Ec,
     /// Reverse charge
     ///
@@ -166,7 +166,7 @@ pub enum VATEX {
     ///
     /// Only for domestic invoicing in France
     ExemptBasedOn4Article261CodeGénéralDesImpôtsCgiGeneralTaxCode,
-    /// Exempt based on 5 of article 261 of the Code Général des Impôts (CGI ; General tax code) 
+    /// Exempt based on 5 of article 261 of the Code Général des Impôts (CGI ; General tax code)
     ///
     /// Only for domestic invoicing in France
     ExemptBasedOn5Article261CodeGénéralDesImpôtsCgiGeneralTaxCode,
@@ -210,7 +210,7 @@ pub enum VATEX {
     ///
     /// Only for domestic invoicing in France
     ExemptBasedOn2Article261DCodeGénéralDesImpôtsCgiGeneralTaxCode,
-    /// Exempt based on 3° of article 261 D of the Code Général des Impôts (CGI ; General tax code) Exonération de TVA - Article 261 D-3° du Code Général des Impôts 
+    /// Exempt based on 3° of article 261 D of the Code Général des Impôts (CGI ; General tax code) Exonération de TVA - Article 261 D-3° du Code Général des Impôts
     ///
     /// Only for domestic invoicing in France
     ExemptBasedOn3Article261DCodeGénéralDesImpôtsCgiGeneralTaxCodeExonérationDeTvaArticle261D3DuCodeGénéralDesImpôts,
@@ -439,7 +439,7 @@ impl crate::Description for VATEX {
 impl crate::FromCode for VATEX {
     fn from_code(code: &str) -> Option<Self>
     where
-        Self: Sized
+        Self: Sized,
     {
         match code {
             "VATEX-EU-79-C" => Some(VATEX::ExemptBasedOnArticle79PointCCouncilDirective2006112Ec),

@@ -81,7 +81,7 @@ impl crate::Description for TRANSPORT {
 impl crate::FromCode for TRANSPORT {
     fn from_code(code: &str) -> Option<Self>
     where
-        Self: Sized
+        Self: Sized,
     {
         match code {
             "0" => Some(TRANSPORT::TransportModeNotSpecified),

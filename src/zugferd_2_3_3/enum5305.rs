@@ -55,11 +55,15 @@ impl crate::Description for Enum5305 {
             Enum5305::ZeroRatedGoods => "Zero rated goods",
             Enum5305::ExemptFromTax => "Exempt from tax",
             Enum5305::VatReverseCharge => "VAT Reverse charge",
-            Enum5305::VatExemptForEeaIntraCommunitySupplyGoodsAndServices => "VAT exempt for EEA intra-community supply of goods and services",
+            Enum5305::VatExemptForEeaIntraCommunitySupplyGoodsAndServices => {
+                "VAT exempt for EEA intra-community supply of goods and services"
+            }
             Enum5305::FreeExportItemTaxNotCharged => "Free export item, tax not charged",
             Enum5305::ServiceOutsideScopeTax => "Service outside scope of tax",
             Enum5305::CanaryIslandsGeneralIndirectTax => "Canary Islands general indirect tax",
-            Enum5305::TaxForProductionServicesAndImportationInCeutaAndMelilla => "Tax for production, services and importation in Ceuta and Melilla",
+            Enum5305::TaxForProductionServicesAndImportationInCeutaAndMelilla => {
+                "Tax for production, services and importation in Ceuta and Melilla"
+            }
         }
     }
 }
@@ -67,7 +71,7 @@ impl crate::Description for Enum5305 {
 impl crate::FromCode for Enum5305 {
     fn from_code(code: &str) -> Option<Self>
     where
-        Self: Sized
+        Self: Sized,
     {
         match code {
             "S" => Some(Enum5305::StandardRate),

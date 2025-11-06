@@ -33,7 +33,7 @@ impl crate::Description for Date {
 impl crate::FromCode for Date {
     fn from_code(code: &str) -> Option<Self>
     where
-        Self: Sized
+        Self: Sized,
     {
         match code {
             "102" => Some(Date::Ccyymmdd),

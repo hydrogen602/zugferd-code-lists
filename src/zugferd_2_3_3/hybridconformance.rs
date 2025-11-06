@@ -55,13 +55,27 @@ impl crate::Code for HybridConformance {
 impl crate::Description for HybridConformance {
     fn description(&self) -> &str {
         match self {
-            HybridConformance::TheIncludedDocumentUsesAMinimumProfile => "The included document uses a MINIMUM profile",
-            HybridConformance::TheIncludedDocumentUsesABasicWithoutLinesProfile => "The included document uses a Basic Without Lines profile",
-            HybridConformance::TheIncludedDocumentUsesABasicProfile => "The included document uses a Basic profile",
-            HybridConformance::TheIncludedDocumentUsesAComfortProfile => "The included document uses a Comfort profile",
-            HybridConformance::TheIncludedDocumentUsesAEn16931Profile => "The included document uses a EN 16931 profile",
-            HybridConformance::TheIncludedDocumentUsesAComfortProfile_Dup => "The included document uses a Comfort profile",
-            HybridConformance::TheIncludedDocumentUsesAnXrechnungProfile => "The included document uses an XRECHNUNG profile",
+            HybridConformance::TheIncludedDocumentUsesAMinimumProfile => {
+                "The included document uses a MINIMUM profile"
+            }
+            HybridConformance::TheIncludedDocumentUsesABasicWithoutLinesProfile => {
+                "The included document uses a Basic Without Lines profile"
+            }
+            HybridConformance::TheIncludedDocumentUsesABasicProfile => {
+                "The included document uses a Basic profile"
+            }
+            HybridConformance::TheIncludedDocumentUsesAComfortProfile => {
+                "The included document uses a Comfort profile"
+            }
+            HybridConformance::TheIncludedDocumentUsesAEn16931Profile => {
+                "The included document uses a EN 16931 profile"
+            }
+            HybridConformance::TheIncludedDocumentUsesAComfortProfile_Dup => {
+                "The included document uses a Comfort profile"
+            }
+            HybridConformance::TheIncludedDocumentUsesAnXrechnungProfile => {
+                "The included document uses an XRECHNUNG profile"
+            }
         }
     }
 }
@@ -69,7 +83,7 @@ impl crate::Description for HybridConformance {
 impl crate::FromCode for HybridConformance {
     fn from_code(code: &str) -> Option<Self>
     where
-        Self: Sized
+        Self: Sized,
     {
         match code {
             "MINIMUM" => Some(HybridConformance::TheIncludedDocumentUsesAMinimumProfile),

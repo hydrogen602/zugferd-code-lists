@@ -33,7 +33,7 @@ impl crate::Description for LineReason {
 impl crate::FromCode for LineReason {
     fn from_code(code: &str) -> Option<Self>
     where
-        Self: Sized
+        Self: Sized,
     {
         match code {
             "DETAIL" => Some(LineReason::RegularItemPositionStandardCase),

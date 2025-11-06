@@ -843,7 +843,9 @@ impl crate::Description for Country {
             Country::FaroeIslands => "Faroe Islands (the)",
             Country::France => "France",
             Country::Gabon => "Gabon",
-            Country::UnitedKingdomGreatBritainAndNorthernIreland => "United Kingdom of Great Britain and Northern Ireland (the)",
+            Country::UnitedKingdomGreatBritainAndNorthernIreland => {
+                "United Kingdom of Great Britain and Northern Ireland (the)"
+            }
             Country::Grenada => "Grenada",
             Country::Georgia => "Georgia",
             Country::FrenchGuiana => "French Guiana",
@@ -856,7 +858,9 @@ impl crate::Description for Country {
             Country::Guadeloupe => "Guadeloupe",
             Country::EquatorialGuinea => "Equatorial Guinea",
             Country::Greece => "Greece",
-            Country::SouthGeorgiaAndSouthSandwichIslands => "South Georgia and the South Sandwich Islands",
+            Country::SouthGeorgiaAndSouthSandwichIslands => {
+                "South Georgia and the South Sandwich Islands"
+            }
             Country::Guatemala => "Guatemala",
             Country::Guam => "Guam",
             Country::GuineaBissau => "Guinea-Bissau",
@@ -887,7 +891,9 @@ impl crate::Description for Country {
             Country::Kiribati => "Kiribati",
             Country::Comoros => "Comoros (the)",
             Country::SaintKittsAndNevis => "Saint Kitts and Nevis",
-            Country::KoreaDemocraticPeoplesRepublic => "Korea (the Democratic People's Republic of)",
+            Country::KoreaDemocraticPeoplesRepublic => {
+                "Korea (the Democratic People's Republic of)"
+            }
             Country::KoreaRepublic => "Korea (the Republic of)",
             Country::Kuwait => "Kuwait",
             Country::CaymanIslands => "Cayman Islands (the)",
@@ -965,7 +971,9 @@ impl crate::Description for Country {
             Country::Sudan => "Sudan (the)",
             Country::Sweden => "Sweden",
             Country::Singapore => "Singapore",
-            Country::SaintHelenaAscensionAndTristanDaCunha => "Saint Helena, Ascension and Tristan da Cunha",
+            Country::SaintHelenaAscensionAndTristanDaCunha => {
+                "Saint Helena, Ascension and Tristan da Cunha"
+            }
             Country::Slovenia => "Slovenia",
             Country::SvalbardAndJanMayen => "Svalbard and Jan Mayen",
             Country::Slovakia => "Slovakia",
@@ -998,7 +1006,9 @@ impl crate::Description for Country {
             Country::TanzaniaUnitedRepublic => "Tanzania, the United Republic of",
             Country::Ukraine => "Ukraine",
             Country::Uganda => "Uganda",
-            Country::UnitedStatesMinorOutlyingIslands => "United States Minor Outlying Islands (the)",
+            Country::UnitedStatesMinorOutlyingIslands => {
+                "United States Minor Outlying Islands (the)"
+            }
             Country::UnitedStatesAmerica => "United States of America (the)",
             Country::Uruguay => "Uruguay",
             Country::Uzbekistan => "Uzbekistan",
@@ -1025,7 +1035,7 @@ impl crate::Description for Country {
 impl crate::FromCode for Country {
     fn from_code(code: &str) -> Option<Self>
     where
-        Self: Sized
+        Self: Sized,
     {
         match code {
             "AD" => Some(Country::Andorra),

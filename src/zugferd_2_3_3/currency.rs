@@ -150,7 +150,7 @@ pub enum Currency {
     Som,
     /// Riel
     Riel,
-    /// Comorian Franc 
+    /// Comorian Franc
     ComorianFranc,
     /// North Korean Won
     NorthKoreanWon,
@@ -708,10 +708,18 @@ impl crate::Description for Currency {
             Currency::CfaFrancBeac => "CFA Franc BEAC",
             Currency::Silver => "Silver",
             Currency::Gold => "Gold",
-            Currency::BondMarketsUnitEuropeanCompositeUnitEurco => "Bond Markets Unit European Composite Unit (EURCO)",
-            Currency::BondMarketsUnitEuropeanMonetaryUnitEMU6 => "Bond Markets Unit European Monetary Unit (E.M.U.-6)",
-            Currency::BondMarketsUnitEuropeanUnitAccount9EUA9 => "Bond Markets Unit European Unit of Account 9 (E.U.A.-9)",
-            Currency::BondMarketsUnitEuropeanUnitAccount17EUA17 => "Bond Markets Unit European Unit of Account 17 (E.U.A.-17)",
+            Currency::BondMarketsUnitEuropeanCompositeUnitEurco => {
+                "Bond Markets Unit European Composite Unit (EURCO)"
+            }
+            Currency::BondMarketsUnitEuropeanMonetaryUnitEMU6 => {
+                "Bond Markets Unit European Monetary Unit (E.M.U.-6)"
+            }
+            Currency::BondMarketsUnitEuropeanUnitAccount9EUA9 => {
+                "Bond Markets Unit European Unit of Account 9 (E.U.A.-9)"
+            }
+            Currency::BondMarketsUnitEuropeanUnitAccount17EUA17 => {
+                "Bond Markets Unit European Unit of Account 17 (E.U.A.-17)"
+            }
             Currency::EastCaribbeanDollar => "East Caribbean Dollar",
             Currency::SdrSpecialDrawingRight => "SDR (Special Drawing Right)",
             Currency::CfaFrancBceao => "CFA Franc BCEAO",
@@ -719,9 +727,13 @@ impl crate::Description for Currency {
             Currency::CfpFranc => "CFP Franc",
             Currency::Platinum => "Platinum",
             Currency::Sucre => "Sucre",
-            Currency::CodesSpecificallyReservedForTestingPurposes => "Codes specifically reserved for testing purposes",
+            Currency::CodesSpecificallyReservedForTestingPurposes => {
+                "Codes specifically reserved for testing purposes"
+            }
             Currency::AdbUnitAccount => "ADB Unit of Account",
-            Currency::TheCodesAssignedForTransactionsWhereNoCurrencyIsInvolved => "The codes assigned for transactions where no currency is involved",
+            Currency::TheCodesAssignedForTransactionsWhereNoCurrencyIsInvolved => {
+                "The codes assigned for transactions where no currency is involved"
+            }
             Currency::YemeniRial => "Yemeni Rial",
             Currency::Rand => "Rand",
             Currency::ZambianKwacha => "Zambian Kwacha",
@@ -733,7 +745,7 @@ impl crate::Description for Currency {
 impl crate::FromCode for Currency {
     fn from_code(code: &str) -> Option<Self>
     where
-        Self: Sized
+        Self: Sized,
     {
         match code {
             "AED" => Some(Currency::UaeDirham),

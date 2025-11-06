@@ -588,7 +588,9 @@ impl crate::Description for Charge {
             Charge::Transfer => "Transfer",
             Charge::Slipsheet => "Slipsheet",
             Charge::Binding => "Binding",
-            Charge::RepairOrReplacementBrokenReturnablePackage => "Repair or replacement of broken returnable package",
+            Charge::RepairOrReplacementBrokenReturnablePackage => {
+                "Repair or replacement of broken returnable package"
+            }
             Charge::EfficientLogistics => "Efficient logistics",
             Charge::Merchandising => "Merchandising",
             Charge::ProductMix => "Product mix",
@@ -616,9 +618,15 @@ impl crate::Description for Charge {
             Charge::MedicineFreePassHolder => "Medicine free pass holder",
             Charge::EnvironmentalProtectionService => "Environmental protection service",
             Charge::EnvironmentalCleanUpService => "Environmental clean-up service",
-            Charge::NationalChequeProcessingServiceOutsideAccountArea => "National cheque processing service outside account area",
-            Charge::NationalPaymentServiceOutsideAccountArea => "National payment service outside account area",
-            Charge::NationalPaymentServiceWithinAccountArea => "National payment service within account area",
+            Charge::NationalChequeProcessingServiceOutsideAccountArea => {
+                "National cheque processing service outside account area"
+            }
+            Charge::NationalPaymentServiceOutsideAccountArea => {
+                "National payment service outside account area"
+            }
+            Charge::NationalPaymentServiceWithinAccountArea => {
+                "National payment service within account area"
+            }
             Charge::Adjustments => "Adjustments",
             Charge::Authentication => "Authentication",
             Charge::Cataloguing => "Cataloguing",
@@ -662,7 +670,9 @@ impl crate::Description for Charge {
             Charge::MinimumOrderNotFulfilledCharge => "Minimum order not fulfilled charge",
             Charge::PointSalesThresholdAllowance => "Point of sales threshold allowance",
             Charge::WholesalingDiscount => "Wholesaling discount",
-            Charge::DocumentaryCreditsTransferCommission => "Documentary credits transfer commission",
+            Charge::DocumentaryCreditsTransferCommission => {
+                "Documentary credits transfer commission"
+            }
             Charge::Delivery => "Delivery",
             Charge::Engraving => "Engraving",
             Charge::Expediting => "Expediting",
@@ -733,7 +743,7 @@ impl crate::Description for Charge {
 impl crate::FromCode for Charge {
     fn from_code(code: &str) -> Option<Self>
     where
-        Self: Sized
+        Self: Sized,
     {
         match code {
             "AA" => Some(Charge::Advertising),

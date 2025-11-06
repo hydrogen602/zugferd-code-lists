@@ -97,7 +97,7 @@ impl crate::Description for Allowance {
 impl crate::FromCode for Allowance {
     fn from_code(code: &str) -> Option<Self>
     where
-        Self: Sized
+        Self: Sized,
     {
         match code {
             "41" => Some(Allowance::BonusForWorksAheadSchedule),
