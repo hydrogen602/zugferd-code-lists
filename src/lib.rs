@@ -1,4 +1,5 @@
 pub mod zugferd_2_3_2;
+pub mod zugferd_2_3_3;
 
 pub trait Code {
     fn code(&self) -> &str;
@@ -18,5 +19,8 @@ pub trait FromCode {
 mod test {
     // check that pub rules are correctly applied
     #[allow(unused_imports)]
-    use crate::zugferd_2_3_2::Country::Germany;
+    use crate::zugferd_2_3_2::Country::Germany as Germany232;
+
+    #[allow(unused_imports)]
+    use crate::zugferd_2_3_3::Country::Germany as Germany233;
 }
