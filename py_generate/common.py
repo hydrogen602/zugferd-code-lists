@@ -1,19 +1,12 @@
 # load a .env file
 from dataclasses import dataclass
-from os import getenv
+from enum import Enum
 from dotenv import load_dotenv
 from pathlib import Path
 
 import pandas as pd
 
 load_dotenv()
-
-
-def _get_path(var_name: str) -> Path:
-    value = getenv(var_name)
-    if value is None:
-        raise ValueError(f"Environment variable {var_name} is not set")
-    return Path(value.strip())
 
 
 @dataclass
@@ -23,30 +16,50 @@ class VersionInfo:
     src_dir: Path
 
 
-ZF_232 = VersionInfo(
-    version="2.3.2",
-    spec_dir=Path("spec/zugferd_2_3_2"),
-    src_dir=Path("src/zugferd_2_3_2"),
-)
+class Version(str, Enum):
+    ZF_232 = "2.3.2"
+    ZF_233 = "2.3.3"
+
+    def version_info(self) -> VersionInfo:
+        with_underscore = self.value.replace(".", "_")
+
+        if self == Version.ZF_232:
+            return VersionInfo(
+                version=self.value,
+                spec_dir=Path(f"spec/zugferd_{with_underscore}"),
+                src_dir=Path(f"src/zugferd_{with_underscore}"),
+            )
+        elif self == Version.ZF_233:
+            return VersionInfo(
+                version=self.value,
+                spec_dir=Path(f"spec/zugferd_{with_underscore}"),
+                src_dir=Path(f"src/zugferd_{with_underscore}"),
+            )
+        else:
+            raise ValueError(f"Unknown version: {self}")
+
 
 TS_DIR = Path("ts")
 
-EXCEL_FILE = "4. EN16931+FacturX code lists values v14 - used from 2024-11-15.xlsx"
+
+def _find_excel_file(version: VersionInfo) -> Path:
+    files = list(version.spec_dir.glob("*.xlsx"))
+    if len(files) == 0:
+        raise FileNotFoundError(f"No Excel files found in {version.spec_dir}")
+    elif len(files) > 1:
+        raise FileNotFoundError(
+            f"Ambiguous: multiple excel files found in {version.spec_dir}"
+        )
+    return files[0]
 
 
 def load_all_sheets(version: VersionInfo) -> dict[str, pd.DataFrame]:
-    file_path = version.spec_dir / EXCEL_FILE
-    if not file_path.exists():
-        raise FileNotFoundError(f"File {file_path} not found")
-    all_sheets = pd.read_excel(file_path, sheet_name=None)
-
-    return all_sheets
+    file_path = _find_excel_file(version)
+    return pd.read_excel(file_path, sheet_name=None)
 
 
 def load_sheet(sheet: str, version: VersionInfo, header_idx: int) -> pd.DataFrame:
-    file_path = version.spec_dir / EXCEL_FILE
-    if not file_path.exists():
-        raise FileNotFoundError(f"File {file_path} not found")
+    file_path = _find_excel_file(version)
     return pd.read_excel(file_path, sheet_name=sheet, dtype=str, header=header_idx)
 
 

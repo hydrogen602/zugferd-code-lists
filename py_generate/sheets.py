@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from py_generate.common import ZF_232, VersionInfo, load_sheet
+from py_generate.common import VersionInfo, load_sheet
 from py_generate.templates import (
     EnumValue,
     convert_to_identifier,
@@ -8,7 +8,7 @@ from py_generate.templates import (
 )
 
 
-def run_all(version: VersionInfo = ZF_232):
+def run_all(version: VersionInfo):
     reset_mod_rs(version)
 
     for basic_info in ALL_BASIC:

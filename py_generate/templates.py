@@ -41,7 +41,7 @@ def convert_to_identifier(name: str) -> str:
 class EnumValue:
     rust_identifier: str
     description: str
-    code: string
+    code: str
     extras: list[str] | None = None
 
     def gen_enum_value_definition(self, ts_rs: Literal["ts", "rs"] = "rs") -> str:
