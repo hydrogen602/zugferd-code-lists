@@ -10,3 +10,10 @@ keywords = ["ZUGFeRD", "code-lists", "Factur-X"]
 readme = "readme.md"
 
 exclude = ["requirements.txt", "py_generate/*", "generating.md", "ts/*"]
+
+[dependencies]
+iso_country = { version = "0.1.4", optional = true }
+iso_currency = { version = "0.5.3", optional = true }
+
+[features]
+all = ["iso_country", "iso_currency"]

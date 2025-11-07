@@ -1,6 +1,14 @@
 from dataclasses import dataclass, field
+from typing import Iterable
+from rich.progress import track
+
 from py_generate.common import Version, VersionInfo, load_sheet
-from py_generate.templates import (
+from py_generate.rendering import CodeGenerator
+from py_generate.rendering.gen_try_from import (
+    ISO_COUNTRY_TRY_FROM,
+    ISO_CURRENCY_TRY_FROM,
+)
+from py_generate.rendering.templates import (
     EnumValue,
     convert_to_identifier,
     generate,
@@ -11,7 +19,7 @@ from py_generate.templates import (
 def run_all(version: VersionInfo):
     reset_mod_rs(version)
 
-    for basic_info in ALL_BASIC:
+    for basic_info in track(ALL_BASIC, description=f"Generating v{version.version}"):
         if (
             basic_info.version_filter is not None
             and version.version not in basic_info.version_filter
@@ -28,6 +36,7 @@ def run_all(version: VersionInfo):
             rust_type=basic_info.rust_type,
             write_mod=True,
             header_idx=basic_info.header_index,
+            extra_generators=basic_info.extra_generators,
         )
 
 
@@ -41,6 +50,7 @@ def run_basic(
     rust_type: str | None = None,
     write_mod: bool = False,
     header_idx: int = 0,
+    extra_generators: Iterable[CodeGenerator] = (),
 ):
     if rust_type is None:
         rust_type = sheet_name
@@ -71,7 +81,14 @@ def run_basic(
         all_ids.add(e.rust_identifier)
         enum_values.append(e)
 
-    generate(rust_type, enum_values, version, file_name, write_mod)
+    generate(
+        rust_type,
+        enum_values,
+        version,
+        file_name,
+        write_mod,
+        extra_generators=extra_generators,
+    )
 
 
 @dataclass
@@ -84,6 +101,7 @@ class BasicInfo:
     rust_type: str | None = None
     header_index: int = 0
     version_filter: list[Version] | None = None
+    extra_generators: list[CodeGenerator] = field(default_factory=list)
 
 
 ALL_BASIC = [
@@ -91,11 +109,13 @@ ALL_BASIC = [
         sheet_name="Country",
         code_column=2,
         name_column=1,
+        extra_generators=[ISO_COUNTRY_TRY_FROM],
     ),
     BasicInfo(
         sheet_name="Currency",
         code_column=2,
         name_column=1,
+        extra_generators=[ISO_CURRENCY_TRY_FROM],
     ),
     BasicInfo(
         sheet_name="ICD",

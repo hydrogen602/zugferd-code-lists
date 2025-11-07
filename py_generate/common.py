@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 # load a .env file
 from dataclasses import dataclass
 from enum import Enum
@@ -5,6 +7,7 @@ from dotenv import load_dotenv
 from pathlib import Path
 
 import pandas as pd
+
 
 load_dotenv()
 
@@ -69,3 +72,20 @@ def load_sheet(sheet: str, version: VersionInfo, header_idx: int = 0) -> pd.Data
 class RS_TS[T]:
     rs: T
     ts: T
+
+    @classmethod
+    def combine(cls, rs: T, ts: T) -> RS_TS[T]:
+        return cls(rs=rs, ts=ts)
+
+
+@dataclass
+class RS[T]:
+    rs: T
+
+
+@dataclass
+class TS[T]:
+    ts: T
+
+
+type Code[T] = RS[T] | TS[T] | RS_TS[T]
