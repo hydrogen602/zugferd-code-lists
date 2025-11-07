@@ -638,7 +638,7 @@ export enum Country {
   /**
    * Namibia
    */
-  Namibia = "nan",
+  Namibia = "NA",
   /**
    * New Caledonia
    */

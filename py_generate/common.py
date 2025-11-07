@@ -55,12 +55,14 @@ def _find_excel_file(version: VersionInfo) -> Path:
 
 def load_all_sheets(version: VersionInfo) -> dict[str, pd.DataFrame]:
     file_path = _find_excel_file(version)
-    return pd.read_excel(file_path, sheet_name=None)
+    return pd.read_excel(file_path, sheet_name=None, keep_default_na=False)
 
 
 def load_sheet(sheet: str, version: VersionInfo, header_idx: int = 0) -> pd.DataFrame:
     file_path = _find_excel_file(version)
-    return pd.read_excel(file_path, sheet_name=sheet, dtype=str, header=header_idx)
+    return pd.read_excel(
+        file_path, sheet_name=sheet, dtype=str, header=header_idx, keep_default_na=False
+    )
 
 
 @dataclass

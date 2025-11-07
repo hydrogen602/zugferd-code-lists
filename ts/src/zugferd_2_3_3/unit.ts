@@ -9022,7 +9022,7 @@ export enum Unit {
    *
    * rec20
    */
-  MilligramPerKilogram = "nan",
+  MilligramPerKilogram = "NA",
   /**
    * number of articles
    *

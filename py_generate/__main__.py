@@ -1,5 +1,7 @@
 from typing import Annotated
 import typer
+import pandas as pd
+
 from py_generate.sheets import run_all
 from py_generate.common import load_all_sheets, Version, load_sheet
 
@@ -41,7 +43,8 @@ def get_sheet(version: Version, sheet: str, header_idx: int = 0):
         typer.echo(f"Sheet {sheet} not found")
         return
     sheet_df = load_sheet(sheet, v, header_idx)
-    typer.echo(sheet_df)
+    with pd.option_context("display.max_rows", None):
+        typer.echo(sheet_df)
 
 
 if __name__ == "__main__":

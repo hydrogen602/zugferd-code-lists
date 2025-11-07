@@ -2934,7 +2934,7 @@ export enum Enum1153 {
   /**
    *  North American hazardous goods classification number
    */
-  NorthAmericanHazardousGoodsClassificationNumber = "nan",
+  NorthAmericanHazardousGoodsClassificationNumber = "NA",
   /**
    *  Nota Fiscal
    */
