@@ -22,6 +22,8 @@ Versions supported:
   - Added `TryFrom` impls for conversion to and from the crates `iso_currency` and `iso_country`
   - Fixed bug where code `NA` would be rendered as `nan` in the generated code
   - Added `Fiscal ID` list (new in ZUGFeRD 2.3.3)
+- v0.1.12:
+  - Added `Debug`, `Display`, and `Error` traits for generated errors for `TryFrom` for `iso_currency` and `iso_country`
 
 # Future Plans
 

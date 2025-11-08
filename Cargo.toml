@@ -1,6 +1,6 @@
 [package]
 name = "zugferd-code-lists"
-version = "0.1.11"
+version = "0.1.12"
 edition = "2021"
 homepage = "https://github.com/hydrogen602/zugferd-code-lists"
 description = "ZUGFeRD code lists, e.g. languages enum, currencies enum, countries enum, etc."

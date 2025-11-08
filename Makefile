@@ -1,4 +1,13 @@
-gen: gen-rs gen-ts
+PY_CODE := $(shell find py_generate -name "*.py")
+SPEC := $(shell find spec -name "*.xlsx")
+
+DEPS := $(PY_CODE) Makefile $(SPEC)
+
+gen: build-marker
+
+build-marker: $(DEPS)
+	+$(MAKE) gen-rs gen-ts
+	touch build-marker
 
 npm-publish: gen
 	cd ts && pnpm publish
@@ -25,3 +34,7 @@ gen-ts: gen-only
 	cd ts && pnpm run build
 	cp readme.md ts/README.md
 	cp LICENSE ts/LICENSE
+
+# ZUGFeRD has spaces in the file names which doesn't work well with Make
+remove-spaces:
+	uv run python remove_spaces.py
