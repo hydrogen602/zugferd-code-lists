@@ -1558,10 +1558,30 @@ impl std::convert::TryFrom<Country> for iso_country::Country {
 
 #[cfg(feature = "iso_country")]
 /// All the variants of Country that are not matched to any variant of iso_country::Country
+#[derive(Debug, PartialEq, Eq, Hash)]
 pub enum ErrFromCountry {
     Kosovo,
     UnitedKingdomNorthernIreland,
 }
+
+#[cfg(feature = "iso_country")]
+impl std::fmt::Display for ErrFromCountry {
+    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+        match self {
+            ErrFromCountry::Kosovo => write!(
+                f,
+                "Kosovo has no corresponding value in iso_country::Country"
+            ),
+            ErrFromCountry::UnitedKingdomNorthernIreland => write!(
+                f,
+                "UnitedKingdomNorthernIreland has no corresponding value in iso_country::Country"
+            ),
+        }
+    }
+}
+
+#[cfg(feature = "iso_country")]
+impl std::error::Error for ErrFromCountry {}
 
 #[cfg(feature = "iso_country")]
 impl std::convert::TryFrom<iso_country::Country> for Country {
@@ -1824,6 +1844,21 @@ impl std::convert::TryFrom<iso_country::Country> for Country {
 
 #[cfg(feature = "iso_country")]
 /// All the variants of iso_country::Country that are not matched to any variant of Country
+#[derive(Debug, PartialEq, Eq, Hash)]
 pub enum ErrFromIsoCountryCountry {
     Unspecified,
 }
+
+#[cfg(feature = "iso_country")]
+impl std::fmt::Display for ErrFromIsoCountryCountry {
+    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+        match self {
+            ErrFromIsoCountryCountry::Unspecified => {
+                write!(f, "Unspecified has no corresponding value in Country")
+            }
+        }
+    }
+}
+
+#[cfg(feature = "iso_country")]
+impl std::error::Error for ErrFromIsoCountryCountry {}

@@ -13,8 +13,13 @@ class Matches:
     matches: list[tuple[str, str]] = field(default_factory=list)
 
 
-class GenTryFrom(CodeGenerator):
+@dataclass
+class ErrFromCode:
+    code: str
+    err_from_type: str
 
+
+class GenTryFrom(CodeGenerator):
     def __init__(
         self,
         their_enum_rust_qualified_name: str,
@@ -27,6 +32,52 @@ class GenTryFrom(CodeGenerator):
         self.__dependency_name = dependency_name
         self.__generated_by_build_rs = generated_by_build_rs
 
+    def __err_gen(
+        self, src_enum_name: str, dest_enum_name: str, enum_values: list[str]
+    ) -> ErrFromCode:
+        """
+        Generate the error enum for the case where some variants of the
+        source enum are not matched to any variant of the destination enum.
+        """
+        if len(enum_values) == 0:
+            return ErrFromCode(code="", err_from_type="std::convert::Infallible")
+
+        src_enum_as_ident = "".join(
+            word.capitalize()
+            for ident in src_enum_name.split("::")
+            for word in ident.split("_")
+        )
+        err_from_type = f"ErrFrom{src_enum_as_ident}"
+
+        return ErrFromCode(
+            code=f"""
+{self.__feature_gate_gen()}
+/// All the variants of {src_enum_name} that are not matched to any variant of {dest_enum_name}
+#[derive(Debug, PartialEq, Eq, Hash)]
+pub enum {err_from_type} {{
+    {"\n".join(f"{TAB}{TAB}{TAB}{enum_value}," for enum_value in enum_values)}
+}}
+
+{self.__feature_gate_gen()}
+impl std::fmt::Display for {err_from_type} {{
+    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {{
+        match self {{
+            {"\n".join(f'{TAB}{TAB}{TAB}{err_from_type}::{enum_value} => write!(f, "{enum_value} has no corresponding value in {dest_enum_name}"),' for enum_value in enum_values)}
+        }}
+    }}
+}} 
+
+{self.__feature_gate_gen()}
+impl std::error::Error for {err_from_type} {{}}
+""",
+            err_from_type=err_from_type,
+        )
+
+    def __feature_gate_gen(self) -> str:
+        return (
+            f'#[cfg(feature = "{self.__feature_gate}")]' if self.__feature_gate else ""
+        )
+
     def generate(
         self,
         enum_name: str,
@@ -36,75 +87,48 @@ class GenTryFrom(CodeGenerator):
     ) -> Code[str]:
         matches = self.__matcher(enum_values)
 
-        feature_gate = (
-            f'#[cfg(feature = "{self.__feature_gate}")]' if self.__feature_gate else ""
-        )
-
         # our enum -> their enum. our enum is the input here.
-        # if all of our enum values are matched, then this is a total function,
-        # i.e. no error is possible as every input has a valid mapping.
-        is_total_func = len(matches.our_enum_unmatched) == 0
 
-        err_from = (
-            ""
-            if is_total_func
-            else f'''
-{feature_gate}
-/// All the variants of {enum_name} that are not matched to any variant of {self.__their_enum_rust_qualified_name}
-pub enum ErrFrom{enum_name} {{
-    {'\n'.join(f"{TAB}{TAB}{TAB}{ours.rust_identifier}," for ours in matches.our_enum_unmatched)}
-}}
-'''
+        err_from = self.__err_gen(
+            enum_name,
+            self.__their_enum_rust_qualified_name,
+            [ours.rust_identifier for ours in matches.our_enum_unmatched],
         )
 
         code_ours_to_theirs = f"""
-{feature_gate}
+{self.__feature_gate_gen()}
 impl std::convert::TryFrom<{enum_name}> for {self.__their_enum_rust_qualified_name} {{
-    type Error = {'std::convert::Infallible' if is_total_func else f'ErrFrom{enum_name}'};
+    type Error = {err_from.err_from_type};
     fn try_from(value: {enum_name}) -> Result<Self, Self::Error> {{
         match value {{
-            {'\n'.join(f"{TAB}{TAB}{TAB}{enum_name}::{ours} => Ok({self.__their_enum_rust_qualified_name}::{theirs})," for (ours, theirs) in matches.matches)}
-            {'\n'.join(f"{TAB}{TAB}{TAB}{enum_name}::{ours.rust_identifier} => Err(ErrFrom{enum_name}::{ours.rust_identifier})," for ours in matches.our_enum_unmatched)}
+            {"\n".join(f"{TAB}{TAB}{TAB}{enum_name}::{ours} => Ok({self.__their_enum_rust_qualified_name}::{theirs})," for (ours, theirs) in matches.matches)}
+            {"\n".join(f"{TAB}{TAB}{TAB}{enum_name}::{ours.rust_identifier} => Err({err_from.err_from_type}::{ours.rust_identifier})," for ours in matches.our_enum_unmatched)}
         }}
     }}
 }}
 
-{err_from}
+{err_from.code}
 """
 
-        is_total_func = len(matches.their_enum_unmatched) == 0
-
-        their_enum_as_ident = "".join(
-            word.capitalize()
-            for ident in self.__their_enum_rust_qualified_name.split("::")
-            for word in ident.split("_")
-        )
-
-        err_from = (
-            ""
-            if is_total_func
-            else f'''
-{feature_gate}
-/// All the variants of {self.__their_enum_rust_qualified_name} that are not matched to any variant of {enum_name}
-pub enum ErrFrom{their_enum_as_ident} {{
-    {'\n'.join(f"{TAB}{TAB}{TAB}{theirs}," for theirs in matches.their_enum_unmatched)}
-}}
-'''
+        err_from = self.__err_gen(
+            self.__their_enum_rust_qualified_name,
+            enum_name,
+            matches.their_enum_unmatched,
         )
 
         code_theirs_to_ours = f"""
-{feature_gate}
+{self.__feature_gate_gen()}
 impl std::convert::TryFrom<{self.__their_enum_rust_qualified_name}> for {enum_name} {{
-    type Error = {'std::convert::Infallible' if is_total_func else f'ErrFrom{their_enum_as_ident}'};
+    type Error = {err_from.err_from_type};
     fn try_from(value: {self.__their_enum_rust_qualified_name}) -> Result<{enum_name}, Self::Error> {{
         match value {{
-            {'\n'.join(f"{TAB}{TAB}{TAB}{self.__their_enum_rust_qualified_name}::{theirs} => Ok({enum_name}::{ours})," for (ours, theirs) in matches.matches)}
-            {'\n'.join(f"{TAB}{TAB}{TAB}{self.__their_enum_rust_qualified_name}::{theirs} => Err(ErrFrom{their_enum_as_ident}::{theirs})," for theirs in matches.their_enum_unmatched)}
+            {"\n".join(f"{TAB}{TAB}{TAB}{self.__their_enum_rust_qualified_name}::{theirs} => Ok({enum_name}::{ours})," for (ours, theirs) in matches.matches)}
+            {"\n".join(f"{TAB}{TAB}{TAB}{self.__their_enum_rust_qualified_name}::{theirs} => Err({err_from.err_from_type}::{theirs})," for theirs in matches.their_enum_unmatched)}
         }}
     }}
 }}
 
-{err_from}
+{err_from.code}
 """
 
         return RS(code_ours_to_theirs + code_theirs_to_ours)

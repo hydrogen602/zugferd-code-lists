@@ -1,6 +1,7 @@
 import json
 from pathlib import Path
 from subprocess import run
+from warnings import warn
 import tree_sitter_rust as tsrust
 from tree_sitter import Language, Node, Parser
 
@@ -45,7 +46,7 @@ def find_enum_in_src(package_src: Path, enum_name: bytes):
             content = f.read()
         if enum_name in content and (enum_node := parse_enum(content, enum_name)):
             return enum_node
-    raise Exception(f"Enum {enum_name} not found in {package_src}")
+    raise Exception(f"Enum {enum_name!r} not found in {package_src}")
 
 
 def parse_enum(src_code: bytes, enum_name: bytes) -> Node | None:
@@ -56,13 +57,13 @@ def parse_enum(src_code: bytes, enum_name: bytes) -> Node | None:
         if node.type != "enum_item":
             continue
 
-        ident = [
+        idents = [
             child.text for child in node.children if child.type == "type_identifier"
         ]
-        assert (
-            len(ident) == 1
-        ), f"Rust syntax error? Expected 1 type_identifier in an enum, got {len(ident)}"
-        ident = ident[0]
+        assert len(idents) == 1, (
+            f"Rust syntax error? Expected 1 type_identifier in an enum, got {len(idents)}"
+        )
+        ident = idents[0]
 
         if ident == enum_name:
             return node
@@ -75,9 +76,9 @@ def parse_enum_variants(enum_node: Node) -> list[bytes]:
         child for child in enum_node.children if child.type == "enum_variant_list"
     ]
     assert len(variant_ls) == 1, "Expected 1 enum_variant_list in an enum"
-    variant_ls = variant_ls[0]
+    variant = variant_ls[0]
     variant_nodes = [
-        child for child in variant_ls.children if child.type == "enum_variant"
+        child for child in variant.children if child.type == "enum_variant"
     ]
 
     def assert_one[T](ls: list[T | None]) -> T:
@@ -121,9 +122,13 @@ def find_build_rs_out(package_name: str):
         case [dir]:
             return dir
         case _:
-            raise FileNotFoundError(
-                f"Ambiguous: multiple build directories found for {package_name}"
+            warn(
+                f"Ambiguous: multiple build directories found for {package_name}. Paths found: {[str(e) for e in possible_dirs]}"
             )
+            return possible_dirs[0]
+            # raise FileNotFoundError(
+            #     f"Ambiguous: multiple build directories found for {package_name}. Paths found: {[str(e) for e in possible_dirs]}"
+            # )
 
 
 def get_enum_variants(

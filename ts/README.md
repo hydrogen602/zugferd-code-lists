@@ -1,4 +1,5 @@
 # zugferd code lists
+
 ![NPM Version](https://img.shields.io/npm/v/zugferd-code-lists)
 ![Crates.io Version](https://img.shields.io/crates/v/zugferd-code-lists)
 
@@ -9,6 +10,7 @@ This project attempts to take the many code lists that are part of the ZUGFeRD s
 # Status
 
 Versions supported:
+
 - ZUGFeRD 2.3.2
 - ZUGFeRD 2.3.3
 
@@ -16,8 +18,11 @@ Versions supported:
 
 - v0.1.9: added ZUGFeRD 2.3.3
 - v0.1.10: added VAT CAT list
+- v0.1.11:
+  - Added `TryFrom` impls for conversion to and from the crates `iso_currency` and `iso_country`
+  - Fixed bug where code `NA` would be rendered as `nan` in the generated code
+  - Added `Fiscal ID` list (new in ZUGFeRD 2.3.3)
 
 # Future Plans
 
 - `TryFrom` impls for conversion between versions
-- `TryFrom` impls for conversion to and from the crates `iso_currency` and `iso_country`

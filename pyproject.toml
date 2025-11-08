@@ -1,0 +1,15 @@
+[project]
+name = "zugferd-code-lists"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.14"
+dependencies = [
+    "openpyxl>=3.1.5",
+    "pandas>=2.0.3",
+    "pandas-stubs>=2.0.3.230814",
+    "python-dotenv>=1.0.1",
+    "tree-sitter>=0.21.3",
+    "tree-sitter-rust>=0.21.2",
+    "typer>=0.20.0",
+]

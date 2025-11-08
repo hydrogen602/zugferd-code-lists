@@ -1138,9 +1138,25 @@ impl std::convert::TryFrom<Currency> for iso_currency::Currency {
 
 #[cfg(feature = "iso_currency")]
 /// All the variants of Currency that are not matched to any variant of iso_currency::Currency
+#[derive(Debug, PartialEq, Eq, Hash)]
 pub enum ErrFromCurrency {
     NetherlandsAntilleanGuilder,
 }
+
+#[cfg(feature = "iso_currency")]
+impl std::fmt::Display for ErrFromCurrency {
+    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+        match self {
+            ErrFromCurrency::NetherlandsAntilleanGuilder => write!(
+                f,
+                "NetherlandsAntilleanGuilder has no corresponding value in iso_currency::Currency"
+            ),
+        }
+    }
+}
+
+#[cfg(feature = "iso_currency")]
+impl std::error::Error for ErrFromCurrency {}
 
 #[cfg(feature = "iso_currency")]
 impl std::convert::TryFrom<iso_currency::Currency> for Currency {
@@ -1339,8 +1355,29 @@ impl std::convert::TryFrom<iso_currency::Currency> for Currency {
 
 #[cfg(feature = "iso_currency")]
 /// All the variants of iso_currency::Currency that are not matched to any variant of Currency
+#[derive(Debug, PartialEq, Eq, Hash)]
 pub enum ErrFromIsoCurrencyCurrency {
     XCG,
     HRK,
     SLL,
 }
+
+#[cfg(feature = "iso_currency")]
+impl std::fmt::Display for ErrFromIsoCurrencyCurrency {
+    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+        match self {
+            ErrFromIsoCurrencyCurrency::XCG => {
+                write!(f, "XCG has no corresponding value in Currency")
+            }
+            ErrFromIsoCurrencyCurrency::HRK => {
+                write!(f, "HRK has no corresponding value in Currency")
+            }
+            ErrFromIsoCurrencyCurrency::SLL => {
+                write!(f, "SLL has no corresponding value in Currency")
+            }
+        }
+    }
+}
+
+#[cfg(feature = "iso_currency")]
+impl std::error::Error for ErrFromIsoCurrencyCurrency {}

@@ -1,7 +1,7 @@
 gen: gen-rs gen-ts
 
 npm-publish: gen
-	cd ts && npm publish
+	cd ts && pnpm publish
 
 cargo-publish: gen
 	cargo publish --features all
@@ -22,6 +22,6 @@ gen-rs: gen-only
 
 gen-ts: gen-only
 	cd ts && pnpm exec prettier . --write
-	cd ts && npm run build
+	cd ts && pnpm run build
 	cp readme.md ts/README.md
 	cp LICENSE ts/LICENSE
