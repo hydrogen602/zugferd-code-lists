@@ -471,7 +471,7 @@ pub enum ICD {
 }
 
 impl crate::Code for ICD {
-    fn code(&self) -> &str {
+    fn code(self) -> &'static str {
         match self {
             ICD::SystemInformationEtRepertoireDesEntrepriseEtDesEtablissementsSirene => "0002",
             ICD::CodificationNumeriqueDesEtablissmentsFinanciersEnBelgique => "0003",
@@ -711,7 +711,7 @@ impl crate::Code for ICD {
 }
 
 impl crate::Description for ICD {
-    fn description(&self) -> &str {
+    fn description(self) -> &'static str {
         match self {
             ICD::SystemInformationEtRepertoireDesEntrepriseEtDesEtablissementsSirene => "System Information et Repertoire des Entreprise et des Etablissements: SIRENE ",
             ICD::CodificationNumeriqueDesEtablissmentsFinanciersEnBelgique => "Codification Numerique des Etablissments Financiers En Belgique ",

@@ -21,7 +21,7 @@ pub enum MIME {
 }
 
 impl crate::Code for MIME {
-    fn code(&self) -> &str {
+    fn code(self) -> &'static str {
         match self {
             MIME::ApplicationPdf => "application/pdf",
             MIME::ImagePng => "image/png",
@@ -40,7 +40,7 @@ impl crate::Code for MIME {
 }
 
 impl crate::Description for MIME {
-    fn description(&self) -> &str {
+    fn description(self) -> &'static str {
         match self {
             MIME::ApplicationPdf => "application/pdf",
             MIME::ImagePng => "image/png",

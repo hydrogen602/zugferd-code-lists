@@ -31,7 +31,7 @@ pub enum INCOTERMS {
 }
 
 impl crate::Code for INCOTERMS {
-    fn code(&self) -> &str {
+    fn code(self) -> &'static str {
         match self {
             INCOTERMS::DeliveryArrangedBySupplier => "1",
             INCOTERMS::DeliveryArrangedByLogisticServiceProvider => "2",
@@ -51,7 +51,7 @@ impl crate::Code for INCOTERMS {
 }
 
 impl crate::Description for INCOTERMS {
-    fn description(&self) -> &str {
+    fn description(self) -> &'static str {
         match self {
             INCOTERMS::DeliveryArrangedBySupplier => "Delivery arranged by supplier",
             INCOTERMS::DeliveryArrangedByLogisticServiceProvider => {

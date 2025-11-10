@@ -971,7 +971,7 @@ pub enum Language {
 }
 
 impl crate::Code for Language {
-    fn code(&self) -> &str {
+    fn code(self) -> &'static str {
         match self {
             Language::Afar => "aar",
             Language::Abkhazian => "abk",
@@ -1461,7 +1461,7 @@ impl crate::Code for Language {
 }
 
 impl crate::Description for Language {
-    fn description(&self) -> &str {
+    fn description(self) -> &'static str {
         match self {
             Language::Afar => "Afar",
             Language::Abkhazian => "Abkhazian",

@@ -375,7 +375,7 @@ pub enum Item {
 }
 
 impl crate::Code for Item {
-    fn code(&self) -> &str {
+    fn code(self) -> &'static str {
         match self {
             Item::ProductVersionNumber => "AA",
             Item::Assembly => "AB",
@@ -567,7 +567,7 @@ impl crate::Code for Item {
 }
 
 impl crate::Description for Item {
-    fn description(&self) -> &str {
+    fn description(self) -> &'static str {
         match self {
             Item::ProductVersionNumber => "Product version number",
             Item::Assembly => "Assembly",

@@ -361,7 +361,7 @@ pub enum Currency {
 }
 
 impl crate::Code for Currency {
-    fn code(&self) -> &str {
+    fn code(self) -> &'static str {
         match self {
             Currency::UaeDirham => "AED",
             Currency::Afghani => "AFN",
@@ -546,7 +546,7 @@ impl crate::Code for Currency {
 }
 
 impl crate::Description for Currency {
-    fn description(&self) -> &str {
+    fn description(self) -> &'static str {
         match self {
             Currency::UaeDirham => "UAE Dirham",
             Currency::Afghani => "Afghani",

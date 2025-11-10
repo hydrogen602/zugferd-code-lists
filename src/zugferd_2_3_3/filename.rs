@@ -15,7 +15,7 @@ pub enum Filename {
 }
 
 impl crate::Code for Filename {
-    fn code(&self) -> &str {
+    fn code(self) -> &'static str {
         match self {
             Filename::TheHybridDocumentContainsAFacturXZugferdXmlFile => "factur-x.xml",
             Filename::TheHybridDocumentContainsAXrechnungXmlFile => "xrechnung.xml",
@@ -25,7 +25,7 @@ impl crate::Code for Filename {
 }
 
 impl crate::Description for Filename {
-    fn description(&self) -> &str {
+    fn description(self) -> &'static str {
         match self {
             Filename::TheHybridDocumentContainsAFacturXZugferdXmlFile => {
                 "The hybrid document contains a Factur-X / ZUGFeRD XML-file"

@@ -7,7 +7,7 @@ pub enum FiscalID {
 }
 
 impl crate::Code for FiscalID {
-    fn code(&self) -> &str {
+    fn code(self) -> &'static str {
         match self {
             FiscalID::FiscalNumber => "FC",
         }
@@ -15,7 +15,7 @@ impl crate::Code for FiscalID {
 }
 
 impl crate::Description for FiscalID {
-    fn description(&self) -> &str {
+    fn description(self) -> &'static str {
         match self {
             FiscalID::FiscalNumber => "Fiscal number",
         }

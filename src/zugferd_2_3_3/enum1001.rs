@@ -253,7 +253,7 @@ pub enum Enum1001 {
 }
 
 impl crate::Code for Enum1001 {
-    fn code(&self) -> &str {
+    fn code(self) -> &'static str {
         match self {
             Enum1001::RequestForPayment => "71",
             Enum1001::DebitNoteRelatedToGoodsOrServices => "80",
@@ -322,7 +322,7 @@ impl crate::Code for Enum1001 {
 }
 
 impl crate::Description for Enum1001 {
-    fn description(&self) -> &str {
+    fn description(self) -> &'static str {
         match self {
             Enum1001::RequestForPayment => "Request for payment",
             Enum1001::DebitNoteRelatedToGoodsOrServices => {

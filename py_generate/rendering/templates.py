@@ -51,12 +51,12 @@ class EnumGenerate(CodeGenerator):
             rs=f"""
     #[derive(Debug, PartialEq, Eq, PartialOrd, Ord, Clone, Copy, Hash)]
     pub enum {enum_name} {{
-    {'\n'.join(enum_value.gen_enum_value_definition() for enum_value in enum_values)}
+    {"\n".join(enum_value.gen_enum_value_definition() for enum_value in enum_values)}
     }}
     """,
             ts=f"""
     export enum {enum_name} {{
-    {'\n'.join(enum_value.gen_enum_value_definition('ts') for enum_value in enum_values)}
+    {"\n".join(enum_value.gen_enum_value_definition("ts") for enum_value in enum_values)}
     }}
     """,
         )
@@ -73,9 +73,9 @@ class ToCodeTraitGenerate(CodeGenerator):
         return RS(
             f"""
 impl crate::Code for {enum_name} {{
-{TAB}fn code(&self) -> &str {{
+{TAB}fn code(self) -> &'static str {{
 {TAB}{TAB}match self {{
-{'\n'.join(f"{TAB}{TAB}{TAB}{enum_name}::{enum_value.rust_identifier} => \"{enum_value.code}\"," for enum_value in enum_values)}
+{"\n".join(f'{TAB}{TAB}{TAB}{enum_name}::{enum_value.rust_identifier} => "{enum_value.code}",' for enum_value in enum_values)}
 {TAB}{TAB}}}
 {TAB}}}
 }}
@@ -95,9 +95,9 @@ class DescriptionTraitGenerate(CodeGenerator):
         return RS_TS(
             rs=f"""
 impl crate::Description for {enum_name} {{
-{TAB}fn description(&self) -> &str {{
+{TAB}fn description(self) -> &'static str {{
 {TAB}{TAB}match self {{
-{'\n'.join(f"{TAB}{TAB}{TAB}{enum_name}::{enum_value.rust_identifier} => \"{pattern.sub(" ", enum_value.description)}\"," for enum_value in enum_values)}
+{"\n".join(f'{TAB}{TAB}{TAB}{enum_name}::{enum_value.rust_identifier} => "{pattern.sub(" ", enum_value.description)}",' for enum_value in enum_values)}
 {TAB}{TAB}}}
 {TAB}}}
 }}
@@ -105,7 +105,7 @@ impl crate::Description for {enum_name} {{
             ts=f"""
 export function description(value: {enum_name}): string {{
 {TAB}switch (value) {{
-{'\n'.join(f"{TAB}{TAB}case {enum_name}.{enum_value.rust_identifier}: return \"{pattern.sub(" ", enum_value.description)}\";" for enum_value in enum_values)}
+{"\n".join(f'{TAB}{TAB}case {enum_name}.{enum_value.rust_identifier}: return "{pattern.sub(" ", enum_value.description)}";' for enum_value in enum_values)}
 {TAB}}}
 }}
 """,
@@ -137,7 +137,7 @@ impl crate::FromCode for {enum_name} {{
 {TAB}{TAB}Self: Sized
 {TAB}{{
 {TAB}{TAB}match code {{
-{'\n'.join(f"{TAB}{TAB}{TAB}\"{enum_value.code}\" => Some({enum_name}::{enum_value.rust_identifier})," for enum_value in enum_values)}
+{"\n".join(f'{TAB}{TAB}{TAB}"{enum_value.code}" => Some({enum_name}::{enum_value.rust_identifier}),' for enum_value in enum_values)}
 {TAB}{TAB}{TAB}_ => None,
 {TAB}{TAB}}}
 {TAB}}}

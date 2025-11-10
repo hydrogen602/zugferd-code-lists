@@ -229,7 +229,7 @@ pub enum VATCAT {
 }
 
 impl crate::Code for VATCAT {
-    fn code(&self) -> &str {
+    fn code(self) -> &'static str {
         match self {
             VATCAT::PetroleumTax => "AAA",
             VATCAT::ProvisionalCountervailingDutyCash => "AAB",
@@ -292,7 +292,7 @@ impl crate::Code for VATCAT {
 }
 
 impl crate::Description for VATCAT {
-    fn description(&self) -> &str {
+    fn description(self) -> &'static str {
         match self {
             VATCAT::PetroleumTax => "Petroleum tax",
             VATCAT::ProvisionalCountervailingDutyCash => "Provisional countervailing duty cash",

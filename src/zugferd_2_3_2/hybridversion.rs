@@ -25,7 +25,7 @@ pub enum HybridVersion {
 }
 
 impl crate::Code for HybridVersion {
-    fn code(&self) -> &str {
+    fn code(self) -> &'static str {
         match self {
             HybridVersion::TheHybridDocumentIsAFacturX10CompliantDocument => "1.0",
             HybridVersion::TheHybridDocumentIsAZugferd1p0CompliantDocument => "1p0",
@@ -37,7 +37,7 @@ impl crate::Code for HybridVersion {
 }
 
 impl crate::Description for HybridVersion {
-    fn description(&self) -> &str {
+    fn description(self) -> &'static str {
         match self {
             HybridVersion::TheHybridDocumentIsAFacturX10CompliantDocument => {
                 "The hybrid document is a Factur-X 1.0* compliant document"

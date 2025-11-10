@@ -21,7 +21,7 @@ pub enum HybridDocument {
 }
 
 impl crate::Code for HybridDocument {
-    fn code(&self) -> &str {
+    fn code(self) -> &'static str {
         match self {
             HybridDocument::TheHybridDocumentContainsAnInvoiceOrCreditNote => "INVOICE",
             HybridDocument::TheHybridDocumentContainsAnOrder => "ORDER",
@@ -32,7 +32,7 @@ impl crate::Code for HybridDocument {
 }
 
 impl crate::Description for HybridDocument {
-    fn description(&self) -> &str {
+    fn description(self) -> &'static str {
         match self {
             HybridDocument::TheHybridDocumentContainsAnInvoiceOrCreditNote => {
                 "The hybrid document contains an invoice or credit note"

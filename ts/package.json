@@ -1,6 +1,6 @@
 {
   "name": "zugferd-code-lists",
-  "version": "0.1.12",
+  "version": "0.1.13",
   "description": "ZUGFeRD code lists, e.g. languages enum, currencies enum, countries enum, etc.",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",

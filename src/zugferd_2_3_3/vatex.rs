@@ -249,7 +249,7 @@ pub enum VATEX {
 }
 
 impl crate::Code for VATEX {
-    fn code(&self) -> &str {
+    fn code(self) -> &'static str {
         match self {
             VATEX::ExemptBasedOnArticle79PointCCouncilDirective2006112Ec => "VATEX-EU-79-C",
             VATEX::ExemptBasedOnArticle132CouncilDirective2006112Ec => "VATEX-EU-132",
@@ -343,7 +343,7 @@ impl crate::Code for VATEX {
 }
 
 impl crate::Description for VATEX {
-    fn description(&self) -> &str {
+    fn description(self) -> &'static str {
         match self {
             VATEX::ExemptBasedOnArticle79PointCCouncilDirective2006112Ec => "Exempt based on article 79, point c of Council Directive 2006/112/EC",
             VATEX::ExemptBasedOnArticle132CouncilDirective2006112Ec => "Exempt based on article 132 of Council Directive 2006/112/EC",

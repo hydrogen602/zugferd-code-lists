@@ -8653,7 +8653,7 @@ pub enum Unit {
 }
 
 impl crate::Code for Unit {
-    fn code(&self) -> &str {
+    fn code(self) -> &'static str {
         match self {
             Unit::Group => "10",
             Unit::Outfit => "11",
@@ -10830,7 +10830,7 @@ impl crate::Code for Unit {
 }
 
 impl crate::Description for Unit {
-    fn description(&self) -> &str {
+    fn description(self) -> &'static str {
         match self {
             Unit::Group => "group",
             Unit::Outfit => "outfit",

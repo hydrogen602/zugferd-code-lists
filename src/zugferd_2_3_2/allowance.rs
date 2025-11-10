@@ -43,7 +43,7 @@ pub enum Allowance {
 }
 
 impl crate::Code for Allowance {
-    fn code(&self) -> &str {
+    fn code(self) -> &'static str {
         match self {
             Allowance::BonusForWorksAheadSchedule => "41",
             Allowance::OtherBonus => "42",
@@ -69,7 +69,7 @@ impl crate::Code for Allowance {
 }
 
 impl crate::Description for Allowance {
-    fn description(&self) -> &str {
+    fn description(self) -> &'static str {
         match self {
             Allowance::BonusForWorksAheadSchedule => "Bonus for works ahead of schedule",
             Allowance::OtherBonus => "Other bonus",

@@ -481,7 +481,7 @@ pub enum LineStatus {
 }
 
 impl crate::Code for LineStatus {
-    fn code(&self) -> &str {
+    fn code(self) -> &'static str {
         match self {
             LineStatus::Added => "1",
             LineStatus::Deleted => "2",
@@ -607,7 +607,7 @@ impl crate::Code for LineStatus {
 }
 
 impl crate::Description for LineStatus {
-    fn description(&self) -> &str {
+    fn description(self) -> &'static str {
         match self {
             LineStatus::Added => "Added",
             LineStatus::Deleted => "Deleted",

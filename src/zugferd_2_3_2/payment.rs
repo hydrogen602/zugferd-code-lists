@@ -185,7 +185,7 @@ pub enum Payment {
 }
 
 impl crate::Code for Payment {
-    fn code(&self) -> &str {
+    fn code(self) -> &'static str {
         match self {
             Payment::InstrumentNotDefined => "1",
             Payment::AutomatedClearingHouseCredit => "2",
@@ -276,7 +276,7 @@ impl crate::Code for Payment {
 }
 
 impl crate::Description for Payment {
-    fn description(&self) -> &str {
+    fn description(self) -> &'static str {
         match self {
             Payment::InstrumentNotDefined => "Instrument not defined",
             Payment::AutomatedClearingHouseCredit => "Automated clearing house credit",

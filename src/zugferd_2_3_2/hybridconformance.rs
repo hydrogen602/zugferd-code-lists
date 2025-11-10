@@ -39,7 +39,7 @@ pub enum HybridConformance {
 }
 
 impl crate::Code for HybridConformance {
-    fn code(&self) -> &str {
+    fn code(self) -> &'static str {
         match self {
             HybridConformance::TheIncludedDocumentUsesAMinimumProfile => "MINIMUM",
             HybridConformance::TheIncludedDocumentUsesABasicWithoutLinesProfile => "BASIC WL",
@@ -53,7 +53,7 @@ impl crate::Code for HybridConformance {
 }
 
 impl crate::Description for HybridConformance {
-    fn description(&self) -> &str {
+    fn description(self) -> &'static str {
         match self {
             HybridConformance::TheIncludedDocumentUsesAMinimumProfile => {
                 "The included document uses a MINIMUM profile"

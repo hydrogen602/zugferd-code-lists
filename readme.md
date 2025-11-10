@@ -24,6 +24,8 @@ Versions supported:
   - Added `Fiscal ID` list (new in ZUGFeRD 2.3.3)
 - v0.1.12:
   - Added `Debug`, `Display`, and `Error` traits for generated errors for `TryFrom` for `iso_currency` and `iso_country`
+- v0.1.13:
+  - Adjusted the traits `Code` and `Description` to consider the fact that all code lists are `Copy` and all strings returned live for `'static`. This should make the API more flexible as previously there was a lifetime dependence between a code value and the `&str` returned by `Code::code`
 
 # Future Plans
 

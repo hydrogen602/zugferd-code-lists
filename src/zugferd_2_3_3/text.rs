@@ -807,7 +807,7 @@ pub enum Text {
 }
 
 impl crate::Code for Text {
-    fn code(&self) -> &str {
+    fn code(self) -> &'static str {
         match self {
             Text::GoodsItemDescription => "AAA",
             Text::PaymentTerm => "AAB",
@@ -1215,7 +1215,7 @@ impl crate::Code for Text {
 }
 
 impl crate::Description for Text {
-    fn description(&self) -> &str {
+    fn description(self) -> &'static str {
         match self {
             Text::GoodsItemDescription => "Goods item description",
             Text::PaymentTerm => "Payment term",

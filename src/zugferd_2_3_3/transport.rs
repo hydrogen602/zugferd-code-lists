@@ -45,7 +45,7 @@ pub enum TRANSPORT {
 }
 
 impl crate::Code for TRANSPORT {
-    fn code(&self) -> &str {
+    fn code(self) -> &'static str {
         match self {
             TRANSPORT::TransportModeNotSpecified => "0",
             TRANSPORT::MaritimeTransport => "1",
@@ -62,7 +62,7 @@ impl crate::Code for TRANSPORT {
 }
 
 impl crate::Description for TRANSPORT {
-    fn description(&self) -> &str {
+    fn description(self) -> &'static str {
         match self {
             TRANSPORT::TransportModeNotSpecified => "Transport mode not specified",
             TRANSPORT::MaritimeTransport => "Maritime transport",

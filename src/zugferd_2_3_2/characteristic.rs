@@ -1871,7 +1871,7 @@ pub enum Characteristic {
 }
 
 impl crate::Code for Characteristic {
-    fn code(&self) -> &str {
+    fn code(self) -> &'static str {
         match self {
             Characteristic::ConsolidatedWeight => "A",
             Characteristic::NetWeight => "AAA",
@@ -2193,7 +2193,7 @@ impl crate::Code for Characteristic {
 }
 
 impl crate::Description for Characteristic {
-    fn description(&self) -> &str {
+    fn description(self) -> &'static str {
         match self {
             Characteristic::ConsolidatedWeight => "Consolidated weight",
             Characteristic::NetWeight => "Net weight",

@@ -33,7 +33,7 @@ pub enum Enum5305 {
 }
 
 impl crate::Code for Enum5305 {
-    fn code(&self) -> &str {
+    fn code(self) -> &'static str {
         match self {
             Enum5305::StandardRate => "S",
             Enum5305::ZeroRatedGoods => "Z",
@@ -49,7 +49,7 @@ impl crate::Code for Enum5305 {
 }
 
 impl crate::Description for Enum5305 {
-    fn description(&self) -> &str {
+    fn description(self) -> &'static str {
         match self {
             Enum5305::StandardRate => "Standard rate",
             Enum5305::ZeroRatedGoods => "Zero rated goods",

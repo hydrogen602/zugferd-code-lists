@@ -1639,7 +1639,7 @@ pub enum Enum1153 {
 }
 
 impl crate::Code for Enum1153 {
-    fn code(&self) -> &str {
+    fn code(self) -> &'static str {
         match self {
             Enum1153::OrderAcknowledgementDocumentIdentifier => "AAA",
             Enum1153::ProformaInvoiceDocumentIdentifier => "AAB",
@@ -2463,7 +2463,7 @@ impl crate::Code for Enum1153 {
 }
 
 impl crate::Description for Enum1153 {
-    fn description(&self) -> &str {
+    fn description(self) -> &'static str {
         match self {
             Enum1153::OrderAcknowledgementDocumentIdentifier => {
                 "Order acknowledgement document identifier"

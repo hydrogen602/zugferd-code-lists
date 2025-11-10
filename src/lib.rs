@@ -2,11 +2,11 @@ pub mod zugferd_2_3_2;
 pub mod zugferd_2_3_3;
 
 pub trait Code {
-    fn code(&self) -> &str;
+    fn code(self) -> &'static str;
 }
 
 pub trait Description {
-    fn description(&self) -> &str;
+    fn description(self) -> &'static str;
 }
 
 pub trait FromCode {

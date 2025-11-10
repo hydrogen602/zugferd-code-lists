@@ -13,7 +13,7 @@ pub enum Date {
 }
 
 impl crate::Code for Date {
-    fn code(&self) -> &str {
+    fn code(self) -> &'static str {
         match self {
             Date::Ccyymmdd => "102",
             Date::Ccyymmddhhmmzhhmm => "205",
@@ -22,7 +22,7 @@ impl crate::Code for Date {
 }
 
 impl crate::Description for Date {
-    fn description(&self) -> &str {
+    fn description(self) -> &'static str {
         match self {
             Date::Ccyymmdd => "CCYYMMDD",
             Date::Ccyymmddhhmmzhhmm => "CCYYMMDDHHMMZHHMM",

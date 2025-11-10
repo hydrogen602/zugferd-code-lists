@@ -361,7 +361,7 @@ pub enum Charge {
 }
 
 impl crate::Code for Charge {
-    fn code(&self) -> &str {
+    fn code(self) -> &'static str {
         match self {
             Charge::Advertising => "AA",
             Charge::Telecommunication => "AAA",
@@ -546,7 +546,7 @@ impl crate::Code for Charge {
 }
 
 impl crate::Description for Charge {
-    fn description(&self) -> &str {
+    fn description(self) -> &'static str {
         match self {
             Charge::Advertising => "Advertising",
             Charge::Telecommunication => "Telecommunication",

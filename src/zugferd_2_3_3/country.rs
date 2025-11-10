@@ -507,7 +507,7 @@ pub enum Country {
 }
 
 impl crate::Code for Country {
-    fn code(&self) -> &str {
+    fn code(self) -> &'static str {
         match self {
             Country::Andorra => "AD",
             Country::UnitedArabEmirates => "AE",
@@ -765,7 +765,7 @@ impl crate::Code for Country {
 }
 
 impl crate::Description for Country {
-    fn description(&self) -> &str {
+    fn description(self) -> &'static str {
         match self {
             Country::Andorra => "Andorra",
             Country::UnitedArabEmirates => "United Arab Emirates (the)",

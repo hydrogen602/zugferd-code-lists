@@ -195,7 +195,7 @@ pub enum EAS {
 }
 
 impl crate::Code for EAS {
-    fn code(&self) -> &str {
+    fn code(self) -> &'static str {
         match self {
             EAS::SystemInformationEtRepertoireDesEntrepriseEtDesEtablissementsSirene => "0002",
             EAS::Organisationsnummer => "0007",
@@ -297,7 +297,7 @@ impl crate::Code for EAS {
 }
 
 impl crate::Description for EAS {
-    fn description(&self) -> &str {
+    fn description(self) -> &'static str {
         match self {
             EAS::SystemInformationEtRepertoireDesEntrepriseEtDesEtablissementsSirene => "System Information et Repertoire des Entreprise et des Etablissements: SIRENE",
             EAS::Organisationsnummer => "Organisationsnummer",

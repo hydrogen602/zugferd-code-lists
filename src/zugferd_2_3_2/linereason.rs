@@ -11,7 +11,7 @@ pub enum LineReason {
 }
 
 impl crate::Code for LineReason {
-    fn code(&self) -> &str {
+    fn code(self) -> &'static str {
         match self {
             LineReason::RegularItemPositionStandardCase => "DETAIL",
             LineReason::SubtotalOrGroup => "GROUP",
@@ -21,7 +21,7 @@ impl crate::Code for LineReason {
 }
 
 impl crate::Description for LineReason {
-    fn description(&self) -> &str {
+    fn description(self) -> &'static str {
         match self {
             LineReason::RegularItemPositionStandardCase => "Regular item position (standard case)",
             LineReason::SubtotalOrGroup => "Subtotal or group",

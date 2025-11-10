@@ -11,7 +11,7 @@ pub enum TimeCII {
 }
 
 impl crate::Code for TimeCII {
-    fn code(&self) -> &str {
+    fn code(self) -> &'static str {
         match self {
             TimeCII::DateInvoice => "5",
             TimeCII::DateDeliveryGoodsToEstablishmentsDomicileSite => "29",
@@ -21,7 +21,7 @@ impl crate::Code for TimeCII {
 }
 
 impl crate::Description for TimeCII {
-    fn description(&self) -> &str {
+    fn description(self) -> &'static str {
         match self {
             TimeCII::DateInvoice => "Date of invoice",
             TimeCII::DateDeliveryGoodsToEstablishmentsDomicileSite => {
