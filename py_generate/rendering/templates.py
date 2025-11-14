@@ -49,6 +49,7 @@ class EnumGenerate(CodeGenerator):
     ) -> Code[str]:
         return RS_TS(
             rs=f"""
+    #[cfg_attr(feature = "serde", derive(serde::Serialize, serde::Deserialize))]
     #[derive(Debug, PartialEq, Eq, PartialOrd, Ord, Clone, Copy, Hash)]
     pub enum {enum_name} {{
     {"\n".join(enum_value.gen_enum_value_definition() for enum_value in enum_values)}

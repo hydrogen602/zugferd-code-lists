@@ -1,5 +1,6 @@
 #![allow(non_camel_case_types)]
 
+#[cfg_attr(feature = "serde", derive(serde::Serialize, serde::Deserialize))]
 #[derive(Debug, PartialEq, Eq, PartialOrd, Ord, Clone, Copy, Hash)]
 pub enum VATEX {
     /// Exempt based on article 79, point c of Council Directive 2006/112/EC

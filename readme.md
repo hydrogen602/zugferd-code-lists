@@ -3,7 +3,7 @@
 ![NPM Version](https://img.shields.io/npm/v/zugferd-code-lists)
 ![Crates.io Version](https://img.shields.io/crates/v/zugferd-code-lists)
 
-This project attempts to take the many code lists that are part of the ZUGFeRD specification and convert them into rust enums for use in other projects.
+This project takes the many code lists that are part of the ZUGFeRD specification and converts them into rust and typescript enums for use in other projects.
 
 **This project is in no way or form affiliated with the official ZUGFeRD project.**
 

@@ -1,5 +1,6 @@
 #![allow(non_camel_case_types)]
 
+#[cfg_attr(feature = "serde", derive(serde::Serialize, serde::Deserialize))]
 #[derive(Debug, PartialEq, Eq, PartialOrd, Ord, Clone, Copy, Hash)]
 pub enum Text {
     /// Goods item description
