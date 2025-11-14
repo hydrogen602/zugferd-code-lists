@@ -26,6 +26,10 @@ Versions supported:
   - Added `Debug`, `Display`, and `Error` traits for generated errors for `TryFrom` for `iso_currency` and `iso_country`
 - v0.1.13:
   - Adjusted the traits `Code` and `Description` to consider the fact that all code lists are `Copy` and all strings returned live for `'static`. This should make the API more flexible as previously there was a lifetime dependence between a code value and the `&str` returned by `Code::code`
+- v0.1.14:
+  - Optional `serde` support
+- v0.1.15
+  - Optional `specta` support
 
 # Future Plans
 
