@@ -49,6 +49,7 @@ class EnumGenerate(CodeGenerator):
     ) -> Code[str]:
         return RS_TS(
             rs=f"""
+    #[cfg_attr(feature = "specta", derive(specta::Type))]
     #[cfg_attr(feature = "serde", derive(serde::Serialize, serde::Deserialize))]
     #[derive(Debug, PartialEq, Eq, PartialOrd, Ord, Clone, Copy, Hash)]
     pub enum {enum_name} {{
