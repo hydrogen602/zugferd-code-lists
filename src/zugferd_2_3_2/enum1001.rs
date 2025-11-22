@@ -226,6 +226,19 @@ pub enum Enum1001 {
     CustomsInvoice,
 }
 
+impl std::fmt::Display for Enum1001 {
+    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+        write!(f, "{}", <Self as crate::Code>::code(*self))
+    }
+}
+
+impl std::str::FromStr for Enum1001 {
+    type Err = ();
+    fn from_str(s: &str) -> Result<Self, Self::Err> {
+        <Self as crate::FromCode>::from_code(s).ok_or(())
+    }
+}
+
 impl crate::Code for Enum1001 {
     fn code(self) -> &'static str {
         match self {

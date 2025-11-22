@@ -362,6 +362,19 @@ pub enum Currency {
     ZimbabweGold,
 }
 
+impl std::fmt::Display for Currency {
+    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+        write!(f, "{}", <Self as crate::Code>::code(*self))
+    }
+}
+
+impl std::str::FromStr for Currency {
+    type Err = ();
+    fn from_str(s: &str) -> Result<Self, Self::Err> {
+        <Self as crate::FromCode>::from_code(s).ok_or(())
+    }
+}
+
 impl crate::Code for Currency {
     fn code(self) -> &'static str {
         match self {

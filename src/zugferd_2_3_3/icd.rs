@@ -476,6 +476,19 @@ pub enum ICD {
     RegisterLegalPersonsInFrenchRépertoireDesPersonnesMorales,
 }
 
+impl std::fmt::Display for ICD {
+    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+        write!(f, "{}", <Self as crate::Code>::code(*self))
+    }
+}
+
+impl std::str::FromStr for ICD {
+    type Err = ();
+    fn from_str(s: &str) -> Result<Self, Self::Err> {
+        <Self as crate::FromCode>::from_code(s).ok_or(())
+    }
+}
+
 impl crate::Code for ICD {
     fn code(self) -> &'static str {
         match self {

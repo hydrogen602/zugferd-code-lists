@@ -12,6 +12,19 @@ pub enum LineReason {
     ForInformationOnly,
 }
 
+impl std::fmt::Display for LineReason {
+    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+        write!(f, "{}", <Self as crate::Code>::code(*self))
+    }
+}
+
+impl std::str::FromStr for LineReason {
+    type Err = ();
+    fn from_str(s: &str) -> Result<Self, Self::Err> {
+        <Self as crate::FromCode>::from_code(s).ok_or(())
+    }
+}
+
 impl crate::Code for LineReason {
     fn code(self) -> &'static str {
         match self {

@@ -376,6 +376,19 @@ pub enum Item {
     MutuallyDefined,
 }
 
+impl std::fmt::Display for Item {
+    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+        write!(f, "{}", <Self as crate::Code>::code(*self))
+    }
+}
+
+impl std::str::FromStr for Item {
+    type Err = ();
+    fn from_str(s: &str) -> Result<Self, Self::Err> {
+        <Self as crate::FromCode>::from_code(s).ok_or(())
+    }
+}
+
 impl crate::Code for Item {
     fn code(self) -> &'static str {
         match self {

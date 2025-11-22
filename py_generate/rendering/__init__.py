@@ -19,9 +19,6 @@ class CodeGenerator(ABC):
     ) -> Code[str]: ...
 
 
-TAB = "    "
-
-
 @dataclass
 class EnumValue:
     rust_identifier: str
@@ -42,11 +39,11 @@ class EnumValue:
                 continue
 
             if ts_rs == "rs":
-                extras += f"\n{TAB}///\n{TAB}/// {extra}"
+                extras += f"\n    ///\n    /// {extra}"
             else:
-                extras += f"\n{TAB}*\n{TAB}* {extra}"
+                extras += f"\n    *\n    * {extra}"
 
         if ts_rs == "rs":
-            return f"{TAB}/// {description}{extras}\n{TAB}{self.rust_identifier},"
+            return f"    /// {description}{extras}\n    {self.rust_identifier},"
         else:
-            return f'{TAB}/**\n{TAB}* {description}{extras}\n{TAB}*/\n{TAB}{self.rust_identifier} = "{self.code}",'
+            return f'    /**\n    * {description}{extras}\n    */\n    {self.rust_identifier} = "{self.code}",'

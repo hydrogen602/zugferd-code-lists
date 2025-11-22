@@ -1872,6 +1872,19 @@ pub enum Characteristic {
     WeeeRegistrationNumber,
 }
 
+impl std::fmt::Display for Characteristic {
+    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+        write!(f, "{}", <Self as crate::Code>::code(*self))
+    }
+}
+
+impl std::str::FromStr for Characteristic {
+    type Err = ();
+    fn from_str(s: &str) -> Result<Self, Self::Err> {
+        <Self as crate::FromCode>::from_code(s).ok_or(())
+    }
+}
+
 impl crate::Code for Characteristic {
     fn code(self) -> &'static str {
         match self {

@@ -3,7 +3,7 @@ import tomllib
 from typing import Iterable
 from py_generate.common import RS, Code, VersionInfo
 from py_generate.find_package_src import get_enum_variants
-from py_generate.rendering import TAB, CodeGenerator, EnumValue
+from py_generate.rendering import CodeGenerator, EnumValue
 
 
 @dataclass
@@ -55,14 +55,14 @@ class GenTryFrom(CodeGenerator):
 /// All the variants of {src_enum_name} that are not matched to any variant of {dest_enum_name}
 #[derive(Debug, PartialEq, Eq, Hash)]
 pub enum {err_from_type} {{
-    {"\n".join(f"{TAB}{TAB}{TAB}{enum_value}," for enum_value in enum_values)}
+    {"\n".join(f"            {enum_value}," for enum_value in enum_values)}
 }}
 
 {self.__feature_gate_gen()}
 impl std::fmt::Display for {err_from_type} {{
     fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {{
         match self {{
-            {"\n".join(f'{TAB}{TAB}{TAB}{err_from_type}::{enum_value} => write!(f, "{enum_value} has no corresponding value in {dest_enum_name}"),' for enum_value in enum_values)}
+            {"\n".join(f'            {err_from_type}::{enum_value} => write!(f, "{enum_value} has no corresponding value in {dest_enum_name}"),' for enum_value in enum_values)}
         }}
     }}
 }} 
@@ -101,8 +101,8 @@ impl std::convert::TryFrom<{enum_name}> for {self.__their_enum_rust_qualified_na
     type Error = {err_from.err_from_type};
     fn try_from(value: {enum_name}) -> Result<Self, Self::Error> {{
         match value {{
-            {"\n".join(f"{TAB}{TAB}{TAB}{enum_name}::{ours} => Ok({self.__their_enum_rust_qualified_name}::{theirs})," for (ours, theirs) in matches.matches)}
-            {"\n".join(f"{TAB}{TAB}{TAB}{enum_name}::{ours.rust_identifier} => Err({err_from.err_from_type}::{ours.rust_identifier})," for ours in matches.our_enum_unmatched)}
+            {"\n".join(f"            {enum_name}::{ours} => Ok({self.__their_enum_rust_qualified_name}::{theirs})," for (ours, theirs) in matches.matches)}
+            {"\n".join(f"            {enum_name}::{ours.rust_identifier} => Err({err_from.err_from_type}::{ours.rust_identifier})," for ours in matches.our_enum_unmatched)}
         }}
     }}
 }}
@@ -122,8 +122,8 @@ impl std::convert::TryFrom<{self.__their_enum_rust_qualified_name}> for {enum_na
     type Error = {err_from.err_from_type};
     fn try_from(value: {self.__their_enum_rust_qualified_name}) -> Result<{enum_name}, Self::Error> {{
         match value {{
-            {"\n".join(f"{TAB}{TAB}{TAB}{self.__their_enum_rust_qualified_name}::{theirs} => Ok({enum_name}::{ours})," for (ours, theirs) in matches.matches)}
-            {"\n".join(f"{TAB}{TAB}{TAB}{self.__their_enum_rust_qualified_name}::{theirs} => Err({err_from.err_from_type}::{theirs})," for theirs in matches.their_enum_unmatched)}
+            {"\n".join(f"            {self.__their_enum_rust_qualified_name}::{theirs} => Ok({enum_name}::{ours})," for (ours, theirs) in matches.matches)}
+            {"\n".join(f"            {self.__their_enum_rust_qualified_name}::{theirs} => Err({err_from.err_from_type}::{theirs})," for theirs in matches.their_enum_unmatched)}
         }}
     }}
 }}

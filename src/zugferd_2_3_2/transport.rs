@@ -46,6 +46,19 @@ pub enum TRANSPORT {
     TransportModeNotApplicable,
 }
 
+impl std::fmt::Display for TRANSPORT {
+    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+        write!(f, "{}", <Self as crate::Code>::code(*self))
+    }
+}
+
+impl std::str::FromStr for TRANSPORT {
+    type Err = ();
+    fn from_str(s: &str) -> Result<Self, Self::Err> {
+        <Self as crate::FromCode>::from_code(s).ok_or(())
+    }
+}
+
 impl crate::Code for TRANSPORT {
     fn code(self) -> &'static str {
         match self {

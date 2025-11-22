@@ -7,7 +7,7 @@ import unicodedata
 from itertools import chain
 
 from py_generate.common import RS, RS_TS, TS, TS_DIR, VersionInfo, Code
-from py_generate.rendering import TAB, CodeGenerator, EnumValue
+from py_generate.rendering import CodeGenerator, EnumValue
 
 
 _words_re = re.compile(r"\b\w+\b", flags=re.UNICODE)
@@ -64,6 +64,45 @@ class EnumGenerate(CodeGenerator):
         )
 
 
+class DisplayTraitGenerate(CodeGenerator):
+    def generate(
+        self,
+        enum_name: str,
+        enum_values: list[EnumValue],
+        version: VersionInfo,
+        rs_file: str,
+    ) -> Code[str]:
+        return RS(
+            f"""
+impl std::fmt::Display for {enum_name} {{
+    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {{
+        write!(f, "{{}}", <Self as crate::Code>::code(*self))
+    }}
+}}
+"""
+        )
+
+
+class FromStrTraitGenerate(CodeGenerator):
+    def generate(
+        self,
+        enum_name: str,
+        enum_values: list[EnumValue],
+        version: VersionInfo,
+        rs_file: str,
+    ) -> Code[str]:
+        return RS(
+            f"""
+impl std::str::FromStr for {enum_name} {{
+    type Err = ();
+    fn from_str(s: &str) -> Result<Self, Self::Err> {{
+        <Self as crate::FromCode>::from_code(s).ok_or(())
+    }}
+}}
+"""
+        )
+
+
 class ToCodeTraitGenerate(CodeGenerator):
     def generate(
         self,
@@ -75,11 +114,11 @@ class ToCodeTraitGenerate(CodeGenerator):
         return RS(
             f"""
 impl crate::Code for {enum_name} {{
-{TAB}fn code(self) -> &'static str {{
-{TAB}{TAB}match self {{
-{"\n".join(f'{TAB}{TAB}{TAB}{enum_name}::{enum_value.rust_identifier} => "{enum_value.code}",' for enum_value in enum_values)}
-{TAB}{TAB}}}
-{TAB}}}
+    fn code(self) -> &'static str {{
+        match self {{
+{"\n".join(f'            {enum_name}::{enum_value.rust_identifier} => "{enum_value.code}",' for enum_value in enum_values)}
+        }}
+    }}
 }}
 """
         )
@@ -97,18 +136,18 @@ class DescriptionTraitGenerate(CodeGenerator):
         return RS_TS(
             rs=f"""
 impl crate::Description for {enum_name} {{
-{TAB}fn description(self) -> &'static str {{
-{TAB}{TAB}match self {{
-{"\n".join(f'{TAB}{TAB}{TAB}{enum_name}::{enum_value.rust_identifier} => "{pattern.sub(" ", enum_value.description)}",' for enum_value in enum_values)}
-{TAB}{TAB}}}
-{TAB}}}
+    fn description(self) -> &'static str {{
+        match self {{
+{"\n".join(f'            {enum_name}::{enum_value.rust_identifier} => "{pattern.sub(" ", enum_value.description)}",' for enum_value in enum_values)}
+        }}
+    }}
 }}
 """,
             ts=f"""
 export function description(value: {enum_name}): string {{
-{TAB}switch (value) {{
-{"\n".join(f'{TAB}{TAB}case {enum_name}.{enum_value.rust_identifier}: return "{pattern.sub(" ", enum_value.description)}";' for enum_value in enum_values)}
-{TAB}}}
+    switch (value) {{
+{"\n".join(f'        case {enum_name}.{enum_value.rust_identifier}: return "{pattern.sub(" ", enum_value.description)}";' for enum_value in enum_values)}
+    }}
 }}
 """,
         )
@@ -134,15 +173,15 @@ class FromCodeTraitGenerate(CodeGenerator):
         return RS(
             f"""
 impl crate::FromCode for {enum_name} {{
-{TAB}fn from_code(code: &str) -> Option<Self>
-{TAB}where
-{TAB}{TAB}Self: Sized
-{TAB}{{
-{TAB}{TAB}match code {{
-{"\n".join(f'{TAB}{TAB}{TAB}"{enum_value.code}" => Some({enum_name}::{enum_value.rust_identifier}),' for enum_value in enum_values)}
-{TAB}{TAB}{TAB}_ => None,
-{TAB}{TAB}}}
-{TAB}}}
+    fn from_code(code: &str) -> Option<Self>
+    where
+        Self: Sized
+    {{
+        match code {{
+{"\n".join(f'            "{enum_value.code}" => Some({enum_name}::{enum_value.rust_identifier}),' for enum_value in enum_values)}
+            _ => None,
+        }}
+    }}
 }}
 """
         )
@@ -161,6 +200,8 @@ def reset_mod_rs(version: VersionInfo):
 
 DEFAULT_GENERATORS = [
     EnumGenerate(),
+    DisplayTraitGenerate(),
+    FromStrTraitGenerate(),
     ToCodeTraitGenerate(),
     DescriptionTraitGenerate(),
     FromCodeTraitGenerate(),

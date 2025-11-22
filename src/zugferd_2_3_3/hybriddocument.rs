@@ -22,6 +22,19 @@ pub enum HybridDocument {
     ThyHybridDocumentContainsAnOrderChange,
 }
 
+impl std::fmt::Display for HybridDocument {
+    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+        write!(f, "{}", <Self as crate::Code>::code(*self))
+    }
+}
+
+impl std::str::FromStr for HybridDocument {
+    type Err = ();
+    fn from_str(s: &str) -> Result<Self, Self::Err> {
+        <Self as crate::FromCode>::from_code(s).ok_or(())
+    }
+}
+
 impl crate::Code for HybridDocument {
     fn code(self) -> &'static str {
         match self {
