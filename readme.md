@@ -32,6 +32,8 @@ Versions supported:
   - Optional `specta` support
 - v0.1.16
   - Added `FromStr` and `Display` trait impls
+- v0.1.17
+  - Made error for `FromStr` more informative with thiserror.
 
 # Future Plans
 

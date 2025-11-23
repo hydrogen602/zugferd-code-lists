@@ -1,6 +1,6 @@
 [package]
 name = "zugferd-code-lists"
-version = "0.1.16"
+version = "0.1.17"
 edition = "2021"
 homepage = "https://github.com/hydrogen602/zugferd-code-lists"
 description = "ZUGFeRD code lists, e.g. languages enum, currencies enum, countries enum, etc."
@@ -16,6 +16,7 @@ iso_country = { version = "0.1.4", optional = true }
 iso_currency = { version = "0.5.3", optional = true }
 serde = { version = "1.0.228", features = ["derive"], optional = true }
 specta = { version = "=2.0.0-rc.22", features = ["derive"], optional = true }
+thiserror = "2.0.17"
 
 [features]
 all = ["iso_country", "iso_currency", "serde", "specta"]

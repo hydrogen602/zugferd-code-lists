@@ -30,6 +30,8 @@ Versions supported:
   - Optional `serde` support
 - v0.1.15
   - Optional `specta` support
+- v0.1.16
+  - Added `FromStr` and `Display` trait impls
 
 # Future Plans
 

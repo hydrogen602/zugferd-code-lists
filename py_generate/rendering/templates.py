@@ -94,9 +94,9 @@ class FromStrTraitGenerate(CodeGenerator):
         return RS(
             f"""
 impl std::str::FromStr for {enum_name} {{
-    type Err = ();
+    type Err = crate::ParseError<Self>;
     fn from_str(s: &str) -> Result<Self, Self::Err> {{
-        <Self as crate::FromCode>::from_code(s).ok_or(())
+        <Self as crate::FromCode>::from_code(s).ok_or_else(|| crate::ParseError::<Self>::new(s.to_owned()))
     }}
 }}
 """
