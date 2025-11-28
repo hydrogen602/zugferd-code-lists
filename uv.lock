@@ -279,7 +279,7 @@ wheels = [
 
 [[package]]
 name = "zugferd-code-lists"
-version = "0.1.12"
+version = "0.1.18"
 source = { virtual = "." }
 dependencies = [
     { name = "openpyxl" },
