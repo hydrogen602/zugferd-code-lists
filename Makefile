@@ -26,12 +26,14 @@ gen-only:
 
 gen-rs: gen-only
 	cargo fmt
+	python -m py_generate repeated-code rs
 	$(MAKE) check-rs
 	cargo build --features all
 
 gen-ts: gen-only
 	python -m py_generate generate-exports
 	cd ts && pnpm exec prettier . --write
+	python -m py_generate repeated-code ts
 	cd ts && pnpm run build
 	cp readme.md ts/README.md
 	cp LICENSE ts/LICENSE
