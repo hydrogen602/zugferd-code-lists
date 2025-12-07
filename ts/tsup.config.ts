@@ -1,7 +1,7 @@
 import { defineConfig } from "tsup";
 
 export default defineConfig({
-  entry: ["src/index.ts", "src/zugferd_2_3_2/*", "src/zugferd_2_3_3/*"],
+  entry: ["src/**/*.ts", "!src/**/*.test.ts"],
   format: ["cjs", "esm"], // Build for commonJS and ESmodules
   dts: true, // Generate declaration file (.d.ts)
   splitting: false,

@@ -22,24 +22,16 @@ class VersionInfo:
 class Version(str, Enum):
     ZF_232 = "2.3.2"
     ZF_233 = "2.3.3"
+    ZF_24 = "2.4"
 
     def version_info(self) -> VersionInfo:
         with_underscore = self.value.replace(".", "_")
 
-        if self == Version.ZF_232:
-            return VersionInfo(
-                version=self.value,
-                spec_dir=Path(f"spec/zugferd_{with_underscore}"),
-                src_dir=Path(f"src/zugferd_{with_underscore}"),
-            )
-        elif self == Version.ZF_233:
-            return VersionInfo(
-                version=self.value,
-                spec_dir=Path(f"spec/zugferd_{with_underscore}"),
-                src_dir=Path(f"src/zugferd_{with_underscore}"),
-            )
-        else:
-            raise ValueError(f"Unknown version: {self}")
+        return VersionInfo(
+            version=self.value,
+            spec_dir=Path(f"spec/zugferd_{with_underscore}"),
+            src_dir=Path(f"src/zugferd_{with_underscore}"),
+        )
 
 
 TS_DIR = Path("ts")

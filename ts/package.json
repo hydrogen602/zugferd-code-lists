@@ -39,15 +39,385 @@
       "import": "./dist/index.mjs",
       "require": "./dist/index.js"
     },
-    "./zugferd_2_3_2": {
-      "types": "./dist/zugferd_2_3_2/index.d.ts",
-      "import": "./dist/zugferd_2_3_2/index.mjs",
-      "require": "./dist/zugferd_2_3_2/index.js"
+    "./zugferd_2_3_3/item": {
+      "types": "./dist/zugferd_2_3_3/item.d.ts",
+      "import": "./dist/zugferd_2_3_3/item.mjs",
+      "require": "./dist/zugferd_2_3_3/item.js"
+    },
+    "./zugferd_2_3_3/filename": {
+      "types": "./dist/zugferd_2_3_3/filename.d.ts",
+      "import": "./dist/zugferd_2_3_3/filename.mjs",
+      "require": "./dist/zugferd_2_3_3/filename.js"
+    },
+    "./zugferd_2_3_3/eas": {
+      "types": "./dist/zugferd_2_3_3/eas.d.ts",
+      "import": "./dist/zugferd_2_3_3/eas.mjs",
+      "require": "./dist/zugferd_2_3_3/eas.js"
+    },
+    "./zugferd_2_3_3/payment": {
+      "types": "./dist/zugferd_2_3_3/payment.d.ts",
+      "import": "./dist/zugferd_2_3_3/payment.mjs",
+      "require": "./dist/zugferd_2_3_3/payment.js"
+    },
+    "./zugferd_2_3_3/date": {
+      "types": "./dist/zugferd_2_3_3/date.d.ts",
+      "import": "./dist/zugferd_2_3_3/date.mjs",
+      "require": "./dist/zugferd_2_3_3/date.js"
+    },
+    "./zugferd_2_3_3/vatex": {
+      "types": "./dist/zugferd_2_3_3/vatex.d.ts",
+      "import": "./dist/zugferd_2_3_3/vatex.mjs",
+      "require": "./dist/zugferd_2_3_3/vatex.js"
+    },
+    "./zugferd_2_3_3/currency": {
+      "types": "./dist/zugferd_2_3_3/currency.d.ts",
+      "import": "./dist/zugferd_2_3_3/currency.mjs",
+      "require": "./dist/zugferd_2_3_3/currency.js"
+    },
+    "./zugferd_2_3_3/text": {
+      "types": "./dist/zugferd_2_3_3/text.d.ts",
+      "import": "./dist/zugferd_2_3_3/text.mjs",
+      "require": "./dist/zugferd_2_3_3/text.js"
+    },
+    "./zugferd_2_3_3/enum1001": {
+      "types": "./dist/zugferd_2_3_3/enum1001.d.ts",
+      "import": "./dist/zugferd_2_3_3/enum1001.mjs",
+      "require": "./dist/zugferd_2_3_3/enum1001.js"
+    },
+    "./zugferd_2_3_3/language": {
+      "types": "./dist/zugferd_2_3_3/language.d.ts",
+      "import": "./dist/zugferd_2_3_3/language.mjs",
+      "require": "./dist/zugferd_2_3_3/language.js"
+    },
+    "./zugferd_2_3_3/unit": {
+      "types": "./dist/zugferd_2_3_3/unit.d.ts",
+      "import": "./dist/zugferd_2_3_3/unit.mjs",
+      "require": "./dist/zugferd_2_3_3/unit.js"
+    },
+    "./zugferd_2_3_3/country": {
+      "types": "./dist/zugferd_2_3_3/country.d.ts",
+      "import": "./dist/zugferd_2_3_3/country.mjs",
+      "require": "./dist/zugferd_2_3_3/country.js"
+    },
+    "./zugferd_2_3_3/allowance": {
+      "types": "./dist/zugferd_2_3_3/allowance.d.ts",
+      "import": "./dist/zugferd_2_3_3/allowance.mjs",
+      "require": "./dist/zugferd_2_3_3/allowance.js"
+    },
+    "./zugferd_2_3_3/icd": {
+      "types": "./dist/zugferd_2_3_3/icd.d.ts",
+      "import": "./dist/zugferd_2_3_3/icd.mjs",
+      "require": "./dist/zugferd_2_3_3/icd.js"
+    },
+    "./zugferd_2_3_3/timecii": {
+      "types": "./dist/zugferd_2_3_3/timecii.d.ts",
+      "import": "./dist/zugferd_2_3_3/timecii.mjs",
+      "require": "./dist/zugferd_2_3_3/timecii.js"
+    },
+    "./zugferd_2_3_3/incoterms": {
+      "types": "./dist/zugferd_2_3_3/incoterms.d.ts",
+      "import": "./dist/zugferd_2_3_3/incoterms.mjs",
+      "require": "./dist/zugferd_2_3_3/incoterms.js"
+    },
+    "./zugferd_2_3_3/fiscalid": {
+      "types": "./dist/zugferd_2_3_3/fiscalid.d.ts",
+      "import": "./dist/zugferd_2_3_3/fiscalid.mjs",
+      "require": "./dist/zugferd_2_3_3/fiscalid.js"
+    },
+    "./zugferd_2_3_3/enum5305": {
+      "types": "./dist/zugferd_2_3_3/enum5305.d.ts",
+      "import": "./dist/zugferd_2_3_3/enum5305.mjs",
+      "require": "./dist/zugferd_2_3_3/enum5305.js"
+    },
+    "./zugferd_2_3_3/hybriddocument": {
+      "types": "./dist/zugferd_2_3_3/hybriddocument.d.ts",
+      "import": "./dist/zugferd_2_3_3/hybriddocument.mjs",
+      "require": "./dist/zugferd_2_3_3/hybriddocument.js"
+    },
+    "./zugferd_2_3_3/enum1153": {
+      "types": "./dist/zugferd_2_3_3/enum1153.d.ts",
+      "import": "./dist/zugferd_2_3_3/enum1153.mjs",
+      "require": "./dist/zugferd_2_3_3/enum1153.js"
+    },
+    "./zugferd_2_3_3/characteristic": {
+      "types": "./dist/zugferd_2_3_3/characteristic.d.ts",
+      "import": "./dist/zugferd_2_3_3/characteristic.mjs",
+      "require": "./dist/zugferd_2_3_3/characteristic.js"
+    },
+    "./zugferd_2_3_3/linestatus": {
+      "types": "./dist/zugferd_2_3_3/linestatus.d.ts",
+      "import": "./dist/zugferd_2_3_3/linestatus.mjs",
+      "require": "./dist/zugferd_2_3_3/linestatus.js"
+    },
+    "./zugferd_2_3_3/vatcat": {
+      "types": "./dist/zugferd_2_3_3/vatcat.d.ts",
+      "import": "./dist/zugferd_2_3_3/vatcat.mjs",
+      "require": "./dist/zugferd_2_3_3/vatcat.js"
+    },
+    "./zugferd_2_3_3/charge": {
+      "types": "./dist/zugferd_2_3_3/charge.d.ts",
+      "import": "./dist/zugferd_2_3_3/charge.mjs",
+      "require": "./dist/zugferd_2_3_3/charge.js"
+    },
+    "./zugferd_2_3_3/hybridversion": {
+      "types": "./dist/zugferd_2_3_3/hybridversion.d.ts",
+      "import": "./dist/zugferd_2_3_3/hybridversion.mjs",
+      "require": "./dist/zugferd_2_3_3/hybridversion.js"
+    },
+    "./zugferd_2_3_3/transport": {
+      "types": "./dist/zugferd_2_3_3/transport.d.ts",
+      "import": "./dist/zugferd_2_3_3/transport.mjs",
+      "require": "./dist/zugferd_2_3_3/transport.js"
     },
     "./zugferd_2_3_3": {
       "types": "./dist/zugferd_2_3_3/index.d.ts",
       "import": "./dist/zugferd_2_3_3/index.mjs",
       "require": "./dist/zugferd_2_3_3/index.js"
+    },
+    "./zugferd_2_3_3/hybridconformance": {
+      "types": "./dist/zugferd_2_3_3/hybridconformance.d.ts",
+      "import": "./dist/zugferd_2_3_3/hybridconformance.mjs",
+      "require": "./dist/zugferd_2_3_3/hybridconformance.js"
+    },
+    "./zugferd_2_3_3/linereason": {
+      "types": "./dist/zugferd_2_3_3/linereason.d.ts",
+      "import": "./dist/zugferd_2_3_3/linereason.mjs",
+      "require": "./dist/zugferd_2_3_3/linereason.js"
+    },
+    "./zugferd_2_3_3/mime": {
+      "types": "./dist/zugferd_2_3_3/mime.d.ts",
+      "import": "./dist/zugferd_2_3_3/mime.mjs",
+      "require": "./dist/zugferd_2_3_3/mime.js"
+    },
+    "./zugferd_2_3_2/item": {
+      "types": "./dist/zugferd_2_3_2/item.d.ts",
+      "import": "./dist/zugferd_2_3_2/item.mjs",
+      "require": "./dist/zugferd_2_3_2/item.js"
+    },
+    "./zugferd_2_3_2/filename": {
+      "types": "./dist/zugferd_2_3_2/filename.d.ts",
+      "import": "./dist/zugferd_2_3_2/filename.mjs",
+      "require": "./dist/zugferd_2_3_2/filename.js"
+    },
+    "./zugferd_2_3_2/eas": {
+      "types": "./dist/zugferd_2_3_2/eas.d.ts",
+      "import": "./dist/zugferd_2_3_2/eas.mjs",
+      "require": "./dist/zugferd_2_3_2/eas.js"
+    },
+    "./zugferd_2_3_2/payment": {
+      "types": "./dist/zugferd_2_3_2/payment.d.ts",
+      "import": "./dist/zugferd_2_3_2/payment.mjs",
+      "require": "./dist/zugferd_2_3_2/payment.js"
+    },
+    "./zugferd_2_3_2/date": {
+      "types": "./dist/zugferd_2_3_2/date.d.ts",
+      "import": "./dist/zugferd_2_3_2/date.mjs",
+      "require": "./dist/zugferd_2_3_2/date.js"
+    },
+    "./zugferd_2_3_2/vatex": {
+      "types": "./dist/zugferd_2_3_2/vatex.d.ts",
+      "import": "./dist/zugferd_2_3_2/vatex.mjs",
+      "require": "./dist/zugferd_2_3_2/vatex.js"
+    },
+    "./zugferd_2_3_2/currency": {
+      "types": "./dist/zugferd_2_3_2/currency.d.ts",
+      "import": "./dist/zugferd_2_3_2/currency.mjs",
+      "require": "./dist/zugferd_2_3_2/currency.js"
+    },
+    "./zugferd_2_3_2/text": {
+      "types": "./dist/zugferd_2_3_2/text.d.ts",
+      "import": "./dist/zugferd_2_3_2/text.mjs",
+      "require": "./dist/zugferd_2_3_2/text.js"
+    },
+    "./zugferd_2_3_2/enum1001": {
+      "types": "./dist/zugferd_2_3_2/enum1001.d.ts",
+      "import": "./dist/zugferd_2_3_2/enum1001.mjs",
+      "require": "./dist/zugferd_2_3_2/enum1001.js"
+    },
+    "./zugferd_2_3_2/language": {
+      "types": "./dist/zugferd_2_3_2/language.d.ts",
+      "import": "./dist/zugferd_2_3_2/language.mjs",
+      "require": "./dist/zugferd_2_3_2/language.js"
+    },
+    "./zugferd_2_3_2/unit": {
+      "types": "./dist/zugferd_2_3_2/unit.d.ts",
+      "import": "./dist/zugferd_2_3_2/unit.mjs",
+      "require": "./dist/zugferd_2_3_2/unit.js"
+    },
+    "./zugferd_2_3_2/country": {
+      "types": "./dist/zugferd_2_3_2/country.d.ts",
+      "import": "./dist/zugferd_2_3_2/country.mjs",
+      "require": "./dist/zugferd_2_3_2/country.js"
+    },
+    "./zugferd_2_3_2/allowance": {
+      "types": "./dist/zugferd_2_3_2/allowance.d.ts",
+      "import": "./dist/zugferd_2_3_2/allowance.mjs",
+      "require": "./dist/zugferd_2_3_2/allowance.js"
+    },
+    "./zugferd_2_3_2/icd": {
+      "types": "./dist/zugferd_2_3_2/icd.d.ts",
+      "import": "./dist/zugferd_2_3_2/icd.mjs",
+      "require": "./dist/zugferd_2_3_2/icd.js"
+    },
+    "./zugferd_2_3_2/timecii": {
+      "types": "./dist/zugferd_2_3_2/timecii.d.ts",
+      "import": "./dist/zugferd_2_3_2/timecii.mjs",
+      "require": "./dist/zugferd_2_3_2/timecii.js"
+    },
+    "./zugferd_2_3_2/incoterms": {
+      "types": "./dist/zugferd_2_3_2/incoterms.d.ts",
+      "import": "./dist/zugferd_2_3_2/incoterms.mjs",
+      "require": "./dist/zugferd_2_3_2/incoterms.js"
+    },
+    "./zugferd_2_3_2/enum5305": {
+      "types": "./dist/zugferd_2_3_2/enum5305.d.ts",
+      "import": "./dist/zugferd_2_3_2/enum5305.mjs",
+      "require": "./dist/zugferd_2_3_2/enum5305.js"
+    },
+    "./zugferd_2_3_2/hybriddocument": {
+      "types": "./dist/zugferd_2_3_2/hybriddocument.d.ts",
+      "import": "./dist/zugferd_2_3_2/hybriddocument.mjs",
+      "require": "./dist/zugferd_2_3_2/hybriddocument.js"
+    },
+    "./zugferd_2_3_2/enum1153": {
+      "types": "./dist/zugferd_2_3_2/enum1153.d.ts",
+      "import": "./dist/zugferd_2_3_2/enum1153.mjs",
+      "require": "./dist/zugferd_2_3_2/enum1153.js"
+    },
+    "./zugferd_2_3_2/characteristic": {
+      "types": "./dist/zugferd_2_3_2/characteristic.d.ts",
+      "import": "./dist/zugferd_2_3_2/characteristic.mjs",
+      "require": "./dist/zugferd_2_3_2/characteristic.js"
+    },
+    "./zugferd_2_3_2/linestatus": {
+      "types": "./dist/zugferd_2_3_2/linestatus.d.ts",
+      "import": "./dist/zugferd_2_3_2/linestatus.mjs",
+      "require": "./dist/zugferd_2_3_2/linestatus.js"
+    },
+    "./zugferd_2_3_2/vatcat": {
+      "types": "./dist/zugferd_2_3_2/vatcat.d.ts",
+      "import": "./dist/zugferd_2_3_2/vatcat.mjs",
+      "require": "./dist/zugferd_2_3_2/vatcat.js"
+    },
+    "./zugferd_2_3_2/charge": {
+      "types": "./dist/zugferd_2_3_2/charge.d.ts",
+      "import": "./dist/zugferd_2_3_2/charge.mjs",
+      "require": "./dist/zugferd_2_3_2/charge.js"
+    },
+    "./zugferd_2_3_2/hybridversion": {
+      "types": "./dist/zugferd_2_3_2/hybridversion.d.ts",
+      "import": "./dist/zugferd_2_3_2/hybridversion.mjs",
+      "require": "./dist/zugferd_2_3_2/hybridversion.js"
+    },
+    "./zugferd_2_3_2/transport": {
+      "types": "./dist/zugferd_2_3_2/transport.d.ts",
+      "import": "./dist/zugferd_2_3_2/transport.mjs",
+      "require": "./dist/zugferd_2_3_2/transport.js"
+    },
+    "./zugferd_2_3_2": {
+      "types": "./dist/zugferd_2_3_2/index.d.ts",
+      "import": "./dist/zugferd_2_3_2/index.mjs",
+      "require": "./dist/zugferd_2_3_2/index.js"
+    },
+    "./zugferd_2_3_2/hybridconformance": {
+      "types": "./dist/zugferd_2_3_2/hybridconformance.d.ts",
+      "import": "./dist/zugferd_2_3_2/hybridconformance.mjs",
+      "require": "./dist/zugferd_2_3_2/hybridconformance.js"
+    },
+    "./zugferd_2_3_2/linereason": {
+      "types": "./dist/zugferd_2_3_2/linereason.d.ts",
+      "import": "./dist/zugferd_2_3_2/linereason.mjs",
+      "require": "./dist/zugferd_2_3_2/linereason.js"
+    },
+    "./zugferd_2_3_2/mime": {
+      "types": "./dist/zugferd_2_3_2/mime.d.ts",
+      "import": "./dist/zugferd_2_3_2/mime.mjs",
+      "require": "./dist/zugferd_2_3_2/mime.js"
+    },
+    "./zugferd_2_4/item": {
+      "types": "./dist/zugferd_2_4/item.d.ts",
+      "import": "./dist/zugferd_2_4/item.mjs",
+      "require": "./dist/zugferd_2_4/item.js"
+    },
+    "./zugferd_2_4/eas": {
+      "types": "./dist/zugferd_2_4/eas.d.ts",
+      "import": "./dist/zugferd_2_4/eas.mjs",
+      "require": "./dist/zugferd_2_4/eas.js"
+    },
+    "./zugferd_2_4/payment": {
+      "types": "./dist/zugferd_2_4/payment.d.ts",
+      "import": "./dist/zugferd_2_4/payment.mjs",
+      "require": "./dist/zugferd_2_4/payment.js"
+    },
+    "./zugferd_2_4/vatex": {
+      "types": "./dist/zugferd_2_4/vatex.d.ts",
+      "import": "./dist/zugferd_2_4/vatex.mjs",
+      "require": "./dist/zugferd_2_4/vatex.js"
+    },
+    "./zugferd_2_4/currency": {
+      "types": "./dist/zugferd_2_4/currency.d.ts",
+      "import": "./dist/zugferd_2_4/currency.mjs",
+      "require": "./dist/zugferd_2_4/currency.js"
+    },
+    "./zugferd_2_4/text": {
+      "types": "./dist/zugferd_2_4/text.d.ts",
+      "import": "./dist/zugferd_2_4/text.mjs",
+      "require": "./dist/zugferd_2_4/text.js"
+    },
+    "./zugferd_2_4/enum1001": {
+      "types": "./dist/zugferd_2_4/enum1001.d.ts",
+      "import": "./dist/zugferd_2_4/enum1001.mjs",
+      "require": "./dist/zugferd_2_4/enum1001.js"
+    },
+    "./zugferd_2_4/unit": {
+      "types": "./dist/zugferd_2_4/unit.d.ts",
+      "import": "./dist/zugferd_2_4/unit.mjs",
+      "require": "./dist/zugferd_2_4/unit.js"
+    },
+    "./zugferd_2_4/country": {
+      "types": "./dist/zugferd_2_4/country.d.ts",
+      "import": "./dist/zugferd_2_4/country.mjs",
+      "require": "./dist/zugferd_2_4/country.js"
+    },
+    "./zugferd_2_4/allowance": {
+      "types": "./dist/zugferd_2_4/allowance.d.ts",
+      "import": "./dist/zugferd_2_4/allowance.mjs",
+      "require": "./dist/zugferd_2_4/allowance.js"
+    },
+    "./zugferd_2_4/icd": {
+      "types": "./dist/zugferd_2_4/icd.d.ts",
+      "import": "./dist/zugferd_2_4/icd.mjs",
+      "require": "./dist/zugferd_2_4/icd.js"
+    },
+    "./zugferd_2_4/timecii": {
+      "types": "./dist/zugferd_2_4/timecii.d.ts",
+      "import": "./dist/zugferd_2_4/timecii.mjs",
+      "require": "./dist/zugferd_2_4/timecii.js"
+    },
+    "./zugferd_2_4/enum5305": {
+      "types": "./dist/zugferd_2_4/enum5305.d.ts",
+      "import": "./dist/zugferd_2_4/enum5305.mjs",
+      "require": "./dist/zugferd_2_4/enum5305.js"
+    },
+    "./zugferd_2_4/enum1153": {
+      "types": "./dist/zugferd_2_4/enum1153.d.ts",
+      "import": "./dist/zugferd_2_4/enum1153.mjs",
+      "require": "./dist/zugferd_2_4/enum1153.js"
+    },
+    "./zugferd_2_4/charge": {
+      "types": "./dist/zugferd_2_4/charge.d.ts",
+      "import": "./dist/zugferd_2_4/charge.mjs",
+      "require": "./dist/zugferd_2_4/charge.js"
+    },
+    "./zugferd_2_4": {
+      "types": "./dist/zugferd_2_4/index.d.ts",
+      "import": "./dist/zugferd_2_4/index.mjs",
+      "require": "./dist/zugferd_2_4/index.js"
+    },
+    "./zugferd_2_4/mime": {
+      "types": "./dist/zugferd_2_4/mime.d.ts",
+      "import": "./dist/zugferd_2_4/mime.mjs",
+      "require": "./dist/zugferd_2_4/mime.js"
     }
   }
 }

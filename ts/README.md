@@ -38,3 +38,9 @@ Versions supported:
 # Future Plans
 
 - `TryFrom` impls for conversion between versions
+
+# Adding a ZUGFeRD version
+
+See the [ZUGFeRD spec files readme](spec/readmd.md) for instructions on how to add a new ZUGFeRD specification files.
+
+Then add the version to the `Version` enum in `py_generate/common.py` and run `make gen` to generate the definitions.

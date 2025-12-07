@@ -150,6 +150,10 @@ ALL_BASIC = [
         extra_columns=[5],
         header_index=5,
         rust_type="VATCAT",
+        version_filter=[
+            Version.ZF_232,
+            Version.ZF_233,
+        ],  # This sheet has no table in 2.4
     ),
     BasicInfo(
         sheet_name="Text",
@@ -212,64 +216,108 @@ ALL_BASIC = [
         code_column=1,
         name_column=2,
         extra_columns=[3],
+        version_filter=[
+            Version.ZF_232,
+            Version.ZF_233,
+        ],  # This sheet does not exist in 2.4
     ),
     BasicInfo(
         sheet_name="Language",
         code_column=1,
         name_column=2,
+        version_filter=[
+            Version.ZF_232,
+            Version.ZF_233,
+        ],  # This sheet has no table in 2.4
     ),
     BasicInfo(  # TODO: code list column - enum?
         sheet_name="Characteristic",
         code_column=2,
         name_column=3,
         extra_columns=[1, 4],
+        version_filter=[
+            Version.ZF_232,
+            Version.ZF_233,
+        ],  # This sheet has no table in 2.4
     ),
     BasicInfo(
         sheet_name="Line Reason",
         rust_type="LineReason",
         code_column=1,
         name_column=2,
+        version_filter=[
+            Version.ZF_232,
+            Version.ZF_233,
+        ],  # This sheet has no table in 2.4
     ),
     BasicInfo(
         sheet_name="INCOTERMS",
         code_column=1,
         name_column=2,
+        version_filter=[
+            Version.ZF_232,
+            Version.ZF_233,
+        ],  # This sheet has no table in 2.4
     ),
     BasicInfo(
         sheet_name="TRANSPORT",
         code_column=1,
         name_column=2,
         extra_columns=[3],
+        version_filter=[
+            Version.ZF_232,
+            Version.ZF_233,
+        ],  # This sheet has no table in 2.4
     ),
     BasicInfo(
         sheet_name="Date",
         code_column=1,
         name_column=2,
         extra_columns=[3],
+        version_filter=[
+            Version.ZF_232,
+            Version.ZF_233,
+        ],  # This sheet has no table in 2.4
     ),
     BasicInfo(  # TODO: Usage rule column - enum?
         sheet_name="HybridDocument",
         code_column=1,
         name_column=2,
         extra_columns=[3],
+        version_filter=[
+            Version.ZF_232,
+            Version.ZF_233,
+        ],  # This sheet has no table in 2.4
     ),
     BasicInfo(  # TODO: Usage rule column - enum?
         sheet_name="HybridConformance",
         code_column=1,
         name_column=2,
         extra_columns=[3, 4],
+        version_filter=[
+            Version.ZF_232,
+            Version.ZF_233,
+        ],  # This sheet has no table in 2.4
     ),
     BasicInfo(  # TODO: Usage rule column - enum?
         sheet_name="Filename",
         code_column=1,
         name_column=2,
         extra_columns=[3],
+        version_filter=[
+            Version.ZF_232,
+            Version.ZF_233,
+        ],  # This sheet has no table in 2.4
     ),
     BasicInfo(
         sheet_name="HybridVersion",
         code_column=1,
         name_column=2,
         extra_columns=[3],
+        version_filter=[
+            Version.ZF_232,
+            Version.ZF_233,
+        ],  # This sheet has no table in 2.4
     ),
     BasicInfo(
         sheet_name="Time",
