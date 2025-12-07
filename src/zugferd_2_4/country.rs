@@ -1,10 +1,10 @@
 #![allow(non_camel_case_types)]
 
-    #[cfg_attr(feature = "specta", derive(specta::Type))]
-    #[cfg_attr(feature = "serde", derive(serde::Serialize, serde::Deserialize))]
-    #[derive(Debug, PartialEq, Eq, PartialOrd, Ord, Clone, Copy, Hash)]
-    pub enum Country {
-        /// Andorra
+#[cfg_attr(feature = "specta", derive(specta::Type))]
+#[cfg_attr(feature = "serde", derive(serde::Serialize, serde::Deserialize))]
+#[derive(Debug, PartialEq, Eq, PartialOrd, Ord, Clone, Copy, Hash)]
+pub enum Country {
+    /// Andorra
     Andorra,
     /// United Arab Emirates (the)
     UnitedArabEmirates,
@@ -506,8 +506,8 @@
     Kosovo,
     /// United Kingdom (Northern Ireland)
     UnitedKingdomNorthernIreland,
-    }
-    
+}
+
 impl std::fmt::Display for Country {
     fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
         write!(f, "{}", <Self as crate::Code>::code(*self))
@@ -517,7 +517,8 @@ impl std::fmt::Display for Country {
 impl std::str::FromStr for Country {
     type Err = crate::ParseError<Self>;
     fn from_str(s: &str) -> Result<Self, Self::Err> {
-        <Self as crate::FromCode>::from_code(s).ok_or_else(|| crate::ParseError::<Self>::new(s.to_owned()))
+        <Self as crate::FromCode>::from_code(s)
+            .ok_or_else(|| crate::ParseError::<Self>::new(s.to_owned()))
     }
 }
 
@@ -858,7 +859,9 @@ impl crate::Description for Country {
             Country::FaroeIslands => "Faroe Islands (the)",
             Country::France => "France",
             Country::Gabon => "Gabon",
-            Country::UnitedKingdomGreatBritainAndNorthernIreland => "United Kingdom of Great Britain and Northern Ireland (the)",
+            Country::UnitedKingdomGreatBritainAndNorthernIreland => {
+                "United Kingdom of Great Britain and Northern Ireland (the)"
+            }
             Country::Grenada => "Grenada",
             Country::Georgia => "Georgia",
             Country::FrenchGuiana => "French Guiana",
@@ -871,7 +874,9 @@ impl crate::Description for Country {
             Country::Guadeloupe => "Guadeloupe",
             Country::EquatorialGuinea => "Equatorial Guinea",
             Country::Greece => "Greece",
-            Country::SouthGeorgiaAndSouthSandwichIslands => "South Georgia and the South Sandwich Islands",
+            Country::SouthGeorgiaAndSouthSandwichIslands => {
+                "South Georgia and the South Sandwich Islands"
+            }
             Country::Guatemala => "Guatemala",
             Country::Guam => "Guam",
             Country::GuineaBissau => "Guinea-Bissau",
@@ -902,7 +907,9 @@ impl crate::Description for Country {
             Country::Kiribati => "Kiribati",
             Country::Comoros => "Comoros (the)",
             Country::SaintKittsAndNevis => "Saint Kitts and Nevis",
-            Country::KoreaDemocraticPeoplesRepublic => "Korea (the Democratic People's Republic of)",
+            Country::KoreaDemocraticPeoplesRepublic => {
+                "Korea (the Democratic People's Republic of)"
+            }
             Country::KoreaRepublic => "Korea (the Republic of)",
             Country::Kuwait => "Kuwait",
             Country::CaymanIslands => "Cayman Islands (the)",
@@ -980,7 +987,9 @@ impl crate::Description for Country {
             Country::Sudan => "Sudan (the)",
             Country::Sweden => "Sweden",
             Country::Singapore => "Singapore",
-            Country::SaintHelenaAscensionAndTristanDaCunha => "Saint Helena, Ascension and Tristan da Cunha",
+            Country::SaintHelenaAscensionAndTristanDaCunha => {
+                "Saint Helena, Ascension and Tristan da Cunha"
+            }
             Country::Slovenia => "Slovenia",
             Country::SvalbardAndJanMayen => "Svalbard and Jan Mayen",
             Country::Slovakia => "Slovakia",
@@ -1013,7 +1022,9 @@ impl crate::Description for Country {
             Country::TanzaniaUnitedRepublic => "Tanzania, the United Republic of",
             Country::Ukraine => "Ukraine",
             Country::Uganda => "Uganda",
-            Country::UnitedStatesMinorOutlyingIslands => "United States Minor Outlying Islands (the)",
+            Country::UnitedStatesMinorOutlyingIslands => {
+                "United States Minor Outlying Islands (the)"
+            }
             Country::UnitedStatesAmerica => "United States of America (the)",
             Country::Uruguay => "Uruguay",
             Country::Uzbekistan => "Uzbekistan",
@@ -1040,7 +1051,7 @@ impl crate::Description for Country {
 impl crate::FromCode for Country {
     fn from_code(code: &str) -> Option<Self>
     where
-        Self: Sized
+        Self: Sized,
     {
         match code {
             "AD" => Some(Country::Andorra),
@@ -1304,7 +1315,7 @@ impl std::convert::TryFrom<Country> for iso_country::Country {
     type Error = ErrFromCountry;
     fn try_from(value: Country) -> Result<Self, Self::Error> {
         match value {
-                        Country::Andorra => Ok(iso_country::Country::AD),
+            Country::Andorra => Ok(iso_country::Country::AD),
             Country::UnitedArabEmirates => Ok(iso_country::Country::AE),
             Country::Afghanistan => Ok(iso_country::Country::AF),
             Country::AntiguaAndBarbuda => Ok(iso_country::Country::AG),
@@ -1553,41 +1564,47 @@ impl std::convert::TryFrom<Country> for iso_country::Country {
             Country::SouthAfrica => Ok(iso_country::Country::ZA),
             Country::Zambia => Ok(iso_country::Country::ZM),
             Country::Zimbabwe => Ok(iso_country::Country::ZW),
-                        Country::Kosovo => Err(ErrFromCountry::Kosovo),
-            Country::UnitedKingdomNorthernIreland => Err(ErrFromCountry::UnitedKingdomNorthernIreland),
+            Country::Kosovo => Err(ErrFromCountry::Kosovo),
+            Country::UnitedKingdomNorthernIreland => {
+                Err(ErrFromCountry::UnitedKingdomNorthernIreland)
+            }
         }
     }
 }
-
 
 #[cfg(feature = "iso_country")]
 /// All the variants of Country that are not matched to any variant of iso_country::Country
 #[derive(Debug, PartialEq, Eq, Hash)]
 pub enum ErrFromCountry {
-                Kosovo,
-            UnitedKingdomNorthernIreland,
+    Kosovo,
+    UnitedKingdomNorthernIreland,
 }
 
 #[cfg(feature = "iso_country")]
 impl std::fmt::Display for ErrFromCountry {
     fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
         match self {
-                        ErrFromCountry::Kosovo => write!(f, "Kosovo has no corresponding value in iso_country::Country"),
-            ErrFromCountry::UnitedKingdomNorthernIreland => write!(f, "UnitedKingdomNorthernIreland has no corresponding value in iso_country::Country"),
+            ErrFromCountry::Kosovo => write!(
+                f,
+                "Kosovo has no corresponding value in iso_country::Country"
+            ),
+            ErrFromCountry::UnitedKingdomNorthernIreland => write!(
+                f,
+                "UnitedKingdomNorthernIreland has no corresponding value in iso_country::Country"
+            ),
         }
     }
-} 
+}
 
 #[cfg(feature = "iso_country")]
 impl std::error::Error for ErrFromCountry {}
-
 
 #[cfg(feature = "iso_country")]
 impl std::convert::TryFrom<iso_country::Country> for Country {
     type Error = ErrFromIsoCountryCountry;
     fn try_from(value: iso_country::Country) -> Result<Country, Self::Error> {
         match value {
-                        iso_country::Country::AD => Ok(Country::Andorra),
+            iso_country::Country::AD => Ok(Country::Andorra),
             iso_country::Country::AE => Ok(Country::UnitedArabEmirates),
             iso_country::Country::AF => Ok(Country::Afghanistan),
             iso_country::Country::AG => Ok(Country::AntiguaAndBarbuda),
@@ -1836,28 +1853,28 @@ impl std::convert::TryFrom<iso_country::Country> for Country {
             iso_country::Country::ZA => Ok(Country::SouthAfrica),
             iso_country::Country::ZM => Ok(Country::Zambia),
             iso_country::Country::ZW => Ok(Country::Zimbabwe),
-                        iso_country::Country::Unspecified => Err(ErrFromIsoCountryCountry::Unspecified),
+            iso_country::Country::Unspecified => Err(ErrFromIsoCountryCountry::Unspecified),
         }
     }
 }
-
 
 #[cfg(feature = "iso_country")]
 /// All the variants of iso_country::Country that are not matched to any variant of Country
 #[derive(Debug, PartialEq, Eq, Hash)]
 pub enum ErrFromIsoCountryCountry {
-                Unspecified,
+    Unspecified,
 }
 
 #[cfg(feature = "iso_country")]
 impl std::fmt::Display for ErrFromIsoCountryCountry {
     fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
         match self {
-                        ErrFromIsoCountryCountry::Unspecified => write!(f, "Unspecified has no corresponding value in Country"),
+            ErrFromIsoCountryCountry::Unspecified => {
+                write!(f, "Unspecified has no corresponding value in Country")
+            }
         }
     }
-} 
+}
 
 #[cfg(feature = "iso_country")]
 impl std::error::Error for ErrFromIsoCountryCountry {}
-

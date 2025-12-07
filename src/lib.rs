@@ -2,6 +2,7 @@ use std::marker::PhantomData;
 
 pub mod zugferd_2_3_2;
 pub mod zugferd_2_3_3;
+pub mod zugferd_2_4;
 
 pub trait Code {
     fn code(self) -> &'static str;
@@ -25,6 +26,9 @@ mod test {
 
     #[allow(unused_imports)]
     use crate::zugferd_2_3_3::Country::Germany as Germany233;
+
+    #[allow(unused_imports)]
+    use crate::zugferd_2_4::Country::Germany as Germany24;
 }
 
 #[derive(Debug, thiserror::Error, Clone, PartialEq, Eq, PartialOrd, Ord, Hash)]

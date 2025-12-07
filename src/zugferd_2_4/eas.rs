@@ -1,10 +1,10 @@
 #![allow(non_camel_case_types)]
 
-    #[cfg_attr(feature = "specta", derive(specta::Type))]
-    #[cfg_attr(feature = "serde", derive(serde::Serialize, serde::Deserialize))]
-    #[derive(Debug, PartialEq, Eq, PartialOrd, Ord, Clone, Copy, Hash)]
-    pub enum EAS {
-        /// System Information et Repertoire des Entreprise et des Etablissements: SIRENE
+#[cfg_attr(feature = "specta", derive(specta::Type))]
+#[cfg_attr(feature = "serde", derive(serde::Serialize, serde::Deserialize))]
+#[derive(Debug, PartialEq, Eq, PartialOrd, Ord, Clone, Copy, Hash)]
+pub enum EAS {
+    /// System Information et Repertoire des Entreprise et des Etablissements: SIRENE
     SystemInformationEtRepertoireDesEntrepriseEtDesEtablissementsSirene,
     /// Organisationsnummer
     Organisationsnummer,
@@ -38,9 +38,9 @@
     IdentificationNumberEconomicSubjectIcoActOnStateStatistics29November200127,
     /// Teikoku Company Code
     TeikokuCompanyCode,
-    /// Odette International Limited 
+    /// Odette International Limited
     OdetteInternationalLimited,
-    /// Numéro d'identification suisse des enterprises (IDE), Swiss Unique Business Identification Number (UIDB) 
+    /// Numéro d'identification suisse des enterprises (IDE), Swiss Unique Business Identification Number (UIDB)
     NuméroDidentificationSuisseDesEnterprisesIdeSwissUniqueBusinessIdentificationNumberUidb,
     /// DIGSTORG
     Digstorg,
@@ -50,7 +50,7 @@
     DutchOriginatorsIdentificationNumber,
     /// Centre of Registers and Information Systems of the Ministry of Justice
     CentreRegistersAndInformationSystemsMinistryJustice,
-    /// Enhetsregisteret ved Bronnoysundregisterne 
+    /// Enhetsregisteret ved Bronnoysundregisterne
     EnhetsregisteretVedBronnoysundregisterne,
     /// UBL.BE party identifier
     UblBePartyIdentifier,
@@ -110,17 +110,17 @@
     TaxIdentificationTaxIdNigeria,
     /// Hungary VAT number
     HungaryVatNumber,
-    /// Business Registers Network 
+    /// Business Registers Network
     BusinessRegistersNetwork,
-    /// Österreichische Umsatzsteuer-Identifikationsnummer 
+    /// Österreichische Umsatzsteuer-Identifikationsnummer
     ÖsterreichischeUmsatzsteuerIdentifikationsnummer,
     /// Österreichisches Verwaltungs bzw. Organisationskennzeichen
     ÖsterreichischesVerwaltungsBzwOrganisationskennzeichen,
     /// SOCIETY FOR WORLDWIDE INTERBANK FINANCIAL, TELECOMMUNICATION S.W.I.F.T
     SocietyForWorldwideInterbankFinancialTelecommunicationSWIFT,
-    /// Kennziffer des Unternehmensregisters 
+    /// Kennziffer des Unternehmensregisters
     KennzifferDesUnternehmensregisters,
-    /// Agencia Española de Administración Tributaria 
+    /// Agencia Española de Administración Tributaria
     AgenciaEspañolaDeAdministraciónTributaria,
     /// Andorra VAT number
     AndorraVatNumber,
@@ -194,14 +194,14 @@
     OFTPOdetteFileTransferProtocol,
     /// X.400 address for mail text
     X400AddressForMailText,
-    /// AS2 exchange 
+    /// AS2 exchange
     As2Exchange,
     /// File Transfer Protocol
     FileTransferProtocol,
     /// Electronic mail (SMPT)
     ElectronicMailSmpt,
-    }
-    
+}
+
 impl std::fmt::Display for EAS {
     fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
         write!(f, "{}", <Self as crate::Code>::code(*self))
@@ -211,7 +211,8 @@ impl std::fmt::Display for EAS {
 impl std::str::FromStr for EAS {
     type Err = crate::ParseError<Self>;
     fn from_str(s: &str) -> Result<Self, Self::Err> {
-        <Self as crate::FromCode>::from_code(s).ok_or_else(|| crate::ParseError::<Self>::new(s.to_owned()))
+        <Self as crate::FromCode>::from_code(s)
+            .ok_or_else(|| crate::ParseError::<Self>::new(s.to_owned()))
     }
 }
 
@@ -428,7 +429,7 @@ impl crate::Description for EAS {
 impl crate::FromCode for EAS {
     fn from_code(code: &str) -> Option<Self>
     where
-        Self: Sized
+        Self: Sized,
     {
         match code {
             "0002" => Some(EAS::SystemInformationEtRepertoireDesEntrepriseEtDesEtablissementsSirene),

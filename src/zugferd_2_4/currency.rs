@@ -1,10 +1,10 @@
 #![allow(non_camel_case_types)]
 
-    #[cfg_attr(feature = "specta", derive(specta::Type))]
-    #[cfg_attr(feature = "serde", derive(serde::Serialize, serde::Deserialize))]
-    #[derive(Debug, PartialEq, Eq, PartialOrd, Ord, Clone, Copy, Hash)]
-    pub enum Currency {
-        /// UAE Dirham
+#[cfg_attr(feature = "specta", derive(specta::Type))]
+#[cfg_attr(feature = "serde", derive(serde::Serialize, serde::Deserialize))]
+#[derive(Debug, PartialEq, Eq, PartialOrd, Ord, Clone, Copy, Hash)]
+pub enum Currency {
+    /// UAE Dirham
     UaeDirham,
     /// Afghani
     Afghani,
@@ -154,7 +154,7 @@
     Som,
     /// Riel
     Riel,
-    /// Comorian Franc 
+    /// Comorian Franc
     ComorianFranc,
     /// North Korean Won
     NorthKoreanWon,
@@ -362,8 +362,8 @@
     ZambianKwacha,
     /// Zimbabwe Gold
     ZimbabweGold,
-    }
-    
+}
+
 impl std::fmt::Display for Currency {
     fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
         write!(f, "{}", <Self as crate::Code>::code(*self))
@@ -373,7 +373,8 @@ impl std::fmt::Display for Currency {
 impl std::str::FromStr for Currency {
     type Err = crate::ParseError<Self>;
     fn from_str(s: &str) -> Result<Self, Self::Err> {
-        <Self as crate::FromCode>::from_code(s).ok_or_else(|| crate::ParseError::<Self>::new(s.to_owned()))
+        <Self as crate::FromCode>::from_code(s)
+            .ok_or_else(|| crate::ParseError::<Self>::new(s.to_owned()))
     }
 }
 
@@ -727,10 +728,18 @@ impl crate::Description for Currency {
             Currency::CfaFrancBeac => "CFA Franc BEAC",
             Currency::Silver => "Silver",
             Currency::Gold => "Gold",
-            Currency::BondMarketsUnitEuropeanCompositeUnitEurco => "Bond Markets Unit European Composite Unit (EURCO)",
-            Currency::BondMarketsUnitEuropeanMonetaryUnitEMU6 => "Bond Markets Unit European Monetary Unit (E.M.U.-6)",
-            Currency::BondMarketsUnitEuropeanUnitAccount9EUA9 => "Bond Markets Unit European Unit of Account 9 (E.U.A.-9)",
-            Currency::BondMarketsUnitEuropeanUnitAccount17EUA17 => "Bond Markets Unit European Unit of Account 17 (E.U.A.-17)",
+            Currency::BondMarketsUnitEuropeanCompositeUnitEurco => {
+                "Bond Markets Unit European Composite Unit (EURCO)"
+            }
+            Currency::BondMarketsUnitEuropeanMonetaryUnitEMU6 => {
+                "Bond Markets Unit European Monetary Unit (E.M.U.-6)"
+            }
+            Currency::BondMarketsUnitEuropeanUnitAccount9EUA9 => {
+                "Bond Markets Unit European Unit of Account 9 (E.U.A.-9)"
+            }
+            Currency::BondMarketsUnitEuropeanUnitAccount17EUA17 => {
+                "Bond Markets Unit European Unit of Account 17 (E.U.A.-17)"
+            }
             Currency::EastCaribbeanDollar => "East Caribbean Dollar",
             Currency::SdrSpecialDrawingRight => "SDR (Special Drawing Right)",
             Currency::CfaFrancBceao => "CFA Franc BCEAO",
@@ -738,9 +747,13 @@ impl crate::Description for Currency {
             Currency::CfpFranc => "CFP Franc",
             Currency::Platinum => "Platinum",
             Currency::Sucre => "Sucre",
-            Currency::CodesSpecificallyReservedForTestingPurposes => "Codes specifically reserved for testing purposes",
+            Currency::CodesSpecificallyReservedForTestingPurposes => {
+                "Codes specifically reserved for testing purposes"
+            }
             Currency::AdbUnitAccount => "ADB Unit of Account",
-            Currency::TheCodesAssignedForTransactionsWhereNoCurrencyIsInvolved => "The codes assigned for transactions where no currency is involved",
+            Currency::TheCodesAssignedForTransactionsWhereNoCurrencyIsInvolved => {
+                "The codes assigned for transactions where no currency is involved"
+            }
             Currency::YemeniRial => "Yemeni Rial",
             Currency::Rand => "Rand",
             Currency::ZambianKwacha => "Zambian Kwacha",
@@ -752,7 +765,7 @@ impl crate::Description for Currency {
 impl crate::FromCode for Currency {
     fn from_code(code: &str) -> Option<Self>
     where
-        Self: Sized
+        Self: Sized,
     {
         match code {
             "AED" => Some(Currency::UaeDirham),
@@ -944,7 +957,7 @@ impl std::convert::TryFrom<Currency> for iso_currency::Currency {
     type Error = ErrFromCurrency;
     fn try_from(value: Currency) -> Result<Self, Self::Error> {
         match value {
-                        Currency::UaeDirham => Ok(iso_currency::Currency::AED),
+            Currency::UaeDirham => Ok(iso_currency::Currency::AED),
             Currency::Afghani => Ok(iso_currency::Currency::AFN),
             Currency::Lek => Ok(iso_currency::Currency::ALL),
             Currency::ArmenianDram => Ok(iso_currency::Currency::AMD),
@@ -1114,48 +1127,58 @@ impl std::convert::TryFrom<Currency> for iso_currency::Currency {
             Currency::CfpFranc => Ok(iso_currency::Currency::XPF),
             Currency::Platinum => Ok(iso_currency::Currency::XPT),
             Currency::Sucre => Ok(iso_currency::Currency::XSU),
-            Currency::CodesSpecificallyReservedForTestingPurposes => Ok(iso_currency::Currency::XTS),
+            Currency::CodesSpecificallyReservedForTestingPurposes => {
+                Ok(iso_currency::Currency::XTS)
+            }
             Currency::AdbUnitAccount => Ok(iso_currency::Currency::XUA),
-            Currency::TheCodesAssignedForTransactionsWhereNoCurrencyIsInvolved => Ok(iso_currency::Currency::XXX),
+            Currency::TheCodesAssignedForTransactionsWhereNoCurrencyIsInvolved => {
+                Ok(iso_currency::Currency::XXX)
+            }
             Currency::YemeniRial => Ok(iso_currency::Currency::YER),
             Currency::Rand => Ok(iso_currency::Currency::ZAR),
             Currency::ZambianKwacha => Ok(iso_currency::Currency::ZMW),
             Currency::ZimbabweGold => Ok(iso_currency::Currency::ZWG),
-                        Currency::NetherlandsAntilleanGuilder => Err(ErrFromCurrency::NetherlandsAntilleanGuilder),
+            Currency::NetherlandsAntilleanGuilder => {
+                Err(ErrFromCurrency::NetherlandsAntilleanGuilder)
+            }
             Currency::RenminbiOffshore => Err(ErrFromCurrency::RenminbiOffshore),
         }
     }
 }
 
-
 #[cfg(feature = "iso_currency")]
 /// All the variants of Currency that are not matched to any variant of iso_currency::Currency
 #[derive(Debug, PartialEq, Eq, Hash)]
 pub enum ErrFromCurrency {
-                NetherlandsAntilleanGuilder,
-            RenminbiOffshore,
+    NetherlandsAntilleanGuilder,
+    RenminbiOffshore,
 }
 
 #[cfg(feature = "iso_currency")]
 impl std::fmt::Display for ErrFromCurrency {
     fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
         match self {
-                        ErrFromCurrency::NetherlandsAntilleanGuilder => write!(f, "NetherlandsAntilleanGuilder has no corresponding value in iso_currency::Currency"),
-            ErrFromCurrency::RenminbiOffshore => write!(f, "RenminbiOffshore has no corresponding value in iso_currency::Currency"),
+            ErrFromCurrency::NetherlandsAntilleanGuilder => write!(
+                f,
+                "NetherlandsAntilleanGuilder has no corresponding value in iso_currency::Currency"
+            ),
+            ErrFromCurrency::RenminbiOffshore => write!(
+                f,
+                "RenminbiOffshore has no corresponding value in iso_currency::Currency"
+            ),
         }
     }
-} 
+}
 
 #[cfg(feature = "iso_currency")]
 impl std::error::Error for ErrFromCurrency {}
-
 
 #[cfg(feature = "iso_currency")]
 impl std::convert::TryFrom<iso_currency::Currency> for Currency {
     type Error = ErrFromIsoCurrencyCurrency;
     fn try_from(value: iso_currency::Currency) -> Result<Currency, Self::Error> {
         match value {
-                        iso_currency::Currency::AED => Ok(Currency::UaeDirham),
+            iso_currency::Currency::AED => Ok(Currency::UaeDirham),
             iso_currency::Currency::AFN => Ok(Currency::Afghani),
             iso_currency::Currency::ALL => Ok(Currency::Lek),
             iso_currency::Currency::AMD => Ok(Currency::ArmenianDram),
@@ -1325,14 +1348,18 @@ impl std::convert::TryFrom<iso_currency::Currency> for Currency {
             iso_currency::Currency::XPF => Ok(Currency::CfpFranc),
             iso_currency::Currency::XPT => Ok(Currency::Platinum),
             iso_currency::Currency::XSU => Ok(Currency::Sucre),
-            iso_currency::Currency::XTS => Ok(Currency::CodesSpecificallyReservedForTestingPurposes),
+            iso_currency::Currency::XTS => {
+                Ok(Currency::CodesSpecificallyReservedForTestingPurposes)
+            }
             iso_currency::Currency::XUA => Ok(Currency::AdbUnitAccount),
-            iso_currency::Currency::XXX => Ok(Currency::TheCodesAssignedForTransactionsWhereNoCurrencyIsInvolved),
+            iso_currency::Currency::XXX => {
+                Ok(Currency::TheCodesAssignedForTransactionsWhereNoCurrencyIsInvolved)
+            }
             iso_currency::Currency::YER => Ok(Currency::YemeniRial),
             iso_currency::Currency::ZAR => Ok(Currency::Rand),
             iso_currency::Currency::ZMW => Ok(Currency::ZambianKwacha),
             iso_currency::Currency::ZWG => Ok(Currency::ZimbabweGold),
-                        iso_currency::Currency::XCG => Err(ErrFromIsoCurrencyCurrency::XCG),
+            iso_currency::Currency::XCG => Err(ErrFromIsoCurrencyCurrency::XCG),
             iso_currency::Currency::CUC => Err(ErrFromIsoCurrencyCurrency::CUC),
             iso_currency::Currency::HRK => Err(ErrFromIsoCurrencyCurrency::HRK),
             iso_currency::Currency::SLL => Err(ErrFromIsoCurrencyCurrency::SLL),
@@ -1341,31 +1368,39 @@ impl std::convert::TryFrom<iso_currency::Currency> for Currency {
     }
 }
 
-
 #[cfg(feature = "iso_currency")]
 /// All the variants of iso_currency::Currency that are not matched to any variant of Currency
 #[derive(Debug, PartialEq, Eq, Hash)]
 pub enum ErrFromIsoCurrencyCurrency {
-                XCG,
-            CUC,
-            HRK,
-            SLL,
-            ZWL,
+    XCG,
+    CUC,
+    HRK,
+    SLL,
+    ZWL,
 }
 
 #[cfg(feature = "iso_currency")]
 impl std::fmt::Display for ErrFromIsoCurrencyCurrency {
     fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
         match self {
-                        ErrFromIsoCurrencyCurrency::XCG => write!(f, "XCG has no corresponding value in Currency"),
-            ErrFromIsoCurrencyCurrency::CUC => write!(f, "CUC has no corresponding value in Currency"),
-            ErrFromIsoCurrencyCurrency::HRK => write!(f, "HRK has no corresponding value in Currency"),
-            ErrFromIsoCurrencyCurrency::SLL => write!(f, "SLL has no corresponding value in Currency"),
-            ErrFromIsoCurrencyCurrency::ZWL => write!(f, "ZWL has no corresponding value in Currency"),
+            ErrFromIsoCurrencyCurrency::XCG => {
+                write!(f, "XCG has no corresponding value in Currency")
+            }
+            ErrFromIsoCurrencyCurrency::CUC => {
+                write!(f, "CUC has no corresponding value in Currency")
+            }
+            ErrFromIsoCurrencyCurrency::HRK => {
+                write!(f, "HRK has no corresponding value in Currency")
+            }
+            ErrFromIsoCurrencyCurrency::SLL => {
+                write!(f, "SLL has no corresponding value in Currency")
+            }
+            ErrFromIsoCurrencyCurrency::ZWL => {
+                write!(f, "ZWL has no corresponding value in Currency")
+            }
         }
     }
-} 
+}
 
 #[cfg(feature = "iso_currency")]
 impl std::error::Error for ErrFromIsoCurrencyCurrency {}
-

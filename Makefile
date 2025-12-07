@@ -30,6 +30,7 @@ gen-rs: gen-only
 	cargo build --features all
 
 gen-ts: gen-only
+	python -m py_generate generate-exports
 	cd ts && pnpm exec prettier . --write
 	cd ts && pnpm run build
 	cp readme.md ts/README.md
