@@ -20,9 +20,12 @@ def all(
         ),
     ] = None,
 ):
+    versions = sorted(list(Version))
+
     if version is None:
-        for v in Version:
-            run_all(v.version_info())
+        prev_version_gen_info = None
+        for v in versions:
+            prev_version_gen_info = run_all(v.version_info(), prev_version_gen_info)
     else:
         run_all(version.version_info())
 

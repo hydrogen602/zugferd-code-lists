@@ -1,5 +1,4 @@
 from collections import defaultdict
-from contextlib import ExitStack
 from dataclasses import dataclass
 from hashlib import md5
 from pathlib import Path
@@ -8,16 +7,43 @@ from typing import Literal
 
 from py_generate.common import Version
 
-VERSION_LOOKUP = {version.version_info().src_dir: version for version in Version}
-
 
 def group_by_shared_content(files: list[Path]) -> list[list[Path]]:
+    # for the purpose of comparing, remove code between // Start: (Version) TryFrom and // End: (Version) TryFrom
+
+    def reader(p: Path) -> str:
+        with p.open() as f:
+            content = f.read()
+
+        # ignoring the TryFrom versions is ok since after deduplication,
+        # the enum will be the same and rust provides a blanket try_from impl
+        # for a type to itself
+        m = re.search(
+            r"^// Start: \(Version\) TryFrom.*?// End: \(Version\) TryFrom[^\n]*$",
+            content,
+            flags=re.DOTALL | re.MULTILINE,
+        )
+        if m is not None:
+            # cut out the code between the start and end markers
+            content = content[: m.start()] + content[m.end() :]
+        elif "mod.rs" in str(p) or "zugferd_2_3_2" in str(p) or "lib.rs" in str(p):
+            pass
+        else:
+            # Could be concerning, but usually fine
+            print(f"No start and end markers found in {p}")
+
+        # standardize whitespace
+        content = re.sub(r"\t", " ", content).strip()
+        content = re.sub(r"[ ]{2,}", " ", content).strip()
+
+        return content
+
     # hash each file and group by the hash
     by_hash = defaultdict(list)
     for file in files:
-        with open(file, "rb") as f:
-            hash = md5(f.read()).hexdigest()
-            by_hash[hash].append(file)
+        content = reader(file)
+        hash = md5(content.encode()).hexdigest()
+        by_hash[hash].append(file)
 
     true_repeated_files = []
     for hash, files in by_hash.items():
@@ -25,23 +51,9 @@ def group_by_shared_content(files: list[Path]) -> list[list[Path]]:
             continue
 
         # ensure the files are truly the same
-        with ExitStack() as stack:
-            f_handles = [stack.enter_context(open(file, "rb")) for file in files]
-
-            while True:
-                common_chunk = None
-                for f_handle in f_handles:
-                    chunk = f_handle.read(1024)
-                    if common_chunk is None:
-                        common_chunk = chunk
-                    elif chunk != common_chunk:
-                        raise ValueError(
-                            f"md5 collision: Files {files} are not the same"
-                        )
-
-                assert common_chunk is not None
-                if len(common_chunk) == 0:
-                    break
+        content, *contents = [reader(file) for file in files]
+        if not all(content == c for c in contents):
+            raise ValueError(f"md5 collision: Files {files} are not the same")
 
         true_repeated_files.append(files)
 
@@ -49,6 +61,8 @@ def group_by_shared_content(files: list[Path]) -> list[list[Path]]:
 
 
 def get_version(file: Path, relative_to: Path) -> Version:
+    VERSION_LOOKUP = {version.version_info().src_dir: version for version in Version}
+
     dir = file.relative_to(relative_to).parent  # remove the file part
     return VERSION_LOOKUP[dir]
 

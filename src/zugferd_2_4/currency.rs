@@ -952,9 +952,10 @@ impl crate::FromCode for Currency {
     }
 }
 
+// Start: (iso_currency) TryFrom Currency to iso_currency::Currency
 #[cfg(feature = "iso_currency")]
 impl std::convert::TryFrom<Currency> for iso_currency::Currency {
-    type Error = ErrFromCurrency;
+    type Error = ErrFromCurrencyToIsoCurrencyCurrency;
     fn try_from(value: Currency) -> Result<Self, Self::Error> {
         match value {
             Currency::UaeDirham => Ok(iso_currency::Currency::AED),
@@ -1139,9 +1140,11 @@ impl std::convert::TryFrom<Currency> for iso_currency::Currency {
             Currency::ZambianKwacha => Ok(iso_currency::Currency::ZMW),
             Currency::ZimbabweGold => Ok(iso_currency::Currency::ZWG),
             Currency::NetherlandsAntilleanGuilder => {
-                Err(ErrFromCurrency::NetherlandsAntilleanGuilder)
+                Err(ErrFromCurrencyToIsoCurrencyCurrency::NetherlandsAntilleanGuilder)
             }
-            Currency::RenminbiOffshore => Err(ErrFromCurrency::RenminbiOffshore),
+            Currency::RenminbiOffshore => {
+                Err(ErrFromCurrencyToIsoCurrencyCurrency::RenminbiOffshore)
+            }
         }
     }
 }
@@ -1149,20 +1152,20 @@ impl std::convert::TryFrom<Currency> for iso_currency::Currency {
 #[cfg(feature = "iso_currency")]
 /// All the variants of Currency that are not matched to any variant of iso_currency::Currency
 #[derive(Debug, PartialEq, Eq, Hash)]
-pub enum ErrFromCurrency {
+pub enum ErrFromCurrencyToIsoCurrencyCurrency {
     NetherlandsAntilleanGuilder,
     RenminbiOffshore,
 }
 
 #[cfg(feature = "iso_currency")]
-impl std::fmt::Display for ErrFromCurrency {
+impl std::fmt::Display for ErrFromCurrencyToIsoCurrencyCurrency {
     fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
         match self {
-            ErrFromCurrency::NetherlandsAntilleanGuilder => write!(
+            ErrFromCurrencyToIsoCurrencyCurrency::NetherlandsAntilleanGuilder => write!(
                 f,
                 "NetherlandsAntilleanGuilder has no corresponding value in iso_currency::Currency"
             ),
-            ErrFromCurrency::RenminbiOffshore => write!(
+            ErrFromCurrencyToIsoCurrencyCurrency::RenminbiOffshore => write!(
                 f,
                 "RenminbiOffshore has no corresponding value in iso_currency::Currency"
             ),
@@ -1171,11 +1174,11 @@ impl std::fmt::Display for ErrFromCurrency {
 }
 
 #[cfg(feature = "iso_currency")]
-impl std::error::Error for ErrFromCurrency {}
+impl std::error::Error for ErrFromCurrencyToIsoCurrencyCurrency {}
 
 #[cfg(feature = "iso_currency")]
 impl std::convert::TryFrom<iso_currency::Currency> for Currency {
-    type Error = ErrFromIsoCurrencyCurrency;
+    type Error = ErrFromIsoCurrencyCurrencyToCurrency;
     fn try_from(value: iso_currency::Currency) -> Result<Currency, Self::Error> {
         match value {
             iso_currency::Currency::AED => Ok(Currency::UaeDirham),
@@ -1359,11 +1362,11 @@ impl std::convert::TryFrom<iso_currency::Currency> for Currency {
             iso_currency::Currency::ZAR => Ok(Currency::Rand),
             iso_currency::Currency::ZMW => Ok(Currency::ZambianKwacha),
             iso_currency::Currency::ZWG => Ok(Currency::ZimbabweGold),
-            iso_currency::Currency::XCG => Err(ErrFromIsoCurrencyCurrency::XCG),
-            iso_currency::Currency::CUC => Err(ErrFromIsoCurrencyCurrency::CUC),
-            iso_currency::Currency::HRK => Err(ErrFromIsoCurrencyCurrency::HRK),
-            iso_currency::Currency::SLL => Err(ErrFromIsoCurrencyCurrency::SLL),
-            iso_currency::Currency::ZWL => Err(ErrFromIsoCurrencyCurrency::ZWL),
+            iso_currency::Currency::XCG => Err(ErrFromIsoCurrencyCurrencyToCurrency::XCG),
+            iso_currency::Currency::CUC => Err(ErrFromIsoCurrencyCurrencyToCurrency::CUC),
+            iso_currency::Currency::HRK => Err(ErrFromIsoCurrencyCurrencyToCurrency::HRK),
+            iso_currency::Currency::SLL => Err(ErrFromIsoCurrencyCurrencyToCurrency::SLL),
+            iso_currency::Currency::ZWL => Err(ErrFromIsoCurrencyCurrencyToCurrency::ZWL),
         }
     }
 }
@@ -1371,7 +1374,7 @@ impl std::convert::TryFrom<iso_currency::Currency> for Currency {
 #[cfg(feature = "iso_currency")]
 /// All the variants of iso_currency::Currency that are not matched to any variant of Currency
 #[derive(Debug, PartialEq, Eq, Hash)]
-pub enum ErrFromIsoCurrencyCurrency {
+pub enum ErrFromIsoCurrencyCurrencyToCurrency {
     XCG,
     CUC,
     HRK,
@@ -1380,22 +1383,22 @@ pub enum ErrFromIsoCurrencyCurrency {
 }
 
 #[cfg(feature = "iso_currency")]
-impl std::fmt::Display for ErrFromIsoCurrencyCurrency {
+impl std::fmt::Display for ErrFromIsoCurrencyCurrencyToCurrency {
     fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
         match self {
-            ErrFromIsoCurrencyCurrency::XCG => {
+            ErrFromIsoCurrencyCurrencyToCurrency::XCG => {
                 write!(f, "XCG has no corresponding value in Currency")
             }
-            ErrFromIsoCurrencyCurrency::CUC => {
+            ErrFromIsoCurrencyCurrencyToCurrency::CUC => {
                 write!(f, "CUC has no corresponding value in Currency")
             }
-            ErrFromIsoCurrencyCurrency::HRK => {
+            ErrFromIsoCurrencyCurrencyToCurrency::HRK => {
                 write!(f, "HRK has no corresponding value in Currency")
             }
-            ErrFromIsoCurrencyCurrency::SLL => {
+            ErrFromIsoCurrencyCurrencyToCurrency::SLL => {
                 write!(f, "SLL has no corresponding value in Currency")
             }
-            ErrFromIsoCurrencyCurrency::ZWL => {
+            ErrFromIsoCurrencyCurrencyToCurrency::ZWL => {
                 write!(f, "ZWL has no corresponding value in Currency")
             }
         }
@@ -1403,4 +1406,399 @@ impl std::fmt::Display for ErrFromIsoCurrencyCurrency {
 }
 
 #[cfg(feature = "iso_currency")]
-impl std::error::Error for ErrFromIsoCurrencyCurrency {}
+impl std::error::Error for ErrFromIsoCurrencyCurrencyToCurrency {}
+// End: (iso_currency) TryFrom iso_currency::Currency to Currency
+// Start: (Version) TryFrom Currency to crate::zugferd_2_3_3::Currency
+impl std::convert::TryFrom<Currency> for crate::zugferd_2_3_3::Currency {
+    type Error = ErrFromCurrencyToCrateZugferd233Currency;
+    fn try_from(value: Currency) -> Result<Self, Self::Error> {
+        match value {
+            Currency::UaeDirham => Ok(crate::zugferd_2_3_3::Currency::UaeDirham),
+            Currency::Afghani => Ok(crate::zugferd_2_3_3::Currency::Afghani),
+            Currency::Lek => Ok(crate::zugferd_2_3_3::Currency::Lek),
+            Currency::ArmenianDram => Ok(crate::zugferd_2_3_3::Currency::ArmenianDram),
+            Currency::NetherlandsAntilleanGuilder => Ok(crate::zugferd_2_3_3::Currency::NetherlandsAntilleanGuilder),
+            Currency::Kwanza => Ok(crate::zugferd_2_3_3::Currency::Kwanza),
+            Currency::ArgentinePeso => Ok(crate::zugferd_2_3_3::Currency::ArgentinePeso),
+            Currency::AustralianDollar => Ok(crate::zugferd_2_3_3::Currency::AustralianDollar),
+            Currency::ArubanFlorin => Ok(crate::zugferd_2_3_3::Currency::ArubanFlorin),
+            Currency::AzerbaijanManat => Ok(crate::zugferd_2_3_3::Currency::AzerbaijanManat),
+            Currency::ConvertibleMark => Ok(crate::zugferd_2_3_3::Currency::ConvertibleMark),
+            Currency::BarbadosDollar => Ok(crate::zugferd_2_3_3::Currency::BarbadosDollar),
+            Currency::Taka => Ok(crate::zugferd_2_3_3::Currency::Taka),
+            Currency::BulgarianLev => Ok(crate::zugferd_2_3_3::Currency::BulgarianLev),
+            Currency::BahrainiDinar => Ok(crate::zugferd_2_3_3::Currency::BahrainiDinar),
+            Currency::BurundiFranc => Ok(crate::zugferd_2_3_3::Currency::BurundiFranc),
+            Currency::BermudianDollar => Ok(crate::zugferd_2_3_3::Currency::BermudianDollar),
+            Currency::BruneiDollar => Ok(crate::zugferd_2_3_3::Currency::BruneiDollar),
+            Currency::Boliviano => Ok(crate::zugferd_2_3_3::Currency::Boliviano),
+            Currency::Mvdol => Ok(crate::zugferd_2_3_3::Currency::Mvdol),
+            Currency::BrazilianReal => Ok(crate::zugferd_2_3_3::Currency::BrazilianReal),
+            Currency::BahamianDollar => Ok(crate::zugferd_2_3_3::Currency::BahamianDollar),
+            Currency::Ngultrum => Ok(crate::zugferd_2_3_3::Currency::Ngultrum),
+            Currency::Pula => Ok(crate::zugferd_2_3_3::Currency::Pula),
+            Currency::BelarusianRuble => Ok(crate::zugferd_2_3_3::Currency::BelarusianRuble),
+            Currency::BelizeDollar => Ok(crate::zugferd_2_3_3::Currency::BelizeDollar),
+            Currency::CanadianDollar => Ok(crate::zugferd_2_3_3::Currency::CanadianDollar),
+            Currency::CongoleseFranc => Ok(crate::zugferd_2_3_3::Currency::CongoleseFranc),
+            Currency::WirEuro => Ok(crate::zugferd_2_3_3::Currency::WirEuro),
+            Currency::SwissFranc => Ok(crate::zugferd_2_3_3::Currency::SwissFranc),
+            Currency::WirFranc => Ok(crate::zugferd_2_3_3::Currency::WirFranc),
+            Currency::UnidadDeFomento => Ok(crate::zugferd_2_3_3::Currency::UnidadDeFomento),
+            Currency::ChileanPeso => Ok(crate::zugferd_2_3_3::Currency::ChileanPeso),
+            Currency::YuanRenminbi => Ok(crate::zugferd_2_3_3::Currency::YuanRenminbi),
+            Currency::ColombianPeso => Ok(crate::zugferd_2_3_3::Currency::ColombianPeso),
+            Currency::UnidadDeValorReal => Ok(crate::zugferd_2_3_3::Currency::UnidadDeValorReal),
+            Currency::CostaRicanColon => Ok(crate::zugferd_2_3_3::Currency::CostaRicanColon),
+            Currency::CubanPeso => Ok(crate::zugferd_2_3_3::Currency::CubanPeso),
+            Currency::CaboVerdeEscudo => Ok(crate::zugferd_2_3_3::Currency::CaboVerdeEscudo),
+            Currency::CzechKoruna => Ok(crate::zugferd_2_3_3::Currency::CzechKoruna),
+            Currency::DjiboutiFranc => Ok(crate::zugferd_2_3_3::Currency::DjiboutiFranc),
+            Currency::DanishKrone => Ok(crate::zugferd_2_3_3::Currency::DanishKrone),
+            Currency::DominicanPeso => Ok(crate::zugferd_2_3_3::Currency::DominicanPeso),
+            Currency::AlgerianDinar => Ok(crate::zugferd_2_3_3::Currency::AlgerianDinar),
+            Currency::EgyptianPound => Ok(crate::zugferd_2_3_3::Currency::EgyptianPound),
+            Currency::Nakfa => Ok(crate::zugferd_2_3_3::Currency::Nakfa),
+            Currency::EthiopianBirr => Ok(crate::zugferd_2_3_3::Currency::EthiopianBirr),
+            Currency::Euro => Ok(crate::zugferd_2_3_3::Currency::Euro),
+            Currency::FijiDollar => Ok(crate::zugferd_2_3_3::Currency::FijiDollar),
+            Currency::FalklandIslandsPound => Ok(crate::zugferd_2_3_3::Currency::FalklandIslandsPound),
+            Currency::PoundSterling => Ok(crate::zugferd_2_3_3::Currency::PoundSterling),
+            Currency::Lari => Ok(crate::zugferd_2_3_3::Currency::Lari),
+            Currency::GhanaCedi => Ok(crate::zugferd_2_3_3::Currency::GhanaCedi),
+            Currency::GibraltarPound => Ok(crate::zugferd_2_3_3::Currency::GibraltarPound),
+            Currency::Dalasi => Ok(crate::zugferd_2_3_3::Currency::Dalasi),
+            Currency::GuineanFranc => Ok(crate::zugferd_2_3_3::Currency::GuineanFranc),
+            Currency::Quetzal => Ok(crate::zugferd_2_3_3::Currency::Quetzal),
+            Currency::GuyanaDollar => Ok(crate::zugferd_2_3_3::Currency::GuyanaDollar),
+            Currency::HongKongDollar => Ok(crate::zugferd_2_3_3::Currency::HongKongDollar),
+            Currency::Lempira => Ok(crate::zugferd_2_3_3::Currency::Lempira),
+            Currency::Gourde => Ok(crate::zugferd_2_3_3::Currency::Gourde),
+            Currency::Forint => Ok(crate::zugferd_2_3_3::Currency::Forint),
+            Currency::Rupiah => Ok(crate::zugferd_2_3_3::Currency::Rupiah),
+            Currency::NewIsraeliSheqel => Ok(crate::zugferd_2_3_3::Currency::NewIsraeliSheqel),
+            Currency::IndianRupee => Ok(crate::zugferd_2_3_3::Currency::IndianRupee),
+            Currency::IraqiDinar => Ok(crate::zugferd_2_3_3::Currency::IraqiDinar),
+            Currency::IranianRial => Ok(crate::zugferd_2_3_3::Currency::IranianRial),
+            Currency::IcelandKrona => Ok(crate::zugferd_2_3_3::Currency::IcelandKrona),
+            Currency::JamaicanDollar => Ok(crate::zugferd_2_3_3::Currency::JamaicanDollar),
+            Currency::JordanianDinar => Ok(crate::zugferd_2_3_3::Currency::JordanianDinar),
+            Currency::Yen => Ok(crate::zugferd_2_3_3::Currency::Yen),
+            Currency::KenyanShilling => Ok(crate::zugferd_2_3_3::Currency::KenyanShilling),
+            Currency::Som => Ok(crate::zugferd_2_3_3::Currency::Som),
+            Currency::Riel => Ok(crate::zugferd_2_3_3::Currency::Riel),
+            Currency::ComorianFranc => Ok(crate::zugferd_2_3_3::Currency::ComorianFranc),
+            Currency::NorthKoreanWon => Ok(crate::zugferd_2_3_3::Currency::NorthKoreanWon),
+            Currency::Won => Ok(crate::zugferd_2_3_3::Currency::Won),
+            Currency::KuwaitiDinar => Ok(crate::zugferd_2_3_3::Currency::KuwaitiDinar),
+            Currency::CaymanIslandsDollar => Ok(crate::zugferd_2_3_3::Currency::CaymanIslandsDollar),
+            Currency::Tenge => Ok(crate::zugferd_2_3_3::Currency::Tenge),
+            Currency::LaoKip => Ok(crate::zugferd_2_3_3::Currency::LaoKip),
+            Currency::LebanesePound => Ok(crate::zugferd_2_3_3::Currency::LebanesePound),
+            Currency::SriLankaRupee => Ok(crate::zugferd_2_3_3::Currency::SriLankaRupee),
+            Currency::LiberianDollar => Ok(crate::zugferd_2_3_3::Currency::LiberianDollar),
+            Currency::Loti => Ok(crate::zugferd_2_3_3::Currency::Loti),
+            Currency::LibyanDinar => Ok(crate::zugferd_2_3_3::Currency::LibyanDinar),
+            Currency::MoroccanDirham => Ok(crate::zugferd_2_3_3::Currency::MoroccanDirham),
+            Currency::MoldovanLeu => Ok(crate::zugferd_2_3_3::Currency::MoldovanLeu),
+            Currency::MalagasyAriary => Ok(crate::zugferd_2_3_3::Currency::MalagasyAriary),
+            Currency::Denar => Ok(crate::zugferd_2_3_3::Currency::Denar),
+            Currency::Kyat => Ok(crate::zugferd_2_3_3::Currency::Kyat),
+            Currency::Tugrik => Ok(crate::zugferd_2_3_3::Currency::Tugrik),
+            Currency::Pataca => Ok(crate::zugferd_2_3_3::Currency::Pataca),
+            Currency::Ouguiya => Ok(crate::zugferd_2_3_3::Currency::Ouguiya),
+            Currency::MauritiusRupee => Ok(crate::zugferd_2_3_3::Currency::MauritiusRupee),
+            Currency::Rufiyaa => Ok(crate::zugferd_2_3_3::Currency::Rufiyaa),
+            Currency::MalawiKwacha => Ok(crate::zugferd_2_3_3::Currency::MalawiKwacha),
+            Currency::MexicanPeso => Ok(crate::zugferd_2_3_3::Currency::MexicanPeso),
+            Currency::MexicanUnidadDeInversionUdi => Ok(crate::zugferd_2_3_3::Currency::MexicanUnidadDeInversionUdi),
+            Currency::MalaysianRinggit => Ok(crate::zugferd_2_3_3::Currency::MalaysianRinggit),
+            Currency::MozambiqueMetical => Ok(crate::zugferd_2_3_3::Currency::MozambiqueMetical),
+            Currency::NamibiaDollar => Ok(crate::zugferd_2_3_3::Currency::NamibiaDollar),
+            Currency::Naira => Ok(crate::zugferd_2_3_3::Currency::Naira),
+            Currency::CordobaOro => Ok(crate::zugferd_2_3_3::Currency::CordobaOro),
+            Currency::NorwegianKrone => Ok(crate::zugferd_2_3_3::Currency::NorwegianKrone),
+            Currency::NepaleseRupee => Ok(crate::zugferd_2_3_3::Currency::NepaleseRupee),
+            Currency::NewZealandDollar => Ok(crate::zugferd_2_3_3::Currency::NewZealandDollar),
+            Currency::RialOmani => Ok(crate::zugferd_2_3_3::Currency::RialOmani),
+            Currency::Balboa => Ok(crate::zugferd_2_3_3::Currency::Balboa),
+            Currency::Sol => Ok(crate::zugferd_2_3_3::Currency::Sol),
+            Currency::Kina => Ok(crate::zugferd_2_3_3::Currency::Kina),
+            Currency::PhilippinePeso => Ok(crate::zugferd_2_3_3::Currency::PhilippinePeso),
+            Currency::PakistanRupee => Ok(crate::zugferd_2_3_3::Currency::PakistanRupee),
+            Currency::Zloty => Ok(crate::zugferd_2_3_3::Currency::Zloty),
+            Currency::Guarani => Ok(crate::zugferd_2_3_3::Currency::Guarani),
+            Currency::QatariRial => Ok(crate::zugferd_2_3_3::Currency::QatariRial),
+            Currency::RomanianLeu => Ok(crate::zugferd_2_3_3::Currency::RomanianLeu),
+            Currency::SerbianDinar => Ok(crate::zugferd_2_3_3::Currency::SerbianDinar),
+            Currency::RussianRuble => Ok(crate::zugferd_2_3_3::Currency::RussianRuble),
+            Currency::RwandaFranc => Ok(crate::zugferd_2_3_3::Currency::RwandaFranc),
+            Currency::SaudiRiyal => Ok(crate::zugferd_2_3_3::Currency::SaudiRiyal),
+            Currency::SolomonIslandsDollar => Ok(crate::zugferd_2_3_3::Currency::SolomonIslandsDollar),
+            Currency::SeychellesRupee => Ok(crate::zugferd_2_3_3::Currency::SeychellesRupee),
+            Currency::SudanesePound => Ok(crate::zugferd_2_3_3::Currency::SudanesePound),
+            Currency::SwedishKrona => Ok(crate::zugferd_2_3_3::Currency::SwedishKrona),
+            Currency::SingaporeDollar => Ok(crate::zugferd_2_3_3::Currency::SingaporeDollar),
+            Currency::SaintHelenaPound => Ok(crate::zugferd_2_3_3::Currency::SaintHelenaPound),
+            Currency::SierraLeoneNewValuation2022 => Ok(crate::zugferd_2_3_3::Currency::SierraLeoneNewValuation2022),
+            Currency::SomaliShilling => Ok(crate::zugferd_2_3_3::Currency::SomaliShilling),
+            Currency::SurinamDollar => Ok(crate::zugferd_2_3_3::Currency::SurinamDollar),
+            Currency::SouthSudanesePound => Ok(crate::zugferd_2_3_3::Currency::SouthSudanesePound),
+            Currency::Dobra => Ok(crate::zugferd_2_3_3::Currency::Dobra),
+            Currency::ElSalvadorColon => Ok(crate::zugferd_2_3_3::Currency::ElSalvadorColon),
+            Currency::SyrianPound => Ok(crate::zugferd_2_3_3::Currency::SyrianPound),
+            Currency::Lilangeni => Ok(crate::zugferd_2_3_3::Currency::Lilangeni),
+            Currency::Baht => Ok(crate::zugferd_2_3_3::Currency::Baht),
+            Currency::Somoni => Ok(crate::zugferd_2_3_3::Currency::Somoni),
+            Currency::TurkmenistanNewManat => Ok(crate::zugferd_2_3_3::Currency::TurkmenistanNewManat),
+            Currency::TunisianDinar => Ok(crate::zugferd_2_3_3::Currency::TunisianDinar),
+            Currency::PaAnga => Ok(crate::zugferd_2_3_3::Currency::PaAnga),
+            Currency::TurkishLira => Ok(crate::zugferd_2_3_3::Currency::TurkishLira),
+            Currency::TrinidadAndTobagoDollar => Ok(crate::zugferd_2_3_3::Currency::TrinidadAndTobagoDollar),
+            Currency::NewTaiwanDollar => Ok(crate::zugferd_2_3_3::Currency::NewTaiwanDollar),
+            Currency::TanzanianShilling => Ok(crate::zugferd_2_3_3::Currency::TanzanianShilling),
+            Currency::Hryvnia => Ok(crate::zugferd_2_3_3::Currency::Hryvnia),
+            Currency::UgandaShilling => Ok(crate::zugferd_2_3_3::Currency::UgandaShilling),
+            Currency::UsDollar => Ok(crate::zugferd_2_3_3::Currency::UsDollar),
+            Currency::UsDollarNextDay => Ok(crate::zugferd_2_3_3::Currency::UsDollarNextDay),
+            Currency::UruguayPesoEnUnidadesIndexadasUi => Ok(crate::zugferd_2_3_3::Currency::UruguayPesoEnUnidadesIndexadasUi),
+            Currency::PesoUruguayo => Ok(crate::zugferd_2_3_3::Currency::PesoUruguayo),
+            Currency::UnidadPrevisional => Ok(crate::zugferd_2_3_3::Currency::UnidadPrevisional),
+            Currency::UzbekistanSum => Ok(crate::zugferd_2_3_3::Currency::UzbekistanSum),
+            Currency::BolívarSoberanoNewValuation => Ok(crate::zugferd_2_3_3::Currency::BolívarSoberanoNewValuation),
+            Currency::BolívarSoberano => Ok(crate::zugferd_2_3_3::Currency::BolívarSoberano),
+            Currency::Dong => Ok(crate::zugferd_2_3_3::Currency::Dong),
+            Currency::Vatu => Ok(crate::zugferd_2_3_3::Currency::Vatu),
+            Currency::Tala => Ok(crate::zugferd_2_3_3::Currency::Tala),
+            Currency::CfaFrancBeac => Ok(crate::zugferd_2_3_3::Currency::CfaFrancBeac),
+            Currency::Silver => Ok(crate::zugferd_2_3_3::Currency::Silver),
+            Currency::Gold => Ok(crate::zugferd_2_3_3::Currency::Gold),
+            Currency::BondMarketsUnitEuropeanCompositeUnitEurco => Ok(crate::zugferd_2_3_3::Currency::BondMarketsUnitEuropeanCompositeUnitEurco),
+            Currency::BondMarketsUnitEuropeanMonetaryUnitEMU6 => Ok(crate::zugferd_2_3_3::Currency::BondMarketsUnitEuropeanMonetaryUnitEMU6),
+            Currency::BondMarketsUnitEuropeanUnitAccount9EUA9 => Ok(crate::zugferd_2_3_3::Currency::BondMarketsUnitEuropeanUnitAccount9EUA9),
+            Currency::BondMarketsUnitEuropeanUnitAccount17EUA17 => Ok(crate::zugferd_2_3_3::Currency::BondMarketsUnitEuropeanUnitAccount17EUA17),
+            Currency::EastCaribbeanDollar => Ok(crate::zugferd_2_3_3::Currency::EastCaribbeanDollar),
+            Currency::SdrSpecialDrawingRight => Ok(crate::zugferd_2_3_3::Currency::SdrSpecialDrawingRight),
+            Currency::CfaFrancBceao => Ok(crate::zugferd_2_3_3::Currency::CfaFrancBceao),
+            Currency::Palladium => Ok(crate::zugferd_2_3_3::Currency::Palladium),
+            Currency::CfpFranc => Ok(crate::zugferd_2_3_3::Currency::CfpFranc),
+            Currency::Platinum => Ok(crate::zugferd_2_3_3::Currency::Platinum),
+            Currency::Sucre => Ok(crate::zugferd_2_3_3::Currency::Sucre),
+            Currency::CodesSpecificallyReservedForTestingPurposes => Ok(crate::zugferd_2_3_3::Currency::CodesSpecificallyReservedForTestingPurposes),
+            Currency::AdbUnitAccount => Ok(crate::zugferd_2_3_3::Currency::AdbUnitAccount),
+            Currency::TheCodesAssignedForTransactionsWhereNoCurrencyIsInvolved => Ok(crate::zugferd_2_3_3::Currency::TheCodesAssignedForTransactionsWhereNoCurrencyIsInvolved),
+            Currency::YemeniRial => Ok(crate::zugferd_2_3_3::Currency::YemeniRial),
+            Currency::Rand => Ok(crate::zugferd_2_3_3::Currency::Rand),
+            Currency::ZambianKwacha => Ok(crate::zugferd_2_3_3::Currency::ZambianKwacha),
+            Currency::ZimbabweGold => Ok(crate::zugferd_2_3_3::Currency::ZimbabweGold),
+            Currency::RenminbiOffshore => Err(ErrFromCurrencyToCrateZugferd233Currency::RenminbiOffshore),
+        }
+    }
+}
+
+/// All the variants of Currency that are not matched to any variant of crate::zugferd_2_3_3::Currency
+#[derive(Debug, PartialEq, Eq, Hash)]
+pub enum ErrFromCurrencyToCrateZugferd233Currency {
+    RenminbiOffshore,
+}
+
+impl std::fmt::Display for ErrFromCurrencyToCrateZugferd233Currency {
+    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+        match self {
+            ErrFromCurrencyToCrateZugferd233Currency::RenminbiOffshore => write!(
+                f,
+                "RenminbiOffshore has no corresponding value in crate::zugferd_2_3_3::Currency"
+            ),
+        }
+    }
+}
+
+impl std::error::Error for ErrFromCurrencyToCrateZugferd233Currency {}
+
+impl std::convert::TryFrom<crate::zugferd_2_3_3::Currency> for Currency {
+    type Error = std::convert::Infallible;
+    fn try_from(value: crate::zugferd_2_3_3::Currency) -> Result<Currency, Self::Error> {
+        match value {
+            crate::zugferd_2_3_3::Currency::UaeDirham => Ok(Currency::UaeDirham),
+            crate::zugferd_2_3_3::Currency::Afghani => Ok(Currency::Afghani),
+            crate::zugferd_2_3_3::Currency::Lek => Ok(Currency::Lek),
+            crate::zugferd_2_3_3::Currency::ArmenianDram => Ok(Currency::ArmenianDram),
+            crate::zugferd_2_3_3::Currency::NetherlandsAntilleanGuilder => Ok(Currency::NetherlandsAntilleanGuilder),
+            crate::zugferd_2_3_3::Currency::Kwanza => Ok(Currency::Kwanza),
+            crate::zugferd_2_3_3::Currency::ArgentinePeso => Ok(Currency::ArgentinePeso),
+            crate::zugferd_2_3_3::Currency::AustralianDollar => Ok(Currency::AustralianDollar),
+            crate::zugferd_2_3_3::Currency::ArubanFlorin => Ok(Currency::ArubanFlorin),
+            crate::zugferd_2_3_3::Currency::AzerbaijanManat => Ok(Currency::AzerbaijanManat),
+            crate::zugferd_2_3_3::Currency::ConvertibleMark => Ok(Currency::ConvertibleMark),
+            crate::zugferd_2_3_3::Currency::BarbadosDollar => Ok(Currency::BarbadosDollar),
+            crate::zugferd_2_3_3::Currency::Taka => Ok(Currency::Taka),
+            crate::zugferd_2_3_3::Currency::BulgarianLev => Ok(Currency::BulgarianLev),
+            crate::zugferd_2_3_3::Currency::BahrainiDinar => Ok(Currency::BahrainiDinar),
+            crate::zugferd_2_3_3::Currency::BurundiFranc => Ok(Currency::BurundiFranc),
+            crate::zugferd_2_3_3::Currency::BermudianDollar => Ok(Currency::BermudianDollar),
+            crate::zugferd_2_3_3::Currency::BruneiDollar => Ok(Currency::BruneiDollar),
+            crate::zugferd_2_3_3::Currency::Boliviano => Ok(Currency::Boliviano),
+            crate::zugferd_2_3_3::Currency::Mvdol => Ok(Currency::Mvdol),
+            crate::zugferd_2_3_3::Currency::BrazilianReal => Ok(Currency::BrazilianReal),
+            crate::zugferd_2_3_3::Currency::BahamianDollar => Ok(Currency::BahamianDollar),
+            crate::zugferd_2_3_3::Currency::Ngultrum => Ok(Currency::Ngultrum),
+            crate::zugferd_2_3_3::Currency::Pula => Ok(Currency::Pula),
+            crate::zugferd_2_3_3::Currency::BelarusianRuble => Ok(Currency::BelarusianRuble),
+            crate::zugferd_2_3_3::Currency::BelizeDollar => Ok(Currency::BelizeDollar),
+            crate::zugferd_2_3_3::Currency::CanadianDollar => Ok(Currency::CanadianDollar),
+            crate::zugferd_2_3_3::Currency::CongoleseFranc => Ok(Currency::CongoleseFranc),
+            crate::zugferd_2_3_3::Currency::WirEuro => Ok(Currency::WirEuro),
+            crate::zugferd_2_3_3::Currency::SwissFranc => Ok(Currency::SwissFranc),
+            crate::zugferd_2_3_3::Currency::WirFranc => Ok(Currency::WirFranc),
+            crate::zugferd_2_3_3::Currency::UnidadDeFomento => Ok(Currency::UnidadDeFomento),
+            crate::zugferd_2_3_3::Currency::ChileanPeso => Ok(Currency::ChileanPeso),
+            crate::zugferd_2_3_3::Currency::YuanRenminbi => Ok(Currency::YuanRenminbi),
+            crate::zugferd_2_3_3::Currency::ColombianPeso => Ok(Currency::ColombianPeso),
+            crate::zugferd_2_3_3::Currency::UnidadDeValorReal => Ok(Currency::UnidadDeValorReal),
+            crate::zugferd_2_3_3::Currency::CostaRicanColon => Ok(Currency::CostaRicanColon),
+            crate::zugferd_2_3_3::Currency::CubanPeso => Ok(Currency::CubanPeso),
+            crate::zugferd_2_3_3::Currency::CaboVerdeEscudo => Ok(Currency::CaboVerdeEscudo),
+            crate::zugferd_2_3_3::Currency::CzechKoruna => Ok(Currency::CzechKoruna),
+            crate::zugferd_2_3_3::Currency::DjiboutiFranc => Ok(Currency::DjiboutiFranc),
+            crate::zugferd_2_3_3::Currency::DanishKrone => Ok(Currency::DanishKrone),
+            crate::zugferd_2_3_3::Currency::DominicanPeso => Ok(Currency::DominicanPeso),
+            crate::zugferd_2_3_3::Currency::AlgerianDinar => Ok(Currency::AlgerianDinar),
+            crate::zugferd_2_3_3::Currency::EgyptianPound => Ok(Currency::EgyptianPound),
+            crate::zugferd_2_3_3::Currency::Nakfa => Ok(Currency::Nakfa),
+            crate::zugferd_2_3_3::Currency::EthiopianBirr => Ok(Currency::EthiopianBirr),
+            crate::zugferd_2_3_3::Currency::Euro => Ok(Currency::Euro),
+            crate::zugferd_2_3_3::Currency::FijiDollar => Ok(Currency::FijiDollar),
+            crate::zugferd_2_3_3::Currency::FalklandIslandsPound => Ok(Currency::FalklandIslandsPound),
+            crate::zugferd_2_3_3::Currency::PoundSterling => Ok(Currency::PoundSterling),
+            crate::zugferd_2_3_3::Currency::Lari => Ok(Currency::Lari),
+            crate::zugferd_2_3_3::Currency::GhanaCedi => Ok(Currency::GhanaCedi),
+            crate::zugferd_2_3_3::Currency::GibraltarPound => Ok(Currency::GibraltarPound),
+            crate::zugferd_2_3_3::Currency::Dalasi => Ok(Currency::Dalasi),
+            crate::zugferd_2_3_3::Currency::GuineanFranc => Ok(Currency::GuineanFranc),
+            crate::zugferd_2_3_3::Currency::Quetzal => Ok(Currency::Quetzal),
+            crate::zugferd_2_3_3::Currency::GuyanaDollar => Ok(Currency::GuyanaDollar),
+            crate::zugferd_2_3_3::Currency::HongKongDollar => Ok(Currency::HongKongDollar),
+            crate::zugferd_2_3_3::Currency::Lempira => Ok(Currency::Lempira),
+            crate::zugferd_2_3_3::Currency::Gourde => Ok(Currency::Gourde),
+            crate::zugferd_2_3_3::Currency::Forint => Ok(Currency::Forint),
+            crate::zugferd_2_3_3::Currency::Rupiah => Ok(Currency::Rupiah),
+            crate::zugferd_2_3_3::Currency::NewIsraeliSheqel => Ok(Currency::NewIsraeliSheqel),
+            crate::zugferd_2_3_3::Currency::IndianRupee => Ok(Currency::IndianRupee),
+            crate::zugferd_2_3_3::Currency::IraqiDinar => Ok(Currency::IraqiDinar),
+            crate::zugferd_2_3_3::Currency::IranianRial => Ok(Currency::IranianRial),
+            crate::zugferd_2_3_3::Currency::IcelandKrona => Ok(Currency::IcelandKrona),
+            crate::zugferd_2_3_3::Currency::JamaicanDollar => Ok(Currency::JamaicanDollar),
+            crate::zugferd_2_3_3::Currency::JordanianDinar => Ok(Currency::JordanianDinar),
+            crate::zugferd_2_3_3::Currency::Yen => Ok(Currency::Yen),
+            crate::zugferd_2_3_3::Currency::KenyanShilling => Ok(Currency::KenyanShilling),
+            crate::zugferd_2_3_3::Currency::Som => Ok(Currency::Som),
+            crate::zugferd_2_3_3::Currency::Riel => Ok(Currency::Riel),
+            crate::zugferd_2_3_3::Currency::ComorianFranc => Ok(Currency::ComorianFranc),
+            crate::zugferd_2_3_3::Currency::NorthKoreanWon => Ok(Currency::NorthKoreanWon),
+            crate::zugferd_2_3_3::Currency::Won => Ok(Currency::Won),
+            crate::zugferd_2_3_3::Currency::KuwaitiDinar => Ok(Currency::KuwaitiDinar),
+            crate::zugferd_2_3_3::Currency::CaymanIslandsDollar => Ok(Currency::CaymanIslandsDollar),
+            crate::zugferd_2_3_3::Currency::Tenge => Ok(Currency::Tenge),
+            crate::zugferd_2_3_3::Currency::LaoKip => Ok(Currency::LaoKip),
+            crate::zugferd_2_3_3::Currency::LebanesePound => Ok(Currency::LebanesePound),
+            crate::zugferd_2_3_3::Currency::SriLankaRupee => Ok(Currency::SriLankaRupee),
+            crate::zugferd_2_3_3::Currency::LiberianDollar => Ok(Currency::LiberianDollar),
+            crate::zugferd_2_3_3::Currency::Loti => Ok(Currency::Loti),
+            crate::zugferd_2_3_3::Currency::LibyanDinar => Ok(Currency::LibyanDinar),
+            crate::zugferd_2_3_3::Currency::MoroccanDirham => Ok(Currency::MoroccanDirham),
+            crate::zugferd_2_3_3::Currency::MoldovanLeu => Ok(Currency::MoldovanLeu),
+            crate::zugferd_2_3_3::Currency::MalagasyAriary => Ok(Currency::MalagasyAriary),
+            crate::zugferd_2_3_3::Currency::Denar => Ok(Currency::Denar),
+            crate::zugferd_2_3_3::Currency::Kyat => Ok(Currency::Kyat),
+            crate::zugferd_2_3_3::Currency::Tugrik => Ok(Currency::Tugrik),
+            crate::zugferd_2_3_3::Currency::Pataca => Ok(Currency::Pataca),
+            crate::zugferd_2_3_3::Currency::Ouguiya => Ok(Currency::Ouguiya),
+            crate::zugferd_2_3_3::Currency::MauritiusRupee => Ok(Currency::MauritiusRupee),
+            crate::zugferd_2_3_3::Currency::Rufiyaa => Ok(Currency::Rufiyaa),
+            crate::zugferd_2_3_3::Currency::MalawiKwacha => Ok(Currency::MalawiKwacha),
+            crate::zugferd_2_3_3::Currency::MexicanPeso => Ok(Currency::MexicanPeso),
+            crate::zugferd_2_3_3::Currency::MexicanUnidadDeInversionUdi => Ok(Currency::MexicanUnidadDeInversionUdi),
+            crate::zugferd_2_3_3::Currency::MalaysianRinggit => Ok(Currency::MalaysianRinggit),
+            crate::zugferd_2_3_3::Currency::MozambiqueMetical => Ok(Currency::MozambiqueMetical),
+            crate::zugferd_2_3_3::Currency::NamibiaDollar => Ok(Currency::NamibiaDollar),
+            crate::zugferd_2_3_3::Currency::Naira => Ok(Currency::Naira),
+            crate::zugferd_2_3_3::Currency::CordobaOro => Ok(Currency::CordobaOro),
+            crate::zugferd_2_3_3::Currency::NorwegianKrone => Ok(Currency::NorwegianKrone),
+            crate::zugferd_2_3_3::Currency::NepaleseRupee => Ok(Currency::NepaleseRupee),
+            crate::zugferd_2_3_3::Currency::NewZealandDollar => Ok(Currency::NewZealandDollar),
+            crate::zugferd_2_3_3::Currency::RialOmani => Ok(Currency::RialOmani),
+            crate::zugferd_2_3_3::Currency::Balboa => Ok(Currency::Balboa),
+            crate::zugferd_2_3_3::Currency::Sol => Ok(Currency::Sol),
+            crate::zugferd_2_3_3::Currency::Kina => Ok(Currency::Kina),
+            crate::zugferd_2_3_3::Currency::PhilippinePeso => Ok(Currency::PhilippinePeso),
+            crate::zugferd_2_3_3::Currency::PakistanRupee => Ok(Currency::PakistanRupee),
+            crate::zugferd_2_3_3::Currency::Zloty => Ok(Currency::Zloty),
+            crate::zugferd_2_3_3::Currency::Guarani => Ok(Currency::Guarani),
+            crate::zugferd_2_3_3::Currency::QatariRial => Ok(Currency::QatariRial),
+            crate::zugferd_2_3_3::Currency::RomanianLeu => Ok(Currency::RomanianLeu),
+            crate::zugferd_2_3_3::Currency::SerbianDinar => Ok(Currency::SerbianDinar),
+            crate::zugferd_2_3_3::Currency::RussianRuble => Ok(Currency::RussianRuble),
+            crate::zugferd_2_3_3::Currency::RwandaFranc => Ok(Currency::RwandaFranc),
+            crate::zugferd_2_3_3::Currency::SaudiRiyal => Ok(Currency::SaudiRiyal),
+            crate::zugferd_2_3_3::Currency::SolomonIslandsDollar => Ok(Currency::SolomonIslandsDollar),
+            crate::zugferd_2_3_3::Currency::SeychellesRupee => Ok(Currency::SeychellesRupee),
+            crate::zugferd_2_3_3::Currency::SudanesePound => Ok(Currency::SudanesePound),
+            crate::zugferd_2_3_3::Currency::SwedishKrona => Ok(Currency::SwedishKrona),
+            crate::zugferd_2_3_3::Currency::SingaporeDollar => Ok(Currency::SingaporeDollar),
+            crate::zugferd_2_3_3::Currency::SaintHelenaPound => Ok(Currency::SaintHelenaPound),
+            crate::zugferd_2_3_3::Currency::SierraLeoneNewValuation2022 => Ok(Currency::SierraLeoneNewValuation2022),
+            crate::zugferd_2_3_3::Currency::SomaliShilling => Ok(Currency::SomaliShilling),
+            crate::zugferd_2_3_3::Currency::SurinamDollar => Ok(Currency::SurinamDollar),
+            crate::zugferd_2_3_3::Currency::SouthSudanesePound => Ok(Currency::SouthSudanesePound),
+            crate::zugferd_2_3_3::Currency::Dobra => Ok(Currency::Dobra),
+            crate::zugferd_2_3_3::Currency::ElSalvadorColon => Ok(Currency::ElSalvadorColon),
+            crate::zugferd_2_3_3::Currency::SyrianPound => Ok(Currency::SyrianPound),
+            crate::zugferd_2_3_3::Currency::Lilangeni => Ok(Currency::Lilangeni),
+            crate::zugferd_2_3_3::Currency::Baht => Ok(Currency::Baht),
+            crate::zugferd_2_3_3::Currency::Somoni => Ok(Currency::Somoni),
+            crate::zugferd_2_3_3::Currency::TurkmenistanNewManat => Ok(Currency::TurkmenistanNewManat),
+            crate::zugferd_2_3_3::Currency::TunisianDinar => Ok(Currency::TunisianDinar),
+            crate::zugferd_2_3_3::Currency::PaAnga => Ok(Currency::PaAnga),
+            crate::zugferd_2_3_3::Currency::TurkishLira => Ok(Currency::TurkishLira),
+            crate::zugferd_2_3_3::Currency::TrinidadAndTobagoDollar => Ok(Currency::TrinidadAndTobagoDollar),
+            crate::zugferd_2_3_3::Currency::NewTaiwanDollar => Ok(Currency::NewTaiwanDollar),
+            crate::zugferd_2_3_3::Currency::TanzanianShilling => Ok(Currency::TanzanianShilling),
+            crate::zugferd_2_3_3::Currency::Hryvnia => Ok(Currency::Hryvnia),
+            crate::zugferd_2_3_3::Currency::UgandaShilling => Ok(Currency::UgandaShilling),
+            crate::zugferd_2_3_3::Currency::UsDollar => Ok(Currency::UsDollar),
+            crate::zugferd_2_3_3::Currency::UsDollarNextDay => Ok(Currency::UsDollarNextDay),
+            crate::zugferd_2_3_3::Currency::UruguayPesoEnUnidadesIndexadasUi => Ok(Currency::UruguayPesoEnUnidadesIndexadasUi),
+            crate::zugferd_2_3_3::Currency::PesoUruguayo => Ok(Currency::PesoUruguayo),
+            crate::zugferd_2_3_3::Currency::UnidadPrevisional => Ok(Currency::UnidadPrevisional),
+            crate::zugferd_2_3_3::Currency::UzbekistanSum => Ok(Currency::UzbekistanSum),
+            crate::zugferd_2_3_3::Currency::BolívarSoberanoNewValuation => Ok(Currency::BolívarSoberanoNewValuation),
+            crate::zugferd_2_3_3::Currency::BolívarSoberano => Ok(Currency::BolívarSoberano),
+            crate::zugferd_2_3_3::Currency::Dong => Ok(Currency::Dong),
+            crate::zugferd_2_3_3::Currency::Vatu => Ok(Currency::Vatu),
+            crate::zugferd_2_3_3::Currency::Tala => Ok(Currency::Tala),
+            crate::zugferd_2_3_3::Currency::CfaFrancBeac => Ok(Currency::CfaFrancBeac),
+            crate::zugferd_2_3_3::Currency::Silver => Ok(Currency::Silver),
+            crate::zugferd_2_3_3::Currency::Gold => Ok(Currency::Gold),
+            crate::zugferd_2_3_3::Currency::BondMarketsUnitEuropeanCompositeUnitEurco => Ok(Currency::BondMarketsUnitEuropeanCompositeUnitEurco),
+            crate::zugferd_2_3_3::Currency::BondMarketsUnitEuropeanMonetaryUnitEMU6 => Ok(Currency::BondMarketsUnitEuropeanMonetaryUnitEMU6),
+            crate::zugferd_2_3_3::Currency::BondMarketsUnitEuropeanUnitAccount9EUA9 => Ok(Currency::BondMarketsUnitEuropeanUnitAccount9EUA9),
+            crate::zugferd_2_3_3::Currency::BondMarketsUnitEuropeanUnitAccount17EUA17 => Ok(Currency::BondMarketsUnitEuropeanUnitAccount17EUA17),
+            crate::zugferd_2_3_3::Currency::EastCaribbeanDollar => Ok(Currency::EastCaribbeanDollar),
+            crate::zugferd_2_3_3::Currency::SdrSpecialDrawingRight => Ok(Currency::SdrSpecialDrawingRight),
+            crate::zugferd_2_3_3::Currency::CfaFrancBceao => Ok(Currency::CfaFrancBceao),
+            crate::zugferd_2_3_3::Currency::Palladium => Ok(Currency::Palladium),
+            crate::zugferd_2_3_3::Currency::CfpFranc => Ok(Currency::CfpFranc),
+            crate::zugferd_2_3_3::Currency::Platinum => Ok(Currency::Platinum),
+            crate::zugferd_2_3_3::Currency::Sucre => Ok(Currency::Sucre),
+            crate::zugferd_2_3_3::Currency::CodesSpecificallyReservedForTestingPurposes => Ok(Currency::CodesSpecificallyReservedForTestingPurposes),
+            crate::zugferd_2_3_3::Currency::AdbUnitAccount => Ok(Currency::AdbUnitAccount),
+            crate::zugferd_2_3_3::Currency::TheCodesAssignedForTransactionsWhereNoCurrencyIsInvolved => Ok(Currency::TheCodesAssignedForTransactionsWhereNoCurrencyIsInvolved),
+            crate::zugferd_2_3_3::Currency::YemeniRial => Ok(Currency::YemeniRial),
+            crate::zugferd_2_3_3::Currency::Rand => Ok(Currency::Rand),
+            crate::zugferd_2_3_3::Currency::ZambianKwacha => Ok(Currency::ZambianKwacha),
+            crate::zugferd_2_3_3::Currency::ZimbabweGold => Ok(Currency::ZimbabweGold),
+
+        }
+    }
+}
+// End: (Version) TryFrom crate::zugferd_2_3_3::Currency to Currency

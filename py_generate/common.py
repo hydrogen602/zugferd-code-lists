@@ -16,7 +16,7 @@ load_dotenv()
 
 @dataclass
 class VersionInfo:
-    version: str
+    version: Version
     spec_dir: Path
     src_dir: Path
 
@@ -28,13 +28,16 @@ class Version(str, Enum):
     ZF_24 = "2.4"
 
     def version_info(self) -> VersionInfo:
-        with_underscore = self.value.replace(".", "_")
 
         return VersionInfo(
-            version=self.value,
-            spec_dir=Path(f"spec/zugferd_{with_underscore}"),
-            src_dir=Path(f"src/zugferd_{with_underscore}"),
+            version=self,
+            spec_dir=Path(f"spec/{self.version_folder}"),
+            src_dir=Path(f"src/{self.version_folder}"),
         )
+
+    @property
+    def version_folder(self) -> str:
+        return f"zugferd_{self.value.replace('.', '_')}"
 
     def __lt__(self, other: Version | str):
         if not isinstance(other, Version):
