@@ -529,3 +529,252 @@ impl crate::FromCode for EAS {
         }
     }
 }
+
+// Start: (Version) TryFrom EAS to crate::zugferd_2_3_2::EAS
+impl std::convert::TryFrom<EAS> for crate::zugferd_2_3_2::EAS {
+    type Error = ErrFromEasToCrateZugferd232Eas;
+    fn try_from(value: EAS) -> Result<Self, Self::Error> {
+        match value {
+            EAS::SystemInformationEtRepertoireDesEntrepriseEtDesEtablissementsSirene => Ok(crate::zugferd_2_3_2::EAS::SystemInformationEtRepertoireDesEntrepriseEtDesEtablissementsSirene),
+            EAS::Organisationsnummer => Ok(crate::zugferd_2_3_2::EAS::Organisationsnummer),
+            EAS::SiretCode => Ok(crate::zugferd_2_3_2::EAS::SiretCode),
+            EAS::LyTunnus => Ok(crate::zugferd_2_3_2::EAS::LyTunnus),
+            EAS::DataUniversalNumberingSystemDUNSNumber => Ok(crate::zugferd_2_3_2::EAS::DataUniversalNumberingSystemDUNSNumber),
+            EAS::EanLocationCode => Ok(crate::zugferd_2_3_2::EAS::EanLocationCode),
+            EAS::TheDanishBusinessAuthorityPNumberDkP => Ok(crate::zugferd_2_3_2::EAS::DanishChamberOfCommerceSchemeEdiraCompliant),
+            EAS::FtiEdiforumItaliaEdiraCompliant => Ok(crate::zugferd_2_3_2::EAS::FtiEdiforumItaliaEdiraCompliant),
+            EAS::VerenigingVanKamersVanKoophandelEnFabriekenInNederlandAssociationChambersCommerceAndIndustryInNetherlandsSchemeEdiraCompliant => Ok(crate::zugferd_2_3_2::EAS::VerenigingVanKamersVanKoophandelEnFabriekenInNederlandAssociationChambersCommerceAndIndustryInNetherlandsSchemeEdiraCompliant),
+            EAS::DirectoratesEuropeanCommission => Ok(crate::zugferd_2_3_2::EAS::DirectoratesEuropeanCommission),
+            EAS::SiaObjectIdentifiers => Ok(crate::zugferd_2_3_2::EAS::SiaObjectIdentifiers),
+            EAS::SecetiObjectIdentifiers => Ok(crate::zugferd_2_3_2::EAS::SecetiObjectIdentifiers),
+            EAS::StandardCompanyCode => Ok(crate::zugferd_2_3_2::EAS::StandardCompanyCode),
+            EAS::AustralianBusinessNumberAbnScheme => Ok(crate::zugferd_2_3_2::EAS::AustralianBusinessNumberAbnScheme),
+            EAS::TeikokuCompanyCode => Ok(crate::zugferd_2_3_2::EAS::TeikokuCompanyCode),
+            EAS::OdetteInternationalLimited => Ok(crate::zugferd_2_3_2::EAS::OdetteInternationalLimited),
+            EAS::NuméroDidentificationSuisseDesEnterprisesIdeSwissUniqueBusinessIdentificationNumberUidb => Ok(crate::zugferd_2_3_2::EAS::NuméroDidentificationSuisseDesEnterprisesIdeSwissUniqueBusinessIdentificationNumberUidb),
+            EAS::Digstorg => Ok(crate::zugferd_2_3_2::EAS::Digstorg),
+            EAS::CorporateNumberTheSocialSecurityAndTaxNumberSystem => Ok(crate::zugferd_2_3_2::EAS::CorporateNumberTheSocialSecurityAndTaxNumberSystem),
+            EAS::DutchOriginatorsIdentificationNumber => Ok(crate::zugferd_2_3_2::EAS::DutchOriginatorsIdentificationNumber),
+            EAS::CentreRegistersAndInformationSystemsMinistryJustice => Ok(crate::zugferd_2_3_2::EAS::CentreRegistersAndInformationSystemsMinistryJustice),
+            EAS::EnhetsregisteretVedBronnoysundregisterne => Ok(crate::zugferd_2_3_2::EAS::EnhetsregisteretVedBronnoysundregisterne),
+            EAS::UblBePartyIdentifier => Ok(crate::zugferd_2_3_2::EAS::UblBePartyIdentifier),
+            EAS::KoiosOpenTechnicalDictionary => Ok(crate::zugferd_2_3_2::EAS::KoiosOpenTechnicalDictionary),
+            EAS::SingaporeUenIdentifier => Ok(crate::zugferd_2_3_2::EAS::SingaporeUenIdentifier),
+            EAS::KennitalaIcelandLegalIdForIndividualsAndLegalEntities => Ok(crate::zugferd_2_3_2::EAS::KennitalaIcelandLegalIdForIndividualsAndLegalEntities),
+            EAS::Erstorg => Ok(crate::zugferd_2_3_2::EAS::Erstorg),
+            EAS::GlobalLegalEntityIdentifierGleif => Ok(crate::zugferd_2_3_2::EAS::GlobalLegalEntityIdentifierGleif),
+            EAS::LegalEntityCodeLithuania => Ok(crate::zugferd_2_3_2::EAS::LegalEntityCodeLithuania),
+            EAS::CodiceUnivocoUnitàOrganizzativaIpa => Ok(crate::zugferd_2_3_2::EAS::CodiceUnivocoUnitàOrganizzativaIpa),
+            EAS::IndirizzoDiPostaElettronicaCertificata => Ok(crate::zugferd_2_3_2::EAS::IndirizzoDiPostaElettronicaCertificata),
+            EAS::EdeliveryNetworkParticipantIdentifier => Ok(crate::zugferd_2_3_2::EAS::EdeliveryNetworkParticipantIdentifier),
+            EAS::LeitwegId => Ok(crate::zugferd_2_3_2::EAS::LeitwegId),
+            EAS::Coddest => Ok(crate::zugferd_2_3_2::EAS::Coddest),
+            EAS::NumeroDentrepriseOndernemingsnummerUnternehmensnummer => Ok(crate::zugferd_2_3_2::EAS::NumeroDentrepriseOndernemingsnummerUnternehmensnummer),
+            EAS::Gs1IdentificationKeys => Ok(crate::zugferd_2_3_2::EAS::Gs1IdentificationKeys),
+            EAS::CodiceFiscale => Ok(crate::zugferd_2_3_2::EAS::CodiceFiscale),
+            EAS::PartitaIva => Ok(crate::zugferd_2_3_2::EAS::PartitaIva),
+            EAS::FinnishOrganizationIdentifier => Ok(crate::zugferd_2_3_2::EAS::FinnishOrganizationIdentifier),
+            EAS::FinnishOrganizationValueAddTaxIdentifier => Ok(crate::zugferd_2_3_2::EAS::FinnishOrganizationValueAddTaxIdentifier),
+            EAS::NetServiceId => Ok(crate::zugferd_2_3_2::EAS::NetServiceId),
+            EAS::Ovtcode => Ok(crate::zugferd_2_3_2::EAS::Ovtcode),
+            EAS::TheNetherlandsChamberCommerceAndIndustryEstablishmentNumber => Ok(crate::zugferd_2_3_2::EAS::TheNetherlandsChamberCommerceAndIndustryEstablishmentNumber),
+            EAS::UnifiedRegistrationNumberLatvia => Ok(crate::zugferd_2_3_2::EAS::UnifiedRegistrationNumberLatvia),
+            EAS::TheRegisteredNumberQualifiedInvoiceIssuer => Ok(crate::zugferd_2_3_2::EAS::TheRegisteredNumberQualifiedInvoiceIssuer),
+            EAS::FrctcElectronicAddress => Ok(crate::zugferd_2_3_2::EAS::FrctcElectronicAddress),
+            EAS::NationalEInvoicingFramework => Ok(crate::zugferd_2_3_2::EAS::NationalEInvoicingFramework),
+            EAS::UaeTaxIdentificationNumberTin => Ok(crate::zugferd_2_3_2::EAS::UaeTaxIdentificationNumberTin),
+            EAS::HungaryVatNumber => Ok(crate::zugferd_2_3_2::EAS::HungaryVatNumber),
+            EAS::BusinessRegistersNetwork => Ok(crate::zugferd_2_3_2::EAS::BusinessRegistersNetwork),
+            EAS::ÖsterreichischeUmsatzsteuerIdentifikationsnummer => Ok(crate::zugferd_2_3_2::EAS::ÖsterreichischeUmsatzsteuerIdentifikationsnummer),
+            EAS::ÖsterreichischesVerwaltungsBzwOrganisationskennzeichen => Ok(crate::zugferd_2_3_2::EAS::ÖsterreichischesVerwaltungsBzwOrganisationskennzeichen),
+            EAS::SocietyForWorldwideInterbankFinancialTelecommunicationSWIFT => Ok(crate::zugferd_2_3_2::EAS::SocietyForWorldwideInterbankFinancialTelecommunicationSWIFT),
+            EAS::KennzifferDesUnternehmensregisters => Ok(crate::zugferd_2_3_2::EAS::KennzifferDesUnternehmensregisters),
+            EAS::AgenciaEspañolaDeAdministraciónTributaria => Ok(crate::zugferd_2_3_2::EAS::AgenciaEspañolaDeAdministraciónTributaria),
+            EAS::AndorraVatNumber => Ok(crate::zugferd_2_3_2::EAS::AndorraVatNumber),
+            EAS::AlbaniaVatNumber => Ok(crate::zugferd_2_3_2::EAS::AlbaniaVatNumber),
+            EAS::BosniaAndHerzegovinaVatNumber => Ok(crate::zugferd_2_3_2::EAS::BosniaAndHerzegovinaVatNumber),
+            EAS::BelgiumVatNumber => Ok(crate::zugferd_2_3_2::EAS::BelgiumVatNumber),
+            EAS::BulgariaVatNumber => Ok(crate::zugferd_2_3_2::EAS::BulgariaVatNumber),
+            EAS::SwitzerlandVatNumber => Ok(crate::zugferd_2_3_2::EAS::SwitzerlandVatNumber),
+            EAS::CyprusVatNumber => Ok(crate::zugferd_2_3_2::EAS::CyprusVatNumber),
+            EAS::CzechRepublicVatNumber => Ok(crate::zugferd_2_3_2::EAS::CzechRepublicVatNumber),
+            EAS::GermanyVatNumber => Ok(crate::zugferd_2_3_2::EAS::GermanyVatNumber),
+            EAS::EstoniaVatNumber => Ok(crate::zugferd_2_3_2::EAS::EstoniaVatNumber),
+            EAS::UnitedKingdomVatNumber => Ok(crate::zugferd_2_3_2::EAS::UnitedKingdomVatNumber),
+            EAS::GreeceVatNumber => Ok(crate::zugferd_2_3_2::EAS::GreeceVatNumber),
+            EAS::CroatiaVatNumber => Ok(crate::zugferd_2_3_2::EAS::CroatiaVatNumber),
+            EAS::IrelandVatNumber => Ok(crate::zugferd_2_3_2::EAS::IrelandVatNumber),
+            EAS::LiechtensteinVatNumber => Ok(crate::zugferd_2_3_2::EAS::LiechtensteinVatNumber),
+            EAS::LithuaniaVatNumber => Ok(crate::zugferd_2_3_2::EAS::LithuaniaVatNumber),
+            EAS::LuxemburgVatNumber => Ok(crate::zugferd_2_3_2::EAS::LuxemburgVatNumber),
+            EAS::LatviaVatNumber => Ok(crate::zugferd_2_3_2::EAS::LatviaVatNumber),
+            EAS::MonacoVatNumber => Ok(crate::zugferd_2_3_2::EAS::MonacoVatNumber),
+            EAS::MontenegroVatNumber => Ok(crate::zugferd_2_3_2::EAS::MontenegroVatNumber),
+            EAS::MacedoniaFormerYugoslavRepublicVatNumber => Ok(crate::zugferd_2_3_2::EAS::MacedoniaFormerYugoslavRepublicVatNumber),
+            EAS::MaltaVatNumber => Ok(crate::zugferd_2_3_2::EAS::MaltaVatNumber),
+            EAS::NetherlandsVatNumber => Ok(crate::zugferd_2_3_2::EAS::NetherlandsVatNumber),
+            EAS::PolandVatNumber => Ok(crate::zugferd_2_3_2::EAS::PolandVatNumber),
+            EAS::PortugalVatNumber => Ok(crate::zugferd_2_3_2::EAS::PortugalVatNumber),
+            EAS::RomaniaVatNumber => Ok(crate::zugferd_2_3_2::EAS::RomaniaVatNumber),
+            EAS::SerbiaVatNumber => Ok(crate::zugferd_2_3_2::EAS::SerbiaVatNumber),
+            EAS::SloveniaVatNumber => Ok(crate::zugferd_2_3_2::EAS::SloveniaVatNumber),
+            EAS::SlovakiaVatNumber => Ok(crate::zugferd_2_3_2::EAS::SlovakiaVatNumber),
+            EAS::SanMarinoVatNumber => Ok(crate::zugferd_2_3_2::EAS::SanMarinoVatNumber),
+            EAS::TurkeyVatNumber => Ok(crate::zugferd_2_3_2::EAS::TurkeyVatNumber),
+            EAS::HolySeeVaticanCityStateVatNumber => Ok(crate::zugferd_2_3_2::EAS::HolySeeVaticanCityStateVatNumber),
+            EAS::FrenchVatNumber => Ok(crate::zugferd_2_3_2::EAS::FrenchVatNumber),
+            EAS::EmployerIdentificationNumberEinUsa => Ok(crate::zugferd_2_3_2::EAS::EmployerIdentificationNumberEinUsa),
+            EAS::OFTPOdetteFileTransferProtocol => Ok(crate::zugferd_2_3_2::EAS::OFTPOdetteFileTransferProtocol),
+            EAS::X400AddressForMailText => Ok(crate::zugferd_2_3_2::EAS::X400AddressForMailText),
+            EAS::As2Exchange => Ok(crate::zugferd_2_3_2::EAS::As2Exchange),
+            EAS::FileTransferProtocol => Ok(crate::zugferd_2_3_2::EAS::FileTransferProtocol),
+            EAS::ElectronicMailSmpt => Ok(crate::zugferd_2_3_2::EAS::ElectronicMailSmpt),
+            EAS::IdentificationNumberEconomicSubjectsIco => Err(ErrFromEasToCrateZugferd232Eas::IdentificationNumberEconomicSubjectsIco),
+            EAS::IdentificationNumberEconomicSubjectIcoActOnStateStatistics29November200127 => Err(ErrFromEasToCrateZugferd232Eas::IdentificationNumberEconomicSubjectIcoActOnStateStatistics29November200127),
+            EAS::RegisterLegalPersonsInFrenchRépertoireDesPersonnesMorales => Err(ErrFromEasToCrateZugferd232Eas::RegisterLegalPersonsInFrenchRépertoireDesPersonnesMorales),
+        }
+    }
+}
+
+/// All the variants of EAS that are not matched to any variant of crate::zugferd_2_3_2::EAS
+#[derive(Debug, PartialEq, Eq, Hash)]
+pub enum ErrFromEasToCrateZugferd232Eas {
+    IdentificationNumberEconomicSubjectsIco,
+    IdentificationNumberEconomicSubjectIcoActOnStateStatistics29November200127,
+    RegisterLegalPersonsInFrenchRépertoireDesPersonnesMorales,
+}
+
+impl std::fmt::Display for ErrFromEasToCrateZugferd232Eas {
+    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+        match self {
+            ErrFromEasToCrateZugferd232Eas::IdentificationNumberEconomicSubjectsIco => write!(f, "IdentificationNumberEconomicSubjectsIco has no corresponding value in crate::zugferd_2_3_2::EAS"),
+            ErrFromEasToCrateZugferd232Eas::IdentificationNumberEconomicSubjectIcoActOnStateStatistics29November200127 => write!(f, "IdentificationNumberEconomicSubjectIcoActOnStateStatistics29November200127 has no corresponding value in crate::zugferd_2_3_2::EAS"),
+            ErrFromEasToCrateZugferd232Eas::RegisterLegalPersonsInFrenchRépertoireDesPersonnesMorales => write!(f, "RegisterLegalPersonsInFrenchRépertoireDesPersonnesMorales has no corresponding value in crate::zugferd_2_3_2::EAS"),
+        }
+    }
+}
+
+impl std::error::Error for ErrFromEasToCrateZugferd232Eas {}
+
+impl std::convert::TryFrom<crate::zugferd_2_3_2::EAS> for EAS {
+    type Error = ErrFromCrateZugferd232EasToEas;
+    fn try_from(value: crate::zugferd_2_3_2::EAS) -> Result<EAS, Self::Error> {
+        match value {
+            crate::zugferd_2_3_2::EAS::SystemInformationEtRepertoireDesEntrepriseEtDesEtablissementsSirene => Ok(EAS::SystemInformationEtRepertoireDesEntrepriseEtDesEtablissementsSirene),
+            crate::zugferd_2_3_2::EAS::Organisationsnummer => Ok(EAS::Organisationsnummer),
+            crate::zugferd_2_3_2::EAS::SiretCode => Ok(EAS::SiretCode),
+            crate::zugferd_2_3_2::EAS::LyTunnus => Ok(EAS::LyTunnus),
+            crate::zugferd_2_3_2::EAS::DataUniversalNumberingSystemDUNSNumber => Ok(EAS::DataUniversalNumberingSystemDUNSNumber),
+            crate::zugferd_2_3_2::EAS::EanLocationCode => Ok(EAS::EanLocationCode),
+            crate::zugferd_2_3_2::EAS::DanishChamberOfCommerceSchemeEdiraCompliant => Ok(EAS::TheDanishBusinessAuthorityPNumberDkP),
+            crate::zugferd_2_3_2::EAS::FtiEdiforumItaliaEdiraCompliant => Ok(EAS::FtiEdiforumItaliaEdiraCompliant),
+            crate::zugferd_2_3_2::EAS::VerenigingVanKamersVanKoophandelEnFabriekenInNederlandAssociationChambersCommerceAndIndustryInNetherlandsSchemeEdiraCompliant => Ok(EAS::VerenigingVanKamersVanKoophandelEnFabriekenInNederlandAssociationChambersCommerceAndIndustryInNetherlandsSchemeEdiraCompliant),
+            crate::zugferd_2_3_2::EAS::DirectoratesEuropeanCommission => Ok(EAS::DirectoratesEuropeanCommission),
+            crate::zugferd_2_3_2::EAS::SiaObjectIdentifiers => Ok(EAS::SiaObjectIdentifiers),
+            crate::zugferd_2_3_2::EAS::SecetiObjectIdentifiers => Ok(EAS::SecetiObjectIdentifiers),
+            crate::zugferd_2_3_2::EAS::StandardCompanyCode => Ok(EAS::StandardCompanyCode),
+            crate::zugferd_2_3_2::EAS::AustralianBusinessNumberAbnScheme => Ok(EAS::AustralianBusinessNumberAbnScheme),
+            crate::zugferd_2_3_2::EAS::TeikokuCompanyCode => Ok(EAS::TeikokuCompanyCode),
+            crate::zugferd_2_3_2::EAS::OdetteInternationalLimited => Ok(EAS::OdetteInternationalLimited),
+            crate::zugferd_2_3_2::EAS::NuméroDidentificationSuisseDesEnterprisesIdeSwissUniqueBusinessIdentificationNumberUidb => Ok(EAS::NuméroDidentificationSuisseDesEnterprisesIdeSwissUniqueBusinessIdentificationNumberUidb),
+            crate::zugferd_2_3_2::EAS::Digstorg => Ok(EAS::Digstorg),
+            crate::zugferd_2_3_2::EAS::CorporateNumberTheSocialSecurityAndTaxNumberSystem => Ok(EAS::CorporateNumberTheSocialSecurityAndTaxNumberSystem),
+            crate::zugferd_2_3_2::EAS::DutchOriginatorsIdentificationNumber => Ok(EAS::DutchOriginatorsIdentificationNumber),
+            crate::zugferd_2_3_2::EAS::CentreRegistersAndInformationSystemsMinistryJustice => Ok(EAS::CentreRegistersAndInformationSystemsMinistryJustice),
+            crate::zugferd_2_3_2::EAS::EnhetsregisteretVedBronnoysundregisterne => Ok(EAS::EnhetsregisteretVedBronnoysundregisterne),
+            crate::zugferd_2_3_2::EAS::UblBePartyIdentifier => Ok(EAS::UblBePartyIdentifier),
+            crate::zugferd_2_3_2::EAS::KoiosOpenTechnicalDictionary => Ok(EAS::KoiosOpenTechnicalDictionary),
+            crate::zugferd_2_3_2::EAS::SingaporeUenIdentifier => Ok(EAS::SingaporeUenIdentifier),
+            crate::zugferd_2_3_2::EAS::KennitalaIcelandLegalIdForIndividualsAndLegalEntities => Ok(EAS::KennitalaIcelandLegalIdForIndividualsAndLegalEntities),
+            crate::zugferd_2_3_2::EAS::Erstorg => Ok(EAS::Erstorg),
+            crate::zugferd_2_3_2::EAS::GlobalLegalEntityIdentifierGleif => Ok(EAS::GlobalLegalEntityIdentifierGleif),
+            crate::zugferd_2_3_2::EAS::LegalEntityCodeLithuania => Ok(EAS::LegalEntityCodeLithuania),
+            crate::zugferd_2_3_2::EAS::CodiceUnivocoUnitàOrganizzativaIpa => Ok(EAS::CodiceUnivocoUnitàOrganizzativaIpa),
+            crate::zugferd_2_3_2::EAS::IndirizzoDiPostaElettronicaCertificata => Ok(EAS::IndirizzoDiPostaElettronicaCertificata),
+            crate::zugferd_2_3_2::EAS::EdeliveryNetworkParticipantIdentifier => Ok(EAS::EdeliveryNetworkParticipantIdentifier),
+            crate::zugferd_2_3_2::EAS::LeitwegId => Ok(EAS::LeitwegId),
+            crate::zugferd_2_3_2::EAS::Coddest => Ok(EAS::Coddest),
+            crate::zugferd_2_3_2::EAS::NumeroDentrepriseOndernemingsnummerUnternehmensnummer => Ok(EAS::NumeroDentrepriseOndernemingsnummerUnternehmensnummer),
+            crate::zugferd_2_3_2::EAS::Gs1IdentificationKeys => Ok(EAS::Gs1IdentificationKeys),
+            crate::zugferd_2_3_2::EAS::CodiceFiscale => Ok(EAS::CodiceFiscale),
+            crate::zugferd_2_3_2::EAS::PartitaIva => Ok(EAS::PartitaIva),
+            crate::zugferd_2_3_2::EAS::FinnishOrganizationIdentifier => Ok(EAS::FinnishOrganizationIdentifier),
+            crate::zugferd_2_3_2::EAS::FinnishOrganizationValueAddTaxIdentifier => Ok(EAS::FinnishOrganizationValueAddTaxIdentifier),
+            crate::zugferd_2_3_2::EAS::NetServiceId => Ok(EAS::NetServiceId),
+            crate::zugferd_2_3_2::EAS::Ovtcode => Ok(EAS::Ovtcode),
+            crate::zugferd_2_3_2::EAS::TheNetherlandsChamberCommerceAndIndustryEstablishmentNumber => Ok(EAS::TheNetherlandsChamberCommerceAndIndustryEstablishmentNumber),
+            crate::zugferd_2_3_2::EAS::UnifiedRegistrationNumberLatvia => Ok(EAS::UnifiedRegistrationNumberLatvia),
+            crate::zugferd_2_3_2::EAS::TheRegisteredNumberQualifiedInvoiceIssuer => Ok(EAS::TheRegisteredNumberQualifiedInvoiceIssuer),
+            crate::zugferd_2_3_2::EAS::FrctcElectronicAddress => Ok(EAS::FrctcElectronicAddress),
+            crate::zugferd_2_3_2::EAS::NationalEInvoicingFramework => Ok(EAS::NationalEInvoicingFramework),
+            crate::zugferd_2_3_2::EAS::UaeTaxIdentificationNumberTin => Ok(EAS::UaeTaxIdentificationNumberTin),
+            crate::zugferd_2_3_2::EAS::HungaryVatNumber => Ok(EAS::HungaryVatNumber),
+            crate::zugferd_2_3_2::EAS::BusinessRegistersNetwork => Ok(EAS::BusinessRegistersNetwork),
+            crate::zugferd_2_3_2::EAS::ÖsterreichischeUmsatzsteuerIdentifikationsnummer => Ok(EAS::ÖsterreichischeUmsatzsteuerIdentifikationsnummer),
+            crate::zugferd_2_3_2::EAS::ÖsterreichischesVerwaltungsBzwOrganisationskennzeichen => Ok(EAS::ÖsterreichischesVerwaltungsBzwOrganisationskennzeichen),
+            crate::zugferd_2_3_2::EAS::SocietyForWorldwideInterbankFinancialTelecommunicationSWIFT => Ok(EAS::SocietyForWorldwideInterbankFinancialTelecommunicationSWIFT),
+            crate::zugferd_2_3_2::EAS::KennzifferDesUnternehmensregisters => Ok(EAS::KennzifferDesUnternehmensregisters),
+            crate::zugferd_2_3_2::EAS::AgenciaEspañolaDeAdministraciónTributaria => Ok(EAS::AgenciaEspañolaDeAdministraciónTributaria),
+            crate::zugferd_2_3_2::EAS::AndorraVatNumber => Ok(EAS::AndorraVatNumber),
+            crate::zugferd_2_3_2::EAS::AlbaniaVatNumber => Ok(EAS::AlbaniaVatNumber),
+            crate::zugferd_2_3_2::EAS::BosniaAndHerzegovinaVatNumber => Ok(EAS::BosniaAndHerzegovinaVatNumber),
+            crate::zugferd_2_3_2::EAS::BelgiumVatNumber => Ok(EAS::BelgiumVatNumber),
+            crate::zugferd_2_3_2::EAS::BulgariaVatNumber => Ok(EAS::BulgariaVatNumber),
+            crate::zugferd_2_3_2::EAS::SwitzerlandVatNumber => Ok(EAS::SwitzerlandVatNumber),
+            crate::zugferd_2_3_2::EAS::CyprusVatNumber => Ok(EAS::CyprusVatNumber),
+            crate::zugferd_2_3_2::EAS::CzechRepublicVatNumber => Ok(EAS::CzechRepublicVatNumber),
+            crate::zugferd_2_3_2::EAS::GermanyVatNumber => Ok(EAS::GermanyVatNumber),
+            crate::zugferd_2_3_2::EAS::EstoniaVatNumber => Ok(EAS::EstoniaVatNumber),
+            crate::zugferd_2_3_2::EAS::UnitedKingdomVatNumber => Ok(EAS::UnitedKingdomVatNumber),
+            crate::zugferd_2_3_2::EAS::GreeceVatNumber => Ok(EAS::GreeceVatNumber),
+            crate::zugferd_2_3_2::EAS::CroatiaVatNumber => Ok(EAS::CroatiaVatNumber),
+            crate::zugferd_2_3_2::EAS::IrelandVatNumber => Ok(EAS::IrelandVatNumber),
+            crate::zugferd_2_3_2::EAS::LiechtensteinVatNumber => Ok(EAS::LiechtensteinVatNumber),
+            crate::zugferd_2_3_2::EAS::LithuaniaVatNumber => Ok(EAS::LithuaniaVatNumber),
+            crate::zugferd_2_3_2::EAS::LuxemburgVatNumber => Ok(EAS::LuxemburgVatNumber),
+            crate::zugferd_2_3_2::EAS::LatviaVatNumber => Ok(EAS::LatviaVatNumber),
+            crate::zugferd_2_3_2::EAS::MonacoVatNumber => Ok(EAS::MonacoVatNumber),
+            crate::zugferd_2_3_2::EAS::MontenegroVatNumber => Ok(EAS::MontenegroVatNumber),
+            crate::zugferd_2_3_2::EAS::MacedoniaFormerYugoslavRepublicVatNumber => Ok(EAS::MacedoniaFormerYugoslavRepublicVatNumber),
+            crate::zugferd_2_3_2::EAS::MaltaVatNumber => Ok(EAS::MaltaVatNumber),
+            crate::zugferd_2_3_2::EAS::NetherlandsVatNumber => Ok(EAS::NetherlandsVatNumber),
+            crate::zugferd_2_3_2::EAS::PolandVatNumber => Ok(EAS::PolandVatNumber),
+            crate::zugferd_2_3_2::EAS::PortugalVatNumber => Ok(EAS::PortugalVatNumber),
+            crate::zugferd_2_3_2::EAS::RomaniaVatNumber => Ok(EAS::RomaniaVatNumber),
+            crate::zugferd_2_3_2::EAS::SerbiaVatNumber => Ok(EAS::SerbiaVatNumber),
+            crate::zugferd_2_3_2::EAS::SloveniaVatNumber => Ok(EAS::SloveniaVatNumber),
+            crate::zugferd_2_3_2::EAS::SlovakiaVatNumber => Ok(EAS::SlovakiaVatNumber),
+            crate::zugferd_2_3_2::EAS::SanMarinoVatNumber => Ok(EAS::SanMarinoVatNumber),
+            crate::zugferd_2_3_2::EAS::TurkeyVatNumber => Ok(EAS::TurkeyVatNumber),
+            crate::zugferd_2_3_2::EAS::HolySeeVaticanCityStateVatNumber => Ok(EAS::HolySeeVaticanCityStateVatNumber),
+            crate::zugferd_2_3_2::EAS::FrenchVatNumber => Ok(EAS::FrenchVatNumber),
+            crate::zugferd_2_3_2::EAS::EmployerIdentificationNumberEinUsa => Ok(EAS::EmployerIdentificationNumberEinUsa),
+            crate::zugferd_2_3_2::EAS::OFTPOdetteFileTransferProtocol => Ok(EAS::OFTPOdetteFileTransferProtocol),
+            crate::zugferd_2_3_2::EAS::X400AddressForMailText => Ok(EAS::X400AddressForMailText),
+            crate::zugferd_2_3_2::EAS::As2Exchange => Ok(EAS::As2Exchange),
+            crate::zugferd_2_3_2::EAS::FileTransferProtocol => Ok(EAS::FileTransferProtocol),
+            crate::zugferd_2_3_2::EAS::ElectronicMailSmpt => Ok(EAS::ElectronicMailSmpt),
+            crate::zugferd_2_3_2::EAS::DanishMinistryInteriorAndHealth => Err(ErrFromCrateZugferd232EasToEas::DanishMinistryInteriorAndHealth),
+        }
+    }
+}
+
+/// All the variants of crate::zugferd_2_3_2::EAS that are not matched to any variant of EAS
+#[derive(Debug, PartialEq, Eq, Hash)]
+pub enum ErrFromCrateZugferd232EasToEas {
+    DanishMinistryInteriorAndHealth,
+}
+
+impl std::fmt::Display for ErrFromCrateZugferd232EasToEas {
+    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+        match self {
+            ErrFromCrateZugferd232EasToEas::DanishMinistryInteriorAndHealth => write!(
+                f,
+                "DanishMinistryInteriorAndHealth has no corresponding value in EAS"
+            ),
+        }
+    }
+}
+
+impl std::error::Error for ErrFromCrateZugferd232EasToEas {}
+// End: (Version) TryFrom crate::zugferd_2_3_2::EAS to EAS

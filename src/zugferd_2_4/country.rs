@@ -1,10 +1,10 @@
 #![allow(non_camel_case_types)]
 
-    #[cfg_attr(feature = "specta", derive(specta::Type))]
-    #[cfg_attr(feature = "serde", derive(serde::Serialize, serde::Deserialize))]
-    #[derive(Debug, PartialEq, Eq, PartialOrd, Ord, Clone, Copy, Hash)]
-    pub enum Country {
-        /// Andorra
+#[cfg_attr(feature = "specta", derive(specta::Type))]
+#[cfg_attr(feature = "serde", derive(serde::Serialize, serde::Deserialize))]
+#[derive(Debug, PartialEq, Eq, PartialOrd, Ord, Clone, Copy, Hash)]
+pub enum Country {
+    /// Andorra
     Andorra,
     /// United Arab Emirates (the)
     UnitedArabEmirates,
@@ -506,8 +506,8 @@
     Kosovo,
     /// United Kingdom (Northern Ireland)
     UnitedKingdomNorthernIreland,
-    }
-    
+}
+
 impl std::fmt::Display for Country {
     fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
         write!(f, "{}", <Self as crate::Code>::code(*self))
@@ -517,7 +517,8 @@ impl std::fmt::Display for Country {
 impl std::str::FromStr for Country {
     type Err = crate::ParseError<Self>;
     fn from_str(s: &str) -> Result<Self, Self::Err> {
-        <Self as crate::FromCode>::from_code(s).ok_or_else(|| crate::ParseError::<Self>::new(s.to_owned()))
+        <Self as crate::FromCode>::from_code(s)
+            .ok_or_else(|| crate::ParseError::<Self>::new(s.to_owned()))
     }
 }
 
@@ -858,7 +859,9 @@ impl crate::Description for Country {
             Country::FaroeIslands => "Faroe Islands (the)",
             Country::France => "France",
             Country::Gabon => "Gabon",
-            Country::UnitedKingdomGreatBritainAndNorthernIreland => "United Kingdom of Great Britain and Northern Ireland (the)",
+            Country::UnitedKingdomGreatBritainAndNorthernIreland => {
+                "United Kingdom of Great Britain and Northern Ireland (the)"
+            }
             Country::Grenada => "Grenada",
             Country::Georgia => "Georgia",
             Country::FrenchGuiana => "French Guiana",
@@ -871,7 +874,9 @@ impl crate::Description for Country {
             Country::Guadeloupe => "Guadeloupe",
             Country::EquatorialGuinea => "Equatorial Guinea",
             Country::Greece => "Greece",
-            Country::SouthGeorgiaAndSouthSandwichIslands => "South Georgia and the South Sandwich Islands",
+            Country::SouthGeorgiaAndSouthSandwichIslands => {
+                "South Georgia and the South Sandwich Islands"
+            }
             Country::Guatemala => "Guatemala",
             Country::Guam => "Guam",
             Country::GuineaBissau => "Guinea-Bissau",
@@ -902,7 +907,9 @@ impl crate::Description for Country {
             Country::Kiribati => "Kiribati",
             Country::Comoros => "Comoros (the)",
             Country::SaintKittsAndNevis => "Saint Kitts and Nevis",
-            Country::KoreaDemocraticPeoplesRepublic => "Korea (the Democratic People's Republic of)",
+            Country::KoreaDemocraticPeoplesRepublic => {
+                "Korea (the Democratic People's Republic of)"
+            }
             Country::KoreaRepublic => "Korea (the Republic of)",
             Country::Kuwait => "Kuwait",
             Country::CaymanIslands => "Cayman Islands (the)",
@@ -980,7 +987,9 @@ impl crate::Description for Country {
             Country::Sudan => "Sudan (the)",
             Country::Sweden => "Sweden",
             Country::Singapore => "Singapore",
-            Country::SaintHelenaAscensionAndTristanDaCunha => "Saint Helena, Ascension and Tristan da Cunha",
+            Country::SaintHelenaAscensionAndTristanDaCunha => {
+                "Saint Helena, Ascension and Tristan da Cunha"
+            }
             Country::Slovenia => "Slovenia",
             Country::SvalbardAndJanMayen => "Svalbard and Jan Mayen",
             Country::Slovakia => "Slovakia",
@@ -1013,7 +1022,9 @@ impl crate::Description for Country {
             Country::TanzaniaUnitedRepublic => "Tanzania, the United Republic of",
             Country::Ukraine => "Ukraine",
             Country::Uganda => "Uganda",
-            Country::UnitedStatesMinorOutlyingIslands => "United States Minor Outlying Islands (the)",
+            Country::UnitedStatesMinorOutlyingIslands => {
+                "United States Minor Outlying Islands (the)"
+            }
             Country::UnitedStatesAmerica => "United States of America (the)",
             Country::Uruguay => "Uruguay",
             Country::Uzbekistan => "Uzbekistan",
@@ -1040,7 +1051,7 @@ impl crate::Description for Country {
 impl crate::FromCode for Country {
     fn from_code(code: &str) -> Option<Self>
     where
-        Self: Sized
+        Self: Sized,
     {
         match code {
             "AD" => Some(Country::Andorra),
@@ -1299,12 +1310,13 @@ impl crate::FromCode for Country {
     }
 }
 
+// Start: (iso_country) TryFrom Country to iso_country::Country
 #[cfg(feature = "iso_country")]
 impl std::convert::TryFrom<Country> for iso_country::Country {
-    type Error = ErrFromCountry;
+    type Error = ErrFromCountryToIsoCountryCountry;
     fn try_from(value: Country) -> Result<Self, Self::Error> {
         match value {
-                        Country::Andorra => Ok(iso_country::Country::AD),
+            Country::Andorra => Ok(iso_country::Country::AD),
             Country::UnitedArabEmirates => Ok(iso_country::Country::AE),
             Country::Afghanistan => Ok(iso_country::Country::AF),
             Country::AntiguaAndBarbuda => Ok(iso_country::Country::AG),
@@ -1553,41 +1565,47 @@ impl std::convert::TryFrom<Country> for iso_country::Country {
             Country::SouthAfrica => Ok(iso_country::Country::ZA),
             Country::Zambia => Ok(iso_country::Country::ZM),
             Country::Zimbabwe => Ok(iso_country::Country::ZW),
-                        Country::Kosovo => Err(ErrFromCountry::Kosovo),
-            Country::UnitedKingdomNorthernIreland => Err(ErrFromCountry::UnitedKingdomNorthernIreland),
+            Country::Kosovo => Err(ErrFromCountryToIsoCountryCountry::Kosovo),
+            Country::UnitedKingdomNorthernIreland => {
+                Err(ErrFromCountryToIsoCountryCountry::UnitedKingdomNorthernIreland)
+            }
         }
     }
 }
-
 
 #[cfg(feature = "iso_country")]
 /// All the variants of Country that are not matched to any variant of iso_country::Country
 #[derive(Debug, PartialEq, Eq, Hash)]
-pub enum ErrFromCountry {
-                Kosovo,
-            UnitedKingdomNorthernIreland,
+pub enum ErrFromCountryToIsoCountryCountry {
+    Kosovo,
+    UnitedKingdomNorthernIreland,
 }
 
 #[cfg(feature = "iso_country")]
-impl std::fmt::Display for ErrFromCountry {
+impl std::fmt::Display for ErrFromCountryToIsoCountryCountry {
     fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
         match self {
-                        ErrFromCountry::Kosovo => write!(f, "Kosovo has no corresponding value in iso_country::Country"),
-            ErrFromCountry::UnitedKingdomNorthernIreland => write!(f, "UnitedKingdomNorthernIreland has no corresponding value in iso_country::Country"),
+            ErrFromCountryToIsoCountryCountry::Kosovo => write!(
+                f,
+                "Kosovo has no corresponding value in iso_country::Country"
+            ),
+            ErrFromCountryToIsoCountryCountry::UnitedKingdomNorthernIreland => write!(
+                f,
+                "UnitedKingdomNorthernIreland has no corresponding value in iso_country::Country"
+            ),
         }
     }
-} 
+}
 
 #[cfg(feature = "iso_country")]
-impl std::error::Error for ErrFromCountry {}
-
+impl std::error::Error for ErrFromCountryToIsoCountryCountry {}
 
 #[cfg(feature = "iso_country")]
 impl std::convert::TryFrom<iso_country::Country> for Country {
-    type Error = ErrFromIsoCountryCountry;
+    type Error = ErrFromIsoCountryCountryToCountry;
     fn try_from(value: iso_country::Country) -> Result<Country, Self::Error> {
         match value {
-                        iso_country::Country::AD => Ok(Country::Andorra),
+            iso_country::Country::AD => Ok(Country::Andorra),
             iso_country::Country::AE => Ok(Country::UnitedArabEmirates),
             iso_country::Country::AF => Ok(Country::Afghanistan),
             iso_country::Country::AG => Ok(Country::AntiguaAndBarbuda),
@@ -1836,28 +1854,654 @@ impl std::convert::TryFrom<iso_country::Country> for Country {
             iso_country::Country::ZA => Ok(Country::SouthAfrica),
             iso_country::Country::ZM => Ok(Country::Zambia),
             iso_country::Country::ZW => Ok(Country::Zimbabwe),
-                        iso_country::Country::Unspecified => Err(ErrFromIsoCountryCountry::Unspecified),
+            iso_country::Country::Unspecified => {
+                Err(ErrFromIsoCountryCountryToCountry::Unspecified)
+            }
         }
     }
 }
-
 
 #[cfg(feature = "iso_country")]
 /// All the variants of iso_country::Country that are not matched to any variant of Country
 #[derive(Debug, PartialEq, Eq, Hash)]
-pub enum ErrFromIsoCountryCountry {
-                Unspecified,
+pub enum ErrFromIsoCountryCountryToCountry {
+    Unspecified,
 }
 
 #[cfg(feature = "iso_country")]
-impl std::fmt::Display for ErrFromIsoCountryCountry {
+impl std::fmt::Display for ErrFromIsoCountryCountryToCountry {
     fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
         match self {
-                        ErrFromIsoCountryCountry::Unspecified => write!(f, "Unspecified has no corresponding value in Country"),
+            ErrFromIsoCountryCountryToCountry::Unspecified => {
+                write!(f, "Unspecified has no corresponding value in Country")
+            }
         }
     }
-} 
+}
 
 #[cfg(feature = "iso_country")]
-impl std::error::Error for ErrFromIsoCountryCountry {}
+impl std::error::Error for ErrFromIsoCountryCountryToCountry {}
+// End: (iso_country) TryFrom iso_country::Country to Country
+// Start: (Version) TryFrom Country to crate::zugferd_2_3_3::Country
+impl std::convert::TryFrom<Country> for crate::zugferd_2_3_3::Country {
+    type Error = std::convert::Infallible;
+    fn try_from(value: Country) -> Result<Self, Self::Error> {
+        match value {
+            Country::Andorra => Ok(crate::zugferd_2_3_3::Country::Andorra),
+            Country::UnitedArabEmirates => Ok(crate::zugferd_2_3_3::Country::UnitedArabEmirates),
+            Country::Afghanistan => Ok(crate::zugferd_2_3_3::Country::Afghanistan),
+            Country::AntiguaAndBarbuda => Ok(crate::zugferd_2_3_3::Country::AntiguaAndBarbuda),
+            Country::Anguilla => Ok(crate::zugferd_2_3_3::Country::Anguilla),
+            Country::Albania => Ok(crate::zugferd_2_3_3::Country::Albania),
+            Country::Armenia => Ok(crate::zugferd_2_3_3::Country::Armenia),
+            Country::Angola => Ok(crate::zugferd_2_3_3::Country::Angola),
+            Country::Antarctica => Ok(crate::zugferd_2_3_3::Country::Antarctica),
+            Country::Argentina => Ok(crate::zugferd_2_3_3::Country::Argentina),
+            Country::AmericanSamoa => Ok(crate::zugferd_2_3_3::Country::AmericanSamoa),
+            Country::Austria => Ok(crate::zugferd_2_3_3::Country::Austria),
+            Country::Australia => Ok(crate::zugferd_2_3_3::Country::Australia),
+            Country::Aruba => Ok(crate::zugferd_2_3_3::Country::Aruba),
+            Country::ÅlandIslands => Ok(crate::zugferd_2_3_3::Country::ÅlandIslands),
+            Country::Azerbaijan => Ok(crate::zugferd_2_3_3::Country::Azerbaijan),
+            Country::BosniaAndHerzegovina => {
+                Ok(crate::zugferd_2_3_3::Country::BosniaAndHerzegovina)
+            }
+            Country::Barbados => Ok(crate::zugferd_2_3_3::Country::Barbados),
+            Country::Bangladesh => Ok(crate::zugferd_2_3_3::Country::Bangladesh),
+            Country::Belgium => Ok(crate::zugferd_2_3_3::Country::Belgium),
+            Country::BurkinaFaso => Ok(crate::zugferd_2_3_3::Country::BurkinaFaso),
+            Country::Bulgaria => Ok(crate::zugferd_2_3_3::Country::Bulgaria),
+            Country::Bahrain => Ok(crate::zugferd_2_3_3::Country::Bahrain),
+            Country::Burundi => Ok(crate::zugferd_2_3_3::Country::Burundi),
+            Country::Benin => Ok(crate::zugferd_2_3_3::Country::Benin),
+            Country::SaintBarthélemy => Ok(crate::zugferd_2_3_3::Country::SaintBarthélemy),
+            Country::Bermuda => Ok(crate::zugferd_2_3_3::Country::Bermuda),
+            Country::BruneiDarussalam => Ok(crate::zugferd_2_3_3::Country::BruneiDarussalam),
+            Country::BoliviaPlurinationalState => {
+                Ok(crate::zugferd_2_3_3::Country::BoliviaPlurinationalState)
+            }
+            Country::BonaireSintEustatiusAndSaba => {
+                Ok(crate::zugferd_2_3_3::Country::BonaireSintEustatiusAndSaba)
+            }
+            Country::Brazil => Ok(crate::zugferd_2_3_3::Country::Brazil),
+            Country::BahamasThe => Ok(crate::zugferd_2_3_3::Country::Bahamas),
+            Country::Bhutan => Ok(crate::zugferd_2_3_3::Country::Bhutan),
+            Country::BouvetIsland => Ok(crate::zugferd_2_3_3::Country::BouvetIsland),
+            Country::Botswana => Ok(crate::zugferd_2_3_3::Country::Botswana),
+            Country::Belarus => Ok(crate::zugferd_2_3_3::Country::Belarus),
+            Country::Belize => Ok(crate::zugferd_2_3_3::Country::Belize),
+            Country::Canada => Ok(crate::zugferd_2_3_3::Country::Canada),
+            Country::CocosKeelingIslands => Ok(crate::zugferd_2_3_3::Country::CocosKeelingIslands),
+            Country::CongoDemocraticRepublic => {
+                Ok(crate::zugferd_2_3_3::Country::CongoDemocraticRepublic)
+            }
+            Country::CentralAfricanRepublic => {
+                Ok(crate::zugferd_2_3_3::Country::CentralAfricanRepublic)
+            }
+            Country::Congo => Ok(crate::zugferd_2_3_3::Country::Congo),
+            Country::Switzerland => Ok(crate::zugferd_2_3_3::Country::Switzerland),
+            Country::CôteDivoire => Ok(crate::zugferd_2_3_3::Country::CôteDivoire),
+            Country::CookIslands => Ok(crate::zugferd_2_3_3::Country::CookIslands),
+            Country::Chile => Ok(crate::zugferd_2_3_3::Country::Chile),
+            Country::Cameroon => Ok(crate::zugferd_2_3_3::Country::Cameroon),
+            Country::China => Ok(crate::zugferd_2_3_3::Country::China),
+            Country::Colombia => Ok(crate::zugferd_2_3_3::Country::Colombia),
+            Country::CostaRica => Ok(crate::zugferd_2_3_3::Country::CostaRica),
+            Country::Cuba => Ok(crate::zugferd_2_3_3::Country::Cuba),
+            Country::CaboVerde => Ok(crate::zugferd_2_3_3::Country::CaboVerde),
+            Country::Curaçao => Ok(crate::zugferd_2_3_3::Country::Curaçao),
+            Country::ChristmasIsland => Ok(crate::zugferd_2_3_3::Country::ChristmasIsland),
+            Country::Cyprus => Ok(crate::zugferd_2_3_3::Country::Cyprus),
+            Country::Czechia => Ok(crate::zugferd_2_3_3::Country::Czechia),
+            Country::Germany => Ok(crate::zugferd_2_3_3::Country::Germany),
+            Country::Djibouti => Ok(crate::zugferd_2_3_3::Country::Djibouti),
+            Country::Denmark => Ok(crate::zugferd_2_3_3::Country::Denmark),
+            Country::Dominica => Ok(crate::zugferd_2_3_3::Country::Dominica),
+            Country::DominicanRepublic => Ok(crate::zugferd_2_3_3::Country::DominicanRepublic),
+            Country::Algeria => Ok(crate::zugferd_2_3_3::Country::Algeria),
+            Country::Ecuador => Ok(crate::zugferd_2_3_3::Country::Ecuador),
+            Country::Estonia => Ok(crate::zugferd_2_3_3::Country::Estonia),
+            Country::Egypt => Ok(crate::zugferd_2_3_3::Country::Egypt),
+            Country::WesternSahara => Ok(crate::zugferd_2_3_3::Country::WesternSahara),
+            Country::Eritrea => Ok(crate::zugferd_2_3_3::Country::Eritrea),
+            Country::Spain => Ok(crate::zugferd_2_3_3::Country::Spain),
+            Country::Ethiopia => Ok(crate::zugferd_2_3_3::Country::Ethiopia),
+            Country::Finland => Ok(crate::zugferd_2_3_3::Country::Finland),
+            Country::Fiji => Ok(crate::zugferd_2_3_3::Country::Fiji),
+            Country::FalklandIslandsMalvinas => {
+                Ok(crate::zugferd_2_3_3::Country::FalklandIslandsMalvinas)
+            }
+            Country::MicronesiaFederatedStates => {
+                Ok(crate::zugferd_2_3_3::Country::MicronesiaFederatedStates)
+            }
+            Country::FaroeIslands => Ok(crate::zugferd_2_3_3::Country::FaroeIslands),
+            Country::France => Ok(crate::zugferd_2_3_3::Country::France),
+            Country::Gabon => Ok(crate::zugferd_2_3_3::Country::Gabon),
+            Country::UnitedKingdomGreatBritainAndNorthernIreland => {
+                Ok(crate::zugferd_2_3_3::Country::UnitedKingdomGreatBritainAndNorthernIreland)
+            }
+            Country::Grenada => Ok(crate::zugferd_2_3_3::Country::Grenada),
+            Country::Georgia => Ok(crate::zugferd_2_3_3::Country::Georgia),
+            Country::FrenchGuiana => Ok(crate::zugferd_2_3_3::Country::FrenchGuiana),
+            Country::Guernsey => Ok(crate::zugferd_2_3_3::Country::Guernsey),
+            Country::Ghana => Ok(crate::zugferd_2_3_3::Country::Ghana),
+            Country::Gibraltar => Ok(crate::zugferd_2_3_3::Country::Gibraltar),
+            Country::Greenland => Ok(crate::zugferd_2_3_3::Country::Greenland),
+            Country::Gambia => Ok(crate::zugferd_2_3_3::Country::Gambia),
+            Country::Guinea => Ok(crate::zugferd_2_3_3::Country::Guinea),
+            Country::Guadeloupe => Ok(crate::zugferd_2_3_3::Country::Guadeloupe),
+            Country::EquatorialGuinea => Ok(crate::zugferd_2_3_3::Country::EquatorialGuinea),
+            Country::Greece => Ok(crate::zugferd_2_3_3::Country::Greece),
+            Country::SouthGeorgiaAndSouthSandwichIslands => {
+                Ok(crate::zugferd_2_3_3::Country::SouthGeorgiaAndSouthSandwichIslands)
+            }
+            Country::Guatemala => Ok(crate::zugferd_2_3_3::Country::Guatemala),
+            Country::Guam => Ok(crate::zugferd_2_3_3::Country::Guam),
+            Country::GuineaBissau => Ok(crate::zugferd_2_3_3::Country::GuineaBissau),
+            Country::Guyana => Ok(crate::zugferd_2_3_3::Country::Guyana),
+            Country::HongKong => Ok(crate::zugferd_2_3_3::Country::HongKong),
+            Country::HeardIslandAndMcdonaldIslands => {
+                Ok(crate::zugferd_2_3_3::Country::HeardIslandAndMcdonaldIslands)
+            }
+            Country::Honduras => Ok(crate::zugferd_2_3_3::Country::Honduras),
+            Country::Croatia => Ok(crate::zugferd_2_3_3::Country::Croatia),
+            Country::Haiti => Ok(crate::zugferd_2_3_3::Country::Haiti),
+            Country::Hungary => Ok(crate::zugferd_2_3_3::Country::Hungary),
+            Country::Indonesia => Ok(crate::zugferd_2_3_3::Country::Indonesia),
+            Country::Ireland => Ok(crate::zugferd_2_3_3::Country::Ireland),
+            Country::Israel => Ok(crate::zugferd_2_3_3::Country::Israel),
+            Country::IsleMan => Ok(crate::zugferd_2_3_3::Country::IsleMan),
+            Country::India => Ok(crate::zugferd_2_3_3::Country::India),
+            Country::BritishIndianOceanTerritory => {
+                Ok(crate::zugferd_2_3_3::Country::BritishIndianOceanTerritory)
+            }
+            Country::Iraq => Ok(crate::zugferd_2_3_3::Country::Iraq),
+            Country::IranIslamicRepublic => Ok(crate::zugferd_2_3_3::Country::IranIslamicRepublic),
+            Country::Iceland => Ok(crate::zugferd_2_3_3::Country::Iceland),
+            Country::Italy => Ok(crate::zugferd_2_3_3::Country::Italy),
+            Country::Jersey => Ok(crate::zugferd_2_3_3::Country::Jersey),
+            Country::Jamaica => Ok(crate::zugferd_2_3_3::Country::Jamaica),
+            Country::Jordan => Ok(crate::zugferd_2_3_3::Country::Jordan),
+            Country::Japan => Ok(crate::zugferd_2_3_3::Country::Japan),
+            Country::Kenya => Ok(crate::zugferd_2_3_3::Country::Kenya),
+            Country::Kyrgyzstan => Ok(crate::zugferd_2_3_3::Country::Kyrgyzstan),
+            Country::Cambodia => Ok(crate::zugferd_2_3_3::Country::Cambodia),
+            Country::Kiribati => Ok(crate::zugferd_2_3_3::Country::Kiribati),
+            Country::Comoros => Ok(crate::zugferd_2_3_3::Country::Comoros),
+            Country::SaintKittsAndNevis => Ok(crate::zugferd_2_3_3::Country::SaintKittsAndNevis),
+            Country::KoreaDemocraticPeoplesRepublic => {
+                Ok(crate::zugferd_2_3_3::Country::KoreaDemocraticPeoplesRepublic)
+            }
+            Country::KoreaRepublic => Ok(crate::zugferd_2_3_3::Country::KoreaRepublic),
+            Country::Kuwait => Ok(crate::zugferd_2_3_3::Country::Kuwait),
+            Country::CaymanIslands => Ok(crate::zugferd_2_3_3::Country::CaymanIslands),
+            Country::Kazakhstan => Ok(crate::zugferd_2_3_3::Country::Kazakhstan),
+            Country::LaoPeoplesDemocraticRepublic => {
+                Ok(crate::zugferd_2_3_3::Country::LaoPeoplesDemocraticRepublic)
+            }
+            Country::Lebanon => Ok(crate::zugferd_2_3_3::Country::Lebanon),
+            Country::SaintLucia => Ok(crate::zugferd_2_3_3::Country::SaintLucia),
+            Country::Liechtenstein => Ok(crate::zugferd_2_3_3::Country::Liechtenstein),
+            Country::SriLanka => Ok(crate::zugferd_2_3_3::Country::SriLanka),
+            Country::Liberia => Ok(crate::zugferd_2_3_3::Country::Liberia),
+            Country::Lesotho => Ok(crate::zugferd_2_3_3::Country::Lesotho),
+            Country::Lithuania => Ok(crate::zugferd_2_3_3::Country::Lithuania),
+            Country::Luxembourg => Ok(crate::zugferd_2_3_3::Country::Luxembourg),
+            Country::Latvia => Ok(crate::zugferd_2_3_3::Country::Latvia),
+            Country::Libya => Ok(crate::zugferd_2_3_3::Country::Libya),
+            Country::Morocco => Ok(crate::zugferd_2_3_3::Country::Morocco),
+            Country::Monaco => Ok(crate::zugferd_2_3_3::Country::Monaco),
+            Country::MoldovaRepublic => Ok(crate::zugferd_2_3_3::Country::MoldovaRepublic),
+            Country::Montenegro => Ok(crate::zugferd_2_3_3::Country::Montenegro),
+            Country::SaintMartinFrenchPart => {
+                Ok(crate::zugferd_2_3_3::Country::SaintMartinFrenchPart)
+            }
+            Country::Madagascar => Ok(crate::zugferd_2_3_3::Country::Madagascar),
+            Country::MarshallIslands => Ok(crate::zugferd_2_3_3::Country::MarshallIslands),
+            Country::NorthMacedonia => Ok(crate::zugferd_2_3_3::Country::NorthMacedonia),
+            Country::Mali => Ok(crate::zugferd_2_3_3::Country::Mali),
+            Country::Myanmar => Ok(crate::zugferd_2_3_3::Country::Myanmar),
+            Country::Mongolia => Ok(crate::zugferd_2_3_3::Country::Mongolia),
+            Country::Macao => Ok(crate::zugferd_2_3_3::Country::Macao),
+            Country::NorthernMarianaIslands => {
+                Ok(crate::zugferd_2_3_3::Country::NorthernMarianaIslands)
+            }
+            Country::Martinique => Ok(crate::zugferd_2_3_3::Country::Martinique),
+            Country::Mauritania => Ok(crate::zugferd_2_3_3::Country::Mauritania),
+            Country::Montserrat => Ok(crate::zugferd_2_3_3::Country::Montserrat),
+            Country::Malta => Ok(crate::zugferd_2_3_3::Country::Malta),
+            Country::Mauritius => Ok(crate::zugferd_2_3_3::Country::Mauritius),
+            Country::Maldives => Ok(crate::zugferd_2_3_3::Country::Maldives),
+            Country::Malawi => Ok(crate::zugferd_2_3_3::Country::Malawi),
+            Country::Mexico => Ok(crate::zugferd_2_3_3::Country::Mexico),
+            Country::Malaysia => Ok(crate::zugferd_2_3_3::Country::Malaysia),
+            Country::Mozambique => Ok(crate::zugferd_2_3_3::Country::Mozambique),
+            Country::Namibia => Ok(crate::zugferd_2_3_3::Country::Namibia),
+            Country::NewCaledonia => Ok(crate::zugferd_2_3_3::Country::NewCaledonia),
+            Country::Niger => Ok(crate::zugferd_2_3_3::Country::Niger),
+            Country::NorfolkIsland => Ok(crate::zugferd_2_3_3::Country::NorfolkIsland),
+            Country::Nigeria => Ok(crate::zugferd_2_3_3::Country::Nigeria),
+            Country::Nicaragua => Ok(crate::zugferd_2_3_3::Country::Nicaragua),
+            Country::Netherlands => Ok(crate::zugferd_2_3_3::Country::Netherlands),
+            Country::Norway => Ok(crate::zugferd_2_3_3::Country::Norway),
+            Country::Nepal => Ok(crate::zugferd_2_3_3::Country::Nepal),
+            Country::Nauru => Ok(crate::zugferd_2_3_3::Country::Nauru),
+            Country::Niue => Ok(crate::zugferd_2_3_3::Country::Niue),
+            Country::NewZealand => Ok(crate::zugferd_2_3_3::Country::NewZealand),
+            Country::Oman => Ok(crate::zugferd_2_3_3::Country::Oman),
+            Country::Panama => Ok(crate::zugferd_2_3_3::Country::Panama),
+            Country::Peru => Ok(crate::zugferd_2_3_3::Country::Peru),
+            Country::FrenchPolynesia => Ok(crate::zugferd_2_3_3::Country::FrenchPolynesia),
+            Country::PapuaNewGuinea => Ok(crate::zugferd_2_3_3::Country::PapuaNewGuinea),
+            Country::Philippines => Ok(crate::zugferd_2_3_3::Country::Philippines),
+            Country::Pakistan => Ok(crate::zugferd_2_3_3::Country::Pakistan),
+            Country::Poland => Ok(crate::zugferd_2_3_3::Country::Poland),
+            Country::SaintPierreAndMiquelon => {
+                Ok(crate::zugferd_2_3_3::Country::SaintPierreAndMiquelon)
+            }
+            Country::Pitcairn => Ok(crate::zugferd_2_3_3::Country::Pitcairn),
+            Country::PuertoRico => Ok(crate::zugferd_2_3_3::Country::PuertoRico),
+            Country::PalestineState => Ok(crate::zugferd_2_3_3::Country::PalestineState),
+            Country::Portugal => Ok(crate::zugferd_2_3_3::Country::Portugal),
+            Country::Palau => Ok(crate::zugferd_2_3_3::Country::Palau),
+            Country::Paraguay => Ok(crate::zugferd_2_3_3::Country::Paraguay),
+            Country::Qatar => Ok(crate::zugferd_2_3_3::Country::Qatar),
+            Country::Réunion => Ok(crate::zugferd_2_3_3::Country::Réunion),
+            Country::Romania => Ok(crate::zugferd_2_3_3::Country::Romania),
+            Country::Serbia => Ok(crate::zugferd_2_3_3::Country::Serbia),
+            Country::RussianFederation => Ok(crate::zugferd_2_3_3::Country::RussianFederation),
+            Country::Rwanda => Ok(crate::zugferd_2_3_3::Country::Rwanda),
+            Country::SaudiArabia => Ok(crate::zugferd_2_3_3::Country::SaudiArabia),
+            Country::SolomonIslands => Ok(crate::zugferd_2_3_3::Country::SolomonIslands),
+            Country::Seychelles => Ok(crate::zugferd_2_3_3::Country::Seychelles),
+            Country::Sudan => Ok(crate::zugferd_2_3_3::Country::Sudan),
+            Country::Sweden => Ok(crate::zugferd_2_3_3::Country::Sweden),
+            Country::Singapore => Ok(crate::zugferd_2_3_3::Country::Singapore),
+            Country::SaintHelenaAscensionAndTristanDaCunha => {
+                Ok(crate::zugferd_2_3_3::Country::SaintHelenaAscensionAndTristanDaCunha)
+            }
+            Country::Slovenia => Ok(crate::zugferd_2_3_3::Country::Slovenia),
+            Country::SvalbardAndJanMayen => Ok(crate::zugferd_2_3_3::Country::SvalbardAndJanMayen),
+            Country::Slovakia => Ok(crate::zugferd_2_3_3::Country::Slovakia),
+            Country::SierraLeone => Ok(crate::zugferd_2_3_3::Country::SierraLeone),
+            Country::SanMarino => Ok(crate::zugferd_2_3_3::Country::SanMarino),
+            Country::Senegal => Ok(crate::zugferd_2_3_3::Country::Senegal),
+            Country::Somalia => Ok(crate::zugferd_2_3_3::Country::Somalia),
+            Country::Suriname => Ok(crate::zugferd_2_3_3::Country::Suriname),
+            Country::SouthSudan => Ok(crate::zugferd_2_3_3::Country::SouthSudan),
+            Country::SaoTomeAndPrincipe => Ok(crate::zugferd_2_3_3::Country::SaoTomeAndPrincipe),
+            Country::ElSalvador => Ok(crate::zugferd_2_3_3::Country::ElSalvador),
+            Country::SintMaartenDutchPart => {
+                Ok(crate::zugferd_2_3_3::Country::SintMaartenDutchPart)
+            }
+            Country::SyrianArabRepublic => Ok(crate::zugferd_2_3_3::Country::SyrianArabRepublic),
+            Country::Eswatini => Ok(crate::zugferd_2_3_3::Country::Eswatini),
+            Country::TurksAndCaicosIslands => {
+                Ok(crate::zugferd_2_3_3::Country::TurksAndCaicosIslands)
+            }
+            Country::Chad => Ok(crate::zugferd_2_3_3::Country::Chad),
+            Country::FrenchSouthernTerritories => {
+                Ok(crate::zugferd_2_3_3::Country::FrenchSouthernTerritories)
+            }
+            Country::Togo => Ok(crate::zugferd_2_3_3::Country::Togo),
+            Country::Thailand => Ok(crate::zugferd_2_3_3::Country::Thailand),
+            Country::Tajikistan => Ok(crate::zugferd_2_3_3::Country::Tajikistan),
+            Country::Tokelau => Ok(crate::zugferd_2_3_3::Country::Tokelau),
+            Country::TimorLeste => Ok(crate::zugferd_2_3_3::Country::TimorLeste),
+            Country::Turkmenistan => Ok(crate::zugferd_2_3_3::Country::Turkmenistan),
+            Country::Tunisia => Ok(crate::zugferd_2_3_3::Country::Tunisia),
+            Country::Tonga => Ok(crate::zugferd_2_3_3::Country::Tonga),
+            Country::Türkiye => Ok(crate::zugferd_2_3_3::Country::Türkiye),
+            Country::TrinidadAndTobago => Ok(crate::zugferd_2_3_3::Country::TrinidadAndTobago),
+            Country::Tuvalu => Ok(crate::zugferd_2_3_3::Country::Tuvalu),
+            Country::TaiwanProvinceChina => Ok(crate::zugferd_2_3_3::Country::TaiwanProvinceChina),
+            Country::TanzaniaUnitedRepublic => {
+                Ok(crate::zugferd_2_3_3::Country::TanzaniaUnitedRepublic)
+            }
+            Country::Ukraine => Ok(crate::zugferd_2_3_3::Country::Ukraine),
+            Country::Uganda => Ok(crate::zugferd_2_3_3::Country::Uganda),
+            Country::UnitedStatesMinorOutlyingIslands => {
+                Ok(crate::zugferd_2_3_3::Country::UnitedStatesMinorOutlyingIslands)
+            }
+            Country::UnitedStatesAmerica => Ok(crate::zugferd_2_3_3::Country::UnitedStatesAmerica),
+            Country::Uruguay => Ok(crate::zugferd_2_3_3::Country::Uruguay),
+            Country::Uzbekistan => Ok(crate::zugferd_2_3_3::Country::Uzbekistan),
+            Country::HolySee => Ok(crate::zugferd_2_3_3::Country::HolySee),
+            Country::SaintVincentAndGrenadines => {
+                Ok(crate::zugferd_2_3_3::Country::SaintVincentAndGrenadines)
+            }
+            Country::VenezuelaBolivarianRepublic => {
+                Ok(crate::zugferd_2_3_3::Country::VenezuelaBolivarianRepublic)
+            }
+            Country::VirginIslandsBritish => {
+                Ok(crate::zugferd_2_3_3::Country::VirginIslandsBritish)
+            }
+            Country::VirginIslandsUS => Ok(crate::zugferd_2_3_3::Country::VirginIslandsUS),
+            Country::VietNam => Ok(crate::zugferd_2_3_3::Country::VietNam),
+            Country::Vanuatu => Ok(crate::zugferd_2_3_3::Country::Vanuatu),
+            Country::WallisAndFutuna => Ok(crate::zugferd_2_3_3::Country::WallisAndFutuna),
+            Country::Samoa => Ok(crate::zugferd_2_3_3::Country::Samoa),
+            Country::Yemen => Ok(crate::zugferd_2_3_3::Country::Yemen),
+            Country::Mayotte => Ok(crate::zugferd_2_3_3::Country::Mayotte),
+            Country::SouthAfrica => Ok(crate::zugferd_2_3_3::Country::SouthAfrica),
+            Country::Zambia => Ok(crate::zugferd_2_3_3::Country::Zambia),
+            Country::Zimbabwe => Ok(crate::zugferd_2_3_3::Country::Zimbabwe),
+            Country::Kosovo => Ok(crate::zugferd_2_3_3::Country::Kosovo),
+            Country::UnitedKingdomNorthernIreland => {
+                Ok(crate::zugferd_2_3_3::Country::UnitedKingdomNorthernIreland)
+            }
+        }
+    }
+}
 
+impl std::convert::TryFrom<crate::zugferd_2_3_3::Country> for Country {
+    type Error = std::convert::Infallible;
+    fn try_from(value: crate::zugferd_2_3_3::Country) -> Result<Country, Self::Error> {
+        match value {
+            crate::zugferd_2_3_3::Country::Andorra => Ok(Country::Andorra),
+            crate::zugferd_2_3_3::Country::UnitedArabEmirates => Ok(Country::UnitedArabEmirates),
+            crate::zugferd_2_3_3::Country::Afghanistan => Ok(Country::Afghanistan),
+            crate::zugferd_2_3_3::Country::AntiguaAndBarbuda => Ok(Country::AntiguaAndBarbuda),
+            crate::zugferd_2_3_3::Country::Anguilla => Ok(Country::Anguilla),
+            crate::zugferd_2_3_3::Country::Albania => Ok(Country::Albania),
+            crate::zugferd_2_3_3::Country::Armenia => Ok(Country::Armenia),
+            crate::zugferd_2_3_3::Country::Angola => Ok(Country::Angola),
+            crate::zugferd_2_3_3::Country::Antarctica => Ok(Country::Antarctica),
+            crate::zugferd_2_3_3::Country::Argentina => Ok(Country::Argentina),
+            crate::zugferd_2_3_3::Country::AmericanSamoa => Ok(Country::AmericanSamoa),
+            crate::zugferd_2_3_3::Country::Austria => Ok(Country::Austria),
+            crate::zugferd_2_3_3::Country::Australia => Ok(Country::Australia),
+            crate::zugferd_2_3_3::Country::Aruba => Ok(Country::Aruba),
+            crate::zugferd_2_3_3::Country::ÅlandIslands => Ok(Country::ÅlandIslands),
+            crate::zugferd_2_3_3::Country::Azerbaijan => Ok(Country::Azerbaijan),
+            crate::zugferd_2_3_3::Country::BosniaAndHerzegovina => {
+                Ok(Country::BosniaAndHerzegovina)
+            }
+            crate::zugferd_2_3_3::Country::Barbados => Ok(Country::Barbados),
+            crate::zugferd_2_3_3::Country::Bangladesh => Ok(Country::Bangladesh),
+            crate::zugferd_2_3_3::Country::Belgium => Ok(Country::Belgium),
+            crate::zugferd_2_3_3::Country::BurkinaFaso => Ok(Country::BurkinaFaso),
+            crate::zugferd_2_3_3::Country::Bulgaria => Ok(Country::Bulgaria),
+            crate::zugferd_2_3_3::Country::Bahrain => Ok(Country::Bahrain),
+            crate::zugferd_2_3_3::Country::Burundi => Ok(Country::Burundi),
+            crate::zugferd_2_3_3::Country::Benin => Ok(Country::Benin),
+            crate::zugferd_2_3_3::Country::SaintBarthélemy => Ok(Country::SaintBarthélemy),
+            crate::zugferd_2_3_3::Country::Bermuda => Ok(Country::Bermuda),
+            crate::zugferd_2_3_3::Country::BruneiDarussalam => Ok(Country::BruneiDarussalam),
+            crate::zugferd_2_3_3::Country::BoliviaPlurinationalState => {
+                Ok(Country::BoliviaPlurinationalState)
+            }
+            crate::zugferd_2_3_3::Country::BonaireSintEustatiusAndSaba => {
+                Ok(Country::BonaireSintEustatiusAndSaba)
+            }
+            crate::zugferd_2_3_3::Country::Brazil => Ok(Country::Brazil),
+            crate::zugferd_2_3_3::Country::Bahamas => Ok(Country::BahamasThe),
+            crate::zugferd_2_3_3::Country::Bhutan => Ok(Country::Bhutan),
+            crate::zugferd_2_3_3::Country::BouvetIsland => Ok(Country::BouvetIsland),
+            crate::zugferd_2_3_3::Country::Botswana => Ok(Country::Botswana),
+            crate::zugferd_2_3_3::Country::Belarus => Ok(Country::Belarus),
+            crate::zugferd_2_3_3::Country::Belize => Ok(Country::Belize),
+            crate::zugferd_2_3_3::Country::Canada => Ok(Country::Canada),
+            crate::zugferd_2_3_3::Country::CocosKeelingIslands => Ok(Country::CocosKeelingIslands),
+            crate::zugferd_2_3_3::Country::CongoDemocraticRepublic => {
+                Ok(Country::CongoDemocraticRepublic)
+            }
+            crate::zugferd_2_3_3::Country::CentralAfricanRepublic => {
+                Ok(Country::CentralAfricanRepublic)
+            }
+            crate::zugferd_2_3_3::Country::Congo => Ok(Country::Congo),
+            crate::zugferd_2_3_3::Country::Switzerland => Ok(Country::Switzerland),
+            crate::zugferd_2_3_3::Country::CôteDivoire => Ok(Country::CôteDivoire),
+            crate::zugferd_2_3_3::Country::CookIslands => Ok(Country::CookIslands),
+            crate::zugferd_2_3_3::Country::Chile => Ok(Country::Chile),
+            crate::zugferd_2_3_3::Country::Cameroon => Ok(Country::Cameroon),
+            crate::zugferd_2_3_3::Country::China => Ok(Country::China),
+            crate::zugferd_2_3_3::Country::Colombia => Ok(Country::Colombia),
+            crate::zugferd_2_3_3::Country::CostaRica => Ok(Country::CostaRica),
+            crate::zugferd_2_3_3::Country::Cuba => Ok(Country::Cuba),
+            crate::zugferd_2_3_3::Country::CaboVerde => Ok(Country::CaboVerde),
+            crate::zugferd_2_3_3::Country::Curaçao => Ok(Country::Curaçao),
+            crate::zugferd_2_3_3::Country::ChristmasIsland => Ok(Country::ChristmasIsland),
+            crate::zugferd_2_3_3::Country::Cyprus => Ok(Country::Cyprus),
+            crate::zugferd_2_3_3::Country::Czechia => Ok(Country::Czechia),
+            crate::zugferd_2_3_3::Country::Germany => Ok(Country::Germany),
+            crate::zugferd_2_3_3::Country::Djibouti => Ok(Country::Djibouti),
+            crate::zugferd_2_3_3::Country::Denmark => Ok(Country::Denmark),
+            crate::zugferd_2_3_3::Country::Dominica => Ok(Country::Dominica),
+            crate::zugferd_2_3_3::Country::DominicanRepublic => Ok(Country::DominicanRepublic),
+            crate::zugferd_2_3_3::Country::Algeria => Ok(Country::Algeria),
+            crate::zugferd_2_3_3::Country::Ecuador => Ok(Country::Ecuador),
+            crate::zugferd_2_3_3::Country::Estonia => Ok(Country::Estonia),
+            crate::zugferd_2_3_3::Country::Egypt => Ok(Country::Egypt),
+            crate::zugferd_2_3_3::Country::WesternSahara => Ok(Country::WesternSahara),
+            crate::zugferd_2_3_3::Country::Eritrea => Ok(Country::Eritrea),
+            crate::zugferd_2_3_3::Country::Spain => Ok(Country::Spain),
+            crate::zugferd_2_3_3::Country::Ethiopia => Ok(Country::Ethiopia),
+            crate::zugferd_2_3_3::Country::Finland => Ok(Country::Finland),
+            crate::zugferd_2_3_3::Country::Fiji => Ok(Country::Fiji),
+            crate::zugferd_2_3_3::Country::FalklandIslandsMalvinas => {
+                Ok(Country::FalklandIslandsMalvinas)
+            }
+            crate::zugferd_2_3_3::Country::MicronesiaFederatedStates => {
+                Ok(Country::MicronesiaFederatedStates)
+            }
+            crate::zugferd_2_3_3::Country::FaroeIslands => Ok(Country::FaroeIslands),
+            crate::zugferd_2_3_3::Country::France => Ok(Country::France),
+            crate::zugferd_2_3_3::Country::Gabon => Ok(Country::Gabon),
+            crate::zugferd_2_3_3::Country::UnitedKingdomGreatBritainAndNorthernIreland => {
+                Ok(Country::UnitedKingdomGreatBritainAndNorthernIreland)
+            }
+            crate::zugferd_2_3_3::Country::Grenada => Ok(Country::Grenada),
+            crate::zugferd_2_3_3::Country::Georgia => Ok(Country::Georgia),
+            crate::zugferd_2_3_3::Country::FrenchGuiana => Ok(Country::FrenchGuiana),
+            crate::zugferd_2_3_3::Country::Guernsey => Ok(Country::Guernsey),
+            crate::zugferd_2_3_3::Country::Ghana => Ok(Country::Ghana),
+            crate::zugferd_2_3_3::Country::Gibraltar => Ok(Country::Gibraltar),
+            crate::zugferd_2_3_3::Country::Greenland => Ok(Country::Greenland),
+            crate::zugferd_2_3_3::Country::Gambia => Ok(Country::Gambia),
+            crate::zugferd_2_3_3::Country::Guinea => Ok(Country::Guinea),
+            crate::zugferd_2_3_3::Country::Guadeloupe => Ok(Country::Guadeloupe),
+            crate::zugferd_2_3_3::Country::EquatorialGuinea => Ok(Country::EquatorialGuinea),
+            crate::zugferd_2_3_3::Country::Greece => Ok(Country::Greece),
+            crate::zugferd_2_3_3::Country::SouthGeorgiaAndSouthSandwichIslands => {
+                Ok(Country::SouthGeorgiaAndSouthSandwichIslands)
+            }
+            crate::zugferd_2_3_3::Country::Guatemala => Ok(Country::Guatemala),
+            crate::zugferd_2_3_3::Country::Guam => Ok(Country::Guam),
+            crate::zugferd_2_3_3::Country::GuineaBissau => Ok(Country::GuineaBissau),
+            crate::zugferd_2_3_3::Country::Guyana => Ok(Country::Guyana),
+            crate::zugferd_2_3_3::Country::HongKong => Ok(Country::HongKong),
+            crate::zugferd_2_3_3::Country::HeardIslandAndMcdonaldIslands => {
+                Ok(Country::HeardIslandAndMcdonaldIslands)
+            }
+            crate::zugferd_2_3_3::Country::Honduras => Ok(Country::Honduras),
+            crate::zugferd_2_3_3::Country::Croatia => Ok(Country::Croatia),
+            crate::zugferd_2_3_3::Country::Haiti => Ok(Country::Haiti),
+            crate::zugferd_2_3_3::Country::Hungary => Ok(Country::Hungary),
+            crate::zugferd_2_3_3::Country::Indonesia => Ok(Country::Indonesia),
+            crate::zugferd_2_3_3::Country::Ireland => Ok(Country::Ireland),
+            crate::zugferd_2_3_3::Country::Israel => Ok(Country::Israel),
+            crate::zugferd_2_3_3::Country::IsleMan => Ok(Country::IsleMan),
+            crate::zugferd_2_3_3::Country::India => Ok(Country::India),
+            crate::zugferd_2_3_3::Country::BritishIndianOceanTerritory => {
+                Ok(Country::BritishIndianOceanTerritory)
+            }
+            crate::zugferd_2_3_3::Country::Iraq => Ok(Country::Iraq),
+            crate::zugferd_2_3_3::Country::IranIslamicRepublic => Ok(Country::IranIslamicRepublic),
+            crate::zugferd_2_3_3::Country::Iceland => Ok(Country::Iceland),
+            crate::zugferd_2_3_3::Country::Italy => Ok(Country::Italy),
+            crate::zugferd_2_3_3::Country::Jersey => Ok(Country::Jersey),
+            crate::zugferd_2_3_3::Country::Jamaica => Ok(Country::Jamaica),
+            crate::zugferd_2_3_3::Country::Jordan => Ok(Country::Jordan),
+            crate::zugferd_2_3_3::Country::Japan => Ok(Country::Japan),
+            crate::zugferd_2_3_3::Country::Kenya => Ok(Country::Kenya),
+            crate::zugferd_2_3_3::Country::Kyrgyzstan => Ok(Country::Kyrgyzstan),
+            crate::zugferd_2_3_3::Country::Cambodia => Ok(Country::Cambodia),
+            crate::zugferd_2_3_3::Country::Kiribati => Ok(Country::Kiribati),
+            crate::zugferd_2_3_3::Country::Comoros => Ok(Country::Comoros),
+            crate::zugferd_2_3_3::Country::SaintKittsAndNevis => Ok(Country::SaintKittsAndNevis),
+            crate::zugferd_2_3_3::Country::KoreaDemocraticPeoplesRepublic => {
+                Ok(Country::KoreaDemocraticPeoplesRepublic)
+            }
+            crate::zugferd_2_3_3::Country::KoreaRepublic => Ok(Country::KoreaRepublic),
+            crate::zugferd_2_3_3::Country::Kuwait => Ok(Country::Kuwait),
+            crate::zugferd_2_3_3::Country::CaymanIslands => Ok(Country::CaymanIslands),
+            crate::zugferd_2_3_3::Country::Kazakhstan => Ok(Country::Kazakhstan),
+            crate::zugferd_2_3_3::Country::LaoPeoplesDemocraticRepublic => {
+                Ok(Country::LaoPeoplesDemocraticRepublic)
+            }
+            crate::zugferd_2_3_3::Country::Lebanon => Ok(Country::Lebanon),
+            crate::zugferd_2_3_3::Country::SaintLucia => Ok(Country::SaintLucia),
+            crate::zugferd_2_3_3::Country::Liechtenstein => Ok(Country::Liechtenstein),
+            crate::zugferd_2_3_3::Country::SriLanka => Ok(Country::SriLanka),
+            crate::zugferd_2_3_3::Country::Liberia => Ok(Country::Liberia),
+            crate::zugferd_2_3_3::Country::Lesotho => Ok(Country::Lesotho),
+            crate::zugferd_2_3_3::Country::Lithuania => Ok(Country::Lithuania),
+            crate::zugferd_2_3_3::Country::Luxembourg => Ok(Country::Luxembourg),
+            crate::zugferd_2_3_3::Country::Latvia => Ok(Country::Latvia),
+            crate::zugferd_2_3_3::Country::Libya => Ok(Country::Libya),
+            crate::zugferd_2_3_3::Country::Morocco => Ok(Country::Morocco),
+            crate::zugferd_2_3_3::Country::Monaco => Ok(Country::Monaco),
+            crate::zugferd_2_3_3::Country::MoldovaRepublic => Ok(Country::MoldovaRepublic),
+            crate::zugferd_2_3_3::Country::Montenegro => Ok(Country::Montenegro),
+            crate::zugferd_2_3_3::Country::SaintMartinFrenchPart => {
+                Ok(Country::SaintMartinFrenchPart)
+            }
+            crate::zugferd_2_3_3::Country::Madagascar => Ok(Country::Madagascar),
+            crate::zugferd_2_3_3::Country::MarshallIslands => Ok(Country::MarshallIslands),
+            crate::zugferd_2_3_3::Country::NorthMacedonia => Ok(Country::NorthMacedonia),
+            crate::zugferd_2_3_3::Country::Mali => Ok(Country::Mali),
+            crate::zugferd_2_3_3::Country::Myanmar => Ok(Country::Myanmar),
+            crate::zugferd_2_3_3::Country::Mongolia => Ok(Country::Mongolia),
+            crate::zugferd_2_3_3::Country::Macao => Ok(Country::Macao),
+            crate::zugferd_2_3_3::Country::NorthernMarianaIslands => {
+                Ok(Country::NorthernMarianaIslands)
+            }
+            crate::zugferd_2_3_3::Country::Martinique => Ok(Country::Martinique),
+            crate::zugferd_2_3_3::Country::Mauritania => Ok(Country::Mauritania),
+            crate::zugferd_2_3_3::Country::Montserrat => Ok(Country::Montserrat),
+            crate::zugferd_2_3_3::Country::Malta => Ok(Country::Malta),
+            crate::zugferd_2_3_3::Country::Mauritius => Ok(Country::Mauritius),
+            crate::zugferd_2_3_3::Country::Maldives => Ok(Country::Maldives),
+            crate::zugferd_2_3_3::Country::Malawi => Ok(Country::Malawi),
+            crate::zugferd_2_3_3::Country::Mexico => Ok(Country::Mexico),
+            crate::zugferd_2_3_3::Country::Malaysia => Ok(Country::Malaysia),
+            crate::zugferd_2_3_3::Country::Mozambique => Ok(Country::Mozambique),
+            crate::zugferd_2_3_3::Country::Namibia => Ok(Country::Namibia),
+            crate::zugferd_2_3_3::Country::NewCaledonia => Ok(Country::NewCaledonia),
+            crate::zugferd_2_3_3::Country::Niger => Ok(Country::Niger),
+            crate::zugferd_2_3_3::Country::NorfolkIsland => Ok(Country::NorfolkIsland),
+            crate::zugferd_2_3_3::Country::Nigeria => Ok(Country::Nigeria),
+            crate::zugferd_2_3_3::Country::Nicaragua => Ok(Country::Nicaragua),
+            crate::zugferd_2_3_3::Country::Netherlands => Ok(Country::Netherlands),
+            crate::zugferd_2_3_3::Country::Norway => Ok(Country::Norway),
+            crate::zugferd_2_3_3::Country::Nepal => Ok(Country::Nepal),
+            crate::zugferd_2_3_3::Country::Nauru => Ok(Country::Nauru),
+            crate::zugferd_2_3_3::Country::Niue => Ok(Country::Niue),
+            crate::zugferd_2_3_3::Country::NewZealand => Ok(Country::NewZealand),
+            crate::zugferd_2_3_3::Country::Oman => Ok(Country::Oman),
+            crate::zugferd_2_3_3::Country::Panama => Ok(Country::Panama),
+            crate::zugferd_2_3_3::Country::Peru => Ok(Country::Peru),
+            crate::zugferd_2_3_3::Country::FrenchPolynesia => Ok(Country::FrenchPolynesia),
+            crate::zugferd_2_3_3::Country::PapuaNewGuinea => Ok(Country::PapuaNewGuinea),
+            crate::zugferd_2_3_3::Country::Philippines => Ok(Country::Philippines),
+            crate::zugferd_2_3_3::Country::Pakistan => Ok(Country::Pakistan),
+            crate::zugferd_2_3_3::Country::Poland => Ok(Country::Poland),
+            crate::zugferd_2_3_3::Country::SaintPierreAndMiquelon => {
+                Ok(Country::SaintPierreAndMiquelon)
+            }
+            crate::zugferd_2_3_3::Country::Pitcairn => Ok(Country::Pitcairn),
+            crate::zugferd_2_3_3::Country::PuertoRico => Ok(Country::PuertoRico),
+            crate::zugferd_2_3_3::Country::PalestineState => Ok(Country::PalestineState),
+            crate::zugferd_2_3_3::Country::Portugal => Ok(Country::Portugal),
+            crate::zugferd_2_3_3::Country::Palau => Ok(Country::Palau),
+            crate::zugferd_2_3_3::Country::Paraguay => Ok(Country::Paraguay),
+            crate::zugferd_2_3_3::Country::Qatar => Ok(Country::Qatar),
+            crate::zugferd_2_3_3::Country::Réunion => Ok(Country::Réunion),
+            crate::zugferd_2_3_3::Country::Romania => Ok(Country::Romania),
+            crate::zugferd_2_3_3::Country::Serbia => Ok(Country::Serbia),
+            crate::zugferd_2_3_3::Country::RussianFederation => Ok(Country::RussianFederation),
+            crate::zugferd_2_3_3::Country::Rwanda => Ok(Country::Rwanda),
+            crate::zugferd_2_3_3::Country::SaudiArabia => Ok(Country::SaudiArabia),
+            crate::zugferd_2_3_3::Country::SolomonIslands => Ok(Country::SolomonIslands),
+            crate::zugferd_2_3_3::Country::Seychelles => Ok(Country::Seychelles),
+            crate::zugferd_2_3_3::Country::Sudan => Ok(Country::Sudan),
+            crate::zugferd_2_3_3::Country::Sweden => Ok(Country::Sweden),
+            crate::zugferd_2_3_3::Country::Singapore => Ok(Country::Singapore),
+            crate::zugferd_2_3_3::Country::SaintHelenaAscensionAndTristanDaCunha => {
+                Ok(Country::SaintHelenaAscensionAndTristanDaCunha)
+            }
+            crate::zugferd_2_3_3::Country::Slovenia => Ok(Country::Slovenia),
+            crate::zugferd_2_3_3::Country::SvalbardAndJanMayen => Ok(Country::SvalbardAndJanMayen),
+            crate::zugferd_2_3_3::Country::Slovakia => Ok(Country::Slovakia),
+            crate::zugferd_2_3_3::Country::SierraLeone => Ok(Country::SierraLeone),
+            crate::zugferd_2_3_3::Country::SanMarino => Ok(Country::SanMarino),
+            crate::zugferd_2_3_3::Country::Senegal => Ok(Country::Senegal),
+            crate::zugferd_2_3_3::Country::Somalia => Ok(Country::Somalia),
+            crate::zugferd_2_3_3::Country::Suriname => Ok(Country::Suriname),
+            crate::zugferd_2_3_3::Country::SouthSudan => Ok(Country::SouthSudan),
+            crate::zugferd_2_3_3::Country::SaoTomeAndPrincipe => Ok(Country::SaoTomeAndPrincipe),
+            crate::zugferd_2_3_3::Country::ElSalvador => Ok(Country::ElSalvador),
+            crate::zugferd_2_3_3::Country::SintMaartenDutchPart => {
+                Ok(Country::SintMaartenDutchPart)
+            }
+            crate::zugferd_2_3_3::Country::SyrianArabRepublic => Ok(Country::SyrianArabRepublic),
+            crate::zugferd_2_3_3::Country::Eswatini => Ok(Country::Eswatini),
+            crate::zugferd_2_3_3::Country::TurksAndCaicosIslands => {
+                Ok(Country::TurksAndCaicosIslands)
+            }
+            crate::zugferd_2_3_3::Country::Chad => Ok(Country::Chad),
+            crate::zugferd_2_3_3::Country::FrenchSouthernTerritories => {
+                Ok(Country::FrenchSouthernTerritories)
+            }
+            crate::zugferd_2_3_3::Country::Togo => Ok(Country::Togo),
+            crate::zugferd_2_3_3::Country::Thailand => Ok(Country::Thailand),
+            crate::zugferd_2_3_3::Country::Tajikistan => Ok(Country::Tajikistan),
+            crate::zugferd_2_3_3::Country::Tokelau => Ok(Country::Tokelau),
+            crate::zugferd_2_3_3::Country::TimorLeste => Ok(Country::TimorLeste),
+            crate::zugferd_2_3_3::Country::Turkmenistan => Ok(Country::Turkmenistan),
+            crate::zugferd_2_3_3::Country::Tunisia => Ok(Country::Tunisia),
+            crate::zugferd_2_3_3::Country::Tonga => Ok(Country::Tonga),
+            crate::zugferd_2_3_3::Country::Türkiye => Ok(Country::Türkiye),
+            crate::zugferd_2_3_3::Country::TrinidadAndTobago => Ok(Country::TrinidadAndTobago),
+            crate::zugferd_2_3_3::Country::Tuvalu => Ok(Country::Tuvalu),
+            crate::zugferd_2_3_3::Country::TaiwanProvinceChina => Ok(Country::TaiwanProvinceChina),
+            crate::zugferd_2_3_3::Country::TanzaniaUnitedRepublic => {
+                Ok(Country::TanzaniaUnitedRepublic)
+            }
+            crate::zugferd_2_3_3::Country::Ukraine => Ok(Country::Ukraine),
+            crate::zugferd_2_3_3::Country::Uganda => Ok(Country::Uganda),
+            crate::zugferd_2_3_3::Country::UnitedStatesMinorOutlyingIslands => {
+                Ok(Country::UnitedStatesMinorOutlyingIslands)
+            }
+            crate::zugferd_2_3_3::Country::UnitedStatesAmerica => Ok(Country::UnitedStatesAmerica),
+            crate::zugferd_2_3_3::Country::Uruguay => Ok(Country::Uruguay),
+            crate::zugferd_2_3_3::Country::Uzbekistan => Ok(Country::Uzbekistan),
+            crate::zugferd_2_3_3::Country::HolySee => Ok(Country::HolySee),
+            crate::zugferd_2_3_3::Country::SaintVincentAndGrenadines => {
+                Ok(Country::SaintVincentAndGrenadines)
+            }
+            crate::zugferd_2_3_3::Country::VenezuelaBolivarianRepublic => {
+                Ok(Country::VenezuelaBolivarianRepublic)
+            }
+            crate::zugferd_2_3_3::Country::VirginIslandsBritish => {
+                Ok(Country::VirginIslandsBritish)
+            }
+            crate::zugferd_2_3_3::Country::VirginIslandsUS => Ok(Country::VirginIslandsUS),
+            crate::zugferd_2_3_3::Country::VietNam => Ok(Country::VietNam),
+            crate::zugferd_2_3_3::Country::Vanuatu => Ok(Country::Vanuatu),
+            crate::zugferd_2_3_3::Country::WallisAndFutuna => Ok(Country::WallisAndFutuna),
+            crate::zugferd_2_3_3::Country::Samoa => Ok(Country::Samoa),
+            crate::zugferd_2_3_3::Country::Yemen => Ok(Country::Yemen),
+            crate::zugferd_2_3_3::Country::Mayotte => Ok(Country::Mayotte),
+            crate::zugferd_2_3_3::Country::SouthAfrica => Ok(Country::SouthAfrica),
+            crate::zugferd_2_3_3::Country::Zambia => Ok(Country::Zambia),
+            crate::zugferd_2_3_3::Country::Zimbabwe => Ok(Country::Zimbabwe),
+            crate::zugferd_2_3_3::Country::Kosovo => Ok(Country::Kosovo),
+            crate::zugferd_2_3_3::Country::UnitedKingdomNorthernIreland => {
+                Ok(Country::UnitedKingdomNorthernIreland)
+            }
+        }
+    }
+}
+// End: (Version) TryFrom crate::zugferd_2_3_3::Country to Country

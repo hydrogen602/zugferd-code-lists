@@ -1051,3 +1051,792 @@ impl crate::FromCode for Item {
         }
     }
 }
+
+// Start: (Version) TryFrom Item to crate::zugferd_2_3_2::Item
+impl std::convert::TryFrom<Item> for crate::zugferd_2_3_2::Item {
+    type Error = ErrFromItemToCrateZugferd232Item;
+    fn try_from(value: Item) -> Result<Self, Self::Error> {
+        match value {
+            Item::ProductVersionNumber => Ok(crate::zugferd_2_3_2::Item::ProductVersionNumber),
+            Item::Assembly => Ok(crate::zugferd_2_3_2::Item::Assembly),
+            Item::HibcHealthIndustryBarCode => {
+                Ok(crate::zugferd_2_3_2::Item::HibcHealthIndustryBarCode)
+            }
+            Item::ColdRollNumber => Ok(crate::zugferd_2_3_2::Item::ColdRollNumber),
+            Item::HotRollNumber => Ok(crate::zugferd_2_3_2::Item::HotRollNumber),
+            Item::SlabNumber => Ok(crate::zugferd_2_3_2::Item::SlabNumber),
+            Item::SoftwareRevisionNumber => Ok(crate::zugferd_2_3_2::Item::SoftwareRevisionNumber),
+            Item::UpcUniversalProductCodeConsumerPackageCode155 => {
+                Ok(crate::zugferd_2_3_2::Item::UpcUniversalProductCodeConsumerPackageCode155)
+            }
+            Item::UpcUniversalProductCodeConsumerPackageCode155_Dup => {
+                Ok(crate::zugferd_2_3_2::Item::UpcUniversalProductCodeConsumerPackageCode155_Dup)
+            }
+            Item::SampleNumber => Ok(crate::zugferd_2_3_2::Item::SampleNumber),
+            Item::PackNumber => Ok(crate::zugferd_2_3_2::Item::PackNumber),
+            Item::UpcUniversalProductCodeShippingContainerCode12 => {
+                Ok(crate::zugferd_2_3_2::Item::UpcUniversalProductCodeShippingContainerCode12)
+            }
+            Item::UpcUniversalProductCodeEanEuropeanArticleNumber => {
+                Ok(crate::zugferd_2_3_2::Item::UpcUniversalProductCodeEanEuropeanArticleNumber)
+            }
+            Item::UpcUniversalProductCodeSuffix => {
+                Ok(crate::zugferd_2_3_2::Item::UpcUniversalProductCodeSuffix)
+            }
+            Item::StateLabelCode => Ok(crate::zugferd_2_3_2::Item::StateLabelCode),
+            Item::HeatNumber => Ok(crate::zugferd_2_3_2::Item::HeatNumber),
+            Item::CouponNumber => Ok(crate::zugferd_2_3_2::Item::CouponNumber),
+            Item::ResourceNumber => Ok(crate::zugferd_2_3_2::Item::ResourceNumber),
+            Item::WorkTaskNumber => Ok(crate::zugferd_2_3_2::Item::WorkTaskNumber),
+            Item::PriceLookUpNumber => Ok(crate::zugferd_2_3_2::Item::PriceLookUpNumber),
+            Item::NsnNorthAtlanticTreatyOrganizationStockNumber => {
+                Ok(crate::zugferd_2_3_2::Item::NsnNorthAtlanticTreatyOrganizationStockNumber)
+            }
+            Item::RefinedProductCode => Ok(crate::zugferd_2_3_2::Item::RefinedProductCode),
+            Item::Exhibit => Ok(crate::zugferd_2_3_2::Item::Exhibit),
+            Item::EndItem => Ok(crate::zugferd_2_3_2::Item::EndItem),
+            Item::FederalSupplyClassification => {
+                Ok(crate::zugferd_2_3_2::Item::FederalSupplyClassification)
+            }
+            Item::EngineeringDataList => Ok(crate::zugferd_2_3_2::Item::EngineeringDataList),
+            Item::MilestoneEventNumber => Ok(crate::zugferd_2_3_2::Item::MilestoneEventNumber),
+            Item::LotNumber => Ok(crate::zugferd_2_3_2::Item::LotNumber),
+            Item::NationalDrugCode442Format => {
+                Ok(crate::zugferd_2_3_2::Item::NationalDrugCode442Format)
+            }
+            Item::NationalDrugCode532Format => {
+                Ok(crate::zugferd_2_3_2::Item::NationalDrugCode532Format)
+            }
+            Item::NationalDrugCode541Format => {
+                Ok(crate::zugferd_2_3_2::Item::NationalDrugCode541Format)
+            }
+            Item::NationalDrugCode542Format => {
+                Ok(crate::zugferd_2_3_2::Item::NationalDrugCode542Format)
+            }
+            Item::NationalDrugCode => Ok(crate::zugferd_2_3_2::Item::NationalDrugCode),
+            Item::PartNumber => Ok(crate::zugferd_2_3_2::Item::PartNumber),
+            Item::LocalStockNumberLsn => Ok(crate::zugferd_2_3_2::Item::LocalStockNumberLsn),
+            Item::NextHigherAssemblyNumber => {
+                Ok(crate::zugferd_2_3_2::Item::NextHigherAssemblyNumber)
+            }
+            Item::DataCategory => Ok(crate::zugferd_2_3_2::Item::DataCategory),
+            Item::ControlNumber => Ok(crate::zugferd_2_3_2::Item::ControlNumber),
+            Item::SpecialMaterialIdentificationCode => {
+                Ok(crate::zugferd_2_3_2::Item::SpecialMaterialIdentificationCode)
+            }
+            Item::LocallyAssignedControlNumber => {
+                Ok(crate::zugferd_2_3_2::Item::LocallyAssignedControlNumber)
+            }
+            Item::BuyersColour => Ok(crate::zugferd_2_3_2::Item::BuyersColour),
+            Item::BuyersPartNumber => Ok(crate::zugferd_2_3_2::Item::BuyersPartNumber),
+            Item::VariableMeasureProductCode => {
+                Ok(crate::zugferd_2_3_2::Item::VariableMeasureProductCode)
+            }
+            Item::FinancialPhase => Ok(crate::zugferd_2_3_2::Item::FinancialPhase),
+            Item::ContractBreakdown => Ok(crate::zugferd_2_3_2::Item::ContractBreakdown),
+            Item::TechnicalPhase => Ok(crate::zugferd_2_3_2::Item::TechnicalPhase),
+            Item::DyeLotNumber => Ok(crate::zugferd_2_3_2::Item::DyeLotNumber),
+            Item::DailyStatementActivities => {
+                Ok(crate::zugferd_2_3_2::Item::DailyStatementActivities)
+            }
+            Item::PeriodicalStatementActivitiesWithinABilaterally => {
+                Ok(crate::zugferd_2_3_2::Item::PeriodicalStatementActivitiesWithinABilaterally)
+            }
+            Item::CalendarWeekStatementActivities => {
+                Ok(crate::zugferd_2_3_2::Item::CalendarWeekStatementActivities)
+            }
+            Item::CalendarMonthStatementActivities => {
+                Ok(crate::zugferd_2_3_2::Item::CalendarMonthStatementActivities)
+            }
+            Item::OriginalEquipmentNumber => {
+                Ok(crate::zugferd_2_3_2::Item::OriginalEquipmentNumber)
+            }
+            Item::IndustryCommodityCode => Ok(crate::zugferd_2_3_2::Item::IndustryCommodityCode),
+            Item::CommodityGrouping => Ok(crate::zugferd_2_3_2::Item::CommodityGrouping),
+            Item::ColourNumber => Ok(crate::zugferd_2_3_2::Item::ColourNumber),
+            Item::ContractNumber => Ok(crate::zugferd_2_3_2::Item::ContractNumber),
+            Item::CustomsArticleNumber => Ok(crate::zugferd_2_3_2::Item::CustomsArticleNumber),
+            Item::DrawingRevisionNumber => Ok(crate::zugferd_2_3_2::Item::DrawingRevisionNumber),
+            Item::Drawing => Ok(crate::zugferd_2_3_2::Item::Drawing),
+            Item::EngineeringChangeLevel => Ok(crate::zugferd_2_3_2::Item::EngineeringChangeLevel),
+            Item::MaterialCode => Ok(crate::zugferd_2_3_2::Item::MaterialCode),
+            Item::EmdnEuropeanMedicalDeviceNomenclature => {
+                Ok(crate::zugferd_2_3_2::Item::EmdnEuropeanMedicalDeviceNomenclature)
+            }
+            Item::InternationalArticleNumberingAssociationEan => {
+                Ok(crate::zugferd_2_3_2::Item::InternationalArticleNumberingAssociationEan)
+            }
+            Item::FishSpecies => Ok(crate::zugferd_2_3_2::Item::FishSpecies),
+            Item::BuyersInternalProductGroupCode => {
+                Ok(crate::zugferd_2_3_2::Item::BuyersInternalProductGroupCode)
+            }
+            Item::GlobalModelNumber => Ok(crate::zugferd_2_3_2::Item::GlobalModelNumber),
+            Item::NationalProductGroupCode => {
+                Ok(crate::zugferd_2_3_2::Item::NationalProductGroupCode)
+            }
+            Item::GeneralSpecificationNumber => {
+                Ok(crate::zugferd_2_3_2::Item::GeneralSpecificationNumber)
+            }
+            Item::HarmonisedSystem => Ok(crate::zugferd_2_3_2::Item::HarmonisedSystem),
+            Item::IsbnInternationalStandardBookNumber => {
+                Ok(crate::zugferd_2_3_2::Item::IsbnInternationalStandardBookNumber)
+            }
+            Item::BuyersItemNumber => Ok(crate::zugferd_2_3_2::Item::BuyersItemNumber),
+            Item::IssnInternationalStandardSerialNumber => {
+                Ok(crate::zugferd_2_3_2::Item::IssnInternationalStandardSerialNumber)
+            }
+            Item::BuyersStyleNumber => Ok(crate::zugferd_2_3_2::Item::BuyersStyleNumber),
+            Item::BuyersSizeCode => Ok(crate::zugferd_2_3_2::Item::BuyersSizeCode),
+            Item::MachineNumber => Ok(crate::zugferd_2_3_2::Item::MachineNumber),
+            Item::ManufacturersProducersArticleNumber => {
+                Ok(crate::zugferd_2_3_2::Item::ManufacturersProducersArticleNumber)
+            }
+            Item::ModelNumber => Ok(crate::zugferd_2_3_2::Item::ModelNumber),
+            Item::ProductServiceIdentificationNumber => {
+                Ok(crate::zugferd_2_3_2::Item::ProductServiceIdentificationNumber)
+            }
+            Item::BatchNumber => Ok(crate::zugferd_2_3_2::Item::BatchNumber),
+            Item::CustomerOrderNumber => Ok(crate::zugferd_2_3_2::Item::CustomerOrderNumber),
+            Item::PartNumberDescription => Ok(crate::zugferd_2_3_2::Item::PartNumberDescription),
+            Item::PurchasersOrderLineNumber => {
+                Ok(crate::zugferd_2_3_2::Item::PurchasersOrderLineNumber)
+            }
+            Item::PurchaseOrderNumber => Ok(crate::zugferd_2_3_2::Item::PurchaseOrderNumber),
+            Item::PromotionalVariantNumber => {
+                Ok(crate::zugferd_2_3_2::Item::PromotionalVariantNumber)
+            }
+            Item::BuyersQualifierForSize => Ok(crate::zugferd_2_3_2::Item::BuyersQualifierForSize),
+            Item::ReturnableContainerNumber => {
+                Ok(crate::zugferd_2_3_2::Item::ReturnableContainerNumber)
+            }
+            Item::ReleaseNumber => Ok(crate::zugferd_2_3_2::Item::ReleaseNumber),
+            Item::RunNumber => Ok(crate::zugferd_2_3_2::Item::RunNumber),
+            Item::RecordKeepingModelYear => Ok(crate::zugferd_2_3_2::Item::RecordKeepingModelYear),
+            Item::SuppliersArticleNumber => Ok(crate::zugferd_2_3_2::Item::SuppliersArticleNumber),
+            Item::StandardGroupProductsMixedAssortment => {
+                Ok(crate::zugferd_2_3_2::Item::StandardGroupProductsMixedAssortment)
+            }
+            Item::SkuStockKeepingUnit => Ok(crate::zugferd_2_3_2::Item::SkuStockKeepingUnit),
+            Item::SerialNumber => Ok(crate::zugferd_2_3_2::Item::SerialNumber),
+            Item::RskNumber => Ok(crate::zugferd_2_3_2::Item::RskNumber),
+            Item::IflsInstitutFrancaisDuLibreService5DigitProduct => {
+                Ok(crate::zugferd_2_3_2::Item::IflsInstitutFrancaisDuLibreService5DigitProduct)
+            }
+            Item::IflsInstitutFrancaisDuLibreService9DigitProduct => {
+                Ok(crate::zugferd_2_3_2::Item::IflsInstitutFrancaisDuLibreService9DigitProduct)
+            }
+            Item::Gs1GlobalTradeItemNumber => {
+                Ok(crate::zugferd_2_3_2::Item::Gs1GlobalTradeItemNumber)
+            }
+            Item::EdisEnergyDataIdentificationSystem => {
+                Ok(crate::zugferd_2_3_2::Item::EdisEnergyDataIdentificationSystem)
+            }
+            Item::SlaughterNumber => Ok(crate::zugferd_2_3_2::Item::SlaughterNumber),
+            Item::OfficialAnimalNumber => Ok(crate::zugferd_2_3_2::Item::OfficialAnimalNumber),
+            Item::HarmonizedTariffSchedule => {
+                Ok(crate::zugferd_2_3_2::Item::HarmonizedTariffSchedule)
+            }
+            Item::SuppliersSupplierArticleNumber => {
+                Ok(crate::zugferd_2_3_2::Item::SuppliersSupplierArticleNumber)
+            }
+            Item::_46LevelDotCode => Ok(crate::zugferd_2_3_2::Item::_46LevelDotCode),
+            Item::AirlineTariff6d => Ok(crate::zugferd_2_3_2::Item::AirlineTariff6d),
+            Item::Title49CodeFederalRegulations => {
+                Ok(crate::zugferd_2_3_2::Item::Title49CodeFederalRegulations)
+            }
+            Item::InternationalCivilAviationAdministrationCode => {
+                Ok(crate::zugferd_2_3_2::Item::InternationalCivilAviationAdministrationCode)
+            }
+            Item::HazardousMaterialsIdDot => {
+                Ok(crate::zugferd_2_3_2::Item::HazardousMaterialsIdDot)
+            }
+            Item::Endorsement => Ok(crate::zugferd_2_3_2::Item::Endorsement),
+            Item::AirForceRegulation714 => Ok(crate::zugferd_2_3_2::Item::AirForceRegulation714),
+            Item::Breed => Ok(crate::zugferd_2_3_2::Item::Breed),
+            Item::ChemicalAbstractServiceCasRegistryNumber => {
+                Ok(crate::zugferd_2_3_2::Item::ChemicalAbstractServiceCasRegistryNumber)
+            }
+            Item::EngineModelDesignation => Ok(crate::zugferd_2_3_2::Item::EngineModelDesignation),
+            Item::InstitutionalMeatPurchaseSpecificationsImpsNumber => {
+                Ok(crate::zugferd_2_3_2::Item::InstitutionalMeatPurchaseSpecificationsImpsNumber)
+            }
+            Item::PriceLookUpCodePlu => Ok(crate::zugferd_2_3_2::Item::PriceLookUpCodePlu),
+            Item::InternationalMaritimeOrganizationImoCode => {
+                Ok(crate::zugferd_2_3_2::Item::InternationalMaritimeOrganizationImoCode)
+            }
+            Item::BureauExplosives600ARail => {
+                Ok(crate::zugferd_2_3_2::Item::BureauExplosives600ARail)
+            }
+            Item::UnitedNationsDangerousGoodsList => {
+                Ok(crate::zugferd_2_3_2::Item::UnitedNationsDangerousGoodsList)
+            }
+            Item::InternationalCodeBotanicalNomenclatureIcbn => {
+                Ok(crate::zugferd_2_3_2::Item::InternationalCodeBotanicalNomenclatureIcbn)
+            }
+            Item::InternationalCodeZoologicalNomenclatureIczn => {
+                Ok(crate::zugferd_2_3_2::Item::InternationalCodeZoologicalNomenclatureIczn)
+            }
+            Item::InternationalCodeNomenclatureForCultivatedPlants => {
+                Ok(crate::zugferd_2_3_2::Item::InternationalCodeNomenclatureForCultivatedPlants)
+            }
+            Item::DistributorSArticleIdentifier => {
+                Ok(crate::zugferd_2_3_2::Item::DistributorSArticleIdentifier)
+            }
+            Item::NorwegianClassificationSystemEnva => {
+                Ok(crate::zugferd_2_3_2::Item::NorwegianClassificationSystemEnva)
+            }
+            Item::SupplierAssignedClassification => {
+                Ok(crate::zugferd_2_3_2::Item::SupplierAssignedClassification)
+            }
+            Item::MexicanClassificationSystemAmece => {
+                Ok(crate::zugferd_2_3_2::Item::MexicanClassificationSystemAmece)
+            }
+            Item::GermanClassificationSystemCcg => {
+                Ok(crate::zugferd_2_3_2::Item::GermanClassificationSystemCcg)
+            }
+            Item::FinnishClassificationSystemEanfin => {
+                Ok(crate::zugferd_2_3_2::Item::FinnishClassificationSystemEanfin)
+            }
+            Item::CanadianClassificationSystemIcc => {
+                Ok(crate::zugferd_2_3_2::Item::CanadianClassificationSystemIcc)
+            }
+            Item::FrenchClassificationSystemIfls5 => {
+                Ok(crate::zugferd_2_3_2::Item::FrenchClassificationSystemIfls5)
+            }
+            Item::StyleNumber => Ok(crate::zugferd_2_3_2::Item::StyleNumber),
+            Item::DutchClassificationSystemCbl => {
+                Ok(crate::zugferd_2_3_2::Item::DutchClassificationSystemCbl)
+            }
+            Item::JapaneseClassificationSystemJicfs => {
+                Ok(crate::zugferd_2_3_2::Item::JapaneseClassificationSystemJicfs)
+            }
+            Item::EuropeanUnionDairySubsidyEligibilityClassification => {
+                Ok(crate::zugferd_2_3_2::Item::EuropeanUnionDairySubsidyEligibilityClassification)
+            }
+            Item::Gs1SpainClassificationSystem => {
+                Ok(crate::zugferd_2_3_2::Item::Gs1SpainClassificationSystem)
+            }
+            Item::Gs1PolandClassificationSystem => {
+                Ok(crate::zugferd_2_3_2::Item::Gs1PolandClassificationSystem)
+            }
+            Item::FederalAgencyOnTechnicalRegulatingAndMetrology => {
+                Ok(crate::zugferd_2_3_2::Item::FederalAgencyOnTechnicalRegulatingAndMetrology)
+            }
+            Item::EfficientConsumerResponseEcrAustriaClassification => {
+                Ok(crate::zugferd_2_3_2::Item::EfficientConsumerResponseEcrAustriaClassification)
+            }
+            Item::Gs1ItalyClassificationSystem => {
+                Ok(crate::zugferd_2_3_2::Item::Gs1ItalyClassificationSystem)
+            }
+            Item::CpvCommonProcurementVocabulary => {
+                Ok(crate::zugferd_2_3_2::Item::CpvCommonProcurementVocabulary)
+            }
+            Item::IfdaInternationalFoodserviceDistributorsAssociation => {
+                Ok(crate::zugferd_2_3_2::Item::IfdaInternationalFoodserviceDistributorsAssociation)
+            }
+            Item::AhfsAmericanHospitalFormularyServicePharmacologic => {
+                Ok(crate::zugferd_2_3_2::Item::AhfsAmericanHospitalFormularyServicePharmacologic)
+            }
+            Item::AtcAnatomicalTherapeuticChemicalClassificationSystem => Ok(
+                crate::zugferd_2_3_2::Item::AtcAnatomicalTherapeuticChemicalClassificationSystem,
+            ),
+            Item::CladimedClassificationDesDispositifsMédicaux => {
+                Ok(crate::zugferd_2_3_2::Item::CladimedClassificationDesDispositifsMédicaux)
+            }
+            Item::CmdrCanadianMedicalDeviceRegulationsClassification => {
+                Ok(crate::zugferd_2_3_2::Item::CmdrCanadianMedicalDeviceRegulationsClassification)
+            }
+            Item::CndmClassificazioneNazionaleDeiDispositiviMedici => {
+                Ok(crate::zugferd_2_3_2::Item::CndmClassificazioneNazionaleDeiDispositiviMedici)
+            }
+            Item::UkDmDDictionaryMedicinesDevicesStandardCoding => {
+                Ok(crate::zugferd_2_3_2::Item::UkDmDDictionaryMedicinesDevicesStandardCoding)
+            }
+            Item::EclSs => Ok(crate::zugferd_2_3_2::Item::EclSs),
+            Item::EdmaEuropeanDiagnosticManufacturersAssociation => {
+                Ok(crate::zugferd_2_3_2::Item::EdmaEuropeanDiagnosticManufacturersAssociation)
+            }
+            Item::EgarEuropeanGenericArticleRegister => {
+                Ok(crate::zugferd_2_3_2::Item::EgarEuropeanGenericArticleRegister)
+            }
+            Item::GmdnGlobalMedicalDevicesNomenclature => {
+                Ok(crate::zugferd_2_3_2::Item::GmdnGlobalMedicalDevicesNomenclature)
+            }
+            Item::GpiGenericProductIdentifier => {
+                Ok(crate::zugferd_2_3_2::Item::GpiGenericProductIdentifier)
+            }
+            Item::HcpcsHealthcareCommonProcedureCodingSystem => {
+                Ok(crate::zugferd_2_3_2::Item::HcpcsHealthcareCommonProcedureCodingSystem)
+            }
+            Item::IcpsInternationalClassificationForPatientSafety => {
+                Ok(crate::zugferd_2_3_2::Item::IcpsInternationalClassificationForPatientSafety)
+            }
+            Item::MeddraMedicalDictionaryForRegulatoryActivities => {
+                Ok(crate::zugferd_2_3_2::Item::MeddraMedicalDictionaryForRegulatoryActivities)
+            }
+            Item::MedicalColumbus => Ok(crate::zugferd_2_3_2::Item::MedicalColumbus),
+            Item::NapcsNorthAmericanProductClassificationSystem => {
+                Ok(crate::zugferd_2_3_2::Item::NapcsNorthAmericanProductClassificationSystem)
+            }
+            Item::NhsNationalHealthServicesEclass => {
+                Ok(crate::zugferd_2_3_2::Item::NhsNationalHealthServicesEclass)
+            }
+            Item::UsFdaFoodAndDrugAdministrationProductCode => {
+                Ok(crate::zugferd_2_3_2::Item::UsFdaFoodAndDrugAdministrationProductCode)
+            }
+            Item::SnomedCtSystematizedNomenclatureMedicineClinical => {
+                Ok(crate::zugferd_2_3_2::Item::SnomedCtSystematizedNomenclatureMedicineClinical)
+            }
+            Item::UmdnsUniversalMedicalDeviceNomenclatureSystem => {
+                Ok(crate::zugferd_2_3_2::Item::UmdnsUniversalMedicalDeviceNomenclatureSystem)
+            }
+            Item::Gs1GlobalReturnableAssetIdentifierNonSerialised => {
+                Ok(crate::zugferd_2_3_2::Item::Gs1GlobalReturnableAssetIdentifierNonSerialised)
+            }
+            Item::Imei => Ok(crate::zugferd_2_3_2::Item::Imei),
+            Item::WasteTypeEmsa => Ok(crate::zugferd_2_3_2::Item::WasteTypeEmsa),
+            Item::ShipsStoreClassificationType => {
+                Ok(crate::zugferd_2_3_2::Item::ShipsStoreClassificationType)
+            }
+            Item::EmergencyFireCode => Ok(crate::zugferd_2_3_2::Item::EmergencyFireCode),
+            Item::EmergencySpillageCode => Ok(crate::zugferd_2_3_2::Item::EmergencySpillageCode),
+            Item::ImdgPackingGroup => Ok(crate::zugferd_2_3_2::Item::ImdgPackingGroup),
+            Item::MarpolCodeIbc => Ok(crate::zugferd_2_3_2::Item::MarpolCodeIbc),
+            Item::ImdgSubsidiaryRiskClass => {
+                Ok(crate::zugferd_2_3_2::Item::ImdgSubsidiaryRiskClass)
+            }
+            Item::TransportGroupNumber => Ok(crate::zugferd_2_3_2::Item::TransportGroupNumber),
+            Item::TaxonomicSerialNumber => Ok(crate::zugferd_2_3_2::Item::TaxonomicSerialNumber),
+            Item::ImdgMainHazardClass => Ok(crate::zugferd_2_3_2::Item::ImdgMainHazardClass),
+            Item::EuCombinedNomenclature => Ok(crate::zugferd_2_3_2::Item::EuCombinedNomenclature),
+            Item::TherapeuticClassificationNumber => {
+                Ok(crate::zugferd_2_3_2::Item::TherapeuticClassificationNumber)
+            }
+            Item::EuropeanWasteCatalogue => Ok(crate::zugferd_2_3_2::Item::EuropeanWasteCatalogue),
+            Item::PriceGroupingCode => Ok(crate::zugferd_2_3_2::Item::PriceGroupingCode),
+            Item::Unspsc => Ok(crate::zugferd_2_3_2::Item::Unspsc),
+            Item::EuRohsDirective => Ok(crate::zugferd_2_3_2::Item::EuRohsDirective),
+            Item::UltimateCustomersArticleNumber => {
+                Ok(crate::zugferd_2_3_2::Item::UltimateCustomersArticleNumber)
+            }
+            Item::UpcUniversalProductCode => {
+                Ok(crate::zugferd_2_3_2::Item::UpcUniversalProductCode)
+            }
+            Item::VendorItemNumber => Ok(crate::zugferd_2_3_2::Item::VendorItemNumber),
+            Item::VendorsSellersPartNumber => {
+                Ok(crate::zugferd_2_3_2::Item::VendorsSellersPartNumber)
+            }
+            Item::VendorsSupplementalItemNumber => {
+                Ok(crate::zugferd_2_3_2::Item::VendorsSupplementalItemNumber)
+            }
+            Item::VendorSpecificationNumber => {
+                Ok(crate::zugferd_2_3_2::Item::VendorSpecificationNumber)
+            }
+            Item::MutuallyDefined => Ok(crate::zugferd_2_3_2::Item::MutuallyDefined),
+            Item::PhytosanitaryPassportIdentifier => {
+                Err(ErrFromItemToCrateZugferd232Item::PhytosanitaryPassportIdentifier)
+            }
+        }
+    }
+}
+
+/// All the variants of Item that are not matched to any variant of crate::zugferd_2_3_2::Item
+#[derive(Debug, PartialEq, Eq, Hash)]
+pub enum ErrFromItemToCrateZugferd232Item {
+    PhytosanitaryPassportIdentifier,
+}
+
+impl std::fmt::Display for ErrFromItemToCrateZugferd232Item {
+    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+        match self {
+            ErrFromItemToCrateZugferd232Item::PhytosanitaryPassportIdentifier => write!(f, "PhytosanitaryPassportIdentifier has no corresponding value in crate::zugferd_2_3_2::Item"),
+        }
+    }
+}
+
+impl std::error::Error for ErrFromItemToCrateZugferd232Item {}
+
+impl std::convert::TryFrom<crate::zugferd_2_3_2::Item> for Item {
+    type Error = std::convert::Infallible;
+    fn try_from(value: crate::zugferd_2_3_2::Item) -> Result<Item, Self::Error> {
+        match value {
+            crate::zugferd_2_3_2::Item::ProductVersionNumber => Ok(Item::ProductVersionNumber),
+            crate::zugferd_2_3_2::Item::Assembly => Ok(Item::Assembly),
+            crate::zugferd_2_3_2::Item::HibcHealthIndustryBarCode => {
+                Ok(Item::HibcHealthIndustryBarCode)
+            }
+            crate::zugferd_2_3_2::Item::ColdRollNumber => Ok(Item::ColdRollNumber),
+            crate::zugferd_2_3_2::Item::HotRollNumber => Ok(Item::HotRollNumber),
+            crate::zugferd_2_3_2::Item::SlabNumber => Ok(Item::SlabNumber),
+            crate::zugferd_2_3_2::Item::SoftwareRevisionNumber => Ok(Item::SoftwareRevisionNumber),
+            crate::zugferd_2_3_2::Item::UpcUniversalProductCodeConsumerPackageCode155 => {
+                Ok(Item::UpcUniversalProductCodeConsumerPackageCode155)
+            }
+            crate::zugferd_2_3_2::Item::UpcUniversalProductCodeConsumerPackageCode155_Dup => {
+                Ok(Item::UpcUniversalProductCodeConsumerPackageCode155_Dup)
+            }
+            crate::zugferd_2_3_2::Item::SampleNumber => Ok(Item::SampleNumber),
+            crate::zugferd_2_3_2::Item::PackNumber => Ok(Item::PackNumber),
+            crate::zugferd_2_3_2::Item::UpcUniversalProductCodeShippingContainerCode12 => {
+                Ok(Item::UpcUniversalProductCodeShippingContainerCode12)
+            }
+            crate::zugferd_2_3_2::Item::UpcUniversalProductCodeEanEuropeanArticleNumber => {
+                Ok(Item::UpcUniversalProductCodeEanEuropeanArticleNumber)
+            }
+            crate::zugferd_2_3_2::Item::UpcUniversalProductCodeSuffix => {
+                Ok(Item::UpcUniversalProductCodeSuffix)
+            }
+            crate::zugferd_2_3_2::Item::StateLabelCode => Ok(Item::StateLabelCode),
+            crate::zugferd_2_3_2::Item::HeatNumber => Ok(Item::HeatNumber),
+            crate::zugferd_2_3_2::Item::CouponNumber => Ok(Item::CouponNumber),
+            crate::zugferd_2_3_2::Item::ResourceNumber => Ok(Item::ResourceNumber),
+            crate::zugferd_2_3_2::Item::WorkTaskNumber => Ok(Item::WorkTaskNumber),
+            crate::zugferd_2_3_2::Item::PriceLookUpNumber => Ok(Item::PriceLookUpNumber),
+            crate::zugferd_2_3_2::Item::NsnNorthAtlanticTreatyOrganizationStockNumber => {
+                Ok(Item::NsnNorthAtlanticTreatyOrganizationStockNumber)
+            }
+            crate::zugferd_2_3_2::Item::RefinedProductCode => Ok(Item::RefinedProductCode),
+            crate::zugferd_2_3_2::Item::Exhibit => Ok(Item::Exhibit),
+            crate::zugferd_2_3_2::Item::EndItem => Ok(Item::EndItem),
+            crate::zugferd_2_3_2::Item::FederalSupplyClassification => {
+                Ok(Item::FederalSupplyClassification)
+            }
+            crate::zugferd_2_3_2::Item::EngineeringDataList => Ok(Item::EngineeringDataList),
+            crate::zugferd_2_3_2::Item::MilestoneEventNumber => Ok(Item::MilestoneEventNumber),
+            crate::zugferd_2_3_2::Item::LotNumber => Ok(Item::LotNumber),
+            crate::zugferd_2_3_2::Item::NationalDrugCode442Format => {
+                Ok(Item::NationalDrugCode442Format)
+            }
+            crate::zugferd_2_3_2::Item::NationalDrugCode532Format => {
+                Ok(Item::NationalDrugCode532Format)
+            }
+            crate::zugferd_2_3_2::Item::NationalDrugCode541Format => {
+                Ok(Item::NationalDrugCode541Format)
+            }
+            crate::zugferd_2_3_2::Item::NationalDrugCode542Format => {
+                Ok(Item::NationalDrugCode542Format)
+            }
+            crate::zugferd_2_3_2::Item::NationalDrugCode => Ok(Item::NationalDrugCode),
+            crate::zugferd_2_3_2::Item::PartNumber => Ok(Item::PartNumber),
+            crate::zugferd_2_3_2::Item::LocalStockNumberLsn => Ok(Item::LocalStockNumberLsn),
+            crate::zugferd_2_3_2::Item::NextHigherAssemblyNumber => {
+                Ok(Item::NextHigherAssemblyNumber)
+            }
+            crate::zugferd_2_3_2::Item::DataCategory => Ok(Item::DataCategory),
+            crate::zugferd_2_3_2::Item::ControlNumber => Ok(Item::ControlNumber),
+            crate::zugferd_2_3_2::Item::SpecialMaterialIdentificationCode => {
+                Ok(Item::SpecialMaterialIdentificationCode)
+            }
+            crate::zugferd_2_3_2::Item::LocallyAssignedControlNumber => {
+                Ok(Item::LocallyAssignedControlNumber)
+            }
+            crate::zugferd_2_3_2::Item::BuyersColour => Ok(Item::BuyersColour),
+            crate::zugferd_2_3_2::Item::BuyersPartNumber => Ok(Item::BuyersPartNumber),
+            crate::zugferd_2_3_2::Item::VariableMeasureProductCode => {
+                Ok(Item::VariableMeasureProductCode)
+            }
+            crate::zugferd_2_3_2::Item::FinancialPhase => Ok(Item::FinancialPhase),
+            crate::zugferd_2_3_2::Item::ContractBreakdown => Ok(Item::ContractBreakdown),
+            crate::zugferd_2_3_2::Item::TechnicalPhase => Ok(Item::TechnicalPhase),
+            crate::zugferd_2_3_2::Item::DyeLotNumber => Ok(Item::DyeLotNumber),
+            crate::zugferd_2_3_2::Item::DailyStatementActivities => {
+                Ok(Item::DailyStatementActivities)
+            }
+            crate::zugferd_2_3_2::Item::PeriodicalStatementActivitiesWithinABilaterally => {
+                Ok(Item::PeriodicalStatementActivitiesWithinABilaterally)
+            }
+            crate::zugferd_2_3_2::Item::CalendarWeekStatementActivities => {
+                Ok(Item::CalendarWeekStatementActivities)
+            }
+            crate::zugferd_2_3_2::Item::CalendarMonthStatementActivities => {
+                Ok(Item::CalendarMonthStatementActivities)
+            }
+            crate::zugferd_2_3_2::Item::OriginalEquipmentNumber => {
+                Ok(Item::OriginalEquipmentNumber)
+            }
+            crate::zugferd_2_3_2::Item::IndustryCommodityCode => Ok(Item::IndustryCommodityCode),
+            crate::zugferd_2_3_2::Item::CommodityGrouping => Ok(Item::CommodityGrouping),
+            crate::zugferd_2_3_2::Item::ColourNumber => Ok(Item::ColourNumber),
+            crate::zugferd_2_3_2::Item::ContractNumber => Ok(Item::ContractNumber),
+            crate::zugferd_2_3_2::Item::CustomsArticleNumber => Ok(Item::CustomsArticleNumber),
+            crate::zugferd_2_3_2::Item::DrawingRevisionNumber => Ok(Item::DrawingRevisionNumber),
+            crate::zugferd_2_3_2::Item::Drawing => Ok(Item::Drawing),
+            crate::zugferd_2_3_2::Item::EngineeringChangeLevel => Ok(Item::EngineeringChangeLevel),
+            crate::zugferd_2_3_2::Item::MaterialCode => Ok(Item::MaterialCode),
+            crate::zugferd_2_3_2::Item::EmdnEuropeanMedicalDeviceNomenclature => {
+                Ok(Item::EmdnEuropeanMedicalDeviceNomenclature)
+            }
+            crate::zugferd_2_3_2::Item::InternationalArticleNumberingAssociationEan => {
+                Ok(Item::InternationalArticleNumberingAssociationEan)
+            }
+            crate::zugferd_2_3_2::Item::FishSpecies => Ok(Item::FishSpecies),
+            crate::zugferd_2_3_2::Item::BuyersInternalProductGroupCode => {
+                Ok(Item::BuyersInternalProductGroupCode)
+            }
+            crate::zugferd_2_3_2::Item::GlobalModelNumber => Ok(Item::GlobalModelNumber),
+            crate::zugferd_2_3_2::Item::NationalProductGroupCode => {
+                Ok(Item::NationalProductGroupCode)
+            }
+            crate::zugferd_2_3_2::Item::GeneralSpecificationNumber => {
+                Ok(Item::GeneralSpecificationNumber)
+            }
+            crate::zugferd_2_3_2::Item::HarmonisedSystem => Ok(Item::HarmonisedSystem),
+            crate::zugferd_2_3_2::Item::IsbnInternationalStandardBookNumber => {
+                Ok(Item::IsbnInternationalStandardBookNumber)
+            }
+            crate::zugferd_2_3_2::Item::BuyersItemNumber => Ok(Item::BuyersItemNumber),
+            crate::zugferd_2_3_2::Item::IssnInternationalStandardSerialNumber => {
+                Ok(Item::IssnInternationalStandardSerialNumber)
+            }
+            crate::zugferd_2_3_2::Item::BuyersStyleNumber => Ok(Item::BuyersStyleNumber),
+            crate::zugferd_2_3_2::Item::BuyersSizeCode => Ok(Item::BuyersSizeCode),
+            crate::zugferd_2_3_2::Item::MachineNumber => Ok(Item::MachineNumber),
+            crate::zugferd_2_3_2::Item::ManufacturersProducersArticleNumber => {
+                Ok(Item::ManufacturersProducersArticleNumber)
+            }
+            crate::zugferd_2_3_2::Item::ModelNumber => Ok(Item::ModelNumber),
+            crate::zugferd_2_3_2::Item::ProductServiceIdentificationNumber => {
+                Ok(Item::ProductServiceIdentificationNumber)
+            }
+            crate::zugferd_2_3_2::Item::BatchNumber => Ok(Item::BatchNumber),
+            crate::zugferd_2_3_2::Item::CustomerOrderNumber => Ok(Item::CustomerOrderNumber),
+            crate::zugferd_2_3_2::Item::PartNumberDescription => Ok(Item::PartNumberDescription),
+            crate::zugferd_2_3_2::Item::PurchasersOrderLineNumber => {
+                Ok(Item::PurchasersOrderLineNumber)
+            }
+            crate::zugferd_2_3_2::Item::PurchaseOrderNumber => Ok(Item::PurchaseOrderNumber),
+            crate::zugferd_2_3_2::Item::PromotionalVariantNumber => {
+                Ok(Item::PromotionalVariantNumber)
+            }
+            crate::zugferd_2_3_2::Item::BuyersQualifierForSize => Ok(Item::BuyersQualifierForSize),
+            crate::zugferd_2_3_2::Item::ReturnableContainerNumber => {
+                Ok(Item::ReturnableContainerNumber)
+            }
+            crate::zugferd_2_3_2::Item::ReleaseNumber => Ok(Item::ReleaseNumber),
+            crate::zugferd_2_3_2::Item::RunNumber => Ok(Item::RunNumber),
+            crate::zugferd_2_3_2::Item::RecordKeepingModelYear => Ok(Item::RecordKeepingModelYear),
+            crate::zugferd_2_3_2::Item::SuppliersArticleNumber => Ok(Item::SuppliersArticleNumber),
+            crate::zugferd_2_3_2::Item::StandardGroupProductsMixedAssortment => {
+                Ok(Item::StandardGroupProductsMixedAssortment)
+            }
+            crate::zugferd_2_3_2::Item::SkuStockKeepingUnit => Ok(Item::SkuStockKeepingUnit),
+            crate::zugferd_2_3_2::Item::SerialNumber => Ok(Item::SerialNumber),
+            crate::zugferd_2_3_2::Item::RskNumber => Ok(Item::RskNumber),
+            crate::zugferd_2_3_2::Item::IflsInstitutFrancaisDuLibreService5DigitProduct => {
+                Ok(Item::IflsInstitutFrancaisDuLibreService5DigitProduct)
+            }
+            crate::zugferd_2_3_2::Item::IflsInstitutFrancaisDuLibreService9DigitProduct => {
+                Ok(Item::IflsInstitutFrancaisDuLibreService9DigitProduct)
+            }
+            crate::zugferd_2_3_2::Item::Gs1GlobalTradeItemNumber => {
+                Ok(Item::Gs1GlobalTradeItemNumber)
+            }
+            crate::zugferd_2_3_2::Item::EdisEnergyDataIdentificationSystem => {
+                Ok(Item::EdisEnergyDataIdentificationSystem)
+            }
+            crate::zugferd_2_3_2::Item::SlaughterNumber => Ok(Item::SlaughterNumber),
+            crate::zugferd_2_3_2::Item::OfficialAnimalNumber => Ok(Item::OfficialAnimalNumber),
+            crate::zugferd_2_3_2::Item::HarmonizedTariffSchedule => {
+                Ok(Item::HarmonizedTariffSchedule)
+            }
+            crate::zugferd_2_3_2::Item::SuppliersSupplierArticleNumber => {
+                Ok(Item::SuppliersSupplierArticleNumber)
+            }
+            crate::zugferd_2_3_2::Item::_46LevelDotCode => Ok(Item::_46LevelDotCode),
+            crate::zugferd_2_3_2::Item::AirlineTariff6d => Ok(Item::AirlineTariff6d),
+            crate::zugferd_2_3_2::Item::Title49CodeFederalRegulations => {
+                Ok(Item::Title49CodeFederalRegulations)
+            }
+            crate::zugferd_2_3_2::Item::InternationalCivilAviationAdministrationCode => {
+                Ok(Item::InternationalCivilAviationAdministrationCode)
+            }
+            crate::zugferd_2_3_2::Item::HazardousMaterialsIdDot => {
+                Ok(Item::HazardousMaterialsIdDot)
+            }
+            crate::zugferd_2_3_2::Item::Endorsement => Ok(Item::Endorsement),
+            crate::zugferd_2_3_2::Item::AirForceRegulation714 => Ok(Item::AirForceRegulation714),
+            crate::zugferd_2_3_2::Item::Breed => Ok(Item::Breed),
+            crate::zugferd_2_3_2::Item::ChemicalAbstractServiceCasRegistryNumber => {
+                Ok(Item::ChemicalAbstractServiceCasRegistryNumber)
+            }
+            crate::zugferd_2_3_2::Item::EngineModelDesignation => Ok(Item::EngineModelDesignation),
+            crate::zugferd_2_3_2::Item::InstitutionalMeatPurchaseSpecificationsImpsNumber => {
+                Ok(Item::InstitutionalMeatPurchaseSpecificationsImpsNumber)
+            }
+            crate::zugferd_2_3_2::Item::PriceLookUpCodePlu => Ok(Item::PriceLookUpCodePlu),
+            crate::zugferd_2_3_2::Item::InternationalMaritimeOrganizationImoCode => {
+                Ok(Item::InternationalMaritimeOrganizationImoCode)
+            }
+            crate::zugferd_2_3_2::Item::BureauExplosives600ARail => {
+                Ok(Item::BureauExplosives600ARail)
+            }
+            crate::zugferd_2_3_2::Item::UnitedNationsDangerousGoodsList => {
+                Ok(Item::UnitedNationsDangerousGoodsList)
+            }
+            crate::zugferd_2_3_2::Item::InternationalCodeBotanicalNomenclatureIcbn => {
+                Ok(Item::InternationalCodeBotanicalNomenclatureIcbn)
+            }
+            crate::zugferd_2_3_2::Item::InternationalCodeZoologicalNomenclatureIczn => {
+                Ok(Item::InternationalCodeZoologicalNomenclatureIczn)
+            }
+            crate::zugferd_2_3_2::Item::InternationalCodeNomenclatureForCultivatedPlants => {
+                Ok(Item::InternationalCodeNomenclatureForCultivatedPlants)
+            }
+            crate::zugferd_2_3_2::Item::DistributorSArticleIdentifier => {
+                Ok(Item::DistributorSArticleIdentifier)
+            }
+            crate::zugferd_2_3_2::Item::NorwegianClassificationSystemEnva => {
+                Ok(Item::NorwegianClassificationSystemEnva)
+            }
+            crate::zugferd_2_3_2::Item::SupplierAssignedClassification => {
+                Ok(Item::SupplierAssignedClassification)
+            }
+            crate::zugferd_2_3_2::Item::MexicanClassificationSystemAmece => {
+                Ok(Item::MexicanClassificationSystemAmece)
+            }
+            crate::zugferd_2_3_2::Item::GermanClassificationSystemCcg => {
+                Ok(Item::GermanClassificationSystemCcg)
+            }
+            crate::zugferd_2_3_2::Item::FinnishClassificationSystemEanfin => {
+                Ok(Item::FinnishClassificationSystemEanfin)
+            }
+            crate::zugferd_2_3_2::Item::CanadianClassificationSystemIcc => {
+                Ok(Item::CanadianClassificationSystemIcc)
+            }
+            crate::zugferd_2_3_2::Item::FrenchClassificationSystemIfls5 => {
+                Ok(Item::FrenchClassificationSystemIfls5)
+            }
+            crate::zugferd_2_3_2::Item::StyleNumber => Ok(Item::StyleNumber),
+            crate::zugferd_2_3_2::Item::DutchClassificationSystemCbl => {
+                Ok(Item::DutchClassificationSystemCbl)
+            }
+            crate::zugferd_2_3_2::Item::JapaneseClassificationSystemJicfs => {
+                Ok(Item::JapaneseClassificationSystemJicfs)
+            }
+            crate::zugferd_2_3_2::Item::EuropeanUnionDairySubsidyEligibilityClassification => {
+                Ok(Item::EuropeanUnionDairySubsidyEligibilityClassification)
+            }
+            crate::zugferd_2_3_2::Item::Gs1SpainClassificationSystem => {
+                Ok(Item::Gs1SpainClassificationSystem)
+            }
+            crate::zugferd_2_3_2::Item::Gs1PolandClassificationSystem => {
+                Ok(Item::Gs1PolandClassificationSystem)
+            }
+            crate::zugferd_2_3_2::Item::FederalAgencyOnTechnicalRegulatingAndMetrology => {
+                Ok(Item::FederalAgencyOnTechnicalRegulatingAndMetrology)
+            }
+            crate::zugferd_2_3_2::Item::EfficientConsumerResponseEcrAustriaClassification => {
+                Ok(Item::EfficientConsumerResponseEcrAustriaClassification)
+            }
+            crate::zugferd_2_3_2::Item::Gs1ItalyClassificationSystem => {
+                Ok(Item::Gs1ItalyClassificationSystem)
+            }
+            crate::zugferd_2_3_2::Item::CpvCommonProcurementVocabulary => {
+                Ok(Item::CpvCommonProcurementVocabulary)
+            }
+            crate::zugferd_2_3_2::Item::IfdaInternationalFoodserviceDistributorsAssociation => {
+                Ok(Item::IfdaInternationalFoodserviceDistributorsAssociation)
+            }
+            crate::zugferd_2_3_2::Item::AhfsAmericanHospitalFormularyServicePharmacologic => {
+                Ok(Item::AhfsAmericanHospitalFormularyServicePharmacologic)
+            }
+            crate::zugferd_2_3_2::Item::AtcAnatomicalTherapeuticChemicalClassificationSystem => {
+                Ok(Item::AtcAnatomicalTherapeuticChemicalClassificationSystem)
+            }
+            crate::zugferd_2_3_2::Item::CladimedClassificationDesDispositifsMédicaux => {
+                Ok(Item::CladimedClassificationDesDispositifsMédicaux)
+            }
+            crate::zugferd_2_3_2::Item::CmdrCanadianMedicalDeviceRegulationsClassification => {
+                Ok(Item::CmdrCanadianMedicalDeviceRegulationsClassification)
+            }
+            crate::zugferd_2_3_2::Item::CndmClassificazioneNazionaleDeiDispositiviMedici => {
+                Ok(Item::CndmClassificazioneNazionaleDeiDispositiviMedici)
+            }
+            crate::zugferd_2_3_2::Item::UkDmDDictionaryMedicinesDevicesStandardCoding => {
+                Ok(Item::UkDmDDictionaryMedicinesDevicesStandardCoding)
+            }
+            crate::zugferd_2_3_2::Item::EclSs => Ok(Item::EclSs),
+            crate::zugferd_2_3_2::Item::EdmaEuropeanDiagnosticManufacturersAssociation => {
+                Ok(Item::EdmaEuropeanDiagnosticManufacturersAssociation)
+            }
+            crate::zugferd_2_3_2::Item::EgarEuropeanGenericArticleRegister => {
+                Ok(Item::EgarEuropeanGenericArticleRegister)
+            }
+            crate::zugferd_2_3_2::Item::GmdnGlobalMedicalDevicesNomenclature => {
+                Ok(Item::GmdnGlobalMedicalDevicesNomenclature)
+            }
+            crate::zugferd_2_3_2::Item::GpiGenericProductIdentifier => {
+                Ok(Item::GpiGenericProductIdentifier)
+            }
+            crate::zugferd_2_3_2::Item::HcpcsHealthcareCommonProcedureCodingSystem => {
+                Ok(Item::HcpcsHealthcareCommonProcedureCodingSystem)
+            }
+            crate::zugferd_2_3_2::Item::IcpsInternationalClassificationForPatientSafety => {
+                Ok(Item::IcpsInternationalClassificationForPatientSafety)
+            }
+            crate::zugferd_2_3_2::Item::MeddraMedicalDictionaryForRegulatoryActivities => {
+                Ok(Item::MeddraMedicalDictionaryForRegulatoryActivities)
+            }
+            crate::zugferd_2_3_2::Item::MedicalColumbus => Ok(Item::MedicalColumbus),
+            crate::zugferd_2_3_2::Item::NapcsNorthAmericanProductClassificationSystem => {
+                Ok(Item::NapcsNorthAmericanProductClassificationSystem)
+            }
+            crate::zugferd_2_3_2::Item::NhsNationalHealthServicesEclass => {
+                Ok(Item::NhsNationalHealthServicesEclass)
+            }
+            crate::zugferd_2_3_2::Item::UsFdaFoodAndDrugAdministrationProductCode => {
+                Ok(Item::UsFdaFoodAndDrugAdministrationProductCode)
+            }
+            crate::zugferd_2_3_2::Item::SnomedCtSystematizedNomenclatureMedicineClinical => {
+                Ok(Item::SnomedCtSystematizedNomenclatureMedicineClinical)
+            }
+            crate::zugferd_2_3_2::Item::UmdnsUniversalMedicalDeviceNomenclatureSystem => {
+                Ok(Item::UmdnsUniversalMedicalDeviceNomenclatureSystem)
+            }
+            crate::zugferd_2_3_2::Item::Gs1GlobalReturnableAssetIdentifierNonSerialised => {
+                Ok(Item::Gs1GlobalReturnableAssetIdentifierNonSerialised)
+            }
+            crate::zugferd_2_3_2::Item::Imei => Ok(Item::Imei),
+            crate::zugferd_2_3_2::Item::WasteTypeEmsa => Ok(Item::WasteTypeEmsa),
+            crate::zugferd_2_3_2::Item::ShipsStoreClassificationType => {
+                Ok(Item::ShipsStoreClassificationType)
+            }
+            crate::zugferd_2_3_2::Item::EmergencyFireCode => Ok(Item::EmergencyFireCode),
+            crate::zugferd_2_3_2::Item::EmergencySpillageCode => Ok(Item::EmergencySpillageCode),
+            crate::zugferd_2_3_2::Item::ImdgPackingGroup => Ok(Item::ImdgPackingGroup),
+            crate::zugferd_2_3_2::Item::MarpolCodeIbc => Ok(Item::MarpolCodeIbc),
+            crate::zugferd_2_3_2::Item::ImdgSubsidiaryRiskClass => {
+                Ok(Item::ImdgSubsidiaryRiskClass)
+            }
+            crate::zugferd_2_3_2::Item::TransportGroupNumber => Ok(Item::TransportGroupNumber),
+            crate::zugferd_2_3_2::Item::TaxonomicSerialNumber => Ok(Item::TaxonomicSerialNumber),
+            crate::zugferd_2_3_2::Item::ImdgMainHazardClass => Ok(Item::ImdgMainHazardClass),
+            crate::zugferd_2_3_2::Item::EuCombinedNomenclature => Ok(Item::EuCombinedNomenclature),
+            crate::zugferd_2_3_2::Item::TherapeuticClassificationNumber => {
+                Ok(Item::TherapeuticClassificationNumber)
+            }
+            crate::zugferd_2_3_2::Item::EuropeanWasteCatalogue => Ok(Item::EuropeanWasteCatalogue),
+            crate::zugferd_2_3_2::Item::PriceGroupingCode => Ok(Item::PriceGroupingCode),
+            crate::zugferd_2_3_2::Item::Unspsc => Ok(Item::Unspsc),
+            crate::zugferd_2_3_2::Item::EuRohsDirective => Ok(Item::EuRohsDirective),
+            crate::zugferd_2_3_2::Item::UltimateCustomersArticleNumber => {
+                Ok(Item::UltimateCustomersArticleNumber)
+            }
+            crate::zugferd_2_3_2::Item::UpcUniversalProductCode => {
+                Ok(Item::UpcUniversalProductCode)
+            }
+            crate::zugferd_2_3_2::Item::VendorItemNumber => Ok(Item::VendorItemNumber),
+            crate::zugferd_2_3_2::Item::VendorsSellersPartNumber => {
+                Ok(Item::VendorsSellersPartNumber)
+            }
+            crate::zugferd_2_3_2::Item::VendorsSupplementalItemNumber => {
+                Ok(Item::VendorsSupplementalItemNumber)
+            }
+            crate::zugferd_2_3_2::Item::VendorSpecificationNumber => {
+                Ok(Item::VendorSpecificationNumber)
+            }
+            crate::zugferd_2_3_2::Item::MutuallyDefined => Ok(Item::MutuallyDefined),
+        }
+    }
+}
+// End: (Version) TryFrom crate::zugferd_2_3_2::Item to Item

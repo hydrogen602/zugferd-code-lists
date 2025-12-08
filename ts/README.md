@@ -34,6 +34,8 @@ Versions supported:
   - Added `FromStr` and `Display` trait impls
 - v0.1.17
   - Made error for `FromStr` more informative with thiserror.
+- v0.1.18
+  - Bugfix where `2.3.3` lists were not being exported in ts.  
 
 # Future Plans
 

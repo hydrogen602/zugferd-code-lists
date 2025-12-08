@@ -1,4 +1,5 @@
 from dataclasses import dataclass, field
+import itertools
 from typing import Iterable
 from rich.progress import track
 
@@ -14,30 +15,66 @@ from py_generate.rendering.templates import (
     generate,
     reset_mod_rs,
 )
+from py_generate.rendering.version_conversion import ConvertFrom
 
 
-def run_all(version: VersionInfo):
+def run_all(
+    version: VersionInfo, prev_version_gen_info: list[GenerationInfo] | None = None
+) -> list[GenerationInfo]:
+    """
+    Runs the generation for a given version.
+
+    Args:
+        version: The version to generate for.
+        prev_version_gen_info: The generation information for the previous version. Useful for generating version conversions.
+
+    Returns:
+        The generation information for the given version.
+    """
     reset_mod_rs(version)
 
-    for basic_info in track(ALL_BASIC, description=f"Generating v{version.version}"):
+    prev_version_gen_info = prev_version_gen_info or []
+    prev_version_gen_conversion_generators: dict[str, CodeGenerator] = {
+        gen_info.enum_name: ConvertFrom.from_generation_info(gen_info)
+        for gen_info in prev_version_gen_info
+    }
+
+    generation_info = []
+
+    for basic_info in track(
+        ALL_BASIC, description=f"Generating v{version.version.value}"
+    ):
         if (
             basic_info.version_filter is not None
             and version.version not in basic_info.version_filter
         ):
             continue
 
-        run_basic(
-            version,
-            sheet_name=basic_info.sheet_name,
-            code_column=basic_info.code_column,
-            description_column=basic_info.name_column,
-            extra_columns=basic_info.extra_columns,
-            file_name=basic_info.file_name,
-            rust_type=basic_info.rust_type,
-            write_mod=True,
-            header_idx=basic_info.header_index,
-            extra_generators=basic_info.extra_generators,
+        generation_info.append(
+            run_basic(
+                version,
+                sheet_name=basic_info.sheet_name,
+                code_column=basic_info.code_column,
+                description_column=basic_info.name_column,
+                extra_columns=basic_info.extra_columns,
+                file_name=basic_info.file_name,
+                rust_type=basic_info.rust_type,
+                write_mod=True,
+                header_idx=basic_info.header_index,
+                extra_generators=basic_info.extra_generators,
+                type_specific_extra_generators=prev_version_gen_conversion_generators,
+            )
         )
+
+    return generation_info
+
+
+@dataclass
+class GenerationInfo:
+    enum_name: str
+    enum_values: list[EnumValue]
+    version: VersionInfo
+    rs_file: str
 
 
 def run_basic(
@@ -51,11 +88,14 @@ def run_basic(
     write_mod: bool = False,
     header_idx: int = 0,
     extra_generators: Iterable[CodeGenerator] = (),
-):
+    type_specific_extra_generators: dict[str, CodeGenerator] | None = None,
+) -> GenerationInfo:
     if rust_type is None:
         rust_type = sheet_name
     if file_name is None:
         file_name = f"{rust_type.lower()}.rs"
+
+    type_specific_extra_generators = type_specific_extra_generators or {}
 
     sheet = load_sheet(sheet_name, version, header_idx)
 
@@ -81,6 +121,13 @@ def run_basic(
         all_ids.add(e.rust_identifier)
         enum_values.append(e)
 
+    type_specific_extra_generator = type_specific_extra_generators.get(rust_type)
+
+    if type_specific_extra_generator is not None:
+        extra_generators = itertools.chain(
+            extra_generators, [type_specific_extra_generator]
+        )
+
     generate(
         rust_type,
         enum_values,
@@ -88,6 +135,13 @@ def run_basic(
         file_name,
         write_mod,
         extra_generators=extra_generators,
+    )
+
+    return GenerationInfo(
+        enum_name=rust_type,
+        enum_values=enum_values,
+        version=version,
+        rs_file=file_name,
     )
 
 

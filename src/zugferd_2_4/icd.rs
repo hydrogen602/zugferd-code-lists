@@ -1,390 +1,390 @@
 #![allow(non_camel_case_types)]
 
-    #[cfg_attr(feature = "specta", derive(specta::Type))]
-    #[cfg_attr(feature = "serde", derive(serde::Serialize, serde::Deserialize))]
-    #[derive(Debug, PartialEq, Eq, PartialOrd, Ord, Clone, Copy, Hash)]
-    pub enum ICD {
-        /// System Information et Repertoire des Entreprise et des Etablissements: SIRENE 
+#[cfg_attr(feature = "specta", derive(specta::Type))]
+#[cfg_attr(feature = "serde", derive(serde::Serialize, serde::Deserialize))]
+#[derive(Debug, PartialEq, Eq, PartialOrd, Ord, Clone, Copy, Hash)]
+pub enum ICD {
+    /// System Information et Repertoire des Entreprise et des Etablissements: SIRENE
     SystemInformationEtRepertoireDesEntrepriseEtDesEtablissementsSirene,
-    /// Codification Numerique des Etablissments Financiers En Belgique 
+    /// Codification Numerique des Etablissments Financiers En Belgique
     CodificationNumeriqueDesEtablissmentsFinanciersEnBelgique,
-    /// NBS/OSI NETWORK 
+    /// NBS/OSI NETWORK
     NbsOsiNetwork,
-    /// USA FED GOV OSI NETWORK 
+    /// USA FED GOV OSI NETWORK
     UsaFedGovOsiNetwork,
-    /// USA DOD OSI NETWORK 
+    /// USA DOD OSI NETWORK
     UsaDodOsiNetwork,
-    /// Organisationsnummer 
+    /// Organisationsnummer
     Organisationsnummer,
-    /// LE NUMERO NATIONAL 
+    /// LE NUMERO NATIONAL
     LeNumeroNational,
-    /// SIRET-CODE 
+    /// SIRET-CODE
     SiretCode,
-    /// Organizational Identifiers for Structured Names under ISO 9541 Part 2 
+    /// Organizational Identifiers for Structured Names under ISO 9541 Part 2
     OrganizationalIdentifiersForStructuredNamesUnderIso9541Part2,
-    /// International Code Designator for the Identification of OSI-based, Amateur Radio Organizations, Network Objects and Application Services. 
+    /// International Code Designator for the Identification of OSI-based, Amateur Radio Organizations, Network Objects and Application Services.
     InternationalCodeDesignatorForIdentificationOsiBasedAmateurRadioOrganizationsNetworkObjectsAndApplicationServices,
-    /// European Computer Manufacturers Association: ECMA 
+    /// European Computer Manufacturers Association: ECMA
     EuropeanComputerManufacturersAssociationEcma,
-    /// VSA FTP CODE (FTP = File Transfer Protocol) 
+    /// VSA FTP CODE (FTP = File Transfer Protocol)
     VsaFtpCodeFtpFileTransferProtocol,
-    /// NIST/OSI Implememts' Workshop 
+    /// NIST/OSI Implememts' Workshop
     NistOsiImplememtsWorkshop,
-    /// Electronic Data Interchange: EDI 
+    /// Electronic Data Interchange: EDI
     ElectronicDataInterchangeEdi,
-    /// EWOS Object Identifiers 
+    /// EWOS Object Identifiers
     EwosObjectIdentifiers,
-    /// COMMON LANGUAGE 
+    /// COMMON LANGUAGE
     CommonLanguage,
-    /// SNA/OSI Network 
+    /// SNA/OSI Network
     SnaOsiNetwork,
-    /// Air Transport Industry Services Communications Network 
+    /// Air Transport Industry Services Communications Network
     AirTransportIndustryServicesCommunicationsNetwork,
-    /// European Laboratory for Particle Physics: CERN 
+    /// European Laboratory for Particle Physics: CERN
     EuropeanLaboratoryForParticlePhysicsCern,
-    /// SOCIETY FOR WORLDWIDE INTERBANK FINANCIAL, TELECOMMUNICATION S.W.I.F.T. 
+    /// SOCIETY FOR WORLDWIDE INTERBANK FINANCIAL, TELECOMMUNICATION S.W.I.F.T.
     SocietyForWorldwideInterbankFinancialTelecommunicationSWIFT,
-    /// OSF Distributed Computing Object Identification 
+    /// OSF Distributed Computing Object Identification
     OsfDistributedComputingObjectIdentification,
-    /// Nordic University and Research Network: NORDUnet 
+    /// Nordic University and Research Network: NORDUnet
     NordicUniversityAndResearchNetworkNordunet,
-    /// Digital Equipment Corporation: DEC 
+    /// Digital Equipment Corporation: DEC
     DigitalEquipmentCorporationDec,
-    /// OSI ASIA-OCEANIA WORKSHOP 
+    /// OSI ASIA-OCEANIA WORKSHOP
     OsiAsiaOceaniaWorkshop,
-    /// NATO ISO 6523 ICDE coding scheme 
+    /// NATO ISO 6523 ICDE coding scheme
     NatoIso6523IcdeCodingScheme,
-    /// Aeronautical Telecommunications Network (ATN) 
+    /// Aeronautical Telecommunications Network (ATN)
     AeronauticalTelecommunicationsNetworkAtn,
-    /// International Standard ISO 6523 
+    /// International Standard ISO 6523
     InternationalStandardIso6523,
-    /// The All-Union Classifier of Enterprises and Organisations 
+    /// The All-Union Classifier of Enterprises and Organisations
     TheAllUnionClassifierEnterprisesAndOrganisations,
-    /// AT&T/OSI Network 
+    /// AT&T/OSI Network
     AtTOsiNetwork,
-    /// EDI Partner Identification Code 
+    /// EDI Partner Identification Code
     EdiPartnerIdentificationCode,
-    /// Telecom Australia 
+    /// Telecom Australia
     TelecomAustralia,
-    /// S G W OSI Internetwork 
+    /// S G W OSI Internetwork
     SGWOsiInternetwork,
-    /// Reuter Open Address Standard 
+    /// Reuter Open Address Standard
     ReuterOpenAddressStandard,
-    /// ISO 6523 - ICD 
+    /// ISO 6523 - ICD
     Iso6523Icd,
-    /// TeleTrust Object Identifiers 
+    /// TeleTrust Object Identifiers
     TeletrustObjectIdentifiers,
-    /// LY-tunnus 
+    /// LY-tunnus
     LyTunnus,
-    /// The Australian GOSIP Network 
+    /// The Australian GOSIP Network
     TheAustralianGosipNetwork,
-    /// The OZ DOD OSI Network 
+    /// The OZ DOD OSI Network
     TheOzDodOsiNetwork,
-    /// Unilever Group Companies 
+    /// Unilever Group Companies
     UnileverGroupCompanies,
-    /// Citicorp Global Information Network 
+    /// Citicorp Global Information Network
     CiticorpGlobalInformationNetwork,
-    /// DBP Telekom Object Identifiers 
+    /// DBP Telekom Object Identifiers
     DbpTelekomObjectIdentifiers,
-    /// HydroNETT 
+    /// HydroNETT
     Hydronett,
-    /// Thai Industrial Standards Institute (TISI) 
+    /// Thai Industrial Standards Institute (TISI)
     ThaiIndustrialStandardsInstituteTisi,
-    /// ICI Company Identification System 
+    /// ICI Company Identification System
     IciCompanyIdentificationSystem,
-    /// FUNLOC 
+    /// FUNLOC
     Funloc,
-    /// BULL ODI/DSA/UNIX Network 
+    /// BULL ODI/DSA/UNIX Network
     BullOdiDsaUnixNetwork,
-    /// OSINZ 
+    /// OSINZ
     Osinz,
-    /// Auckland Area Health 
+    /// Auckland Area Health
     AucklandAreaHealth,
-    /// Firmenich 
+    /// Firmenich
     Firmenich,
-    /// AGFA-DIS 
+    /// AGFA-DIS
     AgfaDis,
-    /// Society of Motion Picture and Television Engineers (SMPTE) 
+    /// Society of Motion Picture and Television Engineers (SMPTE)
     SocietyMotionPictureAndTelevisionEngineersSmpte,
-    /// Migros_Network M_NETOPZ 
+    /// Migros_Network M_NETOPZ
     Migros_networkM_netopz,
-    /// ISO6523 - ICDPCR 
+    /// ISO6523 - ICDPCR
     Iso6523Icdpcr,
-    /// Energy Net 
+    /// Energy Net
     EnergyNet,
-    /// Nokia Object Identifiers (NOI) 
+    /// Nokia Object Identifiers (NOI)
     NokiaObjectIdentifiersNoi,
-    /// Saint Gobain 
+    /// Saint Gobain
     SaintGobain,
-    /// Siemens Corporate Network 
+    /// Siemens Corporate Network
     SiemensCorporateNetwork,
-    /// DANZNET 
+    /// DANZNET
     Danznet,
-    /// Data Universal Numbering System (D-U-N-S Number) 
+    /// Data Universal Numbering System (D-U-N-S Number)
     DataUniversalNumberingSystemDUNSNumber,
-    /// SOFFEX OSI 
+    /// SOFFEX OSI
     SoffexOsi,
-    /// KPN OVN 
+    /// KPN OVN
     KpnOvn,
-    /// ascomOSINet 
+    /// ascomOSINet
     Ascomosinet,
-    /// UTC: Uniforme Transport Code 
+    /// UTC: Uniforme Transport Code
     UtcUniformeTransportCode,
-    /// SOLVAY OSI CODING 
+    /// SOLVAY OSI CODING
     SolvayOsiCoding,
-    /// Roche Corporate Network 
+    /// Roche Corporate Network
     RocheCorporateNetwork,
-    /// ZellwegerOSINet 
+    /// ZellwegerOSINet
     Zellwegerosinet,
-    /// Intel Corporation OSI 
+    /// Intel Corporation OSI
     IntelCorporationOsi,
-    /// SITA Object Identifier Tree 
+    /// SITA Object Identifier Tree
     SitaObjectIdentifierTree,
-    /// DaimlerChrysler Corporate Network 
+    /// DaimlerChrysler Corporate Network
     DaimlerchryslerCorporateNetwork,
-    /// LEGO /OSI NETWORK 
+    /// LEGO /OSI NETWORK
     LegoOsiNetwork,
-    /// NAVISTAR/OSI Network 
+    /// NAVISTAR/OSI Network
     NavistarOsiNetwork,
-    /// ICD Formatted ATM address 
+    /// ICD Formatted ATM address
     IcdFormattedAtmAddress,
-    /// ARINC 
+    /// ARINC
     Arinc,
-    /// Alcanet/Alcatel-Alsthom Corporate Network 
+    /// Alcanet/Alcatel-Alsthom Corporate Network
     AlcanetAlcatelAlsthomCorporateNetwork,
-    /// Sistema Italiano di Identificazione di ogetti gestito da UNINFO 
+    /// Sistema Italiano di Identificazione di ogetti gestito da UNINFO
     SistemaItalianoDiIdentificazioneDiOgettiGestitoDaUninfo,
-    /// Sistema Italiano di Indirizzamento di Reti OSI Gestito da UNINFO 
+    /// Sistema Italiano di Indirizzamento di Reti OSI Gestito da UNINFO
     SistemaItalianoDiIndirizzamentoDiRetiOsiGestitoDaUninfo,
-    /// Mitel terminal or switching equipment 
+    /// Mitel terminal or switching equipment
     MitelTerminalOrSwitchingEquipment,
-    /// ATM Forum 
+    /// ATM Forum
     AtmForum,
-    /// UK National Health Service Scheme, (EDIRA compliant) 
+    /// UK National Health Service Scheme, (EDIRA compliant)
     UkNationalHealthServiceSchemeEdiraCompliant,
-    /// International NSAP 
+    /// International NSAP
     InternationalNsap,
-    /// Norwegian Telecommunications Authority's, NTA'S, EDI, identifier scheme (EDIRA compliant) 
+    /// Norwegian Telecommunications Authority's, NTA'S, EDI, identifier scheme (EDIRA compliant)
     NorwegianTelecommunicationsAuthoritysNtasEdiIdentifierSchemeEdiraCompliant,
-    /// Advanced Telecommunications Modules Limited, Corporate Network 
+    /// Advanced Telecommunications Modules Limited, Corporate Network
     AdvancedTelecommunicationsModulesLimitedCorporateNetwork,
-    /// Athens Chamber of Commerce & Industry Scheme (EDIRA compliant) 
+    /// Athens Chamber of Commerce & Industry Scheme (EDIRA compliant)
     AthensChamberCommerceIndustrySchemeEdiraCompliant,
-    /// Swiss Chambers of Commerce Scheme (EDIRA) compliant 
+    /// Swiss Chambers of Commerce Scheme (EDIRA) compliant
     SwissChambersCommerceSchemeEdiraCompliant,
-    /// United States Council for International Business (USCIB) Scheme, (EDIRA compliant) 
+    /// United States Council for International Business (USCIB) Scheme, (EDIRA compliant)
     UnitedStatesCouncilForInternationalBusinessUscibSchemeEdiraCompliant,
-    /// National Federation of Chambers of Commerce & Industry of Belgium, Scheme (EDIRA compliant) 
+    /// National Federation of Chambers of Commerce & Industry of Belgium, Scheme (EDIRA compliant)
     NationalFederationChambersCommerceIndustryBelgiumSchemeEdiraCompliant,
-    /// EAN Location Code 
+    /// EAN Location Code
     EanLocationCode,
-    /// The Association of British Chambers of Commerce Ltd. Scheme, (EDIRA compliant) 
+    /// The Association of British Chambers of Commerce Ltd. Scheme, (EDIRA compliant)
     TheAssociationBritishChambersCommerceLtdSchemeEdiraCompliant,
-    /// Internet IP addressing - ISO 6523 ICD encoding 
+    /// Internet IP addressing - ISO 6523 ICD encoding
     InternetIpAddressingIso6523IcdEncoding,
-    /// Cisco Sysytems / OSI Network 
+    /// Cisco Sysytems / OSI Network
     CiscoSysytemsOsiNetwork,
-    /// Revenue Canada Business Number Registration (EDIRA compliant) 
+    /// Revenue Canada Business Number Registration (EDIRA compliant)
     RevenueCanadaBusinessNumberRegistrationEdiraCompliant,
-    /// DEUTSCHER INDUSTRIE- UND HANDELSTAG (DIHT) Scheme (EDIRA compliant) 
+    /// DEUTSCHER INDUSTRIE- UND HANDELSTAG (DIHT) Scheme (EDIRA compliant)
     DeutscherIndustrieUndHandelstagDihtSchemeEdiraCompliant,
-    /// Hewlett - Packard Company Internal AM Network 
+    /// Hewlett - Packard Company Internal AM Network
     HewlettPackardCompanyInternalAmNetwork,
     /// The Danish Business Authority - P-number (DK:P)
     TheDanishBusinessAuthorityPNumberDkP,
-    /// FTI - Ediforum Italia, (EDIRA compliant) 
+    /// FTI - Ediforum Italia, (EDIRA compliant)
     FtiEdiforumItaliaEdiraCompliant,
-    /// CHAMBER OF COMMERCE TEL AVIV-JAFFA Scheme (EDIRA compliant) 
+    /// CHAMBER OF COMMERCE TEL AVIV-JAFFA Scheme (EDIRA compliant)
     ChamberOfCommerceTelAvivJaffaSchemeEdiraCompliant,
-    /// Siemens Supervisory Systems Network 
+    /// Siemens Supervisory Systems Network
     SiemensSupervisorySystemsNetwork,
-    /// PNG_ICD Scheme 
+    /// PNG_ICD Scheme
     Png_icdScheme,
-    /// South African Code Allocation 
+    /// South African Code Allocation
     SouthAfricanCodeAllocation,
-    /// HEAG 
+    /// HEAG
     Heag,
-    /// BT - ICD Coding System 
+    /// BT - ICD Coding System
     BtIcdCodingSystem,
-    /// Portuguese Chamber of Commerce and Industry Scheme (EDIRA compliant) 
+    /// Portuguese Chamber of Commerce and Industry Scheme (EDIRA compliant)
     PortugueseChamberCommerceAndIndustrySchemeEdiraCompliant,
-    /// Vereniging van Kamers van Koophandel en Fabrieken in Nederland (Association of Chambers of Commerce and Industry in the Netherlands), Scheme (EDIRA compliant) 
+    /// Vereniging van Kamers van Koophandel en Fabrieken in Nederland (Association of Chambers of Commerce and Industry in the Netherlands), Scheme (EDIRA compliant)
     VerenigingVanKamersVanKoophandelEnFabriekenInNederlandAssociationChambersCommerceAndIndustryInNetherlandsSchemeEdiraCompliant,
-    /// Association of Swedish Chambers of Commerce and Industry Scheme (EDIRA compliant) 
+    /// Association of Swedish Chambers of Commerce and Industry Scheme (EDIRA compliant)
     AssociationSwedishChambersCommerceAndIndustrySchemeEdiraCompliant,
-    /// Australian Chambers of Commerce and Industry Scheme (EDIRA compliant) 
+    /// Australian Chambers of Commerce and Industry Scheme (EDIRA compliant)
     AustralianChambersCommerceAndIndustrySchemeEdiraCompliant,
-    /// BellSouth ICD AESA (ATM End System Address) 
+    /// BellSouth ICD AESA (ATM End System Address)
     BellsouthIcdAesaAtmEndSystemAddress,
-    /// Bell Atlantic 
+    /// Bell Atlantic
     BellAtlantic,
-    /// Object Identifiers 
+    /// Object Identifiers
     ObjectIdentifiers,
-    /// ISO register for Standards producing Organizations 
+    /// ISO register for Standards producing Organizations
     IsoRegisterForStandardsProducingOrganizations,
-    /// OriginNet 
+    /// OriginNet
     Originnet,
-    /// Check Point Software Technologies 
+    /// Check Point Software Technologies
     CheckPointSoftwareTechnologies,
-    /// Pacific Bell Data Communications Network 
+    /// Pacific Bell Data Communications Network
     PacificBellDataCommunicationsNetwork,
-    /// PSS Object Identifiers 
+    /// PSS Object Identifiers
     PssObjectIdentifiers,
-    /// STENTOR-ICD CODING SYSTEM 
+    /// STENTOR-ICD CODING SYSTEM
     StentorIcdCodingSystem,
-    /// ATM-Network ZN'96 
+    /// ATM-Network ZN'96
     AtmNetworkZn96,
-    /// MCI / OSI Network 
+    /// MCI / OSI Network
     MciOsiNetwork,
-    /// Advantis 
+    /// Advantis
     Advantis,
-    /// Affable Software Data Interchange Codes 
+    /// Affable Software Data Interchange Codes
     AffableSoftwareDataInterchangeCodes,
-    /// BB-DATA GmbH 
+    /// BB-DATA GmbH
     BbDataGmbh,
-    /// BASF Company ATM-Network 
+    /// BASF Company ATM-Network
     BasfCompanyAtmNetwork,
-    /// IOTA Identifiers for Organizations for Telecommunications Addressing using the ICD system format defined in ISO/IEC 8348 
+    /// IOTA Identifiers for Organizations for Telecommunications Addressing using the ICD system format defined in ISO/IEC 8348
     IotaIdentifiersForOrganizationsForTelecommunicationsAddressingUsingIcdSystemFormatDefinedInIsoIec8348,
-    /// Henkel Corporate Network (H-Net) 
+    /// Henkel Corporate Network (H-Net)
     HenkelCorporateNetworkHNet,
-    /// GTE/OSI Network 
+    /// GTE/OSI Network
     GteOsiNetwork,
-    /// Dresdner Bank Corporate Network 
+    /// Dresdner Bank Corporate Network
     DresdnerBankCorporateNetwork,
-    /// BCNR (Swiss Clearing Bank Number) 
+    /// BCNR (Swiss Clearing Bank Number)
     BcnrSwissClearingBankNumber,
-    /// BPI (Swiss Business Partner Identification) code 
+    /// BPI (Swiss Business Partner Identification) code
     BpiSwissBusinessPartnerIdentificationCode,
-    /// Directorates of the European Commission 
+    /// Directorates of the European Commission
     DirectoratesEuropeanCommission,
-    /// Code for the Identification of National Organizations 
+    /// Code for the Identification of National Organizations
     CodeForIdentificationNationalOrganizations,
-    /// Certicom Object Identifiers 
+    /// Certicom Object Identifiers
     CerticomObjectIdentifiers,
-    /// TC68 OID 
+    /// TC68 OID
     Tc68Oid,
-    /// Infonet Services Corporation 
+    /// Infonet Services Corporation
     InfonetServicesCorporation,
-    /// SIA Object Identifiers 
+    /// SIA Object Identifiers
     SiaObjectIdentifiers,
-    /// Cable & Wireless Global ATM End-System Address Plan 
+    /// Cable & Wireless Global ATM End-System Address Plan
     CableWirelessGlobalAtmEndSystemAddressPlan,
-    /// Global AESA scheme 
+    /// Global AESA scheme
     GlobalAesaScheme,
-    /// France Telecom ATM End System Address Plan 
+    /// France Telecom ATM End System Address Plan
     FranceTelecomAtmEndSystemAddressPlan,
-    /// Savvis Communications AESA:. 
+    /// Savvis Communications AESA:.
     SavvisCommunicationsAesa,
-    /// Toshiba Organizations, Partners, And Suppliers' (TOPAS) Code 
+    /// Toshiba Organizations, Partners, And Suppliers' (TOPAS) Code
     ToshibaOrganizationsPartnersAndSuppliersTopasCode,
-    /// NATO Commercial and Government Entity system 
+    /// NATO Commercial and Government Entity system
     NatoCommercialAndGovernmentEntitySystem,
-    /// SECETI Object Identifiers 
+    /// SECETI Object Identifiers
     SecetiObjectIdentifiers,
-    /// EINESTEINet AG 
+    /// EINESTEINet AG
     EinesteinetAg,
-    /// DoDAAC (Department of Defense Activity Address Code) 
+    /// DoDAAC (Department of Defense Activity Address Code)
     DodaacDepartmentDefenseActivityAddressCode,
-    /// DGCP (Direction Générale de la Comptabilité Publique)administrative accounting identification scheme 
+    /// DGCP (Direction Générale de la Comptabilité Publique)administrative accounting identification scheme
     DgcpDirectionGénéraleDeLaComptabilitéPubliqueAdministrativeAccountingIdentificationScheme,
-    /// DGI (Direction Générale des Impots) code 
+    /// DGI (Direction Générale des Impots) code
     DgiDirectionGénéraleDesImpotsCode,
-    /// Standard Company Code 
+    /// Standard Company Code
     StandardCompanyCode,
-    /// ITU (International Telecommunications Union)Data Network Identification Codes (DNIC) 
+    /// ITU (International Telecommunications Union)Data Network Identification Codes (DNIC)
     ItuInternationalTelecommunicationsUnionDataNetworkIdentificationCodesDnic,
-    /// Global Business Identifier 
+    /// Global Business Identifier
     GlobalBusinessIdentifier,
-    /// Madge Networks Ltd- ICD ATM Addressing Scheme 
+    /// Madge Networks Ltd- ICD ATM Addressing Scheme
     MadgeNetworksLtdIcdAtmAddressingScheme,
-    /// Australian Business Number (ABN) Scheme 
+    /// Australian Business Number (ABN) Scheme
     AustralianBusinessNumberAbnScheme,
-    /// Edira Scheme Identifier Code 
+    /// Edira Scheme Identifier Code
     EdiraSchemeIdentifierCode,
-    /// Concert Global Network Services ICD AESA 
+    /// Concert Global Network Services ICD AESA
     ConcertGlobalNetworkServicesIcdAesa,
-    /// Identification number of economic subjects: (ICO) 
+    /// Identification number of economic subjects: (ICO)
     IdentificationNumberEconomicSubjectsIco,
-    /// Global Crossing AESA (ATM End System Address) 
+    /// Global Crossing AESA (ATM End System Address)
     GlobalCrossingAesaAtmEndSystemAddress,
-    /// AUNA 
+    /// AUNA
     Auna,
-    /// ATM interconnection with the Dutch KPN Telecom 
+    /// ATM interconnection with the Dutch KPN Telecom
     AtmInterconnectionWithDutchKpnTelecom,
-    /// Identification number of economic subject (ICO) Act on State Statistics of 29 November 2'001, § 27 
+    /// Identification number of economic subject (ICO) Act on State Statistics of 29 November 2'001, § 27
     IdentificationNumberEconomicSubjectIcoActOnStateStatistics29November200127,
-    /// ACTALIS Object Identifiers 
+    /// ACTALIS Object Identifiers
     ActalisObjectIdentifiers,
-    /// GTIN - Global Trade Item Number 
+    /// GTIN - Global Trade Item Number
     GtinGlobalTradeItemNumber,
-    /// ECCMA Open Technical Directory 
+    /// ECCMA Open Technical Directory
     EccmaOpenTechnicalDirectory,
-    /// CEN/ISSS Object Identifier Scheme 
+    /// CEN/ISSS Object Identifier Scheme
     CenIsssObjectIdentifierScheme,
-    /// US-EPA Facility Identifier 
+    /// US-EPA Facility Identifier
     UsEpaFacilityIdentifier,
-    /// TELUS Corporation 
+    /// TELUS Corporation
     TelusCorporation,
-    /// FIEIE Object identifiers 
+    /// FIEIE Object identifiers
     FieieObjectIdentifiers,
-    /// Swissguide Identifier Scheme 
+    /// Swissguide Identifier Scheme
     SwissguideIdentifierScheme,
-    /// Priority Telecom ATM End System Address Plan 
+    /// Priority Telecom ATM End System Address Plan
     PriorityTelecomAtmEndSystemAddressPlan,
-    /// Vodafone Ireland OSI Addressing 
+    /// Vodafone Ireland OSI Addressing
     VodafoneIrelandOsiAddressing,
-    /// Swiss Federal Business Identification Number. Central Business names Index (zefix) Identification Number 
+    /// Swiss Federal Business Identification Number. Central Business names Index (zefix) Identification Number
     SwissFederalBusinessIdentificationNumberCentralBusinessNamesIndexZefixIdentificationNumber,
-    /// Teikoku Company Code 
+    /// Teikoku Company Code
     TeikokuCompanyCode,
-    /// Luxembourg CP & CPS (Certification Policy and Certification Practice Statement) Index 
+    /// Luxembourg CP & CPS (Certification Policy and Certification Practice Statement) Index
     LuxembourgCpCpsCertificationPolicyAndCertificationPracticeStatementIndex,
-    /// Project Group “Lists of Properties” (PROLIST®) 
+    /// Project Group “Lists of Properties” (PROLIST®)
     ProjectGroupListsPropertiesProlist,
-    /// eCI@ss 
+    /// eCI@ss
     EciSs,
-    /// StepNexus 
+    /// StepNexus
     Stepnexus,
-    /// Siemens AG 
+    /// Siemens AG
     SiemensAg,
-    /// Paradine GmbH 
+    /// Paradine GmbH
     ParadineGmbh,
-    /// Odette International Limited 
+    /// Odette International Limited
     OdetteInternationalLimited,
-    /// Route1 MobiNET 
+    /// Route1 MobiNET
     Route1Mobinet,
-    /// Penango Object Identifiers 
+    /// Penango Object Identifiers
     PenangoObjectIdentifiers,
-    /// Lithuanian military PKI 
+    /// Lithuanian military PKI
     LithuanianMilitaryPki,
-    /// Numéro d'identification suisse des enterprises (IDE), Swiss Unique Business Identification Number (UIDB) 
+    /// Numéro d'identification suisse des enterprises (IDE), Swiss Unique Business Identification Number (UIDB)
     NuméroDidentificationSuisseDesEnterprisesIdeSwissUniqueBusinessIdentificationNumberUidb,
-    /// DIGSTORG 
+    /// DIGSTORG
     Digstorg,
-    /// Perceval Object Code 
+    /// Perceval Object Code
     PercevalObjectCode,
-    /// TrustPoint Object Identifiers 
+    /// TrustPoint Object Identifiers
     TrustpointObjectIdentifiers,
-    /// Amazon Unique Identification Scheme 
+    /// Amazon Unique Identification Scheme
     AmazonUniqueIdentificationScheme,
-    /// Corporate Number of The Social Security and Tax Number System 
+    /// Corporate Number of The Social Security and Tax Number System
     CorporateNumberTheSocialSecurityAndTaxNumberSystem,
-    /// European Business Identifier (EBID) 
+    /// European Business Identifier (EBID)
     EuropeanBusinessIdentifierEbid,
-    /// Organisatie Indentificatie Nummer (OIN) 
+    /// Organisatie Indentificatie Nummer (OIN)
     OrganisatieIndentificatieNummerOin,
-    /// Company Code (Estonia) 
+    /// Company Code (Estonia)
     CompanyCodeEstonia,
-    /// Organisasjonsnummer 
+    /// Organisasjonsnummer
     Organisasjonsnummer,
-    /// UBL.BE Party Identifier 
+    /// UBL.BE Party Identifier
     UblBePartyIdentifier,
     /// KOIOS Open Technical Dictionary
     KoiosOpenTechnicalDictionary,
-    /// Singapore Nationwide E-lnvoice Framework 
+    /// Singapore Nationwide E-lnvoice Framework
     SingaporeNationwideELnvoiceFramework,
-    /// Icelandic identifier - Íslensk kennitala 
+    /// Icelandic identifier - Íslensk kennitala
     IcelandicIdentifierÍslenskKennitala,
     /// APPLiA Pl Standard
     AppliaPlStandard,
@@ -482,8 +482,8 @@
     NameUnknown_Dup,
     /// Tax Identification (Tax ID), Nigeria
     TaxIdentificationTaxIdNigeria,
-    }
-    
+}
+
 impl std::fmt::Display for ICD {
     fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
         write!(f, "{}", <Self as crate::Code>::code(*self))
@@ -493,7 +493,8 @@ impl std::fmt::Display for ICD {
 impl std::str::FromStr for ICD {
     type Err = crate::ParseError<Self>;
     fn from_str(s: &str) -> Result<Self, Self::Err> {
-        <Self as crate::FromCode>::from_code(s).ok_or_else(|| crate::ParseError::<Self>::new(s.to_owned()))
+        <Self as crate::FromCode>::from_code(s)
+            .ok_or_else(|| crate::ParseError::<Self>::new(s.to_owned()))
     }
 }
 
@@ -992,7 +993,7 @@ impl crate::Description for ICD {
 impl crate::FromCode for ICD {
     fn from_code(code: &str) -> Option<Self>
     where
-        Self: Sized
+        Self: Sized,
     {
         match code {
             "0002" => Some(ICD::SystemInformationEtRepertoireDesEntrepriseEtDesEtablissementsSirene),
@@ -1238,3 +1239,518 @@ impl crate::FromCode for ICD {
         }
     }
 }
+
+// Start: (Version) TryFrom ICD to crate::zugferd_2_3_3::ICD
+impl std::convert::TryFrom<ICD> for crate::zugferd_2_3_3::ICD {
+    type Error = ErrFromIcdToCrateZugferd233Icd;
+    fn try_from(value: ICD) -> Result<Self, Self::Error> {
+        match value {
+            ICD::SystemInformationEtRepertoireDesEntrepriseEtDesEtablissementsSirene => Ok(crate::zugferd_2_3_3::ICD::SystemInformationEtRepertoireDesEntrepriseEtDesEtablissementsSirene),
+            ICD::CodificationNumeriqueDesEtablissmentsFinanciersEnBelgique => Ok(crate::zugferd_2_3_3::ICD::CodificationNumeriqueDesEtablissmentsFinanciersEnBelgique),
+            ICD::NbsOsiNetwork => Ok(crate::zugferd_2_3_3::ICD::NbsOsiNetwork),
+            ICD::UsaFedGovOsiNetwork => Ok(crate::zugferd_2_3_3::ICD::UsaFedGovOsiNetwork),
+            ICD::UsaDodOsiNetwork => Ok(crate::zugferd_2_3_3::ICD::UsaDodOsiNetwork),
+            ICD::Organisationsnummer => Ok(crate::zugferd_2_3_3::ICD::Organisationsnummer),
+            ICD::LeNumeroNational => Ok(crate::zugferd_2_3_3::ICD::LeNumeroNational),
+            ICD::SiretCode => Ok(crate::zugferd_2_3_3::ICD::SiretCode),
+            ICD::OrganizationalIdentifiersForStructuredNamesUnderIso9541Part2 => Ok(crate::zugferd_2_3_3::ICD::OrganizationalIdentifiersForStructuredNamesUnderIso9541Part2),
+            ICD::InternationalCodeDesignatorForIdentificationOsiBasedAmateurRadioOrganizationsNetworkObjectsAndApplicationServices => Ok(crate::zugferd_2_3_3::ICD::InternationalCodeDesignatorForIdentificationOsiBasedAmateurRadioOrganizationsNetworkObjectsAndApplicationServices),
+            ICD::EuropeanComputerManufacturersAssociationEcma => Ok(crate::zugferd_2_3_3::ICD::EuropeanComputerManufacturersAssociationEcma),
+            ICD::VsaFtpCodeFtpFileTransferProtocol => Ok(crate::zugferd_2_3_3::ICD::VsaFtpCodeFtpFileTransferProtocol),
+            ICD::NistOsiImplememtsWorkshop => Ok(crate::zugferd_2_3_3::ICD::NistOsiImplememtsWorkshop),
+            ICD::ElectronicDataInterchangeEdi => Ok(crate::zugferd_2_3_3::ICD::ElectronicDataInterchangeEdi),
+            ICD::EwosObjectIdentifiers => Ok(crate::zugferd_2_3_3::ICD::EwosObjectIdentifiers),
+            ICD::CommonLanguage => Ok(crate::zugferd_2_3_3::ICD::CommonLanguage),
+            ICD::SnaOsiNetwork => Ok(crate::zugferd_2_3_3::ICD::SnaOsiNetwork),
+            ICD::AirTransportIndustryServicesCommunicationsNetwork => Ok(crate::zugferd_2_3_3::ICD::AirTransportIndustryServicesCommunicationsNetwork),
+            ICD::EuropeanLaboratoryForParticlePhysicsCern => Ok(crate::zugferd_2_3_3::ICD::EuropeanLaboratoryForParticlePhysicsCern),
+            ICD::SocietyForWorldwideInterbankFinancialTelecommunicationSWIFT => Ok(crate::zugferd_2_3_3::ICD::SocietyForWorldwideInterbankFinancialTelecommunicationSWIFT),
+            ICD::OsfDistributedComputingObjectIdentification => Ok(crate::zugferd_2_3_3::ICD::OsfDistributedComputingObjectIdentification),
+            ICD::NordicUniversityAndResearchNetworkNordunet => Ok(crate::zugferd_2_3_3::ICD::NordicUniversityAndResearchNetworkNordunet),
+            ICD::DigitalEquipmentCorporationDec => Ok(crate::zugferd_2_3_3::ICD::DigitalEquipmentCorporationDec),
+            ICD::OsiAsiaOceaniaWorkshop => Ok(crate::zugferd_2_3_3::ICD::OsiAsiaOceaniaWorkshop),
+            ICD::NatoIso6523IcdeCodingScheme => Ok(crate::zugferd_2_3_3::ICD::NatoIso6523IcdeCodingScheme),
+            ICD::AeronauticalTelecommunicationsNetworkAtn => Ok(crate::zugferd_2_3_3::ICD::AeronauticalTelecommunicationsNetworkAtn),
+            ICD::InternationalStandardIso6523 => Ok(crate::zugferd_2_3_3::ICD::InternationalStandardIso6523),
+            ICD::TheAllUnionClassifierEnterprisesAndOrganisations => Ok(crate::zugferd_2_3_3::ICD::TheAllUnionClassifierEnterprisesAndOrganisations),
+            ICD::AtTOsiNetwork => Ok(crate::zugferd_2_3_3::ICD::AtTOsiNetwork),
+            ICD::EdiPartnerIdentificationCode => Ok(crate::zugferd_2_3_3::ICD::EdiPartnerIdentificationCode),
+            ICD::TelecomAustralia => Ok(crate::zugferd_2_3_3::ICD::TelecomAustralia),
+            ICD::SGWOsiInternetwork => Ok(crate::zugferd_2_3_3::ICD::SGWOsiInternetwork),
+            ICD::ReuterOpenAddressStandard => Ok(crate::zugferd_2_3_3::ICD::ReuterOpenAddressStandard),
+            ICD::Iso6523Icd => Ok(crate::zugferd_2_3_3::ICD::Iso6523Icd),
+            ICD::TeletrustObjectIdentifiers => Ok(crate::zugferd_2_3_3::ICD::TeletrustObjectIdentifiers),
+            ICD::LyTunnus => Ok(crate::zugferd_2_3_3::ICD::LyTunnus),
+            ICD::TheAustralianGosipNetwork => Ok(crate::zugferd_2_3_3::ICD::TheAustralianGosipNetwork),
+            ICD::TheOzDodOsiNetwork => Ok(crate::zugferd_2_3_3::ICD::TheOzDodOsiNetwork),
+            ICD::UnileverGroupCompanies => Ok(crate::zugferd_2_3_3::ICD::UnileverGroupCompanies),
+            ICD::CiticorpGlobalInformationNetwork => Ok(crate::zugferd_2_3_3::ICD::CiticorpGlobalInformationNetwork),
+            ICD::DbpTelekomObjectIdentifiers => Ok(crate::zugferd_2_3_3::ICD::DbpTelekomObjectIdentifiers),
+            ICD::Hydronett => Ok(crate::zugferd_2_3_3::ICD::Hydronett),
+            ICD::ThaiIndustrialStandardsInstituteTisi => Ok(crate::zugferd_2_3_3::ICD::ThaiIndustrialStandardsInstituteTisi),
+            ICD::IciCompanyIdentificationSystem => Ok(crate::zugferd_2_3_3::ICD::IciCompanyIdentificationSystem),
+            ICD::Funloc => Ok(crate::zugferd_2_3_3::ICD::Funloc),
+            ICD::BullOdiDsaUnixNetwork => Ok(crate::zugferd_2_3_3::ICD::BullOdiDsaUnixNetwork),
+            ICD::Osinz => Ok(crate::zugferd_2_3_3::ICD::Osinz),
+            ICD::AucklandAreaHealth => Ok(crate::zugferd_2_3_3::ICD::AucklandAreaHealth),
+            ICD::Firmenich => Ok(crate::zugferd_2_3_3::ICD::Firmenich),
+            ICD::AgfaDis => Ok(crate::zugferd_2_3_3::ICD::AgfaDis),
+            ICD::SocietyMotionPictureAndTelevisionEngineersSmpte => Ok(crate::zugferd_2_3_3::ICD::SocietyMotionPictureAndTelevisionEngineersSmpte),
+            ICD::Migros_networkM_netopz => Ok(crate::zugferd_2_3_3::ICD::Migros_networkM_netopz),
+            ICD::Iso6523Icdpcr => Ok(crate::zugferd_2_3_3::ICD::Iso6523Icdpcr),
+            ICD::EnergyNet => Ok(crate::zugferd_2_3_3::ICD::EnergyNet),
+            ICD::NokiaObjectIdentifiersNoi => Ok(crate::zugferd_2_3_3::ICD::NokiaObjectIdentifiersNoi),
+            ICD::SaintGobain => Ok(crate::zugferd_2_3_3::ICD::SaintGobain),
+            ICD::SiemensCorporateNetwork => Ok(crate::zugferd_2_3_3::ICD::SiemensCorporateNetwork),
+            ICD::Danznet => Ok(crate::zugferd_2_3_3::ICD::Danznet),
+            ICD::DataUniversalNumberingSystemDUNSNumber => Ok(crate::zugferd_2_3_3::ICD::DataUniversalNumberingSystemDUNSNumber),
+            ICD::SoffexOsi => Ok(crate::zugferd_2_3_3::ICD::SoffexOsi),
+            ICD::KpnOvn => Ok(crate::zugferd_2_3_3::ICD::KpnOvn),
+            ICD::Ascomosinet => Ok(crate::zugferd_2_3_3::ICD::Ascomosinet),
+            ICD::UtcUniformeTransportCode => Ok(crate::zugferd_2_3_3::ICD::UtcUniformeTransportCode),
+            ICD::SolvayOsiCoding => Ok(crate::zugferd_2_3_3::ICD::SolvayOsiCoding),
+            ICD::RocheCorporateNetwork => Ok(crate::zugferd_2_3_3::ICD::RocheCorporateNetwork),
+            ICD::Zellwegerosinet => Ok(crate::zugferd_2_3_3::ICD::Zellwegerosinet),
+            ICD::IntelCorporationOsi => Ok(crate::zugferd_2_3_3::ICD::IntelCorporationOsi),
+            ICD::SitaObjectIdentifierTree => Ok(crate::zugferd_2_3_3::ICD::SitaObjectIdentifierTree),
+            ICD::DaimlerchryslerCorporateNetwork => Ok(crate::zugferd_2_3_3::ICD::DaimlerchryslerCorporateNetwork),
+            ICD::LegoOsiNetwork => Ok(crate::zugferd_2_3_3::ICD::LegoOsiNetwork),
+            ICD::NavistarOsiNetwork => Ok(crate::zugferd_2_3_3::ICD::NavistarOsiNetwork),
+            ICD::IcdFormattedAtmAddress => Ok(crate::zugferd_2_3_3::ICD::IcdFormattedAtmAddress),
+            ICD::Arinc => Ok(crate::zugferd_2_3_3::ICD::Arinc),
+            ICD::AlcanetAlcatelAlsthomCorporateNetwork => Ok(crate::zugferd_2_3_3::ICD::AlcanetAlcatelAlsthomCorporateNetwork),
+            ICD::SistemaItalianoDiIdentificazioneDiOgettiGestitoDaUninfo => Ok(crate::zugferd_2_3_3::ICD::SistemaItalianoDiIdentificazioneDiOgettiGestitoDaUninfo),
+            ICD::SistemaItalianoDiIndirizzamentoDiRetiOsiGestitoDaUninfo => Ok(crate::zugferd_2_3_3::ICD::SistemaItalianoDiIndirizzamentoDiRetiOsiGestitoDaUninfo),
+            ICD::MitelTerminalOrSwitchingEquipment => Ok(crate::zugferd_2_3_3::ICD::MitelTerminalOrSwitchingEquipment),
+            ICD::AtmForum => Ok(crate::zugferd_2_3_3::ICD::AtmForum),
+            ICD::UkNationalHealthServiceSchemeEdiraCompliant => Ok(crate::zugferd_2_3_3::ICD::UkNationalHealthServiceSchemeEdiraCompliant),
+            ICD::InternationalNsap => Ok(crate::zugferd_2_3_3::ICD::InternationalNsap),
+            ICD::NorwegianTelecommunicationsAuthoritysNtasEdiIdentifierSchemeEdiraCompliant => Ok(crate::zugferd_2_3_3::ICD::NorwegianTelecommunicationsAuthoritysNtasEdiIdentifierSchemeEdiraCompliant),
+            ICD::AdvancedTelecommunicationsModulesLimitedCorporateNetwork => Ok(crate::zugferd_2_3_3::ICD::AdvancedTelecommunicationsModulesLimitedCorporateNetwork),
+            ICD::AthensChamberCommerceIndustrySchemeEdiraCompliant => Ok(crate::zugferd_2_3_3::ICD::AthensChamberCommerceIndustrySchemeEdiraCompliant),
+            ICD::SwissChambersCommerceSchemeEdiraCompliant => Ok(crate::zugferd_2_3_3::ICD::SwissChambersCommerceSchemeEdiraCompliant),
+            ICD::UnitedStatesCouncilForInternationalBusinessUscibSchemeEdiraCompliant => Ok(crate::zugferd_2_3_3::ICD::UnitedStatesCouncilForInternationalBusinessUscibSchemeEdiraCompliant),
+            ICD::NationalFederationChambersCommerceIndustryBelgiumSchemeEdiraCompliant => Ok(crate::zugferd_2_3_3::ICD::NationalFederationChambersCommerceIndustryBelgiumSchemeEdiraCompliant),
+            ICD::EanLocationCode => Ok(crate::zugferd_2_3_3::ICD::EanLocationCode),
+            ICD::TheAssociationBritishChambersCommerceLtdSchemeEdiraCompliant => Ok(crate::zugferd_2_3_3::ICD::TheAssociationBritishChambersCommerceLtdSchemeEdiraCompliant),
+            ICD::InternetIpAddressingIso6523IcdEncoding => Ok(crate::zugferd_2_3_3::ICD::InternetIpAddressingIso6523IcdEncoding),
+            ICD::CiscoSysytemsOsiNetwork => Ok(crate::zugferd_2_3_3::ICD::CiscoSysytemsOsiNetwork),
+            ICD::RevenueCanadaBusinessNumberRegistrationEdiraCompliant => Ok(crate::zugferd_2_3_3::ICD::RevenueCanadaBusinessNumberRegistrationEdiraCompliant),
+            ICD::DeutscherIndustrieUndHandelstagDihtSchemeEdiraCompliant => Ok(crate::zugferd_2_3_3::ICD::DeutscherIndustrieUndHandelstagDihtSchemeEdiraCompliant),
+            ICD::HewlettPackardCompanyInternalAmNetwork => Ok(crate::zugferd_2_3_3::ICD::HewlettPackardCompanyInternalAmNetwork),
+            ICD::TheDanishBusinessAuthorityPNumberDkP => Ok(crate::zugferd_2_3_3::ICD::DanishChamberOfCommerceSchemeEdiraCompliant),
+            ICD::FtiEdiforumItaliaEdiraCompliant => Ok(crate::zugferd_2_3_3::ICD::FtiEdiforumItaliaEdiraCompliant),
+            ICD::ChamberOfCommerceTelAvivJaffaSchemeEdiraCompliant => Ok(crate::zugferd_2_3_3::ICD::ChamberOfCommerceTelAvivJaffaSchemeEdiraCompliant),
+            ICD::SiemensSupervisorySystemsNetwork => Ok(crate::zugferd_2_3_3::ICD::SiemensSupervisorySystemsNetwork),
+            ICD::Png_icdScheme => Ok(crate::zugferd_2_3_3::ICD::Png_icdScheme),
+            ICD::SouthAfricanCodeAllocation => Ok(crate::zugferd_2_3_3::ICD::SouthAfricanCodeAllocation),
+            ICD::Heag => Ok(crate::zugferd_2_3_3::ICD::Heag),
+            ICD::BtIcdCodingSystem => Ok(crate::zugferd_2_3_3::ICD::BtIcdCodingSystem),
+            ICD::PortugueseChamberCommerceAndIndustrySchemeEdiraCompliant => Ok(crate::zugferd_2_3_3::ICD::PortugueseChamberCommerceAndIndustrySchemeEdiraCompliant),
+            ICD::VerenigingVanKamersVanKoophandelEnFabriekenInNederlandAssociationChambersCommerceAndIndustryInNetherlandsSchemeEdiraCompliant => Ok(crate::zugferd_2_3_3::ICD::VerenigingVanKamersVanKoophandelEnFabriekenInNederlandAssociationChambersCommerceAndIndustryInNetherlandsSchemeEdiraCompliant),
+            ICD::AssociationSwedishChambersCommerceAndIndustrySchemeEdiraCompliant => Ok(crate::zugferd_2_3_3::ICD::AssociationSwedishChambersCommerceAndIndustrySchemeEdiraCompliant),
+            ICD::AustralianChambersCommerceAndIndustrySchemeEdiraCompliant => Ok(crate::zugferd_2_3_3::ICD::AustralianChambersCommerceAndIndustrySchemeEdiraCompliant),
+            ICD::BellsouthIcdAesaAtmEndSystemAddress => Ok(crate::zugferd_2_3_3::ICD::BellsouthIcdAesaAtmEndSystemAddress),
+            ICD::BellAtlantic => Ok(crate::zugferd_2_3_3::ICD::BellAtlantic),
+            ICD::ObjectIdentifiers => Ok(crate::zugferd_2_3_3::ICD::ObjectIdentifiers),
+            ICD::IsoRegisterForStandardsProducingOrganizations => Ok(crate::zugferd_2_3_3::ICD::IsoRegisterForStandardsProducingOrganizations),
+            ICD::Originnet => Ok(crate::zugferd_2_3_3::ICD::Originnet),
+            ICD::CheckPointSoftwareTechnologies => Ok(crate::zugferd_2_3_3::ICD::CheckPointSoftwareTechnologies),
+            ICD::PacificBellDataCommunicationsNetwork => Ok(crate::zugferd_2_3_3::ICD::PacificBellDataCommunicationsNetwork),
+            ICD::PssObjectIdentifiers => Ok(crate::zugferd_2_3_3::ICD::PssObjectIdentifiers),
+            ICD::StentorIcdCodingSystem => Ok(crate::zugferd_2_3_3::ICD::StentorIcdCodingSystem),
+            ICD::AtmNetworkZn96 => Ok(crate::zugferd_2_3_3::ICD::AtmNetworkZn96),
+            ICD::MciOsiNetwork => Ok(crate::zugferd_2_3_3::ICD::MciOsiNetwork),
+            ICD::Advantis => Ok(crate::zugferd_2_3_3::ICD::Advantis),
+            ICD::AffableSoftwareDataInterchangeCodes => Ok(crate::zugferd_2_3_3::ICD::AffableSoftwareDataInterchangeCodes),
+            ICD::BbDataGmbh => Ok(crate::zugferd_2_3_3::ICD::BbDataGmbh),
+            ICD::BasfCompanyAtmNetwork => Ok(crate::zugferd_2_3_3::ICD::BasfCompanyAtmNetwork),
+            ICD::IotaIdentifiersForOrganizationsForTelecommunicationsAddressingUsingIcdSystemFormatDefinedInIsoIec8348 => Ok(crate::zugferd_2_3_3::ICD::IotaIdentifiersForOrganizationsForTelecommunicationsAddressingUsingIcdSystemFormatDefinedInIsoIec8348),
+            ICD::HenkelCorporateNetworkHNet => Ok(crate::zugferd_2_3_3::ICD::HenkelCorporateNetworkHNet),
+            ICD::GteOsiNetwork => Ok(crate::zugferd_2_3_3::ICD::GteOsiNetwork),
+            ICD::DresdnerBankCorporateNetwork => Ok(crate::zugferd_2_3_3::ICD::DresdnerBankCorporateNetwork),
+            ICD::BcnrSwissClearingBankNumber => Ok(crate::zugferd_2_3_3::ICD::BcnrSwissClearingBankNumber),
+            ICD::BpiSwissBusinessPartnerIdentificationCode => Ok(crate::zugferd_2_3_3::ICD::BpiSwissBusinessPartnerIdentificationCode),
+            ICD::DirectoratesEuropeanCommission => Ok(crate::zugferd_2_3_3::ICD::DirectoratesEuropeanCommission),
+            ICD::CodeForIdentificationNationalOrganizations => Ok(crate::zugferd_2_3_3::ICD::CodeForIdentificationNationalOrganizations),
+            ICD::CerticomObjectIdentifiers => Ok(crate::zugferd_2_3_3::ICD::CerticomObjectIdentifiers),
+            ICD::Tc68Oid => Ok(crate::zugferd_2_3_3::ICD::Tc68Oid),
+            ICD::InfonetServicesCorporation => Ok(crate::zugferd_2_3_3::ICD::InfonetServicesCorporation),
+            ICD::SiaObjectIdentifiers => Ok(crate::zugferd_2_3_3::ICD::SiaObjectIdentifiers),
+            ICD::CableWirelessGlobalAtmEndSystemAddressPlan => Ok(crate::zugferd_2_3_3::ICD::CableWirelessGlobalAtmEndSystemAddressPlan),
+            ICD::GlobalAesaScheme => Ok(crate::zugferd_2_3_3::ICD::GlobalAesaScheme),
+            ICD::FranceTelecomAtmEndSystemAddressPlan => Ok(crate::zugferd_2_3_3::ICD::FranceTelecomAtmEndSystemAddressPlan),
+            ICD::SavvisCommunicationsAesa => Ok(crate::zugferd_2_3_3::ICD::SavvisCommunicationsAesa),
+            ICD::ToshibaOrganizationsPartnersAndSuppliersTopasCode => Ok(crate::zugferd_2_3_3::ICD::ToshibaOrganizationsPartnersAndSuppliersTopasCode),
+            ICD::NatoCommercialAndGovernmentEntitySystem => Ok(crate::zugferd_2_3_3::ICD::NatoCommercialAndGovernmentEntitySystem),
+            ICD::SecetiObjectIdentifiers => Ok(crate::zugferd_2_3_3::ICD::SecetiObjectIdentifiers),
+            ICD::EinesteinetAg => Ok(crate::zugferd_2_3_3::ICD::EinesteinetAg),
+            ICD::DodaacDepartmentDefenseActivityAddressCode => Ok(crate::zugferd_2_3_3::ICD::DodaacDepartmentDefenseActivityAddressCode),
+            ICD::DgcpDirectionGénéraleDeLaComptabilitéPubliqueAdministrativeAccountingIdentificationScheme => Ok(crate::zugferd_2_3_3::ICD::DgcpDirectionGénéraleDeLaComptabilitéPubliqueAdministrativeAccountingIdentificationScheme),
+            ICD::DgiDirectionGénéraleDesImpotsCode => Ok(crate::zugferd_2_3_3::ICD::DgiDirectionGénéraleDesImpotsCode),
+            ICD::StandardCompanyCode => Ok(crate::zugferd_2_3_3::ICD::StandardCompanyCode),
+            ICD::ItuInternationalTelecommunicationsUnionDataNetworkIdentificationCodesDnic => Ok(crate::zugferd_2_3_3::ICD::ItuInternationalTelecommunicationsUnionDataNetworkIdentificationCodesDnic),
+            ICD::GlobalBusinessIdentifier => Ok(crate::zugferd_2_3_3::ICD::GlobalBusinessIdentifier),
+            ICD::MadgeNetworksLtdIcdAtmAddressingScheme => Ok(crate::zugferd_2_3_3::ICD::MadgeNetworksLtdIcdAtmAddressingScheme),
+            ICD::AustralianBusinessNumberAbnScheme => Ok(crate::zugferd_2_3_3::ICD::AustralianBusinessNumberAbnScheme),
+            ICD::EdiraSchemeIdentifierCode => Ok(crate::zugferd_2_3_3::ICD::EdiraSchemeIdentifierCode),
+            ICD::ConcertGlobalNetworkServicesIcdAesa => Ok(crate::zugferd_2_3_3::ICD::ConcertGlobalNetworkServicesIcdAesa),
+            ICD::IdentificationNumberEconomicSubjectsIco => Ok(crate::zugferd_2_3_3::ICD::IdentificationNumberEconomicSubjectsIco),
+            ICD::GlobalCrossingAesaAtmEndSystemAddress => Ok(crate::zugferd_2_3_3::ICD::GlobalCrossingAesaAtmEndSystemAddress),
+            ICD::Auna => Ok(crate::zugferd_2_3_3::ICD::Auna),
+            ICD::AtmInterconnectionWithDutchKpnTelecom => Ok(crate::zugferd_2_3_3::ICD::AtmInterconnectionWithDutchKpnTelecom),
+            ICD::IdentificationNumberEconomicSubjectIcoActOnStateStatistics29November200127 => Ok(crate::zugferd_2_3_3::ICD::IdentificationNumberEconomicSubjectIcoActOnStateStatistics29November200127),
+            ICD::ActalisObjectIdentifiers => Ok(crate::zugferd_2_3_3::ICD::ActalisObjectIdentifiers),
+            ICD::GtinGlobalTradeItemNumber => Ok(crate::zugferd_2_3_3::ICD::GtinGlobalTradeItemNumber),
+            ICD::EccmaOpenTechnicalDirectory => Ok(crate::zugferd_2_3_3::ICD::EccmaOpenTechnicalDirectory),
+            ICD::CenIsssObjectIdentifierScheme => Ok(crate::zugferd_2_3_3::ICD::CenIsssObjectIdentifierScheme),
+            ICD::UsEpaFacilityIdentifier => Ok(crate::zugferd_2_3_3::ICD::UsEpaFacilityIdentifier),
+            ICD::TelusCorporation => Ok(crate::zugferd_2_3_3::ICD::TelusCorporation),
+            ICD::FieieObjectIdentifiers => Ok(crate::zugferd_2_3_3::ICD::FieieObjectIdentifiers),
+            ICD::SwissguideIdentifierScheme => Ok(crate::zugferd_2_3_3::ICD::SwissguideIdentifierScheme),
+            ICD::PriorityTelecomAtmEndSystemAddressPlan => Ok(crate::zugferd_2_3_3::ICD::PriorityTelecomAtmEndSystemAddressPlan),
+            ICD::VodafoneIrelandOsiAddressing => Ok(crate::zugferd_2_3_3::ICD::VodafoneIrelandOsiAddressing),
+            ICD::SwissFederalBusinessIdentificationNumberCentralBusinessNamesIndexZefixIdentificationNumber => Ok(crate::zugferd_2_3_3::ICD::SwissFederalBusinessIdentificationNumberCentralBusinessNamesIndexZefixIdentificationNumber),
+            ICD::TeikokuCompanyCode => Ok(crate::zugferd_2_3_3::ICD::TeikokuCompanyCode),
+            ICD::LuxembourgCpCpsCertificationPolicyAndCertificationPracticeStatementIndex => Ok(crate::zugferd_2_3_3::ICD::LuxembourgCpCpsCertificationPolicyAndCertificationPracticeStatementIndex),
+            ICD::ProjectGroupListsPropertiesProlist => Ok(crate::zugferd_2_3_3::ICD::ProjectGroupListsPropertiesProlist),
+            ICD::EciSs => Ok(crate::zugferd_2_3_3::ICD::EciSs),
+            ICD::Stepnexus => Ok(crate::zugferd_2_3_3::ICD::Stepnexus),
+            ICD::SiemensAg => Ok(crate::zugferd_2_3_3::ICD::SiemensAg),
+            ICD::ParadineGmbh => Ok(crate::zugferd_2_3_3::ICD::ParadineGmbh),
+            ICD::OdetteInternationalLimited => Ok(crate::zugferd_2_3_3::ICD::OdetteInternationalLimited),
+            ICD::Route1Mobinet => Ok(crate::zugferd_2_3_3::ICD::Route1Mobinet),
+            ICD::PenangoObjectIdentifiers => Ok(crate::zugferd_2_3_3::ICD::PenangoObjectIdentifiers),
+            ICD::LithuanianMilitaryPki => Ok(crate::zugferd_2_3_3::ICD::LithuanianMilitaryPki),
+            ICD::NuméroDidentificationSuisseDesEnterprisesIdeSwissUniqueBusinessIdentificationNumberUidb => Ok(crate::zugferd_2_3_3::ICD::NuméroDidentificationSuisseDesEnterprisesIdeSwissUniqueBusinessIdentificationNumberUidb),
+            ICD::Digstorg => Ok(crate::zugferd_2_3_3::ICD::Digstorg),
+            ICD::PercevalObjectCode => Ok(crate::zugferd_2_3_3::ICD::PercevalObjectCode),
+            ICD::TrustpointObjectIdentifiers => Ok(crate::zugferd_2_3_3::ICD::TrustpointObjectIdentifiers),
+            ICD::AmazonUniqueIdentificationScheme => Ok(crate::zugferd_2_3_3::ICD::AmazonUniqueIdentificationScheme),
+            ICD::CorporateNumberTheSocialSecurityAndTaxNumberSystem => Ok(crate::zugferd_2_3_3::ICD::CorporateNumberTheSocialSecurityAndTaxNumberSystem),
+            ICD::EuropeanBusinessIdentifierEbid => Ok(crate::zugferd_2_3_3::ICD::EuropeanBusinessIdentifierEbid),
+            ICD::OrganisatieIndentificatieNummerOin => Ok(crate::zugferd_2_3_3::ICD::OrganisatieIndentificatieNummerOin),
+            ICD::CompanyCodeEstonia => Ok(crate::zugferd_2_3_3::ICD::CompanyCodeEstonia),
+            ICD::Organisasjonsnummer => Ok(crate::zugferd_2_3_3::ICD::Organisasjonsnummer),
+            ICD::UblBePartyIdentifier => Ok(crate::zugferd_2_3_3::ICD::UblBePartyIdentifier),
+            ICD::KoiosOpenTechnicalDictionary => Ok(crate::zugferd_2_3_3::ICD::KoiosOpenTechnicalDictionary),
+            ICD::SingaporeNationwideELnvoiceFramework => Ok(crate::zugferd_2_3_3::ICD::SingaporeNationwideELnvoiceFramework),
+            ICD::IcelandicIdentifierÍslenskKennitala => Ok(crate::zugferd_2_3_3::ICD::IcelandicIdentifierÍslenskKennitala),
+            ICD::AppliaPlStandard => Ok(crate::zugferd_2_3_3::ICD::AppliaPlStandard),
+            ICD::Erstorg => Ok(crate::zugferd_2_3_3::ICD::Erstorg),
+            ICD::LegalEntityIdentifierLei => Ok(crate::zugferd_2_3_3::ICD::LegalEntityIdentifierLei),
+            ICD::LegalEntityCodeLithuania => Ok(crate::zugferd_2_3_3::ICD::LegalEntityCodeLithuania),
+            ICD::CodiceUnivocoUnitàOrganizzativaIpa => Ok(crate::zugferd_2_3_3::ICD::CodiceUnivocoUnitàOrganizzativaIpa),
+            ICD::IndirizzoDiPostaElettronicaCertificata => Ok(crate::zugferd_2_3_3::ICD::IndirizzoDiPostaElettronicaCertificata),
+            ICD::EdeliveryNetworkParticipantIdentifier => Ok(crate::zugferd_2_3_3::ICD::EdeliveryNetworkParticipantIdentifier),
+            ICD::LeitwegId => Ok(crate::zugferd_2_3_3::ICD::LeitwegId),
+            ICD::Coddest => Ok(crate::zugferd_2_3_3::ICD::Coddest),
+            ICD::RegistreDuCommerceEtDeLIndustrieRci => Ok(crate::zugferd_2_3_3::ICD::RegistreDuCommerceEtDeLIndustrieRci),
+            ICD::PilogOntologyCodificationIdentifierPoci => Ok(crate::zugferd_2_3_3::ICD::PilogOntologyCodificationIdentifierPoci),
+            ICD::NumeroDentrepriseOndernemingsnummerUnternehmensnummer => Ok(crate::zugferd_2_3_3::ICD::NumeroDentrepriseOndernemingsnummerUnternehmensnummer),
+            ICD::Gs1IdentificationKeys => Ok(crate::zugferd_2_3_3::ICD::Gs1IdentificationKeys),
+            ICD::CodiceFiscale => Ok(crate::zugferd_2_3_3::ICD::CodiceFiscale),
+            ICD::PartitaIva => Ok(crate::zugferd_2_3_3::ICD::PartitaIva),
+            ICD::FinnishOrganizationIdentifier => Ok(crate::zugferd_2_3_3::ICD::FinnishOrganizationIdentifier),
+            ICD::FinnishOrganizationValueAddTaxIdentifier => Ok(crate::zugferd_2_3_3::ICD::FinnishOrganizationValueAddTaxIdentifier),
+            ICD::TradeplaceTradepiStandard => Ok(crate::zugferd_2_3_3::ICD::TradeplaceTradepiStandard),
+            ICD::NetServiceId => Ok(crate::zugferd_2_3_3::ICD::NetServiceId),
+            ICD::Ovtcode => Ok(crate::zugferd_2_3_3::ICD::Ovtcode),
+            ICD::TheNetherlandsChamberCommerceAndIndustryEstablishmentNumber => Ok(crate::zugferd_2_3_3::ICD::TheNetherlandsChamberCommerceAndIndustryEstablishmentNumber),
+            ICD::UnifiedRegistrationNumberLatvia => Ok(crate::zugferd_2_3_3::ICD::UnifiedRegistrationNumberLatvia),
+            ICD::TaxpayerRegistrationCodeLatvia => Ok(crate::zugferd_2_3_3::ICD::TaxpayerRegistrationCodeLatvia),
+            ICD::TheRegisterNaturalPersonsLatvia => Ok(crate::zugferd_2_3_3::ICD::TheRegisterNaturalPersonsLatvia),
+            ICD::TheRegisteredNumberQualifiedInvoiceIssuer => Ok(crate::zugferd_2_3_3::ICD::TheRegisteredNumberQualifiedInvoiceIssuer),
+            ICD::MetadataRegistrySupport => Ok(crate::zugferd_2_3_3::ICD::MetadataRegistrySupport),
+            ICD::EuBasedCompany => Ok(crate::zugferd_2_3_3::ICD::EuBasedCompany),
+            ICD::FtctcCodeRoutage => Ok(crate::zugferd_2_3_3::ICD::FtctcCodeRoutage),
+            ICD::FrctcElectronicAddress => Ok(crate::zugferd_2_3_3::ICD::FrctcElectronicAddress),
+            ICD::FrctcParticulier => Ok(crate::zugferd_2_3_3::ICD::FrctcParticulier),
+            ICD::NonEuBasedCompany => Ok(crate::zugferd_2_3_3::ICD::NonEuBasedCompany),
+            ICD::RépertoireDesEntreprisesEtDesEtablissementsRidet => Ok(crate::zugferd_2_3_3::ICD::RépertoireDesEntreprisesEtDesEtablissementsRidet),
+            ICD::TAHITITraitementAutomatiqueHiérarchiséDesInstitutionsDeTahitiEtDesÎles => Ok(crate::zugferd_2_3_3::ICD::TAHITITraitementAutomatiqueHiérarchiséDesInstitutionsDeTahitiEtDesÎles),
+            ICD::NationalEInvoicingFramework => Ok(crate::zugferd_2_3_3::ICD::NationalEInvoicingFramework),
+            ICD::SingleTaxableCompanyFrance => Ok(crate::zugferd_2_3_3::ICD::SingleTaxableCompanyFrance),
+            ICD::NobbProductNumber => Ok(crate::zugferd_2_3_3::ICD::NobbProductNumber),
+            ICD::Elnummer => Ok(crate::zugferd_2_3_3::ICD::DescriptionNotKnown),
+            ICD::ToimitusosoiteId => Ok(crate::zugferd_2_3_3::ICD::ToimitusosoiteId),
+            ICD::UaeTaxIdentificationNumberTin => Ok(crate::zugferd_2_3_3::ICD::UaeTaxIdentificationNumberTin),
+            ICD::Toimipaikkald => Ok(crate::zugferd_2_3_3::ICD::DescriptionNotKnown_Dup),
+            ICD::CprDanishPersonCivilRegistrationNumber => Ok(crate::zugferd_2_3_3::ICD::CprDanishPersonCivilRegistrationNumber),
+            ICD::PlateformeSAgrééeSÀLaFacturationÉlectroniquePpfPdp => Ok(crate::zugferd_2_3_3::ICD::PlateformeSAgrééeSÀLaFacturationÉlectroniquePpfPdp),
+            ICD::Eaeu => Ok(crate::zugferd_2_3_3::ICD::Eaeu),
+            ICD::RegisterLegalPersonsInFrenchRépertoireDesPersonnesMorales => Ok(crate::zugferd_2_3_3::ICD::RegisterLegalPersonsInFrenchRépertoireDesPersonnesMorales),
+            ICD::NameUnknown => Err(ErrFromIcdToCrateZugferd233Icd::NameUnknown),
+            ICD::OpenpeppolServiceProviderIdentificationSchemeSpis => Err(ErrFromIcdToCrateZugferd233Icd::OpenpeppolServiceProviderIdentificationSchemeSpis),
+            ICD::NameUnknown_Dup => Err(ErrFromIcdToCrateZugferd233Icd::NameUnknown_Dup),
+            ICD::TaxIdentificationTaxIdNigeria => Err(ErrFromIcdToCrateZugferd233Icd::TaxIdentificationTaxIdNigeria),
+        }
+    }
+}
+
+/// All the variants of ICD that are not matched to any variant of crate::zugferd_2_3_3::ICD
+#[derive(Debug, PartialEq, Eq, Hash)]
+pub enum ErrFromIcdToCrateZugferd233Icd {
+    NameUnknown,
+    OpenpeppolServiceProviderIdentificationSchemeSpis,
+    NameUnknown_Dup,
+    TaxIdentificationTaxIdNigeria,
+}
+
+impl std::fmt::Display for ErrFromIcdToCrateZugferd233Icd {
+    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+        match self {
+            ErrFromIcdToCrateZugferd233Icd::NameUnknown => write!(f, "NameUnknown has no corresponding value in crate::zugferd_2_3_3::ICD"),
+            ErrFromIcdToCrateZugferd233Icd::OpenpeppolServiceProviderIdentificationSchemeSpis => write!(f, "OpenpeppolServiceProviderIdentificationSchemeSpis has no corresponding value in crate::zugferd_2_3_3::ICD"),
+            ErrFromIcdToCrateZugferd233Icd::NameUnknown_Dup => write!(f, "NameUnknown_Dup has no corresponding value in crate::zugferd_2_3_3::ICD"),
+            ErrFromIcdToCrateZugferd233Icd::TaxIdentificationTaxIdNigeria => write!(f, "TaxIdentificationTaxIdNigeria has no corresponding value in crate::zugferd_2_3_3::ICD"),
+        }
+    }
+}
+
+impl std::error::Error for ErrFromIcdToCrateZugferd233Icd {}
+
+impl std::convert::TryFrom<crate::zugferd_2_3_3::ICD> for ICD {
+    type Error = std::convert::Infallible;
+    fn try_from(value: crate::zugferd_2_3_3::ICD) -> Result<ICD, Self::Error> {
+        match value {
+            crate::zugferd_2_3_3::ICD::SystemInformationEtRepertoireDesEntrepriseEtDesEtablissementsSirene => Ok(ICD::SystemInformationEtRepertoireDesEntrepriseEtDesEtablissementsSirene),
+            crate::zugferd_2_3_3::ICD::CodificationNumeriqueDesEtablissmentsFinanciersEnBelgique => Ok(ICD::CodificationNumeriqueDesEtablissmentsFinanciersEnBelgique),
+            crate::zugferd_2_3_3::ICD::NbsOsiNetwork => Ok(ICD::NbsOsiNetwork),
+            crate::zugferd_2_3_3::ICD::UsaFedGovOsiNetwork => Ok(ICD::UsaFedGovOsiNetwork),
+            crate::zugferd_2_3_3::ICD::UsaDodOsiNetwork => Ok(ICD::UsaDodOsiNetwork),
+            crate::zugferd_2_3_3::ICD::Organisationsnummer => Ok(ICD::Organisationsnummer),
+            crate::zugferd_2_3_3::ICD::LeNumeroNational => Ok(ICD::LeNumeroNational),
+            crate::zugferd_2_3_3::ICD::SiretCode => Ok(ICD::SiretCode),
+            crate::zugferd_2_3_3::ICD::OrganizationalIdentifiersForStructuredNamesUnderIso9541Part2 => Ok(ICD::OrganizationalIdentifiersForStructuredNamesUnderIso9541Part2),
+            crate::zugferd_2_3_3::ICD::InternationalCodeDesignatorForIdentificationOsiBasedAmateurRadioOrganizationsNetworkObjectsAndApplicationServices => Ok(ICD::InternationalCodeDesignatorForIdentificationOsiBasedAmateurRadioOrganizationsNetworkObjectsAndApplicationServices),
+            crate::zugferd_2_3_3::ICD::EuropeanComputerManufacturersAssociationEcma => Ok(ICD::EuropeanComputerManufacturersAssociationEcma),
+            crate::zugferd_2_3_3::ICD::VsaFtpCodeFtpFileTransferProtocol => Ok(ICD::VsaFtpCodeFtpFileTransferProtocol),
+            crate::zugferd_2_3_3::ICD::NistOsiImplememtsWorkshop => Ok(ICD::NistOsiImplememtsWorkshop),
+            crate::zugferd_2_3_3::ICD::ElectronicDataInterchangeEdi => Ok(ICD::ElectronicDataInterchangeEdi),
+            crate::zugferd_2_3_3::ICD::EwosObjectIdentifiers => Ok(ICD::EwosObjectIdentifiers),
+            crate::zugferd_2_3_3::ICD::CommonLanguage => Ok(ICD::CommonLanguage),
+            crate::zugferd_2_3_3::ICD::SnaOsiNetwork => Ok(ICD::SnaOsiNetwork),
+            crate::zugferd_2_3_3::ICD::AirTransportIndustryServicesCommunicationsNetwork => Ok(ICD::AirTransportIndustryServicesCommunicationsNetwork),
+            crate::zugferd_2_3_3::ICD::EuropeanLaboratoryForParticlePhysicsCern => Ok(ICD::EuropeanLaboratoryForParticlePhysicsCern),
+            crate::zugferd_2_3_3::ICD::SocietyForWorldwideInterbankFinancialTelecommunicationSWIFT => Ok(ICD::SocietyForWorldwideInterbankFinancialTelecommunicationSWIFT),
+            crate::zugferd_2_3_3::ICD::OsfDistributedComputingObjectIdentification => Ok(ICD::OsfDistributedComputingObjectIdentification),
+            crate::zugferd_2_3_3::ICD::NordicUniversityAndResearchNetworkNordunet => Ok(ICD::NordicUniversityAndResearchNetworkNordunet),
+            crate::zugferd_2_3_3::ICD::DigitalEquipmentCorporationDec => Ok(ICD::DigitalEquipmentCorporationDec),
+            crate::zugferd_2_3_3::ICD::OsiAsiaOceaniaWorkshop => Ok(ICD::OsiAsiaOceaniaWorkshop),
+            crate::zugferd_2_3_3::ICD::NatoIso6523IcdeCodingScheme => Ok(ICD::NatoIso6523IcdeCodingScheme),
+            crate::zugferd_2_3_3::ICD::AeronauticalTelecommunicationsNetworkAtn => Ok(ICD::AeronauticalTelecommunicationsNetworkAtn),
+            crate::zugferd_2_3_3::ICD::InternationalStandardIso6523 => Ok(ICD::InternationalStandardIso6523),
+            crate::zugferd_2_3_3::ICD::TheAllUnionClassifierEnterprisesAndOrganisations => Ok(ICD::TheAllUnionClassifierEnterprisesAndOrganisations),
+            crate::zugferd_2_3_3::ICD::AtTOsiNetwork => Ok(ICD::AtTOsiNetwork),
+            crate::zugferd_2_3_3::ICD::EdiPartnerIdentificationCode => Ok(ICD::EdiPartnerIdentificationCode),
+            crate::zugferd_2_3_3::ICD::TelecomAustralia => Ok(ICD::TelecomAustralia),
+            crate::zugferd_2_3_3::ICD::SGWOsiInternetwork => Ok(ICD::SGWOsiInternetwork),
+            crate::zugferd_2_3_3::ICD::ReuterOpenAddressStandard => Ok(ICD::ReuterOpenAddressStandard),
+            crate::zugferd_2_3_3::ICD::Iso6523Icd => Ok(ICD::Iso6523Icd),
+            crate::zugferd_2_3_3::ICD::TeletrustObjectIdentifiers => Ok(ICD::TeletrustObjectIdentifiers),
+            crate::zugferd_2_3_3::ICD::LyTunnus => Ok(ICD::LyTunnus),
+            crate::zugferd_2_3_3::ICD::TheAustralianGosipNetwork => Ok(ICD::TheAustralianGosipNetwork),
+            crate::zugferd_2_3_3::ICD::TheOzDodOsiNetwork => Ok(ICD::TheOzDodOsiNetwork),
+            crate::zugferd_2_3_3::ICD::UnileverGroupCompanies => Ok(ICD::UnileverGroupCompanies),
+            crate::zugferd_2_3_3::ICD::CiticorpGlobalInformationNetwork => Ok(ICD::CiticorpGlobalInformationNetwork),
+            crate::zugferd_2_3_3::ICD::DbpTelekomObjectIdentifiers => Ok(ICD::DbpTelekomObjectIdentifiers),
+            crate::zugferd_2_3_3::ICD::Hydronett => Ok(ICD::Hydronett),
+            crate::zugferd_2_3_3::ICD::ThaiIndustrialStandardsInstituteTisi => Ok(ICD::ThaiIndustrialStandardsInstituteTisi),
+            crate::zugferd_2_3_3::ICD::IciCompanyIdentificationSystem => Ok(ICD::IciCompanyIdentificationSystem),
+            crate::zugferd_2_3_3::ICD::Funloc => Ok(ICD::Funloc),
+            crate::zugferd_2_3_3::ICD::BullOdiDsaUnixNetwork => Ok(ICD::BullOdiDsaUnixNetwork),
+            crate::zugferd_2_3_3::ICD::Osinz => Ok(ICD::Osinz),
+            crate::zugferd_2_3_3::ICD::AucklandAreaHealth => Ok(ICD::AucklandAreaHealth),
+            crate::zugferd_2_3_3::ICD::Firmenich => Ok(ICD::Firmenich),
+            crate::zugferd_2_3_3::ICD::AgfaDis => Ok(ICD::AgfaDis),
+            crate::zugferd_2_3_3::ICD::SocietyMotionPictureAndTelevisionEngineersSmpte => Ok(ICD::SocietyMotionPictureAndTelevisionEngineersSmpte),
+            crate::zugferd_2_3_3::ICD::Migros_networkM_netopz => Ok(ICD::Migros_networkM_netopz),
+            crate::zugferd_2_3_3::ICD::Iso6523Icdpcr => Ok(ICD::Iso6523Icdpcr),
+            crate::zugferd_2_3_3::ICD::EnergyNet => Ok(ICD::EnergyNet),
+            crate::zugferd_2_3_3::ICD::NokiaObjectIdentifiersNoi => Ok(ICD::NokiaObjectIdentifiersNoi),
+            crate::zugferd_2_3_3::ICD::SaintGobain => Ok(ICD::SaintGobain),
+            crate::zugferd_2_3_3::ICD::SiemensCorporateNetwork => Ok(ICD::SiemensCorporateNetwork),
+            crate::zugferd_2_3_3::ICD::Danznet => Ok(ICD::Danznet),
+            crate::zugferd_2_3_3::ICD::DataUniversalNumberingSystemDUNSNumber => Ok(ICD::DataUniversalNumberingSystemDUNSNumber),
+            crate::zugferd_2_3_3::ICD::SoffexOsi => Ok(ICD::SoffexOsi),
+            crate::zugferd_2_3_3::ICD::KpnOvn => Ok(ICD::KpnOvn),
+            crate::zugferd_2_3_3::ICD::Ascomosinet => Ok(ICD::Ascomosinet),
+            crate::zugferd_2_3_3::ICD::UtcUniformeTransportCode => Ok(ICD::UtcUniformeTransportCode),
+            crate::zugferd_2_3_3::ICD::SolvayOsiCoding => Ok(ICD::SolvayOsiCoding),
+            crate::zugferd_2_3_3::ICD::RocheCorporateNetwork => Ok(ICD::RocheCorporateNetwork),
+            crate::zugferd_2_3_3::ICD::Zellwegerosinet => Ok(ICD::Zellwegerosinet),
+            crate::zugferd_2_3_3::ICD::IntelCorporationOsi => Ok(ICD::IntelCorporationOsi),
+            crate::zugferd_2_3_3::ICD::SitaObjectIdentifierTree => Ok(ICD::SitaObjectIdentifierTree),
+            crate::zugferd_2_3_3::ICD::DaimlerchryslerCorporateNetwork => Ok(ICD::DaimlerchryslerCorporateNetwork),
+            crate::zugferd_2_3_3::ICD::LegoOsiNetwork => Ok(ICD::LegoOsiNetwork),
+            crate::zugferd_2_3_3::ICD::NavistarOsiNetwork => Ok(ICD::NavistarOsiNetwork),
+            crate::zugferd_2_3_3::ICD::IcdFormattedAtmAddress => Ok(ICD::IcdFormattedAtmAddress),
+            crate::zugferd_2_3_3::ICD::Arinc => Ok(ICD::Arinc),
+            crate::zugferd_2_3_3::ICD::AlcanetAlcatelAlsthomCorporateNetwork => Ok(ICD::AlcanetAlcatelAlsthomCorporateNetwork),
+            crate::zugferd_2_3_3::ICD::SistemaItalianoDiIdentificazioneDiOgettiGestitoDaUninfo => Ok(ICD::SistemaItalianoDiIdentificazioneDiOgettiGestitoDaUninfo),
+            crate::zugferd_2_3_3::ICD::SistemaItalianoDiIndirizzamentoDiRetiOsiGestitoDaUninfo => Ok(ICD::SistemaItalianoDiIndirizzamentoDiRetiOsiGestitoDaUninfo),
+            crate::zugferd_2_3_3::ICD::MitelTerminalOrSwitchingEquipment => Ok(ICD::MitelTerminalOrSwitchingEquipment),
+            crate::zugferd_2_3_3::ICD::AtmForum => Ok(ICD::AtmForum),
+            crate::zugferd_2_3_3::ICD::UkNationalHealthServiceSchemeEdiraCompliant => Ok(ICD::UkNationalHealthServiceSchemeEdiraCompliant),
+            crate::zugferd_2_3_3::ICD::InternationalNsap => Ok(ICD::InternationalNsap),
+            crate::zugferd_2_3_3::ICD::NorwegianTelecommunicationsAuthoritysNtasEdiIdentifierSchemeEdiraCompliant => Ok(ICD::NorwegianTelecommunicationsAuthoritysNtasEdiIdentifierSchemeEdiraCompliant),
+            crate::zugferd_2_3_3::ICD::AdvancedTelecommunicationsModulesLimitedCorporateNetwork => Ok(ICD::AdvancedTelecommunicationsModulesLimitedCorporateNetwork),
+            crate::zugferd_2_3_3::ICD::AthensChamberCommerceIndustrySchemeEdiraCompliant => Ok(ICD::AthensChamberCommerceIndustrySchemeEdiraCompliant),
+            crate::zugferd_2_3_3::ICD::SwissChambersCommerceSchemeEdiraCompliant => Ok(ICD::SwissChambersCommerceSchemeEdiraCompliant),
+            crate::zugferd_2_3_3::ICD::UnitedStatesCouncilForInternationalBusinessUscibSchemeEdiraCompliant => Ok(ICD::UnitedStatesCouncilForInternationalBusinessUscibSchemeEdiraCompliant),
+            crate::zugferd_2_3_3::ICD::NationalFederationChambersCommerceIndustryBelgiumSchemeEdiraCompliant => Ok(ICD::NationalFederationChambersCommerceIndustryBelgiumSchemeEdiraCompliant),
+            crate::zugferd_2_3_3::ICD::EanLocationCode => Ok(ICD::EanLocationCode),
+            crate::zugferd_2_3_3::ICD::TheAssociationBritishChambersCommerceLtdSchemeEdiraCompliant => Ok(ICD::TheAssociationBritishChambersCommerceLtdSchemeEdiraCompliant),
+            crate::zugferd_2_3_3::ICD::InternetIpAddressingIso6523IcdEncoding => Ok(ICD::InternetIpAddressingIso6523IcdEncoding),
+            crate::zugferd_2_3_3::ICD::CiscoSysytemsOsiNetwork => Ok(ICD::CiscoSysytemsOsiNetwork),
+            crate::zugferd_2_3_3::ICD::RevenueCanadaBusinessNumberRegistrationEdiraCompliant => Ok(ICD::RevenueCanadaBusinessNumberRegistrationEdiraCompliant),
+            crate::zugferd_2_3_3::ICD::DeutscherIndustrieUndHandelstagDihtSchemeEdiraCompliant => Ok(ICD::DeutscherIndustrieUndHandelstagDihtSchemeEdiraCompliant),
+            crate::zugferd_2_3_3::ICD::HewlettPackardCompanyInternalAmNetwork => Ok(ICD::HewlettPackardCompanyInternalAmNetwork),
+            crate::zugferd_2_3_3::ICD::DanishChamberOfCommerceSchemeEdiraCompliant => Ok(ICD::TheDanishBusinessAuthorityPNumberDkP),
+            crate::zugferd_2_3_3::ICD::FtiEdiforumItaliaEdiraCompliant => Ok(ICD::FtiEdiforumItaliaEdiraCompliant),
+            crate::zugferd_2_3_3::ICD::ChamberOfCommerceTelAvivJaffaSchemeEdiraCompliant => Ok(ICD::ChamberOfCommerceTelAvivJaffaSchemeEdiraCompliant),
+            crate::zugferd_2_3_3::ICD::SiemensSupervisorySystemsNetwork => Ok(ICD::SiemensSupervisorySystemsNetwork),
+            crate::zugferd_2_3_3::ICD::Png_icdScheme => Ok(ICD::Png_icdScheme),
+            crate::zugferd_2_3_3::ICD::SouthAfricanCodeAllocation => Ok(ICD::SouthAfricanCodeAllocation),
+            crate::zugferd_2_3_3::ICD::Heag => Ok(ICD::Heag),
+            crate::zugferd_2_3_3::ICD::BtIcdCodingSystem => Ok(ICD::BtIcdCodingSystem),
+            crate::zugferd_2_3_3::ICD::PortugueseChamberCommerceAndIndustrySchemeEdiraCompliant => Ok(ICD::PortugueseChamberCommerceAndIndustrySchemeEdiraCompliant),
+            crate::zugferd_2_3_3::ICD::VerenigingVanKamersVanKoophandelEnFabriekenInNederlandAssociationChambersCommerceAndIndustryInNetherlandsSchemeEdiraCompliant => Ok(ICD::VerenigingVanKamersVanKoophandelEnFabriekenInNederlandAssociationChambersCommerceAndIndustryInNetherlandsSchemeEdiraCompliant),
+            crate::zugferd_2_3_3::ICD::AssociationSwedishChambersCommerceAndIndustrySchemeEdiraCompliant => Ok(ICD::AssociationSwedishChambersCommerceAndIndustrySchemeEdiraCompliant),
+            crate::zugferd_2_3_3::ICD::AustralianChambersCommerceAndIndustrySchemeEdiraCompliant => Ok(ICD::AustralianChambersCommerceAndIndustrySchemeEdiraCompliant),
+            crate::zugferd_2_3_3::ICD::BellsouthIcdAesaAtmEndSystemAddress => Ok(ICD::BellsouthIcdAesaAtmEndSystemAddress),
+            crate::zugferd_2_3_3::ICD::BellAtlantic => Ok(ICD::BellAtlantic),
+            crate::zugferd_2_3_3::ICD::ObjectIdentifiers => Ok(ICD::ObjectIdentifiers),
+            crate::zugferd_2_3_3::ICD::IsoRegisterForStandardsProducingOrganizations => Ok(ICD::IsoRegisterForStandardsProducingOrganizations),
+            crate::zugferd_2_3_3::ICD::Originnet => Ok(ICD::Originnet),
+            crate::zugferd_2_3_3::ICD::CheckPointSoftwareTechnologies => Ok(ICD::CheckPointSoftwareTechnologies),
+            crate::zugferd_2_3_3::ICD::PacificBellDataCommunicationsNetwork => Ok(ICD::PacificBellDataCommunicationsNetwork),
+            crate::zugferd_2_3_3::ICD::PssObjectIdentifiers => Ok(ICD::PssObjectIdentifiers),
+            crate::zugferd_2_3_3::ICD::StentorIcdCodingSystem => Ok(ICD::StentorIcdCodingSystem),
+            crate::zugferd_2_3_3::ICD::AtmNetworkZn96 => Ok(ICD::AtmNetworkZn96),
+            crate::zugferd_2_3_3::ICD::MciOsiNetwork => Ok(ICD::MciOsiNetwork),
+            crate::zugferd_2_3_3::ICD::Advantis => Ok(ICD::Advantis),
+            crate::zugferd_2_3_3::ICD::AffableSoftwareDataInterchangeCodes => Ok(ICD::AffableSoftwareDataInterchangeCodes),
+            crate::zugferd_2_3_3::ICD::BbDataGmbh => Ok(ICD::BbDataGmbh),
+            crate::zugferd_2_3_3::ICD::BasfCompanyAtmNetwork => Ok(ICD::BasfCompanyAtmNetwork),
+            crate::zugferd_2_3_3::ICD::IotaIdentifiersForOrganizationsForTelecommunicationsAddressingUsingIcdSystemFormatDefinedInIsoIec8348 => Ok(ICD::IotaIdentifiersForOrganizationsForTelecommunicationsAddressingUsingIcdSystemFormatDefinedInIsoIec8348),
+            crate::zugferd_2_3_3::ICD::HenkelCorporateNetworkHNet => Ok(ICD::HenkelCorporateNetworkHNet),
+            crate::zugferd_2_3_3::ICD::GteOsiNetwork => Ok(ICD::GteOsiNetwork),
+            crate::zugferd_2_3_3::ICD::DresdnerBankCorporateNetwork => Ok(ICD::DresdnerBankCorporateNetwork),
+            crate::zugferd_2_3_3::ICD::BcnrSwissClearingBankNumber => Ok(ICD::BcnrSwissClearingBankNumber),
+            crate::zugferd_2_3_3::ICD::BpiSwissBusinessPartnerIdentificationCode => Ok(ICD::BpiSwissBusinessPartnerIdentificationCode),
+            crate::zugferd_2_3_3::ICD::DirectoratesEuropeanCommission => Ok(ICD::DirectoratesEuropeanCommission),
+            crate::zugferd_2_3_3::ICD::CodeForIdentificationNationalOrganizations => Ok(ICD::CodeForIdentificationNationalOrganizations),
+            crate::zugferd_2_3_3::ICD::CerticomObjectIdentifiers => Ok(ICD::CerticomObjectIdentifiers),
+            crate::zugferd_2_3_3::ICD::Tc68Oid => Ok(ICD::Tc68Oid),
+            crate::zugferd_2_3_3::ICD::InfonetServicesCorporation => Ok(ICD::InfonetServicesCorporation),
+            crate::zugferd_2_3_3::ICD::SiaObjectIdentifiers => Ok(ICD::SiaObjectIdentifiers),
+            crate::zugferd_2_3_3::ICD::CableWirelessGlobalAtmEndSystemAddressPlan => Ok(ICD::CableWirelessGlobalAtmEndSystemAddressPlan),
+            crate::zugferd_2_3_3::ICD::GlobalAesaScheme => Ok(ICD::GlobalAesaScheme),
+            crate::zugferd_2_3_3::ICD::FranceTelecomAtmEndSystemAddressPlan => Ok(ICD::FranceTelecomAtmEndSystemAddressPlan),
+            crate::zugferd_2_3_3::ICD::SavvisCommunicationsAesa => Ok(ICD::SavvisCommunicationsAesa),
+            crate::zugferd_2_3_3::ICD::ToshibaOrganizationsPartnersAndSuppliersTopasCode => Ok(ICD::ToshibaOrganizationsPartnersAndSuppliersTopasCode),
+            crate::zugferd_2_3_3::ICD::NatoCommercialAndGovernmentEntitySystem => Ok(ICD::NatoCommercialAndGovernmentEntitySystem),
+            crate::zugferd_2_3_3::ICD::SecetiObjectIdentifiers => Ok(ICD::SecetiObjectIdentifiers),
+            crate::zugferd_2_3_3::ICD::EinesteinetAg => Ok(ICD::EinesteinetAg),
+            crate::zugferd_2_3_3::ICD::DodaacDepartmentDefenseActivityAddressCode => Ok(ICD::DodaacDepartmentDefenseActivityAddressCode),
+            crate::zugferd_2_3_3::ICD::DgcpDirectionGénéraleDeLaComptabilitéPubliqueAdministrativeAccountingIdentificationScheme => Ok(ICD::DgcpDirectionGénéraleDeLaComptabilitéPubliqueAdministrativeAccountingIdentificationScheme),
+            crate::zugferd_2_3_3::ICD::DgiDirectionGénéraleDesImpotsCode => Ok(ICD::DgiDirectionGénéraleDesImpotsCode),
+            crate::zugferd_2_3_3::ICD::StandardCompanyCode => Ok(ICD::StandardCompanyCode),
+            crate::zugferd_2_3_3::ICD::ItuInternationalTelecommunicationsUnionDataNetworkIdentificationCodesDnic => Ok(ICD::ItuInternationalTelecommunicationsUnionDataNetworkIdentificationCodesDnic),
+            crate::zugferd_2_3_3::ICD::GlobalBusinessIdentifier => Ok(ICD::GlobalBusinessIdentifier),
+            crate::zugferd_2_3_3::ICD::MadgeNetworksLtdIcdAtmAddressingScheme => Ok(ICD::MadgeNetworksLtdIcdAtmAddressingScheme),
+            crate::zugferd_2_3_3::ICD::AustralianBusinessNumberAbnScheme => Ok(ICD::AustralianBusinessNumberAbnScheme),
+            crate::zugferd_2_3_3::ICD::EdiraSchemeIdentifierCode => Ok(ICD::EdiraSchemeIdentifierCode),
+            crate::zugferd_2_3_3::ICD::ConcertGlobalNetworkServicesIcdAesa => Ok(ICD::ConcertGlobalNetworkServicesIcdAesa),
+            crate::zugferd_2_3_3::ICD::IdentificationNumberEconomicSubjectsIco => Ok(ICD::IdentificationNumberEconomicSubjectsIco),
+            crate::zugferd_2_3_3::ICD::GlobalCrossingAesaAtmEndSystemAddress => Ok(ICD::GlobalCrossingAesaAtmEndSystemAddress),
+            crate::zugferd_2_3_3::ICD::Auna => Ok(ICD::Auna),
+            crate::zugferd_2_3_3::ICD::AtmInterconnectionWithDutchKpnTelecom => Ok(ICD::AtmInterconnectionWithDutchKpnTelecom),
+            crate::zugferd_2_3_3::ICD::IdentificationNumberEconomicSubjectIcoActOnStateStatistics29November200127 => Ok(ICD::IdentificationNumberEconomicSubjectIcoActOnStateStatistics29November200127),
+            crate::zugferd_2_3_3::ICD::ActalisObjectIdentifiers => Ok(ICD::ActalisObjectIdentifiers),
+            crate::zugferd_2_3_3::ICD::GtinGlobalTradeItemNumber => Ok(ICD::GtinGlobalTradeItemNumber),
+            crate::zugferd_2_3_3::ICD::EccmaOpenTechnicalDirectory => Ok(ICD::EccmaOpenTechnicalDirectory),
+            crate::zugferd_2_3_3::ICD::CenIsssObjectIdentifierScheme => Ok(ICD::CenIsssObjectIdentifierScheme),
+            crate::zugferd_2_3_3::ICD::UsEpaFacilityIdentifier => Ok(ICD::UsEpaFacilityIdentifier),
+            crate::zugferd_2_3_3::ICD::TelusCorporation => Ok(ICD::TelusCorporation),
+            crate::zugferd_2_3_3::ICD::FieieObjectIdentifiers => Ok(ICD::FieieObjectIdentifiers),
+            crate::zugferd_2_3_3::ICD::SwissguideIdentifierScheme => Ok(ICD::SwissguideIdentifierScheme),
+            crate::zugferd_2_3_3::ICD::PriorityTelecomAtmEndSystemAddressPlan => Ok(ICD::PriorityTelecomAtmEndSystemAddressPlan),
+            crate::zugferd_2_3_3::ICD::VodafoneIrelandOsiAddressing => Ok(ICD::VodafoneIrelandOsiAddressing),
+            crate::zugferd_2_3_3::ICD::SwissFederalBusinessIdentificationNumberCentralBusinessNamesIndexZefixIdentificationNumber => Ok(ICD::SwissFederalBusinessIdentificationNumberCentralBusinessNamesIndexZefixIdentificationNumber),
+            crate::zugferd_2_3_3::ICD::TeikokuCompanyCode => Ok(ICD::TeikokuCompanyCode),
+            crate::zugferd_2_3_3::ICD::LuxembourgCpCpsCertificationPolicyAndCertificationPracticeStatementIndex => Ok(ICD::LuxembourgCpCpsCertificationPolicyAndCertificationPracticeStatementIndex),
+            crate::zugferd_2_3_3::ICD::ProjectGroupListsPropertiesProlist => Ok(ICD::ProjectGroupListsPropertiesProlist),
+            crate::zugferd_2_3_3::ICD::EciSs => Ok(ICD::EciSs),
+            crate::zugferd_2_3_3::ICD::Stepnexus => Ok(ICD::Stepnexus),
+            crate::zugferd_2_3_3::ICD::SiemensAg => Ok(ICD::SiemensAg),
+            crate::zugferd_2_3_3::ICD::ParadineGmbh => Ok(ICD::ParadineGmbh),
+            crate::zugferd_2_3_3::ICD::OdetteInternationalLimited => Ok(ICD::OdetteInternationalLimited),
+            crate::zugferd_2_3_3::ICD::Route1Mobinet => Ok(ICD::Route1Mobinet),
+            crate::zugferd_2_3_3::ICD::PenangoObjectIdentifiers => Ok(ICD::PenangoObjectIdentifiers),
+            crate::zugferd_2_3_3::ICD::LithuanianMilitaryPki => Ok(ICD::LithuanianMilitaryPki),
+            crate::zugferd_2_3_3::ICD::NuméroDidentificationSuisseDesEnterprisesIdeSwissUniqueBusinessIdentificationNumberUidb => Ok(ICD::NuméroDidentificationSuisseDesEnterprisesIdeSwissUniqueBusinessIdentificationNumberUidb),
+            crate::zugferd_2_3_3::ICD::Digstorg => Ok(ICD::Digstorg),
+            crate::zugferd_2_3_3::ICD::PercevalObjectCode => Ok(ICD::PercevalObjectCode),
+            crate::zugferd_2_3_3::ICD::TrustpointObjectIdentifiers => Ok(ICD::TrustpointObjectIdentifiers),
+            crate::zugferd_2_3_3::ICD::AmazonUniqueIdentificationScheme => Ok(ICD::AmazonUniqueIdentificationScheme),
+            crate::zugferd_2_3_3::ICD::CorporateNumberTheSocialSecurityAndTaxNumberSystem => Ok(ICD::CorporateNumberTheSocialSecurityAndTaxNumberSystem),
+            crate::zugferd_2_3_3::ICD::EuropeanBusinessIdentifierEbid => Ok(ICD::EuropeanBusinessIdentifierEbid),
+            crate::zugferd_2_3_3::ICD::OrganisatieIndentificatieNummerOin => Ok(ICD::OrganisatieIndentificatieNummerOin),
+            crate::zugferd_2_3_3::ICD::CompanyCodeEstonia => Ok(ICD::CompanyCodeEstonia),
+            crate::zugferd_2_3_3::ICD::Organisasjonsnummer => Ok(ICD::Organisasjonsnummer),
+            crate::zugferd_2_3_3::ICD::UblBePartyIdentifier => Ok(ICD::UblBePartyIdentifier),
+            crate::zugferd_2_3_3::ICD::KoiosOpenTechnicalDictionary => Ok(ICD::KoiosOpenTechnicalDictionary),
+            crate::zugferd_2_3_3::ICD::SingaporeNationwideELnvoiceFramework => Ok(ICD::SingaporeNationwideELnvoiceFramework),
+            crate::zugferd_2_3_3::ICD::IcelandicIdentifierÍslenskKennitala => Ok(ICD::IcelandicIdentifierÍslenskKennitala),
+            crate::zugferd_2_3_3::ICD::AppliaPlStandard => Ok(ICD::AppliaPlStandard),
+            crate::zugferd_2_3_3::ICD::Erstorg => Ok(ICD::Erstorg),
+            crate::zugferd_2_3_3::ICD::LegalEntityIdentifierLei => Ok(ICD::LegalEntityIdentifierLei),
+            crate::zugferd_2_3_3::ICD::LegalEntityCodeLithuania => Ok(ICD::LegalEntityCodeLithuania),
+            crate::zugferd_2_3_3::ICD::CodiceUnivocoUnitàOrganizzativaIpa => Ok(ICD::CodiceUnivocoUnitàOrganizzativaIpa),
+            crate::zugferd_2_3_3::ICD::IndirizzoDiPostaElettronicaCertificata => Ok(ICD::IndirizzoDiPostaElettronicaCertificata),
+            crate::zugferd_2_3_3::ICD::EdeliveryNetworkParticipantIdentifier => Ok(ICD::EdeliveryNetworkParticipantIdentifier),
+            crate::zugferd_2_3_3::ICD::LeitwegId => Ok(ICD::LeitwegId),
+            crate::zugferd_2_3_3::ICD::Coddest => Ok(ICD::Coddest),
+            crate::zugferd_2_3_3::ICD::RegistreDuCommerceEtDeLIndustrieRci => Ok(ICD::RegistreDuCommerceEtDeLIndustrieRci),
+            crate::zugferd_2_3_3::ICD::PilogOntologyCodificationIdentifierPoci => Ok(ICD::PilogOntologyCodificationIdentifierPoci),
+            crate::zugferd_2_3_3::ICD::NumeroDentrepriseOndernemingsnummerUnternehmensnummer => Ok(ICD::NumeroDentrepriseOndernemingsnummerUnternehmensnummer),
+            crate::zugferd_2_3_3::ICD::Gs1IdentificationKeys => Ok(ICD::Gs1IdentificationKeys),
+            crate::zugferd_2_3_3::ICD::CodiceFiscale => Ok(ICD::CodiceFiscale),
+            crate::zugferd_2_3_3::ICD::PartitaIva => Ok(ICD::PartitaIva),
+            crate::zugferd_2_3_3::ICD::FinnishOrganizationIdentifier => Ok(ICD::FinnishOrganizationIdentifier),
+            crate::zugferd_2_3_3::ICD::FinnishOrganizationValueAddTaxIdentifier => Ok(ICD::FinnishOrganizationValueAddTaxIdentifier),
+            crate::zugferd_2_3_3::ICD::TradeplaceTradepiStandard => Ok(ICD::TradeplaceTradepiStandard),
+            crate::zugferd_2_3_3::ICD::NetServiceId => Ok(ICD::NetServiceId),
+            crate::zugferd_2_3_3::ICD::Ovtcode => Ok(ICD::Ovtcode),
+            crate::zugferd_2_3_3::ICD::TheNetherlandsChamberCommerceAndIndustryEstablishmentNumber => Ok(ICD::TheNetherlandsChamberCommerceAndIndustryEstablishmentNumber),
+            crate::zugferd_2_3_3::ICD::UnifiedRegistrationNumberLatvia => Ok(ICD::UnifiedRegistrationNumberLatvia),
+            crate::zugferd_2_3_3::ICD::TaxpayerRegistrationCodeLatvia => Ok(ICD::TaxpayerRegistrationCodeLatvia),
+            crate::zugferd_2_3_3::ICD::TheRegisterNaturalPersonsLatvia => Ok(ICD::TheRegisterNaturalPersonsLatvia),
+            crate::zugferd_2_3_3::ICD::TheRegisteredNumberQualifiedInvoiceIssuer => Ok(ICD::TheRegisteredNumberQualifiedInvoiceIssuer),
+            crate::zugferd_2_3_3::ICD::MetadataRegistrySupport => Ok(ICD::MetadataRegistrySupport),
+            crate::zugferd_2_3_3::ICD::EuBasedCompany => Ok(ICD::EuBasedCompany),
+            crate::zugferd_2_3_3::ICD::FtctcCodeRoutage => Ok(ICD::FtctcCodeRoutage),
+            crate::zugferd_2_3_3::ICD::FrctcElectronicAddress => Ok(ICD::FrctcElectronicAddress),
+            crate::zugferd_2_3_3::ICD::FrctcParticulier => Ok(ICD::FrctcParticulier),
+            crate::zugferd_2_3_3::ICD::NonEuBasedCompany => Ok(ICD::NonEuBasedCompany),
+            crate::zugferd_2_3_3::ICD::RépertoireDesEntreprisesEtDesEtablissementsRidet => Ok(ICD::RépertoireDesEntreprisesEtDesEtablissementsRidet),
+            crate::zugferd_2_3_3::ICD::TAHITITraitementAutomatiqueHiérarchiséDesInstitutionsDeTahitiEtDesÎles => Ok(ICD::TAHITITraitementAutomatiqueHiérarchiséDesInstitutionsDeTahitiEtDesÎles),
+            crate::zugferd_2_3_3::ICD::NationalEInvoicingFramework => Ok(ICD::NationalEInvoicingFramework),
+            crate::zugferd_2_3_3::ICD::SingleTaxableCompanyFrance => Ok(ICD::SingleTaxableCompanyFrance),
+            crate::zugferd_2_3_3::ICD::NobbProductNumber => Ok(ICD::NobbProductNumber),
+            crate::zugferd_2_3_3::ICD::DescriptionNotKnown => Ok(ICD::Elnummer),
+            crate::zugferd_2_3_3::ICD::ToimitusosoiteId => Ok(ICD::ToimitusosoiteId),
+            crate::zugferd_2_3_3::ICD::UaeTaxIdentificationNumberTin => Ok(ICD::UaeTaxIdentificationNumberTin),
+            crate::zugferd_2_3_3::ICD::DescriptionNotKnown_Dup => Ok(ICD::Toimipaikkald),
+            crate::zugferd_2_3_3::ICD::CprDanishPersonCivilRegistrationNumber => Ok(ICD::CprDanishPersonCivilRegistrationNumber),
+            crate::zugferd_2_3_3::ICD::PlateformeSAgrééeSÀLaFacturationÉlectroniquePpfPdp => Ok(ICD::PlateformeSAgrééeSÀLaFacturationÉlectroniquePpfPdp),
+            crate::zugferd_2_3_3::ICD::Eaeu => Ok(ICD::Eaeu),
+            crate::zugferd_2_3_3::ICD::RegisterLegalPersonsInFrenchRépertoireDesPersonnesMorales => Ok(ICD::RegisterLegalPersonsInFrenchRépertoireDesPersonnesMorales),
+
+        }
+    }
+}
+// End: (Version) TryFrom crate::zugferd_2_3_3::ICD to ICD

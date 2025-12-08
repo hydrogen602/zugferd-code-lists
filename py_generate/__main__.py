@@ -1,9 +1,11 @@
-from typing import Annotated
+from typing import Annotated, Literal
 import typer
 import pandas as pd
 
 from py_generate.sheets import run_all
 from py_generate.common import load_all_sheets, Version, load_sheet
+from py_generate.generate_exports import main as generate_exports_main
+from py_generate.repeated_code import main as repeated_code_main
 
 app = typer.Typer()
 
@@ -18,9 +20,12 @@ def all(
         ),
     ] = None,
 ):
+    versions = sorted(list(Version))
+
     if version is None:
-        for v in Version:
-            run_all(v.version_info())
+        prev_version_gen_info = None
+        for v in versions:
+            prev_version_gen_info = run_all(v.version_info(), prev_version_gen_info)
     else:
         run_all(version.version_info())
 
@@ -45,6 +50,16 @@ def get_sheet(version: Version, sheet: str, header_idx: int = 0):
     sheet_df = load_sheet(sheet, v, header_idx)
     with pd.option_context("display.max_rows", None):
         typer.echo(sheet_df)
+
+
+@app.command()
+def generate_exports():
+    generate_exports_main()
+
+
+@app.command()
+def repeated_code(lang: Literal["ts", "rs"]):
+    repeated_code_main(lang)
 
 
 if __name__ == "__main__":

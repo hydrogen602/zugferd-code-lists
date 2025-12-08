@@ -1,10 +1,10 @@
 #![allow(non_camel_case_types)]
 
-    #[cfg_attr(feature = "specta", derive(specta::Type))]
-    #[cfg_attr(feature = "serde", derive(serde::Serialize, serde::Deserialize))]
-    #[derive(Debug, PartialEq, Eq, PartialOrd, Ord, Clone, Copy, Hash)]
-    pub enum VATEX {
-        /// Exempt based on article 79, point c of Council Directive 2006/112/EC
+#[cfg_attr(feature = "specta", derive(specta::Type))]
+#[cfg_attr(feature = "serde", derive(serde::Serialize, serde::Deserialize))]
+#[derive(Debug, PartialEq, Eq, PartialOrd, Ord, Clone, Copy, Hash)]
+pub enum VATEX {
+    /// Exempt based on article 79, point c of Council Directive 2006/112/EC
     ///
     /// Repayment of expenditure is not an exemption in the sense of the VAT Directive but may be handled as such in the context of the EN16931.
     ExemptBasedOnArticle79PointCCouncilDirective2006112Ec,
@@ -96,23 +96,23 @@
     ExemptBasedOnArticle148SectionGCouncilDirective2006112Ec,
     /// Exempt based on article 151 of Council Directive 2006/112/EC
     ExemptBasedOnArticle151CouncilDirective2006112Ec,
-    /// Exempt based on article 151, section 1 (a) of Council Directive 2006/112/EC 
+    /// Exempt based on article 151, section 1 (a) of Council Directive 2006/112/EC
     ExemptBasedOnArticle151Section1ACouncilDirective2006112Ec,
-    /// Exempt based on article 151, section 1 (aa) of Council Directive 2006/112/EC 
+    /// Exempt based on article 151, section 1 (aa) of Council Directive 2006/112/EC
     ExemptBasedOnArticle151Section1AaCouncilDirective2006112Ec,
-    /// Exempt based on article 151, section 1 (b) of Council Directive 2006/112/EC 
+    /// Exempt based on article 151, section 1 (b) of Council Directive 2006/112/EC
     ExemptBasedOnArticle151Section1BCouncilDirective2006112Ec,
-    /// Exempt based on article 151, section 1 (c) of Council Directive 2006/112/EC 
+    /// Exempt based on article 151, section 1 (c) of Council Directive 2006/112/EC
     ExemptBasedOnArticle151Section1CCouncilDirective2006112Ec,
-    /// Exempt based on article 151, section 1 (d) of Council Directive 2006/112/EC 
+    /// Exempt based on article 151, section 1 (d) of Council Directive 2006/112/EC
     ExemptBasedOnArticle151Section1DCouncilDirective2006112Ec,
-    /// Exempt based on article 151, section 1 (e) of Council Directive 2006/112/EC 
+    /// Exempt based on article 151, section 1 (e) of Council Directive 2006/112/EC
     ExemptBasedOnArticle151Section1ECouncilDirective2006112Ec,
     /// Exempt based on article 153 of Council Directive 2006/112/EC
     ExemptBasedOnArticle153CouncilDirective2006112Ec,
     /// Exempt based on article 159 of Council Directive 2006/112/EC
     ExemptBasedOnArticle159CouncilDirective2006112Ec,
-    /// Exempt based on article 309 of Council Directive 2006/112/EC 
+    /// Exempt based on article 309 of Council Directive 2006/112/EC
     ExemptBasedOnArticle309CouncilDirective2006112Ec,
     /// Reverse charge
     ///
@@ -170,7 +170,7 @@
     ///
     /// Only for domestic invoicing in France
     ExemptBasedOn4Article261CodeGénéralDesImpôtsCgiGeneralTaxCode,
-    /// Exempt based on 5 of article 261 of the Code Général des Impôts (CGI ; General tax code) 
+    /// Exempt based on 5 of article 261 of the Code Général des Impôts (CGI ; General tax code)
     ///
     /// Only for domestic invoicing in France
     ExemptBasedOn5Article261CodeGénéralDesImpôtsCgiGeneralTaxCode,
@@ -214,7 +214,7 @@
     ///
     /// Only for domestic invoicing in France
     ExemptBasedOn2Article261DCodeGénéralDesImpôtsCgiGeneralTaxCode,
-    /// Exempt based on 3° of article 261 D of the Code Général des Impôts (CGI ; General tax code) Exonération de TVA - Article 261 D-3° du Code Général des Impôts 
+    /// Exempt based on 3° of article 261 D of the Code Général des Impôts (CGI ; General tax code) Exonération de TVA - Article 261 D-3° du Code Général des Impôts
     ///
     /// Only for domestic invoicing in France
     ExemptBasedOn3Article261DCodeGénéralDesImpôtsCgiGeneralTaxCodeExonérationDeTvaArticle261D3DuCodeGénéralDesImpôts,
@@ -250,8 +250,8 @@
     ///
     /// Only for domestic invoicing in France
     ExemptBasedOn2Article283CodeGénéralDesImpôtsCgiGeneralTaxCode,
-    }
-    
+}
+
 impl std::fmt::Display for VATEX {
     fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
         write!(f, "{}", <Self as crate::Code>::code(*self))
@@ -261,7 +261,8 @@ impl std::fmt::Display for VATEX {
 impl std::str::FromStr for VATEX {
     type Err = crate::ParseError<Self>;
     fn from_str(s: &str) -> Result<Self, Self::Err> {
-        <Self as crate::FromCode>::from_code(s).ok_or_else(|| crate::ParseError::<Self>::new(s.to_owned()))
+        <Self as crate::FromCode>::from_code(s)
+            .ok_or_else(|| crate::ParseError::<Self>::new(s.to_owned()))
     }
 }
 
@@ -458,7 +459,7 @@ impl crate::Description for VATEX {
 impl crate::FromCode for VATEX {
     fn from_code(code: &str) -> Option<Self>
     where
-        Self: Sized
+        Self: Sized,
     {
         match code {
             "VATEX-EU-79-C" => Some(VATEX::ExemptBasedOnArticle79PointCCouncilDirective2006112Ec),
@@ -553,3 +554,213 @@ impl crate::FromCode for VATEX {
         }
     }
 }
+
+// Start: (Version) TryFrom VATEX to crate::zugferd_2_3_3::VATEX
+impl std::convert::TryFrom<VATEX> for crate::zugferd_2_3_3::VATEX {
+    type Error = ErrFromVatexToCrateZugferd233Vatex;
+    fn try_from(value: VATEX) -> Result<Self, Self::Error> {
+        match value {
+            VATEX::ExemptBasedOnArticle79PointCCouncilDirective2006112Ec => Ok(crate::zugferd_2_3_3::VATEX::ExemptBasedOnArticle79PointCCouncilDirective2006112Ec),
+            VATEX::ExemptBasedOnArticle132CouncilDirective2006112Ec => Ok(crate::zugferd_2_3_3::VATEX::ExemptBasedOnArticle132CouncilDirective2006112Ec),
+            VATEX::ExemptBasedOnArticle132Section1ACouncilDirective2006112Ec => Ok(crate::zugferd_2_3_3::VATEX::ExemptBasedOnArticle132Section1ACouncilDirective2006112Ec),
+            VATEX::ExemptBasedOnArticle132Section1BCouncilDirective2006112Ec => Ok(crate::zugferd_2_3_3::VATEX::ExemptBasedOnArticle132Section1BCouncilDirective2006112Ec),
+            VATEX::ExemptBasedOnArticle132Section1CCouncilDirective2006112Ec => Ok(crate::zugferd_2_3_3::VATEX::ExemptBasedOnArticle132Section1CCouncilDirective2006112Ec),
+            VATEX::ExemptBasedOnArticle132Section1DCouncilDirective2006112Ec => Ok(crate::zugferd_2_3_3::VATEX::ExemptBasedOnArticle132Section1DCouncilDirective2006112Ec),
+            VATEX::ExemptBasedOnArticle132Section1ECouncilDirective2006112Ec => Ok(crate::zugferd_2_3_3::VATEX::ExemptBasedOnArticle132Section1ECouncilDirective2006112Ec),
+            VATEX::ExemptBasedOnArticle132Section1FCouncilDirective2006112Ec => Ok(crate::zugferd_2_3_3::VATEX::ExemptBasedOnArticle132Section1FCouncilDirective2006112Ec),
+            VATEX::ExemptBasedOnArticle132Section1GCouncilDirective2006112Ec => Ok(crate::zugferd_2_3_3::VATEX::ExemptBasedOnArticle132Section1GCouncilDirective2006112Ec),
+            VATEX::ExemptBasedOnArticle132Section1HCouncilDirective2006112Ec => Ok(crate::zugferd_2_3_3::VATEX::ExemptBasedOnArticle132Section1HCouncilDirective2006112Ec),
+            VATEX::ExemptBasedOnArticle132Section1ICouncilDirective2006112Ec => Ok(crate::zugferd_2_3_3::VATEX::ExemptBasedOnArticle132Section1ICouncilDirective2006112Ec),
+            VATEX::ExemptBasedOnArticle132Section1JCouncilDirective2006112Ec => Ok(crate::zugferd_2_3_3::VATEX::ExemptBasedOnArticle132Section1JCouncilDirective2006112Ec),
+            VATEX::ExemptBasedOnArticle132Section1KCouncilDirective2006112Ec => Ok(crate::zugferd_2_3_3::VATEX::ExemptBasedOnArticle132Section1KCouncilDirective2006112Ec),
+            VATEX::ExemptBasedOnArticle132Section1LCouncilDirective2006112Ec => Ok(crate::zugferd_2_3_3::VATEX::ExemptBasedOnArticle132Section1LCouncilDirective2006112Ec),
+            VATEX::ExemptBasedOnArticle132Section1MCouncilDirective2006112Ec => Ok(crate::zugferd_2_3_3::VATEX::ExemptBasedOnArticle132Section1MCouncilDirective2006112Ec),
+            VATEX::ExemptBasedOnArticle132Section1NCouncilDirective2006112Ec => Ok(crate::zugferd_2_3_3::VATEX::ExemptBasedOnArticle132Section1NCouncilDirective2006112Ec),
+            VATEX::ExemptBasedOnArticle132Section1OCouncilDirective2006112Ec => Ok(crate::zugferd_2_3_3::VATEX::ExemptBasedOnArticle132Section1OCouncilDirective2006112Ec),
+            VATEX::ExemptBasedOnArticle132Section1PCouncilDirective2006112Ec => Ok(crate::zugferd_2_3_3::VATEX::ExemptBasedOnArticle132Section1PCouncilDirective2006112Ec),
+            VATEX::ExemptBasedOnArticle132Section1QCouncilDirective2006112Ec => Ok(crate::zugferd_2_3_3::VATEX::ExemptBasedOnArticle132Section1QCouncilDirective2006112Ec),
+            VATEX::ExemptBasedOnArticle143CouncilDirective2006112Ec => Ok(crate::zugferd_2_3_3::VATEX::ExemptBasedOnArticle143CouncilDirective2006112Ec),
+            VATEX::ExemptBasedOnArticle143Section1ACouncilDirective2006112Ec => Ok(crate::zugferd_2_3_3::VATEX::ExemptBasedOnArticle143Section1ACouncilDirective2006112Ec),
+            VATEX::ExemptBasedOnArticle143Section1BCouncilDirective2006112Ec => Ok(crate::zugferd_2_3_3::VATEX::ExemptBasedOnArticle143Section1BCouncilDirective2006112Ec),
+            VATEX::ExemptBasedOnArticle143Section1CCouncilDirective2006112Ec => Ok(crate::zugferd_2_3_3::VATEX::ExemptBasedOnArticle143Section1CCouncilDirective2006112Ec),
+            VATEX::ExemptBasedOnArticle143Section1DCouncilDirective2006112Ec => Ok(crate::zugferd_2_3_3::VATEX::ExemptBasedOnArticle143Section1DCouncilDirective2006112Ec),
+            VATEX::ExemptBasedOnArticle143Section1ECouncilDirective2006112Ec => Ok(crate::zugferd_2_3_3::VATEX::ExemptBasedOnArticle143Section1ECouncilDirective2006112Ec),
+            VATEX::ExemptBasedOnArticle143Section1FCouncilDirective2006112Ec => Ok(crate::zugferd_2_3_3::VATEX::ExemptBasedOnArticle143Section1FCouncilDirective2006112Ec),
+            VATEX::ExemptBasedOnArticle143Section1FaCouncilDirective2006112Ec => Ok(crate::zugferd_2_3_3::VATEX::ExemptBasedOnArticle143Section1FaCouncilDirective2006112Ec),
+            VATEX::ExemptBasedOnArticle143Section1GCouncilDirective2006112Ec => Ok(crate::zugferd_2_3_3::VATEX::ExemptBasedOnArticle143Section1GCouncilDirective2006112Ec),
+            VATEX::ExemptBasedOnArticle143Section1HCouncilDirective2006112Ec => Ok(crate::zugferd_2_3_3::VATEX::ExemptBasedOnArticle143Section1HCouncilDirective2006112Ec),
+            VATEX::ExemptBasedOnArticle143Section1ICouncilDirective2006112Ec => Ok(crate::zugferd_2_3_3::VATEX::ExemptBasedOnArticle143Section1ICouncilDirective2006112Ec),
+            VATEX::ExemptBasedOnArticle143Section1JCouncilDirective2006112Ec => Ok(crate::zugferd_2_3_3::VATEX::ExemptBasedOnArticle143Section1JCouncilDirective2006112Ec),
+            VATEX::ExemptBasedOnArticle143Section1KCouncilDirective2006112Ec => Ok(crate::zugferd_2_3_3::VATEX::ExemptBasedOnArticle143Section1KCouncilDirective2006112Ec),
+            VATEX::ExemptBasedOnArticle143Section1LCouncilDirective2006112Ec => Ok(crate::zugferd_2_3_3::VATEX::ExemptBasedOnArticle143Section1LCouncilDirective2006112Ec),
+            VATEX::ExemptBasedOnArticle144CouncilDirective2006112Ec => Ok(crate::zugferd_2_3_3::VATEX::ExemptBasedOnArticle144CouncilDirective2006112Ec),
+            VATEX::ExemptBasedOnArticle146Section1ECouncilDirective2006112Ec => Ok(crate::zugferd_2_3_3::VATEX::ExemptBasedOnArticle146Section1ECouncilDirective2006112Ec),
+            VATEX::ExemptBasedOnArticle148CouncilDirective2006112Ec => Ok(crate::zugferd_2_3_3::VATEX::ExemptBasedOnArticle148CouncilDirective2006112Ec),
+            VATEX::ExemptBasedOnArticle148SectionACouncilDirective2006112Ec => Ok(crate::zugferd_2_3_3::VATEX::ExemptBasedOnArticle148SectionACouncilDirective2006112Ec),
+            VATEX::ExemptBasedOnArticle148SectionBCouncilDirective2006112Ec => Ok(crate::zugferd_2_3_3::VATEX::ExemptBasedOnArticle148SectionBCouncilDirective2006112Ec),
+            VATEX::ExemptBasedOnArticle148SectionCCouncilDirective2006112Ec => Ok(crate::zugferd_2_3_3::VATEX::ExemptBasedOnArticle148SectionCCouncilDirective2006112Ec),
+            VATEX::ExemptBasedOnArticle148SectionDCouncilDirective2006112Ec => Ok(crate::zugferd_2_3_3::VATEX::ExemptBasedOnArticle148SectionDCouncilDirective2006112Ec),
+            VATEX::ExemptBasedOnArticle148SectionECouncilDirective2006112Ec => Ok(crate::zugferd_2_3_3::VATEX::ExemptBasedOnArticle148SectionECouncilDirective2006112Ec),
+            VATEX::ExemptBasedOnArticle148SectionFCouncilDirective2006112Ec => Ok(crate::zugferd_2_3_3::VATEX::ExemptBasedOnArticle148SectionFCouncilDirective2006112Ec),
+            VATEX::ExemptBasedOnArticle148SectionGCouncilDirective2006112Ec => Ok(crate::zugferd_2_3_3::VATEX::ExemptBasedOnArticle148SectionGCouncilDirective2006112Ec),
+            VATEX::ExemptBasedOnArticle151CouncilDirective2006112Ec => Ok(crate::zugferd_2_3_3::VATEX::ExemptBasedOnArticle151CouncilDirective2006112Ec),
+            VATEX::ExemptBasedOnArticle151Section1ACouncilDirective2006112Ec => Ok(crate::zugferd_2_3_3::VATEX::ExemptBasedOnArticle151Section1ACouncilDirective2006112Ec),
+            VATEX::ExemptBasedOnArticle151Section1AaCouncilDirective2006112Ec => Ok(crate::zugferd_2_3_3::VATEX::ExemptBasedOnArticle151Section1AaCouncilDirective2006112Ec),
+            VATEX::ExemptBasedOnArticle151Section1BCouncilDirective2006112Ec => Ok(crate::zugferd_2_3_3::VATEX::ExemptBasedOnArticle151Section1BCouncilDirective2006112Ec),
+            VATEX::ExemptBasedOnArticle151Section1CCouncilDirective2006112Ec => Ok(crate::zugferd_2_3_3::VATEX::ExemptBasedOnArticle151Section1CCouncilDirective2006112Ec),
+            VATEX::ExemptBasedOnArticle151Section1DCouncilDirective2006112Ec => Ok(crate::zugferd_2_3_3::VATEX::ExemptBasedOnArticle151Section1DCouncilDirective2006112Ec),
+            VATEX::ExemptBasedOnArticle151Section1ECouncilDirective2006112Ec => Ok(crate::zugferd_2_3_3::VATEX::ExemptBasedOnArticle151Section1ECouncilDirective2006112Ec),
+            VATEX::ExemptBasedOnArticle153CouncilDirective2006112Ec => Ok(crate::zugferd_2_3_3::VATEX::ExemptBasedOnArticle153CouncilDirective2006112Ec),
+            VATEX::ExemptBasedOnArticle159CouncilDirective2006112Ec => Ok(crate::zugferd_2_3_3::VATEX::ExemptBasedOnArticle159CouncilDirective2006112Ec),
+            VATEX::ExemptBasedOnArticle309CouncilDirective2006112Ec => Ok(crate::zugferd_2_3_3::VATEX::ExemptBasedOnArticle309CouncilDirective2006112Ec),
+            VATEX::ReverseCharge => Ok(crate::zugferd_2_3_3::VATEX::ReverseCharge),
+            VATEX::TravelAgentsVatScheme => Ok(crate::zugferd_2_3_3::VATEX::TravelAgentsVatScheme),
+            VATEX::IntraCommunityAcquisitionSecondHandGoods => Ok(crate::zugferd_2_3_3::VATEX::SecondHandGoodsVatScheme),
+            VATEX::ExportOutsideEu => Ok(crate::zugferd_2_3_3::VATEX::ExportOutsideEu),
+            VATEX::IntraCommunityAcquisitionWorksArt => Ok(crate::zugferd_2_3_3::VATEX::WorksArtVatScheme),
+            VATEX::IntraCommunitySupply => Ok(crate::zugferd_2_3_3::VATEX::IntraCommunitySupply),
+            VATEX::IntraCommunityAcquisitionCollectorsItemsAndAntiques => Ok(crate::zugferd_2_3_3::VATEX::CollectorsItemsAndAntiquesVatScheme),
+            VATEX::NotSubjectToVat => Ok(crate::zugferd_2_3_3::VATEX::NotSubjectToVat),
+            VATEX::FranceDomesticVatFranchiseInBase => Ok(crate::zugferd_2_3_3::VATEX::FranceDomesticVatFranchiseInBase),
+            VATEX::FranceDomesticCreditNotesWithoutVatDueToSupplierForfeitVatForDiscount => Ok(crate::zugferd_2_3_3::VATEX::FranceDomesticCreditNotesWithoutVatDueToSupplierForfeitVatForDiscount),
+            VATEX::ExemptBasedOn1Article261CodeGénéralDesImpôtsCgiGeneralTaxCode => Ok(crate::zugferd_2_3_3::VATEX::ExemptBasedOn1Article261CodeGénéralDesImpôtsCgiGeneralTaxCode),
+            VATEX::ExemptBasedOn2Article261CodeGénéralDesImpôtsCgiGeneralTaxCode => Ok(crate::zugferd_2_3_3::VATEX::ExemptBasedOn2Article261CodeGénéralDesImpôtsCgiGeneralTaxCode),
+            VATEX::ExemptBasedOn3Article261CodeGénéralDesImpôtsCgiGeneralTaxCode => Ok(crate::zugferd_2_3_3::VATEX::ExemptBasedOn3Article261CodeGénéralDesImpôtsCgiGeneralTaxCode),
+            VATEX::ExemptBasedOn4Article261CodeGénéralDesImpôtsCgiGeneralTaxCode => Ok(crate::zugferd_2_3_3::VATEX::ExemptBasedOn4Article261CodeGénéralDesImpôtsCgiGeneralTaxCode),
+            VATEX::ExemptBasedOn5Article261CodeGénéralDesImpôtsCgiGeneralTaxCode => Ok(crate::zugferd_2_3_3::VATEX::ExemptBasedOn5Article261CodeGénéralDesImpôtsCgiGeneralTaxCode),
+            VATEX::ExemptBasedOn7Article261CodeGénéralDesImpôtsCgiGeneralTaxCode => Ok(crate::zugferd_2_3_3::VATEX::ExemptBasedOn7Article261CodeGénéralDesImpôtsCgiGeneralTaxCode),
+            VATEX::ExemptBasedOn8Article261CodeGénéralDesImpôtsCgiGeneralTaxCode => Ok(crate::zugferd_2_3_3::VATEX::ExemptBasedOn8Article261CodeGénéralDesImpôtsCgiGeneralTaxCode),
+            VATEX::ExemptBasedOnArticle261ACodeGénéralDesImpôtsCgiGeneralTaxCode => Ok(crate::zugferd_2_3_3::VATEX::ExemptBasedOnArticle261ACodeGénéralDesImpôtsCgiGeneralTaxCode),
+            VATEX::ExemptBasedOnArticle261BCodeGénéralDesImpôtsCgiGeneralTaxCode => Ok(crate::zugferd_2_3_3::VATEX::ExemptBasedOnArticle261BCodeGénéralDesImpôtsCgiGeneralTaxCode),
+            VATEX::ExemptBasedOn1Article261CCodeGénéralDesImpôtsCgiGeneralTaxCode => Ok(crate::zugferd_2_3_3::VATEX::ExemptBasedOn1Article261CCodeGénéralDesImpôtsCgiGeneralTaxCode),
+            VATEX::ExemptBasedOn2Article261CCodeGénéralDesImpôtsCgiGeneralTaxCode => Ok(crate::zugferd_2_3_3::VATEX::ExemptBasedOn2Article261CCodeGénéralDesImpôtsCgiGeneralTaxCode),
+            VATEX::ExemptBasedOn3Article261CCodeGénéralDesImpôtsCgiGeneralTaxCode => Ok(crate::zugferd_2_3_3::VATEX::ExemptBasedOn3Article261CCodeGénéralDesImpôtsCgiGeneralTaxCode),
+            VATEX::ExemptBasedOn1Article261DCodeGénéralDesImpôtsCgiGeneralTaxCode => Ok(crate::zugferd_2_3_3::VATEX::ExemptBasedOn1Article261DCodeGénéralDesImpôtsCgiGeneralTaxCode),
+            VATEX::ExemptBasedOn1BisArticle261DCodeGénéralDesImpôtsCgiGeneralTaxCode => Ok(crate::zugferd_2_3_3::VATEX::ExemptBasedOn1BisArticle261DCodeGénéralDesImpôtsCgiGeneralTaxCode),
+            VATEX::ExemptBasedOn2Article261DCodeGénéralDesImpôtsCgiGeneralTaxCode => Ok(crate::zugferd_2_3_3::VATEX::ExemptBasedOn2Article261DCodeGénéralDesImpôtsCgiGeneralTaxCode),
+            VATEX::ExemptBasedOn3Article261DCodeGénéralDesImpôtsCgiGeneralTaxCodeExonérationDeTvaArticle261D3DuCodeGénéralDesImpôts => Ok(crate::zugferd_2_3_3::VATEX::ExemptBasedOn3Article261DCodeGénéralDesImpôtsCgiGeneralTaxCodeExonérationDeTvaArticle261D3DuCodeGénéralDesImpôts),
+            VATEX::ExemptBasedOn4Article261DCodeGénéralDesImpôtsCgiGeneralTaxCode => Ok(crate::zugferd_2_3_3::VATEX::ExemptBasedOn4Article261DCodeGénéralDesImpôtsCgiGeneralTaxCode),
+            VATEX::ExemptBasedOn1Article261ECodeGénéralDesImpôtsCgiGeneralTaxCode => Ok(crate::zugferd_2_3_3::VATEX::ExemptBasedOn1Article261ECodeGénéralDesImpôtsCgiGeneralTaxCode),
+            VATEX::ExemptBasedOn2Article261ECodeGénéralDesImpôtsCgiGeneralTaxCode => Ok(crate::zugferd_2_3_3::VATEX::ExemptBasedOn2Article261ECodeGénéralDesImpôtsCgiGeneralTaxCode),
+            VATEX::ExemptBasedOnArticle277ACodeGénéralDesImpôtsCgiGeneralTaxCode => Ok(crate::zugferd_2_3_3::VATEX::ExemptBasedOnArticle277ACodeGénéralDesImpôtsCgiGeneralTaxCode),
+            VATEX::ExemptBasedOnArticle275CodeGénéralDesImpôtsCgiGeneralTaxCode => Ok(crate::zugferd_2_3_3::VATEX::ExemptBasedOnArticle275CodeGénéralDesImpôtsCgiGeneralTaxCode),
+            VATEX::ExemptBasedOnArticle298SexdeciesACodeGénéralDesImpôtsCgiGeneralTaxCode => Ok(crate::zugferd_2_3_3::VATEX::ExemptBasedOnArticle298SexdeciesACodeGénéralDesImpôtsCgiGeneralTaxCode),
+            VATEX::ExemptBasedOnArticle295CodeGénéralDesImpôtsCgiGeneralTaxCode => Ok(crate::zugferd_2_3_3::VATEX::ExemptBasedOnArticle295CodeGénéralDesImpôtsCgiGeneralTaxCode),
+            VATEX::ExemptBasedOn2Article283CodeGénéralDesImpôtsCgiGeneralTaxCode => Ok(crate::zugferd_2_3_3::VATEX::ExemptBasedOn2Article283CodeGénéralDesImpôtsCgiGeneralTaxCode),
+            VATEX::ExemptBasedOnArticle135Section1CouncilDirective2006112Ec => Err(ErrFromVatexToCrateZugferd233Vatex::ExemptBasedOnArticle135Section1CouncilDirective2006112Ec),
+        }
+    }
+}
+
+/// All the variants of VATEX that are not matched to any variant of crate::zugferd_2_3_3::VATEX
+#[derive(Debug, PartialEq, Eq, Hash)]
+pub enum ErrFromVatexToCrateZugferd233Vatex {
+    ExemptBasedOnArticle135Section1CouncilDirective2006112Ec,
+}
+
+impl std::fmt::Display for ErrFromVatexToCrateZugferd233Vatex {
+    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+        match self {
+            ErrFromVatexToCrateZugferd233Vatex::ExemptBasedOnArticle135Section1CouncilDirective2006112Ec => write!(f, "ExemptBasedOnArticle135Section1CouncilDirective2006112Ec has no corresponding value in crate::zugferd_2_3_3::VATEX"),
+        }
+    }
+}
+
+impl std::error::Error for ErrFromVatexToCrateZugferd233Vatex {}
+
+impl std::convert::TryFrom<crate::zugferd_2_3_3::VATEX> for VATEX {
+    type Error = std::convert::Infallible;
+    fn try_from(value: crate::zugferd_2_3_3::VATEX) -> Result<VATEX, Self::Error> {
+        match value {
+            crate::zugferd_2_3_3::VATEX::ExemptBasedOnArticle79PointCCouncilDirective2006112Ec => Ok(VATEX::ExemptBasedOnArticle79PointCCouncilDirective2006112Ec),
+            crate::zugferd_2_3_3::VATEX::ExemptBasedOnArticle132CouncilDirective2006112Ec => Ok(VATEX::ExemptBasedOnArticle132CouncilDirective2006112Ec),
+            crate::zugferd_2_3_3::VATEX::ExemptBasedOnArticle132Section1ACouncilDirective2006112Ec => Ok(VATEX::ExemptBasedOnArticle132Section1ACouncilDirective2006112Ec),
+            crate::zugferd_2_3_3::VATEX::ExemptBasedOnArticle132Section1BCouncilDirective2006112Ec => Ok(VATEX::ExemptBasedOnArticle132Section1BCouncilDirective2006112Ec),
+            crate::zugferd_2_3_3::VATEX::ExemptBasedOnArticle132Section1CCouncilDirective2006112Ec => Ok(VATEX::ExemptBasedOnArticle132Section1CCouncilDirective2006112Ec),
+            crate::zugferd_2_3_3::VATEX::ExemptBasedOnArticle132Section1DCouncilDirective2006112Ec => Ok(VATEX::ExemptBasedOnArticle132Section1DCouncilDirective2006112Ec),
+            crate::zugferd_2_3_3::VATEX::ExemptBasedOnArticle132Section1ECouncilDirective2006112Ec => Ok(VATEX::ExemptBasedOnArticle132Section1ECouncilDirective2006112Ec),
+            crate::zugferd_2_3_3::VATEX::ExemptBasedOnArticle132Section1FCouncilDirective2006112Ec => Ok(VATEX::ExemptBasedOnArticle132Section1FCouncilDirective2006112Ec),
+            crate::zugferd_2_3_3::VATEX::ExemptBasedOnArticle132Section1GCouncilDirective2006112Ec => Ok(VATEX::ExemptBasedOnArticle132Section1GCouncilDirective2006112Ec),
+            crate::zugferd_2_3_3::VATEX::ExemptBasedOnArticle132Section1HCouncilDirective2006112Ec => Ok(VATEX::ExemptBasedOnArticle132Section1HCouncilDirective2006112Ec),
+            crate::zugferd_2_3_3::VATEX::ExemptBasedOnArticle132Section1ICouncilDirective2006112Ec => Ok(VATEX::ExemptBasedOnArticle132Section1ICouncilDirective2006112Ec),
+            crate::zugferd_2_3_3::VATEX::ExemptBasedOnArticle132Section1JCouncilDirective2006112Ec => Ok(VATEX::ExemptBasedOnArticle132Section1JCouncilDirective2006112Ec),
+            crate::zugferd_2_3_3::VATEX::ExemptBasedOnArticle132Section1KCouncilDirective2006112Ec => Ok(VATEX::ExemptBasedOnArticle132Section1KCouncilDirective2006112Ec),
+            crate::zugferd_2_3_3::VATEX::ExemptBasedOnArticle132Section1LCouncilDirective2006112Ec => Ok(VATEX::ExemptBasedOnArticle132Section1LCouncilDirective2006112Ec),
+            crate::zugferd_2_3_3::VATEX::ExemptBasedOnArticle132Section1MCouncilDirective2006112Ec => Ok(VATEX::ExemptBasedOnArticle132Section1MCouncilDirective2006112Ec),
+            crate::zugferd_2_3_3::VATEX::ExemptBasedOnArticle132Section1NCouncilDirective2006112Ec => Ok(VATEX::ExemptBasedOnArticle132Section1NCouncilDirective2006112Ec),
+            crate::zugferd_2_3_3::VATEX::ExemptBasedOnArticle132Section1OCouncilDirective2006112Ec => Ok(VATEX::ExemptBasedOnArticle132Section1OCouncilDirective2006112Ec),
+            crate::zugferd_2_3_3::VATEX::ExemptBasedOnArticle132Section1PCouncilDirective2006112Ec => Ok(VATEX::ExemptBasedOnArticle132Section1PCouncilDirective2006112Ec),
+            crate::zugferd_2_3_3::VATEX::ExemptBasedOnArticle132Section1QCouncilDirective2006112Ec => Ok(VATEX::ExemptBasedOnArticle132Section1QCouncilDirective2006112Ec),
+            crate::zugferd_2_3_3::VATEX::ExemptBasedOnArticle143CouncilDirective2006112Ec => Ok(VATEX::ExemptBasedOnArticle143CouncilDirective2006112Ec),
+            crate::zugferd_2_3_3::VATEX::ExemptBasedOnArticle143Section1ACouncilDirective2006112Ec => Ok(VATEX::ExemptBasedOnArticle143Section1ACouncilDirective2006112Ec),
+            crate::zugferd_2_3_3::VATEX::ExemptBasedOnArticle143Section1BCouncilDirective2006112Ec => Ok(VATEX::ExemptBasedOnArticle143Section1BCouncilDirective2006112Ec),
+            crate::zugferd_2_3_3::VATEX::ExemptBasedOnArticle143Section1CCouncilDirective2006112Ec => Ok(VATEX::ExemptBasedOnArticle143Section1CCouncilDirective2006112Ec),
+            crate::zugferd_2_3_3::VATEX::ExemptBasedOnArticle143Section1DCouncilDirective2006112Ec => Ok(VATEX::ExemptBasedOnArticle143Section1DCouncilDirective2006112Ec),
+            crate::zugferd_2_3_3::VATEX::ExemptBasedOnArticle143Section1ECouncilDirective2006112Ec => Ok(VATEX::ExemptBasedOnArticle143Section1ECouncilDirective2006112Ec),
+            crate::zugferd_2_3_3::VATEX::ExemptBasedOnArticle143Section1FCouncilDirective2006112Ec => Ok(VATEX::ExemptBasedOnArticle143Section1FCouncilDirective2006112Ec),
+            crate::zugferd_2_3_3::VATEX::ExemptBasedOnArticle143Section1FaCouncilDirective2006112Ec => Ok(VATEX::ExemptBasedOnArticle143Section1FaCouncilDirective2006112Ec),
+            crate::zugferd_2_3_3::VATEX::ExemptBasedOnArticle143Section1GCouncilDirective2006112Ec => Ok(VATEX::ExemptBasedOnArticle143Section1GCouncilDirective2006112Ec),
+            crate::zugferd_2_3_3::VATEX::ExemptBasedOnArticle143Section1HCouncilDirective2006112Ec => Ok(VATEX::ExemptBasedOnArticle143Section1HCouncilDirective2006112Ec),
+            crate::zugferd_2_3_3::VATEX::ExemptBasedOnArticle143Section1ICouncilDirective2006112Ec => Ok(VATEX::ExemptBasedOnArticle143Section1ICouncilDirective2006112Ec),
+            crate::zugferd_2_3_3::VATEX::ExemptBasedOnArticle143Section1JCouncilDirective2006112Ec => Ok(VATEX::ExemptBasedOnArticle143Section1JCouncilDirective2006112Ec),
+            crate::zugferd_2_3_3::VATEX::ExemptBasedOnArticle143Section1KCouncilDirective2006112Ec => Ok(VATEX::ExemptBasedOnArticle143Section1KCouncilDirective2006112Ec),
+            crate::zugferd_2_3_3::VATEX::ExemptBasedOnArticle143Section1LCouncilDirective2006112Ec => Ok(VATEX::ExemptBasedOnArticle143Section1LCouncilDirective2006112Ec),
+            crate::zugferd_2_3_3::VATEX::ExemptBasedOnArticle144CouncilDirective2006112Ec => Ok(VATEX::ExemptBasedOnArticle144CouncilDirective2006112Ec),
+            crate::zugferd_2_3_3::VATEX::ExemptBasedOnArticle146Section1ECouncilDirective2006112Ec => Ok(VATEX::ExemptBasedOnArticle146Section1ECouncilDirective2006112Ec),
+            crate::zugferd_2_3_3::VATEX::ExemptBasedOnArticle148CouncilDirective2006112Ec => Ok(VATEX::ExemptBasedOnArticle148CouncilDirective2006112Ec),
+            crate::zugferd_2_3_3::VATEX::ExemptBasedOnArticle148SectionACouncilDirective2006112Ec => Ok(VATEX::ExemptBasedOnArticle148SectionACouncilDirective2006112Ec),
+            crate::zugferd_2_3_3::VATEX::ExemptBasedOnArticle148SectionBCouncilDirective2006112Ec => Ok(VATEX::ExemptBasedOnArticle148SectionBCouncilDirective2006112Ec),
+            crate::zugferd_2_3_3::VATEX::ExemptBasedOnArticle148SectionCCouncilDirective2006112Ec => Ok(VATEX::ExemptBasedOnArticle148SectionCCouncilDirective2006112Ec),
+            crate::zugferd_2_3_3::VATEX::ExemptBasedOnArticle148SectionDCouncilDirective2006112Ec => Ok(VATEX::ExemptBasedOnArticle148SectionDCouncilDirective2006112Ec),
+            crate::zugferd_2_3_3::VATEX::ExemptBasedOnArticle148SectionECouncilDirective2006112Ec => Ok(VATEX::ExemptBasedOnArticle148SectionECouncilDirective2006112Ec),
+            crate::zugferd_2_3_3::VATEX::ExemptBasedOnArticle148SectionFCouncilDirective2006112Ec => Ok(VATEX::ExemptBasedOnArticle148SectionFCouncilDirective2006112Ec),
+            crate::zugferd_2_3_3::VATEX::ExemptBasedOnArticle148SectionGCouncilDirective2006112Ec => Ok(VATEX::ExemptBasedOnArticle148SectionGCouncilDirective2006112Ec),
+            crate::zugferd_2_3_3::VATEX::ExemptBasedOnArticle151CouncilDirective2006112Ec => Ok(VATEX::ExemptBasedOnArticle151CouncilDirective2006112Ec),
+            crate::zugferd_2_3_3::VATEX::ExemptBasedOnArticle151Section1ACouncilDirective2006112Ec => Ok(VATEX::ExemptBasedOnArticle151Section1ACouncilDirective2006112Ec),
+            crate::zugferd_2_3_3::VATEX::ExemptBasedOnArticle151Section1AaCouncilDirective2006112Ec => Ok(VATEX::ExemptBasedOnArticle151Section1AaCouncilDirective2006112Ec),
+            crate::zugferd_2_3_3::VATEX::ExemptBasedOnArticle151Section1BCouncilDirective2006112Ec => Ok(VATEX::ExemptBasedOnArticle151Section1BCouncilDirective2006112Ec),
+            crate::zugferd_2_3_3::VATEX::ExemptBasedOnArticle151Section1CCouncilDirective2006112Ec => Ok(VATEX::ExemptBasedOnArticle151Section1CCouncilDirective2006112Ec),
+            crate::zugferd_2_3_3::VATEX::ExemptBasedOnArticle151Section1DCouncilDirective2006112Ec => Ok(VATEX::ExemptBasedOnArticle151Section1DCouncilDirective2006112Ec),
+            crate::zugferd_2_3_3::VATEX::ExemptBasedOnArticle151Section1ECouncilDirective2006112Ec => Ok(VATEX::ExemptBasedOnArticle151Section1ECouncilDirective2006112Ec),
+            crate::zugferd_2_3_3::VATEX::ExemptBasedOnArticle153CouncilDirective2006112Ec => Ok(VATEX::ExemptBasedOnArticle153CouncilDirective2006112Ec),
+            crate::zugferd_2_3_3::VATEX::ExemptBasedOnArticle159CouncilDirective2006112Ec => Ok(VATEX::ExemptBasedOnArticle159CouncilDirective2006112Ec),
+            crate::zugferd_2_3_3::VATEX::ExemptBasedOnArticle309CouncilDirective2006112Ec => Ok(VATEX::ExemptBasedOnArticle309CouncilDirective2006112Ec),
+            crate::zugferd_2_3_3::VATEX::ReverseCharge => Ok(VATEX::ReverseCharge),
+            crate::zugferd_2_3_3::VATEX::TravelAgentsVatScheme => Ok(VATEX::TravelAgentsVatScheme),
+            crate::zugferd_2_3_3::VATEX::SecondHandGoodsVatScheme => Ok(VATEX::IntraCommunityAcquisitionSecondHandGoods),
+            crate::zugferd_2_3_3::VATEX::ExportOutsideEu => Ok(VATEX::ExportOutsideEu),
+            crate::zugferd_2_3_3::VATEX::WorksArtVatScheme => Ok(VATEX::IntraCommunityAcquisitionWorksArt),
+            crate::zugferd_2_3_3::VATEX::IntraCommunitySupply => Ok(VATEX::IntraCommunitySupply),
+            crate::zugferd_2_3_3::VATEX::CollectorsItemsAndAntiquesVatScheme => Ok(VATEX::IntraCommunityAcquisitionCollectorsItemsAndAntiques),
+            crate::zugferd_2_3_3::VATEX::NotSubjectToVat => Ok(VATEX::NotSubjectToVat),
+            crate::zugferd_2_3_3::VATEX::FranceDomesticVatFranchiseInBase => Ok(VATEX::FranceDomesticVatFranchiseInBase),
+            crate::zugferd_2_3_3::VATEX::FranceDomesticCreditNotesWithoutVatDueToSupplierForfeitVatForDiscount => Ok(VATEX::FranceDomesticCreditNotesWithoutVatDueToSupplierForfeitVatForDiscount),
+            crate::zugferd_2_3_3::VATEX::ExemptBasedOn1Article261CodeGénéralDesImpôtsCgiGeneralTaxCode => Ok(VATEX::ExemptBasedOn1Article261CodeGénéralDesImpôtsCgiGeneralTaxCode),
+            crate::zugferd_2_3_3::VATEX::ExemptBasedOn2Article261CodeGénéralDesImpôtsCgiGeneralTaxCode => Ok(VATEX::ExemptBasedOn2Article261CodeGénéralDesImpôtsCgiGeneralTaxCode),
+            crate::zugferd_2_3_3::VATEX::ExemptBasedOn3Article261CodeGénéralDesImpôtsCgiGeneralTaxCode => Ok(VATEX::ExemptBasedOn3Article261CodeGénéralDesImpôtsCgiGeneralTaxCode),
+            crate::zugferd_2_3_3::VATEX::ExemptBasedOn4Article261CodeGénéralDesImpôtsCgiGeneralTaxCode => Ok(VATEX::ExemptBasedOn4Article261CodeGénéralDesImpôtsCgiGeneralTaxCode),
+            crate::zugferd_2_3_3::VATEX::ExemptBasedOn5Article261CodeGénéralDesImpôtsCgiGeneralTaxCode => Ok(VATEX::ExemptBasedOn5Article261CodeGénéralDesImpôtsCgiGeneralTaxCode),
+            crate::zugferd_2_3_3::VATEX::ExemptBasedOn7Article261CodeGénéralDesImpôtsCgiGeneralTaxCode => Ok(VATEX::ExemptBasedOn7Article261CodeGénéralDesImpôtsCgiGeneralTaxCode),
+            crate::zugferd_2_3_3::VATEX::ExemptBasedOn8Article261CodeGénéralDesImpôtsCgiGeneralTaxCode => Ok(VATEX::ExemptBasedOn8Article261CodeGénéralDesImpôtsCgiGeneralTaxCode),
+            crate::zugferd_2_3_3::VATEX::ExemptBasedOnArticle261ACodeGénéralDesImpôtsCgiGeneralTaxCode => Ok(VATEX::ExemptBasedOnArticle261ACodeGénéralDesImpôtsCgiGeneralTaxCode),
+            crate::zugferd_2_3_3::VATEX::ExemptBasedOnArticle261BCodeGénéralDesImpôtsCgiGeneralTaxCode => Ok(VATEX::ExemptBasedOnArticle261BCodeGénéralDesImpôtsCgiGeneralTaxCode),
+            crate::zugferd_2_3_3::VATEX::ExemptBasedOn1Article261CCodeGénéralDesImpôtsCgiGeneralTaxCode => Ok(VATEX::ExemptBasedOn1Article261CCodeGénéralDesImpôtsCgiGeneralTaxCode),
+            crate::zugferd_2_3_3::VATEX::ExemptBasedOn2Article261CCodeGénéralDesImpôtsCgiGeneralTaxCode => Ok(VATEX::ExemptBasedOn2Article261CCodeGénéralDesImpôtsCgiGeneralTaxCode),
+            crate::zugferd_2_3_3::VATEX::ExemptBasedOn3Article261CCodeGénéralDesImpôtsCgiGeneralTaxCode => Ok(VATEX::ExemptBasedOn3Article261CCodeGénéralDesImpôtsCgiGeneralTaxCode),
+            crate::zugferd_2_3_3::VATEX::ExemptBasedOn1Article261DCodeGénéralDesImpôtsCgiGeneralTaxCode => Ok(VATEX::ExemptBasedOn1Article261DCodeGénéralDesImpôtsCgiGeneralTaxCode),
+            crate::zugferd_2_3_3::VATEX::ExemptBasedOn1BisArticle261DCodeGénéralDesImpôtsCgiGeneralTaxCode => Ok(VATEX::ExemptBasedOn1BisArticle261DCodeGénéralDesImpôtsCgiGeneralTaxCode),
+            crate::zugferd_2_3_3::VATEX::ExemptBasedOn2Article261DCodeGénéralDesImpôtsCgiGeneralTaxCode => Ok(VATEX::ExemptBasedOn2Article261DCodeGénéralDesImpôtsCgiGeneralTaxCode),
+            crate::zugferd_2_3_3::VATEX::ExemptBasedOn3Article261DCodeGénéralDesImpôtsCgiGeneralTaxCodeExonérationDeTvaArticle261D3DuCodeGénéralDesImpôts => Ok(VATEX::ExemptBasedOn3Article261DCodeGénéralDesImpôtsCgiGeneralTaxCodeExonérationDeTvaArticle261D3DuCodeGénéralDesImpôts),
+            crate::zugferd_2_3_3::VATEX::ExemptBasedOn4Article261DCodeGénéralDesImpôtsCgiGeneralTaxCode => Ok(VATEX::ExemptBasedOn4Article261DCodeGénéralDesImpôtsCgiGeneralTaxCode),
+            crate::zugferd_2_3_3::VATEX::ExemptBasedOn1Article261ECodeGénéralDesImpôtsCgiGeneralTaxCode => Ok(VATEX::ExemptBasedOn1Article261ECodeGénéralDesImpôtsCgiGeneralTaxCode),
+            crate::zugferd_2_3_3::VATEX::ExemptBasedOn2Article261ECodeGénéralDesImpôtsCgiGeneralTaxCode => Ok(VATEX::ExemptBasedOn2Article261ECodeGénéralDesImpôtsCgiGeneralTaxCode),
+            crate::zugferd_2_3_3::VATEX::ExemptBasedOnArticle277ACodeGénéralDesImpôtsCgiGeneralTaxCode => Ok(VATEX::ExemptBasedOnArticle277ACodeGénéralDesImpôtsCgiGeneralTaxCode),
+            crate::zugferd_2_3_3::VATEX::ExemptBasedOnArticle275CodeGénéralDesImpôtsCgiGeneralTaxCode => Ok(VATEX::ExemptBasedOnArticle275CodeGénéralDesImpôtsCgiGeneralTaxCode),
+            crate::zugferd_2_3_3::VATEX::ExemptBasedOnArticle298SexdeciesACodeGénéralDesImpôtsCgiGeneralTaxCode => Ok(VATEX::ExemptBasedOnArticle298SexdeciesACodeGénéralDesImpôtsCgiGeneralTaxCode),
+            crate::zugferd_2_3_3::VATEX::ExemptBasedOnArticle295CodeGénéralDesImpôtsCgiGeneralTaxCode => Ok(VATEX::ExemptBasedOnArticle295CodeGénéralDesImpôtsCgiGeneralTaxCode),
+            crate::zugferd_2_3_3::VATEX::ExemptBasedOn2Article283CodeGénéralDesImpôtsCgiGeneralTaxCode => Ok(VATEX::ExemptBasedOn2Article283CodeGénéralDesImpôtsCgiGeneralTaxCode),
+
+        }
+    }
+}
+// End: (Version) TryFrom crate::zugferd_2_3_3::VATEX to VATEX

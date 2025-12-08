@@ -75,7 +75,3 @@ def main() -> None:
         return
 
     update_package_json(package_json_path, src_dir)
-
-
-if __name__ == "__main__":
-    main()

@@ -3,6 +3,8 @@ from __future__ import annotations
 # load a .env file
 from dataclasses import dataclass
 from enum import Enum
+from functools import total_ordering
+import itertools
 from dotenv import load_dotenv
 from pathlib import Path
 
@@ -14,24 +16,49 @@ load_dotenv()
 
 @dataclass
 class VersionInfo:
-    version: str
+    version: Version
     spec_dir: Path
     src_dir: Path
 
 
+@total_ordering
 class Version(str, Enum):
     ZF_232 = "2.3.2"
     ZF_233 = "2.3.3"
     ZF_24 = "2.4"
 
     def version_info(self) -> VersionInfo:
-        with_underscore = self.value.replace(".", "_")
 
         return VersionInfo(
-            version=self.value,
-            spec_dir=Path(f"spec/zugferd_{with_underscore}"),
-            src_dir=Path(f"src/zugferd_{with_underscore}"),
+            version=self,
+            spec_dir=Path(f"spec/{self.version_folder}"),
+            src_dir=Path(f"src/{self.version_folder}"),
         )
+
+    @property
+    def version_folder(self) -> str:
+        return f"zugferd_{self.value.replace('.', '_')}"
+
+    def __lt__(self, other: Version | str):
+        if not isinstance(other, Version):
+            return NotImplemented
+
+        self_parts = self.value.split(".")
+        other_parts = other.value.split(".")
+
+        for self_part_, other_part_ in itertools.zip_longest(
+            self_parts, other_parts, fillvalue="0"
+        ):
+            self_part = int(self_part_)
+            other_part = int(other_part_)
+            if self_part < other_part:
+                return True
+            elif self_part > other_part:
+                return False
+            else:
+                continue
+
+        return False  # they are the same
 
 
 TS_DIR = Path("ts")

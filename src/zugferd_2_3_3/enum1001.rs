@@ -512,3 +512,218 @@ impl crate::FromCode for Enum1001 {
         }
     }
 }
+
+// Start: (Version) TryFrom Enum1001 to crate::zugferd_2_3_2::Enum1001
+impl std::convert::TryFrom<Enum1001> for crate::zugferd_2_3_2::Enum1001 {
+    type Error = ErrFromEnum1001ToCrateZugferd232Enum1001;
+    fn try_from(value: Enum1001) -> Result<Self, Self::Error> {
+        match value {
+            Enum1001::RequestForPayment => Ok(crate::zugferd_2_3_2::Enum1001::RequestForPayment),
+            Enum1001::DebitNoteRelatedToGoodsOrServices => Ok(crate::zugferd_2_3_2::Enum1001::DebitNoteRelatedToGoodsOrServices),
+            Enum1001::CreditNoteRelatedToGoodsOrServices => Ok(crate::zugferd_2_3_2::Enum1001::CreditNoteRelatedToGoodsOrServices),
+            Enum1001::MeteredServicesInvoice => Ok(crate::zugferd_2_3_2::Enum1001::MeteredServicesInvoice),
+            Enum1001::CreditNoteRelatedToFinancialAdjustments => Ok(crate::zugferd_2_3_2::Enum1001::CreditNoteRelatedToFinancialAdjustments),
+            Enum1001::DebitNoteRelatedToFinancialAdjustments => Ok(crate::zugferd_2_3_2::Enum1001::DebitNoteRelatedToFinancialAdjustments),
+            Enum1001::TaxNotification => Ok(crate::zugferd_2_3_2::Enum1001::TaxNotification),
+            Enum1001::InvoicingDataSheet => Ok(crate::zugferd_2_3_2::Enum1001::InvoicingDataSheet),
+            Enum1001::DirectPaymentValuation => Ok(crate::zugferd_2_3_2::Enum1001::DirectPaymentValuation),
+            Enum1001::ProvisionalPaymentValuation => Ok(crate::zugferd_2_3_2::Enum1001::ProvisionalPaymentValuation),
+            Enum1001::PaymentValuation => Ok(crate::zugferd_2_3_2::Enum1001::PaymentValuation),
+            Enum1001::InterimApplicationForPayment => Ok(crate::zugferd_2_3_2::Enum1001::InterimApplicationForPayment),
+            Enum1001::FinalPaymentRequestBasedOnCompletionWork => Ok(crate::zugferd_2_3_2::Enum1001::FinalPaymentRequestBasedOnCompletionWork),
+            Enum1001::PaymentRequestForCompletedUnits => Ok(crate::zugferd_2_3_2::Enum1001::PaymentRequestForCompletedUnits),
+            Enum1001::SelfBilledCreditNote => Ok(crate::zugferd_2_3_2::Enum1001::SelfBilledCreditNote),
+            Enum1001::ConsolidatedCreditNoteGoodsAndServices => Ok(crate::zugferd_2_3_2::Enum1001::ConsolidatedCreditNoteGoodsAndServices),
+            Enum1001::PriceVariationInvoice => Ok(crate::zugferd_2_3_2::Enum1001::PriceVariationInvoice),
+            Enum1001::CreditNoteForPriceVariation => Ok(crate::zugferd_2_3_2::Enum1001::CreditNoteForPriceVariation),
+            Enum1001::DelcredereCreditNote => Ok(crate::zugferd_2_3_2::Enum1001::DelcredereCreditNote),
+            Enum1001::ProformaInvoice => Ok(crate::zugferd_2_3_2::Enum1001::ProformaInvoice),
+            Enum1001::PartialInvoice => Ok(crate::zugferd_2_3_2::Enum1001::PartialInvoice),
+            Enum1001::CommercialInvoiceWhichIncludesAPackingList => Ok(crate::zugferd_2_3_2::Enum1001::CommercialInvoiceWhichIncludesAPackingList),
+            Enum1001::CommercialInvoice => Ok(crate::zugferd_2_3_2::Enum1001::CommercialInvoice),
+            Enum1001::CreditNote => Ok(crate::zugferd_2_3_2::Enum1001::CreditNote),
+            Enum1001::CommissionNote => Ok(crate::zugferd_2_3_2::Enum1001::CommissionNote),
+            Enum1001::DebitNote => Ok(crate::zugferd_2_3_2::Enum1001::DebitNote),
+            Enum1001::CorrectedInvoice => Ok(crate::zugferd_2_3_2::Enum1001::CorrectedInvoice),
+            Enum1001::ConsolidatedInvoice => Ok(crate::zugferd_2_3_2::Enum1001::ConsolidatedInvoice),
+            Enum1001::PrepaymentInvoice => Ok(crate::zugferd_2_3_2::Enum1001::PrepaymentInvoice),
+            Enum1001::HireInvoice => Ok(crate::zugferd_2_3_2::Enum1001::HireInvoice),
+            Enum1001::TaxInvoice => Ok(crate::zugferd_2_3_2::Enum1001::TaxInvoice),
+            Enum1001::SelfBilledInvoice => Ok(crate::zugferd_2_3_2::Enum1001::SelfBilledInvoice),
+            Enum1001::DelcredereInvoice => Ok(crate::zugferd_2_3_2::Enum1001::DelcredereInvoice),
+            Enum1001::FactoredInvoice => Ok(crate::zugferd_2_3_2::Enum1001::FactoredInvoice),
+            Enum1001::LeaseInvoice => Ok(crate::zugferd_2_3_2::Enum1001::LeaseInvoice),
+            Enum1001::ConsignmentInvoice => Ok(crate::zugferd_2_3_2::Enum1001::ConsignmentInvoice),
+            Enum1001::FactoredCreditNote => Ok(crate::zugferd_2_3_2::Enum1001::FactoredCreditNote),
+            Enum1001::OpticalCharacterReadingOcrPaymentCreditNote => Ok(crate::zugferd_2_3_2::Enum1001::OpticalCharacterReadingOcrPaymentCreditNote),
+            Enum1001::DebitAdvice => Ok(crate::zugferd_2_3_2::Enum1001::DebitAdvice),
+            Enum1001::ReversalDebit => Ok(crate::zugferd_2_3_2::Enum1001::ReversalDebit),
+            Enum1001::ReversalCredit => Ok(crate::zugferd_2_3_2::Enum1001::ReversalCredit),
+            Enum1001::SelfBilledDebitNote => Ok(crate::zugferd_2_3_2::Enum1001::SelfBilledDebitNote),
+            Enum1001::ForwardersCreditNote => Ok(crate::zugferd_2_3_2::Enum1001::ForwardersCreditNote),
+            Enum1001::ForwardersInvoiceDiscrepancyReport => Ok(crate::zugferd_2_3_2::Enum1001::ForwardersInvoiceDiscrepancyReport),
+            Enum1001::InsurersInvoice => Ok(crate::zugferd_2_3_2::Enum1001::InsurersInvoice),
+            Enum1001::ForwardersInvoice => Ok(crate::zugferd_2_3_2::Enum1001::ForwardersInvoice),
+            Enum1001::PortChargesDocuments => Ok(crate::zugferd_2_3_2::Enum1001::PortChargesDocuments),
+            Enum1001::InvoiceInformationForAccountingPurposes => Ok(crate::zugferd_2_3_2::Enum1001::InvoiceInformationForAccountingPurposes),
+            Enum1001::FreightInvoice => Ok(crate::zugferd_2_3_2::Enum1001::FreightInvoice),
+            Enum1001::ClaimNotification => Ok(crate::zugferd_2_3_2::Enum1001::ClaimNotification),
+            Enum1001::ConsularInvoice => Ok(crate::zugferd_2_3_2::Enum1001::ConsularInvoice),
+            Enum1001::PartialConstructionInvoice => Ok(crate::zugferd_2_3_2::Enum1001::PartialConstructionInvoice),
+            Enum1001::PartialFinalConstructionInvoice => Ok(crate::zugferd_2_3_2::Enum1001::PartialFinalConstructionInvoice),
+            Enum1001::FinalConstructionInvoice => Ok(crate::zugferd_2_3_2::Enum1001::FinalConstructionInvoice),
+            Enum1001::CustomsInvoice => Ok(crate::zugferd_2_3_2::Enum1001::CustomsInvoice),
+            Enum1001::SelfBilledCorrectiveInvoiceInvoiceTypeCorrected => Err(ErrFromEnum1001ToCrateZugferd232Enum1001::SelfBilledCorrectiveInvoiceInvoiceTypeCorrected),
+            Enum1001::FactoredCorrectiveInvoiceInvoiceTypeCorrected => Err(ErrFromEnum1001ToCrateZugferd232Enum1001::FactoredCorrectiveInvoiceInvoiceTypeCorrected),
+            Enum1001::SelfBilledFactoredCorrectiveInvoiceInvoiceTypeCorrected => Err(ErrFromEnum1001ToCrateZugferd232Enum1001::SelfBilledFactoredCorrectiveInvoiceInvoiceTypeCorrected),
+            Enum1001::SelfPrepaymentInvoiceInvoiceTypeOriginal => Err(ErrFromEnum1001ToCrateZugferd232Enum1001::SelfPrepaymentInvoiceInvoiceTypeOriginal),
+            Enum1001::SelfBilledFactoredInvoiceInvoiceTypeOriginal => Err(ErrFromEnum1001ToCrateZugferd232Enum1001::SelfBilledFactoredInvoiceInvoiceTypeOriginal),
+            Enum1001::SelfBilletFactoredCreditNoteCreditNoteTypeCorrected => Err(ErrFromEnum1001ToCrateZugferd232Enum1001::SelfBilletFactoredCreditNoteCreditNoteTypeCorrected),
+            Enum1001::PrepaymentCreditNoteCreditNoteTypeCorrected => Err(ErrFromEnum1001ToCrateZugferd232Enum1001::PrepaymentCreditNoteCreditNoteTypeCorrected),
+        }
+    }
+}
+
+/// All the variants of Enum1001 that are not matched to any variant of crate::zugferd_2_3_2::Enum1001
+#[derive(Debug, PartialEq, Eq, Hash)]
+pub enum ErrFromEnum1001ToCrateZugferd232Enum1001 {
+    SelfBilledCorrectiveInvoiceInvoiceTypeCorrected,
+    FactoredCorrectiveInvoiceInvoiceTypeCorrected,
+    SelfBilledFactoredCorrectiveInvoiceInvoiceTypeCorrected,
+    SelfPrepaymentInvoiceInvoiceTypeOriginal,
+    SelfBilledFactoredInvoiceInvoiceTypeOriginal,
+    SelfBilletFactoredCreditNoteCreditNoteTypeCorrected,
+    PrepaymentCreditNoteCreditNoteTypeCorrected,
+}
+
+impl std::fmt::Display for ErrFromEnum1001ToCrateZugferd232Enum1001 {
+    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+        match self {
+            ErrFromEnum1001ToCrateZugferd232Enum1001::SelfBilledCorrectiveInvoiceInvoiceTypeCorrected => write!(f, "SelfBilledCorrectiveInvoiceInvoiceTypeCorrected has no corresponding value in crate::zugferd_2_3_2::Enum1001"),
+            ErrFromEnum1001ToCrateZugferd232Enum1001::FactoredCorrectiveInvoiceInvoiceTypeCorrected => write!(f, "FactoredCorrectiveInvoiceInvoiceTypeCorrected has no corresponding value in crate::zugferd_2_3_2::Enum1001"),
+            ErrFromEnum1001ToCrateZugferd232Enum1001::SelfBilledFactoredCorrectiveInvoiceInvoiceTypeCorrected => write!(f, "SelfBilledFactoredCorrectiveInvoiceInvoiceTypeCorrected has no corresponding value in crate::zugferd_2_3_2::Enum1001"),
+            ErrFromEnum1001ToCrateZugferd232Enum1001::SelfPrepaymentInvoiceInvoiceTypeOriginal => write!(f, "SelfPrepaymentInvoiceInvoiceTypeOriginal has no corresponding value in crate::zugferd_2_3_2::Enum1001"),
+            ErrFromEnum1001ToCrateZugferd232Enum1001::SelfBilledFactoredInvoiceInvoiceTypeOriginal => write!(f, "SelfBilledFactoredInvoiceInvoiceTypeOriginal has no corresponding value in crate::zugferd_2_3_2::Enum1001"),
+            ErrFromEnum1001ToCrateZugferd232Enum1001::SelfBilletFactoredCreditNoteCreditNoteTypeCorrected => write!(f, "SelfBilletFactoredCreditNoteCreditNoteTypeCorrected has no corresponding value in crate::zugferd_2_3_2::Enum1001"),
+            ErrFromEnum1001ToCrateZugferd232Enum1001::PrepaymentCreditNoteCreditNoteTypeCorrected => write!(f, "PrepaymentCreditNoteCreditNoteTypeCorrected has no corresponding value in crate::zugferd_2_3_2::Enum1001"),
+        }
+    }
+}
+
+impl std::error::Error for ErrFromEnum1001ToCrateZugferd232Enum1001 {}
+
+impl std::convert::TryFrom<crate::zugferd_2_3_2::Enum1001> for Enum1001 {
+    type Error = std::convert::Infallible;
+    fn try_from(value: crate::zugferd_2_3_2::Enum1001) -> Result<Enum1001, Self::Error> {
+        match value {
+            crate::zugferd_2_3_2::Enum1001::RequestForPayment => Ok(Enum1001::RequestForPayment),
+            crate::zugferd_2_3_2::Enum1001::DebitNoteRelatedToGoodsOrServices => {
+                Ok(Enum1001::DebitNoteRelatedToGoodsOrServices)
+            }
+            crate::zugferd_2_3_2::Enum1001::CreditNoteRelatedToGoodsOrServices => {
+                Ok(Enum1001::CreditNoteRelatedToGoodsOrServices)
+            }
+            crate::zugferd_2_3_2::Enum1001::MeteredServicesInvoice => {
+                Ok(Enum1001::MeteredServicesInvoice)
+            }
+            crate::zugferd_2_3_2::Enum1001::CreditNoteRelatedToFinancialAdjustments => {
+                Ok(Enum1001::CreditNoteRelatedToFinancialAdjustments)
+            }
+            crate::zugferd_2_3_2::Enum1001::DebitNoteRelatedToFinancialAdjustments => {
+                Ok(Enum1001::DebitNoteRelatedToFinancialAdjustments)
+            }
+            crate::zugferd_2_3_2::Enum1001::TaxNotification => Ok(Enum1001::TaxNotification),
+            crate::zugferd_2_3_2::Enum1001::InvoicingDataSheet => Ok(Enum1001::InvoicingDataSheet),
+            crate::zugferd_2_3_2::Enum1001::DirectPaymentValuation => {
+                Ok(Enum1001::DirectPaymentValuation)
+            }
+            crate::zugferd_2_3_2::Enum1001::ProvisionalPaymentValuation => {
+                Ok(Enum1001::ProvisionalPaymentValuation)
+            }
+            crate::zugferd_2_3_2::Enum1001::PaymentValuation => Ok(Enum1001::PaymentValuation),
+            crate::zugferd_2_3_2::Enum1001::InterimApplicationForPayment => {
+                Ok(Enum1001::InterimApplicationForPayment)
+            }
+            crate::zugferd_2_3_2::Enum1001::FinalPaymentRequestBasedOnCompletionWork => {
+                Ok(Enum1001::FinalPaymentRequestBasedOnCompletionWork)
+            }
+            crate::zugferd_2_3_2::Enum1001::PaymentRequestForCompletedUnits => {
+                Ok(Enum1001::PaymentRequestForCompletedUnits)
+            }
+            crate::zugferd_2_3_2::Enum1001::SelfBilledCreditNote => {
+                Ok(Enum1001::SelfBilledCreditNote)
+            }
+            crate::zugferd_2_3_2::Enum1001::ConsolidatedCreditNoteGoodsAndServices => {
+                Ok(Enum1001::ConsolidatedCreditNoteGoodsAndServices)
+            }
+            crate::zugferd_2_3_2::Enum1001::PriceVariationInvoice => {
+                Ok(Enum1001::PriceVariationInvoice)
+            }
+            crate::zugferd_2_3_2::Enum1001::CreditNoteForPriceVariation => {
+                Ok(Enum1001::CreditNoteForPriceVariation)
+            }
+            crate::zugferd_2_3_2::Enum1001::DelcredereCreditNote => {
+                Ok(Enum1001::DelcredereCreditNote)
+            }
+            crate::zugferd_2_3_2::Enum1001::ProformaInvoice => Ok(Enum1001::ProformaInvoice),
+            crate::zugferd_2_3_2::Enum1001::PartialInvoice => Ok(Enum1001::PartialInvoice),
+            crate::zugferd_2_3_2::Enum1001::CommercialInvoiceWhichIncludesAPackingList => {
+                Ok(Enum1001::CommercialInvoiceWhichIncludesAPackingList)
+            }
+            crate::zugferd_2_3_2::Enum1001::CommercialInvoice => Ok(Enum1001::CommercialInvoice),
+            crate::zugferd_2_3_2::Enum1001::CreditNote => Ok(Enum1001::CreditNote),
+            crate::zugferd_2_3_2::Enum1001::CommissionNote => Ok(Enum1001::CommissionNote),
+            crate::zugferd_2_3_2::Enum1001::DebitNote => Ok(Enum1001::DebitNote),
+            crate::zugferd_2_3_2::Enum1001::CorrectedInvoice => Ok(Enum1001::CorrectedInvoice),
+            crate::zugferd_2_3_2::Enum1001::ConsolidatedInvoice => {
+                Ok(Enum1001::ConsolidatedInvoice)
+            }
+            crate::zugferd_2_3_2::Enum1001::PrepaymentInvoice => Ok(Enum1001::PrepaymentInvoice),
+            crate::zugferd_2_3_2::Enum1001::HireInvoice => Ok(Enum1001::HireInvoice),
+            crate::zugferd_2_3_2::Enum1001::TaxInvoice => Ok(Enum1001::TaxInvoice),
+            crate::zugferd_2_3_2::Enum1001::SelfBilledInvoice => Ok(Enum1001::SelfBilledInvoice),
+            crate::zugferd_2_3_2::Enum1001::DelcredereInvoice => Ok(Enum1001::DelcredereInvoice),
+            crate::zugferd_2_3_2::Enum1001::FactoredInvoice => Ok(Enum1001::FactoredInvoice),
+            crate::zugferd_2_3_2::Enum1001::LeaseInvoice => Ok(Enum1001::LeaseInvoice),
+            crate::zugferd_2_3_2::Enum1001::ConsignmentInvoice => Ok(Enum1001::ConsignmentInvoice),
+            crate::zugferd_2_3_2::Enum1001::FactoredCreditNote => Ok(Enum1001::FactoredCreditNote),
+            crate::zugferd_2_3_2::Enum1001::OpticalCharacterReadingOcrPaymentCreditNote => {
+                Ok(Enum1001::OpticalCharacterReadingOcrPaymentCreditNote)
+            }
+            crate::zugferd_2_3_2::Enum1001::DebitAdvice => Ok(Enum1001::DebitAdvice),
+            crate::zugferd_2_3_2::Enum1001::ReversalDebit => Ok(Enum1001::ReversalDebit),
+            crate::zugferd_2_3_2::Enum1001::ReversalCredit => Ok(Enum1001::ReversalCredit),
+            crate::zugferd_2_3_2::Enum1001::SelfBilledDebitNote => {
+                Ok(Enum1001::SelfBilledDebitNote)
+            }
+            crate::zugferd_2_3_2::Enum1001::ForwardersCreditNote => {
+                Ok(Enum1001::ForwardersCreditNote)
+            }
+            crate::zugferd_2_3_2::Enum1001::ForwardersInvoiceDiscrepancyReport => {
+                Ok(Enum1001::ForwardersInvoiceDiscrepancyReport)
+            }
+            crate::zugferd_2_3_2::Enum1001::InsurersInvoice => Ok(Enum1001::InsurersInvoice),
+            crate::zugferd_2_3_2::Enum1001::ForwardersInvoice => Ok(Enum1001::ForwardersInvoice),
+            crate::zugferd_2_3_2::Enum1001::PortChargesDocuments => {
+                Ok(Enum1001::PortChargesDocuments)
+            }
+            crate::zugferd_2_3_2::Enum1001::InvoiceInformationForAccountingPurposes => {
+                Ok(Enum1001::InvoiceInformationForAccountingPurposes)
+            }
+            crate::zugferd_2_3_2::Enum1001::FreightInvoice => Ok(Enum1001::FreightInvoice),
+            crate::zugferd_2_3_2::Enum1001::ClaimNotification => Ok(Enum1001::ClaimNotification),
+            crate::zugferd_2_3_2::Enum1001::ConsularInvoice => Ok(Enum1001::ConsularInvoice),
+            crate::zugferd_2_3_2::Enum1001::PartialConstructionInvoice => {
+                Ok(Enum1001::PartialConstructionInvoice)
+            }
+            crate::zugferd_2_3_2::Enum1001::PartialFinalConstructionInvoice => {
+                Ok(Enum1001::PartialFinalConstructionInvoice)
+            }
+            crate::zugferd_2_3_2::Enum1001::FinalConstructionInvoice => {
+                Ok(Enum1001::FinalConstructionInvoice)
+            }
+            crate::zugferd_2_3_2::Enum1001::CustomsInvoice => Ok(Enum1001::CustomsInvoice),
+        }
+    }
+}
+// End: (Version) TryFrom crate::zugferd_2_3_2::Enum1001 to Enum1001
