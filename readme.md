@@ -13,6 +13,7 @@ Versions supported:
 
 - ZUGFeRD 2.3.2
 - ZUGFeRD 2.3.3
+- ZUGFeRD 2.4
 
 # Changelog
 
@@ -35,11 +36,15 @@ Versions supported:
 - v0.1.17
   - Made error for `FromStr` more informative with thiserror.
 - v0.1.18
-  - Bugfix where `2.3.3` lists were not being exported in ts.  
+  - Bugfix where `2.3.3` lists were not being exported in ts.
+- v0.1.19
+  - Added ZUGFeRD 2.4
+  - Reduced code by re-exported duplicate enums instead of having multiple definitions
+  - Added `TryFrom` impls for conversion between a version and its previous version
 
 # Future Plans
 
-- `TryFrom` impls for conversion between versions
+- `TryFrom` impls for conversion between versions - done
 
 # Adding a ZUGFeRD version
 
